@@ -1,0 +1,5 @@
+E:\ETWork\MyCode\MyTestProject\Model\my.model\obj\Debug\my.model.csprojResolveAssemblyReference.cache
+E:\ETWork\MyCode\MyTestProject\Model\my.model\obj\Debug\com.etak.core.model.dll
+E:\ETWork\MyCode\MyTestProject\Model\my.model\obj\Debug\com.etak.core.model.pdb
+E:\ETWork\MyCode\MyTestProject\Model\my.model\bin\Debug\com.etak.core.model.dll
+E:\ETWork\MyCode\MyTestProject\Model\my.model\bin\Debug\com.etak.core.model.pdb

@@ -1,0 +1,5 @@
+E:\ETWork\MyCode\MyTestProject\Framework\com.etak.core.queue.testing\bin\Debug\com.etak.core.queue.testing.dll
+E:\ETWork\MyCode\MyTestProject\Framework\com.etak.core.queue.testing\bin\Debug\com.etak.core.queue.testing.pdb
+E:\ETWork\MyCode\MyTestProject\Framework\com.etak.core.queue.testing\obj\Debug\com.etak.core.queue.testing.csprojResolveAssemblyReference.cache
+E:\ETWork\MyCode\MyTestProject\Framework\com.etak.core.queue.testing\obj\Debug\com.etak.core.queue.testing.dll
+E:\ETWork\MyCode\MyTestProject\Framework\com.etak.core.queue.testing\obj\Debug\com.etak.core.queue.testing.pdb

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="com.etak.core.operation.contract.exceptions.AuthenticationErrorException" Collapsed="true">
+    <Position X="6.25" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>contract\exceptions\AuthenticationErrorException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.operation.contract.exceptions.AuthorizationErrorException" Collapsed="true">
+    <Position X="15" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>contract\exceptions\AuthorizationErrorException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.operation.contract.exceptions.BusinessLogicErrorException" Collapsed="true">
+    <Position X="21" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>contract\exceptions\BusinessLogicErrorException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.operation.contract.exceptions.DataValidationErrorException" Collapsed="true">
+    <Position X="9.25" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>contract\exceptions\DataValidationErrorException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.operation.contract.exceptions.DuplicatedReferenceException" Collapsed="true">
+    <Position X="18" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>contract\exceptions\DuplicatedReferenceException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.operation.contract.exceptions.ElephantTalkBaseException">
+    <Position X="12.25" Y="0.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>contract\exceptions\ElephantTalkBaseException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.operation.contract.exceptions.InternalErrorException" Collapsed="true">
+    <Position X="12.25" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>contract\exceptions\InternalErrorException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

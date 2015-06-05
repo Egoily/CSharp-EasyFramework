@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8FD3F0F-82F8-41D4-8DA2-FA44BAD61D9C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.etak.core.operation</RootNamespace>
+    <AssemblyName>com.etak.core.operation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\com.etak.core.operation.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\com.etak.core.operation.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Nuget\com.etak.core.operation.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.3.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.3.0\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="com.etak.core.model, Version=2.0.0.20000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\com.etak.core.model.2.0.0.20000-RC21\lib\net40\com.etak.core.model.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net40\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\revisionsync\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="aaa\AuthenticationHelper.cs" />
+    <Compile Include="aaa\AuthorizationHelper.cs" />
+    <Compile Include="contract\BasicOperationConfiguration.cs" />
+    <Compile Include="contract\exceptions\AuthenticationErrorException.cs" />
+    <Compile Include="contract\exceptions\AuthorizationErrorException.cs" />
+    <Compile Include="contract\exceptions\BusinessLogicErrorException.cs" />
+    <Compile Include="contract\exceptions\DataValidationErrorException.cs" />
+    <Compile Include="contract\exceptions\DuplicatedReferenceException.cs" />
+    <Compile Include="contract\exceptions\InternalErrorException.cs" />
+    <Compile Include="contract\IOrderProcessor.cs" />
+    <Compile Include="Definitions.cs" />
+    <Compile Include="dtoConverters\customer\AddressDtoConverter.cs" />
+    <Compile Include="dtoConverters\customer\BankDtoConverter.cs" />
+    <Compile Include="dtoConverters\customer\CustomerDtoConverter.cs" />
+    <Compile Include="dtoConverters\customer\InvoiceDtoConverter.cs" />
+    <Compile Include="dtoConverters\DtoDictionaries.cs" />
+    <Compile Include="dtoConverters\DtoMappings.cs" />
+    <Compile Include="dtoConverters\resource\MSISDNResourceDTOConverter.cs" />
+    <Compile Include="dtoConverters\resource\SimCardDTOConverter.cs" />
+    <Compile Include="dtoConverters\product\ChargeCatalogDtoConverter.cs" />
+    <Compile Include="dtoConverters\customer\CustomerChargeDtoConverter.cs" />
+    <Compile Include="dtoConverters\customer\CustomerRecurringChargeDtoConverter.cs" />
+    <Compile Include="dtoConverters\product\ProductCatalogDtoConverter.cs" />
+    <Compile Include="dtoConverters\product\ProductPurchaseChargingOptionDtoConverter.cs" />
+    <Compile Include="dtoConverters\customer\CustomerProductAssingmentDtoConverter.cs" />
+    <Compile Include="dtoConverters\customer\UsageDetailDtoConverter.cs" />
+    <Compile Include="dtoConverters\subscription\SubscriptionDtoConverter.cs" />
+    <Compile Include="implementation\AbstractBusinessOperation.cs" />
+    <Compile Include="implementation\LogMicroServiceDecorator.cs" />
+    <Compile Include="implementation\AbstractOrderModification.cs" />
+    <Compile Include="implementation\AbstractSinglePhaseOrderProcessor.cs" />
+    <Compile Include="implementation\CreateOrderHelper.cs" />
+    <Compile Include="implementation\MicroServiceLogger.cs" />
+    <Compile Include="implementation\SameTypeConverter.cs" />
+    <Compile Include="contract\exceptions\ElephantTalkBaseException.cs" />
+    <Compile Include="contract\IBusinessOperation.cs" />
+    <Compile Include="contract\ITypeConverter.cs" />
+    <Compile Include="contract\ICoreBussinessOperation.cs" />
+    <Compile Include="contract\IDTOBussinessOperation.cs" />
+    <Compile Include="contract\IMicroService.cs" />
+    <Compile Include="implementation\AbstractStartOrder.cs" />
+    <Compile Include="MicroServiceManager.cs" />
+    <Compile Include="orderCode\CachedSequenceManager.cs" />
+    <Compile Include="orderCode\ISequenceManager.cs" />
+    <Compile Include="orderCode\OrderCodeManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestInvokationEnvironment.cs" />
+    <Compile Include="util\MD5Utility.cs" />
+    <Compile Include="contract\IValidator.cs" />
+    <Compile Include="implementation\NullValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="com.etak.core.operation.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="contract\ComponentsInterfaces.cd" />
+    <None Include="contract\exceptions\ExceptionType.cd" />
+    <None Include="contract\OperationConfiguration.cd" />
+    <None Include="contract\OperationInerfacesClassDiagram.cd" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\com.etak.core.repository.crm\com.etak.core.repository.crm.csproj">
+      <Project>{5279c8d2-7523-4a27-aa03-8a9736de7e45}</Project>
+      <Name>com.etak.core.repository.crm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository\com.etak.core.repository.csproj">
+      <Project>{b3b4cfa1-4488-4e8c-aa22-b9f6206be866}</Project>
+      <Name>com.etak.core.repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <!-- This will be done only once (here) -->
+  <!--<Target Name="BeforeBuild" Condition="$(Configuration)==Nuget">
+    <Exec Command="&quot;$(SolutionDir)revisionsync\subwcrev.exe&quot; &quot;$(SolutionDir).&quot; &quot;$(SolutionDir)revisionsync\SharedAssemblyInfo.template&quot; &quot;$(SolutionDir)revisionsync\SharedAssemblyInfo.cs&quot;" />
+  </Target>-->
+  <!--<UsingTask AssemblyFile="$(SolutionDir)NugetPackages\GetAssemblyFileVersions.dll" TaskName="GetAssemblyFileVersions.GetAssemblyFileVersion" />-->
+  <Target Name="AfterBuild" Condition="$(Configuration)==Nuget">
+    <!--<GetAssemblyFileVersion FilePathAssemblyInfo="$(ProjectDir)$(OutputPath)$(TargetName).dll">
+      <Output TaskParameter="AssemblyFileVersion" PropertyName="AssemblyFileVersion" />
+    </GetAssemblyFileVersion>
+    <Message Text="AssemblyFileVersion = $(AssemblyFileVersion)" />-->
+    <Message Text="&quot;$(SolutionDir)nugetpackages\nuget.exe&quot; pack &quot;$(ProjectPath)&quot; -IncludeReferencedProjects -Properties Configuration=Nuget;Platform=$(Platform) -OutputDirectory &quot;$(SolutionDir)nugetpackages&quot;" />
+    <Exec Command="&quot;$(SolutionDir)nugetpackages\nuget.exe&quot; pack &quot;$(ProjectPath)&quot; -IncludeReferencedProjects -Properties Configuration=Nuget;Platform=$(Platform) -OutputDirectory &quot;$(SolutionDir)nugetpackages&quot;" IgnoreExitCode="false" />
+  </Target>
+  <Import Project="..\packages\AutoMapper.3.3.0\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.0\tools\AutoMapper.targets')" />
+</Project>

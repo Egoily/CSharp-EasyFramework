@@ -1,0 +1,16 @@
+E:\ETWork\MyCode\MyTestProject\WinForm\bin\Debug\WinForm.exe.config
+E:\ETWork\MyCode\MyTestProject\WinForm\bin\Debug\WinForm.exe
+E:\ETWork\MyCode\MyTestProject\WinForm\bin\Debug\WinForm.pdb
+E:\ETWork\MyCode\MyTestProject\WinForm\bin\Debug\log4net.dll
+E:\ETWork\MyCode\MyTestProject\WinForm\bin\Debug\PostSharp.dll
+E:\ETWork\MyCode\MyTestProject\WinForm\bin\Debug\PostSharp.NotifyPropertyChanged.dll
+E:\ETWork\MyCode\MyTestProject\WinForm\bin\Debug\PostSharp.Patterns.Diagnostics.dll
+E:\ETWork\MyCode\MyTestProject\WinForm\bin\Debug\PostSharp.Patterns.Model.dll
+E:\ETWork\MyCode\MyTestProject\WinForm\bin\Debug\log4net.xml
+E:\ETWork\MyCode\MyTestProject\WinForm\bin\Debug\PostSharp.xml
+E:\ETWork\MyCode\MyTestProject\WinForm\obj\x86\Debug\WinForm.csprojResolveAssemblyReference.cache
+E:\ETWork\MyCode\MyTestProject\WinForm\obj\x86\Debug\WinForm.Form1.resources
+E:\ETWork\MyCode\MyTestProject\WinForm\obj\x86\Debug\WinForm.Properties.Resources.resources
+E:\ETWork\MyCode\MyTestProject\WinForm\obj\x86\Debug\WinForm.csproj.GenerateResource.Cache
+E:\ETWork\MyCode\MyTestProject\WinForm\obj\x86\Debug\WinForm.exe
+E:\ETWork\MyCode\MyTestProject\WinForm\obj\x86\Debug\WinForm.pdb
