@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.repository.crm.Nhibernate</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.informationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.Factory.SessionManagement">
+            <summary>
+            Builds the Nhibernate session factories and the configurations for NH.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.Factory.SessionManagement.GetInstance">
+            <summary>
+            Gets the only instance of the SessionManagement instance (this class implements the
+            Singleton Pattern)
+            </summary>
+            <returns>the Singleton instance of SessionManagement</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.Factory.SessionManagement.GenerateSchemaToFile(System.String,System.String)">
+            <summary>
+            Generates the SQL file for the session factory provided
+            </summary>
+            <param name="sessionFactoryName">the name of the session factory</param>
+            <param name="fileName">the output file for the SQL</param>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.Factory.SessionManagement.GetConfiguration(System.String)">
+            <summary>
+            Gets the NHiberante configuration for the session factory
+            </summary>
+            <param name="factoryName">the name of the session factory</param>
+            <returns>the configuration for the session factory</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.Factory.SessionManagement.GetSession(System.String)">
+            <summary>
+            Gets an NHiberante session for the factory
+            </summary>
+            <param name="factoryName">the name of the factory from which we want a session</param>
+            <returns>the Nhibernate session</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.Factory.SessionManagement.GetStateLessSession(System.String)">
+            <summary>
+            Gets an NHiberante stateless session for the factory
+            </summary>
+            <param name="factoryName">the name of the factory from which we want a session</param>
+            <returns>the Nhibernate session</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.Factory.SessionManagement.GetSessionFactory(System.String)">
+            <summary>
+            Gets the session factory for a given name
+            </summary>
+            <param name="factoryName">the name of the factory we want to retreive</param>
+            <returns>the Nhibernate session factory</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.Factory.CacheRegions">
+            <summary>
+            Helper class that contains all the known NHibernate cache regions
+            </summary>
+        </member>
+        <member name="F:com.etak.core.repository.crm.Nhibernate.Factory.CacheRegions.UserDealerCacheRegion">
+            <summary>
+            The cache name for User Dealer cache
+            </summary>
+        </member>
+        <member name="F:com.etak.core.repository.crm.Nhibernate.Factory.CacheRegions.SystemSettingsCacheRegion">
+            <summary>
+            The cache name for the System Settings cache region
+            </summary>
+        </member>
+        <member name="F:com.etak.core.repository.crm.Nhibernate.Factory.CacheRegions.CatalogCacheRegion">
+            <summary>
+            The cache name for the catalog cache region
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.Factory.SessionFactoryHelper">
+            <summary>
+            Helper class to force loading the ninject module defined in RealHelper Initializes
+            Nhibernate Repository and session factories.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.Factory.RealHelper">
+            <summary>
+            Ninject module that initializes the Nhibernate Repository and session factories. Binds
+            Nhibernate repositories to Repository interfaces.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.Factory.RealHelper.Load">
+            <summary>
+            Builds the session factory and binds the IRepositories to each RepositoryNH
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.AddressInfoRepositoryNH`1">
+            <summary>
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.PersonInfoRepositoryNH`1">
+            <summary>
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.ProfileInfoRepositoryNH`1">
+            <summary>
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1 @@
+E:\ETWork\MyCode\MyTestProject\Repository\com.etak.core.repository.crm.mongo\obj\Debug\com.etak.core.repository.crm.mongo.csprojResolveAssemblyReference.cache

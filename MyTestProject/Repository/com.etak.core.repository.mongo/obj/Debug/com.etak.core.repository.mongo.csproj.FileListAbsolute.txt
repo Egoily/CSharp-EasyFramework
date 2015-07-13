@@ -1,0 +1,2 @@
+E:\ETWork\MyCode\MyTestProject\Framework\com.etak.core.repository.mongo\obj\Debug\com.etak.core.repository.mongo.csprojResolveAssemblyReference.cache
+E:\ETWork\MyCode\MyTestProject\Repository\com.etak.core.repository.mongo\obj\Debug\com.etak.core.repository.mongo.csprojResolveAssemblyReference.cache

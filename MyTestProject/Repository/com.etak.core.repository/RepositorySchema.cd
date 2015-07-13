@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="com.etak.core.repository.ConnectionAlreadyOpened">
+    <Position X="2.25" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConnectionAlreadyOpened.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.repository.RepositoryManager">
+    <Position X="1.75" Y="4.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>BgACAAAIAAAAQAAgAAAAAAAAAACAAAAgABAIABAAAAA=</HashCode>
+      <FileName>RepositoryManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.repository.ConnectionNotOpened">
+    <Position X="4.75" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConnectionNotOpened.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Exception" Collapsed="true">
+    <Position X="4" Y="2" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="com.etak.core.repository.IConnectionProvider">
+    <Position X="5.75" Y="4.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>IConnectionProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="com.etak.core.repository.IPersistanceConnection">
+    <Position X="5.75" Y="6" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAIAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>IPersistanceConnection.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="com.etak.core.repository.IPersistanceTransaction">
+    <Position X="8.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPersistanceTransaction.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="com.etak.core.repository.IRepository&lt;TEntity, TKey&gt;">
+    <Position X="10" Y="6" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAFAAEAAAAAAAAAAAIA=</HashCode>
+      <FileName>IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="com.etak.core.repository.ClearSessionForThread">
+    <Position X="7.5" Y="3" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RepositoryManager.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.repository</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.informationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.ConnectionAlreadyOpened">
+            <summary>
+            Exception used when a threads attempts to open a second connection.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.ConnectionNotOpened">
+            <summary>
+            Exception thrown when thrown when tried to get the connection without an underlaying DB connection
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.IBulkRepository`2">
+            <summary>
+            Interface to any nulk repository, contains the basic CRUD methods in bulk mode that any
+            repository must implement
+            </summary>
+            <typeparam name="TEntity">
+            The type of entity that the repository implemntation will manage
+            </typeparam>
+            <typeparam name="TKey">The type of the key that the repository will manage</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.IRepository`2">
+            <summary>
+            Interface to any repository, contains the basic CRUD methods that any repository must implement
+            </summary>
+            <typeparam name="TEntity">
+            The type of entity that the repository implemntation will manage
+            </typeparam>
+            <typeparam name="TKey">The type of the key that the repository will manage</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.IRepository`2.GetById(`1)">
+            <summary>
+            Gets an entity by it's unique ID
+            </summary>
+            <param name="id">Id of the entity to retrieve</param>
+            <returns>The updated entity</returns>
+        </member>
+        <member name="M:com.etak.core.repository.IRepository`2.Create(`0)">
+            <summary>
+            Inserts an entity into the repository
+            </summary>
+            <param name="entity">the entity to be stored</param>
+            <returns>the updated entity</returns>
+        </member>
+        <member name="M:com.etak.core.repository.IRepository`2.Update(`0)">
+            <summary>
+            Updates an entity in the repository
+            </summary>
+            <param name="entity">the entity to be updated</param>
+            <returns>the</returns>
+        </member>
+        <member name="M:com.etak.core.repository.IRepository`2.Delete(`0)">
+            <summary>
+            Deletes an entity from the repository
+            </summary>
+            <param name="entity">the entity to be deleted</param>
+        </member>
+        <member name="M:com.etak.core.repository.IBulkRepository`2.BulkCreate(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Inserts in bulk a set of entities
+            </summary>
+            <param name="entities">the list of entities to be inserted</param>
+            <returns>the list of entites after inserted</returns>
+        </member>
+        <member name="M:com.etak.core.repository.IBulkRepository`2.BulkUpdate(System.Collections.Generic.IEnumerable{`0},System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Update in bulk a set of entities
+            </summary>
+            <param name="entities">the list of entities to be updated</param>
+            <param name="path">the list of properties of the entities that needs to be updated</param>
+            <returns>the list of entites after updated</returns>
+        </member>
+        <member name="M:com.etak.core.repository.IBulkRepository`2.BulkDelete(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Delete in bulk a set of entities
+            </summary>
+            <param name="entities">the list of entities to be deleted</param>
+            <returns>the list of entites after deleted</returns>
+        </member>
+        <member name="T:com.etak.core.repository.IConnectionProvider">
+            <summary>
+            Interface to provide a "factory like" connection generator.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.IConnectionProvider.GetConnection">
+            <summary>
+            Gets a connection from the persistance layer
+            </summary>
+            <returns>the new connection</returns>
+        </member>
+        <member name="T:com.etak.core.repository.IPersistanceConnection">
+            <summary>
+            An interface to abstract the connectivity to different storage systems ORMs
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.IPersistanceConnection.SetNotifier(com.etak.core.repository.ClearSessionForThread)">
+            <summary>
+            Sets The notifier to invoke when the Session is disposed
+            </summary>
+            <param name="notifier">The notifier to invoke when the Session is disposed</param>
+        </member>
+        <member name="M:com.etak.core.repository.IPersistanceConnection.Close">
+            <summary>
+            Close the connection to the persitance layer
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.IPersistanceConnection.BeginTransaction">
+            <summary>
+            Starts a transaction in the persistance layer
+            </summary>
+            <returns>The transaction open</returns>
+        </member>
+        <member name="M:com.etak.core.repository.IPersistanceConnection.BeginTransaction(System.Data.IsolationLevel)">
+            <summary>
+            Starts a transaction in the persistance layer
+            </summary>
+            <param name="level">The data isolation level to start the transaction <see cref="T:System.Data.IsolationLevel"/></param>
+            <returns>The transaction open</returns>
+        </member>
+        <member name="T:com.etak.core.repository.IPersistanceTransaction">
+            <summary>
+            An abstraction of a transaction in the repository
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.IPersistanceTransaction.Commit">
+            <summary>
+            Commits changes done in the in the repositories
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.IPersistanceTransaction.Rollback">
+            <summary>
+            Rollback the changes done in the repositories
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.ClearSessionForThread">
+            <summary>
+            Signature to the method that will be invoked when the session is closed.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.RepositoryManager">
+            <summary>
+            Static class used to get Repository instances, it manages the the connection per thread and transactions.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.RepositoryManager.AddAssemby(System.Reflection.Assembly)">
+            <summary>
+            Adds a Ninject assembly with directives to load
+            </summary>
+            <param name="s">the assembly containing the ninject module</param>
+        </member>
+        <member name="M:com.etak.core.repository.RepositoryManager.GetConnectionProvider">
+            <summary>
+            Gets factory that creates the conenctions.
+            </summary>
+            <returns>The connection</returns>
+        </member>
+        <member name="M:com.etak.core.repository.RepositoryManager.GetNewConnection">
+            <summary>
+            Creates a new connection to the repository, will throw an exception if the connection
+            was already created
+            </summary>
+            <returns>The created connection</returns>
+        </member>
+        <member name="M:com.etak.core.repository.RepositoryManager.CloseConnection">
+            <summary>
+            Closes the conenction with the DB
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.RepositoryManager.SesionScopeComplete">
+            <summary>
+            This is an scope helper to allow Idisposable and closing the backing connection
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.RepositoryManager.GetConnection">
+            <summary>
+            Gets the connection already opened for the current thread
+            </summary>
+            <returns>The existing connection</returns>
+        </member>
+        <member name="M:com.etak.core.repository.RepositoryManager.GetRepository``1">
+            <summary>
+            Gets an instance of a class implementing TRepositoryOfEntity
+            </summary>
+            <typeparam name="TRepositoryOfEntity">The interface of the requested repository</typeparam>
+            <returns>the instance implementing the interface</returns>
+        </member>
+        <member name="M:com.etak.core.repository.RepositoryManager.RemapInterfaceToImplementation``2">
+            <summary>
+            Maps an Repository interface to an actual implementation
+            </summary>
+            <typeparam name="TInterface">The type of the repository</typeparam>
+            <typeparam name="TClass">The class implementing the repository</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.RepositoryManager.RemapInterfaceToConstant``2(``1)">
+            <summary>
+            Maps an Repository interface to an actual implementation
+            </summary>
+            <typeparam name="TInterface">The type of the repository</typeparam>
+            <typeparam name="TClass">The class implementing the repository</typeparam>
+            <param name="implementation">The constant implementation to bind</param>
+        </member>
+    </members>
+</doc>

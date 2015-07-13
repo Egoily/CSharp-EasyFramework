@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <projectUrl>http://jira.etns:8080/browse/CFP</projectUrl>
+    <releaseNotes>UserInfoRepository</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>Repository NHiberate</tags>
+  </metadata>
+  <files>   
+    <file src="\bin\Nuget\com.etak.core.repository.NHibernate.pdb" target="lib\net40" />
+  </files>
+</package>

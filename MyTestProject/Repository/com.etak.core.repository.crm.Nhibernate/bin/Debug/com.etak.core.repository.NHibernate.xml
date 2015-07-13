@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.repository.NHibernate</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.informationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator">
+            <summary>
+            NHibernate Identifier generator, based on a given prefix configured in app.config settings
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator.Generate(NHibernate.Engine.ISessionImplementor,System.Object)">
+            <summary>
+            Generates an Id for the given prefix configured in the DB.
+            </summary>
+            <param name="session">the session requesting a new Id for obj</param>
+            <param name="obj">the object that needs and Id</param>
+            <returns>the id generated</returns>
+        </member>
+        <member name="T:com.etak.core.repository.NHibernate.IDGeneration.MiddlefixIdGenerator">
+            <summary>
+            Id generator for Nhibernate based on a configured middle fix.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.IDGeneration.MiddlefixIdGenerator.Generate(NHibernate.Engine.ISessionImplementor,System.Object)">
+            <summary>
+            Implementaion of IIdentifierGenerator, generates a new ID everytime we attempt to save
+            an object
+            </summary>
+            <param name="session">the current session that is trying to create the object</param>
+            <param name="obj">the object that is being persisted and needs ID</param>
+            <returns>the Id generated</returns>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.IDGeneration.MiddlefixIdGenerator.Configure(NHibernate.Type.IType,System.Collections.Generic.IDictionary{System.String,System.String},NHibernate.Dialect.Dialect)">
+            <summary>
+            Implementation of IConfigurable interface
+            </summary>
+            <param name="type">the type of the ID to confgiure</param>
+            <param name="parms">
+            the set of parameters configured in the Id generation in the Nhibernate mapping
+            </param>
+            <param name="dialect">the current dialect for the DB</param>
+        </member>
+        <member name="T:com.etak.core.repository.NHibernate.NHibernateBulkCopyRepository`2">
+            <summary>
+            Repository that extends NHibernate repository, and implements BulkRepository. It reads the
+            configuration of the schema from NHibernate but implements the operation with BulkCopy API
+            SQL server operation, this repository only works with MS SQL Server
+            </summary>
+            <typeparam name="TEntity">The type of the entity that this repository manages</typeparam>
+            <typeparam name="TKey">The type of the key of the entity, tipically Int64 or Int32</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.NHibernate.NHibernateRepository`2">
+            <summary>
+            NHibernate generic repository, implements all basic CRUD operations. Manges the connection management
+            </summary>
+            <typeparam name="TEntity">The type of the entity that this repository manages</typeparam>
+            <typeparam name="TKey">The type of the key of the entity, tipically Int64 or Int32</typeparam>
+        </member>
+        <member name="F:com.etak.core.repository.NHibernate.NHibernateRepository`2._session">
+            <summary>
+            Session obtained in the constructor via the repository manger
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.NHibernateRepository`2.#ctor">
+            <summary>
+            constructor, gets the session from the repository manager.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.NHibernateRepository`2.GetQuery">
+            <summary>
+            Creates a QueryOver root query for the given entity
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.NHibernateRepository`2.GetById(System.String)">
+            <summary>
+            Gets the entity by ID
+            </summary>
+            <param name="id">the Id of the entity</param>
+            <returns>the fetched entity</returns>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.NHibernateRepository`2.Delete(`0)">
+            <summary>
+            Implementation of Delete Repository, Deletes an entity from the DB
+            </summary>
+            <param name="entity">the entity to be deleted</param>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.NHibernateRepository`2.GetById(`1)">
+            <summary>
+            Implementation of GetbyId using NHibernate
+            </summary>
+            <param name="id">the Id of the entity to look up</param>
+            <returns>the fetched entity</returns>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.NHibernateRepository`2.Create(`0)">
+            <summary>
+            Implementation of Create repository using Nhibernate, creates an entity in the DB
+            </summary>
+            <param name="entity">the entity to be created</param>
+            <returns>The entity with the generated identifier</returns>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.NHibernateRepository`2.Update(`0)">
+            <summary>
+            Implementation of Update repository using NHibernate, updates the entity in the DB
+            </summary>
+            <param name="entity">the entity to be updated</param>
+            <returns>the updated entity</returns>
+        </member>
+        <member name="F:com.etak.core.repository.NHibernate.NHibernateBulkCopyRepository`2.metaData">
+            <summary>
+            Session obtained in the constructor via the repository manger
+            </summary>
+        </member>
+        <member name="F:com.etak.core.repository.NHibernate.NHibernateBulkCopyRepository`2.persister">
+            <summary>
+            The NHibernate persister
+            </summary>
+        </member>
+        <member name="F:com.etak.core.repository.NHibernate.NHibernateBulkCopyRepository`2.sessionFactory">
+            <summary>
+            The underlaying NHibernate session factory
+            </summary>
+        </member>
+        <member name="F:com.etak.core.repository.NHibernate.NHibernateBulkCopyRepository`2.entityType">
+            <summary>
+            The type of the entity for this bulk repository
+            </summary>
+        </member>
+        <member name="F:com.etak.core.repository.NHibernate.NHibernateBulkCopyRepository`2.TableName">
+            <summary>
+            The real table name where (that is fixed in case of synonim table)
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.NHibernateBulkCopyRepository`2.#ctor">
+            <summary>
+            constructor, gets the session from the repository manager.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.NHibernateBulkCopyRepository`2.GetFullTableName">
+            <summary>
+            Resolves the real table name in case it's a synonim
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.NHibernateBulkCopyRepository`2.GetSynonymRealTable(System.String)">
+            <summary>
+            Get the real table from the dynamic view of synonims
+            </summary>
+            <param name="tableName">the table name to resolve</param>
+            <returns>the table name with full namespace</returns>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.NHibernateBulkCopyRepository`2.BulkCreate(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Creates a list of entities with bulk copy
+            </summary>
+            <param name="entities">the entities to be created</param>
+            <returns>the created entities with the Generated ID</returns>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.NHibernateBulkCopyRepository`2.BulkUpdate(System.Collections.Generic.IEnumerable{`0},System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Updates some fields of a set of entities
+            </summary>
+            <param name="entities">the list of enties to be updated</param>
+            <param name="path">
+            an array of lambda expression to get the fields that needs to be updated
+            </param>
+            <returns>the updated entities</returns>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.NHibernateBulkCopyRepository`2.BulkDelete(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Deletes the entities from the DB in bulk way
+            </summary>
+            <param name="entities">the entities to be deleted</param>
+            <returns>The list of deleted entities</returns>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.NHibernateBulkCopyRepository`2.GetDataRowsFromEntitiesAndAddMaping(System.Collections.Generic.IEnumerable{`0},System.Data.SqlClient.SqlBulkCopy,System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Transforms a set of entities to a DataTable, it also fills the mapping in the bulk copy object
+            </summary>
+            <param name="entities">the list of entities to be transformed</param>
+            <param name="blkCopy">the bulk copy with the mappings to be added</param>
+            <param name="paths">
+            the columns that needs to be added to the data table as lambda expressions
+            </param>
+            <returns>the DataTable with the transformed entities</returns>
+        </member>
+        <member name="T:com.etak.core.repository.NHibernate.NHibernateConnectionProvider">
+            <summary>
+            Abstraction class from NHibernate session factory to the repository framework
+            </summary>
+        </member>
+        <member name="F:com.etak.core.repository.NHibernate.NHibernateConnectionProvider.sesFactory">
+            <summary>
+            The Hibernate session factory
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.NHibernateConnectionProvider.#ctor(NHibernate.ISessionFactory)">
+            <summary>
+            Initializes a new ConnectionProvider/Factory by wrapping the NHibernate session factory
+            </summary>
+            <param name="sesFactory"></param>
+        </member>
+        <member name="M:com.etak.core.repository.NHibernate.NHibernateConnectionProvider.GetConnection">
+            <summary>
+            returns
+            </summary>
+            <returns>
+            a new Hibernate session encapsulated in a IPersistanceConnection, implemented by SessionToPersistanceAdapter
+            </returns>
+        </member>
+        <member name="T:com.etak.core.repository.NHibernate.SessionToPersistanceAdapter">
+            <summary>
+            Implementes IPersistanceConnection using and internal NHibernate session. The purpose of
+            this layer, is be able to abstract CRM code from NHibernate.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.NHibernate.TransactionToPersistanceTransaction">
+            <summary>
+            Abstraction class from NHibernate ITransaction to CRM IPersistanceTransaction
+            </summary>
+        </member>
+    </members>
+</doc>

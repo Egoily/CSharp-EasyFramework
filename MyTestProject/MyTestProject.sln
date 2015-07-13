@@ -19,8 +19,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.repository.cr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.repository.crm.Nhibernate", "Repository\com.etak.core.repository.crm.Nhibernate\com.etak.core.repository.crm.Nhibernate.csproj", "{F2F11342-E395-4220-9E9B-4707783126EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.repository.crm.Nhibernate.UnitTests", "Repository\com.etak.core.repository.crm.Nhibernate.test\com.etak.core.repository.crm.Nhibernate.UnitTests.csproj", "{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.repository.NHibernate", "Repository\com.etak.core.repository.NHibernate\com.etak.core.repository.NHibernate.csproj", "{D93C29D3-5740-4B4F-8356-85A0F599F407}"
 EndProject
 Global
@@ -111,21 +109,6 @@ Global
 		{F2F11342-E395-4220-9E9B-4707783126EE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{F2F11342-E395-4220-9E9B-4707783126EE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{F2F11342-E395-4220-9E9B-4707783126EE}.Release|x86.ActiveCfg = Release|Any CPU
-		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
-		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
-		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Nuget|Mixed Platforms.ActiveCfg = Nuget|Any CPU
-		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Nuget|Mixed Platforms.Build.0 = Nuget|Any CPU
-		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Nuget|x86.ActiveCfg = Nuget|Any CPU
-		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Release|x86.ActiveCfg = Release|Any CPU
 		{D93C29D3-5740-4B4F-8356-85A0F599F407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D93C29D3-5740-4B4F-8356-85A0F599F407}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D93C29D3-5740-4B4F-8356-85A0F599F407}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -150,7 +133,6 @@ Global
 		{B3B4CFA1-4488-4E8C-AA22-B9F6206BE866} = {141E8C14-D227-4577-B8D6-2E22D76113E1}
 		{5279C8D2-7523-4A27-AA03-8A9736DE7E45} = {141E8C14-D227-4577-B8D6-2E22D76113E1}
 		{F2F11342-E395-4220-9E9B-4707783126EE} = {141E8C14-D227-4577-B8D6-2E22D76113E1}
-		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899} = {141E8C14-D227-4577-B8D6-2E22D76113E1}
 		{D93C29D3-5740-4B4F-8356-85A0F599F407} = {141E8C14-D227-4577-B8D6-2E22D76113E1}
 	EndGlobalSection
 EndGlobal
