@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.eventsystem.model.core.PromotionPlan, EventModel" table="RM_PROMOTIONPLAN" mutable="false" >
+    <id name="PromotionPlanId" column="PROMOTIONPLANID" type="Int32"  length="4" unsaved-value="0">
+    </id>
+    <property name="PromotionPlanName" column="PROMOTIONPLANNAME" type="String" length="200" />
+    
+    <property name="Exclusive" column="EXCLUSIVE" type="Boolean" />
+    <property name="Periodic" column="PERIODIC" type="Int32" length="4" />
+    <property name="Priority" column="PRIORITY" type="Int32" length="4" />
+    <property name="ResetLimit" column="RESETLIMIT" type="Boolean" />
+    <property name="MonthFee" column="MONTHFEE" type="Decimal" />
+    <property name="SubscriptionFee" column="SUBSCRIPTIONFEE" type="Decimal" />
+    <property name="SubscriptionPeriod" column="SUBSCRIPTIONPERIOD" type="Int32" length="4" />
+    <property name="SubscriptionPeriodUnit" column="SUBSCRIPTIONPERIODUNIT" type="Int32" length="4" />
+    <property name="StartDate" column="STARTDATE" type="DateTime" />
+    <property name="EndDate" column="ENDDATE" type="DateTime" />
+    <property name="ActiveWithoutCredit" column="ActiveWithoutCredit" type="Int32" />
+    <property name="PromotionCategoryId" column="PROMOTIONCATEGORYID" type="Int32" length="4" />
+    <property name="SelfCareVisible" column="SELFCAREVISIBLE" type="Int32" length="4" />
+    <property name="CustomerCareVisible" column="CUSTOMERCAREVISIBLE" type="Int32" length="4" />
+    <property name="APIVisible" column="APIVISIBLE" type="Int32" length="4" />
+    <property name="Prorate" column="PRORATE" type="Int32" length="4" />
+    <property name="ResetPeriod" column="RESETPERIOD" type="Int32" length="4" />
+    <property name="ResetPeriodUnit" column="RESETPERIODUNIT" type="Int32" length="4" />
+    <property name="DiscountMonthFeeForRenew" column="DISCOUNTMONTHFEEFORRENEW" type="Decimal" />
+    <property name="TimePointForChargeFee" column="TIMEPOINTFORCHARGEFEE" type="Int32" length="4" />
+    <property name="SmsNotification" column="SMSNOTIFICATION" type="Int32" length="4" />
+    <property name="NotificationSmsTemplateId" column="NOTIFICATIONSMSTEMPLATEID" type="Int32" length="8" />
+    <property name="RenewAutomatically" column="RENEWAUTOMATICALLY" type="Int32" length="4" />
+    <property name="DailyResetTime" column="DAILYRESETTIME" type="Int32" length="4" />
+    <property name="RestrictUnit">
+      <column name="RESTRICTUNIT" sql-type="Int32" length="4"/>
+    </property>
+    <property name="RestrictDuration" column="RESTRICTDURATION" type="Int32" length="4" />
+    <property name="RemoveImmediatelyFlag" column="REMOVEIMMEDIATELYFLAG" type="Int32" length="4" />
+    <property name="Accumulative" column="ACCUMULATIVE" type="Boolean" />  
+  </class>
+
+</hibernate-mapping>

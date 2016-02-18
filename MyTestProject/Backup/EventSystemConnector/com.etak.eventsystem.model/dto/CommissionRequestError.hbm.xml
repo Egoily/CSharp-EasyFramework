@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" >
+	<class name="com.etak.eventsystem.model.core.CommissionRequestError, EventModel" table="CRM_COMMISSION_REQUEST_ERRORS" mutable="false">
+    <id name="ID" column="ID" type="Int64">
+      <generator class="native"/>
+    </id>
+    <property name="CommissionID" column="COMMISSIONID" />
+    <property name="ReceiverType" column="RECEIVERTYPE" />
+    <property name="CreateDate" column="CREATEDATE" />
+    <property name="ErrorCode" column="ERRORCODE" />
+    <property name="Request" column="REQUEST" />
+    <property name="Response" column="RESPONSE" />
+    <property name="Retry" column="RETRY" />
+    </class>
+</hibernate-mapping>
+

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="EventReceiver.model.core.Dealer">
+    <Position X="6" Y="13.25" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAQAAAAAAA=</HashCode>
+      <FileName>model\core\Dealer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventReceiver.model.core.Customer">
+    <Position X="6.25" Y="3" Width="3.75" />
+    <AssociationLine Name="Services" Type="EventReceiver.model.core.Service" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="5.188" />
+        <Point X="4" Y="5.188" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>xAAQAkAEICEAAAAICACQBAAIBEBQAhCSAKABBQAAUA4=</HashCode>
+      <FileName>model\core\Customer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Resources" />
+      <Property Name="Products" />
+      <Property Name="Services" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="EventReceiver.model.core.Product">
+    <Position X="0.5" Y="8.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAAAAAAgABgAAAAAAAAggEAAAQAAAAAABAEAAAAA=</HashCode>
+      <FileName>model\core\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventReceiver.model.core.MobileLineService">
+    <Position X="13" Y="3" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>BhAIAAIQIIAAgEIAAKAAAAgpMkqhIJAACAlBCEAGEAA=</HashCode>
+      <FileName>model\core\MobileLineService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventReceiver.model.core.Service">
+    <Position X="0.5" Y="3" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>EAgAACCEAAEABAAAAAAAAAggUAAEAQAACAADAEAAABA=</HashCode>
+      <FileName>model\core\Service.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="EventReceiver.model.core.CustomerStatus">
+    <Position X="6.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAABAAAAAAAAACAAAAgAAAAIAAEAAA=</HashCode>
+      <FileName>model\core\Customer.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

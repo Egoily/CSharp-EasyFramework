@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" >
+	<class name="com.etak.eventsystem.model.core.DealerProperty, EventModel" table="CRM_DEALERS_PROPERTIES" mutable="false">
+		<id name="PropertyID" column="PROPERTYID" type="Int32"  length="4">
+		</id>
+    <property name="DealerID" column="DEALERID"/>
+    <property name="InvoiceNO" column="INVOICENO" type="Int32" length="4" />
+    <property name="StatementNO" column="STATEMENTNO" type="Int32" length="4" />
+    <property name="MinInvoiceAmount" column="MIN_INVOICE_AMOUNT" type="Decimal" />
+    <property name="MinInvoicePeriod" column="MIN_INVOICE_PERIOD" type="Int32" length="4" />
+    <property name="LogoID" column="LOGOID" type="Int32" length="4" />
+    <property name="InvoiceBaseOn" column="INVOICE_BASED_ON" type="Int32" length="4" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <property name="UserID" column="USERID" type="Int32" length="4" />
+    <property name="MaxPinInvalidTimes" column="MAXPININVALIDTIMES" type="Int32" length="4" />
+    <property name="CPSCode" column="CPSCode" type="String" length="20" />
+    <property name="CountryCode" column="CountryCode" type="Int32" length="4" />
+    <property name="TaxPlanId" column="TaxPlanId" type="Int32" length="4" />
+    <property name="LanguageId" column="LanguageId" type="Int32" length="4" />
+    <property name="InvoiceDetail" column="InvoiceDetail" type="Boolean" length="4" />
+    <property name="InvoiceDueDate" column="InvoiceDueDate" type="Int32"/>
+    <property name="BillingEntity" column="BillingEntity" type="Int32"/>
+    <property name="BundleId" column="BundleId" type="Int32"/>
+    <property name="CreditLimit" column="CreditLimit" type="Decimal" />
+    <property name="ProvisionID" column="ProvisionID" type="Int32" />
+    <property name="BillingScenarioID" column="BILLINGSCENARIOID" type="Int32" />
+    <property name="CommissionGroup" column="COMMISSIONGROUP" type="Int32" />
+	</class>
+</hibernate-mapping>
+

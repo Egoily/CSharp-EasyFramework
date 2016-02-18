@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A96B847-A8F7-4DAE-8E82-AC43B6065217}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.etak.eventsystem.model</RootNamespace>
+    <AssemblyName>com.etak.eventsystem.model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Nuget\com.etak.eventsystem.model.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.model">
+      <HintPath>..\packages\com.etak.core.model.2.0.10.1\lib\net40\com.etak.core.model.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\revisionsync\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="dto\AccountDTO.cs" />
+    <Compile Include="dto\CallDetailRecord.cs" />
+    <Compile Include="dto\ChargeDTO.cs" />
+    <Compile Include="dto\CommissionHistory.cs" />
+    <Compile Include="dto\CommissionRequestError.cs" />
+    <Compile Include="dto\CrmEnum.cs" />
+    <Compile Include="dto\Customer.cs" />
+    <Compile Include="dto\CustomerChargeDTO.cs" />
+    <Compile Include="dto\CustomerChargeScheduleDTO.cs" />
+    <Compile Include="dto\CustomerProductAssignmentDTO.cs" />
+    <Compile Include="dto\CustomerProperty.cs" />
+    <Compile Include="dto\Dealer.cs" />
+    <Compile Include="dto\DealerProperty.cs" />
+    <Compile Include="dto\Definitions.cs" />
+    <Compile Include="dto\EventToCoreModelHelper.cs" />
+    <Compile Include="dto\InvoiceDTO.cs" />
+    <Compile Include="dto\LoadeableEntity.cs" />
+    <Compile Include="dto\MobileLineService.cs" />
+    <Compile Include="dto\MVNO.cs" />
+    <Compile Include="dto\NumberInfo.cs" />
+    <Compile Include="dto\Package.cs" />
+    <Compile Include="dto\Product.cs" />
+    <Compile Include="dto\PromotionPlan.cs" />
+    <Compile Include="dto\Service.cs" />
+    <Compile Include="dto\TopUp.cs" />
+    <Compile Include="EventSystemContract.cs" />
+    <Compile Include="events\ChangeBillTypeEvent.cs" />
+    <Compile Include="events\CreditLimitExceededAlertNotificationEvent.cs" />
+    <Compile Include="events\creditlimit\BalanceTransferEvent.cs" />
+    <Compile Include="events\creditlimit\BalanceTransferNotificationEvent.cs" />
+    <Compile Include="events\creditlimit\CreditLimitLeftNotificationEvent.cs" />
+    <Compile Include="events\creditlimit\EmergencyCreditAppliedEvent.cs" />
+    <Compile Include="events\creditlimit\EmergencyCreditApplyNotificationEvent.cs" />
+    <Compile Include="events\creditlimit\LowBalanceNotificationEvent.cs" />
+    <Compile Include="events\creditlimit\PostpaidCreditLimitChangedNotificationEvent.cs" />
+    <Compile Include="events\creditlimit\TopUpWithEmergencyCreditNotificationEvent.cs" />
+    <Compile Include="events\CustomerStatusChange\RoamingOnEvent.cs" />
+    <Compile Include="events\CustomerStatusChange\RoamingOffEvent.cs" />
+    <Compile Include="events\customer\AlElmRegisterFailureEvent.cs" />
+    <Compile Include="events\customer\AlElmRegisterFailureScheduleEvent.cs" />
+    <Compile Include="events\customer\AlElmRetryRegisterRejectEvent.cs" />
+    <Compile Include="events\customer\ChangeEmailEvent.cs" />
+    <Compile Include="events\customer\ChangeLanguageNotificationEvent.cs" />
+    <Compile Include="events\customer\ChangePricePlanEvent.cs" />
+    <Compile Include="events\customer\CustomerActivedEvent.cs" />
+    <Compile Include="events\customer\FirstActivationNotificationEvent.cs" />
+    <Compile Include="events\customer\MembershipChangedEvent.cs" />
+    <Compile Include="events\customer\ReferralActivedEvent.cs" />
+    <Compile Include="events\customer\RoamingSwitchTurnOnOrOffNotificationEvent.cs" />
+    <Compile Include="events\DataOnlyTopupNotificationEvent.cs" />
+    <Compile Include="events\DocumentValidationEvent.cs" />
+    <Compile Include="events\DocumentValidationNotificationEvent.cs" />
+    <Compile Include="events\dre\BlockCallOutEvent.cs" />
+    <Compile Include="events\dre\UsageChargeEvent.cs" />
+    <Compile Include="events\dre\UsageChargeEventFromDre.cs" />
+    <Compile Include="events\Event.cs" />
+    <Compile Include="events\InvokeCommissionExternalInterfaceEvent.cs" />
+    <Compile Include="events\MobileLineServiceMonthActive.cs" />
+    <Compile Include="events\MobileLineServiceUsage.cs" />
+    <Compile Include="events\NotificationEvent.cs" />
+    <Compile Include="events\PortIn\PortInAcceptedEvent.cs" />
+    <Compile Include="events\PortIn\PortInActiveEvent.cs" />
+    <Compile Include="events\PortIn\PortInRejectedEvent.cs" />
+    <Compile Include="events\PortIn\PortInTopUpEnoughEvent.cs" />
+    <Compile Include="events\promotion\ApplyBBPromotionEvent.cs" />
+    <Compile Include="events\promotion\AxiomSocialMediaBundleEvent.cs" />
+    <Compile Include="events\promotion\AxiomSocialMediaBundleNotificationEvent.cs" />
+    <Compile Include="events\promotion\ChargeFeeWhenSubscribePromotionEvent.cs" />
+    <Compile Include="events\promotion\MNPEvent.cs" />
+    <Compile Include="events\promotion\PromotionActivatedNotificationEvent.cs" />
+    <Compile Include="events\promotion\PromotionDeactivatedEvent.cs" />
+    <Compile Include="events\promotion\PromotionXDayResetNotificationEvent.cs" />
+    <Compile Include="events\RegistrationEvent.cs" />
+    <Compile Include="events\TopUpEvent.cs" />
+    <Compile Include="ExtensionManager.cs" />
+    <Compile Include="IEventContractImplementorFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="dto\CommissionHistory.hbm.xml" />
+    <EmbeddedResource Include="dto\CommissionRequestError.hbm.xml" />
+    <EmbeddedResource Include="dto\Customer.hbm.xml" />
+    <EmbeddedResource Include="dto\CustomerProperty.hbm.xml" />
+    <EmbeddedResource Include="dto\Dealer.hbm.xml" />
+    <EmbeddedResource Include="dto\DealerProperty.hbm.xml" />
+    <EmbeddedResource Include="dto\MobileLineService.hbm.xml" />
+    <EmbeddedResource Include="dto\Number.hbm.xml" />
+    <EmbeddedResource Include="dto\Package.hbm.xml" />
+    <EmbeddedResource Include="dto\Product.hbm.xml" />
+    <EmbeddedResource Include="dto\PromotionPlan.hbm.xml" />
+    <EmbeddedResource Include="dto\Service.hbm.xml" />
+    <EmbeddedResource Include="dto\TopUp.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="com.etak.eventsystem.model.nuspec" />
+    <None Include="dto\CoreClassDiagram.cd" />
+    <None Include="dto\DREEvents.cd" />
+    <None Include="events\EventsClassDiagram.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild" Condition="$(Configuration)==Nuget">
+    <Message Text="&quot;$(SolutionDir)nugetpackages\nuget.exe&quot; pack &quot;$(ProjectPath)&quot; -IncludeReferencedProjects -Properties Configuration=Nuget;Platform=$(Platform) -OutputDirectory &quot;$(SolutionDir)nugetpackages&quot;" />
+    <Exec Command="&quot;$(SolutionDir)nugetpackages\nuget.exe&quot; pack &quot;$(ProjectPath)&quot; -IncludeReferencedProjects -Properties Configuration=Nuget;Platform=$(Platform) -OutputDirectory &quot;$(SolutionDir)nugetpackages&quot;" IgnoreExitCode="false" />
+  </Target>
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
+</Project>

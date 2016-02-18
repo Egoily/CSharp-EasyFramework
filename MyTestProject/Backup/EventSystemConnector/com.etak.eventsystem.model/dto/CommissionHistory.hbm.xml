@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" >
+	<class name="com.etak.eventsystem.model.core.CommissionHistory, EventModel" table="CRM_COMMISSION_HISTORY" mutable="false">
+    <id name="CommissionID" column="COMMISSIONID" type="Int64">
+      <generator class="native"/>
+    </id>
+    <property name="CommissionPlanID" column="COMMISSIONPLANID" type="Int32"/>
+    <property name="CommissionDetailID" column="COMMISSIONDETAILID" type="Int32"/>
+    <property name="DealerID" column="DEALERID"/>
+    <property name="SalesManID" column="SALESMANID"/>
+    <property name="CustomerID" column="CUSTOMERID" />
+    <property name="MSISDN" column="MSISDN" />
+    <property name="PaymentDealerAmount" column="PAYMENTDEALERAMOUNT"/>
+    <property name="PaymentSalesManAmount" column="PAYMENTSALESMANAMOUNT"/>
+    <property name="PaymentUnit" column="PAYMENTUNIT"/>
+    <property name="Approved" column="APPROVED"/>
+    <property name="CreateDate" column="CREATEDATE" />
+    <property name="LastSendDate" column="LASTSENDDATE" />
+    <property name="PaymentSalesManSucceeded" column="PAYMENTSALESMANSUCCEEDED"/>
+    <property name="PaymentDealerSucceeded" column="PAYMENTDEALERSUCCEEDED"/>
+
+    <bag name="CommissionRequestErrors" inverse="true" lazy="false" cascade="all-delete-orphan">
+      <key column="COMMISSIONID" />
+      <one-to-many class="com.etak.eventsystem.model.core.CommissionRequestError, EventModel" />
+    </bag>
+    </class>
+</hibernate-mapping>
+

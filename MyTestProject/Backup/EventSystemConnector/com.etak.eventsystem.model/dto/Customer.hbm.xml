@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name ="com.etak.eventsystem.model.core.Customer,EventModel" table="CRM_CUSTOMERS" mutable="false">
+    <id name="CustomerID" column="CustomerID" type="Int64">
+    </id>
+    <property name="DealerID" column="DEALERID" type="Int32" length="4" />   
+    <property name="Company" column="COMPANY" type="String" length="200" />
+    <property name="Contact" column="CONTACT" type="String" length="200" />
+    <property name="TitleID" column="TITLEID" type="Int32" length="4" />
+    <property name="GenderID" column="GENDERID" type="Int32" length="4" />
+    <property name="Address" column="ADDRESS" type="String" length="200" />
+    <property name="HouseNO" column="HOUSENO" type="String" length="50" />
+    <property name="Zipcode" column="ZIPCODE" type="String" length="50" />  
+    <property name="City" column="CITY" type="String" length="200" />
+    <property name="CountryID" column="COUNTRYID" type="Int32" length="4" />
+    <property name="Telephone" column="TELEPHONE" type="String" length="50" />
+    <property name="Telefax" column="TELEFAX" type="String" length="25" />
+    <property name="Mobile" column="MOBILE" type="String" length="25" />
+    <property name="Email" column="EMAIL" type="String" length="200" />
+    <property name="Choc" column="CHOC" type="String" length="100" />
+    <property name="VAT" column="VAT" type="String" length="100" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <property name="BillingDate" column="BILLINGDATE" type="Int32" length="4" />
+    <property name="ActivedDate" column="ACTIVEDDATE" type="DateTime" />
+    <property name="Initials" column="INITIALS" type="String" length="200" />
+    <property name="MiddleName" column="MIDDLENAME" type="String" length="200" />
+    <property name="LastName" column="LASTNAME" type="String" length="200" />
+    <property name="HouseExtention" column="HOUSEEXTENTION" type="String" length="200" />    
+    <property name="Status" column="STATUSID" type="Int32" length="4" />
+      <property name="ParentControl" column="ParentControl" type="Int32" length="4" />
+   
+      <property name="Area" column="AREA" type="String" length="4" />
+      <property name="PoBox" column="POBOX" type="Int32" length="4" />
+      <property name="DateOfBirth" column="DATEOFBIRTH" type="DateTime" />
+      <property name="ArName" column="LOCALIZEDNAME" type="String" length="255" />
+
+    <bag name="Products" inverse="true" lazy="false" cascade="none">
+      <key column="CUSTOMERID" />
+      <one-to-many class="com.etak.eventsystem.model.core.Product,EventModel" />
+    </bag>
+    
+    <bag name="Services" inverse="true" lazy="false" cascade="none">
+      <key column="CustomerID" />
+      <one-to-many class="com.etak.eventsystem.model.core.Service, EventModel" />
+    </bag>
+
+    <bag name="ResourcesList" inverse="true" lazy="false" cascade="none">
+      <key column="CustomerID" />
+      <one-to-many class="com.etak.eventsystem.model.core.MobileLineService, EventModel" />
+    </bag>
+
+    <bag name="CustomerPropertyList" inverse="true" lazy="false" cascade="none">
+      <key column="CustomerID" />
+      <one-to-many class="com.etak.eventsystem.model.core.CustomerProperty, EventModel" />
+    </bag>
+  </class>
+
+</hibernate-mapping>

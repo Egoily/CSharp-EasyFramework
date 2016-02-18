@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.eventsystem.model.core.Package, EventModel" table="RM_PACKAGE" mutable="false">
+    <id name="PackageID" column="PACKAGEID" type="Int32"  length="4" unsaved-value="0">     
+    </id>
+    <many-to-one name="Dealer" class="com.etak.eventsystem.model.core.Dealer, EventModel"  lazy="false" cascade="none" column="CUSTOMERID"/>
+    <property name="PackageName" column="PACKAGENAME" type="String" length="400" />
+    <property name="PaymentTypeID" column="PAYMENTTYPEID" type="Int32" />
+  </class>
+
+</hibernate-mapping>

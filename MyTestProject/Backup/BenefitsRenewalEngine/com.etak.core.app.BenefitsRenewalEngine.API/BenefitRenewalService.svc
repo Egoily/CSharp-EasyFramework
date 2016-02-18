@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="com.etak.core.app.BenifitsRenewalEngine.Actions.service.BenefitRenewalService" %>

@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.eventsystem.model", "com.etak.eventsystem.model\com.etak.eventsystem.model.csproj", "{6A96B847-A8F7-4DAE-8E82-AC43B6065217}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.eventsystem.jmsReceiver", "com.etak.eventsystem.jmsReceiver\com.etak.eventsystem.jmsReceiver.csproj", "{DE5B4FA5-EA6B-4908-9FCE-04783F53B3F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.eventsystem.wcfSender", "com.etak.eventsystem.wcfSender\com.etak.eventsystem.wcfSender.csproj", "{68C7F3FB-FD6E-44D0-AD38-C9B40742FE0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProducerConsumerSample", "ProducerConsumerSample\ProducerConsumerSample.csproj", "{4B91644D-DFA0-4BFE-8AAF-2F3DEF00B1CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nugetpackages", "nugetpackages", "{B79F0DF2-A070-480D-B6D4-28821EFA8A36}"
+	ProjectSection(SolutionItems) = preProject
+		nugetpackages\GetAssemblyFileVersions.dll = nugetpackages\GetAssemblyFileVersions.dll
+		nugetpackages\NuGet.exe = nugetpackages\NuGet.exe
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.eventsystem.test", "com.etak.eventsystem.test\com.etak.eventsystem.test.csproj", "{C1C8C44A-B558-4E9E-9902-A2BEFF586E96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "revisionsync", "revisionsync", "{7919C384-1E6A-4B75-93E9-27518FBB2744}"
+	ProjectSection(SolutionItems) = preProject
+		revisionsync\SharedAssemblyInfo.cs = revisionsync\SharedAssemblyInfo.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.eventsystem.extension.test", "com.etak.eventsystem.extension.test\com.etak.eventsystem.extension.test.csproj", "{B93A8196-69EE-42BC-BE56-E5835BE280F7}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Nuget|Any CPU = Nuget|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A96B847-A8F7-4DAE-8E82-AC43B6065217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A96B847-A8F7-4DAE-8E82-AC43B6065217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A96B847-A8F7-4DAE-8E82-AC43B6065217}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{6A96B847-A8F7-4DAE-8E82-AC43B6065217}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{6A96B847-A8F7-4DAE-8E82-AC43B6065217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A96B847-A8F7-4DAE-8E82-AC43B6065217}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE5B4FA5-EA6B-4908-9FCE-04783F53B3F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE5B4FA5-EA6B-4908-9FCE-04783F53B3F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE5B4FA5-EA6B-4908-9FCE-04783F53B3F5}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{DE5B4FA5-EA6B-4908-9FCE-04783F53B3F5}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{DE5B4FA5-EA6B-4908-9FCE-04783F53B3F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE5B4FA5-EA6B-4908-9FCE-04783F53B3F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68C7F3FB-FD6E-44D0-AD38-C9B40742FE0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68C7F3FB-FD6E-44D0-AD38-C9B40742FE0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68C7F3FB-FD6E-44D0-AD38-C9B40742FE0C}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{68C7F3FB-FD6E-44D0-AD38-C9B40742FE0C}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{68C7F3FB-FD6E-44D0-AD38-C9B40742FE0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68C7F3FB-FD6E-44D0-AD38-C9B40742FE0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B91644D-DFA0-4BFE-8AAF-2F3DEF00B1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B91644D-DFA0-4BFE-8AAF-2F3DEF00B1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B91644D-DFA0-4BFE-8AAF-2F3DEF00B1CC}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{4B91644D-DFA0-4BFE-8AAF-2F3DEF00B1CC}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{4B91644D-DFA0-4BFE-8AAF-2F3DEF00B1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B91644D-DFA0-4BFE-8AAF-2F3DEF00B1CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1C8C44A-B558-4E9E-9902-A2BEFF586E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1C8C44A-B558-4E9E-9902-A2BEFF586E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1C8C44A-B558-4E9E-9902-A2BEFF586E96}.Nuget|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C8C44A-B558-4E9E-9902-A2BEFF586E96}.Nuget|Any CPU.Build.0 = Release|Any CPU
+		{C1C8C44A-B558-4E9E-9902-A2BEFF586E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1C8C44A-B558-4E9E-9902-A2BEFF586E96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B93A8196-69EE-42BC-BE56-E5835BE280F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B93A8196-69EE-42BC-BE56-E5835BE280F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B93A8196-69EE-42BC-BE56-E5835BE280F7}.Nuget|Any CPU.ActiveCfg = Release|Any CPU
+		{B93A8196-69EE-42BC-BE56-E5835BE280F7}.Nuget|Any CPU.Build.0 = Release|Any CPU
+		{B93A8196-69EE-42BC-BE56-E5835BE280F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B93A8196-69EE-42BC-BE56-E5835BE280F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

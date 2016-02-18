@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.eventsystem.model.core.MobileLineService, EventModel" table="CRM_CUSTOMERS_RESOURCEMB" mutable="false"
+          where="STATUS NOT IN(3,20) AND STARTDATE &lt; GETDATE() AND (ENDDATE &gt; GETDATE() OR ENDDATE IS NULL)">
+    <id name="ResourceID" column="RESOURCEID" type="Int32"  length="4">      
+    </id>
+    <property name="Resource" column="RESOURCE" type="String" length="25" />
+    <property name="ICC" column="ICC" type="String" length="25" />
+    <property name="IMSI" column="IMSI" type="String" length="15" />
+    <property name="Remarks" column="REMARKS" type="String" length="100" />
+    <property name="MsIsdnAlertInd" column="MSISDNALERTIND" type="String" length="15" />
+    <property name="ODBMask" column="ODBMASK" type="String" length="500" />
+    <property name="UssdAllowed" column="USSDALLOWED" type="Boolean" />
+    <property name="CBSubsoption" column="CB_SUBSOPTION" type="Int32" length="4" />
+    <property name="CBPassword" column="CB_PASSWORD" type="String" length="50" />
+    <property name="CBWrongAttempts" column="CB_WRONGATTEMPTS" type="Int32" length="4" />
+    <property name="Calculation" column="CALCULATION" type="Int32" length="4" />
+    <property name="StatusID" column="STATUSID" type="Int32" length="4" />
+    <property name="FirstUsed" column="FIRSTUSED" type="DateTime" />
+    <property name="LastUsed" column="LASTUSED" type="DateTime" />
+    <property name="StartDate" column="STARTDATE" type="DateTime" />
+    <property name="EndDate" column="ENDDATE" type="DateTime" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <property name="UserID" column="USERID" type="Int32" length="4" />
+    <property name="PUK" column="PUK" type="String" length="25" />
+    <property name="TeleServiceList" column="TELESERVICELIST" type="String" length="200" />
+    <property name="BearerServiceList" column="BEARERSERVICELIST" type="String" length="200" />
+    <property name="ChangeStatusDate" column="CHANGESTATUSDATE" type="DateTime" />
+    <property name="LastConsumeDate" column="LASTCONSUMEDATE" type="DateTime" />
+    <property name="ActiveDeadlineDate" column="ACTIVEDEADLINEDATE" type="DateTime" />
+    <property name="PINInvalidTimes" column="PININVALIDTIMES" type="Int32" length="4" />
+    <property name="PINInvalidTimesTotal" column="PININVALIDTIMESTOTAL" type="Int32" length="4" />
+    <property name="OperatorCode" column="OPERATORCODE" type="String" length="40" />
+    <property name="OCPPlmnTemplateId" column="OCPLMNTEMPLATE" type="Int32" length="4" />
+    <property name="ProvisionId" column="PROVISIONID" type="Int32" length="4" />
+    <property name="NAM" column="NAM" type="Int32" length="4" />
+    <property name="FTNRule" column="FTNRUle" type="String" length="15" />
+  </class>
+
+</hibernate-mapping>
+

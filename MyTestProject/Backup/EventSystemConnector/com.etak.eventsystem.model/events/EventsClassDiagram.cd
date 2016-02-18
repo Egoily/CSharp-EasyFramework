@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="com.etak.EventSystem.EventModel.events.EmailChangedNotificationEvent" Collapsed="true">
+    <Position X="16.75" Y="8.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\events\customer\ChangeEmailEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.PricePlanChangedNotificationEvent" Collapsed="true">
+    <Position X="22.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\events\customer\ChangePricePlanEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.NoDocumentValidationReceivedInWDaysEvent" Collapsed="true">
+    <Position X="16.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAQA=</HashCode>
+      <FileName>model\events\DocumentValidationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.NoDocumentValidationReceivedInXDaysEvent" Collapsed="true">
+    <Position X="18.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAQA=</HashCode>
+      <FileName>model\events\DocumentValidationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.NoDocumentValidationReceivedInYDaysEvent" Collapsed="true">
+    <Position X="20.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAQA=</HashCode>
+      <FileName>model\events\DocumentValidationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.NoDocumentValidationReceivedInZDaysEvent" Collapsed="true">
+    <Position X="25.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAQA=</HashCode>
+      <FileName>model\events\DocumentValidationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.DocumentValidatedEvent" Collapsed="true">
+    <Position X="9.25" Y="1.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAQA=</HashCode>
+      <FileName>model\events\DocumentValidationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.DocumentInValidatedEvent" Collapsed="true">
+    <Position X="12.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAQA=</HashCode>
+      <FileName>model\events\DocumentValidationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.SubmitDocumentInWDaysNotificationEvent" Collapsed="true">
+    <Position X="24.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>model\events\DocumentValidationNotificationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.SubmitDocumentInXDaysNotificationEvent" Collapsed="true">
+    <Position X="29" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>model\events\DocumentValidationNotificationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.SubmitDocumentInYDaysNotificationEvent" Collapsed="true">
+    <Position X="33.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>model\events\DocumentValidationNotificationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.SubmitDocumentInZDaysNotificationEvent" Collapsed="true">
+    <Position X="38" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>model\events\DocumentValidationNotificationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.Event" Collapsed="true">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCAAA=</HashCode>
+      <FileName>model\events\Event.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.MobileLineServiceMonthActive" Collapsed="true">
+    <Position X="15" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\events\MobileLineServiceMonthActive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.MobileLineServiceUsage" Collapsed="true">
+    <Position X="19.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAIAEAAAAAAIAAIAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>model\events\MobileLineServiceUsage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.NotificationEvent" Collapsed="true">
+    <Position X="29" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAgAAAAACAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\events\NotificationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.AxiomSocialMediaBundleApplyEvent" Collapsed="true">
+    <Position X="23" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\events\promotion\AxiomSocialMediaBundleEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.SocialMediaBundleEnabledInXDaysEvent" Collapsed="true">
+    <Position X="27.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAgAAAAAAAABAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>model\events\promotion\AxiomSocialMediaBundleEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.SocialMediaBundleDisabledAfterYDaysEvent" Collapsed="true">
+    <Position X="9.75" Y="5.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAgAAAAAAAABAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>model\events\promotion\AxiomSocialMediaBundleEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.SocialMediaBundleDisabledEvent" Collapsed="true">
+    <Position X="14" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAgABAAAAAABQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\events\promotion\AxiomSocialMediaBundleEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.AbleToBuySocialMediaBundleNotificationEvent" Collapsed="true">
+    <Position X="26.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAACQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\events\promotion\AxiomSocialMediaBundleNotificationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.AxiomSocialMediaBundleApplyNotificationEvent" Collapsed="true">
+    <Position X="31.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\events\promotion\AxiomSocialMediaBundleNotificationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.SocialMediaBundleEnabledInXDaysNotificationEvent" Collapsed="true">
+    <Position X="35.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAgAAAAAAAAAAAAACQAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>model\events\promotion\AxiomSocialMediaBundleNotificationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.SocialMediaBundleDisabledAfterYDaysNotificationEvent" Collapsed="true">
+    <Position X="40.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAgCQAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>model\events\promotion\AxiomSocialMediaBundleNotificationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.SocialMediaBundleDisabledNotificationEvent" Collapsed="true">
+    <Position X="19.75" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAACQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\events\promotion\AxiomSocialMediaBundleNotificationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.RegistrationEvent" Collapsed="true">
+    <Position X="17.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\events\RegistrationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.ScheduledEvent" Collapsed="true">
+    <Position X="19.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\events\ScheduledEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.EventSystem.EventModel.events.TopUpEvent" Collapsed="true">
+    <Position X="22.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>model\events\TopUpEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.eventsystem.model.UsageChargeEvent">
+    <Position X="24.75" Y="1.75" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAQAAAQAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\events\UsageChargeEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="com.etak.eventsystem.model.ISO4217CurrencyCodes" Collapsed="true">
+    <Position X="34.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>Na7m9fugTGe+03gQiJX95pKQ8fv/PwQAsMMdCIFA8G4=</HashCode>
+      <FileName>model\ISO4217CurrencyCodes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

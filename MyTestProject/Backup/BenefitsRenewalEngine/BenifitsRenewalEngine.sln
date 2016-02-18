@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.app.BenifitsRenewalEngine", "com.etak.core.app.BenifitsRenewalEngine\com.etak.core.app.BenifitsRenewalEngine.csproj", "{AD096333-40C3-488A-A7C4-7BAA21E5D5E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.app.BenifitsRenewalEngine.Actions", "com.etak.core.app.BenifitsRenewalEngine.Actions\com.etak.core.app.BenifitsRenewalEngine.Actions.csproj", "{32B67B89-D9C0-4F31-BC6B-22DD2BA0CC97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.app.BenifitsRenewalEngine.Tests", "com.etak.core.app.BenifitsRenewalEngine.Tests\com.etak.core.app.BenifitsRenewalEngine.Tests.csproj", "{3392C407-4E89-4B0B-B2F1-E112368268DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.app.BenefitsRenewalEngine.API", "com.etak.core.app.BenefitsRenewalEngine.API\com.etak.core.app.BenefitsRenewalEngine.API.csproj", "{8E1E6CCA-E4AC-42CE-B059-9BD6DAF734C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.app.BenefitsRenewalEngine.contract", "com.etak.core.app.BenefitsRenewalEngine.contract\com.etak.core.app.BenefitsRenewalEngine.contract.csproj", "{D9B25C43-55B4-481E-AA70-B567A633802C}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD096333-40C3-488A-A7C4-7BAA21E5D5E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD096333-40C3-488A-A7C4-7BAA21E5D5E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD096333-40C3-488A-A7C4-7BAA21E5D5E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD096333-40C3-488A-A7C4-7BAA21E5D5E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32B67B89-D9C0-4F31-BC6B-22DD2BA0CC97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B67B89-D9C0-4F31-BC6B-22DD2BA0CC97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B67B89-D9C0-4F31-BC6B-22DD2BA0CC97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B67B89-D9C0-4F31-BC6B-22DD2BA0CC97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3392C407-4E89-4B0B-B2F1-E112368268DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3392C407-4E89-4B0B-B2F1-E112368268DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3392C407-4E89-4B0B-B2F1-E112368268DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3392C407-4E89-4B0B-B2F1-E112368268DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E1E6CCA-E4AC-42CE-B059-9BD6DAF734C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E1E6CCA-E4AC-42CE-B059-9BD6DAF734C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E1E6CCA-E4AC-42CE-B059-9BD6DAF734C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E1E6CCA-E4AC-42CE-B059-9BD6DAF734C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9B25C43-55B4-481E-AA70-B567A633802C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9B25C43-55B4-481E-AA70-B567A633802C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9B25C43-55B4-481E-AA70-B567A633802C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9B25C43-55B4-481E-AA70-B567A633802C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

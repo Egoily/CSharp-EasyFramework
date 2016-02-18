@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" >
+	<class name="com.etak.eventsystem.model.core.Dealer, EventModel" table="CRM_DEALERS" mutable="false">
+		<id name="DealerID" column="DEALERID" type="Int64"  length="8">			
+		</id>
+    <property name="ParentID" column="PARENTID" type="Int32" length="4" />
+    <property name="DealerNode" column="DEALERNODE" type="String" length="100" />
+    <property name="DealerTypeID" column="DEALERTYPEID" type="Int32" length="4" />
+    <property name="FiscalUnitID" column="FISCALUNITID" type="Int32" length="4" />
+    <property name="ResellerID" column="RESELLERID" type="Int32" length="4" />
+    <property name="AgentID" column="AGENTID" type="Int32" length="4" />
+    <property name="SubagentID" column="SUBAGENTID" type="Int32" length="4" />
+    <property name="Company" column="COMPANY" type="String" length="200" />
+    <property name="Contact" column="CONTACT" type="String" length="200" />
+    <property name="TitleID" column="TITLEID" type="Int32" length="4" />
+    <property name="GenderID" column="GENDERID" type="Int32" length="4" />
+    <property name="Address" column="ADDRESS" type="String" length="200" />
+    <property name="HouseNO" column="HOUSENO" type="String" length="50" />
+    <property name="Zipcode" column="ZIPCODE" type="String" length="50" />
+    <property name="City" column="CITY" type="String" length="200" />
+    <property name="CountryID" column="COUNTRYID" type="Int32" length="4" />
+    <property name="Telephone" column="TELEPHONE" type="String" length="50" />
+    <property name="Telefax" column="TELEFAX" type="String" length="50" />
+    <property name="Email" column="EMAIL" type="String" length="100" />
+    <property name="CHOC" column="CHOC" type="String" length="100" />
+    <property name="VAT" column="VAT" type="String" length="100" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <property name="UserID" column="USERID" type="Int32" length="4" />
+    <property name="CreateUser" column="CREATEUSER" type="Int32" length="4" />
+    <property name="UpdateUser" column="UPDATEUSER" type="Int32" length="4" />
+    <property name="UpdateDate" column="UPDATEDATE" type="DateTime" />
+    <property name="State" column="STATE" type="Int32" length="4" />
+    <property name="Hide" column="HIDE" type="Int32" length="4" />
+    <property name="MvnotypeID" column ="MVNOTYPEID" type="Int32" length="4"/>
+
+    <bag name="DealerProperties" inverse="true" lazy="false" cascade="all-delete-orphan">
+      <key column="DEALERID" />
+      <one-to-many class="com.etak.eventsystem.model.core.DealerProperty, EventModel"/>
+    </bag>
+    </class>
+</hibernate-mapping>
+
