@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.LevelInfo,com.etak.core.model" table="SYS25_LOG_LEVEL" >
+    <id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+    </id>
+    <property name="DealerID" column="DealerID" type="Int32" length="4" />
+    <property name="Business" column="Business" type="String" length="100" />
+    <property name="ParentID" column="ParentID" type="Int32" length="4" />
+    <property name="Operation" column="Operation" type="String" length="100" />
+    <property name="OperationLevel" column="OperationLevel" type="Int32" length="4" />
+    <property name="RecordLocation" column="RecordLocation" type="Int32" length="4" />
+    <property name="CreateDate" column="CreateDate" type="DateTime" />
+    <property name="CreateUserID" column="CreateUserID" type="Int32" length="4" />
+    <property name="Status" column="Status" type="Int32" length="4" />
+    <property name="UpdateDate" column="UpdateDate" type="DateTime" />
+    <property name="UpdateUserID" column="UpdateUserID" type="Int32" length="4" />
+    <property name="ClassName" column="CLASSNAME" type="String" length="255" />
+  </class>
+
+</hibernate-mapping>

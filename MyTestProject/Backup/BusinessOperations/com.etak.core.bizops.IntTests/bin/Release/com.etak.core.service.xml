@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.service</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.informationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.messages.AddUnbilledBalance.AddUnbilledBalanceRequest">
+            <summary>
+            Request of AddUnbilledBalanceMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.AddUnbilledBalance.AddUnbilledBalanceRequest.ServicesInfo">
+            <summary>
+            ServicesInfo to be updated
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.AddUnbilledBalance.AddUnbilledBalanceRequest.Amount">
+            <summary>
+            The amount to be added to ServicesInfo.UnbilledBalance
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.messages.AddUnbilledBalance.AddUnbilledBalanceResponse">
+            <summary>
+            Response of AddUnbilledBalanceMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.AddUnbilledBalance.AddUnbilledBalanceResponse.ServicesInfo">
+            <summary>
+            Updated ServicesInfo by adding certain amount of UnbilledBalance
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.messages.CancelServicesInfo.CancelServicesInfoRequest">
+            <summary>
+            Request of CancelServicesInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.CancelServicesInfo.CancelServicesInfoRequest.ServicesInfo">
+            <summary>
+            ServicesInfo to be cancelled
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.CancelServicesInfo.CancelServicesInfoRequest.EndDate">
+            <summary>
+            EndDate(DateTime) is optional property when the CustomerProductAssignment is canceled
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.messages.CancelServicesInfo.CancelServicesInfoResponse">
+            <summary>
+            Response of CancelServicesInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.CancelServicesInfo.CancelServicesInfoResponse.ServicesInfo">
+            <summary>
+            ServicesInfo that has been cancelled
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.messages.CreateServicesInfo.CreateServicesInfoRequest">
+            <summary>
+            Request of CreateServicesInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.CreateServicesInfo.CreateServicesInfoRequest.subService">
+            <summary>
+            ServicesInfo to be created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.messages.CreateServicesInfo.CreateServicesInfoResponse">
+            <summary>
+            Response of CreateServicesInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.CreateServicesInfo.CreateServicesInfoResponse.ServicesInfos">
+            <summary>
+            updated ServicesInfo entity
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.messages.CustomerHasCredit.CustomerHasCreditRequest">
+            <summary>
+            Request for CustomerHasCreditMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.CustomerHasCredit.CustomerHasCreditRequest.CustomerInfo">
+            <summary>
+            The Customer to be checked
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.CustomerHasCredit.CustomerHasCreditRequest.Amount">
+            <summary>
+            The amount to be purchased
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.CustomerHasCredit.CustomerHasCreditRequest.DateOfCharge">
+            <summary>
+            The Date of the charge, used to get the bundle master
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.messages.CustomerHasCredit.CustomerHasCreditResponse">
+            <summary>
+            Response for CustomerHasCreditMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.CustomerHasCredit.CustomerHasCreditResponse.HasCredit">
+            <summary>
+            If HasCredit is false, means that the customer doesn't have credit to
+            purchase a product
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.CustomerHasCredit.CustomerHasCreditResponse.MasterBundle">
+            <summary>
+            The master bundle used to check the credit limit
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.messages.GetBundleInfoByID.GetBundleInfoByIDRequest">
+            <summary>
+            Request of GetBundleInfoByIDMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.GetBundleInfoByID.GetBundleInfoByIDRequest.BundleId">
+            <summary>
+            BundleId is the primary key of BundleInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.messages.GetBundleInfoByID.GetBundleInfoByIDResponse">
+            <summary>
+            Response of GetBundleInfoByIDMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.GetBundleInfoByID.GetBundleInfoByIDResponse.BundleInfo">
+            <summary>
+            BundleInfo with the requested BundleID
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.messages.GetPriorityBundleInfoFromBundleInfos.GetPriorityBundleInfoFromBundleInfosRequest">
+            <summary>
+            Request of GetPriorityBundleInfoFromBundleInfos Microservice
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.GetPriorityBundleInfoFromBundleInfos.GetPriorityBundleInfoFromBundleInfosRequest.BundleDefinitionList">
+            <summary>
+            given list of bundle info
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.messages.GetPriorityBundleInfoFromBundleInfos.GetPriorityBundleInfoFromBundleInfosResponse">
+            <summary>
+            Response of GetPriorityBundleInfoFromBundleInfos Microservice
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.GetPriorityBundleInfoFromBundleInfos.GetPriorityBundleInfoFromBundleInfosResponse.PriorityBundle">
+            <summary>
+            information of priority bundle
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.messages.GetServicesInfosByCustomerID.GetServicesInfosByCustomerIDRequest">
+            <summary>
+            Request of GetServicesInfoByCustomerIDMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.GetServicesInfosByCustomerID.GetServicesInfosByCustomerIDRequest.CustomerID">
+            <summary>
+            CustomerID of ServicesInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.messages.GetServicesInfosByCustomerID.GetServicesInfosByCustomerIDResponse">
+            <summary>
+            Response of GetServicesInfoByCustomerIDMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.GetServicesInfosByCustomerID.GetServicesInfosByCustomerIDResponse.ServicesInfos">
+            <summary>
+            Returned IEnumerable[ServicesInfo] with request.CustomerID
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.messages.UpdateServicesInfoWithCustomCreditLimit.UpdateServicesInfoWithCustomCreditLimitRequest">
+            <summary>
+            Request of UpdateServicesInfoWithCustomCreditLimitMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.UpdateServicesInfoWithCustomCreditLimit.UpdateServicesInfoWithCustomCreditLimitRequest.ServicesInfo">
+            <summary>
+            ServicesInfo which CreditLimit is going to be modified
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.UpdateServicesInfoWithCustomCreditLimit.UpdateServicesInfoWithCustomCreditLimitRequest.NewCreditLimit">
+            <summary>
+            New Credit Limit
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.messages.UpdateServicesInfoWithCustomCreditLimit.UpdateServicesInfoWithCustomCreditLimitResponse">
+            <summary>
+            Response of UpdateServicesInfoWithCustomCreditLimitMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.service.messages.UpdateServicesInfoWithCustomCreditLimit.UpdateServicesInfoWithCustomCreditLimitResponse.ServicesInfo">
+            <summary>
+            Modified ServicesInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.service.microservices.AddUnbilledBalanceMS">
+            <summary>
+            Microservice : Add ServicesInfo.UnbilledBalance with certain amount
+            </summary>
+        </member>
+        <member name="M:com.etak.core.service.microservices.AddUnbilledBalanceMS.Process(com.etak.core.service.messages.AddUnbilledBalance.AddUnbilledBalanceRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Add ServicesInfo.UnbilledBalance with request.Amount and update to repository
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>AddUnbilledBalanceResponse.ServicesInfo that has already been updated</returns>
+        </member>
+        <member name="T:com.etak.core.service.microservices.CancelServicesInfoMS">
+            <summary>
+            Microservice : cancel ServicesInfo by changing the EndDate
+            </summary>
+        </member>
+        <member name="M:com.etak.core.service.microservices.CancelServicesInfoMS.Process(com.etak.core.service.messages.CancelServicesInfo.CancelServicesInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Set the EndDate to request.EndDate or DateTime.Now and update to Repository
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CancelServicesInfoResponse.ServicesInfo that has already been updated</returns>
+        </member>
+        <member name="T:com.etak.core.service.microservices.CreateServicesInfoMS">
+            <summary>
+            Microservice : Create new Service Info
+            </summary>
+        </member>
+        <member name="M:com.etak.core.service.microservices.CreateServicesInfoMS.Process(com.etak.core.service.messages.CreateServicesInfo.CreateServicesInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process : Create new service - repoServicesInfo.Create(subService);
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CreateServicesInfoResponse(ServicesInfo)</returns>
+        </member>
+        <member name="T:com.etak.core.service.microservices.CustomerHasCreditMS">
+            <summary>
+            Microservice to check if the Customer has Credit Limit with his Services
+            </summary>
+        </member>
+        <member name="M:com.etak.core.service.microservices.CustomerHasCreditMS.Process(com.etak.core.service.messages.CustomerHasCredit.CustomerHasCreditRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process for the Microservice
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.service.microservices.GetBundleInfoByIDMS">
+            <summary>
+            Microservice : Get BundleInfo by its Id
+            </summary>
+        </member>
+        <member name="M:com.etak.core.service.microservices.GetBundleInfoByIDMS.Process(com.etak.core.service.messages.GetBundleInfoByID.GetBundleInfoByIDRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get BundleInfo By ID from BundleInfo Repository
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetBundleInfoByIDResponse.BundleInfo with ID equals request.BundleId</returns>
+        </member>
+        <member name="T:com.etak.core.service.microservices.GetPriorityBundleInfoFromBundleInfosMS">
+            <summary>
+            Microservice : get priority bundle from given list of bundle
+            </summary>
+        </member>
+        <member name="M:com.etak.core.service.microservices.GetPriorityBundleInfoFromBundleInfosMS.Process(com.etak.core.service.messages.GetPriorityBundleInfoFromBundleInfos.GetPriorityBundleInfoFromBundleInfosRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            get priority bundle from given list of bundle (request.BundleInfos)
+            </summary>
+            <param name="request">GetPriorityBundleInfoFromBundleInfosRequest</param>
+            <param name="invoker"></param>
+            <returns>Bundle info with highest priority within GetPriorityBundleInfoFromBundleInfosResponse</returns>
+        </member>
+        <member name="T:com.etak.core.service.microservices.GetServicesInfosByCustomerIDMS">
+            <summary>
+            Microservice : Get IEnumerable(ServicesInfo) by CustomerID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.service.microservices.GetServicesInfosByCustomerIDMS.Process(com.etak.core.service.messages.GetServicesInfosByCustomerID.GetServicesInfosByCustomerIDRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get IEnumerable(ServicesInfo) by CustomerID
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetServicesInfosByCustomerIDResponse.ServicesInfos with request.CustomerID</returns>
+        </member>
+        <member name="T:com.etak.core.service.microservices.UpdateServicesInfoWithCustomCreditLimitMS">
+            <summary>
+            Microservice : Update ServicesInfo with custom credit limit
+            </summary>
+        </member>
+        <member name="M:com.etak.core.service.microservices.UpdateServicesInfoWithCustomCreditLimitMS.Process(com.etak.core.service.messages.UpdateServicesInfoWithCustomCreditLimit.UpdateServicesInfoWithCustomCreditLimitRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Update ServicesInfo.CreditLimit with custom credit limit
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>UpdateServicesInfoWithCustomCreditLimitRequest.ServicesInfo that has been modified</returns>
+        </member>
+    </members>
+</doc>

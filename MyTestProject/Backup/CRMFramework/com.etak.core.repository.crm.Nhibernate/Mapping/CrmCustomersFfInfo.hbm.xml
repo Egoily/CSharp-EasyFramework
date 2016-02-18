@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="com.etak.core.model.CrmCustomersFfInfo,com.etak.core.model" table="CRM_CUSTOMERS_FF" >
+		<id name="FFId" column="FFID" type="Int32"  length="4" unsaved-value="0">
+			<generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+		</id>
+		<property name="CustomerId" column="CUSTOMERID" type="Int32" length="4" />
+		<property name="Resource" column="RESOURCE" type="String" length="25" />
+    <property name="CustomerId2" column="CustomerId2" type="Int32" length="4" />
+    <property name="MSISDN2" column="MSISDN2" type="String" length="25" />
+    <property name="PromotionPlanID" column="PromotionPlanID" type="Int32" length="4" />
+		<property name="StartDate" column="STARTDATE" type="DateTime" />
+		<property name="EndDate" column="ENDDATE" type="DateTime" />
+		<property name="CreateDate" column="CREATEDATE" type="DateTime" />
+		<property name="UserId" column="USERID" type="Int32" length="4" />
+	</class>
+
+</hibernate-mapping>

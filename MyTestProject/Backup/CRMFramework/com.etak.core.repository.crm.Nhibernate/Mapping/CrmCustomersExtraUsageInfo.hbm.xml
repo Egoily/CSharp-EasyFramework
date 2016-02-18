@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="com.etak.core.model.CrmCustomersExtraUsageInfo,com.etak.core.model" table="CRM_CUSTOMERS_EXTRAUSAGE" >
+		<id name="ID" column="ID" type="Int64"  unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+		</id>
+		<property name="DealerId" column="DEALERID" type="Int32" length="4" />
+		<property name="CustomerId" column="CUSTOMERID" type="Int32" length="4" />
+		<property name="TypeId" column="TYPEID" type="Int32" length="4" />
+		<property name="Amount" column="AMOUNT" type="Decimal" />
+		<property name="CurrencyId" column="CURRENCYID" type="Int32" length="4" />
+		<property name="TaxCode" column="TAXCODE" type="Int32" length="4" />
+		<property name="AmountWithTax" column="AMOUNTWITHTAX" type="Decimal" />
+		<property name="IsBilled" column="ISBILLED" type="Boolean" />
+		<property name="BilledTime" column="BILLEDTIME" type="DateTime" />
+		<property name="CreateDate" column="CREATEDATE" type="DateTime" />
+		<property name="UserId" column="USERID" type="Int32" length="4" />
+		<property name="PromotionPlanId" column="PROMOTIONPLANID" type="Int32" length="4" />
+		<property name="PaymentType" column="PAYMENTTYPE" type="Int32" length="4" />
+		<property name="Status" column="STATUS" type="Int32" length="4" />
+		<property name="Description" column="DESCRIPTION" type="String" length="1000" />
+		<property name="Bak1" column="BAK1" type="String" length="200" />
+		<property name="Bak2" column="BAK2" type="String" length="200" />
+		<property name="Bak3" column="BAK3" type="String" length="200" />
+	</class>
+
+</hibernate-mapping>

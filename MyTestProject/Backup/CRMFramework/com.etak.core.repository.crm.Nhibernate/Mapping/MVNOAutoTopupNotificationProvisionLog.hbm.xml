@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.MVNOAutoTopupNotificationProvisionLog,com.etak.core.model" table="CRM_MVNO_AUTO_TOPUP_NOTIFICATION_PROVISION_LOG" >
+    <id name="ID" column="ID" type="Int64" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <property name="NotificationID" column="NOTIFICATIONID" type="Int64"/>
+    <property name="DealerID" column="DEALERID" type="Int32"/>
+    <property name="MSISDN" column="MSISDN" type="String" length="25"/>
+    <property name="RequestXML" column="REQUESTXML" type="String" length="3000"/>
+    <property name="ResponseXML" column="RESPONSEXML" type="String" length="3000"/>
+    <property name="NotificationFrom" column="NOTIFICATIONFROM" type="byte"/>
+    <property name="CreateDate" column="CREATEDATE" type="DateTime"/>
+    <property name="Status" column="STATUS" type="byte"/>
+  </class>
+
+</hibernate-mapping>

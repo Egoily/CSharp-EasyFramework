@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.RoamingSmsHistoryInfo,com.etak.core.model" table="CRM_Roaming_SMS_Histrory" >
+    <id name="ID" column="ID" type="Int64" length="8" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>
+    <property name="MsIsdn" column="MSISDN" type="String" length="16" />
+    <property name="OMV" column="OMV" type="String" length="16" />
+    <property name="OperatorRoaming" column="OperatorRoaming" type="String" length="10" />
+    <property name="ZoneCode" column="ZONECODE" type="String" length="16" />
+    <property name="SMS" column="SMS" type="String" length="800" />
+    <property name="NetType" column="NetType" type="String" length="50" />
+    <property name="PaymentType" column="PaymentType" type="String" length="50" />
+    <property name="CountryName" column="CountryName" type="String" length="400" />
+    <property name="OperatorName" column="OperatorName" type="String" length="400" />
+    <property name="BundleId" column="BundleId" type="Int32" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+  </class>
+
+</hibernate-mapping>

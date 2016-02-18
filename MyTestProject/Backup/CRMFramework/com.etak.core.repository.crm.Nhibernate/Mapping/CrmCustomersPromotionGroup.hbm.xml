@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="com.etak.core.model.CrmCustomersPromotionGroup,com.etak.core.model"  table="CRM_CUSTOMERS_PROMOTIONGROUPS" >
+		<id name="ID" column="ID" type="Int64"  unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+		</id>
+		<property name="CustomerID" column="CUSTOMERID" type="Int32" length="4" />
+    <property name="Status" column="STATUSID" type="Int32" length="4" />
+    <property name="StartDate" column="STARTDATE" type="DateTime" />    
+    <many-to-one name="PromotionGroup" column="PROMOTIONGROUPID" class="com.etak.core.model.RmPromotionGroupInfo" />
+	</class>
+
+</hibernate-mapping>

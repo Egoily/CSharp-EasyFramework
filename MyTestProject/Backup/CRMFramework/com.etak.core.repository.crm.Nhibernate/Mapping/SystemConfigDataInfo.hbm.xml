@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.SystemConfigDataInfo,com.etak.core.model" table="SYS25_CONFIG_DATA" >
+    <cache usage="nonstrict-read-write" region="SystemSettings"/>
+    <id name="Item" column="ITEM" type="String"  length="100">
+      <generator class="assigned" />
+    </id>
+    <property name="Name" column="NAME" type="String" length="100" />
+    <property name="Value" column="VALUE" type="String" length="8000" />
+    <property name="Description" column="DESCRIPTION" type="String" length="200" />
+    <property name="Version" column="VERSION" type="String" length="100" />
+  </class>
+
+</hibernate-mapping>
+
+

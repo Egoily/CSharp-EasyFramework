@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.RatePlanDetailInfo,com.etak.core.model" table="RM_RATEPLAN_DETAILS" >
+    <id name="RatePlanDetailID" column="RATEPLANDETAILID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="RatePlanCategoryID" column="RATEPLANCATEGORYID" type="Int32" length="4" />
+    <property name="RatePlanID" column="RATEPLANID" type="Int32" length="4" />
+    <property name="CountryCode" column="COUNTRYCODE" type="String" length="25" />
+    <property name="ProviderID" column="PROVIDERID" type="Int32" length="4" />
+    <property name="CallTypeID" column="CALLTYPEID" type="Int32" length="4" />
+    <property name="CallDirectionID" column="CALLDIRECTIONID" type="Int32" length="4" />
+    <property name="TimeCategoryID" column="TIMECATEGORYID" type="Int32" length="4" />
+    <property name="UnitCategoryID" column="UNITCATEGORYID" type="Int32" length="4" />
+    <property name="CurrencyID" column="CURRENCYID" type="Int32" length="4" />
+    <property name="Tariff1" column="TARIFF1" type="Decimal" />
+    <property name="Tariff2" column="TARIFF2" type="Decimal" />
+    <property name="Setup" column="SETUP" type="Decimal" />
+    <property name="StartDate" column="STARTDATE" type="DateTime" />
+    <property name="EndDate" column="ENDDATE" type="DateTime" />
+    <property name="Prompt" column="PROMPT" type="Decimal" />
+    <property name="Zone1" column="ZONE1" type="Int32" length="4" />
+    <property name="Zone2" column="ZONE2" type="Int32" length="4" />
+    <property name="Preferred" column="PREFERRED" type="Boolean" />
+    <property name="OperatorCode" column="OPERATORCODE" type="string" length="20" />
+    <property name="Quality" column="QUALITY" type="Int32" length="2" />
+    <property name="Restriction" column="RESTRICTION" type="Int32" length="4" />
+    
+  </class>
+
+</hibernate-mapping>

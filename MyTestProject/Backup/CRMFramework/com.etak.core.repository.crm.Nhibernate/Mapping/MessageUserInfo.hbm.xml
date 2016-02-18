@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.MessageUserInfo,com.etak.core.model" table="SYS_MESSAGE_USER" >
+    <id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+    </id>
+    <property name="UserID" column="USERID" type="Int32" length="4" />
+    <property name="MessageID" column="MESSAGEID" type="Int32" length="4" />
+    <property name="Status" column="STATUS" type="Int32" length="4" />
+    <property name="SendDate" column="SENDDATE" type="DateTime" />
+  </class>
+
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="com.etak.core.model.RoamingSettingInfo,com.etak.core.model" table="CRM_ROAMING_SETTING" >
+    <cache usage="nonstrict-read-write" region="UserDealer"/>
+    <id name="SettingID" column="SETTINGID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <!--<property name="DealerID" column="DEALERID" type="Int32" length="4" />-->
+    <property name="EnableBaocPrepaid" column="ENABLE_BAOC_PREPAID" type="Boolean" />
+    <property name="EnableBaocPostpaid" column="ENABLE_BAOC_POSTPAID" type="Boolean" />
+    <property name="ReceiveSmsPostpaid" column="RECEIVE_SMS_POSTPAID" type="Boolean" />
+    <property name="ReceiveSmsPrepaid" column="RECEIVE_SMS_PREPAID" type="Boolean" />
+    <property name="ReceiveSmsNoneCamel" column="RECEIVE_SMS_NONECAMEL" type="Boolean" />
+    <property name="ReceiveSmsCamel" column="RECEIVE_SMS_CAMEL" type="Boolean" />
+    <property name="Activated" column="ACTIVATED" type="Boolean" />
+    <property name="FtpServer" column="FTPSERVER" type="String" length="256" />
+    <property name="FtpPort" column="FTPPORT" type="Int32" length="4" />
+    <property name="Folder" column="FOLDER" type="String" length="256" />
+    <property name="UserName" column="USERNAME" type="String" length="256" />
+    <property name="Password" column="PASSWORD" type="String" length="256" />
+    <property name="ImportWay" column="IMPORTWAY" type="Int32" length="4" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <many-to-one name="DealerInfo" class="com.etak.core.model.DealerInfo, com.etak.core.model">
+      <column name="DealerID"/>
+    </many-to-one>
+  </class>
+</hibernate-mapping>

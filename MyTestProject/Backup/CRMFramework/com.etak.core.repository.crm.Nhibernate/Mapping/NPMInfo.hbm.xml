@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+<class name="com.etak.core.model.NPMInfo,com.etak.core.model" table="SYS_NPM" >
+<id name="Resource" column="RESOURCE" type="String"  length="25" unsaved-value="0">
+   <generator class="native" />
+</id>
+  <property name="TrafficTypeID" column="TrafficTypeID" type="Int32" length="4" />
+  <property name="CategoryID" column="CategoryID" type="Int32" length="4" />
+  <property name="HideCLI" column="HideCLI" type="Boolean" />
+  <property name="StatusID" column="StatusID" type="Int32" length="4" />
+  <property name="CoolDownPeriod" column="CoolDownPeriod" type="Int32" length="4" />
+  <property name="CoolDownDueDate" column="CoolDownDueDate" type="DateTime" />
+  <property name="LockedDate" column="LockedDate" type="DateTime" />
+  <property name="LockedBy" column="LockedBy" type="Int32" length="4" />
+  <property name="TariffCode" column="TariffCode" type="String" length="15" />
+  <property name="ChangeStatusDate" column="ChangeStatusDate" type="DateTime" />
+  <property name="UpdateUserID" column="UpdateUserID" type="Int32" length="4" />
+  <property name="UpdateDate" column="UpdateDate" type="DateTime" />
+  <property name="CreateUserID" column="CreateUserID" type="Int32" length="4" />
+  <property name="CreateDate" column="CreateDate" type="DateTime" />
+  <property name="Status" column="Status" type="Int32" length="4" />
+</class>
+
+</hibernate-mapping>

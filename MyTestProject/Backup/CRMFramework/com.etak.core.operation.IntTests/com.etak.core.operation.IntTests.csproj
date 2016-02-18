@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{545405BB-2867-46CF-B6FF-9F0326BABE4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.etak.core.operation.IntTests</RootNamespace>
+    <AssemblyName>com.etak.core.operation.IntTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FluentNHibernate.2.0.1.0\lib\net40\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.4.0.3.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Caches.SysCache2, Version=4.0.0.4000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.Caches.SysCache2.4.0.0.4000\lib\net40\NHibernate.Caches.SysCache2.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net40\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="NSubstitute, Version=1.8.1.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NSubstitute.1.8.1.0\lib\net40\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.util">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise />
+  </Choose>
+  <ItemGroup>
+    <Compile Include="AbstractOrderTest.cs" />
+    <Compile Include="automapping\amount\AmountAutomap.cs" />
+    <Compile Include="automapping\customer\AccountBasedRequest.cs" />
+    <Compile Include="automapping\customer\AccountBasedRequestDTO.cs" />
+    <Compile Include="automapping\customer\ChargeAutomap.cs" />
+    <Compile Include="automapping\customer\ChargeBasedRequest.cs" />
+    <Compile Include="automapping\customer\ChargeBasedResponse.cs" />
+    <Compile Include="automapping\customer\ChargeBasedResponseDTO.cs" />
+    <Compile Include="automapping\customer\CustomerAutomap.cs" />
+    <Compile Include="automapping\customer\CustomerBasedRequest.cs" />
+    <Compile Include="automapping\customer\CustomerBasedResponse.cs" />
+    <Compile Include="automapping\customer\CustomerIdBasedRequestDTO.cs" />
+    <Compile Include="automapping\customer\CustomerIdBasedResponseDTO.cs" />
+    <Compile Include="automapping\customer\DocumentIdCustomerBasedRequestDTO.cs" />
+    <Compile Include="automapping\customer\ExternalCustomerIdBasedRequestDTO.cs" />
+    <Compile Include="automapping\customer\JointCustomerBasedRequest.cs" />
+    <Compile Include="automapping\customer\JointCustomerIdBasedRequestDTO.cs" />
+    <Compile Include="automapping\customer\MultiChargeBasedResponse.cs" />
+    <Compile Include="automapping\customer\MultiChargeBasedResponseDTO.cs" />
+    <Compile Include="automapping\customer\MultiCustomerBasedrequest.cs" />
+    <Compile Include="automapping\customer\ParameterErrorBusinessOperation.cs" />
+    <Compile Include="automapping\customer\ReceiveCustomerOutputCustomer.cs" />
+    <Compile Include="automapping\customer\ReturnAlwaysChargeBizOp.cs" />
+    <Compile Include="automapping\customer\ReturnAlwaysMultiChargeBizOp.cs" />
+    <Compile Include="automapping\numberInfo\MsisdnBasedRequestForNumberDTO.cs" />
+    <Compile Include="automapping\numberInfo\NumberInfoAutoMap.cs" />
+    <Compile Include="automapping\numberInfo\NumberInfoBasedRequest.cs" />
+    <Compile Include="automapping\numberInfo\NumberInfoBasedResponse.cs" />
+    <Compile Include="automapping\numberInfo\NumberInfoDTOBasedResponse.cs" />
+    <Compile Include="automapping\numberInfo\RequestNumberInfoResponseNumberInfoOperation.cs" />
+    <Compile Include="automapping\product\DummyRequest.cs" />
+    <Compile Include="automapping\product\MultiProductBasedResponse.cs" />
+    <Compile Include="automapping\product\MultiProductDTOBasedResponse.cs" />
+    <Compile Include="automapping\product\ProductAutomap.cs" />
+    <Compile Include="automapping\product\ProductBasedResponse.cs" />
+    <Compile Include="automapping\product\ProductDTOBasedResponse.cs" />
+    <Compile Include="automapping\product\ReturnAlwaysMultiProduct.cs" />
+    <Compile Include="automapping\product\ReturnAlwaysProduct.cs" />
+    <Compile Include="automapping\sim\ICCIDBasedRequestDTO.cs" />
+    <Compile Include="automapping\sim\SimCardAutomap.cs" />
+    <Compile Include="automapping\sim\SimCardBasedDTOResponse.cs" />
+    <Compile Include="automapping\sim\SimCardBasedRequest.cs" />
+    <Compile Include="automapping\sim\SimCardBasedResponse.cs" />
+    <Compile Include="automapping\sim\SimCardRequestSimCardResponse.cs" />
+    <Compile Include="automapping\subscription\JointMsisdnBasedRequestDTO.cs" />
+    <Compile Include="automapping\subscription\JointSubscriptionBasedRequest.cs" />
+    <Compile Include="automapping\subscription\msisdnAutomap.cs" />
+    <Compile Include="automapping\subscription\MsisdnBasedRequestDTO.cs" />
+    <Compile Include="automapping\subscription\MultiSubscriptionBasedRequest.cs" />
+    <Compile Include="automapping\subscription\SubscriptioBasedRequest.cs" />
+    <Compile Include="automapping\subscription\SubscriptionBasedDTOResponse.cs" />
+    <Compile Include="automapping\subscription\SubscriptionBasedResponse.cs" />
+    <Compile Include="automapping\subscription\SubscriptionResponseSubscriptionOperation.cs" />
+    <Compile Include="common\AlwaysErrorConverter.cs" />
+    <Compile Include="common\AlwaysErrorSinglePhaseOrderProcessor.cs" />
+    <Compile Include="common\AlwaysErrorValidator.cs" />
+    <Compile Include="common\AlwaysOkBusinessOperation.cs" />
+    <Compile Include="common\AlwaysOkSinglePhaseOrderCustomerBasedProcessor.cs" />
+    <Compile Include="common\AlwaysOkSinglePhaseOrderProcessor.cs" />
+    <Compile Include="common\NestedOperation.cs" />
+    <Compile Include="common\RepositoryBasedUnitTest.cs" />
+    <Compile Include="NestedOperationsTest.cs" />
+    <Compile Include="operations\CreateDataAndThrowError.cs" />
+    <Compile Include="operations\FakeOrder.cs" />
+    <Compile Include="operations\messages\FakeBizOpRequest.cs" />
+    <Compile Include="operations\messages\FakeOrderCustomerbasedResponse.cs" />
+    <Compile Include="operations\messages\FakeOrderNoCustomerbasedRequest.cs" />
+    <Compile Include="operations\messages\FakeOrderRequest.cs" />
+    <Compile Include="operations\messages\FakeOrderRequest2.cs" />
+    <Compile Include="operations\messages\FakeOrderRequestDTO.cs" />
+    <Compile Include="operations\messages\FakeOrderResponse.cs" />
+    <Compile Include="operations\messages\FakeOrderResponseDTO.cs" />
+    <Compile Include="OpLogFillerTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryManagerSingleton.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\com.etak.core.model\com.etak.core.model.csproj">
+      <Project>{5c9b8900-251a-4566-a727-7576dbe53a3c}</Project>
+      <Name>com.etak.core.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.operation\com.etak.core.operation.csproj">
+      <Project>{a8fd3f0f-82f8-41d4-8da2-fa44bad61d9c}</Project>
+      <Name>com.etak.core.operation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository.crm.Nhibernate\com.etak.core.repository.crm.Nhibernate.csproj">
+      <Project>{f2f11342-e395-4220-9e9b-4707783126ee}</Project>
+      <Name>com.etak.core.repository.crm.Nhibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository.crm\com.etak.core.repository.crm.csproj">
+      <Project>{5279c8d2-7523-4a27-aa03-8a9736de7e45}</Project>
+      <Name>com.etak.core.repository.crm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository.NHibernate\com.etak.core.repository.NHibernate.csproj">
+      <Project>{d93c29d3-5740-4b4f-8356-85a0f599f407}</Project>
+      <Name>com.etak.core.repository.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository\com.etak.core.repository.csproj">
+      <Project>{b3b4cfa1-4488-4e8c-aa22-b9f6206be866}</Project>
+      <Name>com.etak.core.repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.test.utilities\com.etak.core.test.utilities.csproj">
+      <Project>{4b99ebe0-266a-47bb-bae6-a03e971f0bd6}</Project>
+      <Name>com.etak.core.test.utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

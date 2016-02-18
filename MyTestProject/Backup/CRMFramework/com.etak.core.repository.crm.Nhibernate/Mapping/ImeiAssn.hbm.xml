@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="com.etak.core.model.ImeiAssn,com.etak.core.model" table="MSISDN_IMEI_ASSN">
+		<id name="Resourceid" column="RESOURCEID" type="Int32" unsaved-value="0">
+			<generator class="assigned"/>
+		</id>
+		<property column="IMEI" type="String" name="Imei" />
+		<property column="STARTDATE" type="DateTime" name="StartDate" />
+	</class>
+</hibernate-mapping>

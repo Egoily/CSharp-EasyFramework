@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+<class name="com.etak.core.model.CrmMobileMultipleImsiInfo, com.etak.core.model" table="CRM_MOBILE_MULTIPLEIMSI" >
+<id name="IMSIID" column="IMSIID" type="Int32"  length="4" unsaved-value="0">
+	<generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+</id>
+<property name="ALTIMSI" column="ALTIMSI" type="String" length="15" />
+<property name="ALTMSISDN" column="ALTMSISDN" type="String" length="15" />
+<property name="PUBLISHED" column="PUBLISHED" type="Boolean" />
+<property name="DISPLAYED" column="DISPLAYED" type="Boolean" />
+    <property name="Status" column="Status" type="Int32" />
+<many-to-one name="CrmCustomersResourceMbInfo" class="com.etak.core.model.CrmCustomersResourceMbInfo, com.etak.core.model">
+<column name="RESOURCEID" length="30" /> 
+</many-to-one>
+</class>
+
+</hibernate-mapping>

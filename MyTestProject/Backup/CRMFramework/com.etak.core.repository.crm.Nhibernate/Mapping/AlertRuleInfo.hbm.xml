@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+<class name="com.etak.core.model.AlertRuleInfo,com.etak.core.model" table="CRM_ALERTRULE">
+<id name="AlertRuleID" column="ALERTRULEID" type="Int32" length="4" unsaved-value="0">
+  <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" /> 
+  </id>
+  <property name="MNVOID" column="MNVOID" type="Int32" length="4" /> 
+  <property name="MNVOName" column="MNVONAME" type="String" length="20" /> 
+  <property name="AlertRuleName" column="ALERTRULENAME" type="String" length="50" /> 
+  <property name="MatterName" column="MATTERNAME" type="String" length="50" /> 
+  <property name="ISActive" column="ISACTIVE" type="Int32" length="4" /> 
+  <property name="ParametersName" column="PARAMETERSNAME" type="String" length="50" /> 
+  <property name="ParametersType" column="PARAMETERSTYPE" type="String" length="20" /> 
+  <property name="ParametersValues" column="PARAMETERSVALUES" type="String" length="50" /> 
+  <property name="ParametersUnit" column="PARAMETERUNIT" type="String" length="20" /> 
+  <property name="Name1" column="NAME1" type="String" length="20" /> 
+  <property name="Name2" column="NAME2" type="String" length="20" /> 
+  <property name="Name3" column="NAME3" type="String" length="20" /> 
+  <property name="Name4" column="NAME4" type="String" length="20" /> 
+  <property name="Name5" column="NAME5" type="String" length="20" /> 
+  <property name="Values1" column="VALUES1" type="String" length="30" /> 
+  <property name="Values2" column="VALUES2" type="String" length="30" /> 
+  <property name="Values3" column="VALUES3" type="String" length="30" /> 
+  <property name="Values4" column="VALUES4" type="String" length="30" /> 
+  <property name="Values5" column="VALUES5" type="String" length="30" /> 
+  <property name="CreateUser" column="CREATEUSER" type="String" length="50" /> 
+  <property name="CreateDate" column="CREATEDATE" type="DateTime" /> 
+  <property name="UpdateUser" column="UPDATEUSER" type="String" length="50" /> 
+  <property name="UpdateDate" column="UPDATEDATE" type="DateTime" /> 
+  <property name="UserID" column="USERID" type="Int32" length="4" /> 
+      
+</class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.InternationalZoneInfo,com.etak.core.model" table="RM_INTERNATIONAL_ZONE" >
+    <id name="ZoneID" column="ZONEID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="ZoneName" column="ZONENAME" type="String" length="400" />
+    <property name="DealerID" column="DEALERID" type="Int32" length="4" />
+    <property name="StartDate" column="STARTDATE" type="DateTime" />
+    <property name="EndDate" column="ENDDATE" type="DateTime" />
+
+    <bag name="InternationalZoneDetailList" inverse="true" lazy="true" cascade="save-update,persist">
+      <key column="ZoneID" />
+      <one-to-many class="com.etak.core.model.InternationalZoneDetailInfo,com.etak.core.model" />
+    </bag>
+    
+  </class>
+
+</hibernate-mapping>

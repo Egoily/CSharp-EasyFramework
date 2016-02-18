@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.eventsystem.wcfSender</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.InformationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.eventsystem.wcfSender.QueuedEventSender">
+            <summary>
+            Guaranteed delivery class, reboot proof, Initialize and Stop methods must be invoked.
+            </summary>
+        </member>
+        <member name="M:com.etak.eventsystem.wcfSender.QueuedEventSender.Initialize(com.etak.eventsystem.model.IEventContractImplementorFactory,com.etak.core.queue.Common.QueueThreadConfiguration)">
+            <summary>
+            Initializes the queued sender using the configurations section "QueueingSettings" of type QueueThreadConfiguration
+            </summary>
+            <param name="senderFactory">Factory to create the real worker that will be used to deliver the messages</param>
+            <param name="queueConfig">The queueing settings for the intermediate queue for async</param>
+        </member>
+        <member name="T:com.etak.eventsystem.wcfSender.WCFSender">
+            <summary>
+            A WCF sender implementing th interface of the event system
+            </summary>
+        </member>
+    </members>
+</doc>

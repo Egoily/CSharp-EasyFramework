@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="runnhrepotest" storage="c:\users\joseluis.pedrosa\documents\visual studio 2013\projects\crmframework\com.etak.core.repository.crm.nhibernate.test\runnhrepotest.orderedtest" id="52385607-07ce-456b-988b-2e2695eee952" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="927c375b-3d07-4e7c-52d6-c64c1cd13028" name="InitializeSessionFactory" storage="bin\debug\com.etak.core.repository.crm.nhibernate.test.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="9a1d8daa-821b-0a83-996e-a94ea4d3d683" name="QueryCustomerCharge" storage="bin\debug\com.etak.core.repository.crm.nhibernate.test.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

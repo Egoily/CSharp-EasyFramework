@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+	<class name="com.etak.core.model.CrmMobileNetWorkInfo, com.etak.core.model" table="CRM_MOBILE_NETWORK" >
+		<id name="NETWORKID" column="NETWORKID" type="Int32"  length="4" unsaved-value="0">
+			<generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+		</id>
+		<property name="NetworkType" column="NetworkType" type="Int32" length="4" />
+		<property name="PDPCONTEXTID" column="PDPCONTEXTID" type="Int32" length="4" />
+    <property name="PDPContextAddress" column="PDPContextAddress" type="String" length="30" />   
+    <property name="QosGuaranteedBitRateUp" column="QosGuaranteedBitRateUp" type="Int32" length="4" />
+		<property name="QosGuaranteedBitRateDown" column="QosGuaranteedBitRateDown" type="Int32" length="4" />
+		<property name="APN" column="APN" type="String" length="100" />
+		<property name="MMS" column="MMS" type="Boolean" />
+		<property name="WAP" column="WAP" type="Boolean" />
+		<property name="QosMaxBitRateUp" column="QosMaxBitRateUp" type="Int32" length="4" />
+		<property name="QosMaxBitRateDown" column="QosMaxBitRateDown" type="Int32" length="4" />
+		<property name="OBOPRE" column="OBOPRE" type="Boolean" />
+		<property name="OBOPRI" column="OBOPRI" type="Boolean" />
+    <property name="FreeWebsiteThreshold" column="FreeWebsiteThreshold" type="Int32" length="4" />
+    <property name="AdultContentBarringStatus" column="AdultContentBarringStatus" type="Int32" length="4" />
+    <property name="FreeWebsiteStatus" column="FreeWebsiteStatus" type="Int32" length="4" />
+    <many-to-one name="CrmCustomersResourceMbInfo" class="com.etak.core.model.CrmCustomersResourceMbInfo, com.etak.core.model">
+			<column name="RESOURCEID" length="30" />
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>

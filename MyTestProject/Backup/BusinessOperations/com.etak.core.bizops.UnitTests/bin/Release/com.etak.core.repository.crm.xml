@@ -1,0 +1,2050 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.repository.crm</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.InformationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.configuration.IOperationConfigurationRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TOperationConfiguration"/> entity
+            </summary>
+            <typeparam name="TOperationConfiguration">The entity managed by the interface, is or extends SystemConfigDataInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.configuration.IOperationConfigurationRepository`1.GetByDiscriminatorAndDealerId(com.etak.core.model.DealerInfo,com.etak.core.model.operation.BusinessOperation)">
+            <summary>
+            gets the settings for a operation type (discriminator)
+            </summary>
+            <param name="dealer">the vmno owner of the configuration (or to which this configuratio  applies)</param>
+            <param name="operation">the discriminator for the operation type</param>
+            <returns>The list of settings</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.customer.IAddressInfoRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TAddressInfo"/> entity
+            </summary>
+            <typeparam name="TAddressInfo">The type of the entity managed is or extends AddressInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.drl.ICustomerDataRoamingLimitNotificationRepository`1">
+            <summary>
+            Respository for <typeparamref name="TCustomerDataRoamingLimitNotification"/> entity
+            </summary>
+            <typeparam name="TCustomerDataRoamingLimitNotification">The type of the managed entity, is or extends CustomerDataRoamingLimitNotification</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.drl.ICustomerDataRoamingLimitNotificationRepository`1.GetByCustomerID(System.Int32)">
+            <summary>
+            Gets all TCustomerDataRoamingLimitNotification of a given customer
+            </summary>
+            <param name="customerId">the id of the customer associated to the TCustomerDataRoamingLimitNotification</param>
+            <returns>all TCustomerDataRoamingLimitNotification of a given customer</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.drl.IRoamingBlackListInfoRepository`1">
+            <summary>
+            Respository for <typeparamref name="TRoamingBlackListInfo"/> entity
+            </summary>
+            <typeparam name="TRoamingBlackListInfo">The type of the managed entity, is or extends RoamingBlackListInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.drl.IRoamingBlackListInfoRepository`1.GetByCustomerID(System.Int32)">
+            <summary>
+            Gets all TRoamingBlackListInfo of a given customer
+            </summary>
+            <param name="customerId">the id of the customer associated to the TRoamingBlackListInfo</param>
+            <returns>all TRoamingBlackListInfo of a given customer</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.drl.ICustomerDataRoamingLimitRepository`1">
+            <summary>
+            The repository interface for CustomerDataRoamingLimit
+            </summary>
+            <typeparam name="TCustomerDataRoamingLimit">The type of the entity managed CustomerDataRoamingLimit</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.drl.ICustomerDataRoamingLimitRepository`1.GetByCustomerID(System.Int32)">
+            <summary>
+            Gets all TCustomerDataRoamingLimit of a given customer
+            </summary>
+            <param name="customerId">the id of the customer associated to the TCustomerDataRoamingLimit</param>
+            <returns>all TCustomerDataRoamingLimit of a given customer</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IPhysicalResourceSpecificationRepository`1">
+            <summary>
+            Repository interface for PhysicalResourceSpecification
+            </summary>
+            <typeparam name="TPhysicalResourceSpecification">The entity managed by the repository, is or extends PhysicalResourceSpecification</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IPhysicalResourceSpecificationRepository`1.GetBySKU(System.String)">
+            <summary>
+            Get specification by sku.
+            </summary>
+            <param name="sku"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IPhysicalResourceSpecificationRepository`1.GetAll">
+            <summary>
+            GetAllSpeicication by MVNOId
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IProductInventoryRepository`1">
+            <summary>
+            Repository interface for ProductInventory
+            </summary>
+            <typeparam name="TProductInventory">The entity managed by the repository, is or extends ProductInventory</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IProductInventoryRepository`1.GetByMVNO(System.Int32)">
+            <summary>
+            Get Inventories by mvno
+            </summary>
+            <param name="mvnoId">vmo Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ISessionInfoRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TSessionInfo"/> entity
+            </summary>
+            <typeparam name="TSessionInfo">The type of the entity managed is or extends SessionInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ISessionInfoRepository`1.GetBySessionId(System.String)">
+            <summary>
+            Gets the SessionInfo with the specific sessionId
+            </summary>
+            <param name="sessionId">the Id of the session</param>
+            <returns>an enumerable with 0 or 1 SessionInfos</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IVoucherCardInfoRepository`1">
+            <summary>
+            Repository interface for VoucherCardInfo
+            </summary>
+            <typeparam name="TVoucherCardInfo">The type of the entity managed by the repository, is or extends VoucherCardInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IVoucherCardInfoRepository`1.GetByCodeAndMvnoId(System.String,System.Int32)">
+            <summary>
+            Get Voucher card by vmo and VCENCRYPT code.
+            </summary>
+            <param name="vcencrypt">vcencrypt code</param>
+            <param name="mvnoId">mvnoId</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.portability.IMNPOriginalNrnInfoRepository`1">
+            <summary>
+            Repository Interface for MNPOriginalNrnInfo
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.portability.IMNPOriginalNrnInfoRepository`1.GetByMsisdn(System.String)">
+            <summary>
+            Gets the Ranges of a given MSISDN
+            </summary>
+            <param name="msisdn">the msisdn to filter the portabilities</param>
+            <returns>all the portabilities of a given MSISDN</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.portability.IMNPNpdbEsvfInfoRepository`1">
+            <summary>
+            Repository Interface for MNPNpdbEsvfInfo
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.portability.IMNPNpdbEsvfInfoRepository`1.GetByMsisdn(System.String)">
+            <summary>
+            Gets all the portabilities of a given MSISDN
+            </summary>
+            <param name="msisdn">the msisdn to filter the portabilities</param>
+            <returns>all the portabilities of a given MSISDN</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IMNPSessionInfoRepository`1">
+            <summary>
+            The repository interface for MNPSessionInfo
+            </summary>
+            <typeparam name="TMNPSession">The type of the entity managed MNPSessionInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IMNPSessionInfoRepository`1.GetLastNByOperatorCode(System.String,System.Int32)">
+            <summary>
+            Gets the last N sessions for a given operator code.
+            </summary>
+            <param name="operatorCode">the code of the operator for the sessions</param>
+            <param name="n">the number of sessions to recover</param>
+            <returns>the last N sessions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IMNPSessionInfoRepository`1.GetLastNByOperatorCodeAndUsername(System.String,System.String,System.Int32)">
+            <summary>
+            Gets the last N sessions for a given operator code of an user.
+            </summary>
+            <param name="operatorCode">the code of the operator for the sessions and user name</param>
+            <param name="userName">the username of the sessions</param>
+            <param name="n">the number of sessions to recover</param>
+            <returns>the last N sessions</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IMultiLingualDescriptionRepository`1">
+            <summary>
+            Respository for <typeparamref name="TMultiLingualDescription"/> entity
+            </summary>
+            <typeparam name="TMultiLingualDescription">The type of the managed entity, is or extends MultiLingualInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IMultiLingualDescriptionRepository`1.GetByType(com.etak.core.model.MultiLingualType)">
+            <summary>
+            Get MultiLinualDescription by type
+            </summary>
+            <param name="type">type of description</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IMVNOPromotionSMSConfigRepository`1">
+            <summary>
+            Repository interface for MVNOPromotionSMSConfig
+            </summary>
+            <typeparam name="TMVNOPromotionSMSConfig">The entity managed by the repository, is or extends MVNOPromotionSMSConfig</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IMVNOPromotionSMSConfigRepository`1.GetByPromotionPlanIdAndType(System.Int32,System.Int32)">
+            <summary>
+            Get al promotion sms configuration of a promotion plan id and a type
+            </summary>
+            <param name="promotionPlanId">the promotion plan that has the sms</param>
+            <param name="type">the id of the type for the sms</param>
+            <returns>the list of the sms configurations</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.operation.IBusinessOperationRepository`1">
+            <summary>
+            Repository interface for BusinessOperationExecution
+            </summary>
+            <typeparam name="TBusinessOperation">The type of the entity managed by the repository, is or extends BusinessOperation</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.operation.IBusinessOperationRepository`1.GetById(System.Int32)">
+            <summary>
+            Gets the BusinessOperation by it's id, only for internal use
+            </summary>
+            <returns>The TBusinessOpertaion</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.operation.IBusinessOperationRepository`1.Get">
+            <summary>
+            Gets the only possible instance at catalog level of the given TBusinessOperation,       
+            </summary>
+            <returns>the catalog level of the operation</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.operation.IBusinessOperationRepository`1.Create(`0)">
+            <summary>
+            Inserts an entity into the repository
+            </summary>
+            <param name="entity">the entity to be stored</param>
+            <returns>the updated entity</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.operation.IBusinessOperationExecutionRepository`1">
+            <summary>
+            Repository interface for BusinessOperationExecution
+            </summary>
+            <typeparam name="TBusinessOperationExecution">The type of the entity managed by the repository, is or extends BusinessOperationExecution</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.operation.IBusinessOperationExecutionRepository`1.GetOperationsWithinDatesWithResultTypesIn(System.DateTime,System.DateTime,System.Collections.Generic.IEnumerable{com.etak.core.model.operation.messages.ResultTypes})">
+            <summary>
+            Gets all the operation executions in a given range of dates in a list of status
+            </summary>
+            <param name="startDate">The start date for the range where the operation started</param>
+            <param name="endDate">The end date for the range where the operation started</param>
+            <param name="results">the type of result of the operation</param>
+            <returns>The list of matching operation executions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.operation.IBusinessOperationExecutionRepository`1.GetOperationsOfTypeWithinDatesWithResultTypesIn(com.etak.core.model.operation.BusinessOperation,System.DateTime,System.DateTime,System.Collections.Generic.IEnumerable{com.etak.core.model.operation.messages.ResultTypes})">
+            <summary>
+            Gets all the operation executions in a given range of dates in a list of status and a given type
+            of business operation
+            </summary>
+            <param name="bizOp">the businessOperation definition to look for</param>
+            <param name="startDate">The start date for the range where the operation started</param>
+            <param name="endDate">The end date for the range where the operation started</param>
+            <param name="results">the type of result of the operation</param>
+            <returns>The list of matching operation executions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.operation.IBusinessOperationExecutionRepository`1.GetCustomerOperationsBetweenDates(com.etak.core.model.CustomerInfo,com.etak.core.model.operation.BusinessOperation,System.DateTime,System.DateTime,com.etak.core.model.operation.messages.ResultTypes[])">
+            <summary>
+            Gets the Operation of customer optionally filtering by the fields provided
+            </summary>
+            <param name="customer">The customer to retrieve the operations from</param>
+            <param name="bizOp">The Operation Definition</param>
+            <param name="startDate">Start date for range to retreive the operations</param>
+            <param name="endDate">End date for the range to retrieve the operations</param>
+            <param name="resultTypes">The status in which the operations needs to be</param>
+            <returns>The list of matching operation executions</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.operation.IOrderTransitionRepository`1">
+            <summary>
+            Repository interface for OrderTransition
+            </summary>
+            <typeparam name="TOrderTransition">The type of the entity managed by the repository, is or extends OrderTransition</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.operation.IOrderRepository`1">
+            <summary>
+            Repository for Order entity
+            </summary>
+            <typeparam name="TOrder">The type that is or extends <see cref="T:com.etak.core.model.operation.Order"/></typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.operation.IOrderRepository`1.GetByExternalIdAndDealer(com.etak.core.model.DealerInfo,System.String)">
+            <summary>
+            Gets the list of order of a given dealer with externalId
+            </summary>
+            <param name="dealerInfo">the dealer of the Order</param>
+            <param name="externalId">the external id of the order</param>
+            <returns>The list of matchin orders</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.operation.IOrderRepository`1.GetByDealerAndFilters(com.etak.core.model.DealerInfo,System.Collections.Generic.List{System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}},System.Int32,System.Int32)">
+            <summary>
+            Gets the list of order of a given dealer and filters
+            </summary>
+            <param name="dealerInfo">the dealer of the Order</param>
+            <param name="filters">filters to apply</param>
+            <param name="pageNumber">page Number  start with 1</param>
+            <param name="pageSize">page Size</param>
+            <returns>The list of matchin orders</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.provisioning.ICarrierRepository`1">
+            <summary>
+            Interface for repository of entity Carrier
+            </summary>
+            <typeparam name="TCarrier"></typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.resource.IImeiAssnHistRepository`1">
+            <summary>
+            Repository interface for ImeiAssnHist
+            </summary>
+            <typeparam name="TImeiAssnHist">The type of the entity managed by the repository, is or extends ImeiAssnHist</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.rules.ICrmBussinessRuleInfoRepository`1">
+            <summary>
+            Repository interface for BussinessRule
+            </summary>
+            <typeparam name="TCrmBusinessRuleInfo">The entity managed by the repository, is or extends BussinessRule</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.rules.ICrmBussinessRuleInfoRepository`1.GetByClassType(System.String)">
+            <summary>
+            This should not be required, the class types are managed by the Repository, not 
+            </summary>
+            <param name="classType">the class type of the TCrmBusinessRuleInfo</param>
+            <returns>the list of mathing TCrmBusinessRuleInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ICrmDefaultProvisionInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TCrmDefaultProvisionInfo"/> entity
+            </summary>
+            <typeparam name="TCrmDefaultProvisionInfo">The entity managed by the interface, is or extends CrmDefaultProvisionInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ICrmDefaultProvisionInfoRepository`1.GetProvisionByName(System.String)">
+            <summary>
+            Gets the TCrmDefaultProvisionInfo with a given anem
+            </summary>
+            <param name="name">the name of the TCrmDefaultProvisionInfo to retrieve</param>
+            <returns>the list of TCrmDefaultProvisionInfo that have that name</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IHolidayInfoRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="THolidayInfo"/> entity
+            </summary>
+            <typeparam name="THolidayInfo">The type of the entity managed is or extends HolidayInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.network.IRMOperatorsInfoRepository`1">
+            <summary>
+            Interface for repository of entity RMOperatorsInfo
+            </summary>
+            <typeparam name="TRMOperatorsInfo">The type of the managed entity is or extends RMOperatorsInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.network.IRMOperatorsInfoRepository`1.GetByCNOperatorCode(System.String)">
+            <summary>
+            Gets all the operators with a given CN operator code, should return only one
+            </summary>
+            <param name="cnOperatorCode">the operator code in the central node</param>
+            <returns>all the operators with a given CN operator code</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.portability.IMNPPortabilityCustomerInfoRepository`1">
+            <summary>
+            Respository for <typeparamref name="TMNPPortabilityCustomerInfo"/> entity
+            </summary>
+            <typeparam name="TMNPPortabilityCustomerInfo">The type of the managed entity, is or extends MNPPortabilityCustomerInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.portability.IMNPPortabilityCustomerInfoRepository`1.GetByCustomerId(System.Int32)">
+            <summary>
+            Gets all the MNPPortabilityCustomerInfo of a given customer
+            </summary>
+            <param name="customerId">The id of the customer to which the MNPPortabilityCustomerInfo is associated</param>
+            <returns>The list of MNPPortabilityCustomerInfo of the customer</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.portability.IMNPPortabilityMultiPortInInfoRepository`1">
+            <summary>
+            Respository for <typeparamref name="TMNPPortabilityMultiPortInInfo"/> entity
+            </summary>
+            <typeparam name="TMNPPortabilityMultiPortInInfo">The type of the managed entity, is or extends MNPPortabilityMultiPortInInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.portability.IMNPPortabilityMultiPortInInfoRepository`1.GetByMsisdn(System.String)">
+            <summary>
+            Gets the MNPPortabilityMultiPortInInfo of a given MSISDN
+            </summary>
+            <param name="msisdn">the list of msisdn to filter the MNPPortabilityMultiPortInInfo</param>
+            <returns>the matching MNPPortabilityMultiPortInInfo of the msisdn</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.promotion.IRmPromotionGroupThresholdRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TRmPromotionGroupThreshold"/> entity
+            </summary>
+            <typeparam name="TRmPromotionGroupThreshold">The type of the entity managed is or extends RmPromotionGroupThreshold</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.resource.IMVNOAPNIPPoolInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TMVNOAPNIPPoolInfo"/> entity
+            </summary>
+            <typeparam name="TMVNOAPNIPPoolInfo">The entity managed by the interface, is or extends MVNOAPNIPPoolInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.resource.IMVNOAPNIPPoolInfoRepository`1.GetByMsisdn(System.String)">
+            <summary>
+            Gets all the TMVNOAPNIPPoolInfo for the given msisdn
+            </summary>
+            <param name="msisdn">the msisdn to look for</param>
+            <returns>the list of entities that fullfil the requiremets</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.resource.IDealerNumberInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TDealerNumberInfo"/> entity
+            </summary>
+            <typeparam name="TDealerNumberInfo">The entity managed by the interface, is or extends DealerNumberInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.resource.IDealerNumberInfoRepository`1.GetByResource(System.String)">
+            <summary>
+            Gets the dealer number Infor repository
+            </summary>
+            <param name="resource">the msisdn to look for</param>
+            <returns>the list of entities that fullfil the condition</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IHLRRequestErrorsRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="THLRRequestErrors"/> entity
+            </summary>
+            <typeparam name="THLRRequestErrors">The type of the entity managed is or extends HLRRequestErrors</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ILanguageTypeInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TLanguageTypeInfo"/> entity
+            </summary>
+            <typeparam name="TLanguageTypeInfo">The entity managed by the interface, is or extends LanguageTypeInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ILanguageTypeInfoRepository`1.GetAllLanguages">
+            <summary>
+            Gets all languages
+            </summary>
+            <returns>the list of all languages</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ILanguageTypeInfoRepository`1.GetAllLanguageById(System.Int32)">
+            <summary>
+            Gets a given language by it's Id
+            </summary>
+            <param name="langId">the id of the language</param>
+            <returns>the languages with the given id</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.resource.INumberInfoRepository`1">
+            <summary>
+            Respository for <typeparamref name="TNumberInfo"/> entity
+            </summary>
+            <typeparam name="TNumberInfo">The type of the managed entity, is or extends NumberInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.resource.INumberInfoRepository`1.GetByCategoryAndVmnoAndStatusIdIn(System.Collections.Generic.IEnumerable{System.Int32},System.Int32,System.Collections.Generic.IEnumerable{System.Int32},System.Int32)">
+            <summary>
+            Gets n (maxElements) TNumberInfo of any mvnos of the category and the status.
+            </summary>
+            <param name="mvnoIds">The possible mvnos to which the number may belong</param>
+            <param name="categoryId">The category of the number</param>
+            <param name="status">all the possible status of the numbers to retrieve</param>
+            <param name="maxElements">the maximun number of numbers to retrieve</param>
+            <returns>the list of matching numbers</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IReportResourceInfoRepository`1">
+            <summary>
+            Repository interface for ReportResourceInfo
+            </summary>
+            <typeparam name="TReportResourceInfo">The type of the entity managed by the repository, is or extends ReportResourceInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IProductInfoRepository`1">
+            <summary>
+            Repository interface for ProductInfo
+            </summary>
+            <typeparam name="TProductInfo">The type of the entity managed by the repository, is or extends ProductInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ICrmCustomersBalanceTransationHistoryRepository`1">
+            <summary>
+            Repository interface for CrmCustomersBalanceTransationHistory
+            </summary>
+            <typeparam name="TCrmCustomersBalanceTransationHistory">The type of the entity managed by the repository, is or extends CrmCustomersBalanceTransationHistory</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ICRMCUSTOMERSDATESINFORepository`1">
+            <summary>
+            Interface for repository of entity CRMCUSTOMERSDATESPKINFO
+            </summary>
+            <typeparam name="TCRMCUSTOMERSDATESINFO">The type of the managed entity is or extends CRMCUSTOMERSDATESPKINFO</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ICrmCustomersMSISDNGroupMembersRepository`1">
+            <summary>
+            Respository for <typeparamref name="TCrmCustomersMSISDNGroupMembers"/> entity
+            </summary>
+            <typeparam name="TCrmCustomersMSISDNGroupMembers">The type of the managed entity, is or extends CrmCustomersMSISDNGroupMembers</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ICrmCustomersMSISDNGroupMembersRepository`1.GetFFNumbersByCustomerId(System.Int32,com.etak.core.model.SpecificNumberCategory)">
+            <summary>
+            Gets all TCrmCustomersMSISDNGroupMembers of a given customer and gategory
+            </summary>
+            <param name="customerId">the id of the customer to which the TCrmCustomersMSISDNGroupMembers associated</param>
+            <param name="numberCategory">the Number category of the Number</param>
+            <returns>the list of TCrmCustomersMSISDNGroupMembers</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ICrmCustomersMSISDNGroupMembersRepository`1.GetAllFFNumbersByCustomerId(System.Int32)">
+            <summary>
+            Gets all TCrmCustomersMSISDNGroupMembers of a given customer and gategory
+            </summary>
+            <param name="customerId">the id of the customer to which the TCrmCustomersMSISDNGroupMembers associated</param>
+            <returns>the list of TCrmCustomersMSISDNGroupMembers</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ICrmCustomersMSISDNGroupMembersRepository`1.TruncateFFNumbersByCustomerId(System.Int32,System.Int32,com.etak.core.model.SpecificNumberCategory)">
+            <summary>
+            Deletes N (quantity) TCrmCustomersMSISDNGroupMembers of a given customer and category
+            </summary>
+            <param name="customerId">the id of the customer to which the TCrmCustomersMSISDNGroupMembers associated</param>
+            <param name="quantity">the number of TCrmCustomersMSISDNGroupMembers to delete</param>
+            <param name="numberCategory">the SpecificNumberCategory of the TCrmCustomersMSISDNGroupMembers delete</param>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IMultiLingualInfoRepository`1">
+            <summary>
+            Respository for <typeparamref name="TMultiLingualInfo"/> entity
+            </summary>
+            <typeparam name="TMultiLingualInfo">The type of the managed entity, is or extends MultiLingualInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IMultiLingualInfoRepository`1.GetCommonMultiLingual(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Gets all the TMultiLingualInfo of a dealer, language, dictionaryTypeId and value
+            </summary>
+            <param name="dealerId">the dealer id filter for the query</param>
+            <param name="languageId">the language id filter for the query</param>
+            <param name="dictionaryTypeId">the dictionaryTypeId filter for the query</param>
+            <param name="value">the value filter for the query</param>
+            <returns>the list of matching TMultiLingualInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.FilterCdrDates">
+            <summary>
+            Posible date filters
+            </summary>
+        </member>
+        <member name="F:com.etak.core.repository.crm.FilterCdrDates.StartDate">
+            <summary>
+            Filters the CDR by the start date of the CDR
+            </summary>
+        </member>
+        <member name="F:com.etak.core.repository.crm.FilterCdrDates.EndDate">
+            <summary>
+            Filters the CDR by the end date of the CDR
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IUsageDetailRecordRepository`1">
+            <summary>
+            Repository interface for UsageDetailRecord
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IUsageDetailRecordRepository`1.GetRecordsByMsisdnBetweenDates(System.Int32,System.Nullable{System.Int32},System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},com.etak.core.repository.crm.FilterCdrDates)">
+            <summary>
+            Gets all all usage details (CDR) for a given msisdn bewteen dates
+            </summary>
+            <param name="vmoId"></param>
+            <param name="SubServiceTypeId"></param>
+            <param name="msisdn"></param>
+            <param name="startDate"></param>
+            <param name="endDate"></param>
+            <param name="dateToFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IUsageDetailRecordRepository`1.GetRecordsByCustomerIdBetweenDates(System.Int32,System.Nullable{System.Int32},System.Int32,System.Nullable{System.DateTime},System.Nullable{System.DateTime},com.etak.core.repository.crm.FilterCdrDates)">
+            <summary>
+            Gets all usage details (CDR) for a given customerId between dates
+            </summary>
+            <param name="vmoId"></param>
+            <param name="SubServiceTypeId"></param>
+            <param name="customerId"></param>
+            <param name="startDate"></param>
+            <param name="endDate"></param>
+            <param name="dateToFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.portability.IMNPIncomingEffectInfoRepository`1">
+            <summary>
+            Repository interface for MNPIncomingEffectInfo
+            </summary>
+            <typeparam name="TMNPIncomingEffectInfo">The entity managed by the repository, is or extends MNPIncomingEffectInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.portability.IMNPIncomingEffectInfoRepository`1.GetByMsisdn(System.String)">
+            <summary>
+            Gets all the portabilities of a given MSISDN
+            </summary>
+            <param name="msisdn">the msisdn to filter the portabilities</param>
+            <returns>all the portabilities of a given MSISDN</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.portability.IMNPIncomingEffectInfoRepository`1.GetLatestByPortInMsisdn(System.String)">
+            <summary>
+            Gets latest portabilities of a given MSISDN
+            </summary>
+            <param name="msisdn">the msisdn to filter the portabilities</param>
+            <returns>the latest portabilities of a given MSISDN</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.resource.IImeiAssnRepository`1">
+            <summary>
+            Repository interface for ImeiAssn
+            </summary>
+            <typeparam name="TImeiAssn">The type of the entity managed by the repository, is or extends ImeiAssn</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.resource.IImeiAssnRepository`1.GetByImei(System.String)">
+            <summary>
+            Get by Imei field
+            </summary>
+            <param name="imei"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.services.ITroubleTicketInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TTroubleTicketInfo"/> entity
+            </summary>
+            <typeparam name="TTroubleTicketInfo">The entity managed by the interface, is or extends SIMCardInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.services.ITroubleTicketInfoRepository`1.GetByCustomerId(System.Int32)">
+            <summary>
+            Get TroubleTicketInfos for a given customerId
+            </summary>
+            <param name="customerId">Id of customer to be retrieved</param>
+            <returns>List of matching entities that fulfill the condition</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.services.ITroubleTicketInfoRepository`1.GetByTicketNumber(System.String)">
+            <summary>
+            Get TroubleTicketInfos for a given ticket number
+            </summary>
+            <param name="ticketNumber">Ticket number of customer to be retrieved</param>
+            <returns>Matched entity that fulfill the condition</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.services.ITroubleTicketQuestionInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TTroubleTicketQuestionInfo"/> entity
+            </summary>
+            <typeparam name="TTroubleTicketQuestionInfo"></typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.services.ITroubleTicketQuestionInfoRepository`1.GetByTypeAndSubTypeAndMvnoId(System.String,System.String,System.Int32)">
+            <summary>
+            Get TroubleTicketQuestionInfo by subType and mvnoId
+            </summary>
+            <param name="type">Type of TroubleTicket</param>
+            <param name="subType">Sub Type of TroubleTicket</param>
+            <param name="mvnoId">MVNO Id</param>
+            <returns>List of matched TroubleTicketQuestionInfo with given subType and mvno id</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.services.ITTHistoryInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TTTHistoryInfo"/> entity
+            </summary>
+            <typeparam name="TTTHistoryInfo"></typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.subscription.catalog.IProductOfferingCatalogRepository`1">
+            <summary>
+            Interface for repository of entity ProductOfferingCatalog
+            </summary>
+            <typeparam name="TProductOfferingCatalog">The type of the managed entity is or extends ProductOfferingCatalog</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.subscription.catalog.IProductOfferingGroupRepository`1">
+            <summary>
+            Interface for repository of entity ProductOfferingGroup
+            </summary>
+            <typeparam name="TProductOfferingGroup">The type of the managed entity is or extends ProductOfferingGroup</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.subscription.catalog.IProductOfferingRepository`1">
+            <summary>
+            Interface for repository of entity ProductOffering
+            </summary>
+            <typeparam name="TProductOffering">The type of the managed entity is or extends ProductOffering</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.subscription.catalog.IProductOfferingRepository`1.GetByGroupId(System.Int32)">
+            <summary>
+            Given a groupId, return all the ProductOfferings that belongs to this group
+            </summary>
+            <param name="groupId">The group to be used to get the product offerings</param>
+            <returns>A list of ProductOfferings that belongs to the group specified</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.subscription.ICrmCustomersResourceMbInfoRepository`1">
+            <summary>
+            Repository interface for CrmCustomersResourceMbInfo
+            </summary>
+            <typeparam name="TCrmCustomersResourceMbInfo">The entity managed by the repository, is or extends CrmCustomersResourceMbInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.subscription.ICrmCustomersResourceMbInfoRepository`1.LoadResourceMBAsociations(System.Int32)">
+            <summary>
+            Loads the TCrmCustomersResourceMbInfo of a given resourceId
+            </summary>
+            <param name="resourceId">the unique id of the resourceMB</param>
+            <returns>List with 0 or 1 TCrmCustomersResourceMbInfo</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.subscription.ICrmCustomersResourceMbInfoRepository`1.GetActiveSubscriptionByMsisdn(System.String)">
+            <summary>
+            Get TCrmCustomersResourceMbInfo of a given msisdn
+            </summary>
+            <param name="msisdn">MSISDN</param>
+            <returns>List of TCrmCustomersResourceMbInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.subscription.catalog.IProductOptionRepository`1">
+            <summary>
+            Interface for repository of entity ProductOfferingOption
+            </summary>
+            <typeparam name="TProductOfferingOption">The type of the managed entity is or extends ProductOfferingOption</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.subscription.ICrmMobileMultipleImsiInfoRepository`1">
+            <summary>
+            Repository interface for CrmMobileMultipleImsiInfo
+            </summary>
+            <typeparam name="TCrmMobileMultipleImsiInfo">The entity managed by the repository, is or extends CrmMobileMultipleImsiInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.subscription.ICrmMobileNetworkInfoRepository`1">
+            <summary>
+            Repository interface for CrmMobileNetworkInfo
+            </summary>
+            <typeparam name="TCrmMobileNetworkInfo">The entity managed by the repository, is or extends CrmMobileNetworkInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.topup.IMVNOTopupBundleBasedInfoRepository`1">
+            <summary>
+            Repository interface for MVNOTopupBundleBasedInfo
+            </summary>
+            <typeparam name="TMVNOTopupBundleBasedInfo">The entity managed by the repository, is or extends MVNOTopupBundleBasedInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.topup.IMVNOTopupBundleBasedInfoRepository`1.GetByPackageId(System.Int32)">
+            <summary>
+            Gets the All the Topup Bundles of a given package id
+            </summary>
+            <param name="packageId">the id of the package associated to TopUpBundles</param>
+            <returns>the list of TMVNOTopupBundleBasedInfo </returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IPackageRelationShipsRepository`1">
+            <summary>
+            Repository interface for PackageRelationShips
+            </summary>
+            <typeparam name="TPackageRelationShips">The entity managed by the repository, is or extends PackageRelationShips</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IPackageRelationShipsRepository`1.GetAll">
+            <summary>
+            gets all the package relationships
+            </summary>
+            <returns>the list of package relationships</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.customer.IPropertyInfoRepository`1">
+            <summary>
+            Repository interface for PropertyInfo
+            </summary>
+            <typeparam name="TPropertyInfo">The entity managed by the repository, is or extends PropertyInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.customer.IPropertyInfoRepository`1.GetByDocumentId(System.Int32,System.String)">
+            <summary>
+            Gets the customer properties that have a given identufication number
+            </summary>
+            <param name="idType">the type of the document</param>
+            <param name="idNumber">the document number</param>
+            <returns>the list of customer properties that have this id</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IRmPromotionPlanTopupBasedParametersRepository`1">
+            <summary>
+            Repository interface for RmPromotionPlanTopupBasedParameters
+            </summary>
+            <typeparam name="TRmPromotionPlanTopupBasedParameters">The entity managed by the repository, is or extends RmPromotionPlanTopupBasedParameters</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionPlanTopupBasedParametersRepository`1.GetByPromotionPlanIdAndAmount(System.Int32,System.Decimal)">
+            <summary>
+            Gets the RmPromotionPlanTopupBasedParameters of a given promoionplanid and a given amount
+            </summary>
+            <param name="promoionplanid">the promotion plan id to which the promotion plan is asigned</param>
+            <param name="amount">the threshold amount of the RmPromotionPlanTopupBasedParameters</param>
+            <returns>The list of matching elements</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionPlanTopupBasedParametersRepository`1.GetByPromotionPlanId(System.Int32)">
+            <summary>
+            Gets the RmPromotionPlanTopupBasedParameters of a given promoionplanid 
+            </summary>
+            <param name="promotionPlanID">the promotion plan id to which the promotion plan is asigned</param>
+            <returns>The list of matching elements</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ICrmCustomersBundleAssignmentHistoryInfoRepository`1">
+            TODO: API IMPROVEMENTS how to write composite key's repository
+        </member>
+        <member name="T:com.etak.core.repository.crm.IServicesInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TServicesInfo"/> entity
+            </summary>
+            <typeparam name="TServicesInfo">The entity managed by the interface, is or extends ServicesInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IServicesInfoRepository`1.GetByCustomerId(System.Int32)">
+            <summary>
+            Gets all the services for a given customer
+            </summary>
+            <param name="customerId">The id of the customer from which the services needs to be retreived</param>
+            <returns>the list of matching services</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IServicesInfoRepository`1.GetCustomerMainService(System.Int32)">
+            <summary>
+            Gets the Service where the main balance is stored.
+            </summary>
+            <param name="customerId">the customer where the</param>
+            <returns>A list with 0 or 1 TServicesInfo holding the main balance</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IMVNODataRoamingLimitNotificationRepository`1">
+            <summary>
+            Repository interface for MVNODataRoamingLimitNotification
+            </summary>
+            <typeparam name="TMVNODataRoamingLimitNotification">The entity managed by the repository, is or extends MVNODataRoamingLimitNotification</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IMVNODataRoamingLimitNotificationRepository`1.GetAllNotifications">
+            <summary>
+            Gets all MVNODataRoamingLimitNotification notifications 
+            </summary>
+            <returns>all the MVNODataRoamingLimitNotification</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ISettingInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TSettingInfo"/> entity
+            </summary>
+            <typeparam name="TSettingInfo">The entity managed by the interface, is or extends SettingInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ISettingInfoRepository`1.GetByDealerId(System.Int32)">
+            <summary>
+            Gets the sms configuration of a dealer
+            </summary>
+            <param name="dealerId">the dealer for which the sms configuration is</param>
+            <returns>the list of sms settings</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ISettingInfoRepository`1.GetSettingInfoWithDetailByDealerId(System.Int32)">
+            <summary>
+            Gets the sms configuration of a dealer loading the details association
+            </summary>
+            <param name="dealerId">the dealer for which the sms configuration is</param>
+            <returns>the list of sms settings</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ISettingInfoRepository`1.GetSettingInfoWithDetailByDealerIdAndEventID(System.Int32,System.Int32)">
+            <summary>
+            Gets the sms configuration of a dealer and an event
+            </summary>
+            <param name="dealerId">the dealer for which the sms configuration is</param>
+            <param name="eventId">the id of the event to which the sms configuration applies</param>
+            <returns>the list of sms settings</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IBundleInfoRepository`1">
+            <summary>
+            Repository interface for BundleInfo
+            </summary>
+            <typeparam name="TBundleInfo">The entity managed by the repository, is or extends BundleInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IBundleInfoRepository`1.GetAll">
+            <summary>
+            Gets all Bundle Info
+            </summary>
+            <returns>all the BundleInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.portability.IMNPPortabilityInfoRepository`1">
+            <summary>
+            Repository interface for MNPPortabilityInfo
+            </summary>
+            <typeparam name="TMNPPortabilityInfo">The entity managed by the repository, is or extends MNPPortabilityInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.portability.IMNPPortabilityInfoRepository`1.GetByMSISDN(System.String)">
+            <summary>
+            Gets all the MNPPortabilityInfo of the msisdn
+            </summary>
+            <param name="msisdn">the msidn to filter the MNPPortabilityInfo</param>
+            <returns>List of MNPPortabilityInfo of the msisdn</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.portability.IMNPPortabilityInfoRepository`1.GetLatestIncomingByMsisdn(System.String)">
+            <summary>
+            Gets the latest MNPPortabilityInfo of the msisdn
+            </summary>
+            <param name="msisdn">the msidn to filter the MNPPortabilityInfo</param>
+            <returns>Last MNPPortabilityInfo of the msisdn</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ILifecycleLogInfoExtendedRepository`1">
+            <summary>
+            Repository interface for LifecycleLogInfoExtended
+            </summary>
+            <typeparam name="TLifecycleLogInfoExtended">The type of the entity managed by the repository, is or extends LifecycleLogInfoExtended</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IPackageDealerMappingInfoRepository`1">
+            <summary>
+            Interface for repository of entity PackageDealerMappingInfo
+            </summary>
+            <typeparam name="TPackageDealerMappingInfo">The type of the managed entity is or extends PackageDealerMappingInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IPackageDealerMappingInfoRepository`1.GetByPackageId(System.Int32)">
+            <summary>
+            Get all the mappings for a given package ID
+            </summary>
+            <param name="packageId">the Id of the package</param>
+            <returns>an enumerable with the packages mapping</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ISIMCardInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TSIMCardInfo"/> entity
+            </summary>
+            <typeparam name="TSIMCardInfo">The entity managed by the interface, is or extends SIMCardInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ISIMCardInfoRepository`1.GetByICCID(System.String)">
+            <summary>
+            Gets the simcard by the ICCID
+            </summary>
+            <param name="ICCID">The ICCID of the simcard to look for</param>
+            <returns>the list of simcards</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ISIMCardInfoRepository`1.GetByIMSI(System.String)">
+            <summary>
+            Gets the simcard by the imsi
+            </summary>
+            <param name="imsi">the imsi of the simcard to look for</param>
+            <returns>the list of simcards with that imsi</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.resource.INumberPropertyInfoRepository`1">
+            <summary>
+            Repository interface for NumberPropertyInfo
+            </summary>
+            <typeparam name="TNumberPropertyInfo">The entity managed by the repository, is or extends NumberPropertyInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.resource.INumberPropertyInfoRepository`1.getByMSISDN(System.String)">
+            <summary>
+            Gets the Number in the pool by the MSISDN 
+            </summary>
+            <param name="msisdn">the msisdn too look up</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IStatusChangedLogInfoRepository`1">
+            <summary>
+            Interface for repository of entity StatusChangedLogInfo
+            </summary>
+            <typeparam name="TStatusChangedLogInfo">The type of the managed entity is or extends StatusChangedLogInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ITransitionInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TTransitionInfo"/> entity
+            </summary>
+            <typeparam name="TTransitionInfo">The entity managed by the interface, is or extends TTransitionInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ITransitionInfoRepository`1.GetAll">
+            <summary>
+            Gets all the TTransitionInfo
+            </summary>
+            <returns>List with all the TTransitionInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ILifecycleLogInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TLifecycleLogInfo"/> entity
+            </summary>
+            <typeparam name="TLifecycleLogInfo">The entity managed by the interface, is or extends LifecycleLogInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ILifecycleLogInfoRepository`1.GetLastByMSISDN(System.String)">
+            <summary>
+            Gets last TLifecycleLogInfo for a given MSISDN
+            </summary>
+            <param name="msisdn">the msisdn to look for</param>
+            <returns>the last TLifecycleLogInfo</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ILifecycleLogInfoRepository`1.getByOrderCodeAndMSISDN(System.String,System.Int64)">
+            <summary>
+            Gets the TLifecycleLogInfo for the given order code and msisdn
+            </summary>
+            <param name="msisdn">the msisdn to look for</param>
+            <param name="orderCode">the order code</param>
+            <returns>the entity that fullfill the requirements</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IEventInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TEventInfo"/> entity
+            </summary>
+            <typeparam name="TEventInfo">The entity managed by the interface, is or extends EventInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IEventInfoRepository`1.GetByEventCodeAndEventType(System.Int32,System.Int32)">
+            <summary>
+            Gets all the events of a given type of code and type
+            </summary>
+            <param name="eventCode">the eventCode to look for</param>
+            <param name="eventType">the event type to look for</param>
+            <returns>a list with all the events mathching envet code and event type</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.promotion.ICrmCustomerPromotionPropertyInfoRepository`1">
+            <summary>
+            Interface for repository of entity CrmCustomerPromotionPropertyInfo
+            </summary>
+            <typeparam name="TCrmCustomerPromotionPropertyInfo">The type of the managed entity is or extends CrmCustomerPromotionPropertyInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ICrmCustomersExtraUsageInfoRepository`1">
+            <summary>
+            Interface for repository of entity CrmCustomersExtraUsageInfo
+            </summary>
+            <typeparam name="TCrmCustomersExtraUsageInfo">The type of the managed entity is or extends CrmCustomersExtraUsageInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.promotion.ICrmCustomersPromotionInfoRepository`1">
+            <summary>
+            Repository interface for CrmCustomersPromotionInfo
+            </summary>
+            <typeparam name="TCrmCustomersPromotionInfo">The entity managed by the repository, is or extends CrmCustomersPromotionInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.promotion.ICrmCustomersPromotionInfoRepository`1.LoadAsociations(System.Int64)">
+            <summary>
+            Loads a Promotion by Id loading associations of promotion
+            </summary>
+            <param name="promotionKey">the id of the promotion to load</param>
+            <returns>the loaded promotion</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.promotion.ICrmCustomersPromotionInfoRepository`1.GetCustomerPromotionPlanById(System.Int32,System.Int64[])">
+            <summary>
+            Gets all promotions in a set of Ids that belogns to a customer iD
+            </summary>
+            <param name="customerId">the id of the customer, owner of the promotions</param>
+            <param name="promotionPlanIds">the ids of the promotion plans</param>
+            <returns>the promotins that fullfill the conditions</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.promotion.ICrmCustomersPromotionOperationLogInfoRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TCrmCustomersPromotionOperationLogInfo"/> entity
+            </summary>
+            <typeparam name="TCrmCustomersPromotionOperationLogInfo">The type of the entity managed is or extends CrmCustomersPromotionOperationLogInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.promotion.ICrmCustomersPromotionOperationLogInfoRepository`1.GetPrePromotionOperationLogs(System.Int32,System.Collections.Generic.IList{System.Int32})">
+            <summary>
+            Gets the CrmCustomersPromotionOperationLogInfo for a given customer of a set of promotion plan details
+            </summary>
+            <param name="customerId">the id of the customer of the changes of the promotion(s)</param>
+            <param name="promotionPlanDetailIds">the plan detail of the changes of the promotion(s)</param>
+            <returns>he CrmCustomersPromotionOperationLogInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IRmPromotionGroupMemberRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TRmPromotionGroupMember"/> entity
+            </summary>
+            <typeparam name="TRmPromotionGroupMember">The entity managed by the interface, is or extends RmPromotionGroupMember</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionGroupMemberRepository`1.GetAll">
+            <summary>
+            Gets all TRmPromotionGroupMember
+            </summary>
+            <returns>all TRmPromotionGroupMember</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionGroupMemberRepository`1.GetByPromotionGroup(System.Int32)">
+            <summary>
+            Gets all TRmPromotionGroupMember of a groupId (id  of PromotionGroup) relation
+            </summary>
+            <returns>all TRmPromotionGroupMember</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.promotion.ICrmCustomersPromotionGroupRepository`1">
+            <summary>
+            Interface for repository of entity CrmCustomersPromotionGroup
+            </summary>
+            <typeparam name="TCrmCustomersPromotionGroup">The type of the managed entity is or extends CrmCustomersPromotionGroup</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IRmPromotionGroupInfoRepository`1">
+            <summary>
+            Repository interface for RmPromotionGroupInfo
+            </summary>
+            <typeparam name="TRmPromotionGroupInfo">The entity managed by the repository, is or extends RmPromotionGroupInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionGroupInfoRepository`1.GetAll">
+            <summary>
+            Gets all promotion groups
+            </summary>
+            <returns>all promotion groups</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionGroupInfoRepository`1.GetByMvnos(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Gets all promotion groups of an vmno
+            </summary>
+            <param name="mvnoIds">the list of mvnos owning the RmPromotionGroupInfo</param>
+            <returns>all promotion groups of an vmno</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionGroupInfoRepository`1.GetByGroupName(System.String)">
+            <summary>
+            Gets all promotion groups with a group name
+            </summary>
+            <param name="groupName">the name of the promotion group</param>
+            <returns>all promotion groups with a group name</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionGroupInfoRepository`1.GetByGroupNameAndDealer(System.String,com.etak.core.model.DealerInfo)">
+            <summary>
+            Gets all promotion groups with a group name that belong to a dealer
+            </summary>
+            <param name="groupName">the name of the promotion group</param>
+            <param name="vmnoInfo">the dealer of the promotion group</param>
+            <returns>all promotion groups with a group name of a dealer</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionGroupInfoRepository`1.GetAllGroupsByNameAndDealer(System.String,com.etak.core.model.DealerInfo)">
+            <summary>
+            Gets all promotion groups with a group name that belong to a dealer
+            </summary>
+            <param name="groupName">the name of the promotion group</param>
+            <param name="vmnoInfo">the dealer of the promotion group</param>
+            <returns>all promotion groups with a group name of a dealer</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IMVNOConfigActionInfoRepository`1">
+            <summary>
+            Repository interface for MVNOConfigActionInfo
+            </summary>
+            <typeparam name="TMVNOConfigActionInfo">The entity managed by the repository, is or extends MVNOConfigActionInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IMVNOConfigActionInfoRepository`1.GetDefaultMVNOConfigs">
+            <summary>
+            Retrieve the all the MVNO config which are for all MVNOs.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IMVNOConfigActionInfoRepository`1.GetMVNOConfigsById(System.Int32)">
+            <summary>
+            Retrieve the MVNO config according to the MVNO ID. 
+            </summary>
+            <param name="MVNOId">the id to filter the MVNO</param>
+            <returns>the list of matchin TMVNOConfigActionInfo by MVNOId</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IMVNOConfigActionInfoRepository`1.GetMVNOConfigsByIds(System.Collections.Generic.IList{System.Int32})">
+            <summary>
+            Retrieve the MVNO config according to the MVNO IDs.
+            </summary>
+            <param name="MVNOIDs">the ids to filter the MVNO</param>
+            <returns>the list of matching TMVNOConfigActionInfo by MVNOIds</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IMVNOConfigActionInfoRepository`1.GetMVNOConfigsByIDAndName(System.Int32,System.String,System.Int32)">
+            <summary>
+            Retrieve the MVNO config according to the MVNO IDs, and category and statusId
+            </summary>
+            <param name="MVNOId">the id to filter the MVNO</param>
+            <param name="categoryName">the category to filter</param>
+            <param name="statusId">the statud in which the config needs to be</param>
+            <returns>the list of matching TMVNOConfigActionInfo by MVNOIds</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IMVNOConfigActionInfoRepository`1.GetMVNOConfigsByMvnoIdAndCategoryId(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="MVNOId">the id to filter the MVNO</param>
+            <param name="categoryId">the category to filter</param>
+            <param name="statusId">the statud in which the config needs to be</param>
+            <returns>the list of matching TMVNOConfigActionInfo by MVNOIds</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IMVNOConfigActionInfoRepository`1.GetMVNOConfigsByMvnoIdAndCategoryIdAndItem(System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="MVNOId">the id to filter the MVNO</param>
+            <param name="categoryId">the category to filter</param>
+            <param name="item">The item to filter</param>
+            <param name="statusId">the statud in which the config needs to be</param>
+            <returns>the list of matching TMVNOConfigActionInfo by MVNOIds</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ICrmCustomersBonusRelationShipInfoRepository`1">
+            <summary>
+            Repository interface for CrmCustomersBonusRelationShipInfo
+            </summary>
+            <typeparam name="TCrmCustomersBonusRelationShipInfo">The entity managed by the repository, is or extends CrmCustomersBonusRelationShipInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ICrmCustomersBonusRelationShipInfoRepository`1.GetByVmnoAndPackage(System.Int32,System.Int32)">
+            <summary>
+            Gets all the TCrmCustomersBonusRelationShipInfo for a package and an vmno
+            </summary>
+            <param name="VMNOId">vmno to filter the query</param>
+            <param name="packageID">the owner of the relations</param>
+            <returns>all the TCrmCustomersBonusRelationShipInfo for a package and an vmno</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IMVNONotificationSettingInfoRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TMVNONotificationSettingInfo"/> entity
+            </summary>
+            <typeparam name="TMVNONotificationSettingInfo">The type of the entity managed is or extends MVNONotificationSettingInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IMVNONotificationSettingInfoRepository`1.GetAllSettings">
+            <summary>
+            Gets all MVNONotificationSettingInfo settings 
+            </summary>
+            <returns>all the MVNONotificationSettingInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IPackageInfoRepository`1">
+            <summary>
+            Repository interface for PackageInfo
+            </summary>
+            <typeparam name="TPackageInfo">The entity managed by the repository, is or extends PackageInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IPackageInfoRepository`1.GetPackageInfoForDealerId(System.Int32)">
+            <summary>
+            Gets all the PackagesInfo for a dealer id
+            </summary>
+            <param name="dealerId">the dealer owner of the package to retrieve</param>
+            <returns>the list of packages of the dealer</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.topup.ICrmCustomersTopupBonusApplyCountInfoRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TCrmCustomersTopupBonusApplyCountInfo"/> entity
+            </summary>
+            <typeparam name="TCrmCustomersTopupBonusApplyCountInfo">The type of the entity managed is or extends CrmCustomersTopupBonusApplyCountInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.topup.ICrmCustomersTopupBonusApplyCountInfoRepository`1.GetApplyCount(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Gets the TCrmCustomersTopupBonusApplyCountInfo
+            </summary>
+            <param name="resource">The resource to filter the TCrmCustomersTopupBonusApplyCountInfo</param>
+            <param name="bonusId">The Id of the bonus to filter the TCrmCustomersTopupBonusApplyCountInfo</param>
+            <param name="year">The year to filter the TCrmCustomersTopupBonusApplyCountInfo</param>
+            <param name="month">The month to filter the TCrmCustomersTopupBonusApplyCountInfo</param>
+            <returns>the matching TCrmCustomersTopupBonusApplyCountInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.topup.ICrmCustomersTopupPromotionApplyCountInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TCrmCustomersTopupPromotionApplyCountInfo"/> entity
+            </summary>
+            <typeparam name="TCrmCustomersTopupPromotionApplyCountInfo">The entity managed by the interface, is or extends CustomerAccountAssociation</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.topup.ICrmCustomersTopupPromotionApplyCountInfoRepository`1.GetApplyCount(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Gets the list of CrmCustomersTopupPromotionApplyCountInfo that mathes the conditions
+            </summary>
+            <param name="resource">The resource to filter CrmCustomersTopupPromotionApplyCountInfo</param>
+            <param name="bonusId">The bonusId to filter CrmCustomersTopupPromotionApplyCountInfo</param>
+            <param name="year">The year to filter CrmCustomersTopupPromotionApplyCountInfo</param>
+            <param name="month">The month to filter CrmCustomersTopupPromotionApplyCountInfo</param>
+            <returns>The list of matching TCrmCustomersTopupPromotionApplyCountInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ICrmCustomersUnpaidFeeInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TCrmCustomersUnpaidFeeInfo"/> entity
+            </summary>
+            <typeparam name="TCrmCustomersUnpaidFeeInfo">The entity managed by the interface, is or extends CrmCustomersUnpaidFeeInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.topup.ICrmMvnoTopupBonusDetailInfoRepository`1">
+            <summary>
+            Repository interface for CrmMvnoTopupBonusDetailInfo
+            </summary>
+            <typeparam name="TCrmMvnoTopupBonusDetailInfo">The entity managed by the repository, is or extends CrmMvnoTopupBonusDetailInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.topup.ICrmMvnoTopupBonusDetailInfoRepository`1.GetBonusDetailListByBonusId(System.Int32)">
+            <summary>
+            Gets all the TCrmMvnoTopupBonusDetailInfo by the bonusId
+            </summary>
+            <param name="bonusId">the id of the bonus to filter</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.topup.ICrmMvnoTopupBonusPromotionInfoRepository`1">
+            <summary>
+            The repository interface for CrmMvnoTopupBonusPromotionInfo
+            </summary>
+            <typeparam name="TCrmMvnoTopupBonusPromotionInfo">The type of the entity managed CrmMvnoTopupBonusPromotionInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.topup.ICrmMvnoTopupBonusPromotionInfoRepository`1.GetBonusPromotionListByBonusId(System.Int32)">
+            <summary>
+            Gets all the bonus promotions for a bonus id
+            </summary>
+            <param name="bonusId">the id of the bonus</param>
+            <returns>The list of CrmMvnoTopupBonusPromotionInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.topup.IHistoryInfoRepository`1">
+            <summary>
+            Repository interface for HistoryInfo
+            </summary>
+            <typeparam name="THistoryInfo">The entity managed by the repository, is or extends HistoryInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.topup.IHistoryInfoRepository`1.GetTopUpsWithInDatesOfResource(com.etak.core.model.ResourceMBInfo,System.DateTime,System.DateTime)">
+            <summary>
+            The list of topups of a given ResourceMB in a TimeRange
+            </summary>
+            <param name="resourceInfo">The Resource where the topup was done</param>
+            <param name="startDate">The start date of the range to filter the TopUps</param>
+            <param name="endDate">The end date of the range to filter the TopUps</param>
+            <returns>The list of matching topups</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.topup.IHistoryInfoRepository`1.GetTopUpHistoryByCustomerId(System.Int32)">
+            <summary>
+            The list of topups of a given ResourceMB in a TimeRange
+            </summary>
+            <param name="customerId">The customer that performed the topup</param>
+            <returns>The list of matching topups</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.topup.IMvnoTopupBonusInfoRepository`1">
+            <summary>
+            Respository for <typeparamref name="TCrmMvnoTopupBonusInfo"/> entity
+            </summary>
+            <typeparam name="TCrmMvnoTopupBonusInfo">The type of the managed entity, is or extends CrmMvnoTopupBonusInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.topup.IMvnoTopupBonusInfoRepository`1.GetByDealers(System.Collections.Generic.IList{System.Int32})">
+            <summary>
+            Gets 
+            </summary>
+            <param name="dealerIdList"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IPricePlanPackageVodafoneFileMapRepository`1">
+            <summary>
+            Repository interface for PricePlanPackageVodafoneFileMap
+            </summary>
+            <typeparam name="TPricePlanPackageVodafoneFileMap">The entity managed by the repository, is or extends PricePlanPackageVodafoneFileMap</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IPricePlanPackageVodafoneFileMapRepository`1.GetMappingsForVMNO(System.String)">
+            <summary>
+            Gets all the price plan package mappings for a given dealer.
+            </summary>
+            <param name="MVNO">the vmno to get the mappigns of</param>
+            <returns>the list of mappings</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IPricePlanPackageVodafoneFileMapRepository`1.GetMappingsForMVNOAndPackageId(System.String,System.Int32)">
+            <summary>
+            Gets all the price plan package mappings for a given dealer.
+            </summary>
+            <param name="MVNO">the vmno to get the mappigns of</param>
+            <param name="packageId">the id of the package to get the mapings</param>
+            <returns>the list of mappings</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.topup.ICrmMVNOPromotedTopupHistoryInfoRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TCrmMVNOPromotedTopupHistoryInfo"/> entity
+            </summary>
+            <typeparam name="TCrmMVNOPromotedTopupHistoryInfo">The type of the entity managed is or extends CrmMVNOPromotedTopupHistoryInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IBRSTaxCodePostCodeRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TBRSTaxCodePostCode"/> entity
+            </summary>
+            <typeparam name="TBRSTaxCodePostCode">The type of the entity managed is or extends BRSTaxCodePostCode</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IBRSTaxCodePostCodeRepository`1.GetByPostCode(System.String)">
+            <summary>
+            Gets the BRSTaxCodePostCode by the post code
+            </summary>
+            <param name="p">the post code of the BRSTaxCodePostCode</param>
+            <returns>the BRSTaxCodePostCode found for the post code</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IOperationLogRepository`1">
+            <summary>
+            Repository interface for OperationLog
+            </summary>
+            <typeparam name="TOperationLog">The entity managed by the repository, is or extends OperationLog</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IOperationLogRepository`1.GetByOrderCodeAndDealerId(System.String,System.Int32)">
+            <summary>
+            Gets all the operation logs of a given vmnoId and a reference code
+            </summary>
+            <param name="referenceCode">the external id (reference)</param>
+            <param name="vmnoId">the id of the mvno/fiscal unit </param>
+            <returns>The list of matching TOperationLog</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IOperationLogRepository`1.GetByOrderCodeColumnAndDealerId(System.Int32,System.Int32)">
+            <summary>
+            Gets all the operation logs of a given vmnoId and a order code
+            </summary>
+            <param name="orderCode">order code</param>
+            <param name="vmnoId">the id of the mvno/fiscal unit </param>
+            <returns>The list of matching TOperationLog</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ICRMMessageInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TCRMMessageInfo"/> entity
+            </summary>
+            <typeparam name="TCRMMessageInfo">The entity managed by the interface, is or extends CRMMessageInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ICRMMessageInfoRepository`1.GetByMessageIdAndLanguageId(System.Int64,System.Int32)">
+            <summary>
+            Gets all the system messages of a given Id and a languageId
+            </summary>
+            <param name="messageId">The id of the message to look for</param>
+            <param name="languageId">the language of the message to look for</param>
+            <returns>The list of messages found</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ICRMMessageInfoRepository`1.GetByMessageId(System.Int64)">
+            <summary>
+            Gets a message by it's unique id
+            </summary>
+            <param name="messageId">the unique id of the message</param>
+            <returns>an enumerable with the message</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IRmPromotionPlanDetailInfoRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TRmPromotionPlanDetailInfo"/> entity
+            </summary>
+            <typeparam name="TRmPromotionPlanDetailInfo">The type of the entity managed is or extends RmPromotionPlanDetailInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ISettingExtendDetailInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TSettingInfo"/> entity
+            </summary>
+            <typeparam name="TSettingInfo">The entity managed by the interface, is or extends SettingInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ISettingExtendDetailInfoRepository`1.GetByDealerIdAndCategoryId(System.Int32,com.etak.core.model.ExtendSettingCategory)">
+            <summary>
+            Gets the SettingExtendDetailInfo for a given dealer and category
+            </summary>
+            <param name="dealerId">the dealer of the entity</param>
+            <param name="extendSettingCategory">the category of the entity</param>
+            <returns>the list of entities that fulfill the conditions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ISettingExtendDetailInfoRepository`1.GetByDealerId(System.Int32)">
+            <summary>
+            Gets the SettingExtendDetailInfo for a given dealer
+            </summary>
+            <param name="dealerId">The id of the dealer to filter the settings</param>
+            <returns>The list of matching entities that fulfill the conditions</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IBRSTaxCodeRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TBRSTaxCode"/> entity
+            </summary>
+            <typeparam name="TBRSTaxCode">The type of the entity managed is or extends BRSTaxCode</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.configuration.IDictionaryInfoRepository`1">
+            <summary>
+            Repository interface for <typeparamref name="TDictionaryInfo"/>
+            </summary>
+            <typeparam name="TDictionaryInfo">The entity managed by the interface, is or extends DictionaryInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.configuration.IDictionaryInfoRepository`1.GetByDictType(System.Int32)">
+            <summary>
+            Gets all the dictionary for the given dictionary type
+            </summary>
+            <param name="p">the type of the dictionaries to get</param>
+            <returns>The entities that fullfil the requirements</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IRmPromotionPlanInfoRepository`1">
+            <summary>
+            Repository interface for RmPromotionPlanInfo
+            </summary>
+            <typeparam name="TRmPromotionPlanInfo">The type of the entity managed by the repository, is or extends RmPromotionPlanInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionPlanInfoRepository`1.GetAllRmPromotionPlanInfo">
+            <summary>
+            Gets all promotion plans
+            </summary>
+            <returns>all the promotion plans</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionPlanInfoRepository`1.GetRmPromotionPlanInfo(System.Int32)">
+            <summary>
+            Gets all promotion plans fetching extra associations
+            </summary>
+            <param name="promotionPlanId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionPlanInfoRepository`1.GetAllRmPromotionPlanForDealerId(System.Int32)">
+            <summary>
+            gets all promotion plans for a dealer id
+            </summary>
+            <param name="dealerId">the vmno/dealer that owns the promotion plan</param>
+            <returns>the list of promotion plans</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionPlanInfoRepository`1.GetAllVisibleRmPromotionPlanForDealerId(System.Int32)">
+            <summary>
+            gets all promotion plans for a dealer id that are visible
+            </summary>
+            <param name="dealerId">the vmno/dealer that owns the promotion plan</param>
+            <returns>the list of visible promotion plans</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionPlanInfoRepository`1.GetByCategoryId(com.etak.core.model.PromotionCategorys)">
+            <summary>
+            gets all promotion plans for a category
+            </summary>
+            <param name="promotionCategorys">the category that the promotion plan is</param>
+            <returns>the list of promotion plans</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionPlanInfoRepository`1.GetRmPromotionPlanByVMNOAndPromotionCategory(System.Collections.Generic.List{System.Int32},System.Int32[])">
+            <summary>
+            Gets all promotion plans of a set of vmnos/dealers that are in a category
+            </summary>
+            <param name="mvnoIds">the list of vmnoid to filter</param>
+            <param name="promotionCategoryIds">the list of categories to filer</param>
+            <returns>the list of promotion plans</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionPlanInfoRepository`1.GetRmPromotionPlanByVMNOAndPromotionCategoryWithPlanAndRule(System.Collections.Generic.List{System.Int32},System.Int32[])">
+            <summary>
+            Gets all promotion plans of a set of vmnos/dealers that are in a category, fetchin plans and rules
+            </summary>
+            <param name="mvnoIds">the list of vmnoid to filter</param>
+            <param name="promotionCategoryIds">the list of categories to filer</param>
+            <returns>the list of promotion plans</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IRmPromotionPlanInfoRepository`1.GetRmPromotionPlanInfoByIds(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Gets a set of promotion plans by their ID
+            </summary>
+            <param name="promotionPlanIds">the list of promotion plan ids</param>
+            <returns>the list of promotion plans</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IIDMappingInfoRepository`1">
+            <summary>
+            Repository interface for IDMappingInfo
+            </summary>
+            <typeparam name="TIDMappingInfo">The type of the entity managed by the repository, is or extends IDMappingInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IIDMappingInfoRepository`1.GetIdMappingByVmno(System.Int32)">
+            <summary>
+            Gets the TIDMappingInfo for the vmno
+            </summary>
+            <param name="Vmno">the vmno that is mapped</param>
+            <returns>the list of mappings</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IIDMappingInfoRepository`1.GetByVMNOAndETID(System.Int32,System.String)">
+            <summary>
+            Gets all the TIDMappingInfo for a given MVNO and promotion plan name
+            </summary>
+            <param name="MVNO">the id of the MVNO/FiscalUnit</param>
+            <param name="promotionPlanName">the prmotion plan name of the TIDMappingInfo</param>
+            <returns>the list of matching TIDMappingInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ISequenceProvider">
+            <summary>
+            Interface to abstract the behaviour of sequence
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ISequenceProvider.GetNextSequence(System.String)">
+            <summary>
+            Gets the next number for the given sequence
+            </summary>
+            <param name="sequence">the name of the sequence from which next value will be gathered</param>
+            <returns>the next number in the sequence</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ISequenceProvider.GetStepSize(System.String)">
+            <summary>
+            Gets the increment size on the storage engine
+            </summary>
+            <param name="sequence">the name of the sequence</param>
+            <returns>the size of the increment in the storage engine</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IOperationInfoRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TOperationInfo"/> entity
+            </summary>
+            <typeparam name="TOperationInfo">The type of the entity managed is or extends BalanceForAccount</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ILoginInfoRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TLoginInfo"/>entity
+            </summary>
+            <typeparam name="TLoginInfo">The type of the entity managed is or extends LoginInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ILoginInfoRepository`1.GetByUserId(System.Int32)">
+            <summary>
+            Gets the entity of the given user 
+            </summary>
+            <param name="userId">the unique id for the user</param>
+            <returns>the user  wrapped in a enumerable</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ISmsLogInfoRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TSmsLogInfo"/> entity
+            </summary>
+            <typeparam name="TSmsLogInfo">The type of the entity managed is or extends SmsLogInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ISmsLogInfoRepository`1.GetSmsLogInfoByMsisdn(System.String)">
+            <summary>
+            Gets all the sms sent to a given msisdn
+            </summary>
+            <param name="msisdn">the msisdn to recover the sms</param>
+            <returns>the list of sms sent the given msisdn</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ISmsLogQueueRepository`1">
+            <summary>
+            Interface for repository of entity SmsLogQueue
+            </summary>
+            <typeparam name="TSmsLogQueue">The type of the managed entity is or extends SmsLogQueue</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ISmsLogQueueRepository`1.GetQueueByDealerList(System.Collections.Generic.IList{System.Int32})">
+            <summary>
+            Gets the list of TSmsLogQueue for the given list of dealers
+            </summary>
+            <param name="dealeridlst">the list of dealers</param>
+            <returns>the list of SmsLogQueue</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.ISmsTemplateInfoRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TSmsTemplateInfo"/> entity
+            </summary>
+            <typeparam name="TSmsTemplateInfo">The type of the entity managed is or extends SmsTemplateInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ISmsTemplateInfoRepository`1.GetTemplateListByTemplateCode(System.Int32)">
+            <summary>
+            Gets a TSmsTemplateInfo by it's templateCode
+            </summary>
+            <param name="templateCode">code of the template to retrieve </param>
+            <returns>the list of TSmsTemplateInfo with the given template code</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.ISmsTemplateInfoRepository`1.GetTemplateList(System.Int32,System.Int32)">
+            <summary>
+            Gets all the TSmsTemplateInfo of a dealer in the given language
+            </summary>
+            <param name="dealerId">the id of the dealer to retrieve the templates of</param>
+            <param name="languageId">the id of the language to filter the templates</param>
+            <returns>List of TSmsTemplateInfo with the matching parameters</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.configuration.ISystemConfigDataInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TSystemConfigDataInfo"/> entity
+            </summary>
+            <typeparam name="TSystemConfigDataInfo">The entity managed by the interface, is or extends SystemConfigDataInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.configuration.ISystemConfigDataInfoRepository`1.GetAllSystemConfigDateInfo">
+            <summary>
+            Gets all entities of  TSystemConfigDataInfo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.configuration.ISystemConfigDataInfoRepository`1.GetSystemConfigDateInfoByItem(System.String)">
+            <summary>
+            Gets all entities of TSystemConfigDataInfo with a given item
+            </summary>
+            <param name="item">the item of the TSystemConfigDataInfo to retrieve</param>
+            <returns>entities of TSystemConfigDataInfo with a given item</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.configuration.ISystemConfigDataInfoRepository`1.GetSystemConfigDateInfoByName(System.String)">
+            <summary>
+            Gets all entities of TSystemConfigDataInfo with a given name
+            </summary>
+            <param name="name">the name of the TSystemConfigDataInfo to retrieve</param>
+            <returns>entities of TSystemConfigDataInfo with a given name</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.user.IUserDealerInfoRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TUserDealerInfo"/> entity
+            </summary>
+            <typeparam name="TUserDealerInfo">The type of the entity managed is or extends UserDealerInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.user.IUserDealerInfoRepository`1.GetByUserId(System.Int32)">
+            <summary>
+            Gets a user by it's Id
+            </summary>
+            <param name="userId">the id of the user</param>
+            <returns>an enumerable with the user</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.user.IUserDealerInfoRepository`1.GetByDealerId(System.Int32)">
+            <summary>
+            Gets all users of a given dealer. 
+            </summary>
+            <param name="delaerId">the dealer owning the users</param>
+            <returns>an enumerable with the users of the dealer</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IDealerInfoRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TDealerInfo"/> entity
+            </summary>
+            <typeparam name="TDealerInfo">The entity managed by the interface, is or extends DealerInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IDealerInfoRepository`1.GetByDealerIdAndCache(System.Int32)">
+            <summary>
+            Gets all the 
+            </summary>
+            <param name="dealerId">gets the dealer by dealer id and caches the resutls</param>
+            <returns>A enumerable with 0 or 1 dealers with the DealerInfo of that id</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IDealerInfoRepository`1.GetByDealerIdAndLoadAllAsociations(System.Int32)">
+            <summary>
+            Gets the dealer id loading all it's associations
+            </summary>
+            <param name="dealerId">the id of the dealer to load</param>
+            <returns>the delaer with the given id</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IDealerInfoRepository`1.GetDealersStateNE(System.Int32)">
+            <summary>
+            Gets all the dealers not in a given state
+            </summary>
+            <param name="state">the state in which the dealers can't be</param>
+            <returns>the list of dealers not in state (state param)</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IDealerInfoRepository`1.GetMaxUpdateDate">
+            <summary>
+            Gets the maximun date of the update date of dealers
+            </summary>
+            <returns>the maximun date</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IDealerInfoRepository`1.GetMVNOByDealerId(System.Int32)">
+            <summary>
+            Gets the dealerInfo that is the MVNO/FiscalUnit of a given dealer
+            </summary>
+            <param name="dealerId">the unique id of the dealer which FiscalUnit/MVNO will be retreived</param>
+            <returns>the MVNO (FiscalUnit) of the dealer </returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IDealerInfoRepository`1.GetDealersByFiscalUnitId(System.Int32)">
+            <summary>
+            Gets all the dealers of the given MVNO/FiscalUnit
+            </summary>
+            <param name="fiscalUnitId">the FiscalUnit/MVMNO parent of the dealers to retrieve</param>
+            <returns>all the dealers of the  MVNO/FiscalUnit</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.IMVNOPropertiesRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TCrmCustomersBonusRelationShipInfo"/> entity
+            </summary>
+            <typeparam name="TCrmCustomersBonusRelationShipInfo">The type of the entity managed is or extends CrmCustomersBonusRelationShipInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.IMVNOPropertiesRepository`1.GetByVMNOId(System.String)">
+            <summary>
+            Gets of TCrmCustomersBonusRelationShipInfo
+            </summary>
+            <param name="VMNOId">The filter </param>
+            <returns>The list of matching TCrmCustomersBonusRelationShipInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.customer.ICustomerInfoRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TCustomerInfo"/> entity
+            </summary>
+            <typeparam name="TCustomerInfo">The type of the entity managed is or extends CustomerInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.customer.ICustomerInfoRepository`1.LoadCustomerAsociations(System.Int32)">
+            <summary>
+            Gets the csutomer with the associations pre loaded from the db
+            </summary>
+            <param name="customerId">the Id of the customer to test</param>
+            <returns>an enumerable with 0 or 1 customers</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.customer.ICustomerInfoRepository`1.GetByParentId(System.Int32)">
+            <summary>
+            Gets all customers with a given parent
+            </summary>
+            <param name="customerId">the paret of the customer</param>
+            <returns>the list of customers</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.customer.ICustomerInfoRepository`1.LoadCustomerAndPromotionsByCustomerId(System.Int32)">
+            <summary>
+            Load a customer and it's promotions by a given customerId
+            </summary>
+            <param name="customerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.customer.ICustomerInfoRepository`1.LoadCustomerAllInfoByCustomerIdExcludeStatusID(System.Int32,System.Int32)">
+            <summary>
+            Gets the only customer info with the provided customer id that ara not in a given state
+            </summary>
+            <param name="customerId">the Id of the customer to look up</param>
+            <param name="statusId">the status Id of the customer to exclude</param>
+            <returns>the 1 or 0 customers in an enumerable</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.customer.ICustomerInfoRepository`1.GetByDealerIdAndExternalId(System.Int32,System.String)">
+            <summary>
+            Gets all customers with a given external id, and filtering by dealer id
+            </summary>
+            <param name="mvnoId">the dealer owner of the configuration</param>
+            <param name="externalId">the external id of the customer</param>
+            <returns>all customers with the given external id</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.customer.ICustomerInfoRepository`1.GetByExternalId(System.String)">
+            <summary>
+            Gets all customers with a given external id
+            </summary>
+            <param name="externalId">the external id of the customer</param>
+            <returns>all customers with the given external id</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.user.IUserInfoRepository`1">
+            <summary>
+            Interface for repository of entity UserInfo
+            </summary>
+            <typeparam name="TUserInfo">The type of the managed entity is or extends UserInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.subscription.IResourceMBRepository`1">
+            <summary>
+            Interface for ResourceMB Repository
+            </summary>
+            <typeparam name="TResourceMBInfo">The entity managed by the repository, is or extends ResourceMBInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.subscription.IResourceMBRepository`1.GetByMSISDNAndNotStatusAndActiveDates(System.String,System.Int32)">
+            <summary>
+            Gets all TResourceMBInfo with a given MSISDN, Dates are in a active range and the status 
+            is not equal to the <paramref name="p"/> parameter
+            </summary>
+            <param name="MSISDN">the msisdn to look up for</param>
+            <param name="p">the status in which the TResourceMBInfo can't be</param>
+            <returns>the list of resources that fullfill the conditions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.subscription.IResourceMBRepository`1.GetByIdList(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Gets a list of TResourceMBInfo based on a list of Id
+            </summary>
+            <param name="IdEnum">the list of the Ids to look for</param>
+            <returns>the list of resources that fullfill the conditions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.subscription.IResourceMBRepository`1.GetByMSISDNAndStatusNotInAndActiveDates(System.String,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Gets all TResourceMBInfo with a given MSISDN, Dates are in a active range and the status 
+            is not in to the <paramref name="status"/> parameter
+            </summary>
+            <param name="msisdn">the msisdn to look up for</param>
+            <param name="status">the lis of status in which the TResourceMBInfo can't be</param>
+            <returns>the list of resources that fullfill the conditions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.subscription.IResourceMBRepository`1.GetMSISDNByICC(System.String)">
+            <summary>
+            Gets the list of Subscriptions with a given ICCid
+            </summary>
+            <param name="iccardId">the Iccid to look for</param>
+            <returns>the list of resources that fullfill the conditions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.subscription.IResourceMBRepository`1.GetMSISDNByCustomerID(System.Int32)">
+            <summary>
+            Gets all Subscriptions of the given customerId
+            </summary>
+            <param name="customerId">the customer Id that owns the subscriptions</param>
+            <returns>the list of resources that fullfill the conditions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.subscription.IResourceMBRepository`1.GetMSISDNByIMSI(System.String)">
+            <summary>
+            Gets the list of Subscriptions with a given IMSI
+            </summary>
+            <param name="imsi">the imsi to look for</param>
+            <returns>the list of resources that fullfill the conditions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.subscription.IResourceMBRepository`1.GetLastByDealerIdAndMSISDNAndStatusNotIn(com.etak.core.model.DealerInfo,System.String,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Get the Last Subscription in base of a Dealer Id, MSISDN and a list of non valid status
+            </summary>
+            <param name="dealer">The DealerInfo that owns the subscription</param>
+            <param name="msisdn">The Resource of the subscription</param>
+            <param name="status">A list of non valid status</param>
+            <returns>The Subscription with the oldest CreateDate that match the criteria</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.subscription.IResourceMBRepository`1.GetByMSISDNAndStatusNotIn(System.String,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Get the Subscriptions related with the given MSISDN and a list of non Valid status
+            </summary>
+            <param name="msisdn">The Resource of the subscription</param>
+            <param name="status">A list of non valid status</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.IBalanceForAccountRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TBalanceForAccount"/> entity
+            </summary>
+            <typeparam name="TBalanceForAccount">The type of the entity managed is or extends BalanceForAccount</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.IAccountDataRepository`1">
+            <summary>
+            Interface for repository of entity AccountData
+            </summary>
+            <typeparam name="TAccountData">The type of the managed entity is or extends AccountData</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.IAccountRepository`1">
+            <summary>
+            Interface for repository of entity Account
+            </summary>
+            <typeparam name="TAccount">The type of the managed entity is or extends Account</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.IAccountTimeRepository`1">
+            <summary>
+            Interface for repository of entity AccountTime
+            </summary>
+            <typeparam name="TAccountTime">The type of the managed entity is or extends AccountTime</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.IBillCycleRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TBillCycle"/> entity
+            </summary>
+            <typeparam name="TBillCycle">The entity managed by the interface, is or extends BillCycle</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.IBillCycleRepository`1.GetBillingCyclesForVMNO(com.etak.core.model.DealerInfo)">
+            <summary>
+            Gets all the billing cycles for a mvno
+            </summary>
+            <param name="dealer">the vmno owning the billing cycles</param>
+            <returns>the list of billing cycles</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.ITaxDefinitionRepository`1">
+            <summary>
+            Repository for BillRun entity
+            </summary>
+            <typeparam name="TTaxDefinition">The type of the entity that is or extends BillRun</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.ITaxDefinitionRepository`1.GetDefinitionsForCategory(System.Int32)">
+            <summary>
+            Gets all the tax definitions with the given category
+            </summary>
+            <param name="taxCategory">the category to filter</param>
+            <returns>the matching results</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.ITaxDefinitionRepository`1.GetDefinitionsByZipCodeLike(System.String)">
+            <summary>
+            Searchs all the charge definition that have a zip code in that range. 
+            </summary>
+            <param name="zipCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.IBillRunRepository`1">
+            <summary>
+            Repository for BillRun entity
+            </summary>
+            <typeparam name="TBillRun">The type of the entity that is or extends BillRun</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.IBillRunRepository`1.GetBillRunsForBillCycle(com.etak.core.model.revenueManagement.BillCycle)">
+            <summary>
+            gets all the bill runs for a billing cycle
+            </summary>
+            <param name="billcycle">the owner of the bill runs to recover</param>
+            <returns>the list of bill runs for a billing cycle</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.IBillRunRepository`1.GetBillRunInDatesForBillCycle(com.etak.core.model.revenueManagement.BillCycle,System.DateTime)">
+            <summary>
+            gets all the bill runs for a billing cycle
+            </summary>
+            <param name="billCycle">the owner of the bill runs to recover</param>
+            <param name="dateRange">The date in which the bill run start/end date must be between</param>
+            <returns>the list of bill runs for a billing cycle</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.IChargePriceRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TChargePrice"/> entity
+            </summary>
+            <typeparam name="TChargePrice">The type of the entity managed is or extends ChargePrice</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.IChargeRepository`1">
+            <summary>
+            Repository interface for Charge
+            </summary>
+            <typeparam name="TCharge">The type of the entity managed by the repository, is or extends Charge</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.IChargeRepository`1.GetByCategoryId(System.Int32)">
+            <summary>
+            Gets all the charges of a category
+            </summary>
+            <param name="category">the id of the category that the charges must have</param>
+            <returns>the list of charges</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.IAccountCurrencyRepository`1">
+            <summary>
+            Interface for repository of entity AccountCurrency
+            </summary>
+            <typeparam name="TAccountCurrency">The type of the managed entity is or extends AccountCurrency</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.ICustomerAccountAssociationRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TCustomerAccountAssociation"/> entity
+            </summary>
+            <typeparam name="TCustomerAccountAssociation">The entity managed by the interface, is or extends CustomerAccountAssociation</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.ICustomerAccountAssociationRepository`1.AllAsociationsForCustomer(com.etak.core.model.CustomerInfo)">
+            <summary>
+            Gets all the customer accounts associations of a given customer
+            </summary>
+            <param name="customer">The customer in the association</param>
+            <returns>the list of customer account associations of the customer</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.ICustomerChargeRepository`1">
+            <summary>
+            Repository interface for CustomerCharge
+            </summary>
+            <typeparam name="TCustomerCharge">The type of the entity managed by the repository, is or extends CustomerCharge</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.ICustomerChargeRepository`1.GetByCustomerId(System.Int32)">
+            <summary>
+            Gets the customer charges by customerId
+            </summary>
+            <param name="customerId">The customer id to load</param>
+            <returns>a list containing the charges for the customercustomers charge</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.ICustomerChargeRepository`1.GetByCustomerIdWithRange(System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            Gets the customer charges by customerId in with charging dates within a range
+            </summary>
+            <param name="customerId">The customer id to load</param>
+            <param name="startDate">The purchase date range start</param>
+            <param name="endDate">The purchase date range end</param>
+            <returns>a list containing the charges for the customercustomers charge</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.ICustomerChargeRepository`1.GetByCustomerIdAndInvoice(System.Int32,com.etak.core.model.revenueManagement.Invoice)">
+            <summary>
+            Gets the customer charges by customerId of a given invoice
+            </summary>
+            <param name="customerId">THe id of the customer owning the charges</param>
+            <param name="invoice">The invoice to look for</param>
+            <returns>a list containing the charges for the customer charges</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.ICustomerChargeScheduleRepository`1">
+            <summary>
+            Repository Interface for CustomerChargeSchedule
+            </summary>
+            <typeparam name="TCustomerChargeSchedule">A Class that is CustomerChargeSchedule or extends it</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.ICustomerChargeScheduleRepository`1.GetChargeSchedulesByCustomer(com.etak.core.model.CustomerInfo)">
+            <summary>
+            Gets all the scheduled charges of a given customer
+            </summary>
+            <param name="customer">the customer to the charges are associated</param>
+            <returns>A list of Scheduled charges.</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.ICustomerProductAssignmentRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TCustomerProductAssignment"/> entity
+            </summary>
+            <typeparam name="TCustomerProductAssignment">The entity managed by the interface, is or extends CustomerProductAssignment</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.ICustomerProductAssignmentRepository`1.GetByCustomerId(System.Int32)">
+            <summary>
+            Gets all customer products assignment
+            </summary>
+            <param name="customerId">the Id of the customer to where the charges are assigneed</param>
+            <returns>All the customer product assignment</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.ICustomerProductAssignmentRepository`1.GetByCustomerIdWithRange(System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            Gets all customer products assignment with start date greater than input value
+            and endtime smaller thatn input value
+            </summary>
+            <param name="customerId">the id of the customer to retreive the association</param>
+            <param name="startDate">the start date to compare with startdate of the CustomerProductAssingment</param>
+            <param name="endDate">the end date to compare with enddate of the CustomerProductAssingment</param>
+            <returns>the list of matching customer product assingments</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.ICustomerProductAssignmentRepository`1.GetByCustomerWhereDateRangesInDate(System.Int32,System.DateTime)">
+            <summary>
+            Gets all customer products assignment with start date greater than input value
+            and endtime smaller thatn input value or end date null
+            </summary>
+            <param name="customerId">the id of the customer to retreive the association</param>
+            <param name="pointInTime">the start date to compare with startdate and enddate of the CustomerProductAssingment</param>
+            <returns>the list of matching customer product assingments</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.IInvoiceRepository`1">
+            <summary>
+            The respository interface for <typeparamref name="TInvoice"/> entity
+            </summary>
+            <typeparam name="TInvoice">The entity managed by the interface, is or extends Invoice</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.IInvoiceRepository`1.GetLastNInvoices(System.Int32,System.Int32)">
+            <summary>
+            Gets the last N invoices for a given customer
+            </summary>
+            <param name="customerId">the customer of the customers</param>
+            <param name="n">the number of the invoices to recover</param>
+            <returns>the list of invoices</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.IInvoiceRepository`1.GetByLegalInvoiceNumber(System.Int32,System.String)">
+            <summary>
+            Gets the invoice for the customer with a given legal number
+            </summary>
+            <param name="customerId">The owner of the customer</param>
+            <param name="legalNumber">The number of the invoice to recover</param>
+            <returns>the list of invoices</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.IInvoiceRepository`1.GetLastNInvoicesAndStatusIn(System.Int32,System.Int32,System.Collections.Generic.List{System.Nullable{com.etak.core.model.revenueManagement.InvoiceStatus}})">
+            <summary>
+            Gets the last N invoices for a given customer that are in a set of status
+            </summary>
+            <param name="customerId">the customer of the customers</param>
+            <param name="n">the number of the invoices to recover</param>
+            <returns>the list of invoices</returns>
+            <param name="statuses">the possible list of statu that the invoice needs to be</param>
+            <returns>the list of n matching invoices</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.IProductChargeOptionRepository`1">
+            <summary>
+            Repository Interface for <typeparamref name="TProductChargeOption"/> entity
+            </summary>
+            <typeparam name="TProductChargeOption">The type of the entity managed is or extends ProductChargeOption</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.revenueManagement.IProductChargeOptionRepository`1.GetByProductOfferingId(System.Int32)">
+            <summary>
+            Gets all the ProductChargeOption of a given product offering (This method in general, Product Offering already has the result of this query and cached)
+            <see cref="P:com.etak.core.model.subscription.catalog.ProductOffering.ChargingOptions"/>
+            </summary>
+            <param name="productOfferingId">The id of the product to get the TProductChargeOption</param>
+            <returns>the list of the TProductChargeOption of the product offering</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.revenueManagement.IProductRepository`1">
+            <summary>
+            Interface for repository of entity Product
+            </summary>
+            <typeparam name="TProduct">The type of the managed entity is or extends Product</typeparam>
+        </member>
+    </members>
+</doc>

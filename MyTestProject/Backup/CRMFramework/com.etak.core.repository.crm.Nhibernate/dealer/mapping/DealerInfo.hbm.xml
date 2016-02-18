@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+	<class name="com.etak.core.model.DealerInfo,com.etak.core.model" table="CRM_DEALERS" >
+    <cache usage="nonstrict-read-write" region="UserDealer"/>
+		<id name="DealerID" column="DEALERID" type="Int32"  length="8">
+			<generator class="com.etak.core.repository.crm.Nhibernate.IDGeneration.DealerIdGenerator,com.etak.core.repository.crm.Nhibernate"/>
+		</id>
+		<property name="ParentID" column="PARENTID" type="Int32" length="4" />
+		<property name="DealerNode" column="DEALERNODE" type="String" length="100" />
+		<property name="DealerTypeID" column="DEALERTYPEID" type="Int32" length="4" />
+		<property name="FiscalUnitID" column="FISCALUNITID" type="Int32" length="4" />
+		<property name="ResellerID" column="RESELLERID" type="Int32" length="4" />
+		<property name="AgentID" column="AGENTID" type="Int32" length="4" />
+		<property name="SubagentID" column="SUBAGENTID" type="Int32" length="4" />
+		<property name="Company" column="COMPANY" type="String" length="200" />
+		<property name="Contact" column="CONTACT" type="String" length="200" />
+		<property name="TitleID" column="TITLEID" type="Int32" length="4" />
+		<property name="GenderID" column="GENDERID" type="Int32" length="4" />
+		<property name="Address" column="ADDRESS" type="String" length="200" />
+		<property name="HouseNO" column="HOUSENO" type="String" length="50" />
+		<property name="Zipcode" column="ZIPCODE" type="String" length="50" />
+		<property name="City" column="CITY" type="String" length="200" />
+		<property name="CountryID" column="COUNTRYID" type="Int32" length="4" />
+		<property name="Telephone" column="TELEPHONE" type="String" length="50" />
+		<property name="Telefax" column="TELEFAX" type="String" length="50" />
+		<property name="Email" column="EMAIL" type="String" length="100" />
+		<property name="CHOC" column="CHOC" type="String" length="100" />
+		<property name="VAT" column="VAT" type="String" length="100" />
+		<property name="CreateDate" column="CREATEDATE" type="DateTime" />
+		<property name="UserID" column="USERID" type="Int32" length="4" />
+		<property name="CreateUser" column="CREATEUSER" type="Int32" length="4" />
+		<property name="UpdateUser" column="UPDATEUSER" type="Int32" length="4" />
+		<property name="UpdateDate" column="UPDATEDATE" type="DateTime" />
+		<property name="State" column="STATE" type="Int32" length="4" />
+		<property name="Hide" column="HIDE" type="Int32" length="4" />
+		<property name="MvnotypeID" column ="MVNOTYPEID" type="Int32" length="4"/>
+    <property name="ExternalId" column="EXTERNALDEALERID" type="String" length="25" />
+    <one-to-one name="DealerATMTopUpConfigInfo" class="com.etak.core.model.DealerATMTopUpConfigInfo,com.etak.core.model" cascade="all" constrained="false" lazy="proxy">     
+    </one-to-one>
+    
+    <one-to-one name="MVNOPropertiesInfo" class="com.etak.core.model.MVNOPropertiesInfo,com.etak.core.model" cascade="all" constrained="false"  lazy="proxy">     
+    </one-to-one>
+    
+		<bag name="DealerBankList" inverse="true" lazy="true" cascade="all,persist" fetch="select">
+      <cache usage="nonstrict-read-write" region="UserDealer"/>
+			<key column="DealerID" />
+			<one-to-many class="com.etak.core.model.DealerBankInfo,com.etak.core.model" />
+		</bag>
+		<bag name="DealerLoyaltyList" inverse="true" lazy="true" cascade="all,persist" fetch="select">
+      <cache usage="nonstrict-read-write" region="UserDealer"/>
+			<key column="DealerID" />
+			<one-to-many class="com.etak.core.model.DealerLoyaltyInfo,com.etak.core.model" />
+		</bag>
+		<bag name="DealerPropertiesList" inverse="true" lazy="true" cascade="all,persist" fetch="select">
+      <cache usage="nonstrict-read-write" region="UserDealer"/>
+			<key column="DealerID" />
+			<one-to-many class="com.etak.core.model.DealerPropertiesInfo,com.etak.core.model" />
+		</bag>
+		<bag name="RoamingSettingList" inverse="true" lazy="true" cascade="all,persist" fetch="select">
+      <cache usage="nonstrict-read-write" region="UserDealer"/>
+			<key column="DealerID" />
+			<one-to-many class="com.etak.core.model.RoamingSettingInfo,com.etak.core.model" />
+		</bag>
+    <bag name="MvnoDataRoamingLimitList" inverse="true" lazy="true" cascade="all,persist" fetch="select">
+      <cache usage="nonstrict-read-write" region="UserDealer"/>
+      <key column="MVNOID" />
+      <one-to-many class="com.etak.core.model.MvnoDataRoamingLimitInfo,com.etak.core.model" />
+    </bag>
+    <bag name="MVNODataRoamingLimitNotificationList" inverse="true" lazy="true" cascade="all,persist" fetch="select">
+      <cache usage="nonstrict-read-write" region="UserDealer"/>
+      <key column="MVNOID" />
+      <one-to-many class="com.etak.core.model.MVNODataRoamingLimitNotification,com.etak.core.model" />
+    </bag>
+    <bag name="MVNOConfigActionList" inverse="true" lazy="true" cascade="all,persist" fetch="select">
+      <cache usage="nonstrict-read-write" region="UserDealer"/>
+      <key column="DealerID" />
+      <one-to-many class="com.etak.core.model.MVNOConfigActionInfo,com.etak.core.model" />
+    </bag>
+	</class>
+</hibernate-mapping>
+

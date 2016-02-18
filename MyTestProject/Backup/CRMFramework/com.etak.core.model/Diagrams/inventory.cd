@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="com.etak.core.model.inventory.ProductInventory">
+    <Position X="4.5" Y="1" Width="2.25" />
+    <AssociationLine Name="Product" Type="com.etak.core.model.inventory.PhysicalProduct" FixedFromPoint="true">
+      <Path>
+        <Point X="5.5" Y="2.48" />
+        <Point X="5.5" Y="3" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>inventory\ProductInventory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.inventory.PhysicalProduct">
+    <Position X="3.75" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>inventory\PhysicalProduct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PhysicalResourceSpecification" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.order.CustomerOrder">
+    <Position X="6.75" Y="5.75" Width="1.5" />
+    <InheritanceLine Type="com.etak.core.model.operation.Order" FixedToPoint="true">
+      <Path>
+        <Point X="9.75" Y="7.423" />
+        <Point X="8.25" Y="7.423" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="OrderItems" Type="com.etak.core.model.order.OrderItem" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="6.562" />
+        <Point X="6.375" Y="6.562" />
+        <Point X="6.375" Y="6.552" />
+        <Point X="5.25" Y="6.552" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.464" Y="0.112" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAEQAAAIABEAAAAABCAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>order\CustomerOrder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="OrderItems" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.order.OrderItem">
+    <Position X="3.75" Y="5.5" Width="1.5" />
+    <AssociationLine Name="Product" Type="com.etak.core.model.revenueManagement.Product" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.656" Y="5.5" />
+        <Point X="4.656" Y="4.875" />
+        <Point X="2" Y="4.875" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAECAAAAAQAAAAAAAAEAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>order\OrderItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Order" />
+      <Property Name="Product" />
+      <Property Name="ProductOffering" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.Product">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICggAEAAAgAAAAAAAACAgAAAEAAIAAAQAACAAAAAA=</HashCode>
+      <FileName>revenueManagement\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.operation.Order">
+    <Position X="9.75" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAACAAAMAAIAAAIAAAAAAEAAAAAAABIIABAACAgIAAA=</HashCode>
+      <FileName>operation\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.inventory.PhysicalResourceSpecification">
+    <Position X="8.75" Y="2.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>gAACQEACAAAgAAAAAAACAAQAAAAAAEAAAAAAkAABAgA=</HashCode>
+      <FileName>inventory\PhysicalResourceSpecification.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Costs" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.inventory.PhysicalResourceCost">
+    <Position X="12.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAgBAAAAAAAAAgAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>inventory\PhysicalResourceCost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.subscription.catalog.ProductOffering">
+    <Position X="0.75" Y="5.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAACgEAAAAAgAAAAAAEAAEAAAAAAAQAAAAAAAAhgAAA=</HashCode>
+      <FileName>subscription\catalog\ProductOffering.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei" Size="9" />
+</ClassDiagram>

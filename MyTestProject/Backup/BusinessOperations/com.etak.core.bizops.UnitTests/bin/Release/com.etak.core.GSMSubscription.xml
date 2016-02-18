@@ -1,0 +1,1513 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.GSMSubscription</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.informationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.helper.HLRSubscription">
+            <summary>
+            HLR Subscription
+            </summary>
+        </member>
+        <member name="F:com.etak.core.GSMSubscription.helper.HLRSubscription._hpsSystemConfigDataInfoItem">
+            <summary>
+            Configuration value to get the HPS subscriber
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.helper.HLRSubscription.DeleteHLRSubscription(System.String)">
+            <summary>
+            Delete HLR subscription used in CancelResourceMBInfoMS and DeleteResourceMBInfoMS
+            </summary>
+            <param name="IMSI"></param>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CancelCustomerProductAssignment.CancelCustomerProductAssignmentRequest">
+            <summary>
+            Request of CancelCustomerProductAssignmentRequestMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CancelCustomerProductAssignment.CancelCustomerProductAssignmentRequest.CustomerProductAssignment">
+            <summary>
+            CustomerProductAssignment to be canceled
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CancelCustomerProductAssignment.CancelCustomerProductAssignmentRequest.EndDate">
+            <summary>
+            EndDate(DateTime) is optional property when the CustomerProductAssignment is canceled
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CancelCustomerProductAssignment.CancelCustomerProductAssignmentResponse">
+            <summary>
+            Response of CancelCustomerProductAssignmentMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CancelCustomerProductAssignment.CancelCustomerProductAssignmentResponse.CustomerProductAssignment">
+            <summary>
+            Updated CustomerProductAssignment
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CancelResourceMBInfo.CancelResourceMBInfoRequest">
+            <summary>
+            Request of CancelResourceMBInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CancelResourceMBInfo.CancelResourceMBInfoRequest.CustomersResourceMb">
+            <summary>
+            ResourceMBInfo to be canceled
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CancelResourceMBInfo.CancelResourceMBInfoRequest.EndDate">
+            <summary>
+            EndDate(DateTime) is optional property when the ResourceMBInfo is canceled
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CancelResourceMBInfo.CancelResourceMBInfoRequest.ChangeStatusDate">
+            <summary>
+            DateTime of change status
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CancelResourceMBInfo.CancelResourceMBInfoRequest.ActiveDeadlineDateToBeSet">
+            <summary>
+            ActiveDeadlineDate To Be Set
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CancelResourceMBInfo.CancelResourceMBInfoRequest.HasToDeleteFromHLR">
+            <summary>
+            Boolean to decide if the HLR must be called
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CancelResourceMBInfo.CancelResourceMBInfoResponse">
+            <summary>
+            Response of CancelResourceMBInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CancelResourceMBInfo.CancelResourceMBInfoResponse.ResourceMbInfos">
+            <summary>
+            Updated ResourceMBInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateCrmMobileMultipleImsiInfo.CreateCrmMobileMultipleImsiInfoRequest">
+            <summary>
+            CreateCrmMobileMultipleImsiInfoRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateCrmMobileMultipleImsiInfo.CreateCrmMobileMultipleImsiInfoRequest.CrmMobileMultipleImsi">
+            <summary>
+            CrmMobileMultipleImsiInfo to create
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateCrmMobileMultipleImsiInfo.CreateCrmMobileMultipleImsiInfoResponse">
+            <summary>
+            CreateCrmMobileMultipleImsiInfoResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateCrmMobileMultipleImsiInfo.CreateCrmMobileMultipleImsiInfoResponse.CrmMobileMultipleImsi">
+            <summary>
+            CrmMobileMultipleImsiInfo created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateCrmMobileNetworkInfo.CreateCrmMobileNetworkInfoRequest">
+            <summary>
+            CreateCrmMobileNetworkInfoRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateCrmMobileNetworkInfo.CreateCrmMobileNetworkInfoRequest.CrmMobileNetWork">
+            <summary>
+            CrmMobileNetworkInfo to assign
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateCrmMobileNetworkInfo.CreateCrmMobileNetworkInfoResponse">
+            <summary>
+            CreateCrmMobileNetworkInfoResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateCrmMobileNetworkInfo.CreateCrmMobileNetworkInfoResponse.CrmMobileNEtwork">
+            <summary>
+            CrmMobileNetwork createdd
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateCustomerDastaRoamingLimitNotification.CreateCustomerDastaRoamingLimitNotificationRequest">
+            <summary>
+            Request of CreateCustomerDastaRoamingLimitNotificationMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateCustomerDastaRoamingLimitNotification.CreateCustomerDastaRoamingLimitNotificationRequest.CustomerDataRoamingLimitNotification">
+            <summary>
+            CustomerDataRoamingLimitNotification to be created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateCustomerDastaRoamingLimitNotification.CreateCustomerDastaRoamingLimitNotificationResponse">
+            <summary>
+            Response of CreateCustomerDastaRoamingLimitNotificationMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateCustomerDastaRoamingLimitNotification.CreateCustomerDastaRoamingLimitNotificationResponse.CustomerDataRoamingLimitNotification">
+            <summary>
+            CustomerDataRoamingLimitNotification that has been created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateCustomerDastaRoamingLimit.CreateCustomerDastaRoamingLimitRequest">
+            <summary>
+            Request of CreateCustomerDastaRoamingLimitMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateCustomerDastaRoamingLimit.CreateCustomerDastaRoamingLimitRequest.CustomerDataRoamingLimit">
+            <summary>
+            CustomerDataRoamingLimit to be created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateCustomerDastaRoamingLimit.CreateCustomerDastaRoamingLimitResponse">
+            <summary>
+            Response of CreateCustomerDastaRoamingLimitMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateCustomerDastaRoamingLimit.CreateCustomerDastaRoamingLimitResponse.CustomerDataRoamingLimit">
+            <summary>
+            CustomerDataRoamingLimit that has been created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateCustomerProductAssignment.CreateCustomerProductAssignmentRequest">
+            <summary>
+            Request of CreateCustomerProductAssignmentMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateCustomerProductAssignment.CreateCustomerProductAssignmentRequest.CustomerProductAssignment">
+            <summary>
+            CustomerProductAssignment to be created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateCustomerProductAssignment.CreateCustomerProductAssignmentResponse">
+            <summary>
+            Response of CreateCustomerProductAssignmentMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateCustomerProductAssignment.CreateCustomerProductAssignmentResponse.CustomerProductAssignment">
+            <summary>
+            CustomerProductAssignment that has been created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateHLRRequestErrors.CreateHLRRequestErrorsRequest">
+            <summary>
+            Request for CreateHLRRequestErrorsMS.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateHLRRequestErrors.CreateHLRRequestErrorsRequest.HLRRequestErrorsObj">
+            <summary>
+            HLRRequestErrors
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateHLRRequestErrors.CreateHLRRequestErrorsResponse">
+            <summary>
+            response for CreateHLRRequestErrorsMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateHLRRequestErrors.CreateHLRRequestErrorsResponse.HLRRequestErrorsObj">
+            <summary>
+            return result of CreateHLRRequestErrorsMS as HLRRequestErrors
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateMNPPortabilityCustomerInfo.CreateMNPPortabilityCustomerInfoRequest">
+            <summary>
+            Request for CreateMNPPortabilityCustomerInfo.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateMNPPortabilityCustomerInfo.CreateMNPPortabilityCustomerInfoRequest.MNPPortabilityCustomerInfoObj">
+            <summary>
+            information of portability of customer
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateMNPPortabilityCustomerInfo.CreateMNPPortabilityCustomerInfoResponse">
+            <summary>
+            Response from CreateMNPPortabilityCustomerInfo.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateMNPPortabilityCustomerInfo.CreateMNPPortabilityCustomerInfoResponse.MNPPortabilityCustomerInfoObj">
+            <summary>
+            return result of CreateMNPPortabilityCustomerInfoMS as MNPPortabilityCustomerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateMNPPortabilityMultiPortIn.CreateMNPPortabilityMultiPortInRequest">
+            <summary>
+            Request of CreateMNPPortabilityMultiPortInMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateMNPPortabilityMultiPortIn.CreateMNPPortabilityMultiPortInRequest.multiPortInInfo">
+            <summary>
+            multiPortInInfo - MNPPortabilityMultiPortInInfo entity that send data to insert
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateMNPPortabilityMultiPortIn.CreateMNPPortabilityMultiPortInResponse">
+            <summary>
+            Response of CreateMNPPortabilityMultiPortInMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateMNPPortabilityMultiPortIn.CreateMNPPortabilityMultiPortInResponse.MnpPortabilityMultiPortInInfos">
+            <summary>
+            entity MNPPortabilityMultiPortInInfo for Response
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateMNPPortability.CreateMNPPortabilityRequest">
+            <summary>
+            Request of CreateMNPPortabilityMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateMNPPortability.CreateMNPPortabilityRequest.PortabilityInfo">
+            <summary>
+            MNPPortabilityInfo that send data to be inserted
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateMNPPortability.CreateMNPPortabilityResponse">
+            <summary>
+            Response of CreateMNPPortabilityMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateMNPPortability.CreateMNPPortabilityResponse.MnpPortabilityInfos">
+            <summary>
+            MNPPortabilityInfo entity for Response
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateResourceMBInfoWithInitStatus.CreateResourceMBInfoWithInitStatusRequest">
+            <summary>
+            Request of CreateResourceMBInfoWithInitStatusMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateResourceMBInfoWithInitStatus.CreateResourceMBInfoWithInitStatusRequest.ResourceMbInfo">
+            <summary>
+            ResourceMBInfo to be created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateResourceMBInfoWithInitStatus.CreateResourceMBInfoWithInitStatusResponse">
+            <summary>
+            Response of CreateResourceMBInfoWithInitStatusMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateResourceMBInfoWithInitStatus.CreateResourceMBInfoWithInitStatusResponse.ResourceMbInfo">
+            <summary>
+            Inserted ResourceMBInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateResourceMBInfo.CreateResourceMBInfoRequest">
+            <summary>
+            Request for CreateResourceMBInfo.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateResourceMBInfo.CreateResourceMBInfoRequest.ResourceMBInfoObj">
+            <summary>
+            ResourceMBInfo Definition
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CreateResourceMBInfo.CreateResourceMBInfoResponse">
+            <summary>
+            Response from CreateResourceMBInfo.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CreateResourceMBInfo.CreateResourceMBInfoResponse.ResourceMBInfoObj">
+            <summary>
+            return result of CreateResourceMBInfoMS as ResourceMBInfo 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.DeleteCustomerDataRoamingLimitNotification.DeleteCustomerDataRoamingLimitNotificationRequest">
+            <summary>
+            Request of DeleteCustomerDataRoamingLimitNotificationMS contains CustomerDataRoamingLimitNotification to be deleted
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.DeleteCustomerDataRoamingLimitNotification.DeleteCustomerDataRoamingLimitNotificationRequest.CustomerDataRoamingLimitNotification">
+            <summary>
+            CustomerDataRoamingLimitNotification to be deleted
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.DeleteCustomerDataRoamingLimitNotification.DeleteCustomerDataRoamingLimitNotificationResponse">
+            <summary>
+            Response of DeleteCustomerDataRoamingLimitNotificationMS
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.DeleteCustomerDataRoamingLimit.DeleteCustomerDataRoamingLimitRequest">
+            <summary>
+            Request of DeleteCustomerDataRoamingLimitMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.DeleteCustomerDataRoamingLimit.DeleteCustomerDataRoamingLimitRequest.CustomerDataRoamingLimit">
+            <summary>
+            CustomerDataRoamingLimit to be deleted
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.DeleteCustomerDataRoamingLimit.DeleteCustomerDataRoamingLimitResponse">
+            <summary>
+            Response of DeleteCustomerDataRoamingLimit
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.DeleteResourceMBInfo.DeleteResourceMBInfoRequest">
+            <summary>
+            Request of DeleteResourceMBInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.DeleteResourceMBInfo.DeleteResourceMBInfoRequest.ResourceMbInfo">
+            <summary>
+            ResourceMBInfo to be deleted
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.DeleteResourceMBInfo.DeleteResourceMBInfoRequest.EndDate">
+            <summary>
+            EndDate(DateTime) is optional property when the ResourceMBInfo is deleted
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.DeleteResourceMBInfo.DeleteResourceMBInfoRequest.HasToDeleteFromHLR">
+            <summary>
+            Boolean to decide if the HLR must be called
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.DeleteResourceMBInfo.DeleteResourceMBInfoResponse">
+            <summary>
+            Response of DeleteResourceMBInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.DeleteResourceMBInfo.DeleteResourceMBInfoResponse.ResourceMbInfo">
+            <summary>
+            Deleted ResourceMBInfo 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.DeleteRoamingBlackList.DeleteRoamingBlackListRequest">
+            <summary>
+            Request of DeleteRoamingBlackListMS 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.DeleteRoamingBlackList.DeleteRoamingBlackListRequest.RoamingBlackListInfo">
+            <summary>
+            RoamingBlackListInfo Enumerable to be deleted
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.DeleteRoamingBlackList.DeleteRoamingBlackListResponse">
+            <summary>
+            Response DeleteRoamingBlackListMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.DeleteRoamingBlackList.DeleteRoamingBlackListResponse.RoamingBlackListInfos">
+            <summary>
+            Enumerable from RoamingBlackListInfo entity
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.ExpireCustomerProductAssignment.ExpireCustomerProductAssignmentRequest">
+            <summary>
+            Request for ExpireCustomerProductAssignmentMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.ExpireCustomerProductAssignment.ExpireCustomerProductAssignmentRequest.CustomerProductAssignmentObj">
+            <summary>
+            List of Products Assigned to Customer
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.ExpireCustomerProductAssignment.ExpireCustomerProductAssignmentRequest.EndDate">
+            <summary>
+            Cancelation Date used to compare with the EndTime of the assignments
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.ExpireCustomerProductAssignment.ExpireCustomerProductAssignmentResponse">
+            <summary>
+            Response from ExpireCustomerProductAssignmentMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.ExpireCustomerProductAssignment.ExpireCustomerProductAssignmentResponse.CustomerProductAssignmentObj">
+            <summary>
+            return result of ExpireCustomerProductAssignmentMS as CustomerProductAssignment
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.message.GetCustomerDataRoamingLimitNotificationByCustomerId.GetCustomerDataRoamingLimitNotificationByCustomerIdRequest">
+            <summary>
+            GetCustomerDataRoamingLimitNotificationByCustomerIdRequest  is used in GetCustomerDataRoamingLimitNotificationByCustomerIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.message.GetCustomerDataRoamingLimitNotificationByCustomerId.GetCustomerDataRoamingLimitNotificationByCustomerIdRequest.CustomerId">
+            <summary>
+            CustomerId used to get CustomerDataRoamingLimitNotification
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.message.GetCustomerDataRoamingLimitNotificationByCustomerId.GetCustomerDataRoamingLimitNotificationByCustomerIdResponse">
+            <summary>
+            GetCustomerDataRoamingLimitNotificationByCustomerIdResponse is used in GetCustomerDataRoamingLimitNotificationByCustomerId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.message.GetCustomerDataRoamingLimitNotificationByCustomerId.GetCustomerDataRoamingLimitNotificationByCustomerIdResponse.CustomerDataRoamingLimitNotifications">
+            <summary>
+             Enumarable of CustomerDataRoamingLimitNotification that are obtaned with specific CustomerId
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetCustomerDataRoamingLimitsByCustomerID.GetCustomerDataRoamingLimitsByCustomerIDRequest">
+            <summary>
+            Request of GetCustomerDataRoamingLimitsByCustomerIDMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetCustomerDataRoamingLimitsByCustomerID.GetCustomerDataRoamingLimitsByCustomerIDRequest.CustomerID">
+            <summary>
+            CustomerID of CustomerDataRoamingLimit
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetCustomerDataRoamingLimitsByCustomerID.GetCustomerDataRoamingLimitsByCustomerIDResponse">
+            <summary>
+            Response of GetCustomerDataRoamingLimitsByCustomerIDMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetCustomerDataRoamingLimitsByCustomerID.GetCustomerDataRoamingLimitsByCustomerIDResponse.CustomerDataRoamingLimits">
+            <summary>
+            IEnumerable[CustomerDataRoamingLimit] with requested CustomerID
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentById.GetCustomerProductAssignmentByIdRequest">
+            <summary>
+            GetCustomerProductAssignmentByIdRequest is used in GetCustomerProductAssignmentByIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentById.GetCustomerProductAssignmentByIdRequest.Id">
+            <summary>
+            Id used to get the correct CustomerProductAssignment
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentById.GetCustomerProductAssignmentByIdResponse">
+            <summary>
+            GetCustomerProductAssignmentByIdResponse is used in GetCustomerProductAssignmentByIdMS
+            </summary>
+        </member>
+        <member name="F:com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentById.GetCustomerProductAssignmentByIdResponse.CustomerProductAssignment">
+            <summary>
+            CustomerProductAssignment result
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentsByCustomerIDAndDatePeriod.GetCustomerProductAssignmentsByCustomerIDAndDatePeriodRequest">
+            <summary>
+            Request of GetCustomerProductAssignmentByCustomerIDAndDatePeriodMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentsByCustomerIDAndDatePeriod.GetCustomerProductAssignmentsByCustomerIDAndDatePeriodRequest.CustomerID">
+            <summary>
+            CustomerID of CustomerProductAssignments
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentsByCustomerIDAndDatePeriod.GetCustomerProductAssignmentsByCustomerIDAndDatePeriodRequest.StartDate">
+            <summary>
+            Start date is mandatory
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentsByCustomerIDAndDatePeriod.GetCustomerProductAssignmentsByCustomerIDAndDatePeriodRequest.EndDate">
+            <summary>
+            End date is mandatory
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentsByCustomerIDAndDatePeriod.GetCustomerProductAssignmentsByCustomerIDAndDatePeriodResponse">
+            <summary>
+            Response of GetCustomerProductAssignmentByCustomerIDAndDatePeriodMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentsByCustomerIDAndDatePeriod.GetCustomerProductAssignmentsByCustomerIDAndDatePeriodResponse.CustomerProductAssignments">
+            <summary>
+            returned IEnumerable[CustomerProductAssignment]
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentsByCustomerId.GetCustomerProductAssignmentsByCustomerIdRequest">
+            <summary>
+            GetCustomerProductAssignmentsByCustomerIdRequest is used in GetCustomerProductAssignmentsByCustomerIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentsByCustomerId.GetCustomerProductAssignmentsByCustomerIdRequest.CustomerId">
+            <summary>
+            CustomerId used to get all CustomerProductAssignment
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentsByCustomerId.GetCustomerProductAssignmentsByCustomerIdResponse">
+            <summary>
+            GetCustomerProductAssignmentsByCustomerIdResponse is used in GetCustomerProductAssignmentsByCustomerIdMS
+            </summary>
+        </member>
+        <member name="F:com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentsByCustomerId.GetCustomerProductAssignmentsByCustomerIdResponse.CustomerProductAssignments">
+            <summary>
+            CustomerProductAssignment result
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetLastSubscriptionByMsisdn.GetLastSubscriptionByMsisdnRequest">
+            <summary>
+            Micro service request GetLastSubscriptionByMsisdnRequest, It used in GetLastSubscriptionByMsisdnMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetLastSubscriptionByMsisdn.GetLastSubscriptionByMsisdnRequest.Msisdn">
+            <summary>
+            The Resource of the subscription
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetLastSubscriptionByMsisdn.GetLastSubscriptionByMsisdnRequest.Status">
+            <summary>
+            A list of non valid status
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetLastSubscriptionByMsisdn.GetLastSubscriptionByMsisdnResponse">
+            <summary>
+            Micro service response GetLastSubscriptionByMsisdnResponse, It used in GetLastSubscriptionByMsisdnMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetLastSubscriptionByMsisdn.GetLastSubscriptionByMsisdnResponse.ResourceMBInfo">
+            <summary>
+            The Subscription with the oldest StartDate that match the criteria
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.message.GetMNPNpdbEsvfInfoByMsisdn.GetMNPNpdbEsvfInfoByMsisdnRequest">
+            <summary>
+            GetMNPNpdbEsvfInfoByMsisdnRequest is used in GetMNPNpdbEsvfInfoByMsisdnMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.message.GetMNPNpdbEsvfInfoByMsisdn.GetMNPNpdbEsvfInfoByMsisdnRequest.MSISDN">
+            <summary>
+            MSISDN used to get MNPNpdbEsvfInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.message.GetMNPNpdbEsvfInfoByMsisdn.GetMNPNpdbEsvfInfoByMsisdnResponse">
+            <summary>
+             GetMNPNpdbEsvfInfoByMsisdnResponse is used in  GetMNPNpdbEsvfInfoByMsisdnMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.message.GetMNPNpdbEsvfInfoByMsisdn.GetMNPNpdbEsvfInfoByMsisdnResponse.MNPNpdbEsvfInfo">
+            <summary>
+            Object of MNPNpdbEsvfInfo obtained
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.message.GetMNPOriginalNrnInfoByMsisdn.GetMNPOriginalNrnInfoByMsisdnRequest">
+            <summary>
+            GetMNPOriginalNrnInfoByMsisdnRequest is used in GetMNPOriginalNrnInfoByMsisdnMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.message.GetMNPOriginalNrnInfoByMsisdn.GetMNPOriginalNrnInfoByMsisdnRequest.MSISDN">
+            <summary>
+            MSISDN used to get GetMNPOriginalNrnInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.message.GetMNPOriginalNrnInfoByMsisdn.GetMNPOriginalNrnInfoByMsisdnResponse">
+            <summary>
+             GetMNPOriginalNrnInfoByMsisdnResponse is used in  GetMNPOriginalNrnInfoByMsisdnMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.message.GetMNPOriginalNrnInfoByMsisdn.GetMNPOriginalNrnInfoByMsisdnResponse.MNPOriginalNrnInfo">
+            <summary>
+            Object of MNPPortabilityInfo obtained
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.message.GetMNPPortabilityInfoByPortabilityId.GetMNPPortabilityInfoByPortabilityIdRequest">
+            <summary>
+            GetMNPPortabilityInfoByPortabilityIdRequest is used in GetMNPPortabilityInfoByPortabilityIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.message.GetMNPPortabilityInfoByPortabilityId.GetMNPPortabilityInfoByPortabilityIdRequest.PortabilityId">
+            <summary>
+            PortabilityId use to get MNPPortabilityInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.message.GetMNPPortabilityInfoByPortabilityId.GetMNPPortabilityInfoByPortabilityIdResponse">
+            <summary>
+            GetMNPPortabilityByPortabilityIdResponse is used in GetMNPPortabilityByPortabilityIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.message.GetMNPPortabilityInfoByPortabilityId.GetMNPPortabilityInfoByPortabilityIdResponse.MNPPortabilityInfo">
+            <summary>
+            MNPPortabilityInfo obtained
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.message.GetMNPPortabilityInfosByMsisdn.GetMNPPortabilityInfosByMsisdnRequest">
+            <summary>
+            GetMNPPortabilityInfosByMsisdnRequest is used in GetMNPPortabilityInfosByMsisdnMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.message.GetMNPPortabilityInfosByMsisdn.GetMNPPortabilityInfosByMsisdnRequest.MSISDN">
+            <summary>
+            MSISDN used to get MNPPortabilityInfos
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.message.GetMNPPortabilityInfosByMsisdn.GetMNPPortabilityInfosByMsisdnResponse">
+            <summary>
+             GetMNPPortabilityInfosByMsisdnResponse is used in  GetMNPPortabilityInfosByMsisdnMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.message.GetMNPPortabilityInfosByMsisdn.GetMNPPortabilityInfosByMsisdnResponse.MNPPortabilityInfos">
+            <summary>
+            Enumerable of MNPPortabilityInfo obtained
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CheckProductListDependencyRelationsForCustomer.CheckProductListDependencyRelationsForCustomerRequest">
+            <summary>
+            CheckProductListDependencyRelationsForCustomerRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CheckProductListDependencyRelationsForCustomer.CheckProductListDependencyRelationsForCustomerRequest.ProductsToPurchase">
+            <summary>
+            List of products to purchase
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.CheckProductListDependencyRelationsForCustomer.CheckProductListDependencyRelationsForCustomerRequest.CustomerProducts">
+            <summary>
+            List of customer products
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.CheckProductListDependencyRelationsForCustomer.CheckProductListDependencyRelationsForCustomerResponse">
+            <summary>
+            response from GetProductDependencyRelationsMS, it return List of ProductIncompatible
+            </summary>
+        </member>
+        <member name="F:com.etak.core.GSMSubscription.messages.CheckProductListDependencyRelationsForCustomer.CheckProductListDependencyRelationsForCustomerResponse.IsListCompatibleWithCustomerProducts">
+            <summary>
+            value that inform if the list is compatible with the current customer products
+            </summary>
+        </member>
+        <member name="F:com.etak.core.GSMSubscription.messages.CheckProductListDependencyRelationsForCustomer.CheckProductListDependencyRelationsForCustomerResponse.AreListRequirementsSatisfiedForCustomer">
+            <summary>
+            value that informs if the list has its requirements satisfied with the customer products
+            </summary>
+        </member>
+        <member name="F:com.etak.core.GSMSubscription.messages.CheckProductListDependencyRelationsForCustomer.CheckProductListDependencyRelationsForCustomerResponse.DeprovisionList">
+            <summary>
+            List of deprovision relations containing the products that should be substituted
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetProvisioningTemplateById.GetProvisioningTemplateByIdRequest">
+            <summary>
+            Request of GetProvisioningTemplateById
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetProvisioningTemplateById.GetProvisioningTemplateByIdRequest.ProvisionTemplateId">
+            <summary>
+            information of given provision template id
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetProvisioningTemplateById.GetProvisioningTemplateByIdResponse">
+            <summary>
+            Response of GetProvisioningTemplateById
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetProvisioningTemplateById.GetProvisioningTemplateByIdResponse.CrmDefaultProvision">
+            <summary>
+            Information of provision template base on given Id
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetProvisioningTemplateByProvisionName.GetProvisioningTemplateByProvisionNameRequest">
+            <summary>
+            request of getProvisioningTemplate MS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetProvisioningTemplateByProvisionName.GetProvisioningTemplateByProvisionNameRequest.ProvisionName">
+            <summary>
+            given provisionName to get the provision template
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetProvisioningTemplateByProvisionName.GetProvisioningTemplateByProvisionNameResponse">
+            <summary>
+            response from GetProvisioningTemplate MS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetProvisioningTemplateByProvisionName.GetProvisioningTemplateByProvisionNameResponse.CrmDefaultProvisionInfos">
+            <summary>
+            information of CrmDefaultProvisionInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetResourceMbById.GetResourceMbByIdRequest">
+            <summary>
+            Request of GetResourceMbById
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetResourceMbById.GetResourceMbByIdRequest.ResourceId">
+            <summary>
+            ResourceId
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetResourceMbById.GetResourceMbByIdResponse">
+            <summary>
+            Response of GetResourceMbById
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetResourceMbById.GetResourceMbByIdResponse.ResourceMb">
+            <summary>
+            Subscription obtained with the resourceId
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByCustomerID.GetResourceMBInfosByCustomerIDRequest">
+            <summary>
+            Request of GetResourceMBInfosByCustomerIDMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByCustomerID.GetResourceMBInfosByCustomerIDRequest.CustomerId">
+            <summary>
+            CustomerId(Int32) is optional property when get data
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByCustomerID.GetResourceMBInfosByCustomerIDResponse">
+            <summary>
+            Response of GetResourceMBInfosByCustomerIDMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByCustomerID.GetResourceMBInfosByCustomerIDResponse.ResourceMbInfos">
+            <summary>
+            IEnumerable ResourceMBInfo for response
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByICCID.GetResourceMBInfosByICCIDRequest">
+            <summary>
+            Request of GetResourceMBInfosByICCIDMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByICCID.GetResourceMBInfosByICCIDRequest.ICCID">
+            <summary>
+            property  string ICCID for filtering
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByICCID.GetResourceMBInfosByICCIDRequest.Msisdn">
+            <summary>
+            property  string Msisdn for filtering
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByICCID.GetResourceMBInfosByICCIDResponse">
+            <summary>
+            Response of GetResourceMBInfosByICCIDMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByICCID.GetResourceMBInfosByICCIDResponse.ResourceMbInfos">
+            <summary>
+            IEnumerable[ResourceMBInfo] to response data
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDates.GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDatesRequest">
+            <summary>
+            Request of GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDatesMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDates.GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDatesRequest.Status">
+            <summary>
+            List of status
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDates.GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDatesRequest.Msisdn">
+            <summary>
+            Declare property public string Msisdn
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDates.GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDatesResponse">
+            <summary>
+            Response of GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDatesMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDates.GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDatesResponse.ResourceMbInfos">
+            <summary>
+            data ResourceMBInfo entity response
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByMSISDNAndStatusNotIn.GetResourceMBInfosByMSISDNAndStatusNotInRequest">
+            <summary>
+            Request of GetResourceMBInfosByMSISDNAndStatusNotInMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByMSISDNAndStatusNotIn.GetResourceMBInfosByMSISDNAndStatusNotInRequest.Status">
+            <summary>
+            List of status
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByMSISDNAndStatusNotIn.GetResourceMBInfosByMSISDNAndStatusNotInRequest.Msisdn">
+            <summary>
+            Declare property public string Msisdn
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByMSISDNAndStatusNotIn.GetResourceMBInfosByMSISDNAndStatusNotInResponse">
+            <summary>
+            Response of GetResourceMBInfosByMSISDNAndStatusNotInMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetResourceMBInfosByMSISDNAndStatusNotIn.GetResourceMBInfosByMSISDNAndStatusNotInResponse.ResourceMbInfos">
+            <summary>
+            data ResourceMBInfo entity response
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetRoamingBlackListByCustomerID.GetRoamingBlackListByCustomerIDRequest">
+            <summary>
+            Request of GetRoamingBlackListByCustomerIDMS 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetRoamingBlackListByCustomerID.GetRoamingBlackListByCustomerIDRequest.CustomerId">
+            <summary>
+            Id of Customer
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetRoamingBlackListByCustomerID.GetRoamingBlackListByCustomerIDResponse">
+            <summary>
+            Response GetRoamingBlackListByCustomerIDMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetRoamingBlackListByCustomerID.GetRoamingBlackListByCustomerIDResponse.RoamingBlackListInfos">
+            <summary>
+            Enumerable RoamingBlackListInfos from RoamingBlackListInfo entity
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetUDRecordsByCustomerIDAndBetweenDates.GetUDRecordsByCustomerIDAndBetweenDatesRequest">
+            <summary>
+            Request of GetUDRecordsByCustomerIDAndBetweenDatesMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetUDRecordsByCustomerIDAndBetweenDates.GetUDRecordsByCustomerIDAndBetweenDatesRequest.VmoId">
+            <summary>
+            VMNO DealerId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetUDRecordsByCustomerIDAndBetweenDates.GetUDRecordsByCustomerIDAndBetweenDatesRequest.SubServiceTypeId">
+            <summary>
+            SubServiceTypeID of the record (CDR)
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetUDRecordsByCustomerIDAndBetweenDates.GetUDRecordsByCustomerIDAndBetweenDatesRequest.CustomerId">
+            <summary>
+            CustomerId of the record
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetUDRecordsByCustomerIDAndBetweenDates.GetUDRecordsByCustomerIDAndBetweenDatesRequest.StartDate">
+            <summary>
+            PeriodStartRange of the records (CDR)
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetUDRecordsByCustomerIDAndBetweenDates.GetUDRecordsByCustomerIDAndBetweenDatesRequest.EndDate">
+            <summary>
+            PeriodEndRange of the records (CDR)
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetUDRecordsByCustomerIDAndBetweenDates.GetUDRecordsByCustomerIDAndBetweenDatesRequest.dateToFilter">
+            <summary>
+            FilterCdrDates is DateToFilter
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetUDRecordsByCustomerIDAndBetweenDates.GetUDRecordsByCustomerIDAndBetweenDatesResponse">
+            <summary>
+            Response of GetUDRecordsByCustomerIDAndBetweenDatesMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetUDRecordsByCustomerIDAndBetweenDates.GetUDRecordsByCustomerIDAndBetweenDatesResponse.UsageDetailRecords">
+            <summary>
+            IEnumerable[UsageDetailRecord] of the CustomerID between dates
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetUDRecordsByMSISDNAndBetweenDates.GetUDRecordsByMSISDNAndBetweenDatesRequest">
+            <summary>
+            Request of GetUDRecordsByMSISDNAndBetweenDatesMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetUDRecordsByMSISDNAndBetweenDates.GetUDRecordsByMSISDNAndBetweenDatesRequest.VmoId">
+            <summary>
+            VMNO DealerId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetUDRecordsByMSISDNAndBetweenDates.GetUDRecordsByMSISDNAndBetweenDatesRequest.SubServiceTypeId">
+            <summary>
+            SubServiceTypeID of the record (CDR)
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetUDRecordsByMSISDNAndBetweenDates.GetUDRecordsByMSISDNAndBetweenDatesRequest.MSISDN">
+            <summary>
+            MSISDN of the record
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetUDRecordsByMSISDNAndBetweenDates.GetUDRecordsByMSISDNAndBetweenDatesRequest.StartDate">
+            <summary>
+            PeriodStartRange of the records (CDR)
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetUDRecordsByMSISDNAndBetweenDates.GetUDRecordsByMSISDNAndBetweenDatesRequest.EndDate">
+            <summary>
+            PeriodEndRange of the records (CDR)
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetUDRecordsByMSISDNAndBetweenDates.GetUDRecordsByMSISDNAndBetweenDatesRequest.dateToFilter">
+            <summary>
+            FilterCdrDates is DateToFilter
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.GetUDRecordsByMSISDNAndBetweenDates.GetUDRecordsByMSISDNAndBetweenDatesResponse">
+            <summary>
+            Response of GetUDRecordsByMSISDNAndBetweenDatesMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.GetUDRecordsByMSISDNAndBetweenDates.GetUDRecordsByMSISDNAndBetweenDatesResponse.UsageDetailRecords">
+            <summary>
+            Returned IEnumerable[UsageDetailRecord] with certain request.MSISDN between dates
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.UpdateSubscription.UpdateSubscriptionRequest">
+            <summary>
+            Request for UpdateSubscriptionMS.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.UpdateSubscription.UpdateSubscriptionRequest.SubcriberInfo">
+            <summary>
+            Value of MSISDN of subscriber
+            </summary>
+            
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.UpdateSubscription.UpdateSubscriptionRequest.SIMCardSubcriber">
+            <summary>
+            Information of Customer SIM Card
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.messages.UpdateSubscription.UpdateSubscriptionResponse">
+            <summary>
+            Response from UpdateSubscriptionMS.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.GSMSubscription.messages.UpdateSubscription.UpdateSubscriptionResponse.SubscriberResourceMB">
+            <summary>
+            resource of subscriber
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.CancelCustomerProductAssignmentMS">
+            <summary>
+            Microservice : Cancel CustomerProductAssignment by set the EndDate to DateTime.Now or CancelCustomerProductAssignmentRequest.EndDate
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.CancelCustomerProductAssignmentMS.Process(com.etak.core.GSMSubscription.messages.CancelCustomerProductAssignment.CancelCustomerProductAssignmentRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process : Update EndDate with request.EndDate ?? DateTime.Now;
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CancelCustomerProductAssignmentResponse(CustomerProductAssignment)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.CancelResourceMBInfoMS">
+            <summary>
+            Microservice : Cancel customer ResourceMB that change StatusId, EndDate and ChangeStatusDate
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.CancelResourceMBInfoMS.Process(com.etak.core.GSMSubscription.messages.CancelResourceMBInfo.CancelResourceMBInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Microservice : Cancel customer ResourceMB with value
+            (int)ResourceStatus.Expired;
+            request.EndDate;
+            DateTime.Now;
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CancelResourceMBInfoResponse(ResourceMBInfo)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.CreateCrmMobileMultipleImsiInfoMS">
+            <summary>
+            Add entry to table CRM_MOBILE_MULTIPLEIMSI
+            </summary>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.CreateCrmMobileNetworkInfoMS">
+            <summary>
+            Add entry to CRM_MOBILE_NETWORK by ResourceId
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.CreateCrmMobileNetworkInfoMS.Process(com.etak.core.GSMSubscription.messages.CreateCrmMobileNetworkInfo.CreateCrmMobileNetworkInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Save CrmMobileNetWorkInfo entity
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.CreateCustomerDastaRoamingLimitMS">
+            <summary>
+            Microservice : Create a new CreateCustomerDastaRoamingLimitMS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.CreateCustomerDastaRoamingLimitMS.Process(com.etak.core.GSMSubscription.messages.CreateCustomerDastaRoamingLimit.CreateCustomerDastaRoamingLimitRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Create a new CreateCustomerDastaRoamingLimit based on the request.CreateCustomerDastaRoamingLimit
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.CreateCustomerDastaRoamingLimitNotificationMS">
+            <summary>
+            Microservice : Create a new CreateCustomerDastaRoamingLimitNotificationMS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.CreateCustomerDastaRoamingLimitNotificationMS.Process(com.etak.core.GSMSubscription.messages.CreateCustomerDastaRoamingLimitNotification.CreateCustomerDastaRoamingLimitNotificationRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Create a new CreateCustomerDastaRoamingLimitNotification based on the request.CreateCustomerDastaRoamingLimitNotification
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.CreateCustomerProductAssignmentMS">
+            <summary>
+            Microservice : Create a new CustomerProductAssignment
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.CreateCustomerProductAssignmentMS.Process(com.etak.core.GSMSubscription.messages.CreateCustomerProductAssignment.CreateCustomerProductAssignmentRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Create a new CustomerProductAssignment based on the request.CustomerProductAssignment
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.CreateHLRRequestErrorsMS">
+            <summary>
+            Microservice to CreateHLRRequestErrors
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.CreateHLRRequestErrorsMS.Process(com.etak.core.GSMSubscription.messages.CreateHLRRequestErrors.CreateHLRRequestErrorsRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process of CreateHLRRequestErrorsMS
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>return HLRRequestErrors within CreateHLRRequestErrorsResponse </returns>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.CreateHLRRequestErrorsMS.ArrayToString``1(``0[])">
+            <summary>
+            convert from array to string
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="array"></param>
+            <returns>string</returns>
+            in the future this should be move to common module 
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.CreateMNPPortabilityCustomerInfoMS">
+            <summary>
+            Microservice to CreateMNPPortabilityCustomerInfo
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.CreateMNPPortabilityCustomerInfoMS.Process(com.etak.core.GSMSubscription.messages.CreateMNPPortabilityCustomerInfo.CreateMNPPortabilityCustomerInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process of CreateMNPPortabilityCustomerInfoMS
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>return MNPPortabilityCustomerInfo entity within CreateMNPPortabilityCustomerInfoResponse</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.CreateMNPPortabilityMS">
+            <summary>
+            Microservice : Create new MNP Portability
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.CreateMNPPortabilityMS.Process(com.etak.core.GSMSubscription.messages.CreateMNPPortability.CreateMNPPortabilityRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process : Create new MNP Portability with request.PortabilityInfo data
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CreateMNPPortabilityResponse(MnpPortabilityInfos)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.CreateMNPPortabilityMultiPortInMS">
+            <summary>
+            Microservice : Create new MNP Portability Multi PortIn
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.CreateMNPPortabilityMultiPortInMS.Process(com.etak.core.GSMSubscription.messages.CreateMNPPortabilityMultiPortIn.CreateMNPPortabilityMultiPortInRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process : Create new MNP Portability Multi PortIn with request.multiPortInInfo data
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CreateMNPPortabilityMultiPortInResponse(MnpPortabilityMultiPortInInfos)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.CreateResourceMBInfoMS">
+            <summary>
+            Microservice to create ResourceMBInfo
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.CreateResourceMBInfoMS.Process(com.etak.core.GSMSubscription.messages.CreateResourceMBInfo.CreateResourceMBInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process of ResourceMBInfoMS
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>return ResourceMBInfo entity within CreateResourceMBInfoResponse</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.CreateResourceMBInfoWithInitStatusMS">
+            <summary>
+            Microservice : Create ResourceMBInfo with Init Status
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.CreateResourceMBInfoWithInitStatusMS.Process(com.etak.core.GSMSubscription.messages.CreateResourceMBInfoWithInitStatus.CreateResourceMBInfoWithInitStatusRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process : Create ResourceMBInfo with Init Status
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CreateResourceMBInfoWithInitStatusResponse(ResourceMBInfo)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.DeleteCustomerDataRoamingLimitMS">
+            <summary>
+            Microservice : Delete CustomerDataRoamingLimitNotification phisically in request.CustomerDataRoamingLimitNotification
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.DeleteCustomerDataRoamingLimitMS.Process(com.etak.core.GSMSubscription.messages.DeleteCustomerDataRoamingLimit.DeleteCustomerDataRoamingLimitRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Delete CustomerDataRoamingLimit record
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.DeleteCustomerDataRoamingLimitNotificationMS">
+            <summary>
+            Microservice : Delete CustomerDataRoamingLimitNotification phisically in request.CustomerDataRoamingLimitNotification
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.DeleteCustomerDataRoamingLimitNotificationMS.Process(com.etak.core.GSMSubscription.messages.DeleteCustomerDataRoamingLimitNotification.DeleteCustomerDataRoamingLimitNotificationRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Delete CustomerDataRoamingLimitNotification record
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.DeleteResourceMBInfoMS">
+            <summary>
+            Microservice : Delete ResourceMBInfo logically by changing the EndDate and StatusID to Deleted
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.DeleteResourceMBInfoMS.Process(com.etak.core.GSMSubscription.messages.DeleteResourceMBInfo.DeleteResourceMBInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Change the EndDate to request.EndDate or DateTime.Now and StatusID to ResourceStatus.Deleted and update to repository
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>DeleteResourceMBInfoResponse.ResourceMbInfo deleted</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.DeleteRoamingBlackListMS">
+            <summary>
+            Microservice : Delete Roaming Black List
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.DeleteRoamingBlackListMS.Process(com.etak.core.GSMSubscription.messages.DeleteRoamingBlackList.DeleteRoamingBlackListRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process : to delete roaming black list with IEnumerable[RoamingBlackListInfo]
+            and foreach to delete each information 
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>DeleteRoamingBlackListResponse(ResultType)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.ExpireCustomerProductAssignmentMS">
+            <summary>
+             Microservice to ExpireCustomerProductAssignment
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.ExpireCustomerProductAssignmentMS.Process(com.etak.core.GSMSubscription.messages.ExpireCustomerProductAssignment.ExpireCustomerProductAssignmentRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process of ExpireCustomerProductAssignmentMS
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>return CustomerProductAssignment entity within ExpireCustomerProductAssignmentResponse</returns>
+            
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetCustomerDataRoamingLimitNotificationByCustomerIdMS">
+            <summary>
+            Microservice : Get CustomerDataRoamingLimitNotification by CustomerID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetCustomerDataRoamingLimitNotificationByCustomerIdMS.Process(com.etak.core.GSMSubscription.message.GetCustomerDataRoamingLimitNotificationByCustomerId.GetCustomerDataRoamingLimitNotificationByCustomerIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get CustomerDataRoamingLimitNotification by request.CustomerID
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetCustomerDataRoamingLimitNotificationByCustomerIdResponse with enumerable of CustomerDataRoamingLimitNotification (response.CustomerDataRoamingLimitNotifications)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetCustomerDataRoamingLimitsByCustomerIDMS">
+            <summary>
+            Microservice : Get CustomerDataRoamingLimits by CustomerID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetCustomerDataRoamingLimitsByCustomerIDMS.Process(com.etak.core.GSMSubscription.messages.GetCustomerDataRoamingLimitsByCustomerID.GetCustomerDataRoamingLimitsByCustomerIDRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get IEnumerable of CustomerDataRoamingLimit By CustomerID
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetCustomerDataRoamingLimitsByCustomerIDResponse.CustomerDataRoamingLimits with type IEnumerable CustomerDataRoamingLimit</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetCustomerProductAssignmentByIdMS">
+            <summary>
+            Microservice : Get Customer Product Assignment By Id
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetCustomerProductAssignmentByIdMS.Process(com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentById.GetCustomerProductAssignmentByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get Customer Product Assignment By request.Id
+            </summary>
+            <param name="request">GetCustomerProductAssignmentByIdRequest</param>
+            <param name="invoker">operation.RequestInvokationEnvironment</param>
+            <returns>GetCustomerProductAssignmentByIdResponse</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetCustomerProductAssignmentsByCustomerIDAndDatePeriodMS">
+            <summary>
+            Microservice : Get CustomerProductAssignment(s) By CustomerID and date period
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetCustomerProductAssignmentsByCustomerIDAndDatePeriodMS.Process(com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentsByCustomerIDAndDatePeriod.GetCustomerProductAssignmentsByCustomerIDAndDatePeriodRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get IEnumerable(CustomerProductAssignment) by CustomerId and date period by using method ICustomerProductAssignmentRepository.GetByCustomerIdWithRange
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetCustomerProductAssignmentsByCustomerIDAndDatePeriodResponse.CustomerProductAssignments with request.CustomerID and certain date period</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetCustomerProductsAssignmentsByCustomerIdMS">
+            <summary>
+            Microservice : Get Customer Product Assignments By CustomerID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetCustomerProductsAssignmentsByCustomerIdMS.Process(com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentsByCustomerId.GetCustomerProductAssignmentsByCustomerIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get Customer Product Assignments By request.CustomerId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetCustomerProductAssignmentsByCustomerIdResponse with a enumerable of CustomerProductAssignment (response.CustomerProductAssignments)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetLastSubscriptionByMsisdnMS">
+            <summary>
+            Gets the last customer's Subscription associated to the specific msisdn.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetLastSubscriptionByMsisdnMS.Process(com.etak.core.GSMSubscription.messages.GetLastSubscriptionByMsisdn.GetLastSubscriptionByMsisdnRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process for the microservice
+            </summary>
+            <param name="request">Request with an the input parameters</param>
+            <param name="invoker">The request invokation environment</param>
+            <returns>The last ResourceMBInfo matching specific msisdn</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetMNPNpdbEsvfInfoByMsisdnMS">
+            <summary>
+            Microservice : get object of  MNPNpdbEsvfInfo by MSISDN
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetMNPNpdbEsvfInfoByMsisdnMS.Process(com.etak.core.GSMSubscription.message.GetMNPNpdbEsvfInfoByMsisdn.GetMNPNpdbEsvfInfoByMsisdnRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            get MNPNpdbEsvfInfoByMsisdn by request.MSISDN
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetMNPNpdbEsvfInfoByMsisdnResponse with an object of MNPNpdbEsvfInfo (response.MNPNpdbEsvfInfo)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetMNPOriginalNrnInfoByMsisdnMS">
+            <summary>
+            Microservice : get object of  MNPOriginalNrnInfo by MSISDN
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetMNPOriginalNrnInfoByMsisdnMS.Process(com.etak.core.GSMSubscription.message.GetMNPOriginalNrnInfoByMsisdn.GetMNPOriginalNrnInfoByMsisdnRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            get MNPOriginalNrnInfo by request.MSISDN
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetMNPOriginalNrnInfoByMsisdnResponse with an object of MNPOriginalNrnInfo (response.MNPOriginalNrnInfo)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetMNPPortabilityInfoByPortabilityIdMS">
+            <summary>
+            Microservice : Get MNPPortabilityInfo by Portability ID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetMNPPortabilityInfoByPortabilityIdMS.Process(com.etak.core.GSMSubscription.message.GetMNPPortabilityInfoByPortabilityId.GetMNPPortabilityInfoByPortabilityIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get MNPPortabilityInfo by request.PortabilityId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetMNPPortabilityInfoByPortabilityIdResponse with a MNPPortabilityInfo (response.MNPPortabilityInfo)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetMNPPortabilityInfosByMsisdnMS">
+            <summary>
+            Microservice : get enumerable of  MNPPortabilityInfo by MSISDN
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetMNPPortabilityInfosByMsisdnMS.Process(com.etak.core.GSMSubscription.message.GetMNPPortabilityInfosByMsisdn.GetMNPPortabilityInfosByMsisdnRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            get enumerable of  MNPPortabilityInfo by request.MSISDN
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetMNPPortabilityInfoByMsisdnResponse witha enumerable of MNPPortabilityInfo (response.MNPPortabilityInfos)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.CheckProductListDependencyRelationsForCustomerMS">
+            <summary>
+            CheckProductListDependencyRelationsForCustomerMS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.CheckProductListDependencyRelationsForCustomerMS.Process(com.etak.core.GSMSubscription.messages.CheckProductListDependencyRelationsForCustomer.CheckProductListDependencyRelationsForCustomerRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main Process of CheckProductListDependencyRelationsForCustomerMS
+            </summary>
+            <param name="request">CheckProductListDependencyRelationsForCustomerRequest</param>
+            <param name="invoker"></param>
+            <returns>it return CheckProductListDependencyRelationsForCustomerResponse</returns>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.CheckProductListDependencyRelationsForCustomerMS.validationOfRequestParameters(com.etak.core.GSMSubscription.messages.CheckProductListDependencyRelationsForCustomer.CheckProductListDependencyRelationsForCustomerRequest)">
+            <summary>
+            ValidationRequest
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.CheckProductListDependencyRelationsForCustomerMS.getAllProductsToCompareList(com.etak.core.model.revenueManagement.Product,System.Collections.Generic.List{com.etak.core.model.revenueManagement.Product},System.Collections.Generic.List{com.etak.core.model.revenueManagement.Product})">
+            <summary>
+            Method that joins the lists and removes the product specified, to compare a product with all the others in the future.
+            </summary>
+            <param name="product"></param>
+            <param name="purchaseList"></param>
+            <param name="customerlist"></param>
+            <returns>List of integers with the products id</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetProvisioningTemplateByIdMS">
+            <summary>
+            Microservice : GetProvisoningTemplate based on given Id
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetProvisioningTemplateByIdMS.Process(com.etak.core.GSMSubscription.messages.GetProvisioningTemplateById.GetProvisioningTemplateByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            get provisoning template (CrmDefaultProvisionInfo) base on request.provisonId 
+            </summary>
+            <param name="request">GetProvisioningTemplateByIdRequest</param>
+            <param name="invoker"></param>
+            <returns>CrmDefaultProvisionInfo within GetProvisioningTemplateByIdResponse</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetProvisioningTemplateByProvisionNameMS">
+            <summary>
+            Microservice to get provisoning template base on given provision name
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetProvisioningTemplateByProvisionNameMS.Process(com.etak.core.GSMSubscription.messages.GetProvisioningTemplateByProvisionName.GetProvisioningTemplateByProvisionNameRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            main process of GetProvisioningTemplate microservice 
+            </summary>
+            <param name="byProvisionNameRequest">GetProvisioningTemplateRequest</param>
+            <param name="invoker"></param>
+            <returns>CrmDefaultProvisionInfo within GetProvisioningTemplateResponse</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetResourceMbByIdMS">
+            <summary>
+            Microservice : get resourceMBInfo with resourceId
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetResourceMbByIdMS.Process(com.etak.core.GSMSubscription.messages.GetResourceMbById.GetResourceMbByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process : get data resourceMB with request.resourceId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetResourceMbByIdResponse(ResourceMBInfo)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetResourceMBInfosByCustomerIDMS">
+            <summary>
+            Microservice : get resourceMBInfo with CustomerId
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetResourceMBInfosByCustomerIDMS.Process(com.etak.core.GSMSubscription.messages.GetResourceMBInfosByCustomerID.GetResourceMBInfosByCustomerIDRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process : get data resourceMB with request.CustomerId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetResourceMBInfosByCustomerIDResponse(ResourceMBInfo)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetResourceMBInfosByICCIDMS">
+            <summary>
+            Microservice : Get Customer ResourceMB by ICCID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetResourceMBInfosByICCIDMS.Process(com.etak.core.GSMSubscription.messages.GetResourceMBInfosByICCID.GetResourceMBInfosByICCIDRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process : get data filtering where StatusId equal
+            ResourceStatus.Expired, ResourceStatus.Frozen, ResourceStatus.Init, ResourceStatus.Converted, ResourceStatus.Locked or ResourceStatus.Deleted
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetResourceMBInfosByICCIDResponse(ResourceMbInfos)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDatesMS">
+            <summary>
+            Microservice : get Customer ResourceMB By MSISDN And Status
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDatesMS.Process(com.etak.core.GSMSubscription.messages.GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDates.GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDatesRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process : Get Customer ResourceMB with request.Msisdn and new List[int] {20}
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDatesResponse(GetResourceMBInfosByMSISDNAndStatusNotInAndActiveDatesRequest)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetResourceMBInfosByMSISDNAndStatusNotInMS">
+            <summary>
+            Microservice : get Customer ResourceMB By MSISDN And Status
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetResourceMBInfosByMSISDNAndStatusNotInMS.Process(com.etak.core.GSMSubscription.messages.GetResourceMBInfosByMSISDNAndStatusNotIn.GetResourceMBInfosByMSISDNAndStatusNotInRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process : Get Customer ResourceMB with request.Msisdn and new List[int] {20}
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetResourceMBInfosByMSISDNAndStatusNotInResponse(GetResourceMBInfosByMSISDNAndStatusNotInRequest)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetRoamingBlackListByCustomerIDMS">
+            <summary>
+            Microservice : get roaming black list information
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetRoamingBlackListByCustomerIDMS.Process(com.etak.core.GSMSubscription.messages.GetRoamingBlackListByCustomerID.GetRoamingBlackListByCustomerIDRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process : get roaming black list information with request.CustomerInfos.CustomerID.Value
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetRoamingBlackListByCustomerIDResponse(RoamingBlackListInfos)</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetUDRecordsByCustomerIDAndBetweenDatesMS">
+            <summary>
+            Microservice : Get UsageDetailRecord(s) in period between request.PeriodStartRange(DateTime) and request.PeriodEndRange(DateTime) By CustomerID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetUDRecordsByCustomerIDAndBetweenDatesMS.Process(com.etak.core.GSMSubscription.messages.GetUDRecordsByCustomerIDAndBetweenDates.GetUDRecordsByCustomerIDAndBetweenDatesRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get UsageDetailRecord(s) By calling method GetRecordsByCustomerIdBetweenDates in IUsageDetailRecordRepository
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetUDRecordsByCustomerIDAndBetweenDatesResponse.UsageDetailRecords with request.CustomerID and between request period dates</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.GetUDRecordsByMSISDNAndBetweenDatesMS">
+            <summary>
+            Microservice : Get UsageDetailRecord(s) in period between request.PeriodStartRange(DateTime) and request.PeriodEndRange(DateTime) By MSISDN
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.GetUDRecordsByMSISDNAndBetweenDatesMS.Process(com.etak.core.GSMSubscription.messages.GetUDRecordsByMSISDNAndBetweenDates.GetUDRecordsByMSISDNAndBetweenDatesRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get UsageDetailRecord(s) By calling method GetRecordsByMsisdnBetweenDates in IUsageDetailRecordRepository
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetUDRecordsByCustomerIDAndBetweenDatesResponse.UsageDetailRecords with request.MSISDN and between request period dates</returns>
+        </member>
+        <member name="T:com.etak.core.GSMSubscription.microservices.UpdateSubscriptionMS">
+            <summary>
+            Microservice to UpdateSubscription
+            </summary>
+        </member>
+        <member name="M:com.etak.core.GSMSubscription.microservices.UpdateSubscriptionMS.Process(com.etak.core.GSMSubscription.messages.UpdateSubscription.UpdateSubscriptionRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process of UpdateSubscriptionMS it use UpdateSubscriptionRequest as input
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>return ResourceMBInfo entity within UpdateSubscriptionResponse</returns>
+            
+        </member>
+    </members>
+</doc>

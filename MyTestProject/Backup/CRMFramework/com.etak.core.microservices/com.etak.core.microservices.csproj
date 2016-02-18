@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98A9D6F7-C565-4E3C-BF21-B126788801F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.etak.core.microservices</RootNamespace>
+    <AssemblyName>com.etak.core.microservices</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\com.etak.core.microservices.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Nuget\com.etak.core.microservices.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FrontEndServiceContract">
+      <HintPath>..\packages\HPS.WCFConnector.1.2.1.5\lib\net40\FrontEndServiceContract.dll</HintPath>
+    </Reference>
+    <Reference Include="HPS.WCFConnector">
+      <HintPath>..\packages\HPS.WCFConnector.1.2.1.5\lib\net40\HPS.WCFConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="Network3GPPModel">
+      <HintPath>..\packages\HPS.WCFConnector.1.2.1.5\lib\net40\Network3GPPModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\revisionsync\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="CoreMicroServicesErrorCodes.cs" />
+    <Compile Include="helper\FrameworkMicroServicesBindHelper.cs" />
+    <Compile Include="helper\HPSConnector.cs" />
+    <Compile Include="messages\CalculateNextPeriod\CalculateNextPeriodRequest.cs" />
+    <Compile Include="messages\CalculateNextPeriod\CalculateNextPeriodResponse.cs" />
+    <Compile Include="messages\CreateHLRRequestErrors\CreateHLRRequestErrorsRequest.cs" />
+    <Compile Include="messages\CreateHLRRequestErrors\CreateHLRRequestErrorsResponse.cs" />
+    <Compile Include="messages\CreateSessionInfo\CreateSessionInfoRequest.cs" />
+    <Compile Include="messages\CreateSessionInfo\CreateSessionInfoResponse.cs" />
+    <Compile Include="messages\CreateSmsLogInfo\CreateSmsLogInfoRequest.cs" />
+    <Compile Include="messages\CreateSmsLogInfo\CreateSmsLogInfoResponse.cs" />
+    <Compile Include="messages\GetHolidayInfoByDate\GetHolidayInfoByDateRequest.cs" />
+    <Compile Include="messages\GetHolidayInfoByDate\GetHolidayInfoByDateResponse.cs" />
+    <Compile Include="messages\GetHolidayInfoById\GetHolidayInfoByIdRequest.cs" />
+    <Compile Include="messages\GetHolidayInfoById\GetHolidayInfoByIdResponse.cs" />
+    <Compile Include="messages\GetLanguageTypeByCode\GetLanguageTypeInfoByCodeRequest.cs" />
+    <Compile Include="messages\GetLanguageTypeByCode\GetLanguageTypeInfoByCodeResponse.cs" />
+    <Compile Include="messages\GetMultiLingualDescriptionById\GetMultiLingualDescriptionByIdRequest.cs" />
+    <Compile Include="messages\GetMultiLingualDescriptionById\GetMultiLingualDescriptionByIdResponse.cs" />
+    <Compile Include="messages\GetOperationLogsByOrderCodeAndDealerId\GetOperationLogsByOrderCodeAndDealerIdRequest.cs" />
+    <Compile Include="messages\GetOperationLogsByOrderCodeAndDealerId\GetOperationLogsByOrderCodeAndDealerIdResponse.cs" />
+    <Compile Include="messages\GetOperationLogsByReferenceCodeAndDealerId\GetOperationLogsByReferenceCodeAndDealerIdRequest.cs" />
+    <Compile Include="messages\GetOperationLogsByReferenceCodeAndDealerId\GetOperationLogsByReferenceCodeAndDealerIdResponse.cs" />
+    <Compile Include="messages\GetOrderById\GetOrderByIdRequest.cs" />
+    <Compile Include="messages\GetOrderById\GetOrderByIdResponse.cs" />
+    <Compile Include="messages\GetSettingInfosByDealerId\GetSettingInfosByDealerIdRequest.cs" />
+    <Compile Include="messages\GetSettingInfosByDealerId\GetSettingInfosByDealerIdResponse.cs" />
+    <Compile Include="messages\GetSucessfulOperationExecutionForCustomer\GetSucessfulOperationExecutionForCustomerRequest.cs" />
+    <Compile Include="messages\GetSucessfulOperationExecutionForCustomer\GetSucessfulOperationExecutionForCustomerResponse.cs" />
+    <Compile Include="messages\GetSystemConfigDataInfoById\GetSystemConfigDataInfoByIdRequest.cs" />
+    <Compile Include="messages\GetSystemConfigDataInfoById\GetSystemConfigDataInfoByIdResponse.cs" />
+    <Compile Include="messages\GetSystemConfigDataInfosByItem\GetSystemConfigDataInfosByItemRequest.cs" />
+    <Compile Include="messages\GetSystemConfigDataInfosByItem\GetSystemConfigDataInfosByItemResponse.cs" />
+    <Compile Include="messages\GetTaxAuthority\GetTaxAuthorityRequest.cs" />
+    <Compile Include="messages\GetTaxAuthority\GetTaxAuthorityResponse.cs" />
+    <Compile Include="messages\GetTaxDefinitionById\GetTaxDefinitionByIdRequest.cs" />
+    <Compile Include="messages\GetTaxDefinitionById\GetTaxDefinitionByIdResponse.cs" />
+    <Compile Include="messages\GetTaxDefinitionsByZipCodeLike\GetTaxDefinitionsByZipCodeLikeRequest.cs" />
+    <Compile Include="messages\GetTaxDefinitionsByZipCodeLike\GetTaxDefinitionsByZipCodeLikeResponse.cs" />
+    <Compile Include="messages\GetTaxDefinitonsByCategory\GetTaxDefinitonsByCategoryRequest.cs" />
+    <Compile Include="messages\GetTaxDefinitonsByCategory\GetTaxDefinitonsByCategoryResponse.cs" />
+    <Compile Include="messages\PersistOperationConfiguration\PersistOperationConfigurationRequest.cs" />
+    <Compile Include="messages\PersistOperationConfiguration\PersistOperationConfigurationResponse.cs" />
+    <Compile Include="microservices\CalculateNextPeriodMS.cs" />
+    <Compile Include="microservices\CreateHLRRequestErrorsMS.cs" />
+    <Compile Include="microservices\CreateSessionInfoMS.cs" />
+    <Compile Include="microservices\GetHolidayInfoByDateMS.cs" />
+    <Compile Include="microservices\GetHolidayInfoByIdMS.cs" />
+    <Compile Include="microservices\GetLanguageTypeInfoByCodeMS.cs" />
+    <Compile Include="microservices\GetMultiLingualDescriptionByIdMS.cs" />
+    <Compile Include="microservices\GetOperationLogsByReferenceCodeAndDealerIdMS.cs" />
+    <Compile Include="microservices\GetOperationLogsByOrderCodeAndDealerIdMS.cs" />
+    <Compile Include="microservices\GetOrderById.cs" />
+    <Compile Include="microservices\GetSettingInfosByDealerIdMS.cs" />
+    <Compile Include="microservices\GetSucessfulOperationExecutionForCustomerMS.cs" />
+    <Compile Include="microservices\CreateSmsLogInfoMS.cs" />
+    <Compile Include="microservices\GetSystemConfigDataInfoByIdMS.cs" />
+    <Compile Include="microservices\GetSystemConfigDataInfosByItemMS.cs" />
+    <Compile Include="microservices\GetTaxAuthorityMS.cs" />
+    <Compile Include="microservices\GetTaxDefinitionByIdMS.cs" />
+    <Compile Include="microservices\GetTaxDefinitionsByZipCodeLikeMS.cs" />
+    <Compile Include="microservices\GetTaxDefinitonsByCategoryMS.cs" />
+    <Compile Include="microservices\PersistOperationConfigurationMS.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\com.etak.core.model\com.etak.core.model.csproj">
+      <Project>{5c9b8900-251a-4566-a727-7576dbe53a3c}</Project>
+      <Name>com.etak.core.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.operation\com.etak.core.operation.csproj">
+      <Project>{a8fd3f0f-82f8-41d4-8da2-fa44bad61d9c}</Project>
+      <Name>com.etak.core.operation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository.crm\com.etak.core.repository.crm.csproj">
+      <Project>{5279c8d2-7523-4a27-aa03-8a9736de7e45}</Project>
+      <Name>com.etak.core.repository.crm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository\com.etak.core.repository.csproj">
+      <Project>{b3b4cfa1-4488-4e8c-aa22-b9f6206be866}</Project>
+      <Name>com.etak.core.repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <!--<UsingTask AssemblyFile="$(SolutionDir)NugetPackages\GetAssemblyFileVersions.dll" TaskName="GetAssemblyFileVersions.GetAssemblyFileVersion" />-->
+  <Target Name="AfterBuild" Condition="$(Configuration)==Nuget">
+    <!--<GetAssemblyFileVersion FilePathAssemblyInfo="$(ProjectDir)$(OutputPath)$(TargetName).dll">
+      <Output TaskParameter="AssemblyFileVersion" PropertyName="AssemblyFileVersion" />
+    </GetAssemblyFileVersion>
+    <Message Text="AssemblyFileVersion = $(AssemblyFileVersion)" />-->
+    <Message Text="&quot;$(SolutionDir)nugetpackages\nuget.exe&quot; pack &quot;$(ProjectPath)&quot; -IncludeReferencedProjects -Properties Configuration=Nuget;Platform=$(Platform) -OutputDirectory &quot;$(SolutionDir)nugetpackages&quot;" />
+    <Exec Command="&quot;$(SolutionDir)nugetpackages\nuget.exe&quot; pack &quot;$(ProjectPath)&quot; -IncludeReferencedProjects -Properties Configuration=Nuget;Platform=$(Platform) -OutputDirectory &quot;$(SolutionDir)nugetpackages&quot;" IgnoreExitCode="false" />
+  </Target>
+</Project>

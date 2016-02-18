@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="com.etak.core.model.CustomerAddress">
+    <Position X="15.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAIAAAAAA=</HashCode>
+      <FileName>CustomerAddress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.BankInfo">
+    <Position X="18.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAACEiAABgAAgAIDAAAgApgFAJQAACIIjYBKEAQARI=</HashCode>
+      <FileName>BankInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CustomerCreditCard">
+    <Position X="16.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MEAACQAAQAAAAAAAgAAAAAIAgAAAEMAAAAAAEAAAEQA=</HashCode>
+      <FileName>CustomerCreditCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MappingInfo">
+    <Position X="6.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAwmAAIICAAQCIwCAAEABAAEACAAAEgARA=</HashCode>
+      <FileName>MappingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MVNOCustomerPropertyInfo">
+    <Position X="19.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBAoIBkiAKCDqggBASAAAIIbSQBAgISQVggxCBGIWVQ=</HashCode>
+      <FileName>MVNOCustomerPropertyInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ProductInfo">
+    <Position X="21.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAIAAgABgAAgEAAAAggAAAAQIAAAAABAEAAARA=</HashCode>
+      <FileName>ProductInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersPromotionGroup">
+    <Position X="15.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAgAAAAAAAAAAAEAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>CrmCustomersPromotionGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersPromotionInfo">
+    <Position X="7.25" Y="7" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>ABEAAAwCAAAQAAAGkAAAAIIgEIAAAJEgAAgACEYA2AA=</HashCode>
+      <FileName>CrmCustomersPromotionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PropertyInfo">
+    <Position X="3.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IuAE5CAG5nwA8dJggBYm5G46kDGpNoI0I0AjrCUUmxk=</HashCode>
+      <FileName>PropertyInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersResourceMbInfo">
+    <Position X="9.5" Y="17.25" Width="1.5" />
+    <NestedTypes>
+      <Class Name="com.etak.core.model.CrmCustomersResourceMbInfo.RegistrationParameter" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CrmCustomersResourceMbInfo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>Q4IgAAsAJIAQE2qAABAAAAAAkQCgIBmYjIEgAAgAASA=</HashCode>
+      <FileName>CrmCustomersResourceMbInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RemarksInfo">
+    <Position X="12.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAIAIAAAAgIAAAAAAAAAAABAAAgARA=</HashCode>
+      <FileName>RemarksInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ResourceMBInfo">
+    <Position X="4.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhAIAAIQoIAAgEIAgKAAAAgtIkqhIJAAiAlBCEAGERA=</HashCode>
+      <FileName>ResourceMBInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.CustomerProductAssignment">
+    <Position X="9.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCAAAAAAAAAAAAgAAAAAAgAAAAAAAAAAABAEAAAAA=</HashCode>
+      <FileName>revenueManagement\CustomerProductAssignment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ServicesInfo">
+    <Position X="12.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAACCEAAEABgAAAAAAAAggQAAAAQAACABDAEAAARA=</HashCode>
+      <FileName>ServicesInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CustomerInfo">
+    <Position X="12.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FCBQAkAQACEJAAAACACQBggIFUBQApCUAIABxQAAeRg=</HashCode>
+      <FileName>CustomerInfo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ProductsInfo" />
+      <Property Name="PropertyInfo" />
+      <Property Name="ResourceMBInfo" />
+      <Property Name="RemarksInfo" />
+      <Property Name="MVNOCustomerPropertyInfo" />
+      <Property Name="BankInfo" />
+      <Property Name="MappingInfo" />
+      <Property Name="ServicesInfo" />
+      <Property Name="ProvisionResourceMBInfo" />
+      <Property Name="CustomerCreditCards" />
+      <Property Name="Promotions" />
+      <Property Name="PromotionGroups" />
+      <Property Name="Addresses" />
+      <Property Name="RevenueProductsInfo" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="com.etak.core.model.DealersVoucherMvnoInfo,com.etak.core.model" table="CRM_DEALERS_VOUCHER_MVNO" >
+		<id name="DealerId" column="DealerId" type="Int32"  length="4" unsaved-value="0">
+			<generator class="native" />
+		</id>
+		<property name="SnCode" column="SnCode" type="String" length="2" />
+		<property name="CountryCode" column="COUNTRYCODE" type="String" length="8" />
+	</class>
+</hibernate-mapping>

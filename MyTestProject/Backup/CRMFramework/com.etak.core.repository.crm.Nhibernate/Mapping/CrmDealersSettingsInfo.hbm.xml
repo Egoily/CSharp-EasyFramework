@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="com.etak.core.model.CrmDealersSettingsInfo,com.etak.core.model" table="CRM_DEALERS_SETTINGS" >
+		<id name="SettingId" column="SETTINGID" type="Int32"  length="4" unsaved-value="0">
+			<generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+		</id>
+		<property name="DealerId" column="DEALERID" type="Int32" length="4" />
+		<property name="LanguageId" column="LANGUAGEID" type="Int32" length="4" />
+		<property name="ItemSeq" column="ITEMSEQ" type="Int32" length="4" />
+		<property name="ItemId" column="ITEMID" type="Int32" length="4" />
+		<property name="ItemIndex" column="ITEMINDEX" type="Int32" length="4" />
+		<property name="ItemValue" column="ITEMVALUE" type="String" length="1600" />
+		<property name="ItemLink" column="ITEMLINK" type="String" length="400" />
+		<property name="ItemDescription" column="ITEMDESCRIPTION" type="String" length="400" />
+	</class>
+
+</hibernate-mapping>

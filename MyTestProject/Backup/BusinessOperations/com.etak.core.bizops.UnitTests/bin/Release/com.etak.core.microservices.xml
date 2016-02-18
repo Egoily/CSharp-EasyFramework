@@ -1,0 +1,844 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.microservices</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.InformationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.CoreMicroServicesErrorCodes">
+            <summary>
+            Holds all the errors produced in the micro services
+            </summary>
+        </member>
+        <member name="F:com.etak.core.microservices.CoreMicroServicesErrorCodes.ErrorBase">
+            <summary>
+            The starting number for all the errors in micro services
+            </summary>
+        </member>
+        <member name="F:com.etak.core.microservices.CoreMicroServicesErrorCodes.CustomerNotProvided">
+            <summary>
+            The Customer as input paramter was null
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.helper.FrameworkMicroServicesBindHelper">
+            <summary>
+             Helper to bind all core microservices inside MicroServiceManager
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.helper.FrameworkMicroServicesBindHelper.LoadMicroservices">
+            <summary>
+            Register all microservices in MicroServiceManager
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.helper.HPSConnector">
+            <summary>
+            HPS Connector
+            </summary>
+        </member>
+        <member name="F:com.etak.core.microservices.helper.HPSConnector.UseHPSTestUrl">
+            <summary>
+            Configuration value to get the HPS subscriber
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.helper.HPSConnector.GetProvisioningInterface">
+            <summary>
+            Get Provision Service Interface
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.helper.HPSConnector.GetHPSUrlConfigFromDatabase(System.String)">
+            <summary>
+            Get HPS Url Config From Database
+            </summary>
+            <param name="configName">Config Name</param>
+            <returns>HPS Url</returns>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.CalculateNextPeriod.CalculateNextPeriodRequest">
+            <summary>
+            Calculates the next dates and periods for a standart ET periodicty specification
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CalculateNextPeriod.CalculateNextPeriodRequest.PeriodUnit">
+            <summary>
+            A unit of time that represent the base unit for the periods in the cycle, following the TimeUnit specification.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CalculateNextPeriod.CalculateNextPeriodRequest.PeriodCount">
+            <summary>
+            The number of periods between two consecutive charges 
+            </summary>
+            <example>(1 if periodunitid is Monthly and the charge has to be charged every month, 3 in the same case but the charge happens every 3 months).</example>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CalculateNextPeriod.CalculateNextPeriodRequest.StartPeriodNumber">
+            <summary>
+            the number of the period when the cycle starts 
+            </summary>
+            <example>(eg. for a periodunitid of “week” and a periodunitcount of 1, 3 means that the cycle starts at week 3). The first period of the cycle is number 1.</example>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CalculateNextPeriod.CalculateNextPeriodRequest.EndPeriodNumber">
+            <summary>
+            the number of the period when the cycle ends
+            </summary>
+            <example> (eg. for a periodunitid of “week” and a periodunitcount of 1, 6 means that the cycle stops at week 6). The last period of the cycle is the period number "periodicity"</example>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CalculateNextPeriod.CalculateNextPeriodRequest.Periodicity">
+            <summary>
+            the number of periods within a cycle.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CalculateNextPeriod.CalculateNextPeriodRequest.CycleRepeatCount">
+            <summary>
+            the number of time the cycle has to be repeated. 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CalculateNextPeriod.CalculateNextPeriodRequest.NextDate">
+            <summary>
+            The last ocurrence of the period.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CalculateNextPeriod.CalculateNextPeriodRequest.NextPeriodNumber">
+            <summary>
+            The next period for the instance
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CalculateNextPeriod.CalculateNextPeriodRequest.CurrentCycleNumber">
+            <summary>
+            The current cycle number of the instance
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.CalculateNextPeriod.CalculateNextPeriodResponse">
+            <summary>
+            Reponse for CalculateNextPeriod
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CalculateNextPeriod.CalculateNextPeriodResponse.NextPeriodNumber">
+            <summary>
+            The next period for the instance
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CalculateNextPeriod.CalculateNextPeriodResponse.CurrentCycleNumber">
+            <summary>
+            The current cycle number of the instance
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CalculateNextPeriod.CalculateNextPeriodResponse.NextDate">
+            <summary>
+            The next ocurrence defined by the periodicity
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CalculateNextPeriod.CalculateNextPeriodResponse.PeriodMatched">
+            <summary>
+            Determines if this date was a match, (start period, end period)
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.CreateHLRRequestErrors.CreateHLRRequestErrorsRequest">
+            <summary>
+            Request for CreateHLRRequestErrorsMS.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CreateHLRRequestErrors.CreateHLRRequestErrorsRequest.HLRRequestErrorsObj">
+            <summary>
+            HLRRequestErrors
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.CreateHLRRequestErrors.CreateHLRRequestErrorsResponse">
+            <summary>
+            response for CreateHLRRequestErrorsMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CreateHLRRequestErrors.CreateHLRRequestErrorsResponse.HLRRequestErrorsObj">
+            <summary>
+            return result of CreateHLRRequestErrorsMS as HLRRequestErrors
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.CreateSessionInfo.CreateSessionInfoRequest">
+            <summary>
+            Create SessionInfo based on LoginInfo
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CreateSessionInfo.CreateSessionInfoRequest.SessionInfo">
+            <summary>
+            SessionInfo to create
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.CreateSessionInfo.CreateSessionInfoResponse">
+            <summary>
+            Response for CreateSessionInfo
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CreateSessionInfo.CreateSessionInfoResponse.SessionInfo">
+            <summary>
+            SessionInfo created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.CreateSmsLogInfo.CreateSmsLogInfoRequest">
+            <summary>
+            Create SmsLogInfo based on LoginInfo
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CreateSmsLogInfo.CreateSmsLogInfoRequest.SmsLogInfo">
+            <summary>
+            SmsLogInfo to create
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.CreateSmsLogInfo.CreateSmsLogInfoResponse">
+            <summary>
+            Response for CreateSmsLogInfo
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.CreateSmsLogInfo.CreateSmsLogInfoResponse.SmsLogInfo">
+            <summary>
+            SmsLogInfo created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetHolidayInfoByDate.GetHolidayInfoByDateRequest">
+            <summary>
+            Get HolidayInfo using a Date as a Input Parameter
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetHolidayInfoByDate.GetHolidayInfoByDateRequest.Date">
+            <summary>
+            Date to be used to get the HolidayInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetHolidayInfoByDate.GetHolidayInfoByDateResponse">
+            <summary>
+            Response for GetHolidayInfoByDate
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetHolidayInfoByDate.GetHolidayInfoByDateResponse.HolidayInfo">
+            <summary>
+            HolidayInfo obtained
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetHolidayInfoById.GetHolidayInfoByIdRequest">
+            <summary>
+            Get a HolidayInfo by ID
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetHolidayInfoById.GetHolidayInfoByIdRequest.HolidayId">
+            <summary>
+            Holiday Id, corresponding to the date with format yyyyMMdd
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetHolidayInfoById.GetHolidayInfoByIdResponse">
+            <summary>
+            Response with the HolidayInfo obtained. If it's null, it means that it isn't exist (and it's not a holiday day)
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetHolidayInfoById.GetHolidayInfoByIdResponse.HolidayInfo">
+            <summary>
+            HolidayInfo obtained
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetLanguageTypeByCode.GetLanguageTypeInfoByCodeRequest">
+            <summary>
+            Request for GetLanguageTypeByCode Microservice
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetLanguageTypeByCode.GetLanguageTypeInfoByCodeRequest.LanguadeId">
+            <summary>
+            The id of the language to be returned
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetLanguageTypeByCode.GetLanguageTypeInfoByCodeResponse">
+            <summary>
+            Get LanguageTypeByCode Response
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetLanguageTypeByCode.GetLanguageTypeInfoByCodeResponse.LanguageTypeInfos">
+            <summary>
+            LanguageTypeInfo returned by the Microservice
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetMultiLingualDescriptionById.GetMultiLingualDescriptionByIdRequest">
+            <summary>
+            GetmullingualDescriptionById Request
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetMultiLingualDescriptionById.GetMultiLingualDescriptionByIdRequest.MultiLingualDescriptionId">
+            <summary>
+            The Id corresponding with the multi lingual description
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetMultiLingualDescriptionById.GetMultiLingualDescriptionByIdResponse">
+            <summary>
+            GetMultiLingualDescription By Id Response
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetMultiLingualDescriptionById.GetMultiLingualDescriptionByIdResponse.MultiLingualDescription">
+            <summary>
+            MultiLingualDescription find
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetOperationLogsByOrderCodeAndDealerId.GetOperationLogsByOrderCodeAndDealerIdRequest">
+            <summary>
+            Request for GetOperationLogsByOrderCodeAndDealerId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetOperationLogsByOrderCodeAndDealerId.GetOperationLogsByOrderCodeAndDealerIdRequest.OrderCode">
+            <summary>
+            OrderCode to be used
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetOperationLogsByOrderCodeAndDealerId.GetOperationLogsByOrderCodeAndDealerIdRequest.DealerId">
+            <summary>
+            DealerId to be used
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetOperationLogsByOrderCodeAndDealerId.GetOperationLogsByOrderCodeAndDealerIdResponse">
+            <summary>
+            Response for GetOperationLogsByOrderCodeAndDealerId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetOperationLogsByOrderCodeAndDealerId.GetOperationLogsByOrderCodeAndDealerIdResponse.OperationLogs">
+            <summary>
+            List of all the OperationLogs that matchs with the criteria
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetOperationLogsByReferenceCodeAndDealerId.GetOperationLogsByReferenceCodeAndDealerIdRequest">
+            <summary>
+            Request to call the GetOperationLogsByExternalCodeAndDealerId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetOperationLogsByReferenceCodeAndDealerId.GetOperationLogsByReferenceCodeAndDealerIdRequest.ReferenceCode">
+            <summary>
+            ReferenceCode to be used
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetOperationLogsByReferenceCodeAndDealerId.GetOperationLogsByReferenceCodeAndDealerIdRequest.DealerId">
+            <summary>
+            vMvno Code to be used
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetOperationLogsByReferenceCodeAndDealerId.GetOperationLogsByReferenceCodeAndDealerIdResponse">
+            <summary>
+            Response for GetOperationLogsByExternalCodeAndDealerId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetOperationLogsByReferenceCodeAndDealerId.GetOperationLogsByReferenceCodeAndDealerIdResponse.OperationLogs">
+            <summary>
+            A list with all the Operation Logs that match with the criteria
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetOrderById.GetOrderByIdRequest">
+            <summary>
+            Request for GetOrderByIdMs
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetOrderById.GetOrderByIdRequest.OrderId">
+            <summary>
+            The OrderId to be get
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetOrderById.GetOrderByIdResponse">
+            <summary>
+            Response for GetOrderByIdMs
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetOrderById.GetOrderByIdResponse.Order">
+            <summary>
+            Order obtained
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetSettingInfosByDealerId.GetSettingInfosByDealerIdRequest">
+            <summary>
+            Request of GetSettingInfosByDealerIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetSettingInfosByDealerId.GetSettingInfosByDealerIdRequest.DealerId">
+            <summary>
+            DealerId which settings need to be acquired
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetSettingInfosByDealerId.GetSettingInfosByDealerIdResponse">
+            <summary>
+            Response of GetSettingInfosByDealerIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetSettingInfosByDealerId.GetSettingInfosByDealerIdResponse.SettingInfos">
+            <summary>
+            SettingInfos with certain dealerId
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetSucessfulOperationExecutionForCustomer.GetSucessfulOperationExecutionForCustomerRequest">
+            <summary>
+            Request for containing the filters for the get operation
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetSucessfulOperationExecutionForCustomer.GetSucessfulOperationExecutionForCustomerRequest.OperationDefinition">
+            <summary>
+            The definition of the type of operation we want to retrieve
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetSucessfulOperationExecutionForCustomer.GetSucessfulOperationExecutionForCustomerRequest.StartDate">
+            <summary>
+            The start date for the range of dates to search for
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetSucessfulOperationExecutionForCustomer.GetSucessfulOperationExecutionForCustomerRequest.EndDate">
+            <summary>
+            The end date for the range of dates to search for
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetSucessfulOperationExecutionForCustomer.GetSucessfulOperationExecutionForCustomerRequest.Customer">
+            <summary>
+            The customer that was affected by the operations
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetSucessfulOperationExecutionForCustomer.GetSucessfulOperationExecutionForCustomerResponse">
+            <summary>
+            The response containing the Operations that matched the criteria
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetSucessfulOperationExecutionForCustomer.GetSucessfulOperationExecutionForCustomerResponse.Operations">
+            <summary>
+            The list of operations that matched the criterias
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetSystemConfigDataInfoById.GetSystemConfigDataInfoByIdRequest">
+            <summary>
+            GetSystemConfigDataInfoById Request
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetSystemConfigDataInfoById.GetSystemConfigDataInfoByIdRequest.SystemConfigDataId">
+            <summary>
+            The id of the SystemConfigData
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetSystemConfigDataInfoById.GetSystemConfigDataInfoByIdResponse">
+            <summary>
+            Response for GetSystemConfigDataInfoById
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetSystemConfigDataInfoById.GetSystemConfigDataInfoByIdResponse.SystemConfigData">
+            <summary>
+            SystemConfigData obtained
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetSystemConfigDataInfosByItem.GetSystemConfigDataInfosByItemRequest">
+            <summary>
+            Request to GetSystemConfigDataInfosByItem
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetSystemConfigDataInfosByItem.GetSystemConfigDataInfosByItemRequest.Item">
+            <summary>
+            The Item to look for
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetSystemConfigDataInfosByItem.GetSystemConfigDataInfosByItemResponse">
+            <summary>
+            GetSystemConfigDataInfosByItemResponse with a list of SystemConfigData objects
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetSystemConfigDataInfosByItem.GetSystemConfigDataInfosByItemResponse.SystemConfigData">
+            <summary>
+            A list with all the SystemConfigDataInfo returned
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetTaxAuthority.GetTaxAuthorityRequest">
+            <summary>
+            SpanishTaxAuthorityRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetTaxAuthority.GetTaxAuthorityRequest.Customer">
+            <summary>
+            Customer to get the taxDefinitions
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetTaxAuthority.GetTaxAuthorityResponse">
+            <summary>
+            SpanishTaxAuthorityResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetTaxAuthority.GetTaxAuthorityResponse.TaxDefinitions">
+            <summary>
+            List of TaxDefinition for the given customer
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetTaxDefinitionById.GetTaxDefinitionByIdRequest">
+            <summary>
+            GetTaxDefinitionByIdRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetTaxDefinitionById.GetTaxDefinitionByIdRequest.TaxDefinitionId">
+            <summary>
+            TaxDefinitionId
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetTaxDefinitionById.GetTaxDefinitionByIdResponse">
+            <summary>
+            GetTaxDefinitionByIdResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetTaxDefinitionById.GetTaxDefinitionByIdResponse.TaxDefinition">
+            <summary>
+            TaxDefinition
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetTaxDefinitionsByZipCodeLike.GetTaxDefinitionsByZipCodeLikeRequest">
+            <summary>
+            Request for GetTaxDefinitionsByZipCodeLike Request
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetTaxDefinitionsByZipCodeLike.GetTaxDefinitionsByZipCodeLikeRequest.ZipCode">
+            <summary>
+            ZipCode to be used to get the ZipCodes
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetTaxDefinitionsByZipCodeLike.GetTaxDefinitionsByZipCodeLikeResponse">
+            <summary>
+            Response for GetTaxDefinitionsByZipCodeLike Microservice
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetTaxDefinitionsByZipCodeLike.GetTaxDefinitionsByZipCodeLikeResponse.TaxDefinitions">
+            <summary>
+            A list of TaxDefinitions tat match the criteria
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetTaxDefinitonsByCategory.GetTaxDefinitonsByCategoryRequest">
+            <summary>
+            Request for GetTaxDefinitonsByCategory Microservice
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetTaxDefinitonsByCategory.GetTaxDefinitonsByCategoryRequest.TaxCategory">
+            <summary>
+            Integer corresponding with the TaxCategory of the taxes returned
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.GetTaxDefinitonsByCategory.GetTaxDefinitonsByCategoryResponse">
+            <summary>
+            Response for GetTaxDefinitonsByCategory Microservice
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.GetTaxDefinitonsByCategory.GetTaxDefinitonsByCategoryResponse.TaxDefinitions">
+            <summary>
+            A list of Taxes that matches the criteria
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.PersistOperationConfiguration.PersistOperationConfigurationRequest">
+            <summary>
+            Request for PersistOperationConfiguration Microservice
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.PersistOperationConfiguration.PersistOperationConfigurationRequest.StartDate">
+            <summary>
+            Start date for the validity period of the configuration
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.PersistOperationConfiguration.PersistOperationConfigurationRequest.EndDate">
+            <summary>
+            EndDate for the validity period of the configuration
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.PersistOperationConfiguration.PersistOperationConfigurationRequest.ConfigSettings">
+            <summary>
+            Object containing the configurations to persist.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.PersistOperationConfiguration.PersistOperationConfigurationRequest.MVNO">
+            <summary>
+            MVNO to which this operation configuration applies to
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.PersistOperationConfiguration.PersistOperationConfigurationRequest.OperationDefinition">
+            <summary>
+            The operation definition to which the configuration is associated
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.messages.PersistOperationConfiguration.PersistOperationConfigurationResponse">
+            <summary>
+            Response for PersistOperationConfiguration Microservice
+            </summary>
+        </member>
+        <member name="P:com.etak.core.microservices.messages.PersistOperationConfiguration.PersistOperationConfigurationResponse.OperationConfiguration">
+            <summary>
+            The operation configuration created in the Micro service
+            </summary>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.CalculateNextPeriodMS">
+            <summary>
+            Caculates the next NextPeriodNumber, CurrentCycleNumber and Next date for a standart ET scheduling
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.CalculateNextPeriodMS.Process(com.etak.core.microservices.messages.CalculateNextPeriod.CalculateNextPeriodRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Caculates the next NextPeriodNumber, CurrentCycleNumber and Next date for a standart ET scheduling
+            </summary>
+            <param name="request">the input with the catalog definition of the periodicuty and the instance to calculate</param>
+            <param name="invoker">the common environment</param>
+            <returns>NextPeriodNumber, CurrentCycleNumber and Next date for a standart ET scheduling</returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.CreateHLRRequestErrorsMS">
+            <summary>
+            Microservice to CreateHLRRequestErrors
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.CreateHLRRequestErrorsMS.Process(com.etak.core.microservices.messages.CreateHLRRequestErrors.CreateHLRRequestErrorsRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process of CreateHLRRequestErrorsMS
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>return HLRRequestErrors within CreateHLRRequestErrorsResponse </returns>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.CreateHLRRequestErrorsMS.ArrayToString``1(``0[])">
+            <summary>
+            convert from array to string
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="array"></param>
+            <returns>string</returns>
+            in the future this should be move to common module 
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.CreateSessionInfoMS">
+            <summary>
+            Microservice : adding  new record of SessionInfo 
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.CreateSessionInfoMS.Process(com.etak.core.microservices.messages.CreateSessionInfo.CreateSessionInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            adding  new record of SessionInfo (request.SessionInfo)
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CreateSessionInfoResponse with the SessionInfo created (response.SessionInfo)</returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.GetHolidayInfoByDateMS">
+            <summary>
+            GetHolidayInfoByDate Microservice
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.GetHolidayInfoByDateMS.Process(com.etak.core.microservices.messages.GetHolidayInfoByDate.GetHolidayInfoByDateRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process for the microservice
+            </summary>
+            <param name="request">Request with a DateTime object to be used to get the holidayInfo</param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.GetHolidayInfoByIdMS">
+            <summary>
+            Microservice to get a HolidayInfo by Id
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.GetHolidayInfoByIdMS.Process(com.etak.core.microservices.messages.GetHolidayInfoById.GetHolidayInfoByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process for the microservice
+            </summary>
+            <param name="request">Request with an integer value to be used as a ID</param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.GetLanguageTypeInfoByCodeMS">
+            <summary>
+            GetLanguangeTypeByCode Microservice
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.GetLanguageTypeInfoByCodeMS.Process(com.etak.core.microservices.messages.GetLanguageTypeByCode.GetLanguageTypeInfoByCodeRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process of the microservice to get the languageTypeInfo
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.GetMultiLingualDescriptionByIdMS">
+            <summary>
+            Microservice to get a specific MultiLingual using its ID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.GetMultiLingualDescriptionByIdMS.Process(com.etak.core.microservices.messages.GetMultiLingualDescriptionById.GetMultiLingualDescriptionByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Method that performs the micro service implementation
+            </summary>
+            <param name="request">the micro service request</param>
+            <param name="invoker">the information about the Invokation environment</param>
+            <returns>the result of the micro service</returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.GetOperationLogsByReferenceCodeAndDealerIdMS">
+            <summary>
+            GetOperationLogByExternalCodeAndDealerId Microservice
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.GetOperationLogsByReferenceCodeAndDealerIdMS.Process(com.etak.core.microservices.messages.GetOperationLogsByReferenceCodeAndDealerId.GetOperationLogsByReferenceCodeAndDealerIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main Process for the microservice
+            </summary>
+            <param name="request">Contains the Reference Code and the DealerId</param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.GetOperationLogsByOrderCodeAndDealerIdMS">
+            <summary>
+            GetOperationLogByExternalCodeAndDealerId Microservice
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.GetOperationLogsByOrderCodeAndDealerIdMS.Process(com.etak.core.microservices.messages.GetOperationLogsByOrderCodeAndDealerId.GetOperationLogsByOrderCodeAndDealerIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main Process for the microservice
+            </summary>
+            <param name="request">Contains the Reference Code and the DealerId</param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.GetOrderByIdMS">
+            <summary>
+            GetOrderById Microservice, to get a certain order from db
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.GetOrderByIdMS.Process(com.etak.core.microservices.messages.GetOrderById.GetOrderByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get an Order using the OrderId specified
+            </summary>
+            <param name="request">the micro service request</param>
+            <param name="invoker">the information about the Invokation environment</param>
+            <returns>the result of the micro service</returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.GetSettingInfosByDealerIdMS">
+            <summary>
+            MS : Get SettingInfo by using DealerId
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.GetSettingInfosByDealerIdMS.Process(com.etak.core.microservices.messages.GetSettingInfosByDealerId.GetSettingInfosByDealerIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process to get IEnumerable(SettingInfo)
+            </summary>
+            <param name="request">GetSettingInfosByDealerIdRequest with DealerId</param>
+            <param name="invoker">RequestInvokationEnvironment</param>
+            <returns>SettingInfos with certain DealerId</returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.GetSucessfulOperationExecutionForCustomerMS">
+            <summary>
+            Gets all the Ok operations for the customer, within a time range and a type of operation
+            
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.GetSucessfulOperationExecutionForCustomerMS.Process(com.etak.core.microservices.messages.GetSucessfulOperationExecutionForCustomer.GetSucessfulOperationExecutionForCustomerRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process for the microservice
+            </summary>
+            <param name="request">Request with an the input parameters</param>
+            <param name="invoker">the request invokation environment</param>
+            <returns>The list of matching operations</returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.CreateSmsLogInfoMS">
+            <summary>
+            CreateSmsLogInfoMS Microservice
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.CreateSmsLogInfoMS.Process(com.etak.core.microservices.messages.CreateSmsLogInfo.CreateSmsLogInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            adding  new record of SmsLogInfo (request.SmsLogInfo)
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CreateSmsLogInfoResponse with the SmsLogInfo created (response.SmsLogInfo)</returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.GetSystemConfigDataInfoByIdMS">
+            <summary>
+            GetSystemConfigDataInfoById Microservice
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.GetSystemConfigDataInfoByIdMS.Process(com.etak.core.microservices.messages.GetSystemConfigDataInfoById.GetSystemConfigDataInfoByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process of the microservice to get the SystemConfigDataInfo
+            </summary>
+            <param name="request">Contains the SystemConfigDataInfo Id</param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.GetSystemConfigDataInfosByItemMS">
+            <summary>
+            GetSystemConfigDataInfosByItem Microservice
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.GetSystemConfigDataInfosByItemMS.Process(com.etak.core.microservices.messages.GetSystemConfigDataInfosByItem.GetSystemConfigDataInfosByItemRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process of the microservice to get the SystemConfigDataInfo
+            </summary>
+            <param name="request">Contains the SystemConfigDataInfo Item</param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.GetTaxAuthorityMS">
+            <summary>
+            SpanishTaxAuthorityMS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.GetTaxAuthorityMS.Process(com.etak.core.microservices.messages.GetTaxAuthority.GetTaxAuthorityRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process for SpanishTaxAuthorityMS
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.GetTaxDefinitionByIdMS">
+            <summary>
+            GetTaxDefinitionByIdMS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.GetTaxDefinitionByIdMS.Process(com.etak.core.microservices.messages.GetTaxDefinitionById.GetTaxDefinitionByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process for GetTaxDefinitionByIdMS, return texdefinition by his id
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.GetTaxDefinitionsByZipCodeLikeMS">
+            <summary>
+            GetTaxDefinitionsByZipCodeLike Microservice. Will return a list of Taxes with a certain ZipCode
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.GetTaxDefinitionsByZipCodeLikeMS.Process(com.etak.core.microservices.messages.GetTaxDefinitionsByZipCodeLike.GetTaxDefinitionsByZipCodeLikeRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process. Given a ZipCode String, will return a list of Taxes that matches the criteria.
+            </summary>
+            <param name="request">contains the ZipCode of the taxes to be returned</param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.GetTaxDefinitonsByCategoryMS">
+            <summary>
+            GetTaxDefinitonsByCategory Microservice. Will return a list of taxes with a certain Category Id
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.GetTaxDefinitonsByCategoryMS.Process(com.etak.core.microservices.messages.GetTaxDefinitonsByCategory.GetTaxDefinitonsByCategoryRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process that given a Tax Category value, returns a list of taxes that match the criteria
+            </summary>
+            <param name="request">Contains the caterogy Id of the taxes to be returned</param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.microservices.microservices.PersistOperationConfigurationMS">
+            <summary>
+            Class that persist an OperationConfiguration
+            </summary>
+        </member>
+        <member name="M:com.etak.core.microservices.microservices.PersistOperationConfigurationMS.Process(com.etak.core.microservices.messages.PersistOperationConfiguration.PersistOperationConfigurationRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Implementation of the mircoservice, creates a new OperationConfiguration with the input parameters
+            in the request
+            </summary>
+            <param name="request">Contains the fields to create the operation config</param>
+            <param name="invoker">the environment that is invoking the MS, ignored for this micro service</param>
+            <returns>the Operation configurationc created.</returns>
+        </member>
+    </members>
+</doc>

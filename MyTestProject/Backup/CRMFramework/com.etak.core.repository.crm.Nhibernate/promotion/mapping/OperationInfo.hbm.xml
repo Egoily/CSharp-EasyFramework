@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="com.etak.core.model.OperationInfo,com.etak.core.model" table="SYS25_LOG_OPERATION" dynamic-update="true">
+    <id name="ID" column="ID" type="Int64" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>
+    <property name="MVNOID" column="MVNOID" type="Int32" length="4" />
+    <property name="MVNOName" column="MVNONAME" type="String" length="100" />
+    <property name="CustomerName" column="CUSTOMERNAME" type="String" length="300" />
+    <property name="CustomerID" column="CUSTOMERID" type="Int32" length="4" />
+    <property name="Business" column="BUSINESS" type="String" length="100" />
+    <property name="Operation" column="OPERATION" type="String" length="100" />
+    <property name="OperationLevel" column="OPERATIONLEVEL" type="Int32" length="4" />
+    <property name="Detail" column="DETAIL" type="String" length="9999" />
+    <property name="IP" column="IP" type="String" length="100" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <property name="CreateUserID" column="CREATEUSERID" type="Int32" length="4" />
+    <property name="CreateUserName" column="CREATEUSERNAME" type="String" length="100" />
+    <property name="SourceName" column="SOURCENAME" type="String" length="100" />
+    <property name="SourceID" column="SOURCEID" type="Int32" length="4" />
+    <property name="OperationResult" column="OPERATIONRESULT" type="String" length="40" />
+    <property name="MSISDN" column="MSISDN" type="String" length="25" />
+    <property name="ACTIONTYPE" column="ACTIONTYPE" type="String" length="6" />
+    <property name="LOGTYPE" column="LOGTYPE" type="Int32" length="4" />
+    <property name="OPERATIONCODE" column="OPERATIONCODE" type="String" length="10" />
+    <property name="MESSAGES" column="MESSAGES" type="String" length="2000" />
+    <property name="MESSAGESID" column="MESSAGESID" type="Int64" length="8" />
+    <property name="OLDVALUE" column="OLDVALUE" type="String" length="200" />
+    <property name="NEWVALUE" column="NEWVALUE" type="String" length="200" />
+    <bag name="OperationLogInfoList" inverse="true" lazy="true" cascade="save-update">
+      <key column="ID" />
+      <one-to-many class="com.etak.core.model.OperationLog,com.etak.core.model" />
+    </bag>
+  </class>
+</hibernate-mapping>

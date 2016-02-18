@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.SmsTemplateInfo,com.etak.core.model" table="CRM_MVNO_TEXT_TEMPLATE" >
+    <cache usage="nonstrict-read-write" region="UserDealer"/>
+    <id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+    </id>
+    <property name="MVNOID" column="MVNOID" type="Int32" length="4" />
+    <property name="LANGUAGEID" column="LANGUAGEID" type="Int32" length="4" />
+    <property name="CODE" column="CODE" type="int" length="4" />
+    <property name="DESCRIPTION" column="DESCRIPTION" type="String" length="100" />
+    <property name="TITLE" column="TITLE" type="String" length="100"/>
+    <property name="TITLEARGS" column="TITLEARGS" type="String" length="50" />
+    <property name="BODY" column="BODY" type="String" length="1000" />
+    <property name="BODYARGS" column="BODYARGS" type="String" length="50" />
+    <property name="SMSCODING" column="SMSCODING" type="int" length="4" />
+    <property name="ENABLED" column="ENABLED" type="boolean" />
+    <property name="STARTDATE" column="STARTDATE" type="DateTime" />
+    <property name="ENDDATE" column="ENDDATE" type="DateTime" />
+  </class>
+
+</hibernate-mapping>

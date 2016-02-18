@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="com.etak.core.model.LifecycleLogInfoExtended,com.etak.core.model" table="MVNO_FC_LIFECYCLE_LOG_EXTEND">
+    <id name="ExtendId" column="ExtendId" type="Int64" unsaved-value="0">
+      <generator class="assigned"/>
+    </id>
+    <property name="TopUpType" column="TopUpType"/>
+    <property name="NormalChargeTime" column="NormalChargeTime"/>
+    <property name="NormalChargeTime2" column="NormalChargeTime2"/>
+    <many-to-one name="LCLogInfo" column="LOGID"/>
+  </class>
+
+</hibernate-mapping>

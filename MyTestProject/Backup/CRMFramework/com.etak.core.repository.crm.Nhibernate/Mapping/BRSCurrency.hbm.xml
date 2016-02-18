@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+<class name="com.etak.core.model.BRSCurrency,com.etak.core.model" table="CRM_MVNO_BRS_CURRENCY" >
+<id name="CurrencyID" column="CURRENCYID" type="Int32"  length="4" unsaved-value="0">
+   <generator class="native" />
+</id>
+<property name="CodeNumber" column="CODENUMBER" type="Int32" length="4" />
+<property name="CodeString" column="CODESTRING" type="String" length="10" />
+<property name="Description" column="DESCRIPTION" type="String" length="1000" />
+</class>
+
+</hibernate-mapping>

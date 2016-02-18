@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.MNPReasonInfo,com.etak.core.model" table="CRM_MNP_REASON" >
+    <id name="ReasonId" column="REASONID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="assigned" />
+    </id>
+    <property name="ReasonCode" column="REASONCODE" type="String" length="20" />
+    <property name="ReasonDescription" column="REASONDESCRIPTION" type="String" length="100" />
+    <property name="ReasonType" column="REASONTYPE" type="Int32" />
+    <property name="LanguageID" column="LanguageID" type="Int32" />
+  </class>
+
+</hibernate-mapping>
+

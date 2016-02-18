@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.LifecycleLogInfo,com.etak.core.model" table="MVNO_FC_LIFECYCLE_LOG">
+    <id name="LogId" column="Logid" type="Int64" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>
+    <property name="TransactionTime" column="TransactionTime" type="String" length="14" />
+    <property name="TransactionSource" column="TransactionSource" type="String" length="4" />
+    <property name="TransactionType" column="TransactionType" type="String" length="2" />
+    <property name="MSISDN" column="MSISDN" type="String" length="60" />
+    <property name="DealerId" column="DealerId" type="Int32" length="4" />
+    <property name="PackageName" column="PackageName" type="String" length="200" />
+    <property name="Language" column="Language" type="String" length="16" />
+    <property name="CreateTime" column="CreateTime" type="String" length="14" />
+    <property name="Status" column="Status" type="String" length="16" />
+    <property name="RechargeTime" column="RechargeTime" type="String" length="14" />
+    <property name="ExpireTime" column="ExpireTime" type="String" length="14" />
+    <property name="Balance" column="Balance" type="Decimal" />
+    <property name="Status2" column="Status2" type="String" length="16" />
+    <property name="RechargeTime2" column="RechargeTime2" type="String" length="14" />
+    <property name="ExpireTime2" column="ExpireTime2" type="String" length="14" />
+    <property name="Balance2" column="Balance2" type="Decimal" />
+    <property name="Channel" column="Channel" type="String" length="4" />
+    <property name="Pin" column="PIN" type="String" length="160" />
+    <property name="UserId" column="UserId" type="Int32" length="4" />
+    <property name="Used" column="Used" type="Boolean" />
+    <property name="UsedTime" column="UsedTime" type="DateTime" />
+    <property name="ActiveDeadLineDate" column="ACTIVEDEADLINEDATE" type="DateTime" />
+    <property name="OrderCode" column="ORDERCODE" type="Int64" />
+    <property name="ChangeStatusDate" column="CHANGESTATUSDATE" type="DateTime" />
+    <property name="PaymentTypeId" column="PAYMENTTYPEID" type="Int32" length="4" />
+    <property name="LastConsumeEffectiveDate" column="LASTCONSUMEEFFECTIVEDATE" type="DateTime" />
+  </class>
+
+</hibernate-mapping>

@@ -1,0 +1,384 @@
+diff a/com.etak.core.bizops.UnitTests/assurance/ApplyChargeAndSchedule/ApplyChargeAndScheduleBizOpUnitTests.cs b/com.etak.core.bizops.UnitTests/assurance/ApplyChargeAndSchedule/ApplyChargeAndScheduleBizOpUnitTests.cs	(rejected hunks)
+@@ -1,10 +1,12 @@
+ ﻿using System;
++using System.Collections.Generic;
+ using com.etak.core.bizops.assurance.ApplyChargeAndSchedule;
+ using com.etak.core.customer.message.AddChargeScheduleToCustomer;
+ using com.etak.core.customer.message.AddChargeToCustomer;
+ using com.etak.core.customer.message.GetCustomerChargesScheduleById;
+ using com.etak.core.customer.message.GetLastNInvoicesByCustomerIdAndInvoiceStatuses;
+ using com.etak.core.dealer.messages.GetDealerInfoById;
++using com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentsByCustomerId;
+ using com.etak.core.GSMSubscription.messages.GetCustomerProductAssignmentsByCustomerIDAndDatePeriod;
+ using com.etak.core.microservices.messages.GetTaxDefinitonsByCategory;
+ using com.etak.core.model;
+@@ -16,6 +18,7 @@
+ using com.etak.core.product.message.GetChargeById;
+ using com.etak.core.service.messages.AddUnbilledBalance;
+ using com.etak.core.service.messages.CustomerHasCredit;
++using com.etak.core.service.messages.GetPriorityBundleInfoFromBundleInfos;
+ using com.etak.core.test.utilities;
+ using com.etak.core.test.utilities.abstracts;
+ using com.etak.core.test.utilities.Helpers;
+@@ -41,7 +44,9 @@
+ 
+         private IMicroService<AddUnbilledBalanceRequest, AddUnbilledBalanceResponse> mockedAddUnbilledBalance;
+ 
+-        private DateTime startDate = new DateTime(2015, 5, 4);
++        private IMicroService<GetPriorityBundleInfoFromBundleInfosRequest, GetPriorityBundleInfoFromBundleInfosResponse> mockedGetPriorityBundleInfoFromBundleInfos;
++        private IMicroService<GetCustomerProductAssignmentsByCustomerIdRequest, GetCustomerProductAssignmentsByCustomerIdResponse> mockedGetCustomerProductAssignmentsByCustomerId;
++        private DateTime startDate = DateTime.Now;
+ 
+         [TestFixtureSetUp]
+         public void Initialize()
+@@ -51,7 +56,8 @@
+             mockedAddChargeSchedule = MockMicroService<AddChargeScheduleToCustomerRequest, AddChargeScheduleToCustomerResponse>();
+             mockedHasCredit = MockMicroService<CustomerHasCreditRequest, CustomerHasCreditResponse>();
+             mockedAddUnbilledBalance = MockMicroService<AddUnbilledBalanceRequest, AddUnbilledBalanceResponse>();
+-
++            mockedGetPriorityBundleInfoFromBundleInfos = MockMicroService<GetPriorityBundleInfoFromBundleInfosRequest, GetPriorityBundleInfoFromBundleInfosResponse>();
++            mockedGetCustomerProductAssignmentsByCustomerId =MockMicroService<GetCustomerProductAssignmentsByCustomerIdRequest, GetCustomerProductAssignmentsByCustomerIdResponse>();
+             var mockedEventSystem = Substitute.For<EventSystemContract>();
+             mockedEventSystem.ProcessEvent(Arg.Any<CustomPayloadEvent>());
+ 
+@@ -66,6 +72,9 @@
+         [TestCase(100)]
+         public void ApplyChargeAndScheduleBizOp_NonRecurringOk_ShouldReturnCustomerCharge(int testParameter)
+         {
++            CustomerInfo customerInfo = CreateDefaultObject.Create<CustomerInfo>();
++            customerInfo.CustomerID = testParameter;
++
+             #region AddChargeToCustomer Mock
+ 
+             var addChargeReq = Arg.Is<AddChargeToCustomerRequest>(x => x.Amount == 900);
+@@ -79,13 +88,38 @@
+             #region CustomerHasCredit Mock
+ 
+             ServicesInfo masterBundle = CreateDefaultObject.Create<ServicesInfo>();
++            masterBundle.CreditLimit = 1000;
++            masterBundle.CREDITLIMITBASEBUNDLEID = testParameter;
+             masterBundle.BundleDefinition = CreateDefaultObject.Create<BundleInfo>();
+             masterBundle.BundleDefinition.BundleID = testParameter;
++            masterBundle.BundleDefinition.ServiceTypeID = 3000;
++            masterBundle.BundleDefinition.SubserviceTypeID = 3001;
++            customerInfo.ServicesInfo = new List<ServicesInfo>();
++            customerInfo.ServicesInfo.Add(masterBundle);
++            //var hasCreditReq = Arg.Is<CustomerHasCreditRequest>(x => x.CustomerInfo.CustomerID == testParameter);
++            //var hasCreditResp = new CustomerHasCreditResponse() { HasCredit = true, MasterBundle = masterBundle, ResultType = ResultTypes.Ok, };
++            //mockedHasCredit.Process(hasCreditReq, Arg.Any<RequestInvokationEnvironment>()).Returns(hasCreditResp);
++
++            var getCustomerProductAssignmentsByCustomerIdReq = Arg.Is<GetCustomerProductAssignmentsByCustomerIdRequest>(x => x.CustomerId== testParameter);
++            mockedGetCustomerProductAssignmentsByCustomerId.Process(getCustomerProductAssignmentsByCustomerIdReq,
++                Arg.Any<RequestInvokationEnvironment>()).Returns(new GetCustomerProductAssignmentsByCustomerIdResponse()
++                {
++                    CustomerProductAssignments = new List<CustomerProductAssignment>()
++                    {
++                        new CustomerProductAssignment(){StartDate = DateTime.Now.AddDays(-1),PurchasedProduct = new Product(){AssociatedBundle =  masterBundle.BundleDefinition}}
++                    }
++                });
+ 
+-            var hasCreditReq = Arg.Is<CustomerHasCreditRequest>(x => x.CustomerInfo.CustomerID == testParameter);
+-            var hasCreditResp = new CustomerHasCreditResponse() { HasCredit = true, MasterBundle = masterBundle, ResultType = ResultTypes.Ok, };
+-            mockedHasCredit.Process(hasCreditReq, Arg.Any<RequestInvokationEnvironment>()).Returns(hasCreditResp);
+-
++            mockedGetPriorityBundleInfoFromBundleInfos.Process(Arg.Any<GetPriorityBundleInfoFromBundleInfosRequest>(),
++               Arg.Any<RequestInvokationEnvironment>())
++               .Returns
++               (
++                   new GetPriorityBundleInfoFromBundleInfosResponse()
++                   {
++                       PriorityBundle = masterBundle.BundleDefinition,
++                       ResultType = ResultTypes.Ok
++                   }
++               );
+             #endregion
+ 
+             #region AddUnbilled Mock
+@@ -98,8 +132,7 @@
+             #endregion
+ 
+             ChargeNonRecurring chargeNonRecurring = CreateDefaultObject.Create<ChargeNonRecurring>();
+-            CustomerInfo customerInfo = CreateDefaultObject.Create<CustomerInfo>();
+-            customerInfo.CustomerID = testParameter;
++ 
+ 
+             var bizOp = new ApplyChargeAndScheduleBizOp();
+ 
+@@ -132,6 +165,7 @@
+         {
+             var accountMock = CreateDefaultObject.Create<Account>();
+             var customerInfoMock = CreateDefaultObject.Create<CustomerInfo>();
++            customerInfoMock.CustomerID = testParameter;
+             var customerProductAssignmentMock = CreateDefaultObject.Create<CustomerProductAssignment>();
+ 
+             #region AddChargeScheduleToCustomer Mock
+@@ -147,13 +181,35 @@
+             #region CustomerHasCredit Mock
+ 
+             ServicesInfo masterBundle = CreateDefaultObject.Create<ServicesInfo>();
++            masterBundle.CreditLimit = 1000;
++            masterBundle.CREDITLIMITBASEBUNDLEID = testParameter;
+             masterBundle.BundleDefinition = CreateDefaultObject.Create<BundleInfo>();
+             masterBundle.BundleDefinition.BundleID = testParameter;
++            masterBundle.BundleDefinition.ServiceTypeID = 3000;
++            masterBundle.BundleDefinition.SubserviceTypeID = 3001;
++            customerInfoMock.ServicesInfo = new List<ServicesInfo>();
++            customerInfoMock.ServicesInfo.Add(masterBundle);
++
++            var getCustomerProductAssignmentsByCustomerIdReq = Arg.Is<GetCustomerProductAssignmentsByCustomerIdRequest>(x => x.CustomerId == testParameter);
++            mockedGetCustomerProductAssignmentsByCustomerId.Process(getCustomerProductAssignmentsByCustomerIdReq,
++                Arg.Any<RequestInvokationEnvironment>()).Returns(new GetCustomerProductAssignmentsByCustomerIdResponse()
++                {
++                    CustomerProductAssignments = new List<CustomerProductAssignment>()
++                    {
++                        new CustomerProductAssignment(){StartDate = DateTime.Now.AddDays(-1),PurchasedProduct = new Product(){AssociatedBundle =  masterBundle.BundleDefinition}}
++                    }
++                });
+ 
+-            var hasCreditReq = Arg.Is<CustomerHasCreditRequest>(x => x.CustomerInfo.CustomerID == 1);
+-            var hasCreditResp = new CustomerHasCreditResponse() { HasCredit = true, MasterBundle = masterBundle, ResultType = ResultTypes.Ok, };
+-            mockedHasCredit.Process(hasCreditReq, Arg.Any<RequestInvokationEnvironment>()).Returns(hasCreditResp);
+-
++            mockedGetPriorityBundleInfoFromBundleInfos.Process(Arg.Any<GetPriorityBundleInfoFromBundleInfosRequest>(),
++               Arg.Any<RequestInvokationEnvironment>())
++               .Returns
++               (
++                   new GetPriorityBundleInfoFromBundleInfosResponse()
++                   {
++                       PriorityBundle = masterBundle.BundleDefinition,
++                       ResultType = ResultTypes.Ok
++                   }
++               );
+             #endregion
+ 
+             #region AddUnbilled Mock
+@@ -166,8 +222,7 @@
+             #endregion
+ 
+             ChargeRecurring chargeRecurring = CreateDefaultObject.Create<ChargeRecurring>();
+-            CustomerInfo customerInfo = CreateDefaultObject.Create<CustomerInfo>();
+-            customerInfo.CustomerID = testParameter;
++
+ 
+             var bizOp = new ApplyChargeAndScheduleBizOp();
+ 
+@@ -318,6 +373,8 @@
+         [TestCase(300)]
+         public void ApplyChargeAndScheduleBizOp_ProcessRequestNonRecurring_CustomerChargeNull_ReturnThrowBusinessLogicError(int testParameter)
+         {
++            CustomerInfo customerInfo = CreateDefaultObject.Create<CustomerInfo>();
++            customerInfo.CustomerID = testParameter;
+             #region AddChargeToCustomer Mock
+ 
+             var addChargeReq = Arg.Is<AddChargeToCustomerRequest>(x => x.Amount == 900);
+@@ -328,12 +385,35 @@
+             #region CustomerHasCredit Mock
+ 
+             ServicesInfo masterBundle = CreateDefaultObject.Create<ServicesInfo>();
++            masterBundle.CreditLimit = 1000;
++            masterBundle.CREDITLIMITBASEBUNDLEID = testParameter;
+             masterBundle.BundleDefinition = CreateDefaultObject.Create<BundleInfo>();
+             masterBundle.BundleDefinition.BundleID = testParameter;
++            masterBundle.BundleDefinition.ServiceTypeID = 3000;
++            masterBundle.BundleDefinition.SubserviceTypeID = 3001;
++            customerInfo.ServicesInfo = new List<ServicesInfo>();
++            customerInfo.ServicesInfo.Add(masterBundle);
++
++            var getCustomerProductAssignmentsByCustomerIdReq = Arg.Is<GetCustomerProductAssignmentsByCustomerIdRequest>(x => x.CustomerId == testParameter);
++            mockedGetCustomerProductAssignmentsByCustomerId.Process(getCustomerProductAssignmentsByCustomerIdReq,
++                Arg.Any<RequestInvokationEnvironment>()).Returns(new GetCustomerProductAssignmentsByCustomerIdResponse()
++                {
++                    CustomerProductAssignments = new List<CustomerProductAssignment>()
++                    {
++                        new CustomerProductAssignment(){StartDate = DateTime.Now.AddDays(-1),PurchasedProduct = new Product(){AssociatedBundle =  masterBundle.BundleDefinition}}
++                    }
++                });
+ 
+-            var hasCreditReq = Arg.Is<CustomerHasCreditRequest>(x => x.CustomerInfo.CustomerID == 1);
+-            mockedHasCredit.Process(hasCreditReq, Arg.Any<RequestInvokationEnvironment>()).
+-                Returns(new CustomerHasCreditResponse() { HasCredit = true, MasterBundle = null });
++            mockedGetPriorityBundleInfoFromBundleInfos.Process(Arg.Any<GetPriorityBundleInfoFromBundleInfosRequest>(),
++               Arg.Any<RequestInvokationEnvironment>())
++               .Returns
++               (
++                   new GetPriorityBundleInfoFromBundleInfosResponse()
++                   {
++                       PriorityBundle = masterBundle.BundleDefinition,
++                       ResultType = ResultTypes.Ok
++                   }
++               );
+ 
+             #endregion
+ 
+@@ -348,8 +428,7 @@
+             #endregion
+ 
+             ChargeNonRecurring chargeNonRecurring = CreateDefaultObject.Create<ChargeNonRecurring>();
+-            CustomerInfo customerInfo = CreateDefaultObject.Create<CustomerInfo>();
+-            customerInfo.CustomerID = testParameter;
++        
+ 
+             var bizOp = new ApplyChargeAndScheduleBizOp();
+ 
+@@ -375,8 +454,10 @@
+         [TestCase(300)]
+         public void ApplyChargeAndScheduleBizOp_ProcessRequestRecurring_masterBundleNull_ReturnThrowBusinessLogicError(int testParameter)
+         {
++           
+             var AccountMock = CreateDefaultObject.Create<Account>();
+             var CustomerInfoMock = CreateDefaultObject.Create<CustomerInfo>();
++            CustomerInfoMock.CustomerID = testParameter;
+             var CustomerProductAssignmentMock = CreateDefaultObject.Create<CustomerProductAssignment>();
+ 
+             #region AddChargeScheduleToCustomer Mock
+@@ -392,13 +473,32 @@
+             #region CustomerHasCredit Mock
+ 
+             ServicesInfo masterBundle = CreateDefaultObject.Create<ServicesInfo>();
++            masterBundle.CreditLimit = 1000;
++            masterBundle.CREDITLIMITBASEBUNDLEID = testParameter;
+             masterBundle.BundleDefinition = CreateDefaultObject.Create<BundleInfo>();
+             masterBundle.BundleDefinition.BundleID = testParameter;
++            masterBundle.BundleDefinition.ServiceTypeID = 3000;
++            masterBundle.BundleDefinition.SubserviceTypeID = 3001;
++            CustomerInfoMock.ServicesInfo = new List<ServicesInfo>();
++            CustomerInfoMock.ServicesInfo.Add(masterBundle);
++
++            var getCustomerProductAssignmentsByCustomerIdReq = Arg.Is<GetCustomerProductAssignmentsByCustomerIdRequest>(x => x.CustomerId == testParameter);
++            mockedGetCustomerProductAssignmentsByCustomerId.Process(getCustomerProductAssignmentsByCustomerIdReq,
++                Arg.Any<RequestInvokationEnvironment>()).Returns(new GetCustomerProductAssignmentsByCustomerIdResponse()
++                {
++                    CustomerProductAssignments = new List<CustomerProductAssignment>()
++                    {
++                        new CustomerProductAssignment(){StartDate = DateTime.Now.AddDays(-1),PurchasedProduct = new Product()}
++                    }
++                });
+ 
+-            var hasCreditReq = Arg.Is<CustomerHasCreditRequest>(x => x.CustomerInfo.CustomerID == 1);
+-            mockedHasCredit.Process(hasCreditReq, Arg.Any<RequestInvokationEnvironment>()).
+-                Returns(new CustomerHasCreditResponse() { HasCredit = true, MasterBundle = null });
+-
++            var getPriorityBundleInfoFromBundleInfosReq = new GetPriorityBundleInfoFromBundleInfosRequest() { };
++            mockedGetPriorityBundleInfoFromBundleInfos.Process(getPriorityBundleInfoFromBundleInfosReq,
++                Arg.Any<RequestInvokationEnvironment>()).Returns(new GetPriorityBundleInfoFromBundleInfosResponse()
++                {
++                    ResultType = ResultTypes.Ok,
++                    PriorityBundle = masterBundle.BundleDefinition
++                });
+             #endregion
+ 
+             #region AddUnbilled Mock
+@@ -412,8 +512,7 @@
+             #endregion
+ 
+             ChargeRecurring chargeRecurring = CreateDefaultObject.Create<ChargeRecurring>();
+-            CustomerInfo customerInfo = CreateDefaultObject.Create<CustomerInfo>();
+-            customerInfo.CustomerID = testParameter;
++          
+ 
+             var bizOp = new ApplyChargeAndScheduleBizOp();
+ 
+@@ -435,5 +534,102 @@
+ 
+             Assert.Throws<BusinessLogicErrorException>(() => bizOp.ProcessRequest(null, request));
+         }
++
++        [TestCase(100)]
++        public void ApplyChargeAndScheduleBizOp_MulitipleBaseBundle_ShouldReturnPriorityBundle(int testParameter)
++        {
++            CustomerInfo customerInfo = CreateDefaultObject.Create<CustomerInfo>();
++            customerInfo.CustomerID = testParameter;
++
++            #region AddChargeToCustomer Mock
++
++            var addChargeReq = Arg.Is<AddChargeToCustomerRequest>(x => x.Amount == 900);
++            var addchargeResp = CreateDefaultObject.Create<AddChargeToCustomerResponse>();
++            addchargeResp.ChargeCreated = CreateDefaultObject.Create<CustomerCharge>();
++            addchargeResp.ChargeCreated.Amount = 999;
++            mockedAddCharge.Process(addChargeReq, Arg.Any<RequestInvokationEnvironment>()).Returns(addchargeResp);
++
++            #endregion
++
++            #region CustomerHasCredit Mock
++
++            ServicesInfo masterBundle = CreateDefaultObject.Create<ServicesInfo>();
++            masterBundle.CreditLimit = 1000;
++            masterBundle.CREDITLIMITBASEBUNDLEID = testParameter;
++            masterBundle.BundleDefinition = CreateDefaultObject.Create<BundleInfo>();
++            masterBundle.BundleDefinition.BundleID = testParameter;
++            masterBundle.BundleDefinition.ServiceTypeID = 3000;
++            masterBundle.BundleDefinition.SubserviceTypeID = 3001;
++
++            ServicesInfo masterBundle2 = CreateDefaultObject.Create<ServicesInfo>();
++            masterBundle2.CreditLimit = 0;
++            masterBundle2.CREDITLIMITBASEBUNDLEID = testParameter + 1;
++            masterBundle2.BundleDefinition = CreateDefaultObject.Create<BundleInfo>();
++            masterBundle2.BundleDefinition.BundleID = testParameter + 1;
++            masterBundle2.BundleDefinition.ServiceTypeID = 3000;
++            masterBundle2.BundleDefinition.SubserviceTypeID = 3002;
++
++            customerInfo.ServicesInfo = new List<ServicesInfo>();
++            customerInfo.ServicesInfo.Add(masterBundle);
++            customerInfo.ServicesInfo.Add(masterBundle2);
++
++            var getCustomerProductAssignmentsByCustomerIdReq = Arg.Is<GetCustomerProductAssignmentsByCustomerIdRequest>(x => x.CustomerId == testParameter);
++            mockedGetCustomerProductAssignmentsByCustomerId.Process(getCustomerProductAssignmentsByCustomerIdReq,
++                Arg.Any<RequestInvokationEnvironment>()).Returns(new GetCustomerProductAssignmentsByCustomerIdResponse()
++                {
++                    CustomerProductAssignments = new List<CustomerProductAssignment>()
++                    {
++                        new CustomerProductAssignment(){StartDate = DateTime.Now.AddDays(-1),PurchasedProduct = new Product(){AssociatedBundle =  masterBundle.BundleDefinition}},
++                        new CustomerProductAssignment(){StartDate = DateTime.Now.AddDays(-1),PurchasedProduct = new Product(){AssociatedBundle =  masterBundle2.BundleDefinition}}
++                    }
++                });
++
++            mockedGetPriorityBundleInfoFromBundleInfos.Process(Arg.Any<GetPriorityBundleInfoFromBundleInfosRequest>(),
++              Arg.Any<RequestInvokationEnvironment>())
++              .Returns
++              (
++                  new GetPriorityBundleInfoFromBundleInfosResponse()
++                  {
++                      PriorityBundle = masterBundle.BundleDefinition,
++                      ResultType = ResultTypes.Ok
++                  }
++              );
++          
++            #endregion
++
++            #region AddUnbilled Mock
++
++            var addUnbilledReq = Arg.Is<AddUnbilledBalanceRequest>(x => x.ServicesInfo.BundleDefinition.BundleID == testParameter);
++            var addUnbilledResp = CreateDefaultObject.Create<AddUnbilledBalanceResponse>();
++            addUnbilledResp.ResultType = ResultTypes.Ok;
++            mockedAddUnbilledBalance.Process(addUnbilledReq, Arg.Any<RequestInvokationEnvironment>()).Returns(addUnbilledResp);
++
++            #endregion
++
++            ChargeNonRecurring chargeNonRecurring = CreateDefaultObject.Create<ChargeNonRecurring>();
++
++
++            var bizOp = new ApplyChargeAndScheduleBizOp();
++
++            var request = new ApplyChargeAndScheduleRequest()
++            {
++                ChargeToAdd = chargeNonRecurring,
++                Account = CreateDefaultObject.Create<Account>(),
++                CustomAmount = 900,
++                CustomerDealer = CreateDefaultObject.Create<DealerInfo>(),
++                CustomerProductAssignment = CreateDefaultObject.Create<CustomerProductAssignment>(),
++                Customer = customerInfo,
++                CycleNumber = 1,
++                InvoiceOfCharge = CreateDefaultObject.Create<Invoice>(),
++                PriceEffectiveDate = startDate,
++                Schedule = CreateDefaultObject.Create<CustomerChargeSchedule>(),
++                StartDate = startDate,
++                TaxDefinition = CreateDefaultObject.Create<TaxDefinition>(),
++                TypeOfCharges = ApplyChargeAndScheduleBizOp.TypeOfCharges.NonRecurringChargeAllowed
++            };
++
++            var resp = bizOp.ProcessRequest(null, request);
++            Assert.IsTrue(resp.ResultType == ResultTypes.Ok);
++        }
+     }
+ }
+\ No newline at end of file

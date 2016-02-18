@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+   <class name="com.etak.core.model.BankInfo,com.etak.core.model" table="CRM_CUSTOMERS_BANK" dynamic-update="true">
+     <id name="BankID" column="BANKID" type="Int32" length="4">
+       <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>    
+    <property name="BankCode" column="BANKCODE" type="String" length="25" />
+    <property name="BankName" column="BANKNAME" type="String" length="200" />
+    <property name="BankNumber" column="BANKNUMBER" type="String" length="50" />
+    <property name="Owner" column="OWNER" type="String" length="200" />
+    <property name="City" column="CITY" type="String" length="200" />
+    <property name="CountryID" column="COUNTRYID" type="Int32" length="4" />
+    <property name="IBAN" column="IBAN" type="String" length="100" />
+    <property name="Swift" column="SWIFT" type="String" length="100" />
+    <property name="CVC" column="CVC" type="String" length="20" />
+    <property name="ABI" column="ABI" type="String" length="10" />
+    <property name="CAB" column="CAB" type="String" length="10" />
+    <property name="ValidDate" column="VALIDDATE" type="String" length="7" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <property name="UserID" column="USERID" type="Int32" length="4" />
+    <property name="AccountCode" column="ACCOUNTCODE" type="String" length="50" />
+    <property name="StartDate" column="STARTDATE" type="DateTime" />
+     <property name="EndDate" column="ENDDATE" type="DateTime" />
+     
+     <many-to-one name="CustomerInfo" class="com.etak.core.model.CustomerInfo,com.etak.core.model">
+       <column name="CUSTOMERID" length="30" />
+     </many-to-one>
+     
+  </class>
+</hibernate-mapping>
+

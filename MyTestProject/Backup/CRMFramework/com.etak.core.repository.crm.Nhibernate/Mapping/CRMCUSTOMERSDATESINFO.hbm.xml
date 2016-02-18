@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.CRMCUSTOMERSDATESINFO,com.etak.core.model" table="CRM_CUSTOMERS_DATES">
+    <composite-id name="PKInfo" class="com.etak.core.model.CRMCUSTOMERSDATESPKINFO, com.etak.core.model">
+      <key-property name="CUSTOMERID" column="CUSTOMERID" type="Int32" length="4"/>
+      <key-property name="DATETYPEID" column="DATETYPEID" type="Int32" length="4"/>      
+    </composite-id>
+    <property name="DATEVALUE" column="DATEVALUE" type="DateTime" length="4"/>
+  </class>
+</hibernate-mapping>
+

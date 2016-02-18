@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.MVNOCustomerPropertyInfo,com.etak.core.model" table="CRM_MVNO_CUSTOMERS_PROPERTY" dynamic-update="true">
+    <id name="PropertyID" column="PROPERTYID" type="Int32" length="4">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="Nationality" column="NATIONALITY" type="Int32" length="4" />
+    <property name="JobTitle" column="JOBTITLE" type="Int32" length="4" />    
+    <property name="OtherJobTitle" column="OTHERJOBTITLE" type="String" length="200" />
+    <property name="DeliveryAddress" column="DELIVERYADDRESS" type="String" length="255" />
+    <property name="Imei" column="IMEI" type="String" length="50" />
+    <property name="AdvertisementBarring" column="ADVERTISEMENTBARRING" type="Int32" length="4" />
+    <property name="RecurringTopupStatus" column="RECURRINGTOPUPSTATUS" type="Int32" length="4" />
+    <property name="RecurringTopupDate" column="RECURRINGTOPUPDATE" type="DateTime" />
+    <property name="RecurringTopupAmount" column="RECURRINGTOPUPAMOUNT" type="Decimal" />
+    <property name="MinimumTopupStatus" column="MINIMUMTOPUPSTATUS" type="Int32" length="4" />
+    <property name="MinimumAmount" column="MINIMUMAMOUNT" type="Decimal" />
+    <property name="MinimumTopupAmount" column="MINIMUMTOPUPAMOUNT" type="Decimal" />
+    <property name="UPDATEDONLINE" column="UPDATEDONLINE" type="boolean" />
+    <property name="UPDATEDONLINEDATE" column="UPDATEDONLINEDATE" type="DateTime" />
+    <property name="FIRSTLOGINTIME" column="FIRSTLOGINTIME" type="DateTime" />
+    <property name="REGISTERDATE" column="REGISTERDATE" type="DateTime" />
+    <property name="AddedDate" column="ADDEDDATE" type="DateTime" />
+    <property name="FirstRoamingTime" column="FirstRoamingTime" type="DateTime" /> 
+    <property name="BenCustomerType" column="BENCUSTOMERTYPE" type="Int32" length="4" />
+    <property name="ENABLECELLID" column="ENABLECELLID" type="Int32" length="4" />
+    <property name="TeamID" column="TEAMID"  type="String" length="20" />
+    <property name="Handset" column="HANDSET"  type="String" length="25" />
+    <property name="GoalAlertingStatus" column="GOALALERTINGSTATUS"  type="Int32" length="4"/>
+    <property name="GoalUpdateStatus" column="GOALUPDATESTATUS"  type="Int32" length="4" />
+    <property name="GoalCredit" column="GOALCREDIT"  type="Int32" length="4" />
+    <property name="CustomerAgentTypeid" column="CUSTOMERAGENTTYPEID" type="Int32" length="4" />
+    <property name="AutoTopupStatus" column="AUTOTOPUPSTATUS" type="Int32" length="4" />
+    <property name="AutoTopupAmount" column="AUTOTOPUPAMOUNT" type="Decimal" />
+    <property name="AutoTopupThreshold" column="AUTOTOPUPTHRESHOLD" type="Decimal" />
+    <property name="AutoTopupSendFlag" column="AUTOTOPUPSENDFLAG" type="Int32" length="4" />
+    
+    <many-to-one name="CustomerInfo" class="com.etak.core.model.CustomerInfo,com.etak.core.model">
+      <column name="CUSTOMERID" length="30" />
+    </many-to-one>
+    
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,695 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.eventsystem.model</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.InformationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Usagedetailid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Servicetypeid">
+            <summary>
+            
+            </summary>	
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Subservicetypeid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Anumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Bnumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Cnumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Startdate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Enddate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Aleg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Bleg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Unitcategoryid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Currencyid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Ratetypeid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Rateplanid">
+            <summary>
+            Rate planed used to rate the call
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Rateplandetailid">
+            <summary>
+            Line of RatePlane used 
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Countrycode">
+            <summary>
+            Prefix of rateplan 
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Calltypeid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Calldirectionid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Timecategoryid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Imsi">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Amount1">
+            <summary>
+            Amount charged
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Amount2">
+            <summary>
+            STA Amount charged 
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Tariff1">
+            <summary>
+            Tariff charged amount for the first tariff applied 
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Tariff2">
+            <summary>
+            Tariff charged amount for the sencond tariff applied 
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Setup">
+            <summary>
+            Call setup amount
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Prompt">
+            <summary>
+            Call price of the promt
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Providerid">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Roamingzone1">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Roamingzone2">
+            <summary>
+            
+            </summary>		
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Roamingmscnumber">
+            <summary>
+            
+            </summary>		
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Promotionplanid">
+            <summary>
+            
+            </summary>		
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Promotionplandetailid">
+            <summary>
+            
+            </summary>		
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Tsc">
+            <summary>
+            
+            </summary>		
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Tsp">
+            <summary>
+            
+            </summary>		
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Gsnipv4">
+            <summary>
+            
+            </summary>		
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Promotionid">
+            <summary>
+            
+            </summary>		
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Promotionlimit">
+            <summary>
+            
+            </summary>		
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.Imei">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CallDetailRecord.CreditLimit">
+            <summary>
+            added by damon,2014-02-17
+            </summary>
+        </member>
+        <member name="T:com.etak.eventsystem.model.dto.InformationalTypes">
+            <summary>
+            Enum to indicate if the charge is informational only
+            </summary>
+        </member>
+        <member name="F:com.etak.eventsystem.model.dto.InformationalTypes.N">
+            <summary>
+            The charge is not informational
+            </summary>
+        </member>
+        <member name="F:com.etak.eventsystem.model.dto.InformationalTypes.Y">
+            <summary>
+            The charge is informational only
+            </summary>
+        </member>
+        <member name="T:com.etak.eventsystem.model.dto.ChargeStatuses">
+            <summary>
+            Enum to specofy the possible states of a charge
+            </summary>
+        </member>
+        <member name="F:com.etak.eventsystem.model.dto.ChargeStatuses.Test">
+            <summary>
+            Only defined for test purposes and should not visible/usable through normal
+                processes/API.
+            </summary>
+        </member>
+        <member name="F:com.etak.eventsystem.model.dto.ChargeStatuses.Active">
+            <summary>
+             The charge is usable
+            </summary>
+        </member>
+        <member name="F:com.etak.eventsystem.model.dto.ChargeStatuses.EndOfLife">
+            <summary>
+            The charge should not be presented as options in front end operations, but
+                all the schedules referring to this charge should continue.
+            </summary>
+        </member>
+        <member name="F:com.etak.eventsystem.model.dto.ChargeStatuses.Disabled">
+            <summary>
+            The charge is completely disabled, can't be used in any charge option, there
+            can't be any active scheduled charge to be able to set the charge to this state.
+            </summary>
+        </member>
+        <member name="T:com.etak.eventsystem.model.dto.TimesOfCharge">
+            <summary>
+            Indicates the time of charge is done InAdvance or Arrear
+            </summary>
+        </member>
+        <member name="T:com.etak.eventsystem.model.dto.ChargeDTO">
+            <summary>
+            DTO representation of a core Charge
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.ChargeDTO.Category">
+            <summary>
+             Facility to organize charges by category
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.ChargeDTO.CreateTime">
+            <summary>
+            Date in which the charge was created
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.ChargeDTO.GeneralLedgerAccount">
+            <summary>
+            General Ledger account for the charge
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.ChargeDTO.Id">
+            <summary>
+            unique Id of the charge
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.ChargeDTO.InformationalOnly">
+            <summary>
+            Indicates if this charge is informational only
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.ChargeDTO.ProrateQty">
+            <summary>
+            the number of prorateunit the proration is based upon.
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.ChargeDTO.ProrateUnit">
+            <summary>
+            the unit of time the proration is based upon
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.ChargeDTO.Status">
+            <summary>
+            the status of the charge, used to determine if the charge is operative
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.ChargeDTO.TypeOfTimeOfCharge">
+            <summary>
+             Wether the charge is in Advance or in Arrear
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.Amount">
+            <summary>
+            Amount of the charge
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.ChargeDefinitionId">
+            <summary>
+             The charge definition that has been applied
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.ChargingAccountId">
+            <summary>
+            the account that has been used to apply the charge to the customer
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.ChargingDate">
+            <summary>
+            The date in which charge is applied
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.Comments">
+            <summary>
+            a free format field for potential comments.
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.Currency">
+            <summary>
+            The currency that is used in field amount
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.CustomerId">
+            <summary>
+            Customer that who owns the product being charged
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.CycleNumber">
+            <summary>The number of the period the charge was applied for, for recurring charges.
+            The period number is the period number within the cycle.
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.ExternalReferenceCode">
+            <summary>
+             An external reference for the charge, if any
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.Id">
+            <summary>
+            Unique Id of the customer charge
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.InformationalAmount">
+            <summary>
+            The amount/value of currency for this charge that needs to be displayed
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.InvoiceId">
+            <summary>
+            The invoice that to which charge belongs
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.PeriodNumber">
+            <summary>
+            The number of the period the charge was applied for, for recurring charges.
+                The period number is the period number within the cycle.
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.CustomerProductAssignmentId">
+            <summary>
+            The purchase of a product that generated this charge
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.ScheduleId">
+            <summary>
+            The shedule that generated this charge in case of recurring charges.
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.TaxId">
+            <summary>
+            The definition of the tax types that apply to this charge
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeDTO.TaxAmount">
+            <summary>
+            Amount of tax of this charge.
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeScheduleDTO.Id">
+            <summary>
+            Unique Id of the CustomerChargeSchedule
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeScheduleDTO.ChargedAccountId">
+            <summary>
+            Account that is being charged
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeScheduleDTO.ChargeDefinitionId">
+            <summary>
+            The charge in the catalog that is being charged for this customer
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeScheduleDTO.CreateDate">
+            <summary>
+             When the schedule entity was created.
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeScheduleDTO.CurrentCyclenumber">
+            <summary>
+            The number of the cycle that will be charged at the nextchargedate
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeScheduleDTO.CustomerId">
+            <summary>
+            The Customer that owns the product that will be charged
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeScheduleDTO.NextChargeDate">
+            <summary>
+            The next date that charging needs to occur for that charge and that customer.
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeScheduleDTO.NextPeriodNumber">
+            <summary>
+            The number of the period that has will be charged at nextchargedate.
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeScheduleDTO.PriceEffectiveDate">
+            <summary>When the agreement with the customer is to use the price set at a given date
+            to charge him, the date for which the price needs to be used.
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeScheduleDTO.CustomerProductAssignmentId">
+            <summary>
+            The Purchase that generated this charge
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeScheduleDTO.Status">
+            <summary>
+            Current status of the charge
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.CustomerChargeScheduleDTO.UpdateDate">
+            <summary>
+            When the shedule was modified for the last time
+            </summary>
+        </member>
+        <member name="F:com.etak.eventsystem.model.dto.MVNOBusinessType.Unknown">
+            <summary>
+             Mobile MVNO
+            </summary>
+        </member>
+        <member name="F:com.etak.eventsystem.model.dto.MVNOBusinessType.Mobile">
+            <summary>
+             Mobile MVNO
+            </summary>
+        </member>
+        <member name="F:com.etak.eventsystem.model.dto.MVNOBusinessType.WIFI">
+            <summary>
+            WIFI MVNO
+            </summary>
+        </member>
+        <member name="F:com.etak.eventsystem.model.dto.MVNOBusinessType.CPS">
+            <summary>
+            CPS MVNO
+            </summary>
+        </member>
+        <member name="F:com.etak.eventsystem.model.dto.MVNOBusinessType.PRS">
+            <summary>
+            PRS MVNO
+            </summary>
+        </member>
+        <member name="T:com.etak.eventsystem.model.dto.EventSystemProfile">
+            <summary>
+            Autommaper profile for event system DTOs
+            </summary>
+        </member>
+        <member name="M:com.etak.eventsystem.model.dto.EventSystemProfile.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:com.etak.eventsystem.model.dto.EventSystemProfile.Configure">
+            <summary>
+            Implementation of profile to intialize the mapper
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.EventSystemProfile.ProfileName">
+            <summary>
+            Name of the profile
+            </summary>
+        </member>
+        <member name="T:com.etak.eventsystem.model.dto.EventToCoreModelHelper">
+            <summary>
+            Helper class to convert Core model to DTO version of the objects
+            </summary>
+        </member>
+        <member name="M:com.etak.eventsystem.model.dto.EventToCoreModelHelper.IgnoreAllNonExisting``2(AutoMapper.IMappingExpression{``0,``1})">
+            <summary>
+            Extension method copied from: https://cangencer.wordpress.com/2011/06/08/auto-ignore-non-existing-properties-with-automapper/
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TDestination"></typeparam>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.eventsystem.model.dto.EventToCoreModelHelper.#cctor">
+            <summary>
+            Intializes all the mappings
+            </summary>
+        </member>
+        <member name="M:com.etak.eventsystem.model.dto.EventToCoreModelHelper.FromCoreCharge(com.etak.core.model.revenueManagement.Charge)">
+            <summary>
+            Converts a core Invoice to a Event system DTO InvoiceDTO
+            </summary>
+            <param name="charge">the core object to convert</param>
+            <returns>the coverted object in DTO form</returns>
+        </member>
+        <member name="M:com.etak.eventsystem.model.dto.EventToCoreModelHelper.FromCoreCustomerCharge(com.etak.core.model.revenueManagement.CustomerCharge)">
+            <summary>
+            Converts a core Invoice to a Event system DTO InvoiceDTO
+            </summary>
+            <param name="invoice">the core object to convert</param>
+            <returns>the coverted object in DTO form</returns>
+        </member>
+        <member name="M:com.etak.eventsystem.model.dto.EventToCoreModelHelper.FromCoreInvoice(com.etak.core.model.revenueManagement.Invoice)">
+            <summary>
+            Converts a core Invoice to a Event system DTO InvoiceDTO
+            </summary>
+            <param name="invoice">the core object to convert</param>
+            <returns>the coverted object in DTO form</returns>
+        </member>
+        <member name="M:com.etak.eventsystem.model.dto.EventToCoreModelHelper.FromCoreCustomerChargeSchedule(com.etak.core.model.revenueManagement.CustomerChargeSchedule)">
+            <summary>
+            Converts a core CustomerChargeSchedule to a Event system DTO CustomerChargeScheduleDTO
+            </summary>
+            <param name="schedule">the core object to convert</param>
+            <returns>the coverted object in DTO form</returns>
+        </member>
+        <member name="M:com.etak.eventsystem.model.dto.EventToCoreModelHelper.FromCoreCustomerProductAssignment(com.etak.core.model.revenueManagement.CustomerProductAssignment)">
+            <summary>
+            Converts a core CustomerProductAssignment to a Event system DTO CustomerProductAssignmentDTO
+            </summary>
+            <param name="assn">the core object to convert</param>
+            <returns>the coverted object in DTO form</returns>
+        </member>
+        <member name="M:com.etak.eventsystem.model.dto.EventToCoreModelHelper.FromCoreAccount(com.etak.core.model.revenueManagement.Account)">
+            <summary>
+            Converts a core Account to a Event system DTO AccountDTO
+            </summary>
+            <param name="account">the core object to convert</param>
+            <returns>the coverted object in DTO form</returns>
+        </member>
+        <member name="M:com.etak.eventsystem.model.dto.EventToCoreModelHelper.FromCoreCustomerInfo(com.etak.core.model.CustomerInfo)">
+            <summary>
+            Converts a core CustomerInfo to a Event system DTO Customer
+            </summary>
+            <param name="custInfo">the core object to convert</param>
+            <returns>the coverted object in DTO form</returns>
+        </member>
+        <member name="M:com.etak.eventsystem.model.dto.EventToCoreModelHelper.FromCoreProductInfo(com.etak.core.model.ProductInfo)">
+            <summary>
+            Converts a core ProductInfo to a Event system DTO Product
+            </summary>
+            <param name="dealer">the core object to convert</param>
+            <returns>the coverted object in DTO form</returns>
+        </member>
+        <member name="M:com.etak.eventsystem.model.dto.EventToCoreModelHelper.FromCoreServicesInfo(com.etak.core.model.ServicesInfo)">
+            <summary>
+            Converts a core ServicesInfo to a Event system DTO Service
+            </summary>
+            <param name="servInfo">the core object to convert</param>
+            <returns>the coverted object in DTO form</returns>
+        </member>
+        <member name="M:com.etak.eventsystem.model.dto.EventToCoreModelHelper.FromCoreResourceMb(com.etak.core.model.ResourceMBInfo)">
+            <summary>
+            Converts a core ResourceMBInfo to a Event system DTO MobileLineService
+            </summary>
+            <param name="rmb">the core object to convert</param>
+            <returns>the coverted object in DTO form</returns>
+        </member>
+        <member name="M:com.etak.eventsystem.model.dto.EventToCoreModelHelper.FromCorePropertyInfo(com.etak.core.model.PropertyInfo)">
+            <summary>
+            Converts a core ResourceMBInfo to a Event system DTO MobileLineService
+            </summary>
+            <param name="propertyInfo">the core object to convert</param>
+            <returns>the coverted object in DTO form</returns>
+        </member>
+        <member name="M:com.etak.eventsystem.model.dto.EventToCoreModelHelper.FromCoreDealerInfo(com.etak.core.model.DealerInfo)">
+            <summary>
+            Converts a core DealerInfo to a Event system DTO Dealer
+            </summary>
+            <param name="dealer">the core object to convert</param>
+            <returns>the coverted object in DTO form</returns>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.InvoiceDTO.Id">
+            <summary>
+             Unique Id of the invoice
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.InvoiceDTO.ChargedCustomerId">
+            <summary>
+            The customer against whom the invoice is issued against.
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.InvoiceDTO.ChargingAccountId">
+            <summary>
+            The account that is charged with this Invoice
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.InvoiceDTO.EndDate">
+            <summary>
+            the last day that is billed through the invoice.
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.InvoiceDTO.GeneratingBillRunId">
+            <summary>
+            The BillRun that generated this Invoice
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.InvoiceDTO.InvoiceFileName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.InvoiceDTO.LegalInvoiceNumber">
+            <summary>the legal invoice number, the number of the invoice as presented on the bill.
+            This number is the actual reference of the legal document that an invoice
+            is.  There are different legal requirements to be applied when generating
+            those numbers, depending on the country laws.        
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.InvoiceDTO.StartDate">
+            <summary>
+            the first day that is billed through the invoice.
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.dto.InvoiceDTO.Status">
+            <summary>
+            Current status of the invoice
+            </summary>     
+        </member>
+        <member name="T:com.etak.eventsystem.model.events.dre.UsageChargeEvent">
+            <summary>
+            Event generated by the DRE after any suscessfull charge complete
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.events.dre.UsageChargeEvent.ChargedCustomer">
+            <summary>
+            Charged Customer
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.events.dre.UsageChargeEvent.CustomerDealer">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.events.dre.UsageChargeEvent.CDRs">
+            <summary>
+            List of usage details
+            </summary>
+        </member>
+        <member name="T:com.etak.eventsystem.model.events.dre.UsageChargeEventFromDre">
+            <summary>
+            Event generated by the DRE after any suscessfull charge complete
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.events.dre.UsageChargeEventFromDre.CustomerID">
+            <summary>
+            Charged Customer
+            </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.events.dre.UsageChargeEventFromDre.DealerID">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:com.etak.eventsystem.model.events.dre.UsageChargeEventFromDre.CDRs">
+            <summary>
+            List of usage details
+            </summary>
+        </member>
+    </members>
+</doc>

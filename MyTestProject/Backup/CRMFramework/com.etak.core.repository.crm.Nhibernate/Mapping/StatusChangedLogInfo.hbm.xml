@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.StatusChangedLogInfo,com.etak.core.model" table="CRM_LIFECYCLE_RESOURCE_STATUSCHANGED_LOG">
+    <id name="LogId" column="LOGID" type="Int64"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>
+    <property name="CustomerId" column="CUSTOMERID" type="Int32" length="4" />
+    <property name="DealerId" column="DEALERID" type="Int32" length="4" />
+    <property name="DealerName" column="DEALERNAME" type="String" length="200" />
+    <property name="CustomerName" column="CUSTOMERNAME" type="String" length="300" />
+    <property name="ResourceTypeId" column="RESOURCETYPEID" type="Int32" length="4" />
+    <property name="ResourceTypeName" column="RESOURCETYPENAME" type="String" length="200" />
+    <property name="ResourceNumber" column="RESOURCENUMBER" type="String" length="300" />
+    <property name="CurrentStatusId" column="CURRENTSTATUSID" type="Int32" length="4" />
+    <property name="NextStatusId" column="NEXTSTATUSID" type="Int32" length="4" />    
+    <property name="EventId" column="EVENTID" type="Int32" length="4" />
+    <property name="EventName" column="EVENTNAME" type="String" length="200" />
+    <property name="UserId" column="USERID" type="Int32" length="4" />
+    <property name="UserName" column="USERNAME" type="String" length="200" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+  </class>
+
+</hibernate-mapping>

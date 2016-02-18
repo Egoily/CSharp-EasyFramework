@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.ExecuteTraceInfo,com.etak.core.model" table="CRM_EXECUTE_TRACE" >
+    <id name="ID" column="ID" type="Int64"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>
+    <property name="TYPEID" column="TYPEID" type="Int32" length="4" />
+    <property name="ASSEMBLYNAME" column="ASSEMBLYNAME" type="String" length="200" />
+    <property name="CLASSNAME" column="CLASSNAME" type="String" length="200" />
+    <property name="METHODNAME" column="METHODNAME" type="String" length="200" />
+    <property name="INPUTPARAM" column="INPUTPARAM" type="BinaryBlob" />
+    <property name="BEGINDATE" column="BEGINDATE" type="Timestamp" />
+    <property name="ENDDATE" column="ENDDATE" type="Timestamp" />
+    <property name="DATASIZE" column="DATASIZE" type="String" length="500" />
+    <property name="PRECPULOAD" column="PRECPULOAD" type="String" length="100" />
+    <property name="PREMEMORYSTATUS" column="PREMEMORYSTATUS" type="String" length="100" />
+    <property name="POSTCPULOAD" column="POSTCPULOAD" type="String" length="100" />
+    <property name="POSTMEMORYSTATUS" column="POSTMEMORYSTATUS" type="String" length="100" />
+    <property name="TRACEORDER" column="TRACEORDER" type="String" length="50" />
+    <property name="DESCRIPTION" column="DESCRIPTION" type="String" length="500" />
+    <property name="STEP" column="STEP" type="Int32" length="4" />
+  </class>
+
+</hibernate-mapping>

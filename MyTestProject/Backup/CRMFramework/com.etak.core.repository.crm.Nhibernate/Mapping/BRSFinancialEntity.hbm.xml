@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+<class name="com.etak.core.model.BRSFinancialEntity,com.etak.core.model" table="CRM_MVNO_BRS_FINANCIALENTITY" >
+<id name="EntityCode" column="ENTITYCODE" type="Int32"  length="4" unsaved-value="0">
+   <generator class="native" />
+</id>
+<property name="EntityName" column="ENTITYNAME" type="String" length="20" />
+<property name="Description" column="DESCRIPTION" type="String" length="1000" />
+</class>
+</hibernate-mapping>

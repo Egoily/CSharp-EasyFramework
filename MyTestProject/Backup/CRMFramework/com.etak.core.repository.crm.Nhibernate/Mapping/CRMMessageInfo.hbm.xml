@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.CRMMessageInfo,com.etak.core.model" table="SYS25_MESSAGE" >
+    <cache usage="nonstrict-read-write" region="SystemSettings"/>
+    <id name="ID" column="ID" type="Int64"  length="8" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>
+    <property name="MessageID" column="MessageID" type="Int64" length="8" />
+    <property name="SourceID" column="SourceID" type="Int64" length="8" />
+    <property name="LanguageID" column="LanguageID" type="Int32" length="4" />
+    <property name="TypeCode" column="TypeCode" type="Int32" length="4" />
+    <property name="UserMessageCaption" column="UserMessageCaption" type="String" length="100" />
+    <property name="UserMessageText" column="UserMessageText" type="String" length="1024" />
+    <property name="SystemMessageCaption" column="SystemMessageCaption" type="String" length="100" />
+    <property name="SystemMessageText" column="SystemMessageText" type="String" length="2048" />
+    <property name="UpdateDate" column="UpdateDate" type="DateTime" />
+    <property name="State" column="State" type="Int32" length="4" />
+  </class>
+
+</hibernate-mapping>

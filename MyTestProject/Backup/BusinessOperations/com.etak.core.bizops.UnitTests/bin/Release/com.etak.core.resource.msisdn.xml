@@ -1,0 +1,706 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.resource.msisdn</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.InformationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.CreateDealerNumber.CreateDealerNumberRequest">
+            <summary>
+            Create DealerNumberInfo Request
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.CreateDealerNumber.CreateDealerNumberRequest.DealerNumberInfo">
+            <summary>
+            DealerNumberInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.CreateDealerNumber.CreateDealerNumberResponse">
+            <summary>
+            Create DealerNumberInfo response
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.CreateDealerNumber.CreateDealerNumberResponse.DealerNumberInfo">
+            <summary>
+            DealerNumberInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.CreateNumberInfo.CreateNumberInfoRequest">
+            <summary>
+            Create NumberInfo Request
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.CreateNumberInfo.CreateNumberInfoRequest.NumberInfo">
+            <summary>
+            NumberInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.CreateNumberInfo.CreateNumberInfoResponse">
+            <summary>
+            Create NumberInfo Response
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.CreateNumberInfo.CreateNumberInfoResponse.NumberInfo">
+            <summary>
+            NumberInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.CreateNumberProperty.CreateNumberPropertyRequest">
+            <summary>
+            Create NumberProperty Request
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.CreateNumberProperty.CreateNumberPropertyRequest.NumberPropertyInfo">
+            <summary>
+            NumberPropertyInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.CreateNumberProperty.CreateNumberPropertyResponse">
+            <summary>
+            Create NumberPropertyInfo response
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.CreateNumberProperty.CreateNumberPropertyResponse.NumberPropertyInfo">
+            <summary>
+            NumberPropertyInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.GetDealerNumberByResourceId.GetDealerNumberByResourceIdRequest">
+            <summary>
+            Get Dealernumber by resourceID
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.GetDealerNumberByResourceId.GetDealerNumberByResourceIdRequest.ResourceId">
+            <summary>
+            ResourceId
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.GetDealerNumberByResourceId.GetDealerNumberByResourceIdResponse">
+            <summary>
+            Get Dealre number by resource id response
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.GetDealerNumberByResourceId.GetDealerNumberByResourceIdResponse.DealerNumberInfo">
+            <summary>
+            DelerNumerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.GetDealerNumberByResource.GetDealerNumberByResourceRequest">
+            <summary>
+            Get Dealer number by resoure request
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.GetDealerNumberByResource.GetDealerNumberByResourceRequest.Msisdn">
+            <summary>
+            Msisdn
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.GetDealerNumberByResource.GetDealerNumberByResourceResponse">
+            <summary>
+            GetDealerNumberByResourceResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.GetDealerNumberByResource.GetDealerNumberByResourceResponse.DealerNumberInfo">
+            <summary>
+            DealerNumberInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.GetMVNOAPNIPPoolByMsisdn.GetMVNOAPNIPPoolByMsisdnRequest">
+            <summary>
+            GetMVNOAPNIPPoolByMsisdnRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.GetMVNOAPNIPPoolByMsisdn.GetMVNOAPNIPPoolByMsisdnRequest.Msisdn">
+            <summary>
+            Msisdn
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.GetMVNOAPNIPPoolByMsisdn.GetMVNOAPNIPPoolByMsisdnResponse">
+            <summary>
+            GetMVNOAPNIPPoolByMsisdnResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.GetMVNOAPNIPPoolByMsisdn.GetMVNOAPNIPPoolByMsisdnResponse.MvnoapnipPoolInfo">
+            <summary>
+            MVnoapnIPPoolinfo List
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.GetNumberByCategoryAndVmoAndStatusIdIn.GetNumberByCategoryAndVmoAndStatusIdInRequest">
+            <summary>
+            GetNumberByCategoryAndVmoAndStatusIdInRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.GetNumberByCategoryAndVmoAndStatusIdIn.GetNumberByCategoryAndVmoAndStatusIdInRequest.CategoryId">
+            <summary>
+            CategoryId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.GetNumberByCategoryAndVmoAndStatusIdIn.GetNumberByCategoryAndVmoAndStatusIdInRequest.Vmo">
+            <summary>
+            VMO
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.GetNumberByCategoryAndVmoAndStatusIdIn.GetNumberByCategoryAndVmoAndStatusIdInRequest.StatusId">
+            <summary>
+            StatusID
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.GetNumberByCategoryAndVmoAndStatusIdIn.GetNumberByCategoryAndVmoAndStatusIdInRequest.MaxElements">
+            <summary>
+            MaxElements
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.GetNumberByCategoryAndVmoAndStatusIdIn.GetNumberByCategoryAndVmoAndStatusIdInResponse">
+            <summary>
+            GetNumberByCategoryAndVmoAndStatusIdInResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.GetNumberByCategoryAndVmoAndStatusIdIn.GetNumberByCategoryAndVmoAndStatusIdInResponse.NumberInfo">
+            <summary>
+            NumberInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.GetNumberByResource.GetNumberByResourceRequest">
+            <summary>
+            GetNumberByResourceRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.GetNumberByResource.GetNumberByResourceRequest.Resource">
+            <summary>
+            Resource
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.GetNumberByResource.GetNumberByResourceResponse">
+            <summary>
+            GetNumberByResourceResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.GetNumberByResource.GetNumberByResourceResponse.NumberInfo">
+            <summary>
+            NumberInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.GetNumberPropertyByResource.GetNumberPropertyByResourceRequest">
+            <summary>
+            GetNumberPropertyByResourceRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.GetNumberPropertyByResource.GetNumberPropertyByResourceRequest.Resource">
+            <summary>
+            Resource
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.GetNumberPropertyByResource.GetNumberPropertyByResourceResponse">
+            <summary>
+            GetNumberPropertyByResourceResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.GetNumberPropertyByResource.GetNumberPropertyByResourceResponse.NumberPropertyInfo">
+            <summary>
+            NumberPropertyInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.InitNumberMS.InitNumberRequest">
+            <summary>
+            InitNumberRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.InitNumberMS.InitNumberRequest.NumberPropertyInfo">
+            <summary>
+            NumberPropertyInfo
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.InitNumberMS.InitNumberRequest.CustomerInfo">
+            <summary>
+            CustomerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.DeleteNumberMS.DeleteNumberRequest">
+            <summary>
+            Internal openation DeleteNpmRequest request
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.DeleteNumberMS.DeleteNumberRequest.NumberPropertyInfo">
+            <summary>
+            NumberPropertyInfo
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.DeleteNumberMS.DeleteNumberRequest.CustomerInfo">
+            <summary>
+            CustomerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.InitNumberMS.InitNumberResponse">
+            <summary>
+            InitNumberResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.InitNumberMS.InitNumberResponse.NumberPropertyInfo">
+            <summary>
+            NumberPropertyInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.DeleteNumberMS.DeleteNumberResponse">
+            <summary>
+            Delete numer response
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.DeleteNumberMS.DeleteNumberResponse.NumberPropertyInfo">
+            <summary>
+            NumberPropertyInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.InstallNumberMS.InstallNumberRequest">
+            <summary>
+            InstallNumberRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.InstallNumberMS.InstallNumberRequest.NumberPropertyInfo">
+            <summary>
+            NumberPropertyInfo
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.InstallNumberMS.InstallNumberRequest.CustomerInfo">
+            <summary>
+            CustomerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.ActivateNumberMS.ActivateNumberRequest">
+            <summary>
+            Internal openation ActivateNpmRequest request
+            </summary>
+            <author>IgnasiG</author>
+            <datetime>13/10/2014-16:20</datetime>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.ActivateNumberMS.ActivateNumberRequest.NumberPropertyInfo">
+            <summary>
+            NumberPropertyInfo
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.ActivateNumberMS.ActivateNumberRequest.CustomerInfo">
+            <summary>
+            CustomerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.InstallNumberMS.InstallNumberResponse">
+            <summary>
+            InstallNumberResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.InstallNumberMS.InstallNumberResponse.NumberPropertyInfo">
+            <summary>
+            NumberPropertyInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.ActivateNumberMS.ActivateNumberResponse">
+            <summary>
+            ActivateNumberResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.ActivateNumberMS.ActivateNumberResponse.NumberPropertyInfo">
+            <summary>
+            NumberPropertyInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.CoolDownNumberMS.CoolDownNumberRequest">
+            <summary>
+            Cool Down number request
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.CoolDownNumberMS.CoolDownNumberRequest.NumberPropertyInfo">
+            <summary>
+            NumberPropertyInfo
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.CoolDownNumberMS.CoolDownNumberRequest.EndDate">
+            <summary>
+            EndDate
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.CoolDownNumberMS.CoolDownNumberRequest.CustomerInfo">
+            <summary>
+            CustomerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.CoolDownNumberMS.CoolDownNumberResponse">
+            <summary>
+             Cool down number reponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.CoolDownNumberMS.CoolDownNumberResponse.NumberPropertyInfo">
+            <summary>
+            NumberPropertyInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.RecycleIpByMsisdn.RecycleIpByMsisdnRequest">
+            <summary>
+            RecycleIpByMsisdnRequest
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.message.RecycleIpByMsisdn.RecycleIpByMsisdnRequest.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.RecycleIpByMsisdn.RecycleIpByMsisdnRequest.LastModifyTime">
+            <summary>
+            LastModifyTime
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.RecycleIpByMsisdn.RecycleIpByMsisdnRequest.Msisdn">
+            <summary>
+            Msisdn
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.RecycleIpByMsisdn.RecycleIpByMsisdnResponse">
+            <summary>
+            RecycleIpByMsisdnResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.RecycleIpByMsisdn.RecycleIpByMsisdnResponse.MvnoapnipPoolInfos">
+            <summary>
+            MvnoapnipPoolInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.ReserveMsisdnMS.ReserveMsisdnRequest">
+            <summary>
+            Request to Reserve an MSISDN, changing his Init Status to Reserved Status
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.message.ReserveMsisdnMS.ReserveMsisdnRequest.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.ReserveMsisdnMS.ReserveMsisdnRequest.UpdateTime">
+            <summary>
+            UpdateTime
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.ReserveMsisdnMS.ReserveMsisdnRequest.NumberPropertyInfo">
+            <summary>
+            numberPropertyInfo obtained by msisdn
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.ReserveMsisdnMS.ReserveMsisdnRequest.CustomerInfo">
+            <summary>
+            CustomerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.ReserveMsisdnMS.ReserveMsisdnResponse">
+            <summary>
+            Response from ReserveMsisdn Order.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.ReserveMsisdnMS.ReserveMsisdnResponse.NumberPropertyInfo">
+            <summary>
+            numberPropertyInfo obtained by msisdn
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.UnReserveMsisdnMS.UnReserveMsisdnRequest">
+            <summary>
+            Request to UnReserve an MSISDN, changing his Reserved Status to Init Status
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.message.UnReserveMsisdnMS.UnReserveMsisdnRequest.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.UnReserveMsisdnMS.UnReserveMsisdnRequest.UpdateTime">
+            <summary>
+            UpdateTime
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.UnReserveMsisdnMS.UnReserveMsisdnRequest.NumberPropertyInfo">
+            <summary>
+            numberPropertyInfo obtained by msisdn
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.UnReserveMsisdnMS.UnReserveMsisdnRequest.CustomerInfo">
+            <summary>
+            CustomerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.UnReserveMsisdnMS.UnReserveMsisdnResponse">
+            <summary>
+            Response from UnReserveMsisdn Order.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.UnReserveMsisdnMS.UnReserveMsisdnResponse.NumberPropertyInfo">
+            <summary>
+            numberPropertyInfo obtained by msisdn
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.UpdateNumberInfo.UpdateNumberInfoRequest">
+            <summary>
+            Request of UpdateNumberInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.UpdateNumberInfo.UpdateNumberInfoRequest.NumberInfo">
+            <summary>
+            NumberInfo to be updated
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.message.UpdateNumberInfo.UpdateNumberInfoResponse">
+            <summary>
+            Response of UpdateNumberInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.msisdn.message.UpdateNumberInfo.UpdateNumberInfoResponse.NumberInfo">
+            <summary>
+            NumberInfo that has been updated
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.CreateDealerNumberMS">
+            <summary>
+            Add Delaer Number MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.CreateDealerNumberMS.Process(com.etak.core.resource.msisdn.message.CreateDealerNumber.CreateDealerNumberRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.CreateNumberInfoMS">
+            <summary>
+            Add MSISDN to number Pool MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.CreateNumberInfoMS.Process(com.etak.core.resource.msisdn.message.CreateNumberInfo.CreateNumberInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+             Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.CreateNumberPropertyMS">
+            <summary>
+            Add NumberProperty MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.CreateNumberPropertyMS.Process(com.etak.core.resource.msisdn.message.CreateNumberProperty.CreateNumberPropertyRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            PRocess
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.GetDealerNumberByResourceIdMS">
+            <summary>
+            Get Dealer number by ResourceID MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.GetDealerNumberByResourceIdMS.Process(com.etak.core.resource.msisdn.message.GetDealerNumberByResourceId.GetDealerNumberByResourceIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.GetDealerNumberByResourceMS">
+            <summary>
+            Get Dealer Numebr by Resource
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.GetDealerNumberByResourceMS.Process(com.etak.core.resource.msisdn.message.GetDealerNumberByResource.GetDealerNumberByResourceRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.GetMVNOAPNIPPoolByMsisdnMS">
+            <summary>
+            Get MVNO APNIPPool By Msisdn
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.GetMVNOAPNIPPoolByMsisdnMS.Process(com.etak.core.resource.msisdn.message.GetMVNOAPNIPPoolByMsisdn.GetMVNOAPNIPPoolByMsisdnRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.GetNumberByCategoryAndVmoAndStatusIdInMS">
+            <summary>
+            Get number by category,mvno,statusID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.GetNumberByCategoryAndVmoAndStatusIdInMS.Process(com.etak.core.resource.msisdn.message.GetNumberByCategoryAndVmoAndStatusIdIn.GetNumberByCategoryAndVmoAndStatusIdInRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.GetNumberByResourceMS">
+            <summary>
+            Get number by Resource MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.GetNumberByResourceMS.Process(com.etak.core.resource.msisdn.message.GetNumberByResource.GetNumberByResourceRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.GetNumberPropertyByResourceMS">
+            <summary>
+            Get numberproperty by Resource MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.GetNumberPropertyByResourceMS.Process(com.etak.core.resource.msisdn.message.GetNumberPropertyByResource.GetNumberPropertyByResourceRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.UpdateNumberInfoMS">
+            <summary>
+            MS : Update NumberInfo
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.UpdateNumberInfoMS.Process(com.etak.core.resource.msisdn.message.UpdateNumberInfo.UpdateNumberInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process to update NumberInfo
+            </summary>
+            <param name="request">UpdateNumberInfoRequest</param>
+            <param name="invoker">RequestInvokationEnvironment</param>
+            <returns>UpdateNumberInfoResponse</returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.DeleteNumberMS">
+            <summary>
+             Delete Number MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.DeleteNumberMS.Process(com.etak.core.resource.msisdn.message.DeleteNumberMS.DeleteNumberRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.InitNumberMS">
+            <summary>
+            Init Numer MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.InitNumberMS.Process(com.etak.core.resource.msisdn.message.InitNumberMS.InitNumberRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.operation.InstallNumberMS">
+            <summary>
+            Install number MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.operation.InstallNumberMS.Process(com.etak.core.resource.msisdn.message.InstallNumberMS.InstallNumberRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            <datetime>13/10/2014-16:00</datetime>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.ActivateNumberMS">
+            <summary>
+            MicroService: activate NumberPropertyInfo
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.ActivateNumberMS.Process(com.etak.core.resource.msisdn.message.ActivateNumberMS.ActivateNumberRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            <returns></returns>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.CoolDownNumberMS">
+            <summary>
+            Cool Down Number MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.CoolDownNumberMS.Process(com.etak.core.resource.msisdn.message.CoolDownNumberMS.CoolDownNumberRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.ReserveMsisdnMS">
+            <summary>
+            Class to Reserve and MSISDN, from Init Status to Reserved Status
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.ReserveMsisdnMS.Process(com.etak.core.resource.msisdn.message.ReserveMsisdnMS.ReserveMsisdnRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.UnReserveMsisdnMS">
+            <summary>
+            Unreserve Msisdn MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.UnReserveMsisdnMS.Process(com.etak.core.resource.msisdn.message.UnReserveMsisdnMS.UnReserveMsisdnRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.msisdn.microservices.RecycleIpByMsisdnMS">
+            <summary>
+            RecycleIP by Msisdn MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.msisdn.microservices.RecycleIpByMsisdnMS.Process(com.etak.core.resource.msisdn.message.RecycleIpByMsisdn.RecycleIpByMsisdnRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

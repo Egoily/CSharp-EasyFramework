@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="com.etak.core.model.RmPromotionGroupInfo,com.etak.core.model" table="RM_PROMOTIONGROUPS" >
+    <cache usage="nonstrict-read-write" region="UserDealer"/>
+    <id name="PromotionGroupID" column="PROMOTIONGROUPID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="MvnoID" column="MVNOID" type="Int32" length="4" />
+    <property name="GroupName" column="NAME" type="String" length="255" />
+    <property name="Description" column="DESCRIPTION" type="String" length="255" />
+    <property name="Price" column="PRICE" type="Decimal" />
+    <property name="Validity" column="VALIDITY" type="Int32" length="4" />
+    <property name="Priority" column="PRIORITY" type="Int32" length="4" />
+    <property name="GroupType" column="GROUPTYPE" type="Int32" length="4" />
+    <property name="GroupCategory" column="GROUPCATEGORY" type="Int32" length="4" />
+    <property name="StartPeriod" column="STARTPERIOD" type="Int32" length="4" />
+    <property name="EndPeriod" column="ENDPERIOD" type="Int32" length="4" />
+    <property name="GracePeriod" column="GRACEPERIOD" type="Int32" length="4" />
+    <bag name="Members" lazy="true" cascade="save-update,persist" inverse="true">
+      <cache usage="nonstrict-read-write" region="UserDealer"/>
+      <key column="PromotionGroupID" />
+      <one-to-many class="com.etak.core.model.RmPromotionGroupMember,com.etak.core.model" />
+    </bag>
+    <bag name="Thresholds" lazy="true" cascade="save-update,persist" inverse="true">
+      <cache usage="nonstrict-read-write" region="UserDealer"/>
+      <key column="PromotionGroupID" />
+      <one-to-many class="com.etak.core.model.RmPromotionGroupMember,com.etak.core.model" />
+    </bag>
+    <bag name="GroupRules" lazy="true" cascade="save-update,persist">
+      <key column="PromotionGroupID"/>
+      <one-to-many class="com.etak.core.model.PromotionGroupBusinessRules, com.etak.core.model"/>
+    </bag>
+
+  </class>
+
+</hibernate-mapping>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.SIMCardMappingInfo,com.etak.core.model" table="CRM_CUSTOMERS_IMSI_MAP" >
+    <id name="IMSI_T" column="TEMPIMSI" type="String" length="32"  unsaved-value="any">
+      <generator class="assigned" />
+    </id>
+    <property name="MSISDN_T" column="TEMPMSISDN" type="String" />
+    <property name="IMSI_P" column="PERMANENTIMSI" type="String" length="32" />
+  </class>
+</hibernate-mapping>

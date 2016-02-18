@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.subscription</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.informationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.subscription.helper.SubscriptionBindHelper">
+            <summary>
+            Helper to bind all subscription microservices to MicroServiceManager
+            </summary>
+        </member>
+        <member name="M:com.etak.core.subscription.helper.SubscriptionBindHelper.LoadMicroservices">
+            <summary>
+            Register all microservice to MicroServiceManager
+            </summary>
+        </member>
+    </members>
+</doc>

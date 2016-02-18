@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.PromotionGroupBusinessRules, com.etak.core.model" table="CRM_BUSINESSRULES_PROMOTIONGROUPS" >
+    <cache usage="nonstrict-read-write" region="UserDealer"/>
+    <id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="Rank" column="Rank" type="short"  />
+    <many-to-one name="PromotionGroupInfo" class="com.etak.core.model.RmPromotionGroupInfo,com.etak.core.model">
+      <column name="PromotionGroupID" />
+    </many-to-one>
+    <many-to-one name="RuleInfo" class="com.etak.core.model.PromotionGroupRule,com.etak.core.model">
+      <column name="RuleID" />
+    </many-to-one>
+  </class>
+</hibernate-mapping>
+

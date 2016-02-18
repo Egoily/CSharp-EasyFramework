@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.MVNOPromotionSMSConfig,com.etak.core.model" table="CRM_MVNO_PROMOTION_SMS_CONFIG" >
+    <cache usage="nonstrict-read-write" region="UserDealer"/>
+    <id name="ID" column="ID" type="Int32"  length="4">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="DealerID" column="DEALERID" type="Int32" length="4" />
+    <property name="ConfigID" column="CONFIGID" type="Int32" length="4" />
+    <property name="ConfigName" column="CONFIGNAME" type="String" length="200" />
+    <property name="SMSType" column="SMSTYPE" type="Int32" length="4" />
+    <property name="Status" column="STATUS" type="Int32" length="4" />
+    <property name="TemplateID" column="TEMPLATEID" type="Int32" length="4" />
+    <property name="LIMIT" column="LIMIT" type="Int32" length="4" />
+    <property name="LIMITUNIT" column="LIMITUNIT" type="Int32" length="4" />
+    <property name="PROMOTIONPLANID" column="PROMOTIONPLANID" type="Int32" length="4" />
+    <property name="PROMOTIONPLANDETAILID" column="PROMOTIONPLANDETAILID" type="Int32" length="4" />
+  </class>
+</hibernate-mapping>

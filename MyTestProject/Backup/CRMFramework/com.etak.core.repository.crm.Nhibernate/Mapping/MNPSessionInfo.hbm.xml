@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.MNPSessionInfo,com.etak.core.model" table="CRM_MNP_SessionInfo" >
+    <id name="ID" column="ID" type="Int32">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="SessionId" column="SESSIONID" type="String" length="200" />
+    <property name="OperatorCode" column="OPERATORCODE" type="String" length="50" />
+    <property name="CreateTime" column="CREATETIME" type="DateTime" length="50" />
+    <property name="UserName" column="USERNAME" type="String" length="20" />
+  </class>
+</hibernate-mapping>
+

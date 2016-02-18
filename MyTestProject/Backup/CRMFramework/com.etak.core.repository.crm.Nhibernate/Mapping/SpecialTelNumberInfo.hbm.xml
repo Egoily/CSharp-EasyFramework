@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.SpecialTelNumberInfo,com.etak.core.model" table="CRM_CUSTOMERS_SPECIALTELNUMBER">
+    <id name="SecurityNumberId" column="SECURITYNUMBERID" type="Int64" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>
+    <property name="CustomerId" column="CUSTOMERID" type="Int32" length="4" />
+    <property name="PhoneNumber" column="PHONENUMBER" type="String" length="50" />
+    <property name="Type" column="TYPE" type="Int32" length="4" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <property name="Description" column="DECRIPTION" type="String" length="200" />
+
+  </class>
+
+</hibernate-mapping>

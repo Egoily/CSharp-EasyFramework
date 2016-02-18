@@ -1,0 +1,1908 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.operation</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.InformationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.operation.aaa.AuthenticationHelper">
+            <summary>
+            Helper class to authenticate the credentials provided.
+            </summary> 
+        </member>
+        <member name="F:com.etak.core.operation.aaa.AuthenticationHelper.SingleErrorTextMessage">
+            <summary>
+            We should only give an error message to be sure that we don't give extra clues
+            about our system, as for instance (this user exists, but the password is wrong)
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.aaa.AuthenticationHelper.Authenticate(System.String,System.String)">
+            <summary>
+            Provides the user authentication.
+            </summary>
+            <param name="user">the id of user</param>
+            <param name="password">the password of user</param>
+            <exception cref="T:com.etak.core.operation.contract.exceptions.AuthenticationErrorException"> Thrown if user is invalid.</exception>
+            <returns>if success, return the user entity. otherwise, will throw exceptions.</returns>
+        </member>
+        <member name="T:com.etak.core.operation.aaa.AuthorizationHelper">
+            <summary>
+            Helper class to check that a user can have access to the specified dealer
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.aaa.AuthorizationHelper.SingleErrorTextMessage">
+            <summary>
+            We should only give an error message to be sure that we don't give extra clues
+            about our system, as for instance (this user exists, but the password is wrong)
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.aaa.AuthorizationHelper.Authorize(com.etak.core.model.LoginInfo,com.etak.core.model.DealerInfo)">
+            <summary>
+            Check if user has permission to the dealer.
+            </summary>
+            <param name="LoginInfo">the instance of user</param>
+            <param name="dealer">the instance of dealer</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if any of the input parameters is null</exception>
+            <exception cref="T:com.etak.core.operation.contract.exceptions.AuthorizationErrorException">Thrown if any of the  is null</exception>
+            <returns>void</returns>
+        </member>
+        <member name="M:com.etak.core.operation.aaa.AuthorizationHelper.TryAuthorize(com.etak.core.model.LoginInfo,com.etak.core.model.DealerInfo)">
+            <summary>
+            Check if user has permission to the dealer.
+            </summary>
+            <param name="LoginInfo">the instance of user</param>
+            <param name="dealer">the instance of dealer</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if any of the input parameters is null</exception>
+            <returns>true if the authorization was sucessfull, false if the authorization failed</returns>
+        </member>
+        <member name="T:com.etak.core.operation.contract.BasicOperationConfiguration">
+            <summary>
+            Class to store basic properties that applies to all possible configurations. 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.operation.contract.BasicOperationConfiguration.SendSucessfulOperationsToEventSystem">
+            <summary>
+            Indicates whether an event should be sent to the event system
+            in case the operation is sucessfully completed
+            </summary>
+        </member>
+        <member name="T:com.etak.core.operation.contract.exceptions.AuthenticationErrorException">
+            <summary>
+            Exception thrown when there is an authentication problem
+            Missing user or password, incorrect user name password combination...
+            </summary>
+        </member>
+        <member name="T:com.etak.core.operation.contract.exceptions.ElephantTalkBaseException">
+            <summary>
+            Abstract class for operations, all Exceptions needs to inherit from this class.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.ElephantTalkBaseException.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructor providing a message and an error code
+            </summary>
+            <param name="message">Message of the exception</param>
+            <param name="errorCode">Error code of the exception</param>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.ElephantTalkBaseException.#ctor(System.String,System.Exception,System.Int32)">
+            <summary>
+            onstructor providing a message and an error code
+            </summary>
+            <param name="message">Message of the exception</param>
+            <param name="inner">Inner exception that triggerd this exception</param>
+            <param name="errorCode">Error code of the exception</param>
+        </member>
+        <member name="P:com.etak.core.operation.contract.exceptions.ElephantTalkBaseException.ErrorCode">
+            <summary>
+            Error code of the exception
+            </summary>
+        </member>
+        <member name="P:com.etak.core.operation.contract.exceptions.ElephantTalkBaseException.ResultType">
+            <summary>
+            ResultType for the exception.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.AuthenticationErrorException.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructor for exception providing error message and error code
+            </summary>
+            <param name="message">the message with the cause for the exception</param>
+            <param name="errorCode">the error code for the exception</param>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.AuthenticationErrorException.#ctor(System.String,System.Exception,System.Int32)">
+            <summary>
+            Constructor for exception providing error message and error code and the inner exception that caused the error
+            </summary>
+            <param name="message">the message with the cause for the exception</param>
+            <param name="inner">the inner exception that rised this exception</param>
+            <param name="errorCode">the error code for the exception</param>
+        </member>
+        <member name="P:com.etak.core.operation.contract.exceptions.AuthenticationErrorException.ResultType">
+            <summary>
+            Indicates the type/category of the error
+            </summary>
+        </member>
+        <member name="T:com.etak.core.operation.contract.exceptions.AuthorizationErrorException">
+            <summary>
+            Exception thrown when the user has not permissions to operate a given entity
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.AuthorizationErrorException.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructor for exception providing error message and error code
+            </summary>
+            <param name="message">the message with the cause for the exception</param>
+            <param name="errorCode">the error code for the exception</param>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.AuthorizationErrorException.#ctor(System.String,System.Exception,System.Int32)">
+            <summary>
+            Constructor for exception providing error message and error code and the inner exception that caused the error
+            </summary>
+            <param name="message">the message with the cause for the exception</param>
+            <param name="inner">the inner exception that rised this exception</param>
+            <param name="errorCode">the error code for the exception</param>
+        </member>
+        <member name="P:com.etak.core.operation.contract.exceptions.AuthorizationErrorException.ResultType">
+            <summary>
+            The result type associated to this exception
+            </summary>
+        </member>
+        <member name="T:com.etak.core.operation.contract.exceptions.BusinessLogicErrorException">
+            <summary>
+            Exceptions that operation throws in case of business logic error
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.BusinessLogicErrorException.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructor for exception providing error message and error code
+            </summary>
+            <param name="message">the message with the cause for the exception</param>
+            <param name="errorCode">the error code for the exception</param>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.BusinessLogicErrorException.#ctor(System.String,System.Exception,System.Int32)">
+            <summary>
+            Constructor for exception providing error message and error code and the inner exception that caused the error
+            </summary>
+            <param name="message">the message with the cause for the exception</param>
+            <param name="inner">the inner exception that rised this exception</param>
+            <param name="errorCode">the error code for the exception</param>
+        </member>
+        <member name="P:com.etak.core.operation.contract.exceptions.BusinessLogicErrorException.ResultType">
+            <summary>
+            The result type associated to this exception
+            </summary>
+        </member>
+        <member name="T:com.etak.core.operation.contract.exceptions.DataValidationErrorException">
+            <summary>
+            Exception thrown when the validation is not successfull
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.DataValidationErrorException.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructor for exception providing error message and error code
+            </summary>
+            <param name="message">the message with the cause for the exception</param>
+            <param name="errorCode">the error code for the exception</param>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.DataValidationErrorException.#ctor(System.String,System.Exception,System.Int32)">
+            <summary>
+            Constructor for exception providing error message and error code and the inner exception that caused the error
+            </summary>
+            <param name="message">the message with the cause for the exception</param>
+            <param name="inner">the inner exception that rised this exception</param>
+            <param name="errorCode">the error code for the exception</param>
+        </member>
+        <member name="P:com.etak.core.operation.contract.exceptions.DataValidationErrorException.ResultType">
+            <summary>
+            The result type associated to this exception
+            </summary>
+        </member>
+        <member name="T:com.etak.core.operation.contract.exceptions.DevelopmentException">
+            <summary>
+            This exception is thrown when the framework detects an error
+            that is produced by a development error and will never work
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.DevelopmentException.#ctor">
+            <summary>
+            Constructor defined to force calling the Exception Constructor
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.DevelopmentException.#ctor(System.String)">
+            <summary>
+            Constructor defined to force calling the Exception Constructor
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.DevelopmentException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor defined to force calling the Exception Constructor
+            </summary>
+        </member>
+        <member name="T:com.etak.core.operation.contract.exceptions.DuplicatedReferenceException">
+            <summary>
+            Exception thrown when the external reference provided is not unique
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.DuplicatedReferenceException.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructor providing error code an message
+            </summary>
+            <param name="message">the message for the exception</param>
+            <param name="errorCode">the error code of the exception</param>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.DuplicatedReferenceException.#ctor(System.String,System.Exception,System.Int32)">
+            <summary>
+            Constructor for the exception
+            </summary>
+            <param name="message">message of the exception</param>
+            <param name="inner">inner exception</param>
+            <param name="errorCode">the error code</param>
+        </member>
+        <member name="P:com.etak.core.operation.contract.exceptions.DuplicatedReferenceException.ResultType">
+            <summary>
+            The result type when DuplicatedReferenceException happens (ResultTypes.DuplicatedReference) 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.operation.contract.exceptions.InternalErrorException">
+            <summary>
+            Handled exception at framework level produced by an exception that is not an elephant talk exception
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.InternalErrorException.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructor for exception providing error message and error code
+            </summary>
+            <param name="message">the message with the cause for the exception</param>
+            <param name="errorCode">the error code for the exception</param>
+        </member>
+        <member name="M:com.etak.core.operation.contract.exceptions.InternalErrorException.#ctor(System.String,System.Exception,System.Int32)">
+            <summary>
+            Constructor for exception providing error message and error code and the inner exception that caused the error
+            </summary>
+            <param name="message">the message with the cause for the exception</param>
+            <param name="inner">the inner exception that rised this exception</param>
+            <param name="errorCode">the error code for the exception</param>
+        </member>
+        <member name="P:com.etak.core.operation.contract.exceptions.InternalErrorException.ResultType">
+            <summary>
+            The result type associeated to this type of exception (ResultTypes.UnknownError)
+            </summary>
+        </member>
+        <member name="T:com.etak.core.operation.contract.IMicroService`2">
+            <summary>
+            Interface for the micro service layer, any ET micro service (unitary operation) needs to implement this interface
+            </summary>
+            <typeparam name="TInternalInput">The input type of the request</typeparam>
+            <typeparam name="TInternalOutput">The output type of the request</typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.contract.IMicroService`2.Process(`0,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Method that performs the micro service implementation
+            </summary>
+            <param name="request">the micro service request</param>
+            <param name="invoker">the information about the Invokation environment</param>
+            <returns>the result of the micro service</returns>
+        </member>
+        <member name="T:com.etak.core.operation.contract.IOrderProcessor`3">
+            <summary>
+            Interface for Order processor, It performs any action of TRequest type and TResponse type of an order of type TORder
+            </summary>
+            <typeparam name="TOrder">The type of order that is processed</typeparam>
+            <typeparam name="TRequest">The type of request that afects the request</typeparam>
+            <typeparam name="TReponse">The type of the response as a consecuence of the process</typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.contract.IOrderProcessor`3.ProcessRequest(`0,`1)">
+            <summary>
+            Process a request for the order
+            </summary>
+            <param name="order">The order to be processed</param>
+            <param name="request">The request that afects the request</param>
+            <returns>the result of processing the request for the order</returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.customer.CrmCustomersPromotionDtoConverter">
+            <summary>
+            Class converter between CrmCustomersPromotionInfo and CrmCustomersPromotionInfoDTO
+            </summary>
+        </member>
+        <member name="T:com.etak.core.operation.contract.ITypeConverter`2">
+            <summary>
+            Defines a contract to convert types between diferent types
+            </summary>
+            <typeparam name="Tsource">The source type that will be converted</typeparam>
+            <typeparam name="TDestination">The destination type of the conversion</typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.contract.ITypeConverter`2.Convert(`0)">
+            <summary>
+            Converts the object in TSource to TDestination
+            </summary>
+            <param name="source">the object to be converted</param>
+            <returns>the object in the TDestination</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.CrmCustomersPromotionDtoConverter.#cctor">
+            <summary>
+            Static constructor to initialize mappings
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.CrmCustomersPromotionDtoConverter.Convert(com.etak.core.model.CrmCustomersPromotionInfo)">
+            <summary>
+            Convert from CrmCustomersPromotionInfo to CrmCustomersPromotionInfoDTO using basic Automapper conversor
+            </summary>
+            <param name="source">The Info object to be converted</param>
+            <returns>The object converted</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.CrmCustomersPromotionDtoConverter.Convert(com.etak.core.model.subscription.CrmCustomersPromotionInfoDTO)">
+            <summary>
+            Convert from CrmCustomersPromotionInfoDTO to CrmCustomersPromotionInfo using basic Automapper conversor
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object converted</returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.customer.ServicesInfoDTOConverter">
+            <summary>
+            Converter for entity ServicesInfo to ServicesInfoDTO
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.ServicesInfoDTOConverter.#cctor">
+            <summary>
+            static constructor initializing the mappings
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.ServicesInfoDTOConverter.Convert(com.etak.core.model.ServicesInfo)">
+            <summary>
+            Converts the ServicesInfo into a ServicesInfoDTO
+            </summary>
+            <param name="source">the ServicesInfo to convert</param>
+            <returns>the object converted in ServicesInfoDTO form</returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.operation.MultiLingualDTOConverter">
+            <summary>
+            Convert form MultiLingualDescription to TextualDescription
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.operation.MultiLingualDTOConverter.Convert(com.etak.core.model.MultiLingualDescription)">
+            <summary>
+            Given a multilingualDescription, return a list of TextualDescriptions that represents this
+            multilingual subscription
+            </summary>
+            <param name="source">The MultiLingualDescription to be transformed</param>
+            <returns>A list of TextualDescription that represetns the multilingual description</returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.product.ProductDtoConverter">
+            <summary>
+            Conversor class to convert all the objects related with Product entity
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.ProductDtoConverter.Convert(com.etak.core.model.revenueManagement.ProductDto)">
+            <summary>
+            Convert from a ProductDto to a Product entity with the most basic information
+            </summary>
+            <param name="source">ProductDto to be converted</param>
+            <returns>Product entity with basic information filled</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.ProductDtoConverter.Convert(com.etak.core.model.revenueManagement.Product)">
+            <summary>
+            Convert from Product to ProductDto object, including inherited type PhysicalProduct
+            </summary>
+            <param name="source">Product entity to be converted</param>
+            <returns>ProductDto object filled</returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.product.ProductOfferingGroupDtoConverter">
+            <summary>
+            Convertor class from ProductOfferingGroupOption to DTO
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.ProductOfferingGroupDtoConverter.Convert(com.etak.core.model.subscription.catalog.ProductOfferingGroupOption)">
+            <summary>
+            Convert from ProductOfferingGroupOption to ProductOfferingGroupDTO
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.product.ProductOfferingSpecificationOptionDtoConverter">
+            <summary>
+            Convert from ProductOfferingSpecificationOption to ProductOfferingSpecificationDto
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.ProductOfferingSpecificationOptionDtoConverter.Convert(com.etak.core.model.subscription.catalog.ProductOfferingSpecificationOption)">
+            <summary>
+            Convert from ProductOfferingSpecificationOption to ProductOfferingSpecificationDTO
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.product.PurchaseProductOfferingSelectionDtoConverter">
+            <summary>
+            Dto converter for PurchaseProductOfferingSelection and PurchaseProductOfferingSelectionDTO
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.PurchaseProductOfferingSelectionDtoConverter.Convert(com.etak.core.model.subscription.catalog.PurchaseProductOfferingSelectionDTO)">
+            <summary>
+            Convert from PurchaseProductOfferingSelectionDTO to PurchaseProductOfferingSelection
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.PurchaseProductOfferingSelectionDtoConverter.GetOptions(System.Collections.Generic.IEnumerable{com.etak.core.model.subscription.catalog.PurchaseProductOfferingSelectionDTO})">
+            <summary>
+            Recursive function to return all the options inside the Offering Product
+            </summary>
+            <param name="option">A list of PurchaseProductOffering options</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.PurchaseProductOfferingSelectionDtoConverter.Convert(com.etak.core.model.subscription.catalog.PurchaseProductOfferingSelection)">
+            <summary>
+            Convertor 
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.product.RmPromotionPlanDetailDtoConverter">
+            <summary>
+            Converter Class 
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.RmPromotionPlanDetailDtoConverter.#cctor">
+            <summary>
+            Initialize all the mappings
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.RmPromotionPlanDetailDtoConverter.Convert(com.etak.core.model.RmPromotionPlanDetailInfo)">
+            <summary>
+            Convert from RmPromotionPlanDetailInfo to Dto using Automapper conversor
+            </summary>
+            <param name="source">The Core object to be converted</param>
+            <returns>The Dto object to be converted</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.RmPromotionPlanDetailDtoConverter.Convert(com.etak.core.model.subscription.RmPromotionPlanDetailInfoDTO)">
+            <summary>
+            Convert from RmPromotionPlanDetailInfoDTO to Core using Automapper conversor
+            </summary>
+            <param name="source">The Dto object to be converted</param>
+            <returns>The Core object obtained</returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.product.RmPromotionPlanDtoConverter">
+            <summary>
+            Class converter to convert RmPromotionPlanInfo to DTO
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.RmPromotionPlanDtoConverter.#cctor">
+            <summary>
+            Initialize mappings and objects
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.RmPromotionPlanDtoConverter.Convert(com.etak.core.model.RmPromotionPlanInfo)">
+            <summary>
+            Return the DTO object corresponding to the given Info object using Automapper conversor
+            </summary>
+            <param name="source">The Core object ot be converted</param>
+            <returns>The DTO object obtained</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.RmPromotionPlanDtoConverter.Convert(com.etak.core.model.subscription.RmPromotionPlanInfoDTO)">
+            <summary>
+            Return the core object corresponding to the given DTO object using Automapper conversor
+            </summary>
+            <param name="source">The Dto object to be converted</param>
+            <returns>The Core object obtained</returns>
+        </member>
+        <member name="T:com.etak.core.operation.manager.BusinessOperationRebindBuildPart`4">
+            <summary>
+            Builds the map between the types of the Business OPeration and the implementation
+            </summary>
+            <typeparam name="TRequestDTO"></typeparam>
+            <typeparam name="TResponseDTO"></typeparam>
+            <typeparam name="TRequestCore"></typeparam>
+            <typeparam name="TResponseCore"></typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationRebindBuildPart`4.#ctor(System.Int32)">
+            <summary>
+            Starts a new BusinessOperationRebindBuildPart for a given dealer
+            </summary>
+            <param name="dealerId"></param>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationRebindBuildPart`4.To``1">
+            <summary>
+            Binds the three interafces DTO, Core and Combined to the given TImplementation
+            </summary>
+            <typeparam name="TImplementation">the type of the class that implements all interfaces</typeparam>
+        </member>
+        <member name="T:com.etak.core.operation.manager.BusinessOperationBuildPart`4">
+            <summary>
+            Builds the map between the types of the Business OPeration and the implementation
+            </summary>
+            <typeparam name="TRequestDTO"></typeparam>
+            <typeparam name="TResponseDTO"></typeparam>
+            <typeparam name="TRequestCore"></typeparam>
+            <typeparam name="TResponseCore"></typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationBuildPart`4.#ctor(System.Int32)">
+            <summary>
+            Starts a new BusinessOperationBuildPart for a given dealer
+            </summary>
+            <param name="dealerId"></param>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationBuildPart`4.To``1">
+            <summary>
+            Binds the three interafces DTO, Core and Combined to the given TImplementation
+            </summary>
+            <typeparam name="TImplementation">the type of the class that implements all interfaces</typeparam>
+        </member>
+        <member name="T:com.etak.core.operation.manager.BusinessOperationManager">
+            <summary>
+            Manager for the business operation injection in micro service layer
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationManager.BindBusinessOperation``4(System.Int32)">
+            <summary>
+            Starts binding a business operation just based on the types, the implementation 
+            is requested by the BusinessOperationBuildPart
+            </summary>
+            <typeparam name="TReq">The type of the Request in DTO form</typeparam>
+            <typeparam name="TRes">The type of the Response in DTO form</typeparam>
+            <typeparam name="TReqCore">The type of the Request in core form</typeparam>
+            <typeparam name="TResCore">The type of the Response in core form</typeparam>
+            <param name="dealerId">The dealer to which this bindings apply</param>
+            <returns>the helper builder to complete the binding</returns>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationManager.RebindTypesInAssemblyForDealer(System.Reflection.Assembly,System.Int32)">
+            <summary>
+            Auto register all BusinessOperation implementaions in the Assembly provided, if bind alredy exist then Rebind
+            </summary>
+            <param name="assmb">the assembly to load the types to bind</param>
+            <param name="dealerId">the dealer to which the assemblies are loaded</param>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationManager.BindDTOInterface``3(System.Int32)">
+            <summary>
+            Rebinds a DTO interface of given types to the implementation 
+            </summary>
+            <typeparam name="TRequestDTO">The type of the DTO request of the interface</typeparam>
+            <typeparam name="TResponseDTO">The type of the DTO response of the interface</typeparam>
+            <typeparam name="TImplementation">The type implementing the interface</typeparam>
+            <param name="dealerId">the dealer id to which this implementation needs to be rebind</param>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationManager.BindCoreInterface``3(System.Int32)">
+            <summary>
+            Binds a Core interface of given types to the implementation 
+            </summary>
+            <typeparam name="TRequestCore">The type of the Core request of the interface</typeparam>
+            <typeparam name="TResponseCore">The type of the Core response of the interface</typeparam>
+            <typeparam name="TImplementation">The type implementing the interface</typeparam>
+            <param name="dealerId">the dealer id to which this implementation needs to be rebind</param>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationManager.BindBusinessInterface``5(System.Int32)">
+            <summary>
+            Binds a IBusinessOpeartion to a given implementation, constrained/defined by 
+            the types of the input output
+            </summary>
+            <typeparam name="TRequestDTO">The type of the Request in DTO form</typeparam>
+            <typeparam name="TResponseDTO">The type of the Response in DTO form</typeparam>
+            <typeparam name="TRequestCore">The type of the Core request of the interface</typeparam>
+            <typeparam name="TResponseCore">The type of the Core response of the interface</typeparam>
+            <typeparam name="TImplementation">The type implemeting the operation</typeparam>
+            <param name="dealerId">the dealer to which this bind needs to be applied</param>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationManager.GetBusinessOperation``4(System.Int32)">
+            <summary>
+            Gets the Business operation for all the given types as signature of input ouput
+            </summary>
+            <typeparam name="TRequestDTO">The type of the Request in DTO form</typeparam>
+            <typeparam name="TResponseDTO">The type of the Response in DTO form</typeparam>
+            <typeparam name="TRequestCore">The type of the Request in core form</typeparam>
+            <typeparam name="TResponseCore">The type of the Response in core form</typeparam>
+            <param name="dealerId">The dealer to which this bindings apply</param>
+            <returns>the IBusinessOperation for the types requested</returns>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationManager.GetDTOBusinessOperation``2(System.Int32)">
+            <summary>
+            Gets the IDTOBusinessOperation for all the given types as signature of input ouput
+            </summary>
+            <typeparam name="TRequestDTO">The type of the Request in DTO form</typeparam>
+            <typeparam name="TResponseDTO">The type of the Response in DTO form</typeparam>
+            <param name="dealerId">The dealer to which this bindings apply</param>
+            <returns>the IDTOBusinessOperation for the types requested</returns>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationManager.GetCoreBusinessOperation``2(System.Int32)">
+            <summary>
+            Gets the IDTOBusinessOperation for all the given types as signature of input ouput
+            </summary>
+            <typeparam name="TRequestCore">The type of the Request in core form</typeparam>
+            <typeparam name="TResponseCore">The type of the Response in core form</typeparam>
+            <param name="dealerId">The dealer to which this bindings apply</param>
+            <returns>the IDTOBusinessOperation for the types requested</returns>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationManager.RebindDTOInterface``3(System.Int32)">
+            <summary>
+            Rebinds a DTO interface of given types to the implementation 
+            </summary>
+            <typeparam name="TRequestDTO">The type of the DTO request of the interface</typeparam>
+            <typeparam name="TResponseDTO">The type of the DTO response of the interface</typeparam>
+            <typeparam name="TImplementation">The type implementing the interface</typeparam>
+            <param name="dealerId">the dealer id to which this implementation needs to be rebind</param>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationManager.RebindCoreInterface``3(System.Int32)">
+            <summary>
+            Rebinds a Core interface of given types to the implementation 
+            </summary>
+            <typeparam name="TRequestCore">The type of the Core request of the interface</typeparam>
+            <typeparam name="TResponseCore">The type of the Core response of the interface</typeparam>
+            <typeparam name="TImplementation">The type implementing the interface</typeparam>
+            <param name="dealerId">the dealer id to which this implementation needs to be rebind</param>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationManager.RebindBusinessInterface``5(System.Int32)">
+            <summary>
+            Binds a IBusinessOpeartion to a given implementation, constrained/defined by 
+            the types of the input output
+            </summary>
+            <typeparam name="TRequestDTO">The type of the Request in DTO form</typeparam>
+            <typeparam name="TResponseDTO">The type of the Response in DTO form</typeparam>
+            <typeparam name="TRequestCore">The type of the Core request of the interface</typeparam>
+            <typeparam name="TResponseCore">The type of the Core response of the interface</typeparam>
+            <typeparam name="TImplementation">The type implemeting the operation</typeparam>
+            <param name="dealerId">the dealer to which this bind needs to be applied</param>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationManager.RebindDTOInterfaceToConstant``2(System.Int32,com.etak.core.operation.contract.IDTOBusinessOperation{``0,``1})">
+            <summary>
+            Rebinds a DTO interface of given types to the implementation 
+            </summary>
+            <typeparam name="TRequestDTO">The type of the DTO request of the interface</typeparam>
+            <typeparam name="TResponseDTO">The type of the DTO response of the interface</typeparam>
+            <param name="dealerId">the dealer id to which this implementation needs to be rebind</param>
+            <param name="impl">The constant object to which the interface will be bind</param>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationManager.RebindCoreInterfaceToConstant``2(System.Int32,com.etak.core.operation.contract.ICoreBusinessOperation{``0,``1})">
+            <summary>
+            Rebinds a Core interface of given types to the implementation 
+            </summary>
+            <typeparam name="TRequestCore">The type of the Core request of the interface</typeparam>
+            <typeparam name="TResponseCore">The type of the Core response of the interface</typeparam>
+            <param name="dealerId">the dealer id to which this implementation needs to be rebind</param>
+            <param name="impl">The constant object to which the interface will be bind</param>
+        </member>
+        <member name="M:com.etak.core.operation.manager.BusinessOperationManager.RebindBusinessInterfaceToConstant``4(System.Int32,com.etak.core.operation.contract.IBusinessOperation{``0,``1,``2,``3})">
+            <summary>
+            Binds a IBusinessOpeartion to a given implementation, constrained/defined by 
+            the types of the input output
+            </summary>
+            <typeparam name="TRequestDTO">The type of the Request in DTO form</typeparam>
+            <typeparam name="TResponseDTO">The type of the Response in DTO form</typeparam>
+            <typeparam name="TRequestCore">The type of the Core request of the interface</typeparam>
+            <typeparam name="TResponseCore">The type of the Core response of the interface</typeparam>
+            <param name="dealerId">the dealer to which this bind needs to be applied</param>
+            <param name="impl">The constant object to which the interface will be bind</param>
+        </member>
+        <member name="T:com.etak.core.operation.manager.MicroServiceManager">
+            <summary>
+            Manager for the dependency injection in micro service layer
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.manager.MicroServiceManager.RegisterMicroService``2">
+            <summary>
+            Maps the Micro service interface for the TInput and TOutput
+            </summary>
+            <typeparam name="TInput">The input type of the micro service</typeparam>
+            <typeparam name="TOutput">The output type of the micro service</typeparam>
+            <returns>fluent configuration for map</returns>
+        </member>
+        <member name="M:com.etak.core.operation.manager.MicroServiceManager.RegisterMicroService(System.Type,System.Type,System.Type)">
+            <summary>
+            Map the microservices with the specific Types
+            </summary>
+            <param name="typeOfInputParameter">The input type of the micro service </param>
+            <param name="typeOfOuputParameter">The output type of the micro service</param>
+            <param name="implementationType">The implementation of the micro service</param>
+        </member>
+        <member name="M:com.etak.core.operation.manager.MicroServiceManager.RegisterMicroServicesByAssemby(System.Reflection.Assembly)">
+            <summary>
+            Register all Microservice with specific assembly
+            </summary>
+            <param name="assembly">Assembly to re</param>
+        </member>
+        <member name="M:com.etak.core.operation.manager.MicroServiceManager.RegisterTrazedMicroServiceWith``2">
+            <summary>
+            Maps the Micro service interface for the TInput and TOutput, providing a logged wrapper/decorator
+            </summary>
+            <typeparam name="TInput">The input type of the micro service</typeparam>
+            <typeparam name="TOutput">The output type of the micro service</typeparam>
+            <returns>fluent configuration for map</returns>
+        </member>
+        <member name="M:com.etak.core.operation.manager.MicroServiceManager.GetMicroService``2">
+            <summary>
+            gets the configured implementation of the microservices for
+            the types TInput, TOutput
+            </summary>
+            <typeparam name="TInput">The input type of the micro service</typeparam>
+            <typeparam name="TOutput">The output type of the micro service</typeparam>
+            <returns>The implementation for the types</returns>
+        </member>
+        <member name="T:com.etak.core.operation.manager.RegisterMicroServicePart`2">
+            <summary>
+            Part of micro service fluent configuration, creates the TO "extension"
+            to map an interface to an implementation
+            </summary>
+            <typeparam name="TInput">The input type of the micro service to bind</typeparam>
+            <typeparam name="TOutput">The input type of the micro service to bind</typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.manager.RegisterMicroServicePart`2.#ctor(Ninject.IKernel)">
+            <summary>
+            constructor with the kernel to use when To is executed.
+            </summary>
+            <param name="kernel">the kernel where the binding is kept</param>
+        </member>
+        <member name="M:com.etak.core.operation.manager.RegisterMicroServicePart`2.To``1">
+            <summary>
+            Performs the binding of the microservice to the type provided
+            </summary>
+            <typeparam name="TImpl">The implementation of the micro service</typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.manager.RegisterMicroServicePart`2.To``1(``0)">
+            <summary>
+            Performs the binding of the microservice implementation provided
+            </summary>
+            <typeparam name="TMicroService"></typeparam>
+            <param name="implementation"></param>
+        </member>
+        <member name="T:com.etak.core.operation.manager.RegisterTrazedMicroServicePart`2">
+            <summary>
+            Part of micro service fluent configuration, creates the TO "extension"
+            to map an interface to an implementation. I will add a Log wrapper for the service 
+            when binded.
+            </summary>
+            <typeparam name="TInput">The input type of the micro service to bind</typeparam>
+            <typeparam name="TOutput">The input type of the micro service to bind</typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.manager.RegisterTrazedMicroServicePart`2.#ctor(Ninject.IKernel)">
+            <summary>
+            constructor with the kernel to use when To is executed.
+            </summary>
+            <param name="kernel">the kernel where the binding is kept</param>
+        </member>
+        <member name="M:com.etak.core.operation.manager.RegisterTrazedMicroServicePart`2.To``1">
+            <summary>
+            Performs the binding of the microservice to the type provided, wrapped b
+            </summary>
+            <typeparam name="TImpl">The implementation of the micro service</typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.manager.RegisterTrazedMicroServicePart`2.To``1(``0)">
+            <summary>
+            Performs the binding of the microservice implementation provided
+            </summary>
+            <typeparam name="TMicroService"></typeparam>
+            <param name="implementation"></param>
+        </member>
+        <member name="T:com.etak.core.operation.OperationErrorCodes">
+            <summary>
+            Enumeration of all possible errors throw by the framework.
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.ErrorBase">
+            <summary>
+            THe start number for all the errors produced by the operation framework
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.NullRequestInOrderModification">
+            <summary>
+            A null request received while updating and order
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.NullOrderInOrderModification">
+            <summary>
+            The order provided to modify was null
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.OrderTypeMissMatch">
+            <summary>
+            The type of order recoverd from the DB by the ID did not match 
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.MVNODoesNotExsist">
+            <summary>
+            Could not recover the dealar asociated to the MVNO provided
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.UserNameNotProvided">
+            <summary>
+            THe username was not provided in the request
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.PasswordNotProvided">
+            <summary>
+            Password was not provided in the request
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.DuplicatedReferenceWhileCreatingOrder">
+            <summary>
+            The external reference provided already exists, can't create a new order
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.SessionIdNotProvided">
+            <summary>
+            The sessionId was not provided in the request
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.DealerIdNotExsist">
+            <summary>
+            Could not recover the DealerInfo asociated to the dealerid provided
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.VMNONotExsist">
+            <summary>
+            Could not recover the VMNO asociated to the dealer
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.SessionIdExpired">
+            <summary>
+            The sessionId expired
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.MappingNotAllowed">
+            <summary>
+            The mapping used is not allowed
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.MissingConfiguration">
+            <summary>
+            There's no configuration for this business operation and vmno
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.MissingActiveConfiguration">
+            <summary>
+            There's no active configuration for this business operation and vmno
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.MultipleActiveConfiguration">
+            <summary>
+            There's more than one active configurtion for this business operation and vmno
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.NoConfigurationTextInOperationConfiguration">
+            <summary>
+            Operation configuration had not a valid text configuration. (JSON config was null empty or whitespace)
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.UserDoesNotHavePermissionsForDealer">
+            <summary>
+            THe given user does not have permissions to perform actions for the MVNO provided.
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.ErrorDesrializingOperationConfiguration">
+            <summary>
+            The operation configuration text could not be de serialized as the expected type
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.OperationErrorCodes.UnknownDealerType">
+            <summary>
+            The type of dealer is unknown so can't check the permissions.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.customer.AddressDtoConverter">
+            <summary>
+            Class Converter Between AddressInfo and AddressDTO
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.AddressDtoConverter.#cctor">
+            <summary>
+            Initialize the object and mappings
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.AddressDtoConverter.Convert(com.etak.core.model.AddressInfo)">
+            <summary>
+            Convert from AddresInfo to AddressDTO
+            </summary>
+            <param name="source">AddresInfo to be converted</param>
+            <returns>AddressDTO converted</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.AddressDtoConverter.Convert(com.etak.core.model.dto.AddressDTO)">
+            <summary>
+            Convert from AddressDTO to AddressInfo
+            </summary>
+            <param name="source">AddressDTO to be converted</param>
+            <returns>AddressInfo converted</returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.customer.BankDtoConverter">
+            <summary>
+            Conversor for BankInfor entity to DTO
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.BankDtoConverter.#cctor">
+            <summary>
+            Initialize the Object and the mappings.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.BankDtoConverter.Convert(com.etak.core.model.BankInfo)">
+            <summary>
+            Conversor from BankInfo to BankInformationDTO
+            </summary>
+            <param name="source">BankInfo object</param>
+            <returns>BankInformationDTO object</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.BankDtoConverter.Convert(com.etak.core.model.dto.BankInformationDTO)">
+            <summary>
+            Conversor from BankInformationDTO to BankInfo
+            </summary>
+            <param name="source">BankInformationDTO source</param>
+            <returns>BankInfo object</returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.customer.CustomerDtoConverter">
+            <summary>
+            Converter from CustomerInfo to CustomerDto and viceversa
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.CustomerDtoConverter.#cctor">
+            <summary>
+            Constructor to set up all the mappings
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.CustomerDtoConverter.Convert(com.etak.core.model.CustomerInfo)">
+            <summary>
+            Method to convert a CustomerInfo Entity into CustomerDTO
+            </summary>
+            <param name="customer">the customer in internal model to be converted</param>
+            <returns>CustomerDto object</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.CustomerDtoConverter.Convert(com.etak.core.model.dto.CustomerDTO)">
+            <summary>
+            Convert from CustomerDTO to CustomerInfo
+            </summary>
+            <param name="source">Object to be converted</param>
+            <returns>CustomerInfo object</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.CustomerDtoConverter.CustomerDtoToCustomerAddress(com.etak.core.model.dto.CustomerDTO)">
+            <summary>
+            Extracts a list of CustomerAddress from a CustomerDTO object
+            </summary>
+            <param name="customerDto">CustomerDTO object with all the information</param>
+            <returns>A list of CustomerAddress with CustomerAddress, FiscalAddress and DeliveryAddess wether corresponds</returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.customer.InvoiceDtoConverter">
+            <summary>
+            Converter to convert from Invoice to InvoiceDTO. That converter will need a chargeId corresponding
+            to the aggregate Total Invoice Charge Id
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.InvoiceDtoConverter.#cctor">
+            <summary>
+            Static constructor
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.InvoiceDtoConverter.Convert(com.etak.core.model.revenueManagement.Invoice)">
+            <summary>
+            Convert a Invoice object to a InvoiceDTO
+            </summary>
+            <param name="source">The Invoice to be converted</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.InvoiceDtoConverter.Convert(com.etak.core.model.revenueManagement.Invoice,System.Int32)">
+            <summary>
+            Main function to be called passing the Invoice and the chargeId needed to calculate the 
+            total amount of the invoice
+            </summary>
+            <param name="source">Invoice to be converted</param>
+            <param name="aggregateTotalInvoiceChargeId">Charge Id corresponding to the aggregate Total Invoice Charge Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.DtoDictionaries">
+            <summary>
+            Class which contains all the dictionaries related with DTO Objects
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.dtoConverters.DtoDictionaries.DocEnumToIntMapper">
+            <summary>
+            Dictionary to convert from DocumentTypes Enum to integer
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.dtoConverters.DtoDictionaries.IntToDocEnumTo">
+            <summary>
+            Dictionary to convert from integer to DocumentTypes Enum.
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.dtoConverters.DtoDictionaries.IntToCustStatusEnum">
+            <summary>
+            Dictionary to convert from integer to CustomerStatus Enum
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.dtoConverters.DtoDictionaries.PendingStatusEnumToInt">
+            <summary>
+            Dictionary to convert from PendingStatus Enum to Integer
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.dtoConverters.DtoDictionaries.UsagesSubTypesEnumToInt">
+            <summary>
+            Dictionary to convert from UsagesSubTypes Enumerable to Int32
+            </summary>
+        </member>
+        <member name="F:com.etak.core.operation.dtoConverters.DtoDictionaries.IntoToUsagesSubTypesEnum">
+            <summary>
+            Dictionary to convert from Int32 to UsagesSubTypes Enumerable
+            </summary>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.DtoMappings">
+            <summary>
+            Static class to create all the mappings
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToCore(com.etak.core.model.dto.CustomerDTO)">
+            <summary>
+            Converts a CustomerDTO to it's core form CustomerInfo
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in CustomerDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.CustomerInfo)">
+            <summary>
+            Converts a CustomerInfo to it's DTO form CustomerDTO
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in CustomerDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.AddressInfo)">
+            <summary>
+            Converts a AddressInfo to it's DTO form AddressDTO
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in AddressDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToCore(com.etak.core.model.dto.AddressDTO)">
+            <summary>
+            Converts a AddressDTO to it's DTO form AddressInfo
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in AddressInfo</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.BankInfo)">
+            <summary>
+            Converts a BankInfo to it's DTO form BankInformationDTO
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in BankInformationDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToCore(com.etak.core.model.dto.BankInformationDTO)">
+            <summary>
+            Converts a BankInformationDTO to it's core form BankInfo
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in BankInfo</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.SIMCardInfo)">
+            <summary>
+            Converts a SIMCardInfo to it's DTO form SimCardDTO
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in SimCardDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToCore(com.etak.core.model.resource.SimCardDTO)">
+            <summary>
+            Converts a SimCardDTO to it's core form SIMCardInfo
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in SIMCardInfo</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToCore(com.etak.core.model.resource.MSISDNResourceDTO)">
+            <summary>
+            Converts a MSISDNResourceDTO to it's core form NumberInfo
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in NumberInfo</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.NumberInfo)">
+            <summary>
+            Converts a NumberInfo to it's DTO form MSISDNResourceDTO
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in MSISDNResourceDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToCore(com.etak.core.model.subscription.SubscriptionDTO)">
+            <summary>
+            Converts a SubscriptionDTO to it's core form ResourceMBInfo
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in SubscriptionDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.ResourceMBInfo)">
+            <summary>
+            Converts a ResourceMBInfo to it's DTO form SubscriptionDTO
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in SubscriptionDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.revenueManagement.Charge)">
+            <summary>
+            Converts a Charge to it's DTO form ChargeCatalogDTO
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in ChargeCatalogDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.revenueManagement.CustomerCharge)">
+            <summary>
+            Converts a CustomerCharge to it's DTO form CustomerChargeDTO
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in CustomerChargeDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToRecurringChargeDto(com.etak.core.model.revenueManagement.CustomerCharge)">
+            <summary>
+            Converts a CustomerCharge to it's DTO form CustomerRecurringChargeDTO
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in CustomerRecurringChargeDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.subscription.catalog.ProductOffering)">
+            <summary>
+            Converts a ProductOffering to it's DTO form ProductCatalogDTO
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in ProductCatalogDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToCore(com.etak.core.model.revenueManagement.ProductCatalogDTO)">
+            <summary>
+            Converts a ProductCatalogDTO into a Product object
+            </summary>
+            <param name="source">The Dto object to be converted</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.revenueManagement.ProductChargeOption)">
+            <summary>
+            Converts a ProductChargeOption to it's DTO form ProductPurchaseChargingOptionDTO
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in ProductPurchaseChargingOptionDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToCore(com.etak.core.model.revenueManagement.ProductPurchaseChargingOptionDTO)">
+            <summary>
+            Converts a ProductPurchaseChargingOptionDTO into a ProductChargeOption
+            </summary>
+            <param name="source">A dto object to be converted</param>
+            <returns>The object as a ProductChargeOption</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.revenueManagement.CustomerProductAssignment)">
+            <summary>
+            Converts a customer CustomerProductAssignment to it's DTO form CustomerProductAssignmentDTO
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in CustomerProductAssignmentDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.UsageDetailRecord)">
+            <summary>
+            Converts a UsageDetailRecord to it's DTO form UsageDetailDTO
+            </summary>
+            <param name="source">The object to be converted</param>
+            <returns>The object in UsageDetailDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.revenueManagement.Invoice,System.Int32)">
+            <summary>
+            Converts a Invoice to it's DTO form InvoiceDTO
+            </summary>
+            <param name="source">Invoice to be converted</param>
+            <param name="aggregateTotalInvoiceId">The charge id corresponding to the aggregate Total Invoice</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.operation.BusinessOperationExecution)">
+            <summary>
+            Converts a  BusinessOperationExecution into it's dto form (BusinessOperationExecutionDTO)
+            </summary>
+            <param name="source">the BusinessOperationExecution to covert</param>
+            <returns>the BusinessOperationExecutionDTO converted</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.ServicesInfo)">
+            <summary>
+            Converts a ServicesInfo to a ServicesInfoDTO Extension method
+            </summary>
+            <param name="source">the source object to convert</param>
+            <returns>the ServicesInfo in DTO form</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.CrmCustomersPromotionInfo)">
+            <summary>
+            Converts a CrmCustomersPromotionInfo to a CrmCustomersPromotionInfoDto Extension method
+            </summary>
+            <param name="source">The source object to be converted</param>
+            <returns>The DTO object obtained</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToCore(com.etak.core.model.subscription.CrmCustomersPromotionInfoDTO)">
+            <summary>
+            Converts a CrmCustomersPromotionInfoDto to a CrmCustomersPromotionInfo Extension method
+            </summary>
+            <param name="source">The source DTO object to be converted</param>
+            <returns>the core objecte obtained</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.RmPromotionPlanInfo)">
+            <summary>
+            Converts a RmPromotionPlanInfo to a RmPromotionPlanInfoDTO Extension method
+            </summary>
+            <param name="source">The Core object to be conveted</param>
+            <returns>The Dto object obtained</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToCore(com.etak.core.model.subscription.RmPromotionPlanInfoDTO)">
+            <summary>
+            Converts a RmPromotionPlanInfoDTO to a RmPromotionPlanInfo Extension method
+            </summary>
+            <param name="source">The Dto object to be converted</param>
+            <returns>The Core object obtained</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToCore(com.etak.core.model.subscription.RmPromotionPlanDetailInfoDTO)">
+            <summary>
+            Converts a RmPromotionPlanDetailInfoDTO to a RmPromotionPlanDetailInfo extension method
+            </summary>
+            <param name="source">The DTO object to be converted</param>
+            <returns>The core object obtained</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.RmPromotionPlanDetailInfo)">
+            <summary>
+            Converts a RmPromotionPlanDetailInfo to a RmPromotionPlanDetailInfoDTO extension method
+            </summary>
+            <param name="source">The Core object to be converted</param>
+            <returns>The dto object obtained</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToCore(com.etak.core.model.subscription.catalog.PurchaseProductOfferingSelectionDTO)">
+            <summary>
+            Converts from PurchaseProductOfferingSelectionDTO to PurchaseProductOfferingSelection getting all 
+            the options in a recursive way
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.MultiLingualDescription)">
+            <summary>
+            Converts from MultiLingualDescription to a list of Textual Descriptions 
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.subscription.catalog.ProductOfferingGroupOption)">
+            <summary>
+            Converts from ProductOfferingGroupOption to ProductOfferingGroupDTO
+            </summary>
+            <param name="source">The ProductOfferingGroupOption to be converted</param>
+            <returns>Dto Object converted</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.subscription.catalog.ProductOfferingSpecificationOption)">
+            <summary>
+            Convert from ProductOfferingSpecificationOption to ProductOfferingSpecificationDto
+            </summary>
+            <param name="source">ProductOfferingSpecificationOption to be converted</param>
+            <returns>A dto object</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToDto(com.etak.core.model.revenueManagement.Product)">
+            <summary>
+            Convert from Product entity to ProductDto, including inherited type PhysicalProduct
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.DtoMappings.ToCore(com.etak.core.model.revenueManagement.ProductDto)">
+            <summary>
+            Convert from ProductDto to Product with the most basic information filled
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.resource.MSISDNResourceDTOConverter">
+            <summary>
+            Conversor for NumberInfo to MSISDNResourceDTOConverter
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.resource.MSISDNResourceDTOConverter.#cctor">
+            <summary>
+            Constructor to set up the mappings
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.resource.MSISDNResourceDTOConverter.Convert(com.etak.core.model.resource.MSISDNResourceDTO)">
+            <summary>
+            Convert from MSISDNResourceDTO object to NumberInfo
+            </summary>
+            <param name="source">Object to be converted</param>
+            <returns>Destination object</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.resource.MSISDNResourceDTOConverter.Convert(com.etak.core.model.NumberInfo)">
+            <summary>
+            Convert from NumberInfo object to MSISDNResourceDTO
+            </summary>
+            <param name="source">Object to be converted</param>
+            <returns>Destination object</returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.resource.SimCardDtoConverter">
+            <summary>
+            Converter for SimCardInfo object
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.resource.SimCardDtoConverter.#cctor">
+            <summary>
+            Constructor with all the mappings defined
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.resource.SimCardDtoConverter.Convert(com.etak.core.model.SIMCardInfo)">
+            <summary>
+            Convert from SimcardInfo to SimCardDto
+            </summary>
+            <param name="source">SimcardInfo object to be converted</param>
+            <returns>SimcardDTO converted</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.resource.SimCardDtoConverter.Convert(com.etak.core.model.resource.SimCardDTO)">
+            <summary>
+            Convert from SimcardDto to SimcardInfo
+            </summary>
+            <param name="source">SimCardDto object to be converted</param>
+            <returns>SimCardInfo converted</returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.product.ChargeCatalogDtoConverter">
+            <summary>
+            Converter for ChargeCatalog DTO.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.ChargeCatalogDtoConverter.Convert(com.etak.core.model.revenueManagement.Charge)">
+            <summary>
+            Convert from Charge to ChargeCatalogDTO
+            </summary>
+            <param name="charge"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.customer.CustomerChargeDtoConverter">
+            <summary>
+            Converter between CustomerCharge Object and CustomerChargeDTO
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.CustomerChargeDtoConverter.#cctor">
+            <summary>
+            Constructor with the initialization of the mappings
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.CustomerChargeDtoConverter.Convert(com.etak.core.model.revenueManagement.CustomerCharge)">
+            <summary>
+            Convert an object of type CustomerCharge to type CustomerChargeDTO
+            </summary>
+            <param name="source">Source Object to be converted</param>
+            <returns>Destination object</returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.customer.CustomerRecurringChargeDtoConverter">
+            <summary>
+            Converter for CustomerCharge to CustomerRecurringChargeDTO
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.CustomerRecurringChargeDtoConverter.Convert(com.etak.core.model.revenueManagement.CustomerCharge)">
+            <summary>
+            Coverts a CustomerCharge to CustomerRecurringChargeDTO
+            </summary>
+            <param name="source">The CustomerCharge to convert</param>
+            <returns>the CustomerRecurringChargeDTO converter</returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.product.ProductCatalogDtoConverter">
+            <summary>
+            Class to convert a ProductOffering Object to a ProductCatalogDTO
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.ProductCatalogDtoConverter.Convert(com.etak.core.model.subscription.catalog.ProductOffering)">
+            <summary>
+            Converts a ProductOffering to a ProductCatalogDTO
+            </summary>
+            <param name="productOffering">the source product to convert</param>
+            <returns>the converterd ProductCatalogDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.ProductCatalogDtoConverter.Convert(com.etak.core.model.revenueManagement.ProductCatalogDTO)">
+            <summary>
+            Convert a ProductCatalogDTO into a Product
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.product.ProductPurchaseChargingOptionDtoConverter">
+            <summary>
+            Converter class for types ProductChargeOption to ProductPurchaseChargingOptionDTO
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.ProductPurchaseChargingOptionDtoConverter.#cctor">
+            <summary>
+            Static constructor of the class
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.ProductPurchaseChargingOptionDtoConverter.Convert(com.etak.core.model.revenueManagement.ProductChargeOption)">
+            <summary>
+            Converts a ProductChargeOption to a ProductPurchaseChargingOptionDTO
+            </summary>
+            <param name="source">the source ProductChargeOption to convert</param>
+            <returns>the return ProductPurchaseChargingOptionDTO</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.product.ProductPurchaseChargingOptionDtoConverter.Convert(com.etak.core.model.revenueManagement.ProductPurchaseChargingOptionDTO)">
+            <summary>
+            Converts a ProductPurchaseChargingOptionDTO into a ProductChargeOption
+            </summary>
+            <param name="source">the source object to be converted</param>
+            <returns>the converted object</returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.customer.CustomerProductAssingmentDtoConverter">
+            <summary>
+            Converter for the entity CustomerProductAssingment
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.CustomerProductAssingmentDtoConverter.Convert(com.etak.core.model.revenueManagement.CustomerProductAssignment)">
+            <summary>
+            Converts the object in CustomerProductAssignment to CustomerProductAssignmentDTO
+            </summary>
+            <param name="source">the object to be converted</param>
+            <returns>the object in the CustomerProductAssignmentDTO</returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.customer.UsageDetailDtoConverter">
+            <summary>
+            Converter class for UsageDetailRecord to UsageDetailDTO
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.UsageDetailDtoConverter.#cctor">
+            <summary>
+            Initializes the automap
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.customer.UsageDetailDtoConverter.Convert(com.etak.core.model.UsageDetailRecord)">
+            <summary>
+            Converts a UsageDetailRecord to a UsageDetailDTO
+            </summary>
+            <param name="source">the source object to convert</param>
+            <returns>the converted object</returns>
+        </member>
+        <member name="T:com.etak.core.operation.dtoConverters.subscription.SubscriptionDtoConverter">
+            <summary>
+            Converter for ResourceMB to SubscriptionDTO
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.subscription.SubscriptionDtoConverter.#cctor">
+            <summary>
+            Constructor where the mappings are set up.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.subscription.SubscriptionDtoConverter.Convert(com.etak.core.model.ResourceMBInfo)">
+            <summary>
+            Convert from ResourceMBInfo to SubscriptionDTO
+            </summary>
+            <param name="source">ResrouceMBInfo to be converted</param>
+            <returns>SubscriptionDTO converted</returns>
+        </member>
+        <member name="M:com.etak.core.operation.dtoConverters.subscription.SubscriptionDtoConverter.Convert(com.etak.core.model.subscription.SubscriptionDTO)">
+            <summary>
+            Convert from SubscriptionDTO to ResourceMBInfo
+            </summary>
+            <param name="source">ResrouceMBInfo to be converted</param>
+            <returns>SubscriptionDTO converted</returns>
+        </member>
+        <member name="T:com.etak.core.operation.implementation.AbstractBusinessOperation`4">
+            <summary>
+            Class that provides the commong functionality for any etak operation, as Authentication,
+            Authorization, Operation log. It forces the implementation of the business logic. 
+            </summary>
+            <typeparam name="TDTOInput">The external type of the request in DTO style</typeparam>
+            <typeparam name="TDTOOutput">The external type of the response in DTO style</typeparam>
+            <typeparam name="TInternalInput">The internal type of the request using the core model</typeparam>
+            <typeparam name="TInternalOutput">The internal type of the response using the core model</typeparam>
+        </member>
+        <member name="T:com.etak.core.operation.contract.IBusinessOperation`4">
+            <summary>
+            Interface that all operations that may be invoked externally and internally must implement.
+            </summary>
+            <typeparam name="TDTOInternalInput">The type of the request to be processed in ET DTO form</typeparam>
+            <typeparam name="TDTOInternalOutput">The type of the reponse as a result of the process in ET DTO form</typeparam>
+            <typeparam name="TInternalInput">The type of the request to be processed in Internal/Core format</typeparam>
+            <typeparam name="TInternalOutput">The type of the response in Internal/Core format</typeparam>
+        </member>
+        <member name="T:com.etak.core.operation.contract.IDTOBusinessOperation`2">
+            <summary>
+            Interface for business operations that can be invoked externaly by with a DTO model
+            </summary>
+            <typeparam name="TDTOInternalInput">The type of the input parameter in the DTO form</typeparam>
+            <typeparam name="TDTOInternalOutput">The type of the output parameter in the DTO form</typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.contract.IDTOBusinessOperation`2.ProcessFromCustomerModel``2(com.etak.core.operation.contract.IValidator{``0},com.etak.core.operation.contract.ITypeConverter{``0,`0},com.etak.core.operation.contract.ITypeConverter{`1,``1},``0,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process a request in the customer form, 
+            </summary>
+            <typeparam name="TDTOExternalIn">The request in DTO customer model</typeparam>
+            <typeparam name="TDTOExternalOut">The response in the DTO customer model</typeparam>
+            <param name="validator">the validator for the request in customer model</param>
+            <param name="inboundConverter">the ITypeConverter for the input request in DTO form to the ET DTO form</param>
+            <param name="outboundConverter">the ITypeConverter for the output request in DTO from to the Customer DTO form</param>
+            <param name="request">the request in customer DTO model</param>
+            <param name="invoker">the request invokation environment</param>
+            <returns>the result in customer model</returns>
+        </member>
+        <member name="T:com.etak.core.operation.contract.ICoreBusinessOperation`2">
+            <summary>
+            Interface for business operation in the conencted/core model
+            </summary>
+            <typeparam name="TInternalInput">The type of the request, must extend RequestBase</typeparam>
+            <typeparam name="TInternalOutput">The type of the response, must extend ResponseBase</typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.contract.ICoreBusinessOperation`2.Process(`0,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Implementation of the operation
+            </summary>
+            <param name="request">the request in <typeparamref name="TInternalInput"/> format</param>
+            <param name="invoker">the information with the environment of the request</param>
+            <returns><typeparamref name="TInternalOutput"/>Result of the process</returns>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractBusinessOperation`4.MapNotAutomappedInboundProperties(`0,`2@)">
+            <summary>
+            This method operates in ET model. Converts the DTORequest to the Request types
+            </summary>
+            <param name="dtoRequest">The request in ET DTO form</param>
+            <param name="coreInput">The request in Internal form, prefilled with the common parameters</param>
+            <returns>the operation in the et Internal form</returns>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractBusinessOperation`4.MapNotAutomappedOutboundProperties(`3,`1@)">
+            <summary>
+            Coverts the response/result of the process (in internal form) to the ET DTO form.
+            </summary>
+            <param name="coreOutput">the result of process implementation</param>
+            <param name="dtoOutput">the preallocated response, will all auto fields mapped</param>
+            <returns>the response in the ET DTO form</returns>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractBusinessOperation`4.ProcessBusinessLogic(`2,com.etak.core.model.operation.BusinessOperationExecution,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Method implemented by the inheriting class that actually performs the core operation
+            </summary>
+            <param name="request">Input parameter for the request</param>
+            <param name="runningOperation">The trace for the ongoing operation</param>
+            <param name="invoker">The information about the invokation of the operation</param>
+            <returns>The response of processing the request</returns>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractBusinessOperation`4.Process(`2,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process a request in ETAK core model, to invoke internally, not in DTO form
+            </summary>
+            <param name="request">the request to be processed</param>
+            <param name="invoker">the invokation environment for the request</param>
+            <returns>The result of the processing</returns>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractBusinessOperation`4.ProcessFromCustomerModel``2(com.etak.core.operation.contract.IValidator{``0},com.etak.core.operation.contract.ITypeConverter{``0,`0},com.etak.core.operation.contract.ITypeConverter{`1,``1},``0,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Implementation of process, takes care of the main infrastructure logic as
+            ExceptionHandling, operation log Creation and transactions.
+            </summary>
+            <typeparam name="TDTOExternalIn">The type of the request in the customer model</typeparam>
+            <typeparam name="TDTOExternalOut">The type of the response in the customer model</typeparam>
+            <param name="validator">The validator</param>
+            <param name="inboundConverter">the converter for the the DTO request in customer form to the DTO request in ET Form</param>
+            <param name="outboundConverter">the converter for the the DTO response in ET form to the DTO response in customer</param>
+            <param name="requestExt">the reques in Customer DTO form (TDTOExternalIn) </param>
+            <param name="invoker">the request invockation environmnt.</param>
+            <returns>the response in the DTO customer form</returns>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractBusinessOperation`4.FillInputTrazedObjectFromRequest(`2,com.etak.core.model.operation.BusinessOperationExecution)">
+            <summary>
+            In case the business Operation have been called directly with the Process method,
+            we need to fill the BusinessOperationExecution Object with all the input
+            parameters
+            </summary>
+            <param name="request">The request used to call the bizop</param>
+            <param name="trazeObject">The trace to be filled with the data from the request</param>
+            <returns>Returns a filled Object with all the information to be logged</returns>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractBusinessOperation`4.GetOperationConfigForDealer``1(com.etak.core.model.DealerInfo)">
+            <summary>
+            Gets the configuration from DB using the vmno and OperatorDiscriminator as discriminators
+            </summary>
+            <typeparam name="TConfig">The type of configuration to be recovered from the db</typeparam>
+            <param name="vmno">the owner of the configuration, and will be used for filter</param>
+            <returns>The configuration found</returns>
+        </member>
+        <member name="P:com.etak.core.operation.implementation.AbstractBusinessOperation`4.OperationCode">
+            <summary>
+            Logical code, this is a cnst field but Nhibernate requires the setter.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.operation.implementation.AbstractBusinessOperation`4.DTOOperationStartTime">
+            <summary>
+            The time if any of the operation start at DTO time.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.operation.implementation.AbstractBusinessOperation`4.IsRootOperation">
+            <summary>
+            True if the operation is part of another operation
+            </summary>
+        </member>
+        <member name="T:com.etak.core.operation.implementation.LogMicroServiceDecorator`3">
+            <summary>
+            Decorator like pattern based on inheritance for MicroService, it logs before and after the 
+            actual processing
+            </summary>
+            <typeparam name="TInput">The input parameter for the microservice</typeparam>
+            <typeparam name="TOutput">The output parameter for the microservice</typeparam>
+            <typeparam name="TProcessor">The actual processor of the microservice</typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.LogMicroServiceDecorator`3.Process(`0,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Implementation of the IMicroService logging before and
+            after the underlaying implementation. 
+            </summary>
+            <param name="request">The input parameter for the original implementation</param>
+            <param name="invoker">The invokation environment</param>
+            <returns>the otput parameter for the original implementation</returns>
+        </member>
+        <member name="T:com.etak.core.operation.implementation.AbstractOrderModification`6">
+            <summary>
+            Business order that updates an existing Order
+            </summary>
+            <typeparam name="TDTOInput">The DTO form of the request</typeparam>
+            <typeparam name="TDTOOutput">The DTO form of the response</typeparam>
+            <typeparam name="TInternalInput">The internal form of the request</typeparam>
+            <typeparam name="TInternalOutput">The internal form of the response</typeparam>
+            <typeparam name="TOrder">The type of order to be updated</typeparam>
+            <typeparam name="TProcessor">The processor that will update the order with the request of DTOInput</typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractOrderModification`6.ProcessBusinessLogic(`2,com.etak.core.model.operation.BusinessOperationExecution,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Loads the Order from the DB and launches the order processor
+            </summary>
+            <param name="request">The request to be processed</param>
+            <param name="runningOperation">The trace for the ongoing operation</param>
+            <param name="invoker">The request invokation environment</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.operation.implementation.AbstractSinglePhaseOrderProcessor`5">
+            <summary>
+            This class creates a new order and processes it with no option to continuate it.
+            </summary>
+            <typeparam name="TDTOInput">The external type of the request in DTO style</typeparam>
+            <typeparam name="TDTOOutput">The external type of the response in DTO style</typeparam>
+            <typeparam name="TInternalInput">The internal type of the request using the core model</typeparam>
+            <typeparam name="TInternalOutput">The internal type of the response using the core model</typeparam>
+            <typeparam name="TOrder">The type of order to be created</typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractSinglePhaseOrderProcessor`5.ProcessRequest(`4,`2)">
+            <summary>
+            The implementation of IOrderProcessor
+            </summary>
+            <param name="order">The order to be processed</param>
+            <param name="request">The request to process</param>
+            <returns>The result of the process</returns>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractSinglePhaseOrderProcessor`5.ProcessBusinessLogic(`2,com.etak.core.model.operation.BusinessOperationExecution,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            This method implements Abstract order, creates the order and requests the processor to process the request. 
+            </summary>
+            <param name="request">The request with the input parameters</param>
+            <param name="runningOperation">The trace for the ongoing operation</param>
+            <param name="invoker">The information about the environment of the invokation</param>
+            <returns>The result of the process</returns>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractSinglePhaseOrderProcessor`5.MapNotAutomappedOrderInboundProperties(`0,`2@)">
+            <summary>
+            Maps all the inboud properties of the request that are not mapped by the framework
+            </summary>
+            <param name="request">the request in ET DTO Form</param>
+            <param name="coreInput">the resquest partially mapped by the core and needs to be updated</param>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractSinglePhaseOrderProcessor`5.MapNotAutomappedOrderOutboundProperties(`3,`1@)">
+            <summary>
+            Maps all the outboud properties of the response that are not mapped by the framework
+            </summary>
+            <param name="source">the response of the core operation that needs to be mapped</param>
+            <param name="DTOOutput">the response of the operation in DTO format</param>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractSinglePhaseOrderProcessor`5.MapNotAutomappedInboundProperties(`0,`2@)">
+            <summary>
+            Maps all fields of the core input request related to Order automatically 
+            </summary>
+            <param name="request">the input request in DTO ET form</param>
+            <param name="coreInput">the input request in ET Internal/Core form</param>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractSinglePhaseOrderProcessor`5.MapNotAutomappedOutboundProperties(`3,`1@)">
+            <summary>
+            Maps all properties related to the order in the DTO responses
+            </summary>
+            <param name="source">the response in the internal/Core form</param>
+            <param name="coreOutput">the response to be filled in the DTO ET form</param>
+        </member>
+        <member name="T:com.etak.core.operation.implementation.MicroServiceLogger">
+            <summary>
+            static Logger non generic for micro services
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.MicroServiceLogger.LogDebug(System.String)">
+            <summary>
+            Logs a message with debug level
+            </summary>
+            <param name="message">the message to log</param>
+        </member>
+        <member name="T:com.etak.core.operation.implementation.SameTypeConverter`1">
+            <summary>
+            Dummy class that converts implements TypeConverter using same class as order and destination
+            </summary>
+            <typeparam name="TAny">The type of the input and the output</typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.SameTypeConverter`1.Convert(`0)">
+            <summary>
+            Does nothing, just returns source object provided
+            </summary>
+            <param name="source">The source object</param>
+            <returns>The destination object that is the same as the source</returns>
+        </member>
+        <member name="T:com.etak.core.operation.implementation.AbstractStartOrder`6">
+            <summary>
+            Class the creates a new order based on a request
+            </summary>
+            <typeparam name="TDTOInput">The external type of the request in DTO style</typeparam>
+            <typeparam name="TDTOOutput">The external type of the response in DTO style</typeparam>
+            <typeparam name="TInternalInput">The internal type of the request using the core model</typeparam>
+            <typeparam name="TInternalOutput">The internal type of the response using the core model</typeparam>
+            <typeparam name="TOrder">The type of the order that will be generated</typeparam>
+            <typeparam name="TProcessor">The type of the processor that will process the request</typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractStartOrder`6.ProcessBusinessLogic(`2,com.etak.core.model.operation.BusinessOperationExecution,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            This method implements Abstract order, creates the order and requests the processor to process the request. 
+            </summary>
+            <param name="request">The request with the input parameters</param>
+            <param name="runningOperation">The trace for the ongoing operation</param>
+            <param name="invoker">The information about the environment of the invokation</param>
+            <returns>The result of the process</returns>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractStartOrder`6.MapNotAutomappedOrderInboundProperties(`0,`2@)">
+            <summary>
+            Maps all the inboud properties of the request that are not mapped by the framework
+            </summary>
+            <param name="request">the request in ET DTO Form</param>
+            <param name="coreInput">the resquest partially mapped by the core and needs to be updated</param>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractStartOrder`6.MapNotAutomappedOrderOutboundProperties(`3,`1@)">
+            <summary>
+            Maps all the outboud properties of the response that are not mapped by the framework
+            </summary>
+            <param name="source">the response of the core operation that needs to be mapped</param>
+            <param name="DTOOutput">the response of the operation in DTO format</param>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractStartOrder`6.MapNotAutomappedInboundProperties(`0,`2@)">
+            <summary>
+            Maps all fields of the core input request related to Order automatically 
+            </summary>
+            <param name="request">the input request in DTO ET form</param>
+            <param name="coreInput">the input request in ET Internal/Core form</param>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.AbstractStartOrder`6.MapNotAutomappedOutboundProperties(`3,`1@)">
+            <summary>
+            Maps all properties related to the order in the DTO responses
+            </summary>
+            <param name="source">the response in the internal/Core form</param>
+            <param name="coreOutput">the response to be filled in the DTO ET form</param>
+        </member>
+        <member name="T:com.etak.core.operation.orderCode.ISequenceManager">
+            <summary>
+            Interface to manage sequences (mainly used for OrderCodes)
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.orderCode.ISequenceManager.GetNextSequence">
+            <summary>
+            Gets the next sequence for a given sequence name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.operation.orderCode.ISequenceManager.SetSequenceName(System.String)">
+            <summary>
+            Set the name for the sequence to be managed.  
+            </summary>
+            <param name="sequenceName">the name of the sequence to get</param>
+        </member>
+        <member name="T:com.etak.core.operation.orderCode.OrderCodeManager">
+            <summary>
+            Class to manage the OrderCodes generated.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.orderCode.OrderCodeManager.GenerateNextOrderCode(System.Int32)">
+            <summary>
+            Gets New Sequence
+            </summary>
+            <param name="vmnoId">The VMNO to get the next sequence for</param>
+            <returns>the generated order code</returns>
+        </member>
+        <member name="M:com.etak.core.operation.orderCode.OrderCodeManager.GetSequenceManagerForVmno(System.Int32)">
+            <summary>
+            Gets the secuence manager for that VMNO
+            </summary>
+            <param name="vmno"></param>
+            <returns>the sequence manager</returns>
+        </member>
+        <member name="T:com.etak.core.operation.RequestInvokationEnvironment">
+            <summary>
+            Class that holds network information for incoming requests and the MethodInfo for the request received. 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.operation.RequestInvokationEnvironment.Invoker">
+            <summary>
+            The front end method that received the 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.operation.RequestInvokationEnvironment.SourceIp">
+            <summary>
+            Source Up that sent the request
+            </summary>
+        </member>
+        <member name="P:com.etak.core.operation.RequestInvokationEnvironment.ProxyIp">
+            <summary>
+            Proxy/Load Balancer Ip address
+            </summary>
+        </member>
+        <member name="P:com.etak.core.operation.RequestInvokationEnvironment.DestinationIp">
+            <summary>
+            The Ip that received the request
+            </summary>
+        </member>
+        <member name="P:com.etak.core.operation.RequestInvokationEnvironment.ServingUrl">
+            <summary>
+            Url to which the request was sent.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.operation.RequestInvokationEnvironment.SessionId">
+            <summary>
+            Id of the session of the request
+            </summary>
+        </member>
+        <member name="P:com.etak.core.operation.RequestInvokationEnvironment.User">
+            <summary>
+            user of the request
+            </summary>
+        </member>
+        <member name="P:com.etak.core.operation.RequestInvokationEnvironment.Dealer">
+            <summary>
+            Dealer of the request
+            </summary>
+        </member>
+        <member name="T:com.etak.core.operation.util.MD5Utility">
+            <summary>
+            Utility class to calculate MD5 hashes
+            </summary>
+        </member>
+        <member name="M:com.etak.core.operation.util.MD5Utility.ComputeHash(System.Byte[])">
+            <summary>
+            Calculates the MD5 Hash of a byte []
+            </summary>
+            <param name="original">the source of data to calculate the hash</param>
+            <returns>the MD5 Hash</returns>
+        </member>
+        <member name="M:com.etak.core.operation.util.MD5Utility.ComputeHashOfFile(System.String)">
+            <summary>
+            Calculated the MD5 Hash of a file
+            </summary>
+            <param name="fileName">the path to the file</param>
+            <returns>the MD5 Hash</returns>
+        </member>
+        <member name="M:com.etak.core.operation.util.MD5Utility.ComputeHash(System.String)">
+            <summary>
+            Calculates the MD5 hash of an string
+            </summary>
+            <param name="original">the string to be hashed</param>
+            <returns>the MD5 hash of the string</returns>
+        </member>
+        <member name="T:com.etak.core.operation.contract.IValidator`1">
+            <summary>
+            Interface to validate objects
+            </summary>
+            <typeparam name="TValidated">the type of object to be validated</typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.contract.IValidator`1.Validate(`0)">
+            <summary>
+            Checks the validity of an object
+            </summary>
+            <param name="objectToValidate">the object that will be validated</param>
+            <returns>a Boolean indicating if the object is valid or not</returns>
+        </member>
+        <member name="T:com.etak.core.operation.implementation.NullValidator`1">
+            <summary>
+            Implementation of validator that does not perform any validation
+            </summary>
+            <typeparam name="T">THe type of object</typeparam>
+        </member>
+        <member name="M:com.etak.core.operation.implementation.NullValidator`1.Validate(`0)">
+            <summary>
+            Implementation of validate that always return true
+            </summary>
+            <param name="objectToValidate">the object to be validated</param>
+            <returns>always true</returns>
+        </member>
+    </members>
+</doc>

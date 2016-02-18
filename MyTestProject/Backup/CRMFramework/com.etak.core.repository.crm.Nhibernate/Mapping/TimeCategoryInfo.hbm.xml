@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.TimeCategoryInfo,com.etak.core.model" table="RM_TIMECATEGORY" >
+    <composite-id name="PKInfo" class="com.etak.core.model.TimeCategoryPKInfo, com.etak.core.model">
+      <key-property name="TimeCategoryID" column="TIMECATEGORYID" type="Int32" length="4" />
+      <key-property name="TimeCategoryIDSeq" column="TIMECATEGORYSEQ" type="Int32" length="4" />
+    </composite-id>
+    <property name="TimeCategoryName" column="TIMECATEGORYNAME" type="String" length="100" />
+    <property name="StartTime" column="STARTTIME" type="Int32" length="4" />
+    <property name="EndTime" column="ENDTIME" type="Int32" length="4" />
+    <property name="DayOfWeek" column="DAYOFWEEK" type="String" length="15" />
+    <property name="Remark" column="REMARK" type="String" length="100" />
+  </class>
+</hibernate-mapping>
+

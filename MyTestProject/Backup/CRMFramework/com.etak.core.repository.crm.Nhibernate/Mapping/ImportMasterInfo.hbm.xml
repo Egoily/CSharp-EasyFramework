@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.ImportMasterInfo,com.etak.core.model" table="CRM_MOBILE_SIMCARDS_IMPORT_MASTER" >
+    <id name="TransactionID" column="TRANSACTIONID" type="String"  unsaved-value="0">
+      <generator class="assigned" />
+    </id>
+    <property name="OrderID" column="ORDERID" type="Int32" length="4" />
+    <property name="AlgorithmName" column="ALGORITHMNAME" type="String" length="32" />
+    <property name="ManufacturerID" column="MANUFACTURERID" type="String" length="32" />
+    <property name="LanguageID" column="LANGUAGEID" type="Int32" length="4" />
+    <property name="INIPassword_DES" column="INIPASSWORD_DES" type="String" length="50" />
+    <property name="INIPassword_MD5" column="INIPASSWORD_MD5" type="String" length="32" />
+    <property name="PackageID" column="PACKAGEID" type="Int32" length="4" />
+    <property name="CreditLimit" column="CREDITLIMIT" type="Decimal" />
+    <property name="ActivateType" column="ACTIVATETYPE" type="Int32" length="4" />
+    <property name="UserID" column="USERID" type="Int32" length="4" />
+    <property name="StartDateTime" column="STARTDATETIME" type="DateTime" />
+    <property name="DealerID" column="DEALERID" type="Int32" length="4" />
+    <property name="DetailsCount" column="DETAILSCOUNT" type="Int32" length="4" />
+    <property name="ImportDate" column="IMPORTDATE" type="DateTime" />
+  </class>
+
+</hibernate-mapping>
+

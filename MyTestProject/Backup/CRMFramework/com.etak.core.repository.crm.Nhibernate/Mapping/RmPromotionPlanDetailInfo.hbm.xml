@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="com.etak.core.model.RmPromotionPlanDetailInfo,com.etak.core.model" table="RM_PROMOTIONPLAN_DETAIL" >
+    <cache usage="nonstrict-read-write" region="UserDealer"/>
+		<id name="PromotionPlanDetailId" column="PROMOTIONPLANDETAILID" type="Int32"  length="4" unsaved-value="0">
+			<generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+		</id>
+		<property name="PromotionTypeId" column="PROMOTIONTYPEID" type="Int32" length="4" />
+		<property name="ServiceTypeId" column="SERVICETYPEID" type="Int32" length="4" />
+		<property name="SubServiceTypeId" column="SUBSERVICETYPEID" type="Int32" length="4" />
+		<!--<property name="NumberCategoryId" column="NUMBERCATEGORYID" type="Int32" length="4" />-->
+		<property name="DateCategoryId" column="DATECATEGORYID" type="Int32" length="4" />
+		<!--<property name="CountryCode" column="COUNTRYCODE" type="String" length="25" />-->
+		<property name="CallDirectionId" column="CALLDIRECTIONID" type="Int32" length="4" />
+		<property name="LimitPerCall" column="LIMITPERCALL" type="Decimal" />
+		<!--<property name="LimitPerDay" column="LIMITPERDAY" type="Decimal" />-->
+		<property name="Limit" column="LIMIT" type="Decimal" />
+		<property name="LimitUnit" column="LIMITUNIT" type="Int32" length="4" />
+		<property name="CurrencyId" column="CURRENCYID" type="Int32" length="4" />
+		<property name="PromotionMethodId" column="PROMOTIONMETHODID" type="Int32" length="4" />
+		<property name="Setup" column="SETUP" type="Decimal" />
+		<property name="Prompt" column="PROMPT" type="Decimal" />
+		<property name="Tariff1" column="TARIFF1" type="Decimal" />
+		<property name="Tariff2" column="TARIFF2" type="Decimal" />
+		<!--<property name="UnitCategoryId" column="UNITCATEGORYID" type="Int32" length="4" />-->
+		<property name="DiscountMethodId" column="DISCOUNTMETHODID" type="Int32" length="4" />
+		<property name="StartDate" column="STARTDATE" type="DateTime" />
+		<property name="EndDate" column="ENDDATE" type="DateTime" />
+		<!--<property name="DateCategoryTypeId" column="DATECATEGORYTYPEID" type="Int32" length="4" />-->
+		<property name="WhiteList" column="WHITELIST" type="String" length="500" />
+		<property name="ApplyOnRoaming" column="APPLYONROAMING" type="Int32" length="4" />
+		<property name="UsageFee" column="USAGEFEE" type="Decimal"  />
+		<property name="RatePlanId" column="RatePlanId" type="Int32" length="4" />
+		<property name="BasePromotionPlanDetailId" column="BasePromotionPlanDetailId" type="Int32" length="4" />
+		<property name="PromotionPlanDetailName" column="PROMOTIONPLANDETAILNAME" type="String" length="80" />    
+    <property name="ApplyOnSuperOnNet" column="ApplyOnSuperOnNet" type="Boolean" length="4" />
+    <property name="OverLimitRateplanId" column="OVERLIMITRATEPLANID" type="Int32" length="4" />
+    <property name="BlackListId" column="BLACKLISTID" type="Int32" length="4" />
+    <property name="MaximumAllowedBalance" column="MAXIMUM_ALLOWED_BALANCE" type="Decimal" />
+    <property name="WalletTypeId" column="WALLETTYPEID" type="Int32" />
+    <property name="APIVisible" column="APIVISIBLE" type="com.etak.core.model.APIVisible,com.etak.core.model" />
+    <property name="PeriodUnit" column="PERIOD_UNITID" type="com.etak.core.model.TimeUnits,com.etak.core.model"  />
+    <property name="PeriodCount" column="PERIOD_UNIT_COUNT" type="Int32" />
+    <property name="StartPeriodNumber" column="START_PERIODNUMBER" type="Int32" />
+    <property name="EndPeriodNumber" column="END_PERIODNUMBER" type="Int32" />
+    <property name="Periodicity" column="PERIODICITY" type="Int32" />
+    <property name="CycleRepeatCount" column="CYCLE_REPEAT_COUNT" type="Int32" />
+    <property name="PreRenewalActionsMinutesOffset" column="PRERENEWALACTIONS_MINUTES_OFFSET" type="Int32" />
+    <many-to-one name="RmPromotionPlanInfo" class="com.etak.core.model.RmPromotionPlanInfo,com.etak.core.model">
+			<column name="PROMOTIONPLANID"  />
+		</many-to-one>
+    <bag name="PreRenewActions" lazy="true" cascade="save-update,persist">
+      <cache usage="nonstrict-read-write" region="UserDealer"/>
+      <key column="PRE_PROMOTIONPLAN_DETAILID"/>
+      <one-to-many class="com.etak.core.model.AbstractPromotionRenewAction, com.etak.core.model"/>
+    </bag>
+    <bag name="RenewActions" lazy="true" cascade="save-update,persist">
+      <cache usage="nonstrict-read-write" region="UserDealer"/>
+      <key column="POST_PROMOTIONPLAN_DETAILID"/>
+      <one-to-many class="com.etak.core.model.AbstractPromotionRenewAction, com.etak.core.model"/>
+    </bag>
+	</class>
+
+</hibernate-mapping>

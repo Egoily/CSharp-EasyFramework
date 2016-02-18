@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5279C8D2-7523-4A27-AA03-8A9736DE7E45}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.etak.core.repository.crm</RootNamespace>
+    <AssemblyName>com.etak.core.repository.crm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\com.etak.core.repository.crm.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\com.etak.core.repository.crm.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Nuget\com.etak.core.repository.crm.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net40\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\revisionsync\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="configuration\IOperationConfigurationRepository.cs" />
+    <Compile Include="customer\IAddressInfoRepository.cs" />
+    <Compile Include="dealer\IMVNORetailMarginRepository.cs" />
+    <Compile Include="drl\ICustomerDataRoamingLimitNotificationRepository.cs" />
+    <Compile Include="drl\IRoamingBlackListInfoRepository.cs" />
+    <Compile Include="drl\ICustomerDataRoamingLimitRepository.cs" />
+    <Compile Include="IPhysicalResourceSpecificationRepository.cs" />
+    <Compile Include="IProductInventoryRepository.cs" />
+    <Compile Include="ISessionInfoRepository.cs" />
+    <Compile Include="IVoucherCardInfoRepository.cs" />
+    <Compile Include="portability\IMNPOriginalNrnInfoRepository.cs" />
+    <Compile Include="portability\IMNPNpdbEsvfInfoRepository.cs" />
+    <Compile Include="IMNPSessionInfoRepository.cs" />
+    <Compile Include="IMultiLingualDescriptionRepository.cs" />
+    <Compile Include="IMVNOPromotionSMSConfigRepository.cs" />
+    <Compile Include="operation\IBusinessOperationRepository.cs" />
+    <Compile Include="operation\IBusinessOperationExecutionRepository.cs" />
+    <Compile Include="operation\IOrderTransitionRepository.cs" />
+    <Compile Include="operation\IOrderRepository.cs" />
+    <Compile Include="provisioning\ICarrierRepository.cs" />
+    <Compile Include="resource\IImeiAssnHistRepository.cs" />
+    <Compile Include="revenueManagement\IPaymentInfoRepository.cs" />
+    <Compile Include="rules\ICrmBussinessRuleInfoRepository.cs" />
+    <Compile Include="ICrmDefaultProvisionInfoRepository.cs" />
+    <Compile Include="IHolidayInfoRepository.cs" />
+    <Compile Include="network\IRMOperatorsInfoRepository.cs" />
+    <Compile Include="portability\IMNPPortabilityCustomerInfoRepository.cs" />
+    <Compile Include="portability\IMNPPortabilityMultiPortInInfoRepository.cs" />
+    <Compile Include="promotion\IRmPromotionGroupThresholdRepository.cs" />
+    <Compile Include="resource\IMVNOAPNIPPoolInfoRepository.cs" />
+    <Compile Include="resource\IDealerNumberInfoRepository.cs" />
+    <Compile Include="IHLRRequestErrorsRepository.cs" />
+    <Compile Include="ILanguageTypeInfoRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="resource\INumberInfoRepository.cs" />
+    <Compile Include="IReportResourceInfoRepository.cs" />
+    <Compile Include="IProductInfoRepository.cs" />
+    <Compile Include="ICrmCustomersBalanceTransationHistoryRepository.cs" />
+    <Compile Include="ICRMCUSTOMERSDATESINFORepository.cs" />
+    <Compile Include="ICrmCustomersMSISDNGroupMembersRepository.cs" />
+    <Compile Include="IMultiLingualInfoRepository.cs" />
+    <Compile Include="IUsageDetailRecordRepository.cs" />
+    <Compile Include="portability\IMNPIncomingEffectInfoRepository.cs" />
+    <Compile Include="resource\IImeiAssnRepository.cs" />
+    <Compile Include="services\ITroubleTicketInfoRepository.cs" />
+    <Compile Include="services\ITroubleTicketQuestionInfoRepository.cs" />
+    <Compile Include="services\ITTHistoryInfoRepository.cs" />
+    <Compile Include="subscription\catalog\IProductOfferingCatalogRepository.cs" />
+    <Compile Include="subscription\catalog\IProductOfferingGroupRepository.cs" />
+    <Compile Include="subscription\catalog\IProductOfferingRepository.cs" />
+    <Compile Include="subscription\ICrmCustomersResourceMbInfoRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="subscription\catalog\IProductOptionRepository.cs" />
+    <Compile Include="subscription\ICrmMobileMultipleImsiInfoRepository.cs" />
+    <Compile Include="subscription\ICrmMobileNetworkInfoRepository.cs" />
+    <Compile Include="topup\IMVNOTopupBundleBasedInfoRepository.cs" />
+    <Compile Include="IPackageRelationShipsRepository.cs" />
+    <Compile Include="customer\IPropertyInfoRepository.cs" />
+    <Compile Include="IRmPromotionPlanTopupBasedParametersRepository.cs" />
+    <Compile Include="ICrmCustomersBundleAssignmentHistoryInfoRepository.cs" />
+    <Compile Include="IServicesInfoRepository.cs" />
+    <Compile Include="IMVNODataRoamingLimitNotificationRepository.cs" />
+    <Compile Include="ISettingInfoRepository.cs" />
+    <Compile Include="IBundleInfoRepository.cs" />
+    <Compile Include="portability\IMNPPortabilityInfoRepository.cs" />
+    <Compile Include="ILifecycleLogInfoExtendedRepository.cs" />
+    <Compile Include="IPackageDealerMappingInfoRepository.cs" />
+    <Compile Include="ISIMCardInfoRepository.cs" />
+    <Compile Include="resource\INumberPropertyInfoRepository.cs" />
+    <Compile Include="IStatusChangedLogInfoRepository.cs" />
+    <Compile Include="ITransitionInfoRepository.cs" />
+    <Compile Include="ILifecycleLogInfoRepository.cs" />
+    <Compile Include="IEventInfoRepository.cs" />
+    <Compile Include="promotion\ICrmCustomerPromotionPropertyInfoRepository.cs" />
+    <Compile Include="ICrmCustomersExtraUsageInfoRepository.cs" />
+    <Compile Include="promotion\ICrmCustomersPromotionInfoRepository.cs" />
+    <Compile Include="promotion\ICrmCustomersPromotionOperationLogInfoRepository.cs" />
+    <Compile Include="IRmPromotionGroupMemberRepository.cs" />
+    <Compile Include="promotion\ICrmCustomersPromotionGroupRepository.cs" />
+    <Compile Include="IRmPromotionGroupInfoRepository.cs" />
+    <Compile Include="IMVNOConfigActionInfoRepository.cs" />
+    <Compile Include="ICrmCustomersBonusRelationShipInfoRepository.cs" />
+    <Compile Include="IMVNONotificationSettingInfoRepository.cs" />
+    <Compile Include="IPackageInfoRepository.cs" />
+    <Compile Include="topup\ICrmCustomersTopupBonusApplyCountInfoRepository.cs" />
+    <Compile Include="topup\ICrmCustomersTopupPromotionApplyCountInfoRepository.cs" />
+    <Compile Include="ICrmCustomersUnpaidFeeInfoRepository.cs" />
+    <Compile Include="topup\ICrmMvnoTopupBonusDetailInfoRepository.cs" />
+    <Compile Include="topup\ICrmMvnoTopupBonusPromotionInfoRepository.cs" />
+    <Compile Include="topup\IHistoryInfoRepository.cs" />
+    <Compile Include="topup\IMvnoTopupBonusInfoRepository.cs" />
+    <Compile Include="IPricePlanPackageVodafoneFileMapRepository.cs" />
+    <Compile Include="topup\ICrmMVNOPromotedTopupHistoryInfoRepository.cs" />
+    <Compile Include="IBRSTaxCodePostCodeRepository.cs" />
+    <Compile Include="IOperationLogRepository.cs" />
+    <Compile Include="ICRMMessageInfoRepository.cs" />
+    <Compile Include="IRmPromotionPlanDetailInfoRepository.cs" />
+    <Compile Include="ISettingExtendDetailInfoRepository.cs" />
+    <Compile Include="IBRSTaxCodeRepository.cs" />
+    <Compile Include="configuration\IDictionaryInfoRepository.cs" />
+    <Compile Include="IRmPromotionPlanInfoRepository.cs" />
+    <Compile Include="IIDMappingInfoRepository.cs" />
+    <Compile Include="ISequenceProvider.cs" />
+    <Compile Include="IOperationInfoRepository.cs" />
+    <Compile Include="ILoginInfoRepository.cs" />
+    <Compile Include="ISmsLogInfoRepository.cs" />
+    <Compile Include="ISmsLogQueueRepository.cs" />
+    <Compile Include="ISmsTemplateInfoRepository.cs" />
+    <Compile Include="configuration\ISystemConfigDataInfoRepository.cs" />
+    <Compile Include="user\IUserDealerInfoRepository.cs" />
+    <Compile Include="IDealerInfoRepository.cs" />
+    <Compile Include="IMVNOPropertiesRepository.cs" />
+    <Compile Include="customer\ICustomerInfoRepository.cs" />
+    <Compile Include="user\IUserInfoRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="subscription\IResourceMBRepository.cs" />
+    <Compile Include="revenueManagement\IAccountBalanceRepository.cs" />
+    <Compile Include="revenueManagement\IAccountDataRepository.cs" />
+    <Compile Include="revenueManagement\IAccountRepository.cs" />
+    <Compile Include="revenueManagement\IAccountTimeRepository.cs" />
+    <Compile Include="revenueManagement\IBillCycleRepository.cs" />
+    <Compile Include="revenueManagement\ITaxDefinitionRepository.cs" />
+    <Compile Include="revenueManagement\IBillRunRepository.cs" />
+    <Compile Include="revenueManagement\IChargePriceRepository.cs" />
+    <Compile Include="revenueManagement\IChargeRepository.cs" />
+    <Compile Include="revenueManagement\ICurrencyAccountRepository.cs" />
+    <Compile Include="revenueManagement\ICustomerAccountAssociationRepository.cs" />
+    <Compile Include="revenueManagement\ICustomerChargeRepository.cs" />
+    <Compile Include="revenueManagement\ICustomerChargeScheduleRepository.cs" />
+    <Compile Include="revenueManagement\ICustomerProductAssignmentRepository.cs" />
+    <Compile Include="revenueManagement\IInvoiceRepository.cs" />
+    <Compile Include="revenueManagement\IProductChargeOptionRepository.cs" />
+    <Compile Include="revenueManagement\IProductRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\com.etak.core.model\com.etak.core.model.csproj">
+      <Project>{5c9b8900-251a-4566-a727-7576dbe53a3c}</Project>
+      <Name>com.etak.core.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository\com.etak.core.repository.csproj">
+      <Project>{B3B4CFA1-4488-4E8C-AA22-B9F6206BE866}</Project>
+      <Name>com.etak.core.repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="com.etak.core.repository.crm.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <!--<UsingTask AssemblyFile="$(SolutionDir)NugetPackages\GetAssemblyFileVersions.dll" TaskName="GetAssemblyFileVersions.GetAssemblyFileVersion" />-->
+  <Target Name="AfterBuild" Condition="$(Configuration)==Nuget">
+    <!--<GetAssemblyFileVersion FilePathAssemblyInfo="$(ProjectDir)$(OutputPath)$(TargetName).dll">
+      <Output TaskParameter="AssemblyFileVersion" PropertyName="AssemblyFileVersion" />
+    </GetAssemblyFileVersion>
+    <Message Text="AssemblyFileVersion = $(AssemblyFileVersion)" />-->
+    <Message Text="&quot;$(SolutionDir)nugetpackages\nuget.exe&quot; pack &quot;$(ProjectPath)&quot; -IncludeReferencedProjects -Properties Configuration=Nuget;Platform=$(Platform) -OutputDirectory &quot;$(SolutionDir)nugetpackages&quot;" />
+    <Exec Command="&quot;$(SolutionDir)nugetpackages\nuget.exe&quot; pack &quot;$(ProjectPath)&quot; -IncludeReferencedProjects -Properties Configuration=Nuget;Platform=$(Platform) -OutputDirectory &quot;$(SolutionDir)nugetpackages&quot;" IgnoreExitCode="false" />
+  </Target>
+</Project>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.IDMappingInfo,com.etak.core.model"  table="CRM_MVNO_ID_MAPPING" dynamic-update="true" >
+    <cache usage="nonstrict-read-write" region="SystemSettings"/>
+    <id name="ID" column="ID" type="Int64"  length="8" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <property name="MvnoId" column="MvnoId" type="Int32" length="4" />
+    <property name="ETID1" column="ETID1" type="String" length="50" />
+    <property name="ETID2" column="ETID2" type="String" length="50" />
+    <property name="ETID3" column="ETID3" type="String" length="50" />
+    <property name="ExternalID1" column="ExternalID1" type="String" length="50" />
+    <property name="ExternalID2" column="ExternalID2" type="String" length="50" />
+    <property name="MappingType" column="MappingType"/>
+  </class>
+
+</hibernate-mapping>

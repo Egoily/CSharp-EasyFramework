@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.OrganizationInfo,com.etak.core.model" table="SYS25_ORGANIZATION" >
+    <id name="ID" column="OrgID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+    </id>
+    <property name="ParentID" column="ParentID" type="Int32" length="4" />
+    <property name="OrgNode" column="OrgNode" type="String" length="100" />
+    <property name="Contract" column="Contract" type="String" length="40" />
+    <property name="TitleID" column="TitleID" type="Int32" length="4" />
+    <property name="GenderID" column="GenderID" type="Int32" length="4" />
+    <property name="Telephone" column="Telephone" type="String" length="50" />
+    <property name="TeleFax" column="TeleFax" type="String" length="50" />
+    <property name="Email" column="Email" type="String" length="100" />
+    <property name="CreateDate" column="CreateDate" type="DateTime" />
+    <property name="CreateUserID" column="CreateUserID" type="Int32" length="4" />
+    <property name="Status" column="Status" type="Int32" length="4" />
+    <property name="UpdateDate" column="UpdateDate" type="DateTime" />
+    <property name="UpdateUserID" column="UpdateUserID" type="Int32" length="4" />
+    <property name="MVNOID" column="MVNOID" type="Int32" length="4" />
+  </class>
+</hibernate-mapping>

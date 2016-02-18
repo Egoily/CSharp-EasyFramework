@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.IPRangeInfo,com.etak.core.model" table="RM_ROAMING_GSNIP_RANGE" >
+    <id name="RANGEID" column="RANGEID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="TSC" column="TSC" type="String" length="20" />
+    <property name="IPRANGE1" column="IPRANGE1" type="Int64" length="8" />
+    <property name="IPRANGE2" column="IPRANGE2" type="Int64" length="8" />
+    <property name="STARTDATE" column="STARTDATE" type="DateTime" />
+    <property name="ENDDATE" column="ENDDATE" type="DateTime" />
+  </class>
+
+</hibernate-mapping>
+

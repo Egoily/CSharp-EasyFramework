@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.SmsLogInfo,com.etak.core.model" table="CRM_SMS_HISTORY">
+    <id name="LogId" column="LOGID" type="Int64" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>
+    <property name="DealerId" column="DEALERID" />
+    <property name="Sender" column="SENDER"  />
+    <property name="MSISDN" column="MSISDN" />
+    <property name="SmsMessage" column="SMSMESSAGE" type="String" length="500" />
+    <property name="CategoryId" column="CATEGORYID" />
+    <property name="Priority" column="PRIORITY"  />
+    <property name="Validity" column="VALIDITY"  />
+    <property name="TrySentTimes" column="TRYSENTTIMES"  />
+    <property name="MaxSentTimes" column="MAXSENTTIMES"  />
+    <property name="Name1" column="NAME1" />
+    <property name="Name2" column="NAME2" />
+    <property name="Name3" column="NAME3" />
+    <property name="Name4" column="NAME4"  />
+    <property name="Name5" column="NAME5"/>
+    <property name="Name6" column="NAME6" />
+    <property name="Value1" column="VALUE1" />
+    <property name="Value2" column="VALUE2" />
+    <property name="Value3" column="VALUE3" />
+    <property name="Value4" column="VALUE4" />
+    <property name="Value5" column="VALUE5" />
+    <property name="Value6" column="VALUE6" />    
+    <property name="IsSent" column="ISSENT" />
+    <property name="VirtualDeleted" column="VIRTUALDELETED" />
+    <property name="CreateDate" column="CREATEDATE"/>
+    <property name="SentDate" column="SENTDATE"/>
+    <property name="UserId" column="USERID" />
+    <property name="IsSmsInQueue" column="IsSmsInQueue"/>
+    <property name="DeliveryStatus" column="DELIVERYSTATUS"/>
+    <property name="ScheduleDeliveryTime" column="ScheduleDeliveryTime"/>
+  </class>
+
+</hibernate-mapping>

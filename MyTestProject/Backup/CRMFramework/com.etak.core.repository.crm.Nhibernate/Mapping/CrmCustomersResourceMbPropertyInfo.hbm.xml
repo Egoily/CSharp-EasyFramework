@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.CrmCustomersResourceMbPropertyInfo,com.etak.core.model" table="CRM_CUSTOMERS_RESOURCEMB_PROPERTY" >
+    <id name="PROPERTYID" column="PROPERTYID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="SMSSTATUS" column="SMSSTATUS" type="Boolean" />
+     <property name="MAXDAILYDATAONROAMING" column="MAXDAILYDATAONROAMING" type="Decimal" />
+    <property name="PREPAIDBALANCELOWERSENDSMSSTATUS" column="PREPAIDBALANCELOWERSENDSMSSTATUS" type="Int32" />
+    <property name="PREPAIDBALANCEEXHAUSIONSENDSMSSTATUS" column="PREPAIDBALANCEEXHAUSIONSENDSMSSTATUS" type="Int32" />
+    <property name="POSTPAIDCREDITLOWERSENDSMSSTATUS" column="POSTPAIDCREDITLOWERSENDSMSSTATUS" type="Int32" />
+    <property name="POSTPAIDCREDITEXHAUSIONSENDSMSSTATUS" column="POSTPAIDCREDITEXHAUSIONSENDSMSSTATUS" type="Int32" />
+    <property name="CHANGEPREPAIDBALANCELOWERSENDSMSSTATUSTIME" column="CHANGEPREPAIDBALANCELOWERSENDSMSSTATUSTIME" type="DateTime" />
+    <property name="CHANGEPREPAIDBALANCEEXHAUSIONSENDSMSSTATUSTIME" column="CHANGEPREPAIDBALANCEEXHAUSIONSENDSMSSTATUSTIME" type="DateTime" />
+    <property name="CHANGEPOSTPAIDCREDITLOWERSENDSMSSTATUSTIME" column="CHANGEPOSTPAIDCREDITLOWERSENDSMSSTATUSTIME" type="DateTime" />
+    <property name="CHANGEPOSTPAIDCREDITEXHAUSIONSENDSMSSTATUSTIME" column="CHANGEPOSTPAIDCREDITEXHAUSIONSENDSMSSTATUSTIME" type="DateTime" />
+    <property name="LowBalanceThreshold" column="LOWBALANCETHRESHOLD" type="Decimal" />
+    <many-to-one name="CrmCustomersResourceMbInfo" class="com.etak.core.model.CrmCustomersResourceMbInfo,com.etak.core.model">
+      <column name="RESOURCEID" length="30" />
+    </many-to-one>
+  </class>
+  
+</hibernate-mapping>

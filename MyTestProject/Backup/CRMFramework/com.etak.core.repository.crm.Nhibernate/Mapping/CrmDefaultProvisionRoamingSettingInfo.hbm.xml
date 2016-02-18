@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="com.etak.core.model.CrmDefaultProvisionRoamingSettingInfo, com.etak.core.model" table="CRM_DEFAULT_PROVISION_ROAMING_SETTING" >
+		<id name="SettingId" column="SETTINGID" type="Int32"  length="4" unsaved-value="0">
+			<generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+		</id>
+		<!--<property name="DealerId" column="DEALERID" type="Int32" length="4" />-->
+		<!--<property name="ProvisionId" column="ProvisionId" type="Int32" length="4" />-->
+		<property name="SmsText" column="SMSTEXT" type="String" length="400" />
+		<property name="SmsTextCamel" column="SMSTEXT_CAMEL" type="String" length="400" />
+		<property name="EnablePrepaid" column="ENABLEPREPAID" type="Boolean" />
+		<property name="EnablePostpaid" column="ENABLEPOSTPAID" type="Boolean" />
+		<property name="Activated" column="Activated" type="Boolean" />
+		<property name="EnableSmsCamel" column="ENABLESMS_CAMEL" type="Boolean" />
+		<property name="EnableSms" column="EnableSms" type="Boolean" />
+		<many-to-one name="DealerInfo" class="com.etak.core.model.DealerInfo, com.etak.core.model">
+			<column name="DealerId" length="30" />
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>

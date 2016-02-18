@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.HistoryInfo,com.etak.core.model" table="CRM_MVNO_TOPUP_HISTORY">
+    <id name="ID" column="ID" type="Int64" length="8" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>
+    <property name="DealerID" column="DealerID" type="Int32" length="4" />
+    <property name="OperationCode" column="OPERATIONCODE" type="Int64" length="8" />
+    <property name="RefrenceCode" column="REFERENCECODE" type="String" length="50" />
+    <property name="Msisdn" column="MSISDN" type="String" length="25" />
+    <property name="TopupType" column="TOPUPTYPE" type="Int32" length="4" />
+    <property name="Pin" column="PIN" type="String" length="40" />
+    <property name="Status" column="STATUS" type="Int32" length="4" />
+    <property name="StatusDate" column="STATUSDATE" type="DateTime" />
+    <property name="CurrencyID" column="CURRENCYID" type="Int32" length="4" />
+    <property name="TaxCode" column="TAXCODE" type="Int32" length="4" />
+    <property name="PreOperationCode" column="PREOPERATIONCODE" type="Int64" length="8" />
+    <property name="PreBalance" column="PREBALANCE" type="Decimal" />
+    <property name="OperationCause" column="OPERATIONCAUSE" type="String" length="20" />
+    <property name="Reamrk" column="REMARK" type="String" length="1000" />
+    <property name="Used" column="Used" type="Boolean" />
+    <property name="UsedTime" column="UsedTime" type="DateTime" />
+    <property name="PaymentCardNumber" column="PAYMENTCARDNUMBER" type="String" length="25" />
+    <property name="ExpirationDate" column="EXPIRATIONDATE" type="String" length="4" />
+    <property name="AmountWithTax" column="AMOUNTWITHTAX" type="Decimal" />
+    <property name="Amount" column="AMOUNT" type="Decimal" />
+    <property name="BonusConfigIds" column="BONUSCONFIGIDS" type="String" length="200" />
+    <property name="BonusConfigName" column="BONUSCONFIGNAME" type="String" length="1000" />
+    <property name="TopupAmount" column="TOPUPAMOUNT" type="Decimal" />
+    <property name="BonusAmountWithTAX" column="BONUSAMOUNTWITHTAX" type="Decimal" />
+    <property name="BonusAmount" column="BONUSAMOUNT" type="Decimal" />
+    <property name="NormalAmountWithTAX" column="NORMALAMOUNTWITHTAX" type="Decimal" />
+    <property name="NormalAmount" column="NORMALAMOUNT" type="Decimal" />
+    <property name="TopupBonusVAT" column="TOPUPBONUSWITHTAX" type="Decimal" />
+    <property name="TopupBonus" column="TOPUPBONUS" type="Decimal" />
+    <property name="BonusForNormal" column="BONUSFORNORMAL" type="Decimal" />
+    <property name="BonusForNormalVAT" column="BONUSFORNORMALVAT" type="Decimal" />
+    <property name="BonusForPromoted" column="BONUSFORPROMOTED" type="Decimal" />
+    <property name="BonusForPromotedVAT" column="BONUSFORPROMOTEDVAT" type="Decimal" />
+    <property name="BonusPromotionIds" column="BONUSPROMOTIONIDS" type="String" length="200" />
+    <property name="BonusPromotionName" column="BONUSPROMOTIONNAME" type="String" length="1000" />
+    <property name="UserID" column="UserID" type="Int32" length="4" />
+    <property name="CustomerID" column="CustomerID" type="Int32" length="4" />
+    <property name="VcEncrypt" column="VCENCRYPT" type="String" length="50" />
+    <property name="TopupAccount" column="TopupAccount" type="Int32" length="4" />
+    <property name="AdjustmentCode" column="WALLET_BALANCE_ADJUSTMENT_CODE" type="Int32" length="4" />
+    <property name="ExpirationDate2" column="EXPIRATIONDATE2" type="DateTime" />
+    <property name="ValidityDays" column="ValidityDays" type="Int32" length="4" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+	<class name="com.etak.core.model.CrmCustomersUnpaidFeeInfo,com.etak.core.model" table="CRM_CUSTOMERS_UNPAIDFEE" >
+		<composite-id>
+			<key-property name="CustomerId" column="CUSTOMERID" type="Int32" length="4" />
+			<key-property name="PromotionPlanId" column="PROMOTIONPLANID" type="Int32" length="4" />
+			<key-property name="FeeDate" column="FEEDATE" type="DateTime" />
+		</composite-id>
+		<property name="FeeType" column="FEETYPE" type="Int32" length="4" />
+		<property name="Amount" column="AMOUNT" type="Decimal" />
+		<property name="StatusId" column="STATUSID" type="Int32" length="4" />
+		<property name="TryChargeDate" column="TRYCHARGEDATE" type="DateTime" />
+		<property name="Remark" column="REMARK" type="String" length="200" />
+		<property name="BatchId" column="BATCHID" type="Int64" length="8" />
+		<many-to-one name="RmPromotionPlanInfo" class="com.etak.core.model.RmPromotionPlanInfo,com.etak.core.model">
+			<column name="PROMOTIONPLANID" length="30" />
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>

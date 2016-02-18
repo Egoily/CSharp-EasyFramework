@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.CrmDefaultProvisionInfo,com.etak.core.model" table="CRM_DEFAULT_PROVISION">
+    <cache usage="nonstrict-read-write" region="SystemSettings"/>
+    <id name="PROVISIONID" column="PROVISIONID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+    </id>
+    <property name="PROVISIONAME" column="PROVISIONAME" type="String" length="100" />
+    <property name="DEALERID" column="DEALERID" type="Int32" />
+    <property name="HLRSERVERIP" column="HLRSERVERIP" type="String" length="50" />
+    <property name="HLRSERVERPORT" column="HLRSERVERPORT" type="Int32" length="4" />
+    <property name="HLRSERVERUSER" column="HLRSERVERUSER" type="String" length="50" />
+    <property name="HLRSERVERPWD" column="HLRSERVERPWD" type="String" length="150" />
+    <property name="VMS" column="VMS" type="String" length="20" />
+    <property name="HELPDESK" column="HELPDESK" type="String" length="20" />
+    <property name="TELEPHONENUMBERS" column="TELEPHONENUMBERS" type="Int32" length="4" />
+    <property name="CLIP" column="CLIP" type="Boolean" />
+    <property name="CLIPOVERRIDE" column="CLIPOVERRIDE" type="Boolean" />
+    <property name="CLIR" column="CLIR" type="Boolean" />
+    <property name="COLP" column="COLP" type="Boolean" />
+    <property name="COLPOVERRIDE" column="COLPOVERRIDE" type="Boolean" />
+    <property name="COLR" column="COLR" type="Boolean" />
+    <property name="CLIRPRESENTATIONMODE" column="CLIRPRESENTATIONMODE" type="Int32" length="4" />
+    <property name="CALLWAITING" column="CALLWAITING" type="Boolean" />
+    <property name="CALLHOLD" column="CALLHOLD" type="Boolean" />
+    <property name="MULTIPARTY" column="MULTIPARTY" type="Boolean" />
+    <property name="ECT" column="ECT" type="Boolean" />
+    <property name="CALLWAITING_BSG_1" column="CALLWAITING_BSG_1" type="Boolean" />
+    <property name="CALLWAITING_BSG_6" column="CALLWAITING_BSG_6" type="Boolean" />
+    <property name="CALLWAITING_BSG_7" column="CALLWAITING_BSG_7" type="Boolean" />
+    <property name="CALLWAITING_BSG_8" column="CALLWAITING_BSG_8" type="Boolean" />
+    <property name="CALLWAITING_BSG_12" column="CALLWAITING_BSG_12" type="Boolean" />
+    <property name="UssdAllowed" column="UssdAllowed" type="Boolean" />
+    <property name="AOCC" column="AOCC" type="Boolean" />
+    <property name="AOCI" column="AOCI" type="Boolean" />
+    <property name="TELESERVICELIST" column="TELESERVICELIST" type="String" length="200" />
+    <property name="BEARERSERVICELIST" column="BEARERSERVICELIST" type="String" length="200" />
+    <property name="ODBMASK" column="ODBMASK" type="String" length="500" />
+    <property name="SERVICECODE" column="SERVICECODE" type="String" length="200" />
+    <property name="CREATEDATE" column="CREATEDATE" type="DateTime" />
+    <property name="USERID" column="USERID" type="Int32" length="4" />
+    <property name="CB_SUBSOPTION" column="CB_SUBSOPTION" type="Int32" length="4" />
+    <property name="CB_PASSWORD" column="CB_PASSWORD" type="String" length="10" />
+    <property name="CB_WRONGATTEMPTS" column="CB_WRONGATTEMPTS" type="Int32" length="4" />
+    <property name="PostPayPlmnTemplate" column="POSTPAYOCPLMNTEMPLATE" type="Int32" length="4" />
+    <property name="PrepayPlmnTemplate" column="PREPAYOCPLMNTEMPLATE" type="Int32" length="4" />
+    <property name="PrepayCsiTypeList" column="PrepayCsiTypeList" type="string" length="100" />
+    <property name="PostpayCsiTypeList" column="PostpayCsiTypeList" type="string" length="100" />
+    <property name="NAM" column="NAM" type="Int32" length="4" />
+    <property name="FTNRule" column="FTNRule" type="String" length="15" />
+    <bag name="NetWorkInforList" inverse="true" lazy="false" cascade="save-update,persist">
+      <cache usage="nonstrict-read-write" region="SystemSettings"/>
+      <key column="PROVISIONID" />
+      <one-to-many class="com.etak.core.model.CrmDefaultProvisionNetWorkInfo, com.etak.core.model" />
+    </bag>
+  </class>
+</hibernate-mapping>

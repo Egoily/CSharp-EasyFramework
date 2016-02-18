@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="com.etak.core.model.CrmCustomersSpecificNumberInfo,com.etak.core.model" table="CRM_CUSTOMERS_SPECIFICNUMBER" >
+		<id name="CustomersSpecificNumberId" column="CustomersSpecificNumberId" type="Int32"  length="4" unsaved-value="0">
+			<generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+		</id>
+		<property name="CustomerId" column="CustomerId" type="Int32" length="4"  />
+		<property name="GroupId" column="GROUPID" type="Int32" length="4"  />
+		<property name="SpecificNumber" column="SPECIFICNUMBER" type="String" length="25" />
+		<!--<composite-id>
+			<key-property name="CustomerId" column="CUSTOMERID" type="Int32" length="4" />
+			<key-property name="SpecificNumber" column="SPECIFICNUMBER" type="String" length="25" />
+		</composite-id>-->
+		<property name="StartDate" column="STARTDATE" type="DateTime" />
+		<property name="EndDate" column="ENDDATE" type="DateTime" />		
+	</class>
+</hibernate-mapping>

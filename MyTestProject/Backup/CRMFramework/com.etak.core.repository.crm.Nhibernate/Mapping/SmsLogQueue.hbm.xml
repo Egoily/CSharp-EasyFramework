@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.SmsLogQueue,com.etak.core.model" table="CRM_SMS_QUEUE">
+    <id name="DealerID" column="DEALERID" type="Int32"  length="8" unsaved-value="0">
+      <generator class="com.etak.core.repository.crm.Nhibernate.IDGeneration.DealerIdGenerator,com.etak.core.repository.crm.Nhibernate"/>
+    </id>
+    <property name="UpdateStamp" column="UPDATESTAMP" type="BinaryBlob" insert="false" update="false" />
+    <property name="FlagImmediately" column="FlagImmediately" type="Int32" length="4" />
+    <property name="FlagOther" column="FlagOther" type="Int32" length="4" />
+    <property name="NextScanTime" column="NEXTSCANTIME" type="DateTime" />
+  </class>
+
+</hibernate-mapping>

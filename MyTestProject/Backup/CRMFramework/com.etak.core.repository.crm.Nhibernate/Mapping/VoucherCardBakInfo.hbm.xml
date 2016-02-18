@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="com.etak.core.model.VoucherCardBakInfo,com.etak.core.model" table="CRM_DEALERS_VOUCHER_BAK" >
+		<id name="BakId" column="BakId" type="Int64" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+		</id>
+    <property name="VoucherCode" column="VoucherCode" type="String" length="80" />
+		<property name="SN" column="SN" type="String" length="80" />
+		<property name="VcEncrypt" column="VCENCRYPT" type="String" length="50" />
+		<property name="DealerId" column="DEALERID" type="Int32" length="4" />
+		<property name="CMSDealerId" column="CMSDEALERID" type="Int32" length="4" />
+		<property name="InitialCredit" column="INITIALCREDIT" type="Decimal" />
+		<property name="CurrentCredit" column="CURRENTCREDIT" type="Decimal" />
+		<property name="CurrencyId" column="CURRENCYID" type="Int32" length="4" />
+		<property name="CreateDate" column="CREATEDATE" type="DateTime" />
+		<property name="Status" column="STATUS" type="Int32" length="4" />
+		<property name="StartDate" column="STARTDATE" type="DateTime" />
+		<property name="EndDate" column="ENDDATE" type="DateTime" />
+		<property name="ChangeStatusDate" column="CHANGESTATUSDATE" type="DateTime" />
+		<property name="ActiveDeadLineDate" column="ACTIVEDEADLINEDATE" type="DateTime" />
+		<property name="VATRate" column="VATRATE" type="Decimal" />
+		<property name="CreditWithVAT" column="CREDITWITHVAT" type="Decimal" />
+	</class>
+
+</hibernate-mapping>

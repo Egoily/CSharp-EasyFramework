@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.TransitionInfo,com.etak.core.model" table="CRM_LIFECYCLE_TRANSITIONS">
+    <id name="TransitionId" column="TRANSITIONID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="assigned" />
+    </id>
+    <property name="EventId" column="EVENTID" type="Int32" length="4" />
+    <property name="CurrentStatusId" column="CURRENTSTATUSID" type="Int32" length="4" />
+    <property name="NextStatusId" column="NEXTSTATUSID" type="Int32" length="4" />
+    <property name="ActionId" column="ACTIONID" type="Int32" length="4" />
+    <property name="NextNPMStstusId" column="NEXTNPMSTATUS" type="Int32" length="4" />
+    <property name="NextICCStatusId" column="NEXTICCSTATUS" type="Int32" length="4" />
+  </class>
+
+</hibernate-mapping>

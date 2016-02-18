@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="com.etak.core.model.CrmCustomersPromotionInfo,com.etak.core.model" table="CRM_CUSTOMERS_PROMOTION" dynamic-update="true">
+		<id name="PromotionId" column="PROMOTIONID" type="Int64"  unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+		</id>	
+		
+		<property name="StartDate" column="STARTDATE" type="DateTime" />
+		<property name="CurrentLimit" column="CURRENTLIMIT" type="Decimal" />
+		<property name="Active" column="ACTIVE" type="Boolean" />
+		<property name="EndDate" column="ENDDATE" type="DateTime" />
+		<property name="WhiteList" column="WHITELIST" type="String" length="500" />
+    <property name="FirstUsed" column="FIRSTUSED" type="DateTime" />
+    <property name="RenewalCount" column="RENEWALCOUNT" type="Int32" length="4" />
+    <property name="RenewAutomatically" column="RENEWAUTOMATICALLY" type="Int32" length="4" />
+    <property name="DeActiveReason" column="DEACTIVEREASON" type="Int32" length="4" />
+    <property name="BatchNo" column="BATCHNO" type="String" length="25" />
+    <property name="BatchId" column="BATCHID" type="Int64" length="8" />
+    <property name="RenewDate" column="RENEWDATE" type="DateTime" />
+    <property name="InitialLimit" column="INITIALLIMIT" type="Decimal" />
+    <property name="Priority" column="PRIORITY" type="Int32" length="4" />
+    <property name="ActiveWithoutCredit" column="ACTIVEWITHOUTCREDIT" type="Int32" length="4" />
+    <property name="NextRenewDate" column="NEXT_RENEWAL_DATE" type="DateTime" />
+    <property name="NextPeriodNumber" column="NEXT_PERIOD_NUMBER" type="Int32" />
+    <property name="CurrentCycleNumber" column="CURRENT_CYCLE_NUMBER" type="Int32"/>
+    <property name="PreRenewalActionsDate" column="PRERENEWALACTIONS_DATE" type="DateTime" />
+    <property name="PreActionsExecuted" column="PREACTIONSEXECUTED" type="Boolean" />
+    <property name="ActionsExecuted" column="ACTIONSEXECUTED" type="Boolean" />
+    <property name="RetryTimes" column="RETRY_TIMES" type="Int32"/>
+
+    <many-to-one name="Customer" class="com.etak.core.model.CustomerInfo,com.etak.core.model">
+      <column name="CUSTOMERID" />
+    </many-to-one>
+
+    <many-to-one name="PromotionDetail" class="com.etak.core.model.RmPromotionPlanDetailInfo,com.etak.core.model">
+      <column name="PROMOTIONPLANDETAILID" />
+    </many-to-one>
+	</class>
+
+</hibernate-mapping>

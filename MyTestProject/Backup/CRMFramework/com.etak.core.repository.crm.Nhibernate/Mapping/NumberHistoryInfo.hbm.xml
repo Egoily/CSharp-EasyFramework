@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+<class name="com.etak.core.model.NumberHistoryInfo,com.etak.core.model" table="SYS_NPM_HISTORY" >
+<id name="Resource" column="Resource" type="String"  length="25" unsaved-value="0">
+   <generator class="assigned" />
+</id>
+  <property name="TrafficTypeID" column="TrafficTypeID" type="Int32" length="4" />
+  <property name="CategoryID" column="CategoryID" type="Int32" length="4" />
+  <property name="UpdateUserID" column="UpdateUserID" type="Int32" length="4" />
+  <property name="UpdateDate" column="UpdateDate" type="DateTime" />
+  <property name="CreateUserID" column="CreateUserID" type="Int32" length="4" />
+  <property name="CreateDate" column="CreateDate" type="DateTime" />
+  <property name="DataStatus" column="DataStatus" type="Int32" length="4" />
+  <property name="DeleteDate" column="DeleteDate" type="DateTime" />
+</class>
+
+</hibernate-mapping>

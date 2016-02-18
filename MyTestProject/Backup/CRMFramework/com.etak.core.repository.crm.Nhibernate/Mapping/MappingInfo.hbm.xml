@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.MappingInfo,com.etak.core.model" table="CRM_CUSTOMERS_MAPPING" >
+    <id name="MappingId" column="MAPPINGID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+    </id>
+    <property name="FiscalUnitId" column="FISCALUNITID" type="Int32" length="4" />
+    <property name="ReSellerId" column="RESELLERID" type="Int32" length="4" />
+    <property name="AgentId" column="AGENTID" type="Int32" length="4" />
+    <property name="SubAgentId" column="SUBAGENTID" type="Int32" length="4" />
+    <property name="OrgId" column="ORGID" type="Int32" length="4" />
+    <property name="OldId" column="OLDID" type="Int32" length="4" />
+    <property name="Stat1" column="STAT1" type="Boolean" />
+    <property name="Stat2" column="STAT2" type="Boolean" />
+    <property name="Stat3" column="STAT3" type="Boolean" />
+    <property name="Stat4" column="STAT4" type="Boolean" />
+    <property name="Stat5" column="STAT5" type="Boolean" />
+    <property name="Stat6" column="STAT6" type="Boolean" />
+    <property name="Stat7" column="STAT7" type="Boolean" />
+
+    <many-to-one name="CustomerInfo" class="com.etak.core.model.CustomerInfo,com.etak.core.model">
+      <column name="CUSTOMERID" length="30" />
+    </many-to-one>
+
+  </class>
+</hibernate-mapping>

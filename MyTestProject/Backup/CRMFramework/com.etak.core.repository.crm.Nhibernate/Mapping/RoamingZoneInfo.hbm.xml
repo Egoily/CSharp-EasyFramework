@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.RoamingZoneInfo,com.etak.core.model" table="RM_ROAMING_ZONE" >
+    <id name="ZoneID" column="ZONEID" type="Int32"  length="4">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="ZoneName" column="ZONENAME" type="String" length="100" />
+    <property name="DealerID" column="DEALERID" type="Int32" length="4" />
+    <property name="StartDate" column="STARTDATE" type="DateTime" />
+    <property name="EndDate" column="ENDDATE" type="DateTime" />
+    <property name="SubserviceTypeID" column="SUBSERVICETYPEID" type="Int32" length="4" />
+    <property name="TrafficTypeID" column="TRAFFICTYPEID" type="Int32" length="4" />
+
+    <bag name="RoamingZoneDetailList" inverse="true" lazy="true" cascade="all,persist">
+      <key column="ZoneID" />
+      <one-to-many class="com.etak.core.model.RoamingZoneDetailInfo,com.etak.core.model" />
+    </bag>
+  </class>
+</hibernate-mapping>
+

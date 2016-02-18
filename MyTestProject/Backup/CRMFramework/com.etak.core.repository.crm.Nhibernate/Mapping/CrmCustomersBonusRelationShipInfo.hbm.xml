@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="com.etak.core.model.CrmCustomersBonusRelationShipInfo,com.etak.core.model" table="CRM_CUSTOMERS_BONUS_RELATIONSHIP" >
+    <cache usage="nonstrict-read-write" region="UserDealer"/>
+		<id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+			<generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+		</id>
+		<property name="MVNOID" column="MVNOID" type="Int32" length="4" />
+		<property name="Description" column="Description" type="String" length="400" />
+		<property name="RelationShipTypeID" column="RelationShipTypeID" type="Int32" length="4" />
+		<property name="BeRelationShipedID" column="BeRelationShipedID" type="Int32" length="4" />
+    <property name="BonusPromotionID" column="BonusPromotionID" type="Int32" length="4" />
+		<property name="BonusAmount" column="BonusAmount" type="Decimal" />
+		<property name="BounsValidityType" column="BounsValidityType" type="Int32" length="4" />
+		<property name="BonusValidityValue" column="BonusValidityValue" type="Int32" length="4" />
+		<property name="StartDate" column="StartDate" type="DateTime" />
+		<property name="EndDate" column="EndDate" type="DateTime" />
+		<property name="CreateDate" column="CreateDate" type="DateTime" />
+		<property name="CreateUserID" column="CreateUserID" type="Int32" length="4" />
+		<property name="Status" column="Status" type="Int32" length="4" />
+		<property name="UpdateDate" column="UpdateDate" type="DateTime" />
+		<property name="UpdateUserID" column="UpdateUserID" type="Int32" length="4" />
+    
+	</class>
+
+</hibernate-mapping>

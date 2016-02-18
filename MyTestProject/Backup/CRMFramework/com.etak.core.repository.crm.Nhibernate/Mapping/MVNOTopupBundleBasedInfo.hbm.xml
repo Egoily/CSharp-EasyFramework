@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.MVNOTopupBundleBasedInfo,com.etak.core.model" table="RM_BUNDLE_PACKAGE_TOPUP_BASED" >
+    <composite-id name="MVNOTopupBundleBasedKey" class="com.etak.core.model.MVNOTopupBundleBasedKey, com.etak.core.model">
+      <key-property name="PackageID" type="Int32" length="4" column="PACKAGEID" />
+      <key-property name="BundleID" type="Int32" length="4" column="BUNDLEID" />
+      <key-property name="ThresholdTopupAmount" type="Decimal" column="THRESHOLD_TOPUP_AMOUNT" />
+    </composite-id>
+    <property name="DaysValid" column="DAYS_VALID" type="Int32" length="4" />
+    <property name="DaysFrozenAfterExpiration" column="DAYS_FROZEN_AFTER_EXPIRATION" type="Int32" length="4" />
+    <property name="DaysToAccumulateTopups" column="DAYS_TO_ACCUMULATE_TOPUPS" type="Int32" length="4" />
+  </class>
+</hibernate-mapping>

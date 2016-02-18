@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C9B8900-251A-4566-A727-7576DBE53A3C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.etak.core.model</RootNamespace>
+    <AssemblyName>com.etak.core.model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\com.etak.core.model.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Nuget\com.etak.core.model.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\revisionsync\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="ActionInfo.cs" />
+    <Compile Include="ActionType.cs" />
+    <Compile Include="AddressInfo.cs" />
+    <Compile Include="AlertRuleInfo.cs" />
+    <Compile Include="AlertRuleMessageInfo.cs" />
+    <Compile Include="AlertRuleMessageTemplateInfo.cs" />
+    <Compile Include="AutoTransferSettingInfo.cs" />
+    <Compile Include="BankInfo.cs" />
+    <Compile Include="BlockMsisdnInfo.cs" />
+    <Compile Include="BRSChannel.cs" />
+    <Compile Include="BRSCurrency.cs" />
+    <Compile Include="BRSFinancialEntity.cs" />
+    <Compile Include="BRSTaxCode.cs" />
+    <Compile Include="BRSTaxCodePostCode.cs" />
+    <Compile Include="BundlePackageInfo.cs" />
+    <Compile Include="CustomerPromotionAllowance.cs" />
+    <Compile Include="operation\BusinessOperation.cs" />
+    <Compile Include="operation\BusinessOperationExecutionDTO.cs" />
+    <Compile Include="operation\contract\amount\IAmountBasedDTORequest.cs" />
+    <Compile Include="operation\contract\amount\IAmountBasedDTOResponse.cs" />
+    <Compile Include="operation\contract\amount\IAmountBasedRequest.cs" />
+    <Compile Include="operation\contract\amount\IAmountBasedResponse.cs" />
+    <Compile Include="operation\contract\customer\IAccountIdBasedDTORequest.cs" />
+    <Compile Include="operation\contract\customer\IAccountBasedRequest.cs" />
+    <Compile Include="operation\contract\customer\IChargeBasedResponse.cs" />
+    <Compile Include="operation\contract\customer\IChargeCatalogBasedDTOResponse.cs" />
+    <Compile Include="operation\contract\customer\ICustomerBasedDTOResponse.cs" />
+    <Compile Include="operation\contract\customer\ICustomerBasedResponse.cs" />
+    <Compile Include="operation\contract\customer\IInvoiceBasedDTOResponse.cs" />
+    <Compile Include="operation\contract\customer\IInvoiceBasedResponse.cs" />
+    <Compile Include="operation\contract\customer\IJointCustomerBasedRequest.cs" />
+    <Compile Include="operation\contract\customer\IJointCustomerIdDTOBasedRequest.cs" />
+    <Compile Include="operation\contract\customer\IMultiChargeBasedResponse.cs" />
+    <Compile Include="operation\contract\customer\IMultiChargeCatalogBasedDTOResponse.cs" />
+    <Compile Include="operation\contract\product\IMultiProductBasedDTOResponse.cs" />
+    <Compile Include="operation\contract\product\IMultiProductBasedResponse.cs" />
+    <Compile Include="operation\contract\product\IProductBasedDTOResponse.cs" />
+    <Compile Include="operation\contract\product\IProductBasedResponse.cs" />
+    <Compile Include="operation\contract\subscription\ICustomerProductAssignmentBasedDTOResponse.cs" />
+    <Compile Include="operation\contract\subscription\ICustomerProductAssignmentBasedResponse.cs" />
+    <Compile Include="operation\contract\subscription\IJointMsisdnDTOBasedRequest.cs" />
+    <Compile Include="operation\contract\subscription\IJointSubscriptionBasedRequest.cs" />
+    <Compile Include="operation\contract\numberInfo\INumberInfoBasedDTOResponse.cs" />
+    <Compile Include="operation\contract\numberInfo\INumberInfoBasedResponse.cs" />
+    <Compile Include="operation\contract\simcard\ISimCardBasedDTOResponse.cs" />
+    <Compile Include="operation\contract\simcard\ISimCardBasedResponse.cs" />
+    <Compile Include="operation\contract\subscription\ISubscriptionBasedDTOResponse.cs" />
+    <Compile Include="operation\contract\subscription\ISubscriptionBasedResponse.cs" />
+    <Compile Include="operation\contract\subscription\ISubscriptionLastActiveBasedRequest.cs" />
+    <Compile Include="provisioning\SupplementaryService\RadioAccessNetwork.cs" />
+    <Compile Include="provisioning\VolatileDataForMME.cs" />
+    <Compile Include="provisioning\VolatileDataForSGSN.cs" />
+    <Compile Include="provisioning\VolatileDataForVLR.cs" />
+    <Compile Include="revenueManagement\AccountDTO.cs" />
+    <Compile Include="revenueManagement\AccountTypeDTO.cs" />
+    <Compile Include="customer\AddressDTO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="customer\BankInformationDTO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="revenueManagement\ChargePriceId.cs" />
+    <Compile Include="revenueManagement\CustomerProductAssignmentDTO.cs" />
+    <Compile Include="revenueManagement\ProductConflictResolutionsStrategies.cs" />
+    <Compile Include="revenueManagement\BillCycleDTO.cs" />
+    <Compile Include="revenueManagement\BillCycleTypeDTO.cs" />
+    <Compile Include="revenueManagement\ChargeCatalogDTO.cs" />
+    <Compile Include="revenueManagement\ChargePriceCatalogDTO.cs" />
+    <Compile Include="revenueManagement\ProductDependencyRelation.cs" />
+    <Compile Include="revenueManagement\ProductRelationTypes.cs" />
+    <Compile Include="revenueManagement\ProductStatuses.cs" />
+    <Compile Include="SessionInfo.cs" />
+    <Compile Include="subscription\CrmCustomersPromotionInfoDTO.cs" />
+    <Compile Include="revenueManagement\CustomerChargeDTO.cs" />
+    <Compile Include="customer\CustomerDataDTO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="customer\CustomerDTO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="subscription\CustomerPromotionDTO.cs" />
+    <Compile Include="revenueManagement\CustomerRecurringChargeDTO.cs" />
+    <Compile Include="revenueManagement\DiscountDTO.cs" />
+    <Compile Include="subscription\DivertDTO.cs" />
+    <Compile Include="subscription\DivertServiceDTO.cs" />
+    <Compile Include="revenueManagement\InvoiceDTO.cs" />
+    <Compile Include="resource\MSISDNResourceDTO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="revenueManagement\ProductCatalogDTO.cs" />
+    <Compile Include="revenueManagement\ProductPurchaseChargingOptionDTO.cs" />
+    <Compile Include="promotion\PromotionDTO.cs" />
+    <Compile Include="revenueManagement\ProratingSchemaDTO.cs" />
+    <Compile Include="revenueManagement\RecurringChargeCatalogDTO.cs" />
+    <Compile Include="subscription\RmPromotionPlanDetailInfoDTO.cs" />
+    <Compile Include="subscription\RmPromotionPlanInfoDTO.cs" />
+    <Compile Include="resource\SimCardDTO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="revenueManagement\TextualDescription.cs" />
+    <Compile Include="operation\contract\customer\ICustomerBasedRequest.cs" />
+    <Compile Include="operation\contract\customer\ICustomerIdBasedDTORequest.cs" />
+    <Compile Include="operation\contract\customer\IDocumentIdBasedDTORequest.cs" />
+    <Compile Include="operation\contract\customer\IExternalCustomerIdBasedDTORequest.cs" />
+    <Compile Include="operation\contract\customer\IMultiCustomerRequestBased.cs" />
+    <Compile Include="operation\contract\numberInfo\INumberInfoBasedRequest .cs" />
+    <Compile Include="operation\contract\simcard\IICCIDBasedDTORequest.cs" />
+    <Compile Include="operation\contract\simcard\ISimCardBasedRequest.cs" />
+    <Compile Include="operation\contract\subscription\IMsisdnBasedDTORequest.cs" />
+    <Compile Include="operation\contract\subscription\IMultiSubscriptionBasedRequest.cs" />
+    <Compile Include="operation\messages\CreateNewOrderRequest.cs" />
+    <Compile Include="operation\messages\ModifyOrderReponse.cs" />
+    <Compile Include="operation\messages\ModifyOrderRequest.cs" />
+    <Compile Include="operation\messages\ModifyOrderRequestDTO.cs" />
+    <Compile Include="operation\messages\ModifyOrderResponseDTO.cs" />
+    <Compile Include="operation\messages\OrderRequestDTO.cs" />
+    <Compile Include="operation\messages\CreateNewOrderResponse.cs" />
+    <Compile Include="operation\messages\OrderResponseDTO.cs" />
+    <Compile Include="operation\messages\RequestBase.cs" />
+    <Compile Include="operation\messages\RequestBaseDTO.cs" />
+    <Compile Include="operation\messages\ResponseBase.cs" />
+    <Compile Include="operation\messages\ResponseBaseDTO.cs" />
+    <Compile Include="operation\messages\ResultTypes.cs" />
+    <Compile Include="operation\BusinessOperationExecution.cs" />
+    <Compile Include="operation\OperationConfiguration.cs" />
+    <Compile Include="operation\Order.cs" />
+    <Compile Include="operation\OrderTransition.cs" />
+    <Compile Include="promotion\AbstractPromotionRenewAction.cs" />
+    <Compile Include="provisioning\HLRRequestErrors.cs" />
+    <Compile Include="CustomerAddress.cs" />
+    <Compile Include="provisioning\SupplementaryService\RoamingWelcomeSMSService.cs" />
+    <Compile Include="provisioning\SupplementaryService\LTE4GService.cs" />
+    <Compile Include="revenueManagement\ChargeAdhocNonRecurring.cs" />
+    <Compile Include="revenueManagement\ChargeAggregate.cs" />
+    <Compile Include="revenueManagement\ChargeTarget.cs" />
+    <Compile Include="revenueManagement\ChargeTaxes.cs" />
+    <Compile Include="revenueManagement\UsageAggregate.cs" />
+    <Compile Include="rules\BussinessRule.cs" />
+    <Compile Include="CallDirectionInfo.cs" />
+    <Compile Include="CallTypeInfo.cs" />
+    <Compile Include="CrmCustomerPromotionPropertyInfo.cs" />
+    <Compile Include="CrmCustomersBalanceTransationHistory.cs" />
+    <Compile Include="CrmCustomersBonusRelationShipInfo.cs" />
+    <Compile Include="CrmCustomersBundleAssignmentHistoryInfo.cs" />
+    <Compile Include="CRMCUSTOMERSDATESINFO.cs" />
+    <Compile Include="CrmCustomersExtraUsageInfo.cs" />
+    <Compile Include="CrmCustomersFfHistoryInfo.cs" />
+    <Compile Include="CrmCustomersFfInfo.cs" />
+    <Compile Include="CrmCustomersFfInitialChargeInfo.cs" />
+    <Compile Include="CrmCustomersMSISDNGroupMembers.cs" />
+    <Compile Include="CrmCustomersMSISDNGroupMembersHistory.cs" />
+    <Compile Include="CrmCustomersPromotionOperationLogInfo.cs" />
+    <Compile Include="CrmCustomersResourceMbInfo.cs" />
+    <Compile Include="CrmCustomersResourceMbPropertyInfo.cs" />
+    <Compile Include="CrmCustomersSpecificNumberInfo.cs" />
+    <Compile Include="CrmCustomersTopupBonusApplyCountInfo.cs" />
+    <Compile Include="CrmCustomersTopupBonusInfo.cs" />
+    <Compile Include="CrmCustomersTopupPromotionApplyCountInfo.cs" />
+    <Compile Include="CrmCustomersTopupPromotionInfo.cs" />
+    <Compile Include="CrmCustomersUnpaidFeeInfo.cs" />
+    <Compile Include="CrmDealersSettingsInfo.cs" />
+    <Compile Include="CrmDefaultProvisionCallBarringInfo.cs" />
+    <Compile Include="CrmDefaultProvisionCallForwardInfo.cs" />
+    <Compile Include="CrmDefaultProvisionCamelCsiDataInfo.cs" />
+    <Compile Include="CrmDefaultProvisionCamelCsiDPInfo.cs" />
+    <Compile Include="CrmDefaultProvisionCamelDataInfo.cs" />
+    <Compile Include="CrmDefaultProvisionInfo.cs" />
+    <Compile Include="CRMEnum.cs" />
+    <Compile Include="CRMMessageInfo.cs" />
+    <Compile Include="CrmMobileCallBarringInfo.cs" />
+    <Compile Include="CrmMobileCallForwardInfo.cs" />
+    <Compile Include="CrmMobileCallWaitingInfo.cs" />
+    <Compile Include="CrmMobileCamelCsiDataInfo.cs" />
+    <Compile Include="CrmMobileCamelCsiDPInfo.cs" />
+    <Compile Include="CrmMobileCamelDataInfo.cs" />
+    <Compile Include="CrmMobileCamelUcsiInfo.cs" />
+    <Compile Include="CrmMobileCugFeatureInfo.cs" />
+    <Compile Include="CrmMobileCugSubsInfo.cs" />
+    <Compile Include="CrmMobileSSInfo.cs" />
+    <Compile Include="CrmMVNOMSISDNGroupTypes.cs" />
+    <Compile Include="CrmMVNOPromotedTopupHistoryInfo.cs" />
+    <Compile Include="CrmMvnoTopupBonusDetailInfo.cs" />
+    <Compile Include="CrmMvnoTopupBonusFailedPromotion.cs" />
+    <Compile Include="CrmMvnoTopupBonusInfo.cs" />
+    <Compile Include="CrmMvnoTopupBonusPromotionInfo.cs" />
+    <Compile Include="CrmMVNOTopUpPromotionConfigInfo.cs" />
+    <Compile Include="CustomerCreditCard.cs" />
+    <Compile Include="CustomerDataRoamingLimit.cs" />
+    <Compile Include="CustomerDataRoamingLimitHistory.cs" />
+    <Compile Include="CustomerDataRoamingLimitNotification.cs" />
+    <Compile Include="CustomerInfo.cs" />
+    <Compile Include="DataUnits.cs" />
+    <Compile Include="DateCategoryInfo.cs" />
+    <Compile Include="DealerATMTopUpConfigInfo.cs" />
+    <Compile Include="DealerBankInfo.cs" />
+    <Compile Include="DealerICCInfo.cs" />
+    <Compile Include="DealerIMSIInfo.cs" />
+    <Compile Include="DealerLoyaltyInfo.cs" />
+    <Compile Include="resource\DealerNumberInfo.cs" />
+    <Compile Include="DealerOBOPRSInfo.cs" />
+    <Compile Include="DealerPropertiesInfo.cs" />
+    <Compile Include="DealerRatePlanInfo.cs" />
+    <Compile Include="DealersVoucherMvnoInfo.cs" />
+    <Compile Include="DictionaryInfo.cs" />
+    <Compile Include="DIDInfo.cs" />
+    <Compile Include="DREAPILogInfo.cs" />
+    <Compile Include="EmailAttachmentInfo.cs" />
+    <Compile Include="EmailInfo.cs" />
+    <Compile Include="EventInfo.cs" />
+    <Compile Include="ExecuteTraceInfo.cs" />
+    <Compile Include="ExternalResourceMBInfo.cs" />
+    <Compile Include="HistoryInfo.cs" />
+    <Compile Include="HLRServiceConfig.cs" />
+    <Compile Include="HolidayInfo.cs" />
+    <Compile Include="Holidaykey.cs" />
+    <Compile Include="HuntingGroupDestInfo.cs" />
+    <Compile Include="HuntingGroupInfo.cs" />
+    <Compile Include="HuntingGroupSettingInfo.cs" />
+    <Compile Include="IDMappingInfo.cs" />
+    <Compile Include="ImeiAssn.cs" />
+    <Compile Include="ImeiAssnHist.cs" />
+    <Compile Include="ImportDetailsInfo.cs" />
+    <Compile Include="ImportLogInfo.cs" />
+    <Compile Include="ImportMasterInfo.cs" />
+    <Compile Include="IncumbentInfo.cs" />
+    <Compile Include="InterfaceHistory.cs" />
+    <Compile Include="InternationalZoneDetailInfo.cs" />
+    <Compile Include="InternationalZoneInfo.cs" />
+    <Compile Include="IPRangeInfo.cs" />
+    <Compile Include="ISO4217CurrencyCodes.cs" />
+    <Compile Include="ISO639LanguageCodes.cs" />
+    <Compile Include="MultiLingualDescription.cs" />
+    <Compile Include="LanguageSpecificText.cs" />
+    <Compile Include="LanguageTypeInfo.cs" />
+    <Compile Include="LevelInfo.cs" />
+    <Compile Include="LifecycleEnum.cs" />
+    <Compile Include="LifecycleHolidayInfo.cs" />
+    <Compile Include="LifecycleLogInfo.cs" />
+    <Compile Include="LifecycleLogInfoExtended.cs" />
+    <Compile Include="LifecycleStatusTransitionNotification.cs" />
+    <Compile Include="LoginInfo.cs" />
+    <Compile Include="MappingInfo.cs" />
+    <Compile Include="MessageInfo.cs" />
+    <Compile Include="MessageUserInfo.cs" />
+    <Compile Include="MNPConsolidationLogInfo.cs" />
+    <Compile Include="MNPDeletionRequestInfo.cs" />
+    <Compile Include="MNPIncomingEffectInfo.cs" />
+    <Compile Include="MNPNpdbEsvfInfo.cs" />
+    <Compile Include="MNPOriginalNrnInfo.cs" />
+    <Compile Include="MNPOriginalNrnRangeInfo.cs" />
+    <Compile Include="MNPPortabilityCustomerInfo.cs" />
+    <Compile Include="MNPPortabilityInfo.cs" />
+    <Compile Include="MNPPortabilityMultiInfo.cs" />
+    <Compile Include="MNPPortabilityMultiPortInInfo.cs" />
+    <Compile Include="MNPPortabilitytAttachInfo.cs" />
+    <Compile Include="MNPReasonInfo.cs" />
+    <Compile Include="MNPSessionInfo.cs" />
+    <Compile Include="ModelBase.cs" />
+    <Compile Include="ModelInfo.cs" />
+    <Compile Include="ModuleElementsInfo.cs" />
+    <Compile Include="ModuleMvnoInfo.cs" />
+    <Compile Include="MultiLingualInfo.cs" />
+    <Compile Include="MVNOAPNBatchIPInfo.cs" />
+    <Compile Include="MVNOAPNIPPoolInfo.cs" />
+    <Compile Include="MVNOAutoTopupNotificationLog.cs" />
+    <Compile Include="MVNOAutoTopupNotificationProvisionLog.cs" />
+    <Compile Include="MVNOAutoTopupNotificationQueue.cs" />
+    <Compile Include="MVNOConfigActionInfo.cs" />
+    <Compile Include="MVNOCustomerPropertyInfo.cs" />
+    <Compile Include="MvnoDataRoamingLimitInfo.cs" />
+    <Compile Include="MVNODataRoamingLimitNotification.cs" />
+    <Compile Include="MVNOLanguageInfo.cs" />
+    <Compile Include="MVNONotificationSettingInfo.cs" />
+    <Compile Include="MVNOPromotionSMSConfig.cs" />
+    <Compile Include="MVNOPropertiesInfo.cs" />
+    <Compile Include="MVNOSmsAccountInfo.cs" />
+    <Compile Include="MVNOTopupBundleBasedInfo.cs" />
+    <Compile Include="MVNOTopupBundleBasedKey.cs" />
+    <Compile Include="NumberBatchInfo.cs" />
+    <Compile Include="resource\NumberHistoryInfo.cs" />
+    <Compile Include="resource\NumberInfo.cs" />
+    <Compile Include="resource\NumberPropertyInfo.cs" />
+    <Compile Include="NumberRangeInfo.cs" />
+    <Compile Include="OperationDetailLog.cs" />
+    <Compile Include="OperationInfo.cs" />
+    <Compile Include="OperationLog.cs" />
+    <Compile Include="OrganizationInfo.cs" />
+    <Compile Include="rules\PackageBussinessRules.cs" />
+    <Compile Include="PackageDealerMappingInfo.cs" />
+    <Compile Include="PackageRelation.cs" />
+    <Compile Include="PackageRelationShips.cs" />
+    <Compile Include="rules\PackageRule.cs" />
+    <Compile Include="PerformanceTraceConfigInfo.cs" />
+    <Compile Include="PermissionInfo.cs" />
+    <Compile Include="PreActivateLogInfo.cs" />
+    <Compile Include="PricePlanPackageVodafoneFileMap.cs" />
+    <Compile Include="ProductInfo.cs" />
+    <Compile Include="PromotionGroupBusinessRules.cs" />
+    <Compile Include="rules\PromotionGroupRule.cs" />
+    <Compile Include="PromotionModelBase.cs" />
+    <Compile Include="PromotionType.cs" />
+    <Compile Include="PropertyInfo.cs" />
+    <Compile Include="provisioning\KeyValue.cs" />
+    <Compile Include="provisioning\ProvisioningApnTemplate.cs" />
+    <Compile Include="provisioning\ProvisioningSimCard.cs" />
+    <Compile Include="provisioning\ProvisioningSimCardTemplate.cs" />
+    <Compile Include="provisioning\ProvisioningSubscriber.cs" />
+    <Compile Include="provisioning\ProvisioningSubscriberTemplate.cs" />
+    <Compile Include="provisioning\ProvisioningType.cs" />
+    <Compile Include="provisioning\SubscriberSupplementServiceData.cs" />
+    <Compile Include="provisioning\SupplementaryService\AdviceOfCharge.cs" />
+    <Compile Include="provisioning\SupplementaryService\APNQoSSetting.cs" />
+    <Compile Include="provisioning\SupplementaryService\APNService.cs" />
+    <Compile Include="provisioning\SupplementaryService\BarringODB.cs" />
+    <Compile Include="provisioning\SupplementaryService\BarringSDB.cs" />
+    <Compile Include="provisioning\SupplementaryService\BehaviourPerVLRTemplateSetting.cs" />
+    <Compile Include="provisioning\SupplementaryService\CallDeflection.cs" />
+    <Compile Include="provisioning\SupplementaryService\CallForwarding.cs" />
+    <Compile Include="provisioning\SupplementaryService\CallingNamePresentation.cs" />
+    <Compile Include="provisioning\SupplementaryService\CallPresentationService.cs" />
+    <Compile Include="provisioning\SupplementaryService\CallWaitingAndCallHolding.cs" />
+    <Compile Include="provisioning\SupplementaryService\CamelService.cs" />
+    <Compile Include="provisioning\SupplementaryService\CircuitBearerService.cs" />
+    <Compile Include="provisioning\SupplementaryService\ClosedUserGroup.cs" />
+    <Compile Include="provisioning\SupplementaryService\CompletionOfCallsBusySubscriber.cs" />
+    <Compile Include="provisioning\SupplementaryService\ExplicitCallTransfer.cs" />
+    <Compile Include="provisioning\SupplementaryService\FTNValidationRuleTemplate.cs" />
+    <Compile Include="provisioning\SupplementaryService\MultiParty.cs" />
+    <Compile Include="provisioning\SupplementaryService\NameIdentification.cs" />
+    <Compile Include="provisioning\SupplementaryService\NetworkAccessModel.cs" />
+    <Compile Include="provisioning\SupplementaryService\SuplementaryService.cs" />
+    <Compile Include="provisioning\SupplementaryService\TeleService.cs" />
+    <Compile Include="provisioning\SupplementaryService\UserToUserSignalling.cs" />
+    <Compile Include="provisioning\SupplementaryService\USSDService.cs" />
+    <Compile Include="RatePlanDetailInfo.cs" />
+    <Compile Include="RatePlanInfo.cs" />
+    <Compile Include="RatePlanTranslationInfo.cs" />
+    <Compile Include="REGEXInfo.cs" />
+    <Compile Include="RelateInfo.cs" />
+    <Compile Include="RemarksInfo.cs" />
+    <Compile Include="ReportResourceInfo.cs" />
+    <Compile Include="ResourceDIDInfo.cs" />
+    <Compile Include="ResourceMBInfo.cs" />
+    <Compile Include="ResourceMbPropertyInfo.cs" />
+    <Compile Include="revenueManagement\Account.cs" />
+    <Compile Include="revenueManagement\BalanceForAccount.cs" />
+    <Compile Include="revenueManagement\AccountData.cs" />
+    <Compile Include="revenueManagement\AccountTime.cs" />
+    <Compile Include="revenueManagement\AccountType.cs" />
+    <Compile Include="revenueManagement\AdjustmentCalculationType.cs" />
+    <Compile Include="revenueManagement\AdjustmentType.cs" />
+    <Compile Include="revenueManagement\BillCycle.cs" />
+    <Compile Include="revenueManagement\BillRun.cs" />
+    <Compile Include="revenueManagement\Charge.cs" />
+    <Compile Include="revenueManagement\ChargeDiscount.cs" />
+    <Compile Include="revenueManagement\ChargeNonRecurring.cs" />
+    <Compile Include="revenueManagement\ChargePrice.cs" />
+    <Compile Include="revenueManagement\ChargeRecurring.cs" />
+    <Compile Include="revenueManagement\ChargeStatus.cs" />
+    <Compile Include="revenueManagement\AccountCurrency.cs" />
+    <Compile Include="revenueManagement\CustomerAccountAssociation.cs" />
+    <Compile Include="revenueManagement\CustomerCharge.cs" />
+    <Compile Include="revenueManagement\CustomerChargeSchedule.cs" />
+    <Compile Include="revenueManagement\CustomerProductAssignment.cs" />
+    <Compile Include="revenueManagement\IChargeComputer.cs" />
+    <Compile Include="revenueManagement\InformationType.cs" />
+    <Compile Include="revenueManagement\Invoice.cs" />
+    <Compile Include="revenueManagement\Product.cs" />
+    <Compile Include="revenueManagement\ProductChargeOption.cs" />
+    <Compile Include="revenueManagement\ProductType.cs" />
+    <Compile Include="revenueManagement\TaxDefinition.cs" />
+    <Compile Include="revenueManagement\TaxRates.cs" />
+    <Compile Include="revenueManagement\TaxZipRanges.cs" />
+    <Compile Include="RmblackwhitelistInfo.cs" />
+    <Compile Include="RmFfFeeInfo.cs" />
+    <Compile Include="RmFfOperatorListInfo.cs" />
+    <Compile Include="RmFixNumberRangeInfo.cs" />
+    <Compile Include="RMOperatorsInfo.cs" />
+    <Compile Include="promotion\RmPromotionGroupInfo.cs" />
+    <Compile Include="promotion\RmPromotionGroupMember.cs" />
+    <Compile Include="promotion\RmPromotionGroupThreshold.cs" />
+    <Compile Include="promotion\RmPromotionPlanDetailInfo.cs" />
+    <Compile Include="promotion\RmPromotionPlanInfo.cs" />
+    <Compile Include="promotion\RmPromotionPlanRuleInfo.cs" />
+    <Compile Include="promotion\RmPromotionPlanTopupBasedParameters.cs" />
+    <Compile Include="RmSpecificNumberGroupInfo.cs" />
+    <Compile Include="RoamingBlackListInfo.cs" />
+    <Compile Include="RoamingOperatorInfo.cs" />
+    <Compile Include="RoamingSettingInfo.cs" />
+    <Compile Include="RoamingSmsConfigInfo.cs" />
+    <Compile Include="RoamingSmsHistoryInfo.cs" />
+    <Compile Include="RoamingZoneDetailInfo.cs" />
+    <Compile Include="RoamingZoneInfo.cs" />
+    <Compile Include="RoleInfo.cs" />
+    <Compile Include="RolePermissionInfo.cs" />
+    <Compile Include="ServicesInfo.cs" />
+    <Compile Include="BundleInfo.cs" />
+    <Compile Include="DealerInfo.cs" />
+    <Compile Include="PackageInfo.cs" />
+    <Compile Include="CrmCustomersPromotionGroup.cs" />
+    <Compile Include="CrmCustomersPromotionInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingDetailInfo.cs" />
+    <Compile Include="SettingExtendDetailInfo.cs" />
+    <Compile Include="SettingInfo.cs" />
+    <Compile Include="resource\SIMCardInfo.cs" />
+    <Compile Include="resource\SIMCardMappingInfo.cs" />
+    <Compile Include="resource\SIMCardOrderInfo.cs" />
+    <Compile Include="SmsLogInfo.cs" />
+    <Compile Include="SmsLogQueue.cs" />
+    <Compile Include="SmsTemplateInfo.cs" />
+    <Compile Include="SmsTempletInfo.cs" />
+    <Compile Include="SpecialTelNumberInfo.cs" />
+    <Compile Include="StatusChangedLogInfo.cs" />
+    <Compile Include="StyleInfo.cs" />
+    <Compile Include="subscription\ServicesInfoDTO.cs" />
+    <Compile Include="subscription\SubscriptionDTO.cs" />
+    <Compile Include="SystemConfigDataInfo.cs" />
+    <Compile Include="SystemConfigIDInfo.cs" />
+    <Compile Include="CrmDefaultProvisionNetWorkInfo.cs" />
+    <Compile Include="CrmDefaultProvisionRoamingSettingInfo.cs" />
+    <Compile Include="CrmMobileMultipleImsiInfo.cs" />
+    <Compile Include="CrmMobileNetWorkInfo.cs" />
+    <Compile Include="ThemeInfo.cs" />
+    <Compile Include="TimeCategoryInfo.cs" />
+    <Compile Include="TimeReference.cs" />
+    <Compile Include="TimeUnits.cs" />
+    <Compile Include="TransferBalanceInfo.cs" />
+    <Compile Include="TransitionInfo.cs" />
+    <Compile Include="TroubleTicketInfo.cs" />
+    <Compile Include="TroubleTicketQuestionInfo.cs" />
+    <Compile Include="TTDeptInfo.cs" />
+    <Compile Include="TTHistoryInfo.cs" />
+    <Compile Include="UnitCategories.cs" />
+    <Compile Include="UnitCategoryInfo.cs" />
+    <Compile Include="UsageDetailRecord.cs" />
+    <Compile Include="usage\UsageDetailDTO.cs" />
+    <Compile Include="usage\UsagesSubTypes.cs" />
+    <Compile Include="UserDealerInfo.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="UserOrganizationInfo.cs" />
+    <Compile Include="UserRoleInfo.cs" />
+    <Compile Include="utils\Comparators.cs" />
+    <Compile Include="VoucherBatchInfo.cs" />
+    <Compile Include="VoucherCardBakInfo.cs" />
+    <Compile Include="VoucherCardInfo.cs" />
+    <Compile Include="VoucherCardStatus.cs" />
+    <Compile Include="VPNGroupInfo.cs" />
+    <Compile Include="VPNInfo.cs" />
+    <Compile Include="VPNShortCodeInfo.cs" />
+    <Compile Include="VPNSubscriberInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Diagrams\ClassDiagram1.cd" />
+    <None Include="Diagrams\CustomerInfo.cd" />
+    <None Include="Diagrams\CoreModel.cd" />
+    <None Include="com.etak.core.model.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Diagrams\Product.cd" />
+    <None Include="operation\messages\MessageClassDiagram.cd" />
+    <None Include="operation\Operation.cd" />
+    <None Include="revenueManagement\ProductClassDiagram.cd" />
+    <None Include="revenueManagement\Revenue Diagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <UsingTask AssemblyFile="$(SolutionDir)NugetPackages\GetAssemblyFileVersions.dll" TaskName="GetAssemblyFileVersions.GetAssemblyFileVersion" />
+  <Target Name="AfterBuild" Condition="$(Configuration)==Nuget">
+    <Message Text="&quot;$(SolutionDir)nugetpackages\nuget.exe&quot; pack &quot;$(ProjectPath)&quot; -IncludeReferencedProjects -Properties Configuration=Nuget;Platform=$(Platform) -OutputDirectory &quot;$(SolutionDir)nugetpackages&quot;" />
+    <Exec Command="&quot;$(SolutionDir)nugetpackages\nuget.exe&quot; pack &quot;$(ProjectPath)&quot; -IncludeReferencedProjects -Properties Configuration=Nuget;Platform=$(Platform) -OutputDirectory &quot;$(SolutionDir)nugetpackages&quot;" IgnoreExitCode="false" />
+  </Target>
+</Project>

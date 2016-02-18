@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.DictionaryInfo,com.etak.core.model" table="SYS_DICTIONARY" >
+    <cache usage="nonstrict-read-write" region="SystemSettings"/>
+    <id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+    </id>
+    <property name="DictionaryID" column="DICTIONARYID" type="Int32" length="4" />
+    <property name="ParentID" column="PARENTID" type="Int32" length="4" />
+    <property name="DictionaryType" column="DICTIONARYTYPE" type="Int32" length="4" />
+    <property name="DictionaryText" column="DICTIONARYTEXT" type="String" length="50" />
+    <property name="Value" column="VALUESID" type="String" length="50" />
+    <property name="Level" column="LEVELID" type="Int32" length="4" />
+    <property name="Item_Post" column="ITEM_POST" type="Int32" length="4" />
+    <property name="ToolTipText" column="TOOLTIPTEXT" type="String" length="50" />
+    <property name="Link" column="LINK" type="String" length="100" />
+    <property name="Description" column="DESCRIPTIONID" type="String" length="200" />
+    <property name="Update_UserID" column="UPDATE_USERID" type="Int32" length="4" />
+    <property name="Update_Time" column="UPDATE_TIME" type="DateTime" />
+    <property name="Create_UserID" column="CREATE_USERID" type="Int32" length="4" />
+    <property name="Create_Time" column="CREATE_TIME" type="DateTime" />
+    <property name="State" column="STATEID" type="Int32" length="4" />
+  </class>
+
+</hibernate-mapping>

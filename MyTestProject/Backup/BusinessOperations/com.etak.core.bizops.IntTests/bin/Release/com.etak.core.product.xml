@@ -1,0 +1,1111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.product</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.informationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.helper.ProductBindHelper">
+            <summary>
+             Helper to bind all product microservices inside MicroServiceManager
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.helper.ProductBindHelper.LoadMicroservices">
+            <summary>
+            Register all microservices in MicroServiceManager
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.CancelCustomerPackages.CancelCustomerPackagesRequest">
+            <summary>
+            CancelCustomerPackageByPackageIdRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CancelCustomerPackages.CancelCustomerPackagesRequest.Customer">
+            <summary>
+            The customer from the instances of product info matching PackageDefinition will be removed
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CancelCustomerPackages.CancelCustomerPackagesRequest.PackageDefinition">
+            <summary>
+            The PackageInfo (Catalog) that will be removed from customer
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CancelCustomerPackages.CancelCustomerPackagesRequest.EndDate">
+            <summary>
+            The end date for the packages of the customer
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.CancelCustomerPackages.CancelCustomerPackagesResponse">
+            <summary>
+            CancelCustomerPackageByPackageIdResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CancelCustomerPackages.CancelCustomerPackagesResponse.ProductInfoCanceled">
+            <summary>
+            The list of products cancelled to the customer
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.CreateCustomerOder.CreateCustomerOrderRequest">
+            <summary>
+            request for CreateCustomerOrderMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CreateCustomerOder.CreateCustomerOrderRequest.CustomerOrder">
+            <summary>
+            new customerOrder
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.CreateCustomerOder.CreateCustomerOrderResponse">
+            <summary>
+            response for CreateCustomerOrderMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CreateCustomerOder.CreateCustomerOrderResponse.CreatedCustomerOrder">
+            <summary>
+            Created order
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.CreatePhysicalProduct.CreatePhysicalProductReponse">
+            <summary>
+            request for CreatePhysicalProductMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CreatePhysicalProduct.CreatePhysicalProductReponse.PhysicalProductInfo">
+            <summary>
+            new Physical Product
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.CreatePhysicalProduct.CreatePhysicalProductRequest">
+            <summary>
+            response for CreatePhysicalProductMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CreatePhysicalProduct.CreatePhysicalProductRequest.PhysicalProductInfo">
+            <summary>
+            created Physical Product
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.CreatePhysicalResourceSpecification.CreatePhysicalResourceSpecificationRequest">
+            <summary>
+            request for CreatePhysicalResourceSpecificationMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CreatePhysicalResourceSpecification.CreatePhysicalResourceSpecificationRequest.Specification">
+            <summary>
+            new PhysicalResourceSpecification
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.CreatePhysicalResourceSpecification.CreatePhysicalResourceSpecificationResponse">
+            <summary>
+            response for CreatePhysicalResourceSpecificationMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CreatePhysicalResourceSpecification.CreatePhysicalResourceSpecificationResponse.Specification">
+            <summary>
+            created PhysicalResourceSpecification
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.CreateProductInfo.CreateProductInfoRequest">
+            <summary>
+            CreateProductInfoRequest is used in CreateProductInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CreateProductInfo.CreateProductInfoRequest.ProductInfo">
+            <summary>
+            ProductInfo you wish to create
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.CreateProductInfo.CreateProductInfoResponse">
+            <summary>
+            CreateProductInfoResponse is used in CreateProductInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CreateProductInfo.CreateProductInfoResponse.ProductInfo">
+            <summary>
+            ProductInfo created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.CreateProductInventory.CreateProductInventoryRequest">
+            <summary>
+            CreateProductInventoryRequest is used in microservice CreateProductInventoryMS as input
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CreateProductInventory.CreateProductInventoryRequest.ProductInventory">
+            <summary>
+            ProductInventory you wish to create
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.CreateProductInventory.CreateProductInventoryResponse">
+            <summary>
+            CreateProductInventoryResponse is used in microservice CreateProductInventoryMS as output
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CreateProductInventory.CreateProductInventoryResponse.ProductInventory">
+            <summary>
+            ProductInventory created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetAllPhysicalResourceSpecifications.GetAllPhysicalResourceSpecificationsRequest">
+            <summary>
+            request for GetAllPhysicalResourceSpecificationsMS
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetAllPhysicalResourceSpecifications.GetAllPhysicalResourceSpecificationsResponse">
+            <summary>
+            response for GetAllPhysicalResourceSpecificationsMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetAllPhysicalResourceSpecifications.GetAllPhysicalResourceSpecificationsResponse.Specifications">
+            <summary>
+            PhysicalResourceSpecification list
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetAllRmPromotionPlanForDealerId.GetAllRmPromotionPlanForDealerIdRequest">
+            <summary>
+            GetRmPromotionPlanInfosByIdsRequest is used in GetRmPromotionPlanInfosByIdsMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetAllRmPromotionPlanForDealerId.GetAllRmPromotionPlanForDealerIdRequest.DealerId">
+            <summary>
+            Enumerable of promotion plan ids
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetAllRmPromotionPlanForDealerId.GetAllRmPromotionPlanForDealerIdResponse">
+            <summary>
+            GetRmPromotionPlanInfosByIdsResponse is used in GetRmPromotionPlanInfosByIdsMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetAllRmPromotionPlanForDealerId.GetAllRmPromotionPlanForDealerIdResponse.RmPromotionPlanInfos">
+            <summary>
+            Enumerable of RmPromotionPlanInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetBillCyclesByVMNO.GetBillCyclesByVMNORequest">
+            <summary>
+            GetBillCyclesByVMNORequest is used in GetBillCyclesByVMNOMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetBillCyclesByVMNO.GetBillCyclesByVMNORequest.DealerInfo">
+            <summary>
+             VMNO
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetBillCyclesByVMNO.GetBillCyclesByVMNOResponse">
+            <summary>
+            GetBillCyclesByVMNOResponse is used in GetBillCyclesByVMNOMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetBillCyclesByVMNO.GetBillCyclesByVMNOResponse.BillCycles">
+            <summary>
+            Enumerable of BillCycle entities
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetChargeById.GetChargeByIdRequest">
+            <summary>
+            GetChargeByIdMsRequest is used in GetChargeByIdMs
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetChargeById.GetChargeByIdRequest.ChargeId">
+            <summary>
+            Specific charge id
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetChargeById.GetChargeByIdResponse">
+            <summary>
+            GetChargeByIdResponse is used in GetChargeByIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetChargeById.GetChargeByIdResponse.Charge">
+            <summary>
+            Get Charge by specific Id
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetChargesByCategoryId.GetChargesByCategoryIdRequest">
+            <summary>
+            GetChargesByCategoryIdRequest is used in GetChargesByCategoryIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetChargesByCategoryId.GetChargesByCategoryIdRequest.CategoryId">
+            <summary>
+            Category id charges
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetChargesByCategoryId.GetChargesByCategoryIdResponse">
+            <summary>
+            GetChargesByCategoryIdResponse is used in GetChargesByCategoryIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetChargesByCategoryId.GetChargesByCategoryIdResponse.Charges">
+            <summary>
+            Enumerable of Charge entities
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.CalculateNextBillRunDateForBillCycle.CalculateNextBillRunDateForBillCycleRequest">
+            <summary>
+            GetNextBillRunDateRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CalculateNextBillRunDateForBillCycle.CalculateNextBillRunDateForBillCycleRequest.BillCycleDefinition">
+            <summary>
+            BillCycle definition
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CalculateNextBillRunDateForBillCycle.CalculateNextBillRunDateForBillCycleRequest.FirstDayOfWeek">
+            <summary>
+            First Day Of Week. By default, it is set to Sunday.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CalculateNextBillRunDateForBillCycle.CalculateNextBillRunDateForBillCycleRequest.PurchaseTime">
+            <summary>
+            Date of purchase to calculate the next Bill Run Date in reference with this one
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetCustomerOrderList.GetCustomerOrderListRequest">
+            <summary>
+            request for GetCustomerOrderListMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetCustomerOrderList.GetCustomerOrderListRequest.OrderId">
+            <summary>
+            OrderID
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetCustomerOrderList.GetCustomerOrderListRequest.CustomerId">
+            <summary>
+            CustomerId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetCustomerOrderList.GetCustomerOrderListRequest.FromDate">
+            <summary>
+            StartDate
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetCustomerOrderList.GetCustomerOrderListRequest.ToDate">
+            <summary>
+            EndDate
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetCustomerOrderList.GetCustomerOrderListRequest.Status">
+            <summary>
+            Order Status
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetCustomerOrderList.GetCustomerOrderListRequest.PageNumber">
+            <summary>
+            Current page number
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetCustomerOrderList.GetCustomerOrderListRequest.PageSize">
+            <summary>
+            total items to display for each page
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetCustomerOrderList.GetCustomerOrderListRequest.FilterList">
+            <summary>
+            Search conditions
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetCustomerOrderList.GetCustomerOrderListResponse">
+            <summary>
+            response for GetCustomerOrderListMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetCustomerOrderList.GetCustomerOrderListResponse.CustomerOrderList">
+            <summary>
+            CustomerOrder list 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetProductOfferingByProductOfferingId.GetProductOfferingByProductOfferingIdRequest">
+            <summary>
+            GetProductByProductIdRequest is used in GetProductByProductIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetProductOfferingByProductOfferingId.GetProductOfferingByProductOfferingIdRequest.ProductOfferingId">
+            <summary>
+            Product id to get Product entity
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetProductOfferingByProductOfferingId.GetProductOfferingByProductOfferingIdResponse">
+            <summary>
+            GetProductByProductIdResponse is used in GetProductByProductIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetProductOfferingByProductOfferingId.GetProductOfferingByProductOfferingIdResponse.ProductOffering">
+            <summary>
+            Product entity
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetCustomerProductAssignmentsByCustomerId.GetCustomerProductAssignmentsByCustomerIdRequest">
+            <summary>
+            GetCustomerProductAssignmentsByCustomerIdRequest is used in GetCustomerProductAssignmentsByCustomerIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetCustomerProductAssignmentsByCustomerId.GetCustomerProductAssignmentsByCustomerIdRequest.CustomerId">
+            <summary>
+            CustomerId used to get all CustomerProductAssignment
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetCustomerProductAssignmentsByCustomerId.GetCustomerProductAssignmentsByCustomerIdResponse">
+            <summary>
+            GetCustomerProductAssignmentsByCustomerIdResponse is used in GetCustomerProductAssignmentsByCustomerIdMS
+            </summary>
+        </member>
+        <member name="F:com.etak.core.product.message.GetCustomerProductAssignmentsByCustomerId.GetCustomerProductAssignmentsByCustomerIdResponse.CustomerProductAssignments">
+            <summary>
+            CustomerProductAssignment result
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetPhysicalProductById.GetPhysicalProductByIdRequest">
+            <summary>
+            request for GetPhysicalProductByIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetPhysicalProductById.GetPhysicalProductByIdRequest.ProductID">
+            <summary>
+            ProductID
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetPhysicalProductById.GetPhysicalProductByIdResponse">
+            <summary>
+            response for GetPhysicalProductByIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetPhysicalProductById.GetPhysicalProductByIdResponse.PhysicalProductInfo">
+            <summary>
+            PhysicalProduct
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetPhysicalResourceSpecificationBySKU.GetPhysicalResourceSpecificationBySKURequest">
+            <summary>
+            request for GetPhysicalResourceSpecificationBySKUMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetPhysicalResourceSpecificationBySKU.GetPhysicalResourceSpecificationBySKURequest.SKU">
+            <summary>
+            SKU name
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetPhysicalResourceSpecificationBySKU.GetPhysicalResourceSpecificationBySKUResponse">
+            <summary>
+            response for GetPhysicalResourceSpecificationBySKUMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetPhysicalResourceSpecificationBySKU.GetPhysicalResourceSpecificationBySKUResponse.Specification">
+            <summary>
+            PhysicalResourceSpecification
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetProductInventoryById.GetProductInventoryByIdRequest">
+            <summary>
+            GetProductInventoryByIdRequest is used in microservice GetProductInventoryByIdMS as input
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetProductInventoryById.GetProductInventoryByIdRequest.ProductInventoryId">
+            <summary>
+            ProductInventoryId
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetProductInventoryById.GetProductInventoryByIdResponse">
+            <summary>
+            GetProductInventoryByIdResponse is used in GetProductInventoryByIdMS as output
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetProductInventoryById.GetProductInventoryByIdResponse.ProductInventory">
+            <summary>
+            ProductInventory information
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetProductInventory.GetProductInventoryRequest">
+            <summary>
+            GetProductInventoryRequest is used in microservice GetProductInventoryMS as input
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetProductInventory.GetProductInventoryRequest.MvnoId">
+            <summary>
+            MVNO Id
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetProductInventory.GetProductInventoryResponse">
+            <summary>
+            GetProductInventoryResponse is used in GetProductInventoryMS as output
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetProductInventory.GetProductInventoryResponse.ProductInventories">
+            <summary>
+            list of ProductInventory
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.QueryCustomerOrder.QueryCustomerOrderRequest">
+            <summary>
+            request for QueryCustomerOrderMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.QueryCustomerOrder.QueryCustomerOrderRequest.OrderId">
+            <summary>
+            CustomerOrderID
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.QueryCustomerOrder.QueryCustomerOrderResponse">
+            <summary>
+            response for QueryCustomerOrderMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.QueryCustomerOrder.QueryCustomerOrderResponse.CustomerOrderInfo">
+            <summary>
+            CustomerOrder
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.UpdateCustomerOrder.UpdateCustomerOrderRequest">
+            <summary>
+            request for UpdateCustomerOrderMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.UpdateCustomerOrder.UpdateCustomerOrderRequest.CustomerOrder">
+            <summary>
+            CustomerOrder
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.UpdateCustomerOrder.UpdateCustomerOrderResponse">
+            <summary>
+            response for UpdateCustomerOrder
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.UpdateCustomerOrder.UpdateCustomerOrderResponse.CustomerOrder">
+            <summary>
+            updated CustomerOrder
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.UpdatePhysicalProduct.UpdatePhysicalProductRequest">
+            <summary>
+            request for UpdatePhysicalProductMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.UpdatePhysicalProduct.UpdatePhysicalProductRequest.PhysicalProductInfo">
+            <summary>
+            PhysicalProduct
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.UpdatePhysicalProduct.UpdatePhysicalProductResponse">
+            <summary>
+            response for UpdatePhysicalProductMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.UpdatePhysicalProduct.UpdatePhysicalProductResponse.PhysicalProductInfo">
+            <summary>
+            updated PhysicalProduct
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.UpdatePhysicalResourceSpecification.UpdatePhysicalResourceSpecificationRequest">
+            <summary>
+            request for UpdatePhysicalResourceSpecificationMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.UpdatePhysicalResourceSpecification.UpdatePhysicalResourceSpecificationRequest.Specification">
+            <summary>
+            PhysicalResourceSpecification
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.UpdatePhysicalResourceSpecification.UpdatePhysicalResourceSpecificationResponse">
+            <summary>
+            response for UpdatePhysicalResourceSpecificationMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.UpdatePhysicalResourceSpecification.UpdatePhysicalResourceSpecificationResponse.Specification">
+            <summary>
+            updated PhysicalResourceSpecification
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.UpdateProductInventory.UpdateProductInventoryRequest">
+            <summary>
+            UpdateProductInventoryRequest is used in microservice UpdateProductInventoryMS as input
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.UpdateProductInventory.UpdateProductInventoryRequest.ProductInventory">
+            <summary>
+            ProductInventory you wish to update
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.UpdateProductInventory.UpdateProductInventoryResponse">
+            <summary>
+            UpdateProductInventoryResponse is used in microservice UpdateProductInventoryMS as output
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.UpdateProductInventory.UpdateProductInventoryResponse.ProductInventory">
+            <summary>
+            ProductInventory updated
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.microservices.CancelCustomerPackagesMS">
+            <summary>
+            Cancel customer package by packageid
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.CancelCustomerPackagesMS.Process(com.etak.core.product.message.CancelCustomerPackages.CancelCustomerPackagesRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process, returning productinfo (package) canceled
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.product.message.CalculateNextBillRunDateForBillCycle.CalculateNextBillRunDateForBillCycleResponse">
+            <summary>
+            GetNextBillRunDateRespone
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.CalculateNextBillRunDateForBillCycle.CalculateNextBillRunDateForBillCycleResponse.NextBillRun">
+            <summary>
+            Datetime of the next bill run
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.microservices.CreateCustomerOrderMS">
+            <summary>
+            microService for creating a customerorder including some PhysicalResourceSpecification products
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.CreateCustomerOrderMS.Process(com.etak.core.product.message.CreateCustomerOder.CreateCustomerOrderRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            CreateCustomerOrder proceses
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.CreatePhysicalProductMS">
+            <summary>
+            microService for creating a PhysicalProduct
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.CreatePhysicalProductMS.Process(com.etak.core.product.message.CreatePhysicalProduct.CreatePhysicalProductRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            CreatePhysicalProduct process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.CreatePhysicalResourceSpecificationMS">
+            <summary>
+              microService to Create a new PhysicalResourceSpecification
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.CreatePhysicalResourceSpecificationMS.Process(com.etak.core.product.message.CreatePhysicalResourceSpecification.CreatePhysicalResourceSpecificationRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            CreatePhysicalResourceSpecification process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.CreateProductInventoryMS">
+            <summary>
+            Microservice : Create a new record of ProductInventory
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.CreateProductInventoryMS.Process(com.etak.core.product.message.CreateProductInventory.CreateProductInventoryRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Create a new record of ProductInventory using request.ProductInventory
+            </summary>
+            <param name="request">The micro service request with the necessary data to create the ProductInventory</param>
+            <param name="invoker">The information about the invokation environment</param>
+            <returns>CreateProductInventoryResponse with the created object ProductInventory</returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetAllPhysicalResourceSpecificationsMS">
+            <summary>
+            microService for getting all PhysicalResourceSpecifications
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetAllPhysicalResourceSpecificationsMS.Process(com.etak.core.product.message.GetAllPhysicalResourceSpecifications.GetAllPhysicalResourceSpecificationsRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            GetAllPhysicalResourceSpecifications process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetAllRmPromotionPlanForDealerIdMs">
+            <summary>
+            Microservice : return enumerable of  RmPromotionPlanInfo based on given IDs
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetAllRmPromotionPlanForDealerIdMs.Process(com.etak.core.product.message.GetAllRmPromotionPlanForDealerId.GetAllRmPromotionPlanForDealerIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+             Return enumerable of RmPromotionPlanInfo by request.PromotionPlanIds
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetRmPromotionPlanInfosByIdsResponse with an enumerable of RmPromotionPlanInfo (response.RmPromotionPlanInfos)</returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetCurrentBillRunForBillCycleMS">
+            <summary>
+            Micro service that gets current bill run for the specified billing cycle
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetCurrentBillRunForBillCycleMS.Process(com.etak.core.product.message.GetCurrentBillRunForBillCycle.GetCurrentBillRunForBillCycleRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.product.message.GetCurrentBillRunForBillCycle.GetCurrentBillRunForBillCycleRequest">
+            <summary>
+            Request for GetCurrentBillRunForBillCycleMS, receives BillCycle from which
+            it will get the current bill run
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetCurrentBillRunForBillCycle.GetCurrentBillRunForBillCycleRequest.BillCycle">
+            <summary>
+            BillCycle from which it will get the current bill run
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetCurrentBillRunForBillCycle.GetCurrentBillRunForBillCycleResponse">
+            <summary>
+            The response of GetCurrentBillRunForBillCycleMS, returns current BillRun
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetCurrentBillRunForBillCycle.GetCurrentBillRunForBillCycleResponse.CurrentBillRun">
+            <summary>
+            The current bill run of the bill cycle
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetChargesByProductIdAndProductChargeOption.GetChargesByProductOfferingIdAndProductChargeOptionRequest">
+            <summary>
+            Request of GetChargesByProductIdAndProductChargeOptionMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetChargesByProductIdAndProductChargeOption.GetChargesByProductOfferingIdAndProductChargeOptionRequest.ProductOfferingId">
+            <summary>
+            ProductId Requested
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetChargesByProductIdAndProductChargeOption.GetChargesByProductOfferingIdAndProductChargeOptionRequest.ProductChargeOption">
+            <summary>
+            Optional ProductChargeOption (can be null)
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetChargesByProductIdAndProductChargeOption.GetChargesByProductOfferingIdAndProductChargeOptionResponse">
+            <summary>
+            Response of GetChargesByProductIdAndProductChargeOptionMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetChargesByProductIdAndProductChargeOption.GetChargesByProductOfferingIdAndProductChargeOptionResponse.Charges">
+            <summary>
+            Enumerable of Charge entities
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetProductByProductId.GetProductByProductIdRequest">
+            <summary>
+            GetProductByProductIdRequest is used in GetProductByProductIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetProductByProductId.GetProductByProductIdRequest.ProductId">
+            <summary>
+            Product id to get Product entity
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetProductByProductId.GetProductByProductIdResponse">
+            <summary>
+            GetProductByProductIdResponse is used in GetProductByProductIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetProductByProductId.GetProductByProductIdResponse.Product">
+            <summary>
+            Product entity
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetProductChargeOptionByProductChargeOptionId.GetProductChargeOptionByProductChargeOptionIdRequest">
+            <summary>
+            GetProductChargeOptionByProductChargeOptionIdRequest is used in GetProductChargeOptionByProductChargeOptionIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetProductChargeOptionByProductChargeOptionId.GetProductChargeOptionByProductChargeOptionIdRequest.ProductChargeOptionId">
+            <summary>
+            ProductChargeOptionId used to get the ProductChargeOption entity
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetProductChargeOptionByProductChargeOptionId.GetProductChargeOptionByProductChargeOptionIdResponse">
+            <summary>
+            GetProductChargeOptionByProductChargeOptionIdResponse is used in GetProductChargeOptionByProductChargeOptionIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetProductChargeOptionByProductChargeOptionId.GetProductChargeOptionByProductChargeOptionIdResponse.ProductChargeOption">
+            <summary>
+            ProductChargeOption entity
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetProductChargeOptionsByProductId.GetProductChargeOptionsByProductOfferingIdRequest">
+            <summary>
+            GetProductChargeOptionsByProductIdOfferingRequest is used in GetProductChargeOptionsByProductOfferingIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetProductChargeOptionsByProductId.GetProductChargeOptionsByProductOfferingIdRequest.ProductOfferingId">
+            <summary>
+            ProductId used to get all ProductChargeOption entities
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetProductChargeOptionsByProductId.GetProductChargeOptionsByProductOfferingIdResponse">
+            <summary>
+            GetProductChargeOptionsByProductIdResponse is used in GetProductChargeOptionsByProductIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetProductChargeOptionsByProductId.GetProductChargeOptionsByProductOfferingIdResponse.ProductChargeOptions">
+            <summary>
+            Enumerable of ProductChargeOption entities
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetRmPromotionGroupMemberAll.GetRmPromotionGroupMemberAllRequest">
+            <summary>
+            GetRmPromotionGroupMemberAllRequest is used in GetRmPromotionGroupMemberAllMS
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetRmPromotionGroupMemberAll.GetRmPromotionGroupMemberAllResponse">
+            <summary>
+            GetRmPromotionGroupMemberAllResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetRmPromotionGroupMemberAll.GetRmPromotionGroupMemberAllResponse.RmPromotionGroupMembers">
+            <summary>
+            RmPromotionGroupMember
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetRmPromotionPlanInfosByIds.GetRmPromotionPlanInfosByIdsRequest">
+            <summary>
+            GetRmPromotionPlanInfosByIdsRequest is used in GetRmPromotionPlanInfosByIdsMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetRmPromotionPlanInfosByIds.GetRmPromotionPlanInfosByIdsRequest.PromotionPlanIds">
+            <summary>
+            Enumerable of promotion plan ids
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.message.GetRmPromotionPlanInfosByIds.GetRmPromotionPlanInfosByIdsResponse">
+            <summary>
+            GetRmPromotionPlanInfosByIdsResponse is used in GetRmPromotionPlanInfosByIdsMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.product.message.GetRmPromotionPlanInfosByIds.GetRmPromotionPlanInfosByIdsResponse.RmPromotionPlanInfos">
+            <summary>
+            Enumerable of RmPromotionPlanInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.product.microservices.CreateProductInfoMS">
+            <summary>
+            Microservice : adding  new record of ProductInfo 
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.CreateProductInfoMS.Process(com.etak.core.product.message.CreateProductInfo.CreateProductInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            adding  new record of ProductInfo (request.ProductInfo)
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CreateProductInfoResponse with the ProductInfo created (response.ProductInfo)</returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetBillCyclesByVMNOMS">
+            <summary>
+            Microservice : return  BillCycle entity based on given VMNO
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetBillCyclesByVMNOMS.Process(com.etak.core.product.message.GetBillCyclesByVMNO.GetBillCyclesByVMNORequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            return  BillCycle entity based on given request.DealerInfo
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetBillCyclesByVMNOResponse with enumerable of Billcycle ( response.BillCycles)</returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetChargeByIdMS">
+            <summary>
+            Microservice : return Charge enity based on given Charge ID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetChargeByIdMS.Process(com.etak.core.product.message.GetChargeById.GetChargeByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            return Charge enity based on given request.ChargeId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetChargeByIdResponse with Charge entity (reponse.Charge)</returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetChargesByCategoryIdMS">
+            <summary>
+            Microservice : return enumerable of Charge entity based on given CategoryID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetChargesByCategoryIdMS.Process(com.etak.core.product.message.GetChargesByCategoryId.GetChargesByCategoryIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            return enumerable of Charge entity based on given request.CategoryId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetChargesByCategoryIdResponse with enumerable Charge entities (response.Charges)</returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetChargesByProductOfferingIdAndProductChargeOptionMS">
+            <summary>
+            Microservice : return Charge entity based on given ProductId and ProductChargeOption
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetChargesByProductOfferingIdAndProductChargeOptionMS.Process(com.etak.core.product.message.GetChargesByProductIdAndProductChargeOption.GetChargesByProductOfferingIdAndProductChargeOptionRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            return Charge entity based on given request.ProductId and request.ProductChargeOption
+            </summary>
+            <param name="request">GetChargesByProductIdAndProductChargeOptionRequest</param>
+            <param name="invoker">Environment Where GetChargesByProductIdAndProductChargeOptionMS is called </param>
+            <returns>GetChargesByProductIdAndProductChargeOptionResponse with given ProductId and ProductChargeOption</returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.CalculateNextBillRunDateForBillCycleMS">
+            <summary>
+            Returns next billrunDate upon passed BillCycle MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.CalculateNextBillRunDateForBillCycleMS.Process(com.etak.core.product.message.CalculateNextBillRunDateForBillCycle.CalculateNextBillRunDateForBillCycleRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetCustomerOrderListMS">
+            <summary>
+            microService for getting customer's all orders 
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetCustomerOrderListMS.Process(com.etak.core.product.message.GetCustomerOrderList.GetCustomerOrderListRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            GetCustomerOrderListMS process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetProductOfferingByProductOfferingIdMS">
+            <summary>
+            Microservice : return Product entity based on given Product ID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetProductOfferingByProductOfferingIdMS.Process(com.etak.core.product.message.GetProductOfferingByProductOfferingId.GetProductOfferingByProductOfferingIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            return Product entity based on given request.ProductId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetProductByProductIdResponse with Product entity (response.Product)</returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetPhysicalProductByIdMS">
+            <summary>
+             microService for getting a Physical Product by Id
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetPhysicalProductByIdMS.Process(com.etak.core.product.message.GetPhysicalProductById.GetPhysicalProductByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            GetPhysicalProductByIdMS process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetPhysicalResourceSpecificationBySKUMS">
+            <summary>
+             microService for getting a PhysicalResourceSpecification by SKU 
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetPhysicalResourceSpecificationBySKUMS.Process(com.etak.core.product.message.GetPhysicalResourceSpecificationBySKU.GetPhysicalResourceSpecificationBySKURequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            GetPhysicalResourceSpecificationBySKUMS process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetProductByProductIdMS">
+            <summary>
+            Microservice : return Product entity based on given Product ID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetProductByProductIdMS.Process(com.etak.core.product.message.GetProductByProductId.GetProductByProductIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            return Product entity based on given request.ProductId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetProductByProductIdResponse with Product entity (response.Product)</returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetProductChargeOptionByProductChargeOptionIdMS">
+            <summary>
+            Microservice : return ProductChargeOption entity based on given  ProductChargeOptionID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetProductChargeOptionByProductChargeOptionIdMS.Process(com.etak.core.product.message.GetProductChargeOptionByProductChargeOptionId.GetProductChargeOptionByProductChargeOptionIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            return ProductChargeOption entity based on given  request.ProductChargeOptionId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetProductChargeOptionByProductChargeOptionIdResponse with ProductChargeOption entity (response.ProductChargeOption)</returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetProductChargeOptionsByProductOfferingIdMS">
+            <summary>
+            Microservice : return ProductChargeOption entity based given ProductID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetProductChargeOptionsByProductOfferingIdMS.Process(com.etak.core.product.message.GetProductChargeOptionsByProductId.GetProductChargeOptionsByProductOfferingIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            return ProductChargeOption entity based given  request.ProductId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetProductChargeOptionsByProductIdResponse with an enumerable of ProductChargeOption entitites (response.ProductChargeOptions)</returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetProductInventoryByIdMS">
+            <summary>
+            Get ProductInventory by ID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetProductInventoryByIdMS.Process(com.etak.core.product.message.GetProductInventoryById.GetProductInventoryByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get ProductInventory information by Id
+            </summary>
+            <param name="request">The micro service request with the necessary data to get the ProductInventory</param>
+            <param name="invoker">The information about the invokation environment</param>
+            <returns>GetProductInventoryResponse with the obtained ProductInventory</returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetProductInventoryMS">
+            <summary>
+            Get ProductInventory by ID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetProductInventoryMS.Process(com.etak.core.product.message.GetProductInventory.GetProductInventoryRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get list of ProductInventory by MVNO Id
+            </summary>
+            <param name="request">The micro service request with the necessary data to get the ProductInventory</param>
+            <param name="invoker">The information about the invokation environment</param>
+            <returns>GetProductInventoryResponse with the obtained ProductInventory</returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetRmPromotionGroupMemberAllMS">
+            <summary>
+            Get All Rm PromotionGroupMember
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetRmPromotionGroupMemberAllMS.Process(com.etak.core.product.message.GetRmPromotionGroupMemberAll.GetRmPromotionGroupMemberAllRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.GetRmPromotionPlanInfosByIdsMS">
+            <summary>
+            Microservice : return enumerable of  RmPromotionPlanInfo based on given IDs
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.GetRmPromotionPlanInfosByIdsMS.Process(com.etak.core.product.message.GetRmPromotionPlanInfosByIds.GetRmPromotionPlanInfosByIdsRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+             Return enumerable of RmPromotionPlanInfo by request.PromotionPlanIds
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetRmPromotionPlanInfosByIdsResponse with an enumerable of RmPromotionPlanInfo (response.RmPromotionPlanInfos)</returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.QueryCustomerOrderMS">
+            <summary>
+            microService for getting customer's one order by OrderID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.QueryCustomerOrderMS.Process(com.etak.core.product.message.QueryCustomerOrder.QueryCustomerOrderRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            QueryCustomerOrderMS process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.UpdateCustomerOrderMS">
+            <summary>
+             microService for updating customer's order
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.UpdateCustomerOrderMS.Process(com.etak.core.product.message.UpdateCustomerOrder.UpdateCustomerOrderRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            UpdateCustomerOrderMS process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.UpdatePhysicalProductMS">
+            <summary>
+              microService for updating a PhysicalProduct info
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.UpdatePhysicalProductMS.Process(com.etak.core.product.message.UpdatePhysicalProduct.UpdatePhysicalProductRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            UpdatePhysicalProductMS process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.UpdatePhysicalResourceSpecificationMS">
+            <summary>
+             microService for updating a PhysicalResourceSpecification info
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.UpdatePhysicalResourceSpecificationMS.Process(com.etak.core.product.message.UpdatePhysicalResourceSpecification.UpdatePhysicalResourceSpecificationRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            UpdatePhysicalResourceSpecificationMS process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.product.microservices.UpdateProductInventoryMS">
+            <summary>
+            Microservice : update ProductInventory
+            </summary>
+        </member>
+        <member name="M:com.etak.core.product.microservices.UpdateProductInventoryMS.Process(com.etak.core.product.message.UpdateProductInventory.UpdateProductInventoryRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Update request.ProductInventory
+            </summary>
+            <param name="request">The micro service request with the necessary data to update the ProductInventory</param>
+            <param name="invoker">The information about the invokation environment</param>
+            <returns>UpdateProductInventoryResponse with the updated object ProductInventory</returns>
+        </member>
+        <member name="T:com.etak.core.product.ProductDomainErrors">
+            <summary>
+            Class containing all the possible error codes thrown in the Product Domain
+            </summary>
+        </member>
+        <member name="F:com.etak.core.product.ProductDomainErrors.TooManyBillRunActive">
+            <summary>
+            Error produced if a given bill cycle has more than one active 
+            Bill run active at a point in time.
+            </summary>
+        </member>
+        <member name="F:com.etak.core.product.ProductDomainErrors.NoBillRunActive">
+            <summary>
+            The bill cycle provided does not have any bill run active at the point
+            in time. 
+            </summary>
+        </member>
+    </members>
+</doc>

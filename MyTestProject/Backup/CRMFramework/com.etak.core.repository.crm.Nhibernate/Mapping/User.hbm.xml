@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.UserInfo,com.etak.core.model" table="SYS25_USER" >
+    <id name="UserID" column="UserID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+    </id>
+    <property name="TitleID" column="TitleID" type="Int32" length="4" />
+    <property name="FirstName" column="FirstName" type="String" length="100" />
+    <property name="MiddleName" column="MiddleName" type="String" length="100" />
+    <property name="LastName" column="LastName" type="String" length="100" />
+    <property name="Company" column="Company" type="String" length="100" />
+    <property name="LanguageID" column="LanguageID" type="Int32" length="4" />
+    <property name="DepartmentID" column="DepartmentID" type="Int32" length="4" />
+    <property name="StatusID" column="StatusID" type="Int32" length="4" />
+    <property name="UserName" column="UserName" type="String" length="50" />
+    <property name="Password" column="Password" type="String" length="100" />
+    <property name="Telephone" column="Telephone" type="String" length="30" />
+    <property name="Mobile" column="Mobile" type="String" length="30" />
+    <property name="Email" column="Email" type="String" length="100" />
+    <property name="CreateDate" column="CreateDate" type="DateTime" />
+    <property name="CreateUserID" column="CreateUserID" type="Int32" length="4" />
+    <property name="Status" column="Status" type="Int32" length="4" />
+    <property name="UpdateDate" column="UpdateDate" type="DateTime" />
+    <property name="UpdateUserID" column="UpdateUserID" type="Int32" length="4" />
+    <property name="FiscalUnit" column="FiscalUnit" type="Int32" length="4" />
+    <property name="LogoID" column="LogoID" type="Int32" length="4" />
+    <property name="AccountStatus" column="AccountStatus" type="Int32" length="4" />
+    <property name="AccountExpire" column="ACCOUNT_EXPIRE" type="Int32" length="4" />
+    <property name="AccountChange" column="ACCOUNT_CHANGE" type="Int32" length="4" />
+    <property name="AccountFirst" column="ACCOUNT_FIRST" type="DateTime" />
+    <property name="AccountLast" column="ACCOUNT_LAST" type="DateTime" />
+    <property name="AccountGUI" column="ACCOUNT_GUI" type="DateTime" />
+    <property name="AccountPassword" column="ACCOUNT_PASSWORD" type="DateTime" />
+    <property name="ShowAllDealer" column="SHOWALLDEALER" type="Int32" length="4" />
+    <property name="StyleID" column="StyleID" type="Int32" length="4" />
+    <property name="ThemeID" column="ThemeID" type="Int32" length="4" />
+    <property name="ChangeAlert" column="ACCOUNT_CHANGE_ALERTING" type="Int32" length="4" />
+    <property name="PasswordPeriod" column="ACCOUNT_PASSWORD_PERIOD" type="Int32" length="4" />
+  </class>
+
+</hibernate-mapping>
+

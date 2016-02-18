@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.MNPPortabilitytAttachInfo,com.etak.core.model" table="CRM_MNP_PORTABILITY_ATTACH" >
+    <id name="ReferenceCode" column="REFERENCECODE" type="string"  length="25" unsaved-value="0">
+      <generator class="assigned" />
+    </id>
+    <property name="AttachmentName" column="ATTACHNAME" type="String" length="100" />
+    <property name="AttachStream" column="ATTACHSTREAM" type="BinaryBlob" />
+    <property name="SaveDate" column="SAVEDATE" type="DateTime" />
+    <property name="Status" column="STATUS" type="Int32" length="4"/>
+  </class>
+
+</hibernate-mapping>
+
+

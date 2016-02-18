@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.PerformanceTraceConfigInfo,com.etak.core.model"  table="Sys25_Performance_Trace_Config" >
+    <id name="ID" column="ID" type="Int64"  length="8" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>    
+    <property name="AssembleName" column="AssembleName" type="String" length="100" />
+    <property name="ClassName" column="ClassName" type="String" length="200" />
+    <property name="MethodName" column="MethodName" type="String" length="100" />
+    <property name="Description" column="Description" type="String" length="500" />
+    <property name="IsTrace" column="IsTrace" type="Int32" length="4" />
+    <property name="CreateUserID" column="CreateUserID" type="Int32" length="4" />
+    <property name="CreateDate" column="CreateDate" type="DateTime" />
+  </class>
+
+</hibernate-mapping>

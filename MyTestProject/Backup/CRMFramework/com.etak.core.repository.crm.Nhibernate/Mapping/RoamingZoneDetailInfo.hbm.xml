@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.RoamingZoneDetailInfo,com.etak.core.model" table="RM_ROAMING_ZONE_DETAILS" >
+    <id name="ZoneDetailID" column="ZONEDETAILID" type="Int32"  length="4">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="CCNDC" column="CCNDC" type="String" length="20" />
+    <property name="TSC" column="TSC" type="String" length="20" />
+    <property name="Preferred" column="PREFERRED" type="Boolean" />
+    <property name="CountryName" column="COUNTRYNAME" type="String" length="400" />
+    <property name="OperatorName" column="OPERATORNAME" type="String" length="400" />
+    <property name="StartDate" column="STARTDATE" type="DateTime" />
+    <property name="EndDate" column="ENDDATE" type="DateTime" />
+    <many-to-one name="RoamingZoneInfo" class="com.etak.core.model.RoamingZoneInfo,com.etak.core.model" cascade="save-update,persist">
+      <column name="ZoneID" length="30" />
+    </many-to-one>
+  </class>
+</hibernate-mapping>

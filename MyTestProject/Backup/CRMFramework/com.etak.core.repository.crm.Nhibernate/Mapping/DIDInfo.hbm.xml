@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.DIDInfo,com.etak.core.model" table="CRM_CUSTOMERS_DID">
+    <id name="ResourceID" column="RESOURCEID" type="Int32"  length="4">
+      <generator class="assigned" />
+    </id>
+    <property name="DIDNumber" column="DIDNUMBER" type="String" length="25" />
+    <property name="StartDate" column="STARTDATE" type="DateTime"  />
+    <property name="EndDate" column="ENDDATE" type="DateTime"  />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="com.etak.core.model.CustomerInfo,com.etak.core.model" table="CRM_CUSTOMERS" >
+    <id name="CustomerID" column="CustomerID" type="Int32">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="DealerID" column="DEALERID" type="Int32" length="4" />
+    <property name="ParentID" column="PARENTID" type="Int32" length="4" />
+    <property name="Company" column="COMPANY" type="String" length="200" />
+    <property name="Contact" column="CONTACT" type="String" length="200" />
+    <property name="TitleID" column="TITLEID" type="Int32" length="4" />
+    <property name="GenderID" column="GENDERID" type="Int32" length="4" />   
+    <property name="Telephone" column="TELEPHONE" type="String" length="50" />
+    <property name="Telefax" column="TELEFAX" type="String" length="25" />
+    <property name="Mobile" column="MOBILE" type="String" length="25" />
+    <property name="Email" column="EMAIL" type="String" length="200" />
+    <property name="Choc" column="CHOC" type="String" length="100" />
+    <property name="VAT" column="VAT" type="String" length="100" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <property name="UserID" column="USERID" type="Int32" length="4" />
+    <property name="BillingDate" column="BILLINGDATE" type="Int32" length="4" />
+    <property name="ActivedDate" column="ACTIVEDDATE" type="DateTime" />
+    <property name="Initials" column="INITIALS" type="String" length="200" />
+    <property name="MiddleName" column="MIDDLENAME" type="String" length="200" />
+    <property name="LastName" column="LASTNAME" type="String" length="200" />    
+    <property name="StatusID" column="STATUSID" type="Int32" length="4" />
+    <property name="ParentControl" column="ParentControl" type="Int32" length="4" />
+    <property name="UpdateStamp" column="UPDATESTAMP" type="BinaryBlob" insert="false" update="false" />  
+    <property name="DateOfBirth" column="DATEOFBIRTH" type="DateTime" />  
+    <property name="FirstName" column="FirstName" type="String" length="200" />
+    <property name="LastName2" column="LastName2" type="String" length="200" />
+    <property name="SalesShopID" column="SALESSHOPID" type="String" length="10" />
+    <property name="SalesSellerID" column="SALESSELLERID" type="String" length="10" />   
+    <property name="Category" column="CUSTOMER_CATEGORY" type="String" length="4" />
+    <property name="ArName" column="LOCALIZEDNAME" type="String" length="255" />
+    <bag name="ProductsInfo" inverse="true" lazy="true" cascade="save-update,persist">
+      <key column="CUSTOMERID" />
+      <one-to-many class="com.etak.core.model.ProductInfo,com.etak.core.model" />
+    </bag>
+    <bag name="PropertyInfo" inverse="true" lazy="true" cascade="save-update,persist">
+      <key column="CUSTOMERID" />
+      <one-to-many class="com.etak.core.model.PropertyInfo,com.etak.core.model" />
+    </bag>
+    <bag name="ResourceMBInfo" inverse="true" lazy="true" cascade="save-update,persist">
+      <key column="CUSTOMERID" />
+      <one-to-many class="com.etak.core.model.ResourceMBInfo,com.etak.core.model" />
+    </bag>
+    <bag name="MVNOCustomerPropertyInfo" inverse="true" lazy="true" cascade="save-update,persist">
+      <key column="CUSTOMERID" />
+      <one-to-many class="com.etak.core.model.MVNOCustomerPropertyInfo,com.etak.core.model" />
+    </bag>
+
+    <bag name="BankInfo" inverse="true" lazy="true" cascade="save-update,persist">
+      <key column="CUSTOMERID" />
+      <one-to-many class="com.etak.core.model.BankInfo,com.etak.core.model" />
+    </bag>
+
+    <bag name="RemarksInfo" inverse="true" lazy="true" cascade="save-update,persist">
+      <key column="CUSTOMERID" />
+      <one-to-many class="com.etak.core.model.RemarksInfo,com.etak.core.model" />
+    </bag>
+    <bag name="ServicesInfo" inverse="true" lazy="true" cascade="all">
+      <key column="CUSTOMERID" />
+      <one-to-many class="com.etak.core.model.ServicesInfo,com.etak.core.model" />
+    </bag>
+    <bag name="MappingInfo" inverse="true" lazy="true" cascade="save-update,persist">
+      <key column="CUSTOMERID" />
+      <one-to-many class="com.etak.core.model.MappingInfo,com.etak.core.model" />
+    </bag>
+    <bag name="CustomerCreditCards" inverse="true" lazy="true" cascade="save-update,persist">
+      <key column="CUSTOMERID" />
+      <one-to-many class="com.etak.core.model.CustomerCreditCard,com.etak.core.model" />
+    </bag>
+    <bag name="Promotions" inverse="true" lazy="true" cascade="save-update,persist">
+      <key column="CUSTOMERID" />
+      <one-to-many class="com.etak.core.model.CrmCustomersPromotionInfo,com.etak.core.model" />
+    </bag>
+    <bag name="PromotionGroups" inverse="true" lazy="true"  batch-size="10" cascade="save-update,persist">
+      <key column="CUSTOMERID" />
+      <one-to-many class="com.etak.core.model.CrmCustomersPromotionGroup,com.etak.core.model" />
+    </bag>
+    <bag name="RevenueProductsInfo" inverse="true" lazy="true" cascade="save-update,persist">
+      <key column="CUSTOMERID" />
+      <one-to-many class="com.etak.core.model.revenueManagement.CustomerProductAssignment, com.etak.core.model" />
+    </bag>
+    <bag name="Addresses" table="CRM_CUSTOMERS_ADDRESSES" lazy="true" cascade="save-update,persist">
+      <key column="CUSTOMERID"/>
+      <composite-element class="com.etak.core.model.CustomerAddress, com.etak.core.model">
+        <parent name="Customer"/>
+        <property name="UsageType" column="USAGE_TYPE"/>
+        <many-to-one name="Address" class="com.etak.core.model.AddressInfo, com.etak.core.model" column="ADDRESSID" cascade="all"/>
+      </composite-element>
+    </bag>
+    <bag name="DataRoamingLimits" inverse="true" lazy="true" cascade="save-update,persist">
+      <key column="CUSTOMERID" />
+      <one-to-many class="com.etak.core.model.CustomerDataRoamingLimit, com.etak.core.model" />
+    </bag>
+    <bag name="DataRoamingLimitNotifications" inverse="true" lazy="true" cascade="save-update,persist">
+      <key column="CUSTOMERID" />
+      <one-to-many class="com.etak.core.model.CustomerDataRoamingLimitNotification, com.etak.core.model" />
+    </bag>
+  </class>
+
+</hibernate-mapping>

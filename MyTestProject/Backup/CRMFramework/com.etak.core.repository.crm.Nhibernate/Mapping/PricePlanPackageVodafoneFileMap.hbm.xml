@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="com.etak.core.model.PricePlanPackageVodafoneFileMap,com.etak.core.model" table="VF_FILE_PRICEPLAN_PACKAGEID" >
+    <cache usage="nonstrict-read-write" region="SystemSettings"/>
+    <id name="Id" column="VF_FILE_PRICEPLAN_PACKAGEID_ID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="assigned" />
+    </id>    
+    <property name="VMNO" column="MVNO"/>
+    <property name="PricePlan" column="PRICEPLAN"/>
+    <property name="PackageId" column="PACKAGEID"/>
+    <property name="UserCategory" column="usercategory"/>
+   
+  </class>
+
+</hibernate-mapping>
+

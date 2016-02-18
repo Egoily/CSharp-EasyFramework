@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.IncumbentInfo,com.etak.core.model" table="RM_PRS_INCUMBENT" >
+    <id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+       <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="CustomerId" column="CUSTOMERID" type="Int32" length="4" />
+    <property name="ServiceTypeId" column="SERVICETYPEID" type="Int32" length="4" />
+    <property name="SubServiceTypeId" column="SUBSERVICETYPEID" type="Int32" length="4" />
+    <property name="TypeId" column="TypeId" type="Int32" length="4" />
+    <property name="TariffCode" column="TARIFFCODE" type="String" length="8" />
+    <property name="OperatorId" column="OPERATORID" type="String" length="40" />
+    <property name="Carrier" column="CARRIER" type="String" length="50" />
+    <property name="CallTypeId" column="CALLTYPEID" type="Int32" length="4" />
+    <property name="TimeCategoryId" column="TIMECATEGORYID" type="Int32" length="4" />
+    <property name="UnitCategoryId1" column="UNITCATEGORYID1" type="Int32" length="4" />
+    <property name="UnitCategoryId2" column="UNITCATEGORYID2" type="Int32" length="4" />
+    <property name="Tariff1" column="TARIFF1" type="Decimal" />
+    <property name="Tariff2" column="TARIFF2" type="Decimal" />
+    <property name="Tariff3" column="TARIFF3" type="Decimal" />
+    <property name="Tariff4" column="TARIFF4" type="Decimal" />
+    <property name="Setup1" column="SETUP1" type="Decimal" />
+    <property name="Setup2" column="SETUP2" type="Decimal" />
+    <property name="CB" column="CB" type="Decimal" />
+    <property name="CurrencyId" column="CURRENCYID" type="Int32" length="4" />
+    <property name="StartDate" column="STARTDATE" type="DateTime" />
+    <property name="EndDate" column="ENDDATE" type="DateTime" />
+
+  </class>
+
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.PackageDealerMappingInfo,com.etak.core.model" table="CRM_DEALERS_PACKAGE_MAPPING" >
+    <id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="DealerID" column="DEALERID" type="Int32" length="4" />
+    <property name="PackageID" column="PACKAGEID" type="Int32" length="4" />
+    <property name="StartDate" column="STARTDATE" type="DateTime" />
+    <property name="EndDate" column="ENDDATE" type="DateTime" />
+    <property name="Status" column="STATUS" type="Int32" length="4" />
+    <property name="Priority" column="PRIORITY" type="Int32" length="4" />
+    <property name="MVNOID" column="MVNOID" type="Int32" length="4" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+  </class>
+
+</hibernate-mapping>

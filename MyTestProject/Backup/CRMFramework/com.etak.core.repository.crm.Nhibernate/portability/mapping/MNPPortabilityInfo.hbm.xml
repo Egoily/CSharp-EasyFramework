@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.MNPPortabilityInfo,com.etak.core.model" table="CRM_MNP_PORTABILITY" >
+    <id name="ReferenceCode" column="REFERENCECODE" type="string"  length="25" unsaved-value="0">
+      <generator class="assigned" />
+    </id>
+    <property name="Type" column="TYPE" type="String" length="1" />
+    <property name="IdentificationType" column="IDENTIFICATIONTYPE" type="String" length="1" />
+    <property name="Identification" column="IDENTIFICATION" type="String" length="50" />
+    <property name="FirstName" column="FIRSTNAME" type="String" length="50" />
+    <property name="LastName1" column="LASTNAME1" type="String" length="50" />
+    <property name="LastName2" column="LASTNAME2" type="String" length="50" />
+    <property name="CompanyName" column="COMPANYNAME" type="String" length="200" />
+    <property name="CountryCode" column="COUNTRYCODE" type="Int32" length="4" />
+    <property name="PType" column="PTYPE" type="String" length="1" />
+    <property name="DonationOperator" column="DONATIONOPERATOR" type="String" length="10" />
+    <property name="ReceptionOperator" column="RECEPTIONOPERATOR" type="String" length="10" />
+    <property name="SRFC" column="SRFC" type="String" length="50" />
+    <property name="ReceiverNRN" column="RECEIVERNRN" type="String" length="50" />
+    <property name="RequestDate" column="REQUESTDATE" type="DateTime" />
+    <property name="RCW" column="RCW" type="DateTime" />
+    <property name="EffectDate" column="EFFECTDATE" type="DateTime" />
+    <property name="Msisdn" column="MSISDN" type="AnsiString" length="900" />
+    <property name="ICCID" column="ICCID" type="String" length="40" />
+    <property name="Status" column="STATUS" type="String" length="1" />
+    <property name="UserID" column="USERID" type="Int32" length="4" />
+    <property name="PortabilityDirection" column="PORTABILITYDIRECTION" type="Int32" length="4" />
+    <property name="DealerID" column="DEALERID" type="Int32" length="4" />
+    <property name="RealRefCode" column="REALREFCODE" type="String" length="50" />
+    <property name="ReasonCode" column="ReasonCode" type="String" length="20" />
+    <property name="CreateDate" column="CreateDate" type="DateTime" />
+    <property name="DeleteDate" column="DeleteDate" type="DateTime" />
+    <property name="ChangeStatusDate" column="ChageStatusDate" type="DateTime" />
+    <property name="ReadDate" column="ReadDate" type="DateTime" />
+    <property name="CancellationCode" column="CancellationCode" type="String" length="20" />
+    <property name="ProductPurchasedId" column="ProductPurchasedId" type="String" length="8000" />
+  </class>
+
+</hibernate-mapping>

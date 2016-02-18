@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="com.etak.core.model.RmPromotionPlanTopupBasedParameters,com.etak.core.model" table="RM_PROMOTIONPLAN_TOPUP_BASED_PARAMETERS">
+    <composite-id>
+      <key-property name="PromotionPlanID" column="PROMOTIONPLANID" type="Int32" length="4"/>
+      <key-property name="SubServiceTypeID" column="SUBSERVICETYPEID" type="Int32" length="4"/>
+      <key-property name="TopupThresholdAmount" column="TOPUP_THRESHOLD_AMOUNT" type="Decimal" />
+    </composite-id>
+    <property name="DaysToAccumulateTopups" column="DAYS_TO_ACCCUMULATE_TOPUPS" type="Int32" />
+    <property name="ValidityUnit" column="VALIDITY_UNIT" type="Int32" />
+    <property name="ValidityQuantity" column="VALIDITY_QTY" type="Int32" />
+    <property name="LimitUnit" column="LIMIT_UNIT" type="Int32" />
+    <property name="LimitQuantity" column="LIMIT_QTY" type="Decimal" />
+  </class>
+</hibernate-mapping>

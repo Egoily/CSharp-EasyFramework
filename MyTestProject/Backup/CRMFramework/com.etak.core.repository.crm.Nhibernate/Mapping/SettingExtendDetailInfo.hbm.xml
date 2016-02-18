@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.SettingExtendDetailInfo,com.etak.core.model" table="CRM_LIFECYCLE_SETTINGS_EXTEND_DETAILS">
+    <cache usage="nonstrict-read-write" region="SystemSettings"/>
+    <id name="SettingId" column="SETTINGID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="DealerId" column="DEALERID" type="Int32" length="4" />
+    <property name="CategoryId" column="CATEGORYID" type="Int32" length="4" />
+    <property name="StatusId" column="STATUSID" type="Int32" length="4" />
+    <property name="ItemId" column="ITEMID" type="Int32" length="4" />
+    <property name="ItemName" column="ITEMNAME" type="String" length="400" />
+    <property name="ItemValue" column="ITEMVALUE" type="String" length="800" />
+    <property name="ItemDescription" column="ITEMDESCRIPTION" type="String" length="1600" />
+    <property name="ItemStart" column="itemStart" type="Decimal" />
+    <property name="ItemEnd" column="itemEnd" type="Decimal"  />
+  </class>
+
+</hibernate-mapping>

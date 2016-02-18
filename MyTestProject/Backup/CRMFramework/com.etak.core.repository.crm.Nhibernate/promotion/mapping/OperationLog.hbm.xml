@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="com.etak.core.model.OperationLog,com.etak.core.model" table="CRM_MVNO_OPERATION_LOG" >
+		<id name="Code" column="Code" type="Int64">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+		</id>
+		<property name="DealerID" column="DEALERID" type="Int32" length="4" />
+    <property name="OrderCode" column="OrderCode" type="Int32" length="4" />
+		<property name="ExternalCode" column="EXTERNALCODE" type="String" length="50" />
+		<property name="OldCode" column="OLDCODE" type="Int64" length="4" />
+		<property name="UserID" column="USERID" type="Int32" length="4" />
+    <property name="Vmo" column="VMO" type="String" length="20" />
+		<property name="Description" column="DESCRIPTION" type="String" length="200" />
+		<property name="OperationCode" column="OPERATIONCODE" type="String" length="3" />
+		<property name="Remark" column="REMARK" type="String" length="2000" />
+		<property name="Channel" column="EXTERNAL_CHANNEL" type="String" length="10" />
+		<property name="OperationDate" column="OPERATIONDATE" type="DateTime" />
+		<property name="Result" column="RESULT" type="Int32" length="4" />
+		<property name="Status" column="STATUS" type="String" length="2" />
+		<property name="Messages" column="Messages" type="String" />
+    <property name="SystemMessages" column="SystemMessages" type="String" length="8000" />
+		<property name="InvokeParams" column="INVOKEPARAMS" type="BinaryBlob" />
+    <property name="Name1" column="NAME1" type="String" length="50" />
+		<property name="Name2" column="NAME2" type="String" length="50" />
+		<property name="Name3" column="NAME3" type="String" length="50" />
+		<property name="Name4" column="NAME4" type="String" length="50" />
+		<property name="Name5" column="NAME5" type="String" length="50" />
+		<property name="Name6" column="NAME6" type="String" length="50" />
+		<property name="Name7" column="NAME7" type="String" length="50" />
+		<property name="Name8" column="NAME8" type="String" length="50" />
+		<property name="Name9" column="NAME9" type="String" length="50" />
+		<property name="Name10" column="NAME10" type="String" length="50" />
+		<property name="Value1" column="VALUE1" type="String" length="50" />
+		<property name="Value2" column="VALUE2" type="String" length="50" />
+		<property name="Value3" column="VALUE3" type="String" length="50" />
+		<property name="Value4" column="VALUE4" type="String" length="50" />
+		<property name="Value5" column="VALUE5" type="String" length="50" />
+		<property name="Value6" column="VALUE6" type="String" length="50" />
+		<property name="Value7" column="VALUE7" type="String" length="50" />
+		<property name="Value8" column="VALUE8" type="String" length="50" />
+		<property name="Value9" column="VALUE9" type="String" length="50" />
+		<property name="Value10" column="VALUE10" type="String" length="50" />
+    <property name="Invoker" column="INVOKER" type="Int32" length="4" />
+    <property name="TopupHistoryID" column="TOPUPHISTORYID" type="Int64" length="8" />
+    <many-to-one name="OperationInfo" class="com.etak.core.model.OperationInfo,com.etak.core.model" cascade ="save-update,persist">
+      <column name="LogID" length="30" />
+    </many-to-one>
+    <property name="TraceOrder" column="TraceOrder" type="String" length="50" />
+
+    <property name="ForeignCode" column="ForeignCode" type="String" length="50" />
+	</class>
+</hibernate-mapping>

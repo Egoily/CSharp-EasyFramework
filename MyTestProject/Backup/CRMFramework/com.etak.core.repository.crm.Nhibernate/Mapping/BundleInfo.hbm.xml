@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="com.etak.core.model.BundleInfo,com.etak.core.model" table="RM_BUNDLE" >
+    <cache usage="nonstrict-read-write" region="UserDealer"/>
+    <id name="BundleID" column="BUNDLEID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="DealerID" column="DEALERID" type="Int32" length="4" />
+    <property name="ServiceTypeID" column="SERVICETYPEID" type="Int32" length="4" />
+    <property name="SubserviceTypeID" column="SUBSERVICETYPEID" type="Int32" length="4" />
+    <property name="BundleName" column="BUNDLENAME" type="String" length="400" />
+    <property name="RatePlanID" column="RATEPLANID" type="Int32" length="4" />
+    <property name="CreditLimit" column="CREDITLIMIT" type="Decimal" />
+    <!--<property name="CreditLimitBase" column="CREDITLIMITBASE" type="Int32" length="4" />-->
+    <property name="SubscriptionFee" column="SUBSCRIPTIONFEE" type="Decimal" />
+    <property name="SubscriptionCycleID" column="SUBSCRIPTIONCYCLEID" type="Int32" length="4" />
+    <property name="CurrencyID" column="CURRENCYID" type="Int32" length="4" />
+    <property name="PaymengTypeID" column="PAYMENTTYPEID" type="Int32" length="4" />
+    <property name="StartDate" column="STARTDATE" type="DateTime" />
+    <property name="EndDate" column="ENDDATE" type="DateTime" />
+    <property name="MonthFee" column="MONTHFEE" type="Decimal" /> 
+  </class>
+
+</hibernate-mapping>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+  <class name="com.etak.core.model.SettingInfo,com.etak.core.model" table="CRM_LIFECYCLE_SETTINGS">
+    <cache usage="nonstrict-read-write" region="UserDealer"/>
+    <id name="SettingId" column="SETTINGID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="Description" column="DESCRIPTION" type="String" length="400" />
+    <property name="DealerId" column="DEALERID" type="Int32" length="4" />
+    <property name="Enabled" column="ENABLED" type="Boolean" />
+    <property name="SchedulIntervalDays" column="SCHEDULINTERVALDAYS" type="Int32" length="4" />
+    <property name="ScheduleType" column="SCHEDULETYPE" type="Int32" length="4" />
+    <property name="SchedulOriginalDate" column="SCHEDULORIGINALDATE" type="DateTime" />
+    <property name="SchedulTime" column="SCHEDULTIME" type="String" length="12" />
+    <property name="SchedulUnit" column="SCHEDULUNIT" type="String" length="20" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <many-to-one name="EventInfo" class="com.etak.core.model.EventInfo, com.etak.core.model" lazy="false">
+      <column name="EventId" length="30" />
+    </many-to-one>
+    <bag name="SettingDetailInfos" inverse="true" lazy="true" cascade="all">
+      <cache usage="nonstrict-read-write" region="UserDealer"/>
+      <key column="SettingId" />
+      <one-to-many class="com.etak.core.model.SettingDetailInfo, com.etak.core.model" />
+    </bag>
+    <bag name="SmsTempletInfos" inverse="true" lazy="true" cascade="all">
+      <cache usage="nonstrict-read-write" region="UserDealer"/>
+      <key column="SettingId" />
+      <one-to-many class="com.etak.core.model.SmsTempletInfo, com.etak.core.model" />
+    </bag>
+  </class>
+</hibernate-mapping>
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.EmailInfo,com.etak.core.model" table="CRM_EMAIL_HISTORY" >
+    <id name="EmailId" column="EMAILID" type="Int64" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>
+    <property name="DealerId" column="DEALERID" type="Int32" length="4" />
+    <property name="CategoryId" column="CATEGORYID" type="Int32" length="4" />
+    <property name="Sender" column="SENDER" type="String" length="200" />
+    <property name="EmailFrom" column="EMAILFROM" type="String" length="200" />
+    <property name="EmailTo" column="EMAILTO" type="String" length="600" />
+    <property name="CC" column="CC" type="String" length="600" />
+    <property name="Bcc" column="BCC" type="String" length="600" />
+    <property name="EmailSubject" column="EMAILSUBJECT" type="String" length="400" />
+    <property name="SubjectEncoding" column="SUBJECTENCODING" type="String" length="200" />
+    <property name="Body" column="BODY" type="StringClob" />
+    <property name="BodyEncoding" column="BODYENCODING" type="String" length="200" />
+    <property name="IsBodyHtml" column="ISBODYHTML" type="Boolean" />
+    <property name="ReplyTo" column="REPLYTO" type="String" length="200" />
+    <property name="Priority" column="PRIORITY" type="Int32" length="4" />
+    <property name="Remark" column="REMARK" type="String" length="600" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <property name="StatusId" column="STATUSID" type="Int32" length="4" />
+    <property name="SentDate" column="SENTDATE" type="DateTime" />
+    <property name="UserId" column="USERID" type="Int32" length="4" />
+    <property name="UserName" column="UserName" type="String"  length="200" />
+    <property name="UserPassword" column="UserPassword" type="String" length="200" />
+    <property name="SmtpHost" column="SmtpHost" type="String" length="200" />
+    <property name="TrySentTimes" column="TRYSENTTIMES" type="Int32" length="4" />
+    <property name="MaxSentTimes" column="MAXSENTTIMES" type="Int32" length="4" />
+
+    <property name="CustomerId" column="CUSTOMERID" type="Int32" length="4" />
+    
+    <bag name="EmailAttachmentInfos" inverse="true" lazy="true" cascade="all-delete-orphan">
+      <key column="EmailId" />
+      <one-to-many class="com.etak.core.model.EmailAttachmentInfo,com.etak.core.model" />
+    </bag>
+  </class>
+
+</hibernate-mapping>

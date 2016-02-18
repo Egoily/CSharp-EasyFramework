@@ -1,0 +1,2814 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.repository.crm.Nhibernate</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.InformationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmDefaultProvisionInfoRepositoryNH`1">
+            <summary>
+            Repository for TCrmDefaultProvisionInfo entity
+            </summary>
+            <typeparam name="TCrmDefaultProvisionInfo">The type of the repository, must extend CrmDefaultProvisionInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CrmDefaultProvisionInfoRepositoryNH`1.GetProvisionByName(System.String)">
+            <summary>
+            Gets all the provisions for a given name
+            </summary>
+            <param name="name">the name to look up provisions</param>
+            <returns>the list of provisions in future mode</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmMobileMultipleImsiInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CrmMobileMultipleImsiInfo 
+            </summary>
+            <typeparam name="TCrmMobileMultipleImsiInfo">Entity managed by the repository, is or extends CrmMobileMultipleImsiInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmMobileNetworkInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CrmMobileNetWorkInfo 
+            </summary>
+            <typeparam name="TCrmMobileNetworkInfo">Entity managed by the repository, is or extends CrmMobileNetWorkInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.AddressInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity AddressInfo 
+            </summary>
+            <typeparam name="TAddressInfo">Entity managed by the repository, is or extends AddressInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.BRSTaxCodeRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for BRSTaxCode entity inheritance tree
+            </summary>
+            <typeparam name="TBRSTaxCode">the type of entity managed, is or extends BRSTaxCode</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.BRSTaxCodePostCodeRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity BRSTaxCodePostCode 
+            </summary>
+            <typeparam name="TBRSTaxCodePostCode">Entity managed by the repository, is or extends BRSTaxCodePostCode</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.BRSTaxCodePostCodeRepositoryNH`1.GetByPostCode(System.String)">
+            <summary>
+            Gets the TBRSTaxCodePostCode by the postcode
+            </summary>
+            <param name="postcode">the post code of the TBRSTaxCodePostCode</param>
+            <returns>the TBRSTaxCodePostCode of the PostCode</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.BundleInfoRepositoryNH`1">
+            <summary>
+            Implementation of IBundleInfoRepository based on Nhibernate
+             </summary>
+            <typeparam name="TBundleInfo">Type that is or extends BundleInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.BundleInfoRepositoryNH`1.GetAll">
+            <summary>
+            Gets all TBundleInfo
+            </summary>
+            <returns>A future enumerable with all the TBundleInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.customer.mapping.CrmCustomersBalanceTransationHistoryMap">
+            <summary>
+            Nhibernate Class map for CrmCustomersBalanceTransationHistory
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.customer.mapping.CrmCustomersBalanceTransationHistoryMap.#ctor">
+            <summary>
+            Constructor so fluent nhibernat build the equivalent hbm.xml on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.inventory.mapping.CustomerOrderMap">
+            <summary>
+            Class to map to Nhibernate class CustomerOrder
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.inventory.mapping.CustomerOrderMap.#ctor">
+            <summary>
+            The constructor called by fluent to map the class. 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.inventory.mapping.PhysicalResourceCostMap">
+            <summary>
+            Class to map to Nhibernate class PhysicalResourceCost
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.inventory.mapping.PhysicalResourceCostMap.#ctor">
+            <summary>
+            public constructor for fluent Nhibernate
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.inventory.mapping.ProductInventoryMap">
+            <summary>
+            Class to map to Nhibernate class ProductInventory
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.inventory.mapping.ProductInventoryMap.#ctor">
+            <summary>
+            The constructor called by fluent to map the class. 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.inventory.mapping.OrderItemMap">
+            <summary>
+            Class to map to Nhibernate class OrderItem
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.inventory.mapping.OrderItemMap.#ctor">
+            <summary>
+            The constructor called by fluent to map the class. 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.inventory.mapping.PhysicalProductMap">
+            <summary>
+            Class to map to Nhibernate class PhysicalProduct
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.inventory.mapping.PhysicalProductMap.#ctor">
+            <summary>
+            The constructor called by fluent to map the class. 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.IDGeneration.DealerIdGenerator">
+            <summary>
+            NHibernate id generator for Dealer entity
+            JL: I don't have a clue why we need this, it was lincoln code that i'm optimizing.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.IDGeneration.DealerIdGenerator.Generate(NHibernate.Engine.ISessionImplementor,System.Object)">
+            <summary>
+            Generate a new identifier
+            </summary>
+            <param name="session">The <see cref="T:NHibernate.Engine.ISessionImplementor"/> this id is being generated in.</param>
+            <param name="obj">The entity for which the id is being generated.</param>
+            <returns>
+            The new identifier
+            </returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.inventory.mapping.PhysicalResourceSpecificationMap">
+            <summary>
+            Class to map to Nhibernate class PhysicalResourceSpecification
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.inventory.mapping.PhysicalResourceSpecificationMap.#ctor">
+            <summary>
+            public constructor for fluent Nhibernate
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.inventory.ProductInventoryRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity ProductInventory 
+            </summary>
+            <typeparam name="TProductInventory">Entity managed by the repository, is or extends ProductInventory</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.inventory.ProductInventoryRepositoryNH`1.GetByMVNO(System.Int32)">
+            <summary>
+            Get Inventories by mvno
+            </summary>
+            <param name="mvnoId">vmo Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.inventory.PhysicalResourceSpecificationRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity PhysicalResourceSpecification 
+            </summary>
+            <typeparam name="TPhysicalResourceSpecification">Entity managed by the repository, is or extends PhysicalResourceSpecification</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.inventory.PhysicalResourceSpecificationRepositoryNH`1.GetBySKU(System.String)">
+            <summary>
+            Get specification by sku.
+            </summary>
+            <param name="sku"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.inventory.PhysicalResourceSpecificationRepositoryNH`1.GetAll">
+            <summary>
+            GetAllSpeicication by MVNOId
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.MultiLingualDescriptionRepositoryNH`1">
+            <summary>
+            Nhibernate implementation of IMultiLingualInfoRepository
+            </summary>
+            <typeparam name="TMultiLingualDescription">Entity managed by  the repository is or extends MultiLingualDescription</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.MultiLingualDescriptionRepositoryNH`1.GetByType(com.etak.core.model.MultiLingualType)">
+            <summary>
+            Get MultiLinualDescription by type
+            </summary>
+            <param name="type">type of description</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.MVNODataRoamingLimitNotificationRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity MVNODataRoamingLimitNotification 
+            </summary>
+            <typeparam name="TMVNODataRoamingLimitNotification">Entity managed by the repository, is or extends MVNODataRoamingLimitNotification</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.MVNODataRoamingLimitNotificationRepositoryNH`1.GetAllNotifications">
+            <summary>
+            Gets all MVNODataRoamingLimitNotification notifications 
+            </summary>
+            <returns>all the MVNODataRoamingLimitNotification</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.network.RMOperatorsInfoClassMap">
+            <summary>
+            Fluent nhibernate mapping for RMOperatorsInfo
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.network.RMOperatorsInfoClassMap.#ctor">
+            <summary>
+            COnstructor for fluent nhibernate so it can generate the XML on runtime.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.operation.BusinessOperationRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for  BusinessOperationExecution entity inheritance tree
+            </summary>
+            <typeparam name="TBusinessOperation">The type of the managed entity, is or inherits BusinessOperationExecution</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.operation.BusinessOperationRepositoryNH`1.Get">
+            <summary>
+            Get method for BusinessOperation
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.operation.BusinessOperationExecutionRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for  BusinessOperationExecution entity inheritance tree
+            </summary>
+            <typeparam name="TBusinessOperationExecution">The type of the managed entity, is or inherits BusinessOperationExecution</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.operation.BusinessOperationExecutionRepositoryNH`1.GetOperationsWithinDatesWithResultTypesIn(System.DateTime,System.DateTime,System.Collections.Generic.IEnumerable{com.etak.core.model.operation.messages.ResultTypes})">
+            <summary>
+            Gets all the operation executions in a given range of dates in a list of status
+            </summary>
+            <param name="startDate">The start date for the range where the operation started</param>
+            <param name="endDate">The end date for the range where the operation started</param>
+            <param name="results">the type of result of the operation</param>
+            <returns>The list of matching operation executions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.operation.BusinessOperationExecutionRepositoryNH`1.GetOperationsOfTypeWithinDatesWithResultTypesIn(com.etak.core.model.operation.BusinessOperation,System.DateTime,System.DateTime,System.Collections.Generic.IEnumerable{com.etak.core.model.operation.messages.ResultTypes})">
+            <summary>
+            Gets all the operation executions in a given range of dates in a list of status and a given type
+            of business operation
+            </summary>
+            <param name="bizOp">the businessOperation definition to query</param>
+            <param name="startDate">The start date for the range where the operation started</param>
+            <param name="endDate">The end date for the range where the operation started</param>
+            <param name="results">the type of result of the operation</param>
+            <returns>The list of matching operation executions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.operation.BusinessOperationExecutionRepositoryNH`1.GetCustomerOperationsBetweenDates(com.etak.core.model.CustomerInfo,com.etak.core.model.operation.BusinessOperation,System.DateTime,System.DateTime,com.etak.core.model.operation.messages.ResultTypes[])">
+            <summary>
+            Gets the Operation of customer optionally filtering by the fields provided
+            </summary>
+            <param name="customer">The customer to retrieve the operations from</param>
+            <param name="bizOp">The Discriminator of the bussiness Operation to retrieve</param>
+            <param name="startDate">Start date for range to retreive the operations</param>
+            <param name="endDate">End date for the range to retrieve the operations</param>
+            <param name="resultTypes">The status in which the operations needs to be</param>
+            <returns>The list of matching operation executions</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.operation.mapping.BusinessOperationMap">
+            <summary>
+            Fluent nhibernate class map for BusinessOperation
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.operation.mapping.BusinessOperationMap.#ctor">
+            <summary>
+            Public constructor for fluent Nhibernate 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.operation.mapping.BusinessOperationExecutionClassmap">
+            <summary>
+            Fluent nhibernate class map for BusinessOperationExecution
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.operation.mapping.BusinessOperationExecutionClassmap.#ctor">
+            <summary>
+            Public constructor for fluent Nhibernate 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.operation.mapping.DynamicBusinessOperationClassMap`1">
+            <summary>
+            Maps any business operation
+            </summary>
+            <typeparam name="TBizOp"></typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.operation.mapping.DynamicBusinessOperationClassMap`1.#ctor">
+            <summary>
+            Public constructor for fluent Nhibernate 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.operation.mapping.OperationConfigurationClassMap">
+            <summary>
+            Nhibernate fluent mapping configuration for OperationConfiguration entity
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.operation.mapping.OperationConfigurationClassMap.#ctor">
+            <summary>
+            Default constructor so fluent mapping builds the hmb.xml on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.operation.mapping.OrderClassmap">
+            <summary>
+            Fluent nhibernate class map for Order
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.operation.mapping.OrderClassmap.#ctor">
+            <summary>
+            Public constructor for fluent Nhibernate 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.operation.mapping.OrderTransitionMap">
+            <summary>
+            Fluent nhibernate class map for OrderTransition
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.operation.mapping.OrderTransitionMap.#ctor">
+            <summary>
+            Public constructor for fluent Nhibernate 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.operation.OperationConfigurationRepositoryNH`1">
+            <summary>
+            NH Implemetation of IOperationConfigurationRepository
+            </summary>
+            <typeparam name="TOperationConfiguration"></typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.operation.OperationConfigurationRepositoryNH`1.GetByDiscriminatorAndDealerId(com.etak.core.model.DealerInfo,com.etak.core.model.operation.BusinessOperation)">
+            <summary>
+            gets the settings for a operation type (discriminator)
+            </summary>
+            <param name="dealer">the vmno owner of the configuration (or to which this configuratio  applies)</param>
+            <param name="operation">Operation being configured</param>
+            <returns>The list of settings</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.operation.OrderRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity Order 
+            </summary>
+            <typeparam name="TOrder">Entity managed by the repository, is or extends Order</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.operation.OrderRepositoryNH`1.GetByExternalIdAndDealer(com.etak.core.model.DealerInfo,System.String)">
+            <summary>
+            Gets the list of orders of the given dealer with external reference
+            </summary>
+            <param name="dealerInfo">the dealer (mvno) that did the order</param>
+            <param name="externalId">the external reference to look up</param>
+            <returns>the list of matching items</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.operation.OrderRepositoryNH`1.GetByDealerAndFilters(com.etak.core.model.DealerInfo,System.Collections.Generic.List{System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}},System.Int32,System.Int32)">
+            <summary>
+            Gets the list of orders of the given dealer and filters
+            </summary>
+            <param name="dealerInfo">the dealer (mvno) that did the order</param>
+            <param name="filters">filters to apply</param>
+            <returns>the list of matching items</returns>
+            <param name="pageNumber">page Number start with 1</param>
+            <param name="pageSize">page Size</param>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.MNPOriginalNrnInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity TMNPOriginalNrnInfo 
+            </summary>
+            <typeparam name="TMNPOriginalNrnInfo">Entity managed by the repository, is or extends TMNPOriginalNrnInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.MNPOriginalNrnInfoRepositoryNH`1.GetByMsisdn(System.String)">
+            <summary>
+            Gets all the MNPOriginalNrnInfo of a given MSISDN
+            </summary>
+            <param name="msisdn">the msisdn to filter the portabilities</param>
+            <returns>all the MNPOriginalNrnInfo of a given MSISDN</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.MNPNpdbEsvfInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity TMNPNpdbEsvfInfo 
+            </summary>
+            <typeparam name="TMNPNpdbEsvfInfo">Entity managed by the repository, is or extends TMNPNpdbEsvfInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.MNPNpdbEsvfInfoRepositoryNH`1.GetByMsisdn(System.String)">
+            <summary>
+            Gets all the portabilities of a given MSISDN
+            </summary>
+            <param name="msisdn">the msisdn to filter the portabilities</param>
+            <returns>all the portabilities of a given MSISDN</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.portability.MNPSessionInfoRepositoryNH`1">
+            <summary>
+            NHibernate based repository for inheritance tree of entity MNPSessionInfo
+            </summary>
+            <typeparam name="TMNPSessionInfo">The entity managed by the repository, is or extends MNPSessionInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.portability.MNPSessionInfoRepositoryNH`1.GetLastNByOperatorCode(System.String,System.Int32)">
+            <summary>
+            Gets the last N sessions for a given operator code.
+            </summary>
+            <param name="operatorCode">the code of the operator for the sessions</param>
+            <param name="n">the number of sessions to recover</param>
+            <returns>the last N sessions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.portability.MNPSessionInfoRepositoryNH`1.GetLastNByOperatorCodeAndUsername(System.String,System.String,System.Int32)">
+            <summary>
+            Gets the last N sessions for a given operator code of an user.
+            </summary>
+            <param name="operatorCode">the code of the operator for the sessions and user name</param>
+            <param name="userName">the username of the sessions</param>
+            <param name="n">the number of sessions to recover</param>
+            <returns>the last N sessions</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.promotion.mapping.AbstractPromotionRenewActionMap">
+            <summary>
+            Fluent Nhibernate mapping class for AbstractPromotionRenewAction
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.promotion.mapping.AbstractPromotionRenewActionMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.promotion.mapping.CustomerPromotionAllowanceMap">
+            <summary>
+            NHibernate mapping for CustomerPromotionAllowance entity
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.promotion.mapping.CustomerPromotionAllowanceMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.provisioning.CarrierRepositoryNH`1">
+            <summary>
+            Nhibernate Implementation of ICarrierRepository
+            </summary>
+            <typeparam name="TCarrier"></typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.resource.ImeiAssnHistRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity ImeiAssnHist 
+            </summary>
+            <typeparam name="TImeiAssnHist">Entity managed by the repository, is or extends ImeiAssnHist</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.provisioning.Mapping.CarrierMap">
+            <summary>
+            Fluent Nhibernate mapping for class Carrier
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.provisioning.Mapping.CarrierMap.#ctor">
+            <summary>
+            Public construsctor for Fluent Nhibernate mapping
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.resource.mapping.SIMCardInfoClassMap">
+            <summary>
+            Fluent Nhibernate mapping for SimCardInfo
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.resource.mapping.SIMCardInfoClassMap.#ctor">
+            <summary>
+            Default constructor so fluent nhibernate creates the xml mapping on runtime. 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ProductDependencyRelationMap">
+            <summary>
+            Nhibernate fluent mapping class for ProductDependencyRelation entity
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ProductDependencyRelationMap.#ctor">
+            <summary>
+            Constructor so fluent Nhibernate builds the HBM.XML on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmBusinessRuleInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity BussinessRule 
+            </summary>
+            <typeparam name="TBussinessRule">Entity managed by the repository, is or extends BussinessRule</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CrmBusinessRuleInfoRepositoryNH`1.GetById(System.Int64)">
+            <summary>
+            Gets an entity by it's unique ID
+            </summary>
+            <param name="id">Id of the entity to retrieve</param>
+            <returns>The updated entity</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CrmBusinessRuleInfoRepositoryNH`1.GetByClassType(System.String)">
+            <summary>
+            This should not be required, the class types are managed by the Repository, not 
+            </summary>
+            <param name="classType">the class type of the TCrmBusinessRuleInfo</param>
+            <returns>the list of mathing TCrmBusinessRuleInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.drl.CustomerDataRoamingLimitNotificationRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CustomerDataRoamingLimitNotification 
+            </summary>
+            <typeparam name="TCustomerDataRoamingLimitNotification">Entity managed by the repository, is or extends CustomerDataRoamingLimitNotification</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.drl.CustomerDataRoamingLimitNotificationRepositoryNH`1.GetByCustomerID(System.Int32)">
+            <summary>
+            Gets all the TCustomerDataRoamingLimitNotification of the given customer
+            </summary>
+            <param name="customerId">the Id of the customer to get</param>
+            <returns>the list of TCustomerDataRoamingLimitNotification of the customer</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.HolidayInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for HolidayInfo entity inheritance tree
+            </summary>
+            <typeparam name="THolidayInfo">the type of entity managed, is or extends HolidayInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.portability.MNPPortabilityCustomerInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity MNPPortabilityCustomerInfo 
+            </summary>
+            <typeparam name="TMNPPortabilityCustomerInfo">Entity managed by the repository, is or extends MNPPortabilityCustomerInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.portability.MNPPortabilityCustomerInfoRepositoryNH`1.GetByCustomerId(System.Int32)">
+            <summary>
+            Gets all the MNPPortabilityCustomerInfo of a given customer
+            </summary>
+            <param name="customerId">The id of the customer to which the MNPPortabilityCustomerInfo is associated</param>
+            <returns>The list of MNPPortabilityCustomerInfo of the customer</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.portability.MNPPortabilityMultiPortInInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity MNPPortabilityMultiPortInInfo 
+            </summary>
+            <typeparam name="TMNPPortabilityMultiPortInInfo">Entity managed by the repository, is or extends MNPPortabilityMultiPortInInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.portability.MNPPortabilityMultiPortInInfoRepositoryNH`1.GetByMsisdn(System.String)">
+            <summary>
+            Gets the MNPPortabilityMultiPortInInfo of a given MSISDN
+            </summary>
+            <param name="msisdn">the list of msisdn to filter the MNPPortabilityMultiPortInInfo</param>
+            <returns>the matching MNPPortabilityMultiPortInInfo of the msisdn</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.promotion.mapping.RmPromotionGroupThresholdMap">
+            <summary>
+            Fluent Nhibernate mapping class for RmPromotionGroupThreshold
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.promotion.mapping.RmPromotionGroupThresholdMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.RmPromotionGroupThresholdRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for RmPromotionGroupThreshold entity inheritance tree
+            </summary>
+            <typeparam name="TRmPromotionGroupThreshold">the type of entity managed, is or extends RmPromotionGroupThreshold</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.MVNOAPNIPPoolInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity MVNOAPNIPPoolInfo 
+            </summary>
+            <typeparam name="TMVNOAPNIPPoolInfo">Entity managed by the repository, is or extends MVNOAPNIPPoolInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.MVNOAPNIPPoolInfoRepositoryNH`1.GetByMsisdn(System.String)">
+            <summary>
+            Gets all the TMVNOAPNIPPoolInfo for the given msisdn
+            </summary>
+            <param name="msisdn">the msisdn to look for</param>
+            <returns>the list of entities that fullfil the requiremets</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.DealerNumberInfoRepository`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity DealerNumberInfo 
+            </summary>
+            <typeparam name="TDealerNumberInfo">Entity managed by the repository, is or extends DealerNumberInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.DealerNumberInfoRepository`1.GetByResource(System.String)">
+            <summary>
+            Gets the dealer number Infor repository
+            </summary>
+            <param name="resource">the msisdn to look for</param>
+            <returns>the list of entities that fullfil the condition</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.drl.RoamingBlackListInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity RoamingBlackListInfo 
+            </summary>
+            <typeparam name="TRoamingBlackListInfo">Entity managed by the repository, is or extends RoamingBlackListInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.drl.RoamingBlackListInfoRepositoryNH`1.GetByCustomerID(System.Int32)">
+            <summary>
+            Gets The roabming TRoamingBlackListInfo of the customer
+            </summary>
+            <param name="customerId">the Id of the customer that has TRoamingBlackListInfo</param>
+            <returns>The list of Blacklists for a fiven customer</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.drl.CustomerDataRoamingLimitRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CustomerDataRoamingLimit 
+            </summary>
+            <typeparam name="TCustomerDataRoamingLimit">Entity managed by the repository, is or extends CustomerDataRoamingLimit</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.drl.CustomerDataRoamingLimitRepositoryNH`1.GetByCustomerID(System.Int32)">
+            <summary>
+            Gets all the TCustomerDataRoamingLimit for a given customer
+            </summary>
+            <param name="customerId">the customer of TCustomerDataRoamingLimit</param>
+            <returns>the list of TCustomerDataRoamingLimit of the customer provided</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.Factory.SessionManagement">
+            <summary>
+            Builds the Nhibernate session factories and 
+            the configurations for NH.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.Factory.SessionManagement.GetInstance">
+            <summary>
+            Gets the only instance of the SessionManagement instance (this class implements the Singleton Pattern)
+            </summary>
+            <returns>the Singleton instance of SessionManagement</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.Factory.SessionManagement.GenerateSchemaToFile(System.String,System.String)">
+            <summary>
+            Generates the SQL file for the session factory provided
+            </summary>
+            <param name="sessionFactoryName">the name of the session factory</param>
+            <param name="fileName">the output file for the SQL</param>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.Factory.SessionManagement.GetConfiguration(System.String)">
+            <summary>
+            Gets the NHiberante configuration for the session factory
+            </summary>
+            <param name="factoryName">the name of the session factory</param>
+            <returns>the configuration for the session factory</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.Factory.SessionManagement.GetSession(System.String)">
+            <summary>
+            Gets an NHiberante session for the factory
+            </summary>
+            <param name="factoryName">the name of the factory from which we want a session</param>
+            <returns>the Nhibernate session</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.Factory.SessionManagement.GetStateLessSession(System.String)">
+            <summary>
+            Gets an NHiberante stateless session for the factory
+            </summary>
+            <param name="factoryName">the name of the factory from which we want a session</param>
+            <returns>the Nhibernate session</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.Factory.SessionManagement.GetSessionFactory(System.String)">
+            <summary>
+            Gets the session factory for a given name 
+            </summary>
+            <param name="factoryName">the name of the factory we want to retreive</param>
+            <returns>the Nhibernate session factory</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.HLRRequestErrorsRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for HLRRequestErrors entity inheritance tree
+            </summary>
+            <typeparam name="THLRRequestErrors">the type of entity managed, is or extends HLRRequestErrors</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.portability.MNPIncomingEffectInfoNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity MNPIncomingEffectInfo 
+            </summary>
+            <typeparam name="TMNPIncomingEffectInfo">Entity managed by the repository, is or extends MNPIncomingEffectInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.portability.MNPIncomingEffectInfoNH`1.GetByMsisdn(System.String)">
+            <summary>
+            Gets all the portabilities of a given MSISDN
+            </summary>
+            <param name="msisdn">the msisdn to filter the portabilities</param>
+            <returns>all the portabilities of a given MSISDN</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.portability.MNPIncomingEffectInfoNH`1.GetLatestByPortInMsisdn(System.String)">
+            <summary>
+            Gets latest portabilities of a given MSISDN
+            </summary>
+            <param name="msisdn">the msisdn to filter the portabilities</param>
+            <returns>the latest portabilities of a given MSISDN</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.portability.MNPPortabilityInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity MNPPortabilityInfo 
+            </summary>
+            <typeparam name="TMNPPortabilityInfo">Entity managed by the repository, is or extends MNPPortabilityInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.portability.MNPPortabilityInfoRepositoryNH`1.GetByMSISDN(System.String)">
+            <summary>
+            Gets all the MNPPortabilityInfo of the msisdn
+            </summary>
+            <param name="msisdn">the msidn to filter the MNPPortabilityInfo</param>
+            <returns>List of MNPPortabilityInfo of the msisdn</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.portability.MNPPortabilityInfoRepositoryNH`1.GetLatestIncomingByMsisdn(System.String)">
+            <summary>
+            Gets the latest MNPPortabilityInfo of the msisdn
+            </summary>
+            <param name="msisdn">the msidn to filter the MNPPortabilityInfo</param>
+            <returns>Last MNPPortabilityInfo of the msisdn</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.ReportResourceInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for ReportResourceInfo entity inheritance tree
+            </summary>
+            <typeparam name="TReportResourceInfo">the type of entity managed, is or extends ReportResourceInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.NumberInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity NumberInfo 
+            </summary>
+            <typeparam name="TNumberInfo">Entity managed by the repository, is or extends NumberInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.NumberInfoRepositoryNH`1.GetByCategoryAndVmnoAndStatusIdIn(System.Collections.Generic.IEnumerable{System.Int32},System.Int32,System.Collections.Generic.IEnumerable{System.Int32},System.Int32)">
+            <summary>
+            Gets n (maxElements) TNumberInfo of any mvnos of the category and the status.
+            </summary>
+            <param name="mvnoIds">The possible mvnos to which the number may belong</param>
+            <param name="categoryId">The category of the number</param>
+            <param name="status">all the possible status of the numbers to retrieve</param>
+            <param name="maxElements">the maximun number of numbers to retrieve</param>
+            <returns>the list of matching numbers</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.NumberInfoRepositoryNH`1.Create(`0)">
+            <summary>
+            Stores the entity provided
+            </summary>
+            <param name="entity">the entity to persist</param>
+            <returns>the created entity with the Id assigned</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.ProductInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for ProductInfo entity inheritance tree
+            </summary>
+            <typeparam name="TProductInfo">the type of entity managed, is or extends ProductInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmCustomersBalanceTransationHistoryRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for CrmCustomersBalanceTransationHistory entity inheritance tree
+            </summary>
+            <typeparam name="TCrmCustomersBalanceTransationHistory">the type of entity managed, is or extends CrmCustomersBalanceTransationHistory</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CRMCUSTOMERSDATESINFORepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for CRMCUSTOMERSDATESINFO entity inheritance tree
+            </summary>
+            <typeparam name="TCRMCUSTOMERSDATESINFO">the type of entity managed, is or extends CRMCUSTOMERSDATESINFO</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmCustomersMSISDNGroupMembersRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CrmCustomersMSISDNGroupMembers 
+            </summary>
+            <typeparam name="TCrmCustomersMSISDNGroupMembers">Entity managed by the repository, is or extends CrmCustomersMSISDNGroupMembers</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CrmCustomersMSISDNGroupMembersRepositoryNH`1.GetFFNumbersByCustomerId(System.Int32,com.etak.core.model.SpecificNumberCategory)">
+            <summary>
+            Gets all TCrmCustomersMSISDNGroupMembers of a given customer and gategory
+            </summary>
+            <param name="customerId">the id of the customer to which the TCrmCustomersMSISDNGroupMembers associated</param>
+            <param name="numberCategory">the Number category of the Number</param>
+            <returns>the list of TCrmCustomersMSISDNGroupMembers</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CrmCustomersMSISDNGroupMembersRepositoryNH`1.GetAllFFNumbersByCustomerId(System.Int32)">
+            <summary>
+            Gets all TCrmCustomersMSISDNGroupMembers of a given customer and gategory
+            </summary>
+            <param name="customerId">the id of the customer to which the TCrmCustomersMSISDNGroupMembers associated</param>
+            <returns>the list of TCrmCustomersMSISDNGroupMembers</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CrmCustomersMSISDNGroupMembersRepositoryNH`1.TruncateFFNumbersByCustomerId(System.Int32,System.Int32,com.etak.core.model.SpecificNumberCategory)">
+            <summary>
+            Deletes N (quantity) TCrmCustomersMSISDNGroupMembers of a given customer and category
+            </summary>
+            <param name="customerId">the id of the customer to which the TCrmCustomersMSISDNGroupMembers associated</param>
+            <param name="quantity">the number of TCrmCustomersMSISDNGroupMembers to delete</param>
+            <param name="numberCategory">the SpecificNumberCategory of the TCrmCustomersMSISDNGroupMembers delete</param>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmCustomersPromotionGroupRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for CrmCustomersPromotionGroup entity inheritance tree
+            </summary>
+            <typeparam name="TCrmCustomersPromotionGroup">the type of entity managed, is or extends CrmCustomersPromotionGroup</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmCustomersResourceMbInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CrmCustomersResourceMbInfo 
+            </summary>
+            <typeparam name="TCrmCustomersResourceMbInfo">Entity managed by the repository, is or extends CrmCustomersResourceMbInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CrmCustomersResourceMbInfoRepositoryNH`1.LoadResourceMBAsociations(System.Int32)">
+            <summary>
+            Loads the TCrmCustomersResourceMbInfo of a given resourceId
+            </summary>
+            <param name="resourceId">the unique id of the resourceMB</param>
+            <returns>List with 0 or 1 TCrmCustomersResourceMbInfo</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CrmCustomersResourceMbInfoRepositoryNH`1.GetActiveSubscriptionByMsisdn(System.String)">
+            <summary>
+            Get TCrmCustomersResourceMbInfo of a given msisdn
+            </summary>
+            <param name="msisdn">MSISDN</param>
+            <returns>List of TCrmCustomersResourceMbInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmCustomersBundleAssignmentHistoryInfoRepositoryNH`1">
+            <summary>
+            NHibernate repository Impmenetation of ICrmCustomersBundleAssignmentHistoryInfoRepository
+            </summary>
+            <typeparam name="TCrmCustomersBundleAssignmentHistoryInfo">Entity managed by the repository is or extends CrmCustomersBundleAssignmentHistoryInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.MultiLingualInfoRepositoryNH`1">
+            <summary>
+            Nhibernate implementation of IMultiLingualInfoRepository
+            </summary>
+            <typeparam name="TMultiLingualInfo">Entity managed by  the repository is or extends MultiLingualInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.MultiLingualInfoRepositoryNH`1.GetCommonMultiLingual(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Gets all the TMultiLingualInfo of a dealer, language, dictionaryTypeId and value
+            </summary>
+            <param name="dealerId">the dealer id filter for the query</param>
+            <param name="languageId">the language id filter for the query</param>
+            <param name="dictionaryTypeId">the dictionaryTypeId filter for the query</param>
+            <param name="value">the value filter for the query</param>
+            <returns>the list of matching TMultiLingualInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.MVNOConfigActionInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity MVNOConfigActionInfo 
+            </summary>
+            <typeparam name="TMVNOConfigActionInfo">Entity managed by the repository, is or extends MVNOConfigActionInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.MVNOConfigActionInfoRepositoryNH`1.GetDefaultMVNOConfigs">
+            <summary>
+            Retrieve the all the MVNO config which are for all MVNOs.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.MVNOConfigActionInfoRepositoryNH`1.GetMVNOConfigsById(System.Int32)">
+            <summary>
+            Retrieve the MVNO config according to the MVNO ID. 
+            </summary>
+            <param name="MVNOId">the id to filter the MVNO</param>
+            <returns>the list of matchin TMVNOConfigActionInfo by MVNOId</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.MVNOConfigActionInfoRepositoryNH`1.GetMVNOConfigsByIds(System.Collections.Generic.IList{System.Int32})">
+            <summary>
+            Retrieve the MVNO config according to the MVNO IDs.
+            </summary>
+            <param name="MVNOIds">the ids to filter the MVNO</param>
+            <returns>the list of matching TMVNOConfigActionInfo by MVNOIds</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.MVNOConfigActionInfoRepositoryNH`1.GetMVNOConfigsByIDAndName(System.Int32,System.String,System.Int32)">
+            <summary>
+            Retrieve the MVNO config according to the MVNO IDs, and category and statusId
+            </summary>
+            <param name="MVNOId">the id to filter the MVNO</param>
+            <param name="categoryName">the category to filter</param>
+            <param name="statusId">the statud in which the config needs to be</param>
+            <returns>the list of matching TMVNOConfigActionInfo by MVNOIds</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.MVNOConfigActionInfoRepositoryNH`1.GetMVNOConfigsByMvnoIdAndCategoryId(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="MVNOId">the id to filter the MVNO</param>
+            <param name="categoryId">the category to filter</param>
+            <param name="statusId">the statud in which the config needs to be</param>
+            <returns>the list of matching TMVNOConfigActionInfo by MVNOIds</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.MVNOConfigActionInfoRepositoryNH`1.GetMVNOConfigsByMvnoIdAndCategoryIdAndItem(System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="MVNOId">the id to filter the MVNO</param>
+            <param name="categoryId">the category to filter</param>
+            <param name="item">The item to filter</param>
+            <param name="statusId">the statud in which the config needs to be</param>
+            <returns>the list of matching TMVNOConfigActionInfo by MVNOIds</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.MVNOPromotionSMSConfigRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity MVNOPromotionSMSConfig 
+            </summary>
+            <typeparam name="TMVNOPromotionSMSConfig">Entity managed by the repository, is or extends MVNOPromotionSMSConfig</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.drl.ImeiAssnRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity ImeiAssn 
+            </summary>
+            <typeparam name="TImeiAssn">Entity managed by the repository, is or extends ImeiAssn</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.drl.ImeiAssnRepositoryNH`1.GetByImei(System.String)">
+            <summary>
+            Gets all the TMVNOAPNIPPoolInfo for the given msisdn
+            </summary>
+            <param name="imei">the msisdn to look for</param>
+            <returns>the list of entities that fullfil the requiremets</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ChargeAdhocNonRecurringMap">
+            <summary>
+            NHibernate mapping for ChargeNonRecurring entity
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ChargeAdhocNonRecurringMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ChargeAggregateMap">
+            <summary>
+            NHibernate mapping for ChargeNonRecurring entity
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ChargeAggregateMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ChargeTaxesMap">
+            <summary>
+            NHibernate mapping for ChargeNonRecurring entity
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ChargeTaxesMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.UsageAggregateMap">
+            <summary>
+            NHibernate mapping for ChargeNonRecurring entity
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.UsageAggregateMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.network.RMOperatorsInfoRepositoryNH`1">
+            <summary>
+            NHibernate implementation of  IRMOperatorsInfoRepository
+            </summary>
+            <typeparam name="TRMOperatorsInfo">The type of entity managed by the repository, is or extends RMOperatorsInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.network.RMOperatorsInfoRepositoryNH`1.GetByCNOperatorCode(System.String)">
+            <summary>
+            Gets all the operators with a given CN operator code, should return only one
+            </summary>
+            <param name="cnOperatorCode">the operator code in the central node</param>
+            <returns>all the operators with a given CN operator code</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.rules.mapping.BusinessRuleMap">
+            <summary>
+            Fluent Nhibernate mapping class for BussinessRule
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.rules.mapping.BusinessRuleMap.#ctor">
+            <summary>
+            public constructor for fluent Nhibernate
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.rules.mapping.DummyPackageRule">
+            <summary>
+            Due to the fact that implementations will be done
+            outside the framework, we need to add this hack 
+            to start the unit tests. So we register a concrete class
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.rules.mapping.DummyPackageRule.ExecuteActions(com.etak.core.model.PackageRuleParam,com.etak.core.model.RuleCaller)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="ruleCaller"></param>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.rules.mapping.DummyPackageRule.IsEligible(com.etak.core.model.PackageRuleParam,com.etak.core.model.RuleCaller)">
+            <summary>
+            
+            </summary>
+            <param name="param"></param>
+            <param name="ruleCaller"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.rules.mapping.DummyPackageRuleMap">
+            <summary>
+            Fluent Nhibernate mapping class for DummyPackageRule
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.rules.mapping.DummyPackageRuleMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.rules.mapping.PackageRuleMap">
+            <summary>
+            Fluent Nhibernate mapping class for PackageRule
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.rules.mapping.PackageRuleMap.#ctor">
+            <summary>
+            Default constructor so fluent map builds the xml on runtime.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.rules.mapping.DummyPackageGroupRule">
+            <summary>
+            Due to the fact that implementations will be done
+            outside the framework, we need to add this hack 
+            to start the unit tests. So we register a concrete class
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.rules.mapping.DummyPackageGroupRule.ExecuteActions(com.etak.core.model.PromotionGroupRuleParam,com.etak.core.model.RuleCaller4PromotionGroup)">
+            <summary>
+            ignore
+            </summary>
+            <param name="param">ignore</param>
+            <param name="ruleCaller">ignore</param>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.rules.mapping.DummyPackageGroupRule.IsEligible(com.etak.core.model.PromotionGroupRuleParam,com.etak.core.model.RuleCaller4PromotionGroup)">
+            <summary>
+            ignore
+            </summary>
+            <param name="param">ignore</param>
+            <param name="ruleCaller">ignore</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.rules.mapping.DummyPackageGroupRuleMap">
+            <summary>
+            Due to the fact that implementations will be done
+            outside the framework, we need to add this hack 
+            to start the unit tests. So we register a concrete class
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.rules.mapping.DummyPackageGroupRuleMap.#ctor">
+            <summary>
+            ignore
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.rules.mapping.PromotionGroupRuleMap">
+            <summary>
+            Fluent nhibernate mapping for PromotionGroupRule
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.rules.mapping.PromotionGroupRuleMap.#ctor">
+            <summary>
+            Default constructor so fluent map builds the xml on runtime.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.services.TroubleTicketInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for TroubleTicketInfo entity inheritance tree
+            </summary>
+            <typeparam name="TTroubleTicketInfo">the type of entity managed, is or extends TroubleTicketInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.services.TroubleTicketInfoRepositoryNH`1.GetByCustomerId(System.Int32)">
+            <summary>
+            Get the TroubleTicketInfos by Customer Id
+            </summary>
+            <param name="customerId">The Id of the customer</param>
+            <returns>List of matching entitiesTroubleTicketInfo that fulfill the condition</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.services.TroubleTicketInfoRepositoryNH`1.GetByTicketNumber(System.String)">
+            <summary>
+            Get TroubleTicketInfos for a given ticket number
+            </summary>
+            <param name="ticketNumber">Ticket number of customer to be retrieved</param>
+            <returns>Matched entity that fulfill the condition</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.services.TroubleTicketQuestionInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for TroubleTicketQuestionInfo entity inheritance tree
+            </summary>
+            <typeparam name="TTroubleTicketQuestionInfo">the type of entity managed, is or extends TroubleTicketQuestionInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.services.TroubleTicketQuestionInfoRepositoryNH`1.GetByTypeAndSubTypeAndMvnoId(System.String,System.String,System.Int32)">
+            <summary>
+            Get the TroubleTicketQuestionInfos by TROUBLETYPE, TTSUBTYPE, and MVNOID
+            </summary>
+            <param name="type">Type of Trouble Ticket</param>
+            <param name="subType">SubType of Trouble Ticket</param>
+            <param name="mvnoId">MVNO Id</param>
+            <returns>List of matched TTroubleTicketQuestionInfo with given type, subType, and mvnoId</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.services.TTHistoryInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for TTHistoryInfo entity inheritance tree
+            </summary>
+            <typeparam name="TTTHistoryInfo">the type of entity managed, is or extends TTHistoryInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.SessionInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity SessionInfo 
+            </summary>
+            <typeparam name="TSessionInfo">Entity managed by the repository, is or extends SessionInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SessionInfoRepositoryNH`1.GetBySessionId(System.String)">
+            <summary>
+            Gets all the SessionInfo with specific sessionId
+            </summary>
+            <param name="sessionId">the Id of the session</param>
+            <returns>an enumerable with 0 or 1 SessionInfos</returns>de
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.subscription.catalog.Mapping.ProductOfferingCatalogMap">
+            <summary>
+            Fluent Nhibernate mapping class for ProductCatalog
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.subscription.catalog.Mapping.ProductOfferingCatalogMap.#ctor">
+            <summary>
+            public constructor for fluent Nhibernate
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.subscription.catalog.Mapping.ProductOfferingGroupOptionMap">
+            <summary>
+            NHibernate mapping for ProductGroupOption entity
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.subscription.catalog.Mapping.ProductOfferingGroupOptionMap.#ctor">
+            <summary>
+            Class map for ProductGroupOption so fluent nhibernate builds the hbm.xml on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.subscription.catalog.Mapping.ProductOfferingGroupMap">
+            <summary>
+            Fluent Nhibernate mapping class for ProductOfferingGroup
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.subscription.catalog.Mapping.ProductOfferingGroupMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.subscription.catalog.Mapping.ProductOfferingMap">
+            <summary>
+            Fluent Nhibernate mapping class for ProductOffering
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.subscription.catalog.Mapping.ProductOfferingMap.#ctor">
+            <summary>
+            public constructor for fluent Nhibernate
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.subscription.catalog.Mapping.ProductOfferingOptionMap">
+            <summary>
+            Fluent Nhibernate mapping class for ProductOption
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.subscription.catalog.Mapping.ProductOfferingOptionMap.#ctor">
+            <summary>
+            public constructor for fluent Nhibernate
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.subscription.catalog.Mapping.ProductOfferingSpecificationOptionMap">
+            <summary>
+            NHibernate mapping for ProductSpecificationOption entity
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.subscription.catalog.Mapping.ProductOfferingSpecificationOptionMap.#ctor">
+            <summary>
+            Class map for ProductSpecificationOption so fluent nhibernate builds the hbm.xml on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.subscription.catalog.Mapping.ProductOfferingTimeRangeMap">
+            <summary>
+            Fluent Nhibernate mapping class for ProductTimeRange
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.subscription.catalog.Mapping.ProductOfferingTimeRangeMap.#ctor">
+            <summary>
+            public constructor for fluent Nhibernate
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.subscription.catalog.Mapping.ProductTypeOptionMap">
+            <summary>
+            NHibernate mapping for ProductTypeOption entity
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.subscription.catalog.Mapping.ProductTypeOptionMap.#ctor">
+            <summary>
+            Class map for ProductTypeOption so fluent nhibernate builds the hbm.xml on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.subscription.catalog.ProductOfferingCatalogRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity ProductOfferingCatalog 
+            </summary>
+            <typeparam name="TProductOfferingCatalog">Entity managed by the repository, is or extends ProductOfferingCatalog</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.subscription.catalog.ProductOfferingGroupRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity ProductOfferingGroup 
+            </summary>
+            <typeparam name="TProductOfferingGroup">Entity managed by the repository, is or extends ProductOfferingGroup</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.subscription.catalog.ProductOfferingRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity ProductOfferingRepository 
+            </summary>
+            <typeparam name="TProductOffering">Entity managed by the repository, is or extends ProductOffering</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.subscription.catalog.ProductOfferingRepositoryNH`1.GetByGroupId(System.Int32)">
+            <summary>
+            Given a groupId, return all the ProductOfferings that belongs to this group
+            </summary>
+            <param name="groupId">The group to be used to get the product offerings</param>
+            <returns>A list of ProductOfferings that belongs to the group specified</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.MVNOTopupBundleBasedInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for MVNOTopupBundleBasedInfo entity inheritance tree
+            </summary>
+            <typeparam name="TMVNOTopupBundleBasedInfo">the type of entity managed, is or extends MVNOTopupBundleBasedInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.MVNOTopupBundleBasedInfoRepositoryNH`1.GetByPackageId(System.Int32)">
+            <summary>
+            Gets the All the Topup Bundles of a given package id
+            </summary>
+            <param name="packageId">the id of the package associated to TopUpBundles</param>
+            <returns>the list of TMVNOTopupBundleBasedInfo </returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.PackageDealerMappingInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity PackageDealerMappingInfo 
+            </summary>
+            <typeparam name="TPackageDealerMappingInfo">Entity managed by the repository, is or extends PackageDealerMappingInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.PackageDealerMappingInfoRepositoryNH`1.GetByPackageId(System.Int32)">
+            <summary>
+            Get all the mappings for a given package ID
+            </summary>
+            <param name="packageId">the Id of the package</param>
+            <returns>an enumerable with the packages mapping</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.PackageRelationShipsRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity PackageRelationShips 
+            </summary>
+            <typeparam name="TPackageRelationShips">Entity managed by the repository, is or extends PackageRelationShips</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.PackageRelationShipsRepositoryNH`1.GetAll">
+            <summary>
+            gets all the package relationships
+            </summary>
+            <returns>the list of package relationships</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.PropertyInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity PropertyInfo 
+            </summary>
+            <typeparam name="TPropertyInfo">Entity managed by the repository, is or extends PropertyInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.PropertyInfoRepositoryNH`1.GetByDocumentId(System.Int32,System.String)">
+            <summary>
+            Gets the customer properties that have a given identufication number
+            </summary>
+            <param name="idType">the type of the document</param>
+            <param name="idNumber">the document number</param>
+            <returns>the list of customer properties that have this id</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.BalanceForAccountRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity BalanceForAccount 
+            </summary>
+            <typeparam name="TBalanceForAccount">Entity managed by the repository, is or extends BalanceForAccount</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.AccountDataRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity AccountData 
+            </summary>
+            <typeparam name="TAccountData">Entity managed by the repository, is or extends AccountData</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.AccountRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity Account 
+            </summary>
+            <typeparam name="TAccount">Entity managed by the repository, is or extends Account</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.AccountTimeRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity AccountTime 
+            </summary>
+            <typeparam name="TAccountTime">Entity managed by the repository, is or extends AccountTime</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.BillCycleRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity BillCycle 
+            </summary>
+            <typeparam name="TBillCycle">Entity managed by the repository, is or extends BillCycle</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.BillCycleRepositoryNH`1.GetBillingCyclesForVMNO(com.etak.core.model.DealerInfo)">
+            <summary>
+            Gets all the billing cycles for a mvno
+            </summary>
+            <param name="dealer">the vmno owning the billing cycles</param>
+            <returns>the list of billing cycles</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ChargeDiscountMap">
+            <summary>
+            NHibernate mapping for ChargeDiscount entity
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ChargeDiscountMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ChargeNonRecurringMap">
+            <summary>
+            NHibernate mapping for ChargeNonRecurring entity
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ChargeNonRecurringMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ChargeRecurringMap">
+            <summary>
+            NHibernate mapping for ChargeRecurring entity
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ChargeRecurringMap.#ctor">
+            <summary>
+            Class map for ChargeRecurring so fluent nhibernate builds the hbm.xml on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ChargeTargetMap">
+            <summary>
+            Fluent Nhibernate mapping class for ChargeTarget
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ChargeTargetMap.#ctor">
+            <summary>
+            Default constructor so fluent map builds the xml on runtime.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ProductTypeMap">
+            <summary>
+            Fluent Nhibernate mapping class for ProductType
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.ProductTypeMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.TaxZipRangesMap">
+            <summary>
+            Fluent Nhibernate mapping class for TaxZipRanges
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.TaxZipRangesMap.#ctor">
+            <summary>
+            Default constructor so fluent map builds the xml on runtime.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.TaxDefinitionRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity TaxDefinition 
+            </summary>
+            <typeparam name="TTaxDefinition">Entity managed by the repository, is or extends TaxDefinition</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.TaxDefinitionRepositoryNH`1.GetDefinitionsForCategory(System.Int32)">
+            <summary>
+            Gets all the tax definitions with the given category
+            </summary>
+            <param name="taxCategory">the category to filter</param>
+            <returns>the matching results</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.TaxDefinitionRepositoryNH`1.GetDefinitionsByZipCodeLike(System.String)">
+            <summary>
+            Searchs all the charge definition that have a zip code in that range. 
+            </summary>
+            <param name="zipCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.BillRunRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity BillRun 
+            </summary>
+            <typeparam name="TBillRun">Entity managed by the repository, is or extends BillRun</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.BillRunRepositoryNH`1.GetBillRunsForBillCycle(com.etak.core.model.revenueManagement.BillCycle)">
+            <summary>
+            gets all the bill runs for a billing cycle
+            </summary>
+            <param name="billcycle">the owner of the bill runs to recover</param>
+            <returns>the list of bill runs for a billing cycle</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.BillRunRepositoryNH`1.GetBillRunInDatesForBillCycle(com.etak.core.model.revenueManagement.BillCycle,System.DateTime)">
+            <summary>
+            gets all the bill runs for a billing cycle
+            </summary>
+            <param name="billCycle">the owner of the bill runs to recover</param>
+            <param name="dateRange">The date in which the bill run start/end date must be between</param>
+            <returns>the list of bill runs for a billing cycle</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.ChargePriceRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity ChargePrice 
+            </summary>
+            <typeparam name="TChargePrice">Entity managed by the repository, is or extends ChargePrice</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.ChargeRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity Charge 
+            </summary>
+            <typeparam name="TCharge">Entity managed by the repository, is or extends Charge</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.ChargeRepositoryNH`1.GetByCategoryId(System.Int32)">
+            <summary>
+            Gets all the charges of a category
+            </summary>
+            <param name="category">the id of the category that the charges must have</param>
+            <returns>the list of charges</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.AccountCurrencyRepositoryNH`1">
+            <summary>
+            Nhibernate implementation of IAccountCurrencyRepository
+            </summary>
+            <typeparam name="TAccountCurrency">The type of entity managed by the repository, is or extends  AccountCurrency</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.CustomerChargeRepositoryNH`1">
+            <summary>
+            Implementation of ICustomerChargeRepository based on Nhibernate
+            </summary>
+            <typeparam name="T">Any type extending CustomerCharge</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.CustomerChargeRepositoryNH`1.GetByCustomerId(System.Int32)">
+            <summary>
+            Gets the customer charges by customerId in a future way
+            </summary>
+            <param name="customerId">The customer id to load</param>
+            <returns>a list containing the charges for the customercustomers charge</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.CustomerChargeRepositoryNH`1.GetByCustomerIdWithRange(System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            Gets the customer charges by customerId in a future way with charging dates within a range
+            </summary>
+            <param name="customerId">The customer id to load</param>
+            <param name="startDate">The purchase date range start</param>
+            <param name="endDate">The purchase date range end</param>
+            <returns>a list containing the charges for the customercustomers charge</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.CustomerChargeRepositoryNH`1.GetByCustomerIdAndInvoice(System.Int32,com.etak.core.model.revenueManagement.Invoice)">
+            <summary>
+            Gets the customer charges by customerId of a given invoice
+            </summary>
+            <param name="customerId">THe id of the customer owning the charges</param>
+            <param name="invoice">The invoice to look for</param>
+            <returns>a list containing the charges for the customer charge</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.CustomerChargeScheduleRepositoryNH`1">
+            <summary>
+            Implementation of ICustomerChargeScheduleRepository based on Nhibernate repository
+            </summary>
+            <typeparam name="TCustomerChargeSchedule">A Class that is CustomerChargeSchedule or extends it</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.CustomerChargeScheduleRepositoryNH`1.GetChargeSchedulesByCustomer(com.etak.core.model.CustomerInfo)">
+            <summary>
+            Gets all the scheduled charges of a given customer
+            </summary>
+            <param name="customer">the customer to the charges are associated</param>
+            <returns>A list of Scheduled charges.</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.CustomerAccountAssociationRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CustomerAccountAssociation 
+            </summary>
+            <typeparam name="TCustomerAccountAssociation">Entity managed by the repository, is or extends CustomerAccountAssociation</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.CustomerAccountAssociationRepositoryNH`1.AllAsociationsForCustomer(com.etak.core.model.CustomerInfo)">
+            <summary>
+            Gets all the customer accounts associations of a given customer
+            </summary>
+            <param name="customer">The customer in the association</param>
+            <returns>the list of customer account associations of the customer</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.CustomerProductAssignmentRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CustomerProductAssignment 
+            </summary>
+            <typeparam name="TCustomerProductAssignment">Entity managed by the repository, is or extends CustomerProductAssignment</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.CustomerProductAssignmentRepositoryNH`1.GetByCustomerId(System.Int32)">
+            <summary>
+            Gets all customer products assignment
+            </summary>
+            <param name="customerId">the Id of the customer to where the charges are assigneed</param>
+            <returns>All the customer product assignment</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.CustomerProductAssignmentRepositoryNH`1.GetByCustomerIdWithRange(System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            Gets all customer products assignment with start date greater than input value
+            and endtime smaller thatn input value
+            </summary>
+            <param name="customerId">the id of the customer to retreive the association</param>
+            <param name="startDate">the start date to compare with startdate of the CustomerProductAssingment</param>
+            <param name="endDate">the end date to compare with enddate of the CustomerProductAssingment</param>
+            <returns>the list of matching customer product assingments</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.CustomerProductAssignmentRepositoryNH`1.GetByCustomerWhereDateRangesInDate(System.Int32,System.DateTime)">
+            <summary>
+            Gets all customer products assignment with start date greater than input value
+            and endtime smaller thatn input value or end date null
+            </summary>
+            <param name="customerId">the id of the customer to retreive the association</param>
+            <param name="pointInTime">the start date to compare with startdate and enddate of the CustomerProductAssingment</param>
+            <returns>the list of matching customer product assingments</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.InvoiceRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity Invoice 
+            </summary>
+            <typeparam name="TInvoice">Entity managed by the repository, is or extends Invoice</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.InvoiceRepositoryNH`1.GetLastNInvoices(System.Int32,System.Int32)">
+            <summary>
+            Gets the last N invoices for a given customer
+            </summary>
+            <param name="customerId">the customer of the customers</param>
+            <param name="n">the number of the invoices to recover</param>
+            <returns>the list of invoices</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.InvoiceRepositoryNH`1.GetByLegalInvoiceNumber(System.Int32,System.String)">
+            <summary>
+            Gets the invoice for the customer with a given legal number
+            </summary>
+            <param name="customerId">The owner of the customer</param>
+            <param name="legalNumber">The number of the invoice to recover</param>
+            <returns>the list of invoices</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.InvoiceRepositoryNH`1.GetLastNInvoicesAndStatusIn(System.Int32,System.Int32,System.Collections.Generic.List{System.Nullable{com.etak.core.model.revenueManagement.InvoiceStatus}})">
+            <summary>
+            Gets the last N invoices for a given customer that are in a set of status
+            </summary>
+            <param name="customerId">the customer of the customers</param>
+            <param name="n">the number of the invoices to recover</param>
+            <returns>the list of invoices</returns>
+            <param name="statuses">the possible list of statu that the invoice needs to be</param>
+            <returns>the list of n matching invoices</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.BalanceForAccountMap">
+            <summary>
+            NHibernate mapping for BalanceForAccount class
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.BalanceForAccountMap.#ctor">
+            <summary>
+            Defualt constructor that maps the classes
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.AccountDataMap">
+            <summary>
+            Class to map to Nhibernate class AccountData
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.AccountDataMap.#ctor">
+            <summary>
+            The constructor called by fluent to map the class. 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.TaxRatesMap">
+            <summary>
+            Fluent Nhibernate mapping class for TaxRates
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.TaxRatesMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.TaxDefinitionMap">
+            <summary>
+            Fluent Nhibernate mapping class for TaxDefinition
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.TaxDefinitionMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.Mapping.LanguageSpecificTextMap">
+            <summary>
+            Fluent Nhibernate mapping class for LanguageSpecificText
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.Mapping.LanguageSpecificTextMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.AccountMap">
+            <summary>
+            Class to map to Nhibernate class Account
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.AccountMap.#ctor">
+            <summary>
+            The constructor called by fluent to map the class
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.AccountTimeMap">
+            <summary>
+            Class to map to Nhibernate class AccountTime
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.AccountTimeMap.#ctor">
+            <summary>
+            The constructor called by fluent to map the class
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.BillCycleMap">
+            <summary>
+            Class to map to Nhibernate class AccountTime
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.BillCycleMap.#ctor">
+            <summary>
+            The constructor called by fluent to map the class
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.BillRunMap">
+            <summary>
+            Fluent Nhibernate mapping class for BillRun
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.BillRunMap.#ctor">
+            <summary>
+            public constructor for fluent Nhibernate
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.ChargeMap">
+            <summary>
+            Fluent Nhibernate mapping class for ProductChargeOption
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.ChargeMap.#ctor">
+            <summary>
+            Default constructor so fluent map builds the xml on runtime.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.TimesOfChargeCustomMapper">
+            <summary>
+            Maps TimesOfCharge to custom strings in the DB
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.TimesOfChargeCustomMapper.GetValue(System.Object)">
+            <summary>
+            Gets the Db representation for the enum TimesOfCharge
+            </summary>
+            <param name="enm">the TimesOfCharge to be converted</param>
+            <returns>the TimesOfCharge in string format to be persisted in the DB</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.TimesOfChargeCustomMapper.GetInstance(System.Object)">
+            <summary>
+            Deserializes a persisted value of TimesOfCharge in string form in the db
+            </summary>
+            <param name="code">The String representation in the DB</param>
+            <returns>the TimesOfCharge in enum form</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.ChargePriceMap">
+            <summary>
+            NHibernate Fluent mapping for ChargePrice
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.ChargePriceMap.#ctor">
+            <summary>
+            Default constructor so fluent map builds the xml on runtime.
+            </summary>
+        </member>
+        <member name="T:com.etak.postpaid.mapping.revenueManagement.AccountCurrencyMap">
+            <summary>
+            Class to map to Nhibernate class AccountCurrency
+            </summary>
+        </member>
+        <member name="M:com.etak.postpaid.mapping.revenueManagement.AccountCurrencyMap.#ctor">
+            <summary>
+            The constructor called by fluent to map the class. 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.CustomerChargeMap">
+            <summary>
+            Fluent Nhibernate mapping for CustomerCharge class
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.CustomerChargeMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.CustomerChargeScheduleMap">
+            <summary>
+            NHibernate Fluent mapping for Customer Charge schedule
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.CustomerChargeScheduleMap.#ctor">
+            <summary>
+            Default constructor so fluent map builds the xml on runtime.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.CustomerProductAssignmentMap">
+            <summary>
+            Fluent Nhibernate mapping for CustomerProductAssignment class
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.CustomerProductAssignmentMap.#ctor">
+            <summary>
+            default constructor so fluentNhibernate builds the XML mapping
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.InvoiceMap">
+            <summary>
+            Fluent Nhibernate mapping for Invoice class
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.Mapping.InvoiceMap.#ctor">
+            <summary>
+            default constructor so fluentNhibernate builds the XML mapping
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.ProductChargeOptionMap">
+            <summary>
+            Fluent Nhibernate mapping class for ProductChargeOption
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.ProductChargeOptionMap.#ctor">
+            <summary>
+            Default constructor so fluent map builds the xml on runtime.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.ProductMap">
+            <summary>
+            Fluent Nhibernate mapping class for Product
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.ProductMap.#ctor">
+            <summary>
+            public constructor for fluent Nhibernate
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.Mapping.MultiLingualDescriptionMap">
+            <summary>
+            Fluent Nhibernate mapping class for MultiLingualDescription
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.Mapping.MultiLingualDescriptionMap.#ctor">
+            <summary>
+            Default constructor so fluent mappigns builds the hbm.xml file on runtime
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.ProductChargeOptionRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity ProductChargeOption 
+            </summary>
+            <typeparam name="TProductChargeOption">Entity managed by the repository, is or extends ProductChargeOption</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.revenueManagement.ProductChargeOptionRepositoryNH`1.GetByProductOfferingId(System.Int32)">
+            <summary>
+            Gets all the ProductChargeOption of a given product offering (This method in general, Product Offering already has the result of this query and cached)
+            <see cref="P:com.etak.core.model.subscription.catalog.ProductOffering.ChargingOptions"/>
+            </summary>
+            <param name="productOfferingId">The id of the product offering to get the TProductChargeOption</param>
+            <returns>the list of the TProductChargeOption of the product</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.revenueManagement.ProductRepositoryNH`1">
+            <summary>
+            NHibernate implmentation of IProductRepository
+            </summary>
+            <typeparam name="TProduct">the entity managed by the repository is or extends Product</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.RmPromotionGroupInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity ServicesInfo 
+            </summary>
+            <typeparam name="TRmPromotionGroupInfo">Entity managed by the repository, is or extends ServicesInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionGroupInfoRepositoryNH`1.GetByMvnos(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Gets all promotion groups of an vmno
+            </summary>
+            <param name="mvnoIds">the list of mvnos owning the RmPromotionGroupInfo</param>
+            <returns>all promotion groups of an vmno</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionGroupInfoRepositoryNH`1.GetByGroupName(System.String)">
+            <summary>
+            Gets all promotion groups with a group name
+            </summary>
+            <param name="groupName">the name of the promotion group</param>
+            <returns>all promotion groups with a group name</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionGroupInfoRepositoryNH`1.GetByGroupNameAndDealer(System.String,com.etak.core.model.DealerInfo)">
+            <summary>
+            Gets all promotion groups with a group name that belong to a dealer
+            </summary>
+            <param name="groupName">the name of the promotion group</param>
+            <param name="vmnoInfo">the dealer of the promotion group</param>
+            <returns>all promotion groups with a group name of a dealer</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionGroupInfoRepositoryNH`1.GetAllGroupsByNameAndDealer(System.String,com.etak.core.model.DealerInfo)">
+            <summary>
+            Gets all promotion groups with a group name that belong to a dealer
+            </summary>
+            <param name="groupName">the name of the promotion group</param>
+            <param name="vmnoInfo">the dealer of the promotion group</param>
+            <returns>all promotion groups with a group name of a dealer</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionGroupInfoRepositoryNH`1.GetAll">
+            <summary>
+            Gets all promotion groups
+            </summary>
+            <returns>all promotion groups</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.RmPromotionGroupMemberRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for RmPromotionGroupMember entity inheritance tree
+            </summary>
+            <typeparam name="TRmPromotionGroupMember">the type of entity managed, is or extends RmPromotionGroupMember</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionGroupMemberRepositoryNH`1.GetAll">
+            <summary>
+            Gets all TRmPromotionGroupMember
+            </summary>
+            <returns>all TRmPromotionGroupMember</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionGroupMemberRepositoryNH`1.GetByPromotionGroup(System.Int32)">
+            <summary>
+            Gets all TRmPromotionGroupMember of a groupId (id  of PromotionGroup) relation
+            </summary>
+            <returns>all TRmPromotionGroupMember</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.RmPromotionPlanTopupBasedParametersRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for RmPromotionPlanTopupBasedParameters entity inheritance tree
+            </summary>
+            <typeparam name="TRmPromotionPlanTopupBasedParameters">the type of entity managed, is or extends RmPromotionPlanTopupBasedParameters</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionPlanTopupBasedParametersRepositoryNH`1.GetByPromotionPlanIdAndAmount(System.Int32,System.Decimal)">
+            <summary>
+            Gets the RmPromotionPlanTopupBasedParameters of a given promoionplanid and a given amount
+            </summary>
+            <param name="promoionplanid">the promotion plan id to which the promotion plan is asigned</param>
+            <param name="amount">the threshold amount of the RmPromotionPlanTopupBasedParameters</param>
+            <returns>The list of matching elements</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionPlanTopupBasedParametersRepositoryNH`1.GetByPromotionPlanId(System.Int32)">
+            <summary>
+            Gets the RmPromotionPlanTopupBasedParameters of a given promoionplanid 
+            </summary>
+            <param name="promotionPlanId">the promotion plan id to which the promotion plan is asigned</param>
+            <returns>The list of matching elements</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.ServicesInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity ServicesInfo 
+            </summary>
+            <typeparam name="TServicesInfo">Entity managed by the repository, is or extends ServicesInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.ServicesInfoRepositoryNH`1.GetByCustomerId(System.Int32)">
+            <summary>
+            Gets all the services for a given customer
+            </summary>
+            <param name="customerId">The id of the customer from which the services needs to be retreived</param>
+            <returns>the list of matching services</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.ServicesInfoRepositoryNH`1.GetCustomerMainService(System.Int32)">
+            <summary>
+            Gets the Service where the main balance is stored.
+            </summary>
+            <param name="customerId">the customer where the</param>
+            <returns>A list with 0 or 1 TServicesInfo holding the main balance</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.SettingInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity SettingInfo 
+            </summary>
+            <typeparam name="TSettingInfo">Entity managed by the repository, is or extends CrmCustomersPromotionOpeSettingInforationLogInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SettingInfoRepositoryNH`1.GetByDealerId(System.Int32)">
+            <summary>
+            Gets the sms configuration of a dealer
+            </summary>
+            <param name="dealerId">the dealer for which the sms configuration is</param>
+            <returns>the list of sms settings</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SettingInfoRepositoryNH`1.GetSettingInfoWithDetailByDealerId(System.Int32)">
+            <summary>
+            Gets the sms configuration of a dealer loading the details association
+            </summary>
+            <param name="dealerId">the dealer for which the sms configuration is</param>
+            <returns>the list of sms settings</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SettingInfoRepositoryNH`1.GetSettingInfoWithDetailByDealerIdAndEventID(System.Int32,System.Int32)">
+            <summary>
+            Gets the sms configuration of a dealer and an event
+            </summary>
+            <param name="dealerId">the dealer for which the sms configuration is</param>
+            <param name="eventId">the id of the event to which the sms configuration applies</param>
+            <returns>the list of sms settings</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.TableBasedSequenceProvider">
+            <summary>
+            Table based sequence provider (where Native Sequences are not generated)
+            </summary>
+        </member>
+        <member name="F:com.etak.core.repository.crm.Nhibernate.TableBasedSequenceProvider.mvnoSequenceDic">
+            <summary>
+            key:MVNOID, value:END
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.TableBasedSequenceProvider.#ctor">
+            <summary>
+            default constructor, creates the Dictionary for sequences
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.TableBasedSequenceProvider.GetNextSequence(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sequence">sequence format for mvno order code:CRM_MVNO_OPERATION_LOG.ORDERCODE:[MVNOID], eg: CRM_MVNO_OPERATION_LOG.ORDERCODE:700000</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.TableBasedSequenceProvider.GetStepSize(System.String)">
+            <summary>
+            Current table based sequence provider does not support caching
+            </summary>
+            <param name="sequence"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.StatusChangedLogInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for StatusChangedLogInfo entity inheritance tree
+            </summary>
+            <typeparam name="TStatusChangedLogInfo">the type of entity managed, is or extends StatusChangedLogInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.TransitionInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity TransitionInfo 
+            </summary>
+            <typeparam name="TTransitionInfo">Entity managed by the repository, is or extends TransitionInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.TransitionInfoRepositoryNH`1.GetAll">
+            <summary>
+            Gets all the TTransitionInfo
+            </summary>
+            <returns>List with all the TTransitionInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.NumberPropertyInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity NumberPropertyInfo 
+            </summary>
+            <typeparam name="TNumberPropertyInfo">Entity managed by the repository, is or extends NumberPropertyInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.NumberPropertyInfoRepositoryNH`1.getByMSISDN(System.String)">
+            <summary>
+            Gets the Number in the pool by the MSISDN 
+            </summary>
+            <param name="msisdn">the msisdn too look up</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.LifecycleLogInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for LifecycleLogInfo entity inheritance tree
+            </summary>
+            <typeparam name="TLifecycleLogInfo">the type of entity managed, is or extends LifecycleLogInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.LifecycleLogInfoRepositoryNH`1.GetLastByMSISDN(System.String)">
+            <summary>
+            Gets last TLifecycleLogInfo for a given MSISDN
+            </summary>
+            <param name="msisdn">the msisdn to look for</param>
+            <returns>the last TLifecycleLogInfo</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.LifecycleLogInfoRepositoryNH`1.getByOrderCodeAndMSISDN(System.String,System.Int64)">
+            <summary>
+            Gets the TLifecycleLogInfo for the given order code and msisdn
+            </summary>
+            <param name="msisdn">the msisdn to look for</param>
+            <param name="orderCode">the order code</param>
+            <returns>the entity that fullfill the requirements</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.LifecycleLogInfoExtendedRepositoryNH`1">
+            <summary>
+            Respository for <typeparamref name="TLifecycleLogInfoExtended"/> entity
+            </summary>
+            <typeparam name="TLifecycleLogInfoExtended">The type of the managed entity, is or extends LifecycleLogInfoExtended</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.EventInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for EventInfo entity inheritance tree
+            </summary>
+            <typeparam name="TEventInfo">the type of entity managed, is or extends EventInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.EventInfoRepositoryNH`1.GetByEventCodeAndEventType(System.Int32,System.Int32)">
+            <summary>
+            Gets all the events of a given type of code and type
+            </summary>
+            <param name="eventCode">the eventCode to look for</param>
+            <param name="eventType">the event type to look for</param>
+            <returns>a list with all the events mathching envet code and event type</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmCustomerPromotionPropertyInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for CrmCustomerPromotionPropertyInfo entity inheritance tree
+            </summary>
+            <typeparam name="TCrmCustomerPromotionPropertyInfo">the type of entity managed, is or extends CrmCustomerPromotionPropertyInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmCustomersBonusRelationShipInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CrmCustomersBonusRelationShipInfo 
+            </summary>
+            <typeparam name="TCrmCustomersBonusRelationShipInfo">Entity managed by the repository, is or extends CrmCustomersBonusRelationShipInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CrmCustomersBonusRelationShipInfoRepositoryNH`1.GetByVmnoAndPackage(System.Int32,System.Int32)">
+            <summary>
+            Gets all the TCrmCustomersBonusRelationShipInfo for a package and an vmno
+            </summary>
+            <param name="VMNOId">vmno to filter the query</param>
+            <param name="packageID">the owner of the relations</param>
+            <returns>all the TCrmCustomersBonusRelationShipInfo for a package and an vmno</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmCustomersExtraUsageInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for CrmCustomersExtraUsageInfo entity inheritance tree
+            </summary>
+            <typeparam name="TCrmCustomersExtraUsageInfo">the type of entity managed, is or extends CrmCustomersExtraUsageInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmCustomersPromotionInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CrmCustomersPromotionInfo 
+            </summary>
+            <typeparam name="TCrmCustomersPromotionInfo">Entity managed by the repository, is or extends CrmCustomersPromotionInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CrmCustomersPromotionInfoRepositoryNH`1.LoadAsociations(System.Int64)">
+            <summary>
+            Loads a Promotion by Id loading associations of promotion
+            </summary>
+            <param name="promotionKey">the id of the promotion to load</param>
+            <returns>the loaded promotion</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CrmCustomersPromotionInfoRepositoryNH`1.GetCustomerPromotionPlanById(System.Int32,System.Int64[])">
+            <summary>
+            Gets all promotions in a set of Ids that belogns to a customer iD
+            </summary>
+            <param name="customerId">the id of the customer, owner of the promotions</param>
+            <param name="promotionPlanIds">the ids of the promotion plans</param>
+            <returns>the promotins that fullfill the conditions</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmCustomersPromotionOperationLogInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CrmCustomersPromotionOperationLogInfo 
+            </summary>
+            <typeparam name="TCrmCustomersPromotionOperationLogInfo">Entity managed by the repository, is or extends CrmCustomersPromotionOperationLogInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CrmCustomersPromotionOperationLogInfoRepositoryNH`1.GetPrePromotionOperationLogs(System.Int32,System.Collections.Generic.IList{System.Int32})">
+            <summary>
+            Gets the CrmCustomersPromotionOperationLogInfo for a given customer of a set of promotion plan details
+            </summary>
+            <param name="customerId">the id of the customer of the changes of the promotion(s)</param>
+            <param name="promotionPlanDetailIds">the plan detail of the changes of the promotion(s)</param>
+            <returns>he CrmCustomersPromotionOperationLogInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.MVNONotificationSettingInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity MVNONotificationSettingInfo 
+            </summary>
+            <typeparam name="TMVNONotificationSettingInfo">Entity managed by the repository, is or extends MVNONotificationSettingInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.MVNONotificationSettingInfoRepositoryNH`1.GetAllSettings">
+            <summary>
+            Gets all MVNONotificationSettingInfo settings 
+            </summary>
+            <returns>all the MVNONotificationSettingInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.PackageInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity PackageInfo 
+            </summary>
+            <typeparam name="TPackageInfo">Entity managed by the repository, is or extends PackageInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.PackageInfoRepositoryNH`1.GetPackageInfoForDealerId(System.Int32)">
+            <summary>
+            Gets all the PackagesInfo for a dealer id
+            </summary>
+            <param name="dealerId">the dealer owner of the package to retrieve</param>
+            <returns>the list of packages of the dealer</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmCustomersTopupBonusApplyCountInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for CrmCustomersTopupBonusApplyCountInfo entity inheritance tree
+            </summary>
+            <typeparam name="TCrmCustomersTopupBonusApplyCountInfo">the type of entity managed, is or extends CrmCustomersTopupBonusApplyCountInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CrmCustomersTopupBonusApplyCountInfoRepositoryNH`1.GetApplyCount(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Gets the TCrmCustomersTopupBonusApplyCountInfo
+            </summary>
+            <param name="resource">The resource to filter the TCrmCustomersTopupBonusApplyCountInfo</param>
+            <param name="bonusId">The Id of the bonus to filter the TCrmCustomersTopupBonusApplyCountInfo</param>
+            <param name="year">The year to filter the TCrmCustomersTopupBonusApplyCountInfo</param>
+            <param name="month">The month to filter the TCrmCustomersTopupBonusApplyCountInfo</param>
+            <returns>the matching TCrmCustomersTopupBonusApplyCountInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmCustomersTopupPromotionApplyCountInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CrmCustomersTopupPromotionApplyCountInfo 
+            </summary>
+            <typeparam name="TCrmCustomersTopupPromotionApplyCountInfo">Entity managed by the repository, is or extends CrmCustomersTopupPromotionApplyCountInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CrmCustomersTopupPromotionApplyCountInfoRepositoryNH`1.GetApplyCount(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            Gets the list of CrmCustomersTopupPromotionApplyCountInfo that mathes the conditions
+            </summary>
+            <param name="resource">The resource to filter CrmCustomersTopupPromotionApplyCountInfo</param>
+            <param name="bonusId">The bonusId to filter CrmCustomersTopupPromotionApplyCountInfo</param>
+            <param name="year">The year to filter CrmCustomersTopupPromotionApplyCountInfo</param>
+            <param name="month">The month to filter CrmCustomersTopupPromotionApplyCountInfo</param>
+            <returns>The list of matching TCrmCustomersTopupPromotionApplyCountInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmCustomersUnpaidFeeInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for CrmCustomersUnpaidFeeInfo entity inheritance tree
+            </summary>
+            <typeparam name="TCrmCustomersUnpaidFeeInfo">the type of entity managed, is or extends CrmCustomersUnpaidFeeInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmMvnoTopupBonusDetailInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CrmMvnoTopupBonusDetailInfo 
+            </summary>
+            <typeparam name="TCrmMvnoTopupBonusDetailInfo">Entity managed by the repository, is or extends CrmMvnoTopupBonusDetailInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CrmMvnoTopupBonusDetailInfoRepositoryNH`1.GetBonusDetailListByBonusId(System.Int32)">
+            <summary>
+            Gets all the TCrmMvnoTopupBonusDetailInfo by the bonusId
+            </summary>
+            <param name="bonusId">the id of the bonus to filter</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmMvnoTopupBonusPromotionInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CrmMvnoTopupBonusPromotionInfo 
+            </summary>
+            <typeparam name="TCrmMvnoTopupBonusPromotionInfo">Entity managed by the repository, is or extends CrmMvnoTopupBonusPromotionInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CrmMvnoTopupBonusPromotionInfoRepositoryNH`1.GetBonusPromotionListByBonusId(System.Int32)">
+            <summary>
+            Gets all the bonus promotions for a bonus id
+            </summary>
+            <param name="bonusId">the id of the bonus</param>
+            <returns>The list of CrmMvnoTopupBonusPromotionInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.HistoryInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for HistoryInfo entity inheritance tree
+            </summary>
+            <typeparam name="THistoryInfo">the type of entity managed, is or extends HistoryInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.HistoryInfoRepositoryNH`1.GetTopUpsWithInDatesOfResource(com.etak.core.model.ResourceMBInfo,System.DateTime,System.DateTime)">
+            <summary>
+            The list of topups of a given ResourceMB in a TimeRange
+            </summary>
+            <param name="resourceInfo">The Resource where the topup was done</param>
+            <param name="startDate">The start date of the range to filter the TopUps</param>
+            <param name="endDate">The end date of the range to filter the TopUps</param>
+            <returns>The list of matching topups</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.HistoryInfoRepositoryNH`1.GetTopUpHistoryByCustomerId(System.Int32)">
+            <summary>
+            The list of topups of a given ResourceMB in a TimeRange
+            </summary>
+            <param name="customerId">The customer that performed the topup</param>
+            <returns>The list of matching topups</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.MvnoTopupBonusInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CrmMvnoTopupBonusInfo 
+            </summary>
+            <typeparam name="TCrmMvnoTopupBonusInfo">Entity managed by the repository, is or extends CrmMvnoTopupBonusInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.MvnoTopupBonusInfoRepositoryNH`1.GetByDealers(System.Collections.Generic.IList{System.Int32})">
+            <summary>
+            Gets 
+            </summary>
+            <param name="dealerIdList"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.PricePlanPackageVodafoneFileMapRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity PricePlanPackageVodafoneFileMap 
+            </summary>
+            <typeparam name="TPricePlanPackageVodafoneFileMap">Entity managed by the repository, is or extends PricePlanPackageVodafoneFileMap</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.PricePlanPackageVodafoneFileMapRepositoryNH`1.GetMappingsForVMNO(System.String)">
+            <summary>
+            Gets all the price plan package mappings for a given dealer.
+            </summary>
+            <param name="MVNO">the vmno to get the mappigns of</param>
+            <returns>the list of mappings</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.PricePlanPackageVodafoneFileMapRepositoryNH`1.GetMappingsForMVNOAndPackageId(System.String,System.Int32)">
+            <summary>
+            Gets all the price plan package mappings for a given dealer.
+            </summary>
+            <param name="MVNO">the vmno to get the mappigns of</param>
+            <param name="packageId">the id of the package to get the mapings</param>
+            <returns>the list of mappings</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CrmMVNOPromotedTopupHistoryInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for CrmMVNOPromotedTopupHistoryInfo entity inheritance tree
+            </summary>
+            <typeparam name="TCrmMVNOPromotedTopupHistoryInfo">the type of entity managed, is or extends CrmMVNOPromotedTopupHistoryInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.OperationLogRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for OperationLog entity inheritance tree
+            </summary>
+            <typeparam name="TOperationLog">the type of entity managed, is or extends OperationLog</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.OperationLogRepositoryNH`1.GetByOrderCodeAndDealerId(System.String,System.Int32)">
+            <summary>
+            Gets all the operation logs of a given vmnoId and a reference code
+            </summary>
+            <param name="referenceCode">the external id (reference)</param>
+            <param name="vmnoId">the id of the mvno/fiscal unit </param>
+            <returns>The list of matching TOperationLog</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.OperationLogRepositoryNH`1.GetByOrderCodeColumnAndDealerId(System.Int32,System.Int32)">
+            <summary>
+            Gets all the operation logs of a given vmnoId and a order code
+            </summary>
+            <param name="orderCode">order code</param>
+            <param name="vmnoId">the id of the mvno/fiscal unit </param>
+            <returns>The list of matching TOperationLog</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CRMMessageInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CRMMessageInfo 
+            </summary>
+            <typeparam name="TCRMMessageInfo">Entity managed by the repository, is or extends CRMMessageInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CRMMessageInfoRepositoryNH`1.GetByMessageIdAndLanguageId(System.Int64,System.Int32)">
+            <summary>
+            Gets all the system messages of a given Id and a languageId
+            </summary>
+            <param name="messageId">The id of the message to look for</param>
+            <param name="languageId">the language of the message to look for</param>
+            <returns>The list of messages found</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CRMMessageInfoRepositoryNH`1.GetByMessageId(System.Int64)">
+            <summary>
+            Gets a message by it's unique id
+            </summary>
+            <param name="messageId">the unique id of the message</param>
+            <returns>an enumerable with the message</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.RmPromotionPlanDetailInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for RmPromotionPlanDetailInfo entity inheritance tree
+            </summary>
+            <typeparam name="TRmPromotionPlanDetailInfo">the type of entity managed, is or extends RmPromotionPlanDetailInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.SettingExtendDetailInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity SettingExtendDetailInfo 
+            </summary>
+            <typeparam name="TSettingExtendDetailInfo">Entity managed by the repository, is or extends SettingExtendDetailInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SettingExtendDetailInfoRepositoryNH`1.GetByDealerIdAndCategoryId(System.Int32,com.etak.core.model.ExtendSettingCategory)">
+            <summary>
+            Gets the SettingExtendDetailInfo for a given dealer and category
+            </summary>
+            <param name="dealerId">the dealer of the entity</param>
+            <param name="extendSettingCategory">the category of the entity</param>
+            <returns>the list of entities that fulfill the conditions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SettingExtendDetailInfoRepositoryNH`1.GetByDealerId(System.Int32)">
+            <summary>
+            Gets the SettingExtendDetailInfo for a given dealer
+            </summary>
+            <param name="dealerId">The id of the dealer to filter the settings</param>
+            <returns>The list of matching entities that fulfill the conditions</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.DictionaryInfoRepositoryNH`1">
+            <summary>
+            Repository for <typeparamref name="TDictionaryInfo"/> implementation based on NHibernate
+            </summary>
+            <typeparam name="TDictionaryInfo">The entity managed by the interface, is or extends DictionaryInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.DictionaryInfoRepositoryNH`1.GetByDictType(System.Int32)">
+            <summary>
+            Gets all the dictionary for the given dictionary type
+            </summary>
+            <param name="p">the type of the dictionaries to get</param>
+            <returns>The entities that fullfil the requirements</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.LanguageTypeInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity LanguageTypeInfo 
+            </summary>
+            <typeparam name="TLanguageTypeInfo">Entity managed by the repository, is or extends LanguageTypeInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.LanguageTypeInfoRepositoryNH`1.GetAllLanguages">
+            <summary>
+            Gets all languages
+            </summary>
+            <returns>the list of all languages</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.LanguageTypeInfoRepositoryNH`1.GetAllLanguageById(System.Int32)">
+            <summary>
+            Gets a given language by it's Id
+            </summary>
+            <param name="langId">the id of the language</param>
+            <returns>the languages with the given id</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.RmPromotionPlanInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity RmPromotionPlanInfo 
+            </summary>
+            <typeparam name="TRmPromotionPlanInfo">Entity managed by the repository, is or extends RmPromotionPlanInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionPlanInfoRepositoryNH`1.GetAllRmPromotionPlanInfo">
+            <summary>
+            Gets all promotion plans
+            </summary>
+            <returns>all the promotion plans</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionPlanInfoRepositoryNH`1.GetRmPromotionPlanInfo(System.Int32)">
+            <summary>
+            Gets all promotion plans fetching extra associations
+            </summary>
+            <param name="promotionPlanId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionPlanInfoRepositoryNH`1.GetAllRmPromotionPlanForDealerId(System.Int32)">
+            <summary>
+            gets all promotion plans for a dealer id
+            </summary>
+            <param name="dealerId">the vmno/dealer that owns the promotion plan</param>
+            <returns>the list of promotion plans</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionPlanInfoRepositoryNH`1.GetAllVisibleRmPromotionPlanForDealerId(System.Int32)">
+            <summary>
+            gets all promotion plans for a dealer id that are visible
+            </summary>
+            <param name="dealerId">the vmno/dealer that owns the promotion plan</param>
+            <returns>the list of visible promotion plans</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionPlanInfoRepositoryNH`1.GetByCategoryId(com.etak.core.model.PromotionCategorys)">
+            <summary>
+            gets all promotion plans for a category
+            </summary>
+            <param name="promotionCategorys">the category that the promotion plan is</param>
+            <returns>the list of promotion plans</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionPlanInfoRepositoryNH`1.GetRmPromotionPlanByVMNOAndPromotionCategory(System.Collections.Generic.List{System.Int32},System.Int32[])">
+            <summary>
+            Gets all promotion plans of a set of vmnos/dealers that are in a category
+            </summary>
+            <param name="mvnoIds">the list of vmnoid to filter</param>
+            <param name="promotionCategoryIds">the list of categories to filer</param>
+            <returns>the list of promotion plans</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionPlanInfoRepositoryNH`1.GetRmPromotionPlanByVMNOAndPromotionCategoryWithPlanAndRule(System.Collections.Generic.List{System.Int32},System.Int32[])">
+            <summary>
+            Gets all promotion plans of a set of vmnos/dealers that are in a category, fetchin plans and rules
+            </summary>
+            <param name="mvnoIds">the list of vmnoid to filter</param>
+            <param name="promotionCategoryIds">the list of categories to filer</param>
+            <returns>the list of promotion plans</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.RmPromotionPlanInfoRepositoryNH`1.GetRmPromotionPlanInfoByIds(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Gets a set of promotion plans by their ID
+            </summary>
+            <param name="promotionPlanIds">the list of promotion plan ids</param>
+            <returns>the list of promotion plans</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.IDMappingInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity IDMappingInfo 
+            </summary>
+            <typeparam name="TIDMappingInfo">Entity managed by the repository, is or extends IDMappingInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.IDMappingInfoRepositoryNH`1.GetIdMappingByVmno(System.Int32)">
+            <summary>
+            Gets the TIDMappingInfo for the vmno
+            </summary>
+            <param name="MVNO">the vmno that is mapped</param>
+            <returns>the list of mappings</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.IDMappingInfoRepositoryNH`1.GetByVMNOAndETID(System.Int32,System.String)">
+            <summary>
+            Gets all the TIDMappingInfo for a given MVNO and promotion plan name
+            </summary>
+            <param name="MVNO">the id of the MVNO/FiscalUnit</param>
+            <param name="promotionPlanName">the prmotion plan name of the TIDMappingInfo</param>
+            <returns>the list of matching TIDMappingInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.OperationInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for OperationInfo entity inheritance tree
+            </summary>
+            <typeparam name="TOperationInfo">the type of entity managed, is or extends OperationInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.SIMCardInfoRepositoryNH`1">
+            <summary>
+            Repository for entity SIMCardInfo
+            </summary>
+            <typeparam name="TSIMCardInfo">the type managed by the repository is or extends SIMCardInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SIMCardInfoRepositoryNH`1.GetByICCID(System.String)">
+            <summary>
+            Gets the simcard by the ICCID
+            </summary>
+            <param name="ICCID">The ICCID of the simcard to look for</param>
+            <returns>the list of simcards</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SIMCardInfoRepositoryNH`1.GetByIMSI(System.String)">
+            <summary>
+            Gets the simcard by the imsi
+            </summary>
+            <param name="imsi">the imsi of the simcard to look for</param>
+            <returns>the list of simcards with that imsi</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.SmsLogInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity SmsLogQueue 
+            </summary>
+            <typeparam name="TSmsLogInfo">Entity managed by the repository, is or extends SmsLogQueue</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SmsLogInfoRepositoryNH`1.GetSmsLogInfoByMsisdn(System.String)">
+            <summary>
+            Gets all the sms sent to a given msisdn
+            </summary>
+            <param name="msisdn">the msisdn to recover the sms</param>
+            <returns>the list of sms sent the given msisdn</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.SmsLogQueueRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity SmsLogQueue 
+            </summary>
+            <typeparam name="TSmsLogQueue">Entity managed by the repository, is or extends SmsLogQueue</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SmsLogQueueRepositoryNH`1.GetQueueByDealerList(System.Collections.Generic.IList{System.Int32})">
+            <summary>
+            Gets the list of TSmsLogQueue for the given list of dealers
+            </summary>
+            <param name="dealeridlst">the list of dealers</param>
+            <returns>the list of SmsLogQueue</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.SmsTemplateInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity SmsTemplateInfo 
+            </summary>
+            <typeparam name="TSmsTemplateInfo">Entity managed by the repository, is or extends SmsTemplateInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SmsTemplateInfoRepositoryNH`1.GetTemplateListByTemplateCode(System.Int32)">
+            <summary>
+            Gets a TSmsTemplateInfo by it's templateCode
+            </summary>
+            <param name="templateCode">code of the template to retrieve </param>
+            <returns>the list of TSmsTemplateInfo with the given template code</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SmsTemplateInfoRepositoryNH`1.GetTemplateList(System.Int32,System.Int32)">
+            <summary>
+            Gets all the TSmsTemplateInfo of a dealer in the given language
+            </summary>
+            <param name="dealerId">the id of the dealer to retrieve the templates of</param>
+            <param name="languageId">the id of the language to filter the templates</param>
+            <returns>List of TSmsTemplateInfo with the matching parameters</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.SqlServerNativeSequenceProvider">
+            <summary>
+            Sequence provider based on SqlServer native sequences.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SqlServerNativeSequenceProvider.GetNextSequence(System.String)">
+            <summary>
+            Gets the next number for the given sequence
+            </summary>
+            <param name="sequence">the name of the sequence from which next value will be gathered</param>
+            <returns>the next number in the sequence</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SqlServerNativeSequenceProvider.GetStepSize(System.String)">
+            <summary>
+            Gets the increment size on the storage engine
+            </summary>
+            <param name="sequence">the name of the sequence</param>
+            <returns>the size of the increment in the storage engine</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.SystemConfigDataInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity SystemConfigDataInfo 
+            </summary>
+            <typeparam name="TSystemConfigDataInfo">Entity managed by the repository, is or extends SystemConfigDataInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SystemConfigDataInfoRepositoryNH`1.GetAllSystemConfigDateInfo">
+            <summary>
+            Gets all entities of  TSystemConfigDataInfo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SystemConfigDataInfoRepositoryNH`1.GetSystemConfigDateInfoByItem(System.String)">
+            <summary>
+            Gets all entities of TSystemConfigDataInfo with a given item
+            </summary>
+            <param name="item">the item of the TSystemConfigDataInfo to retrieve</param>
+            <returns>entities of TSystemConfigDataInfo with a given item</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.SystemConfigDataInfoRepositoryNH`1.GetSystemConfigDateInfoByName(System.String)">
+            <summary>
+            Gets all entities of TSystemConfigDataInfo with a given name
+            </summary>
+            <param name="name">the name of the TSystemConfigDataInfo to retrieve</param>
+            <returns>entities of TSystemConfigDataInfo with a given name</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.LoginInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity LoginInfo 
+            </summary>
+            <typeparam name="TLoginInfo">Entity managed by the repository, is or extends LoginInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.LoginInfoRepositoryNH`1.GetByUserId(System.Int32)">
+            <summary>
+            Gets the user by Id, this could be done over normal Get repository, but it's done to achieve Future API and 
+            Cacheable
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.UserInfoRepositoryNH`1">
+            <summary>
+            Repository based on NHibernate for UserInfo entity inheritance tree
+            </summary>
+            <typeparam name="TUserInfo">the type of entity managed, is or extends UserInfo</typeparam>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.UserDealerInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity UserDealerInfo 
+            </summary>
+            <typeparam name="TUserDealerInfo">Entity managed by the repository, is or extends UserDealerInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.UserDealerInfoRepositoryNH`1.GetByUserId(System.Int32)">
+            <summary>
+            Gets a user by it's Id
+            </summary>
+            <param name="userId">the id of the user</param>
+            <returns>an enumerable with the user</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.UserDealerInfoRepositoryNH`1.GetByDealerId(System.Int32)">
+            <summary>
+            Gets all users of a given dealer. 
+            </summary>
+            <param name="delaerId">the dealer owning the users</param>
+            <returns>an enumerable with the users of the dealer</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.DealerInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity DealerInfo 
+            </summary>
+            <typeparam name="TDealerInfo">Entity managed by the repository, is or extends DealerInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.DealerInfoRepositoryNH`1.GetByDealerIdAndCache(System.Int32)">
+            <summary>
+            Gets all the 
+            </summary>
+            <param name="dealerId">gets the dealer by dealer id and caches the resutls</param>
+            <returns>A enumerable with 0 or 1 dealers with the DealerInfo of that id</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.DealerInfoRepositoryNH`1.GetDealersStateNE(System.Int32)">
+            <summary>
+            Gets all the dealers not in a given state
+            </summary>
+            <param name="state">the state in which the dealers can't be</param>
+            <returns>the list of dealers not in state (state param)</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.DealerInfoRepositoryNH`1.GetMaxUpdateDate">
+            <summary>
+            Gets the maximun date of the update date of dealers
+            </summary>
+            <returns>the maximun date</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.DealerInfoRepositoryNH`1.GetByDealerIdAndLoadAllAsociations(System.Int32)">
+            <summary>
+            Gets the dealer id loading all it's associations
+            </summary>
+            <param name="dealerId">the id of the dealer to load</param>
+            <returns>the delaer with the given id</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.DealerInfoRepositoryNH`1.GetMVNOByDealerId(System.Int32)">
+            <summary>
+            Gets the dealerInfo that is the MVNO/FiscalUnit of a given dealer
+            </summary>
+            <param name="dealerId">the unique id of the dealer which FiscalUnit/MVNO will be retreived</param>
+            <returns>the MVNO (FiscalUnit) of the dealer </returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.DealerInfoRepositoryNH`1.GetDealersByFiscalUnitId(System.Int32)">
+            <summary>
+            Gets all the dealers of the given MVNO/FiscalUnit
+            </summary>
+            <param name="fiscalUnitId">the FiscalUnit/MVMNO parent of the dealers to retrieve</param>
+            <returns>all the dealers of the  MVNO/FiscalUnit</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.MVNOPropertiesRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity MVNOPropertiesInfo 
+            </summary>
+            <typeparam name="TMVNOPropertiesInfo">Entity managed by the repository, is or extends MVNOPropertiesInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.MVNOPropertiesRepositoryNH`1.GetByVMNOId(System.String)">
+            <summary>
+            Gets of TCrmCustomersBonusRelationShipInfo
+            </summary>
+            <param name="VMNOId">The filter </param>
+            <returns>The list of matching TCrmCustomersBonusRelationShipInfo</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.CustomerInfoRepositoryNH`1">
+            <summary>
+            Nhibernate repository for inheritance tree of entity CustomerInfo 
+            </summary>
+            <typeparam name="TCustomerInfo">Entity managed by the repository, is or extends CustomerInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CustomerInfoRepositoryNH`1.LoadCustomerAsociations(System.Int32)">
+            <summary>
+            Gets the csutomer with the associations pre loaded from the db
+            </summary>
+            <param name="customerId">the Id of the customer to test</param>
+            <returns>an enumerable with 0 or 1 customers</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CustomerInfoRepositoryNH`1.GetByParentId(System.Int32)">
+            <summary>
+            Gets all customers with a given parent
+            </summary>
+            <param name="customerId">the paret of the customer</param>
+            <returns>the list of customers</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CustomerInfoRepositoryNH`1.LoadCustomerAndPromotionsByCustomerId(System.Int32)">
+            <summary>
+            Load a customer and it's promotions by a given customerId
+            </summary>
+            <param name="customerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CustomerInfoRepositoryNH`1.LoadCustomerAllInfoByCustomerIdExcludeStatusID(System.Int32,System.Int32)">
+            <summary>
+            Gets the only customer info with the provided customer id that ara not in a given state
+            </summary>
+            <param name="customerId">the Id of the customer to look up</param>
+            <param name="statusId">the status Id of the customer to exclude</param>
+            <returns>the 1 or 0 customers in an enumerable</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CustomerInfoRepositoryNH`1.GetByDealerIdAndExternalId(System.Int32,System.String)">
+            <summary>
+            Gets all customers with a given external id, and filtering by dealer id
+            </summary>
+            <param name="mvnoId">the dealer owner of the configuration</param>
+            <param name="externalId">the external id of the customer</param>
+            <returns>all customers with the given external id</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.CustomerInfoRepositoryNH`1.GetByExternalId(System.String)">
+            <summary>
+            Gets all customers with a given external id
+            </summary>
+            <param name="externalId">the external id of the customer</param>
+            <returns>all customers with the given external id</returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.Factory.CacheRegions">
+            <summary>
+            Helper class that contains all the known NHibernate cache regions
+            </summary>
+        </member>
+        <member name="F:com.etak.core.repository.crm.Nhibernate.Factory.CacheRegions.UserDealerCacheRegion">
+            <summary>
+            The cache name for User Dealer cache 
+            </summary>
+        </member>
+        <member name="F:com.etak.core.repository.crm.Nhibernate.Factory.CacheRegions.SystemSettingsCacheRegion">
+            <summary>
+            The cache name for the System Settings cache region
+            </summary>
+        </member>
+        <member name="F:com.etak.core.repository.crm.Nhibernate.Factory.CacheRegions.CatalogCacheRegion">
+            <summary>
+            The cache name for the catalog cache region
+            </summary>
+        </member>
+        <member name="F:com.etak.core.repository.crm.Nhibernate.Factory.CacheRegions.Constants">
+            <summary>
+            The cache region for 100% staic things that are persisted in the db
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.Factory.SessionFactoryHelper">
+            <summary>
+            Helper class to force loading the ninject module defined in RealHelper
+            Initializes Nhibernate Repository and session factories.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.Factory.RealHelper">
+            <summary>
+            Ninject module that initializes the Nhibernate Repository and session factories.
+            Binds Nhibernate repositories to Repository interfaces. 
+            </summary>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.Factory.RealHelper.Load">
+            <summary>
+            Builds the session factory and binds the IRepositories to each 
+            RepositoryNH
+            </summary>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.ResourceMBRepositoryNH`1">
+            <summary>
+            Implementation of IResourceMBRepository based on Nhibernate
+            </summary>
+            <typeparam name="TResourceMBInfo">The type of the entity for the repository is or extends ResourceMBInfo</typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.ResourceMBRepositoryNH`1.GetByMSISDNAndNotStatusAndActiveDates(System.String,System.Int32)">
+            <summary>
+            Gets all TResourceMBInfo with a given MSISDN, Dates are in a active range and the status 
+            is not equal to the <paramref name="p"/> parameter
+            </summary>
+            <param name="MSISDN">the msisdn to look up for</param>
+            <param name="p">the status in which the TResourceMBInfo can't be</param>
+            <returns>the list of resources that fullfill the conditions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.ResourceMBRepositoryNH`1.GetByIdList(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Gets a list of TResourceMBInfo based on a list of Id
+            </summary>
+            <param name="IdEnum">the list of the Ids to look for</param>
+            <returns>the list of resources that fullfill the conditions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.ResourceMBRepositoryNH`1.GetByMSISDNAndStatusNotInAndActiveDates(System.String,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Gets all TResourceMBInfo with a given MSISDN, Dates are in a active range and the status 
+            is not in to the <paramref name="status"/> parameter
+            </summary>
+            <param name="msisdn">the msisdn to look up for</param>
+            <param name="status">the lis of status in which the TResourceMBInfo can't be</param>
+            <returns>the list of resources that fullfill the conditions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.ResourceMBRepositoryNH`1.GetMSISDNByICC(System.String)">
+            <summary>
+            Gets the list of Subscriptions with a given ICCid
+            </summary>
+            <param name="iccardId">the Iccid to look for</param>
+            <returns>the list of resources that fullfill the conditions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.ResourceMBRepositoryNH`1.GetMSISDNByCustomerID(System.Int32)">
+            <summary>
+            Gets all Subscriptions of the given customerId
+            </summary>
+            <param name="customerId">the customer Id that owns the subscriptions</param>
+            <returns>the list of resources that fullfill the conditions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.ResourceMBRepositoryNH`1.GetMSISDNByIMSI(System.String)">
+            <summary>
+            Gets the list of Subscriptions with a given IMSI
+            </summary>
+            <param name="imsi">the imsi to look for</param>
+            <returns>the list of resources that fullfill the conditions</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.ResourceMBRepositoryNH`1.GetLastByDealerIdAndMSISDNAndStatusNotIn(com.etak.core.model.DealerInfo,System.String,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Get the Last Subscription in base of a Dealer Id, MSISDN and a list of non valid status
+            </summary>
+            <param name="dealer">The DealerInfo that owns the subscription</param>
+            <param name="msisdn">The Resource of the subscription</param>
+            <param name="status">A list of non valid status</param>
+            <returns>The Subscription with the oldest CreateDate that match the criteria</returns>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.ResourceMBRepositoryNH`1.GetByMSISDNAndStatusNotIn(System.String,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Get the Subscriptions related with the given MSISDN and a list of non Valid status
+            </summary>
+            <param name="msisdn">The Resource of the subscription</param>
+            <param name="status">A list of non valid status</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.repository.crm.Nhibernate.VoucherCardInfoRepositoryNH`1">
+            <summary>
+            Repository Implementation for VoucherCardInfo
+            </summary>
+            <typeparam name="TVoucherCardInfo"></typeparam>
+        </member>
+        <member name="M:com.etak.core.repository.crm.Nhibernate.VoucherCardInfoRepositoryNH`1.GetByCodeAndMvnoId(System.String,System.Int32)">
+            <summary>
+            Get Voucher card by vmo and VCENCRYPT code.
+            </summary>
+            <param name="vcencrypt">vcencrypt code</param>
+            <param name="mvnoId">mvnoId</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

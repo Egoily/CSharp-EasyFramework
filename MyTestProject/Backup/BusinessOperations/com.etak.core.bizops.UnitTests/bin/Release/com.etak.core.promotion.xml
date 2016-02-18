@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.promotion</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.informationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.promotion.messages.CancelCustomersPromotion.CancelCustomersPromotionRequest">
+            <summary>
+            Request of CancelCustomersPromotionMS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.promotion.messages.CancelCustomersPromotion.CancelCustomersPromotionRequest.#ctor">
+            <summary>
+            Constructor of CancelCustomersPromotionRequest, imporant to set EndTime to default DateTime.Now
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.CancelCustomersPromotion.CancelCustomersPromotionRequest.CrmCustomersPromotionInfo">
+            <summary>
+            CrmCustomersPromotionInfo that send data to be canceled
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.CancelCustomersPromotion.CancelCustomersPromotionRequest.EndDate">
+            <summary>
+            Set specific end date
+            </summary>
+        </member>
+        <member name="T:com.etak.core.promotion.messages.CancelCustomersPromotion.CancelCustomersPromotionResponse">
+            <summary>
+            Response of CancelCustomersPromotionMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.CancelCustomersPromotion.CancelCustomersPromotionResponse.CrmCustomersPromotionInfo">
+            <summary>
+            CrmCustomersPromotionInfo entity for Response
+            </summary>
+        </member>
+        <member name="T:com.etak.core.promotion.messages.CreateCustomerPromotionLogInfo.CreateCustomerPromotionLogInfoRequest">
+            <summary>
+            Create CreateCustomerPromotionLogInfo Request
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.CreateCustomerPromotionLogInfo.CreateCustomerPromotionLogInfoRequest.CustomerPromotionOperationLog">
+            <summary>
+            log of customer
+            </summary>
+        </member>
+        <member name="T:com.etak.core.promotion.messages.CreateLogPromotion.CreateCustomerPromotionLogInfoResponse">
+            <summary>
+            create CreateCustomerPromotionLogInfo Response
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.CreateLogPromotion.CreateCustomerPromotionLogInfoResponse.CrmCustomersPromotionOperationLogInfos">
+            <summary>
+            CrmCustomersPromotionOperationLogInfo entity for Response
+            </summary>
+        </member>
+        <member name="T:com.etak.core.promotion.messages.CreateCustomersPromotion.CreateCustomersPromotionRequest">
+            <summary>
+            Request of CreateCustomersPromotionMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.CreateCustomersPromotion.CreateCustomersPromotionRequest.CrmCustomersPromotionInfo">
+            <summary>
+            CrmCustomersPromotionInfo that send data to be insert
+            </summary>
+        </member>
+        <member name="T:com.etak.core.promotion.messages.CreateCustomersPromotion.CreateCustomersPromotionResponse">
+            <summary>
+            Response of CreateCustomersPromotionMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.CreateCustomersPromotion.CreateCustomersPromotionResponse.promotionPlan">
+            <summary>
+            CrmCustomersPromotionInfo entity for Response
+            </summary>
+        </member>
+        <member name="T:com.etak.core.promotion.messages.GetCustomerPromotionOperationLogByCustomerIDAndPromotion.GetCustomerPromotionOperationLogByCustomerIDAndPromotionRequest">
+            <summary>
+            request for GetCrmCustomerPromotionLogByCustomerMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.GetCustomerPromotionOperationLogByCustomerIDAndPromotion.GetCustomerPromotionOperationLogByCustomerIDAndPromotionRequest.CustomerID">
+            <summary>
+            Information of CustomerID
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.GetCustomerPromotionOperationLogByCustomerIDAndPromotion.GetCustomerPromotionOperationLogByCustomerIDAndPromotionRequest.PromotionIDList">
+            <summary>
+            list of Promotion ID 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.promotion.messages.GetCustomerPromotionOperationLogByCustomerIDAndPromotion.GetCustomerPromotionOperationLogByCustomerIDAndPromotionResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.GetCustomerPromotionOperationLogByCustomerIDAndPromotion.GetCustomerPromotionOperationLogByCustomerIDAndPromotionResponse.LogInfo">
+            <summary>
+            log of Customer promotion
+            </summary>
+        </member>
+        <member name="T:com.etak.core.promotion.messages.GetCustomersPromotionInfoByPromotionId.GetCustomersPromotionInfoByPromotionIdRequest">
+            <summary>
+            Request of GetCustomersPromotionInfoByPromotionIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.GetCustomersPromotionInfoByPromotionId.GetCustomersPromotionInfoByPromotionIdRequest.PromotionId">
+            <summary>
+            PromotionId property to get CrmCustomersPromotionInfo data
+            </summary>
+        </member>
+        <member name="T:com.etak.core.promotion.messages.GetCustomersPromotionInfoByPromotionId.GetCustomersPromotionInfoByPromotionIdResponse">
+            <summary>
+            Response of GetCustomersPromotionInfoByPromotionIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.GetCustomersPromotionInfoByPromotionId.GetCustomersPromotionInfoByPromotionIdResponse.CrmCustomersPromotionInfo">
+            <summary>
+            CrmCustomersPromotionInfo entity for response
+            </summary>
+        </member>
+        <member name="T:com.etak.core.promotion.messages.GetCustomersPromotionInfosByCustomerIDAndPromotionPlanIds.GetCustomersPromotionInfoByCustomerIDAndPromotionPlanIdsRequest">
+            <summary>
+            Request of GetCustomerPromotionByPromotionIDMS contains CustomerID and PromotionPlanId(s)
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.GetCustomersPromotionInfosByCustomerIDAndPromotionPlanIds.GetCustomersPromotionInfoByCustomerIDAndPromotionPlanIdsRequest.CustomerID">
+            <summary>
+            CustomerID of CustomerPromotionInfo
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.GetCustomersPromotionInfosByCustomerIDAndPromotionPlanIds.GetCustomersPromotionInfoByCustomerIDAndPromotionPlanIdsRequest.PromotionPlanIds">
+            <summary>
+            Array of PromotionPlanIds (long[])
+            </summary>
+        </member>
+        <member name="T:com.etak.core.promotion.messages.GetCustomersPromotionInfosByCustomerIDAndPromotionPlanIds.GetCustomersPromotionInfoByCustomerIDAndPromotionPlanIdsResponse">
+            <summary>
+            Response of GetCrmCustomerPromotionByPromotionIDMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.GetCustomersPromotionInfosByCustomerIDAndPromotionPlanIds.GetCustomersPromotionInfoByCustomerIDAndPromotionPlanIdsResponse.CrmCustomersPromotionInfos">
+            <summary>
+            Returned IEnumerable[CrmCustomersPromotionInfo]
+            </summary>
+        </member>
+        <member name="T:com.etak.core.promotion.messages.UpdateCustomersPromotion.UpdateCustomersPromotionRequest">
+            <summary>
+            Request of UpdateCustomersPromotionMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.UpdateCustomersPromotion.UpdateCustomersPromotionRequest.CrmCustomersPromotionInfo">
+            <summary>
+            CrmCustomersPromotionInfo that need to be update
+            </summary>
+        </member>
+        <member name="T:com.etak.core.promotion.messages.UpdateCustomersPromotion.UpdateCustomersPromotionResponse">
+            <summary>
+             Response of UpdateCustomersPromotionMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.promotion.messages.UpdateCustomersPromotion.UpdateCustomersPromotionResponse.CrmCustomersPromotionInfo">
+            <summary>
+            CrmCustomersPromotionInfo entity for Response
+            </summary>
+        </member>
+        <member name="T:com.etak.core.promotion.microservices.CancelCustomersPromotionMS">
+            <summary>
+            Microservice : Cancel customer promotion info
+            </summary>
+        </member>
+        <member name="M:com.etak.core.promotion.microservices.CancelCustomersPromotionMS.Process(com.etak.core.promotion.messages.CancelCustomersPromotion.CancelCustomersPromotionRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Microservice : cancel Customer promotion info with data request.CrmCustomersPromotionInfo
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CancelCustomersPromotionResponse(CrmCustomersPromotionInfos)</returns>
+        </member>
+        <member name="T:com.etak.core.promotion.microservices.CreateCustomerPromotionLogInfoMS">
+            <summary>
+            Microservie to createCustomerPromotionLogInfo
+            </summary>
+        </member>
+        <member name="M:com.etak.core.promotion.microservices.CreateCustomerPromotionLogInfoMS.Process(com.etak.core.promotion.messages.CreateCustomerPromotionLogInfo.CreateCustomerPromotionLogInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            main process to create customer log
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.promotion.microservices.CreateCustomersPromotionMS">
+            <summary>
+            Microservice : create new Customers Promotion
+            </summary>
+        </member>
+        <member name="M:com.etak.core.promotion.microservices.CreateCustomersPromotionMS.Process(com.etak.core.promotion.messages.CreateCustomersPromotion.CreateCustomersPromotionRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process : create new Customers Promotion with request.CrmCustomersPromotionInfo
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CreateCustomersPromotionResponse(promotionPlan)</returns>
+        </member>
+        <member name="T:com.etak.core.promotion.microservices.GetCustomersPromotionInfosByCustomerIDAndPromotionPlanIdsMS">
+            <summary>
+            Microservice : Get CrmCustomerPromotionInfos By CustomerID and PromotionPlanIds
+            </summary>
+        </member>
+        <member name="M:com.etak.core.promotion.microservices.GetCustomersPromotionInfosByCustomerIDAndPromotionPlanIdsMS.Process(com.etak.core.promotion.messages.GetCustomersPromotionInfosByCustomerIDAndPromotionPlanIds.GetCustomersPromotionInfoByCustomerIDAndPromotionPlanIdsRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get IEnumerable(CrmCustomerPromotionInfo) by calling ICrmCustomersPromotionInfoRepository method GetCustomerPromotionPlanById
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetCustomerPromotionInfoByCustomerIDAndPromotionPlanIdsResponse.CrmCustomersPromotionInfos with request.CustomerID and request.PromotionPlanIds</returns>
+        </member>
+        <member name="T:com.etak.core.promotion.microservices.GetCustomerPromotionOperationLogByCustomerIDAndPromotionMS">
+            <summary>
+            Microservice to Get Customer Operation Log base on given Customer Id and Promotion
+            </summary>
+        </member>
+        <member name="M:com.etak.core.promotion.microservices.GetCustomerPromotionOperationLogByCustomerIDAndPromotionMS.Process(com.etak.core.promotion.messages.GetCustomerPromotionOperationLogByCustomerIDAndPromotion.GetCustomerPromotionOperationLogByCustomerIDAndPromotionRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process of GetCustomerPromotionOperationLogByCustomerIDAndPromotionMS
+            </summary>
+            <param name="request">GetCustomerPromotionOperationLogByCustomerIDAndPromotionRequest</param>
+            <param name="inovker">RequestInvokationEnvironment</param>
+            <returns>return CrmCustomersPromotionOperationLogInfo wtihin GetCustomerPromotionOperationLogByCustomerIDAndPromotionResponse </returns>
+        </member>
+        <member name="T:com.etak.core.promotion.microservices.GetCustomersPromotionInfoByPromotionIdMS">
+            <summary>
+            Microservice : get customer promotion information by promotion id
+            </summary>
+        </member>
+        <member name="M:com.etak.core.promotion.microservices.GetCustomersPromotionInfoByPromotionIdMS.Process(com.etak.core.promotion.messages.GetCustomersPromotionInfoByPromotionId.GetCustomersPromotionInfoByPromotionIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process : get customer promotion information with request.PromotionId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetCustomersPromotionInfoByPromotionIdResponse(CrmCustomersPromotionInfo)</returns>
+        </member>
+        <member name="T:com.etak.core.promotion.microservices.UpdateCustomersPromotionMS">
+            <summary>
+            Microservice : update customer promotion info
+            </summary>
+        </member>
+        <member name="M:com.etak.core.promotion.microservices.UpdateCustomersPromotionMS.Process(com.etak.core.promotion.messages.UpdateCustomersPromotion.UpdateCustomersPromotionRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Microservice : update Customer promotion info with data request.CrmCustomersPromotionInfo
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>UpdateCustomersPromotionResponse(CrmCustomersPromotionInfos)</returns>
+        </member>
+    </members>
+</doc>

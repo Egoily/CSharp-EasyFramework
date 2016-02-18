@@ -1,0 +1,407 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.queue</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.InformationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.queue.Client.AbstractXMLBackUpDequeuer`1">
+            <summary>
+            Uses a folder to persist the elements in an XML file
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:com.etak.core.queue.Common.IDequeuer`1">
+            <summary>
+            Interface to implement a process that dequeues the elements of type T
+            </summary>
+            <typeparam name="T">The type of elements in the queue and that will be read</typeparam>
+        </member>
+        <member name="M:com.etak.core.queue.Common.IDequeuer`1.BackupElements(System.Collections.Generic.IList{`0})">
+            <summary>
+            Method that will be invoked when the queue is overflowing or the thread must exit and the queue is not empty
+            </summary>
+            <param name="currentEmergencyBlock">list of elements</param>
+        </member>
+        <member name="M:com.etak.core.queue.Common.IDequeuer`1.RecoverElements">
+            <summary>
+            Method that will be invoked when the getting the elements back from backup files.
+            </summary>
+            <returns>list of elements</returns>
+        </member>
+        <member name="M:com.etak.core.queue.Common.IDequeuer`1.Process(System.Collections.Generic.IList{com.etak.core.queue.Common.QueueElementInformation{`0}})">
+            <summary>
+            Proccess the elements T passed in current block, this method must return the elements not proccessed, 
+            the list will be re enqueued.
+            </summary>
+            <param name="currentBlock">list of elements to be proccessed</param>
+            <returns>list of elements which are processed failed.</returns>
+        </member>
+        <member name="M:com.etak.core.queue.Common.IDequeuer`1.StartUp">
+            <summary>
+            This method is invoked before the first execution.
+            </summary>
+        </member>
+        <member name="M:com.etak.core.queue.Client.AbstractXMLBackUpDequeuer`1.Process(System.Collections.Generic.IList{com.etak.core.queue.Common.QueueElementInformation{`0}})">
+            <summary>
+            Method that must be implemented by the actual processor that process what has been dequeud
+            </summary>
+            <param name="currentBlock">the list of elements to process</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.queue.Client.AbstractXMLBackUpDequeuer`1.BackupElements(System.Collections.Generic.IList{`0})">
+            <summary>
+            Method that will be invoked when the queue is overflowing or the thread must exit and the queue is not empty
+            </summary>
+            <param name="currentEmergencyBlock">list of elements</param>
+        </member>
+        <member name="M:com.etak.core.queue.Client.AbstractXMLBackUpDequeuer`1.RecoverElements">
+            <summary>
+            Method that will be invoked when the getting the elements back from backup files.
+            </summary>
+            <returns>list of elements</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:com.etak.core.queue.Client.RawHTTPDequeuer.BackupElements(System.Collections.Generic.IList{System.String})" -->
+        <member name="M:com.etak.core.queue.Client.RawHTTPDequeuer.GetWebRequestToSender">
+            <summary>
+            Method to create a WebRequest to the receiver, using HTTP 1.1 to enable socket reusing.
+            The underlying framework takes care of reusing and does it whenever is possible.
+            </summary>
+            <returns>the connected request to the receiver</returns>
+        </member>
+        <member name="M:com.etak.core.queue.Client.RawHTTPDequeuer.ServiceIsOnline">
+            <summary>
+            This dequeuer does not implement this method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.queue.Client.RawHTTPDequeuer.RecoverElements">
+            <summary>
+            Get the elements back from back up files.
+            </summary>
+            
+            Please see the comments of 'BackupElements' method.
+            
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.queue.Common.QueueElementInformation`1">
+            <summary>
+            Holds delivery status and dates of a queued element
+            </summary>
+            <typeparam name="T">The type of elements queued</typeparam>
+        </member>
+        <member name="M:com.etak.core.queue.Common.QueueElementInformation`1.#ctor(`0)">
+            <summary>
+            Creates a new QueueElementInformation keeping the Object of type T
+            </summary>
+            <param name="o">the object to be wrapped</param>
+        </member>
+        <member name="P:com.etak.core.queue.Common.QueueElementInformation`1.TryCounter">
+            <summary>
+            The times of the element has been processed.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.queue.Common.QueueElementInformation`1.LastProcessedTimestamp">
+            <summary>
+            The last timestamp of the element was processed.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.queue.Common.QueueElementInformation`1.Element">
+            <summary>
+            The element stands for the request.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.queue.Common.QueueThread`1">
+            <summary>
+            Thread that offers a thread safe queue and tries continuesly to dequeue it by 
+            invoking the Dequuer provided in the constructor
+            </summary>
+            <typeparam name="T">The type of objects stored in the queue</typeparam>
+        </member>
+        <member name="M:com.etak.core.queue.Common.QueueThread`1.#ctor(com.etak.core.queue.Common.QueueThreadConfiguration,com.etak.core.queue.Common.IDequeuer{`0})">
+            <summary>
+            Creates a new queue thread,holding elements of type T, that are being processed by the 
+            dequeuer configured. 
+            </summary>
+            <param name="queueThreadConfiguration">The parameters to configure the behaviour of the queue</param>
+            <param name="dequeuer">the implementaion IDequeuer that will be used to process the messages</param>
+        </member>
+        <member name="M:com.etak.core.queue.Common.QueueThread`1.Enqueue(`0)">
+            <summary>
+            Adds an object to the queue, this method is thread sage
+            </summary>
+            <param name="Object">The object to be enqueued</param>
+        </member>
+        <member name="M:com.etak.core.queue.Common.QueueThread`1.DequeueWithFilter(System.Int32)">
+            <summary>
+            Extracts a maximun number of the queue that have the retry interval reached
+            </summary>
+            <param name="maxDequeueElements">the  maximun number of the queue to extract</param>
+            <returns>a list with the elements dequeued</returns>
+        </member>
+        <member name="M:com.etak.core.queue.Common.QueueThread`1.Dequeue(System.Int32)">
+            <summary>
+            Deques a maximun number of items from a queue
+            </summary>
+            <param name="maxDequeueElements">the maximun number of elements to retrieve</param>
+            <returns>a list with the elements dequeued</returns>
+        </member>
+        <member name="M:com.etak.core.queue.Common.QueueThread`1.Requeue(System.Collections.Generic.IList{com.etak.core.queue.Common.QueueElementInformation{`0}})">
+            <summary>
+            Adds the elements back to the queue 
+            </summary>
+            <param name="currentBlock">the elements to requue</param>
+        </member>
+        <member name="M:com.etak.core.queue.Common.QueueThread`1.IsQueueEmpty">
+            <summary>
+            True if the queue is empty
+            </summary>
+            <returns>true if the queue is empty</returns>
+        </member>
+        <member name="M:com.etak.core.queue.Common.QueueThread`1.IsQueueUsageOverThreshold">
+            <summary>
+            Determines if the queue is avobe the maximun save usage
+            </summary>
+            <returns>true if it's avobe the threhold, false otherwise</returns>
+        </member>
+        <member name="M:com.etak.core.queue.Common.QueueThread`1.IsReadyToRequeueBackup">
+            <summary>
+            Determines when the queue usage is below a theshold in which the backed
+            up elements should be recovered and requeued again
+            </summary>
+            <returns>True if the queue usage is below 40%</returns>
+        </member>
+        <member name="M:com.etak.core.queue.Common.QueueThread`1.GetQueueSize">
+            <summary>
+            Gets the number of elements in the queue
+            </summary>
+            <returns>the number of elements in the queue</returns>
+        </member>
+        <member name="M:com.etak.core.queue.Common.QueueThread`1.Start">
+            <summary>
+            Starts the queue thread
+            </summary>
+        </member>
+        <member name="M:com.etak.core.queue.Common.QueueThread`1.Stop">
+            <summary>
+            Stops the queue thread
+            </summary>
+        </member>
+        <member name="M:com.etak.core.queue.Common.QueueThread`1.TryRecoverBackup">
+            <summary>
+            Checks if backup is pending to recover, it will append everythign on the queue until it is above the threshold
+            </summary>
+        </member>
+        <member name="M:com.etak.core.queue.Common.QueueThread`1.Run">
+            <summary>
+            Method that is going to be run on base.Start()
+            This will loop over the queue to write the elements to the receiver.
+            </summary>        
+        </member>
+        <member name="M:com.etak.core.queue.Common.QueueThread`1.BackUpElements(System.Collections.Generic.IList{`0})">
+            <summary>
+            
+            </summary>
+            <param name="blockToBeBackUp"></param>
+        </member>
+        <member name="M:com.etak.core.queue.Common.QueueThread`1.RecoverElements">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.queue.Common.QueueThreadConfiguration">
+            <summary>
+            Defines the configuration parameters for a Queue thread
+            </summary>
+        </member>
+        <member name="P:com.etak.core.queue.Common.QueueThreadConfiguration.MaxQueueSize">
+            <summary>
+            The maximun size of the queue
+            </summary>
+        </member>
+        <member name="P:com.etak.core.queue.Common.QueueThreadConfiguration.MaxQueuedElementsOnIdle">
+            <summary>
+            How many elements can be on the queue before trigerring 
+            the launch o the dequeueing
+            </summary>
+        </member>
+        <member name="P:com.etak.core.queue.Common.QueueThreadConfiguration.PollingTimeMilliseconds">
+            <summary>
+            Interval between polling to the queue
+            </summary>
+        </member>
+        <member name="P:com.etak.core.queue.Common.QueueThreadConfiguration.ElementsToBackupPerLoop">
+            <summary>
+            When the queue is full, how many elements needs to be backed up 
+            per loop
+            </summary>
+        </member>
+        <member name="P:com.etak.core.queue.Common.QueueThreadConfiguration.MaxElementsPerLoop">
+            <summary>
+            What is the maximun elements to be processed (dequeued) by loop 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.queue.Common.QueueThreadConfiguration.MaxRetryCount">
+            <summary>
+            What is the maximun number of attempts to process/Dequeue
+            before giving up and marking it as failed
+            </summary>
+        </member>
+        <member name="P:com.etak.core.queue.Common.QueueThreadConfiguration.QueueThreadName">
+            <summary>
+            The name of the thread in which the QueueThread runs
+            </summary>
+        </member>
+        <member name="T:com.etak.core.queue.Messages.SerializationType">
+            <summary>
+            Enumerated with all possible types of serialization
+            </summary>
+        </member>
+        <member name="F:com.etak.core.queue.Messages.SerializationType.JSON">
+            <summary>
+            Serialize using JSON
+            </summary>
+        </member>
+        <member name="F:com.etak.core.queue.Messages.SerializationType.XML">
+            <summary>
+            Serialize using XML
+            </summary>
+        </member>
+        <member name="T:com.etak.core.queue.Messages.QueueDeliverMessageRequest`1">
+            <summary>
+            Message/wrapper to enqueue an element in the queue.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:com.etak.core.queue.Messages.QueueDeliverMessageRequest`1.SerializationType">
+            <summary>
+            The type of serialization  to be used
+            </summary>
+        </member>
+        <member name="P:com.etak.core.queue.Messages.QueueDeliverMessageRequest`1.Elements">
+            <summary>
+            The set of elements to be queued.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.queue.Messages.DeliverResult">
+            <summary>
+            Enum with the possible resutls of a delivery attempt
+            </summary>
+        </member>
+        <member name="F:com.etak.core.queue.Messages.DeliverResult.Ok">
+            <summary>
+            The delivery was sucessfull
+            </summary>
+        </member>
+        <member name="F:com.etak.core.queue.Messages.DeliverResult.Error">
+            <summary>
+            The delivery failed
+            </summary>
+        </member>
+        <member name="T:com.etak.core.queue.Messages.QueueDeliverMessageResponse">
+            <summary>
+            The response of an attempt to deliver a message
+            </summary>
+        </member>
+        <member name="P:com.etak.core.queue.Messages.QueueDeliverMessageResponse.Result">
+            <summary>
+            The result of the attempt
+            </summary>
+        </member>
+        <member name="P:com.etak.core.queue.Messages.QueueDeliverMessageResponse.ResultCode">
+            <summary>
+            A code indicating the error (0 if no error happened)
+            </summary>
+        </member>
+        <member name="P:com.etak.core.queue.Messages.QueueDeliverMessageResponse.ElementsProccessed">
+            <summary>
+            Number of elements processed in the delivery
+            </summary>
+        </member>
+        <member name="P:com.etak.core.queue.Messages.QueueDeliverMessageResponse.ResultMessage">
+            <summary>
+            Descriptive message of the error.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.queue.Serialization.ISerializer`1">
+            <summary>
+            Interface for a serializer for type T
+            </summary>
+            <typeparam name="T">The entity that is being Serialized or Deserialized</typeparam>
+        </member>
+        <member name="M:com.etak.core.queue.Serialization.ISerializer`1.Serialize(`0)">
+            <summary>
+            Coverts a message of type T into a memory stream in it's serialized form
+            </summary>
+            <param name="message">the message to serialize</param>
+            <returns>the memory stream with the object</returns>
+        </member>
+        <member name="M:com.etak.core.queue.Serialization.ISerializer`1.Deserialize(System.IO.Stream)">
+            <summary>
+            Reads a serialized object from a memory streams and returns it
+            </summary>
+            <param name="stream">the source stream to read</param>
+            <returns>The object deserialized</returns>
+        </member>
+        <member name="T:com.etak.core.queue.Serialization.JSONSerializer`1">
+            <summary>
+            A serializer based on JSON implemented using .Net DataContractJsonSerializer
+            </summary>
+            <typeparam name="T">the type of entity to be serialized</typeparam>
+        </member>
+        <member name="M:com.etak.core.queue.Serialization.JSONSerializer`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:com.etak.core.queue.Serialization.JSONSerializer`1.Serialize(`0)">
+            <summary>
+            Coverts a message of type T into a memory stream in it's serialized form (JSON)
+            </summary>
+            <param name="message">the message to serialize</param>
+            <returns>the memory stream with the object</returns>
+        </member>
+        <member name="M:com.etak.core.queue.Serialization.JSONSerializer`1.Deserialize(System.IO.Stream)">
+            <summary>
+            Reads a serialized object from a memory streams (in JSON) and returns it
+            </summary>
+            <param name="stream">the source stream to read</param>
+            <returns>The object deserialized</returns>
+        </member>
+        <member name="T:com.etak.core.queue.Serialization.XMLSerializer`1">
+            <summary>
+            Serializes objects into XML of type T
+            </summary>
+            <typeparam name="T">The type of object serialized</typeparam>
+        </member>
+        <member name="M:com.etak.core.queue.Serialization.XMLSerializer`1.Deserialize(System.IO.Stream)">
+            <summary>
+            Reads an stream and outputs the Object that was serialized
+            </summary>
+            <param name="stream">the stream where the object needs to be read from</param>
+            <returns>The object read</returns>
+        </member>
+        <member name="M:com.etak.core.queue.Serialization.XMLSerializer`1.Serialize(`0)">
+            <summary>
+            Coverts a message of type T into a memory stream in it's serialized form
+            </summary>
+            <param name="message">the message to serialize</param>
+            <returns>the memory stream with the object</returns>
+        </member>
+    </members>
+</doc>

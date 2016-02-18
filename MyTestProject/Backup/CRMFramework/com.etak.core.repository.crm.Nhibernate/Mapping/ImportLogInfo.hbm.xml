@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.ImportLogInfo,com.etak.core.model" table="CRM_MOBILE_SIMCARDS_IMPORT_LOG" >
+    <id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <property name="TransactionID" column="TRANSACTIONID" type="String" length="36" />
+    <property name="ICCID" column="ICCID" type="String" length="20" />
+    <property name="Resource" column="RESOURCE" type="String" length="25" />
+    <property name="IMSI1" column="IMSI1" type="String" length="15" />
+    <property name="DealerID" column="DEALERID" type="Int32" length="4" />
+    <property name="StartTime" column="STARTTIME" type="DateTime" />
+    <property name="EndTime" column="ENDTIME" type="DateTime" />
+    <property name="ResultCode" column="RESULTCODE" type="Int32" length="2" />
+    <property name="Description" column="DESCRIPTION" type="String" length="510" />
+    <property name="UserID" column="USERID" type="Int32" length="4" />
+  </class>
+
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="com.etak.core.model.CustomerDataRoamingLimitHistory,com.etak.core.model" table="CRM_CUSTOMERS_DATA_ROAMING_LIMIT_HISTORY" >
+    <id name="HistoryID" column="HISTORYID" type="Int64" length="8" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>
+    <property name="CustomerID" column="CUSTOMERID" type="Int32" length="4"/>
+    <property name="DealerID" column="DEALERID" type="Int32" length="4"/>
+    <property name="StatusID" column="STATUSID" type="Int32" length="4" />
+
+    <property name="Msisdn" column="MSISDN" type="String"/>
+    <property name="OldRoamingLimit" column="OLDROAMINGLIMIT" type="Decimal"/>
+    <property name="CurrentRoamingLimit" column="CURRENTROAMINGLIMIT" type="Decimal"/>
+
+    <property name="OldContinueSUM" column="OLDCONTINUESUM" type="Decimal"/>
+    <property name="CurrentContinueSUM" column="CURRENTCONTINUESUM" type="Decimal"/>
+    <property name="RoamingLimitCounter" column="ROAMINGLIMITCOUNTER" type="Decimal"/>
+
+    <property name="CreateDate" column="CREATEDATE" type="DateTime"/>
+
+    <property name="UpdateBy" column="UPDATEBY" type="Int32" length="4" />
+    <property name="HistoryType" column="HISTORYTYPE" type="Int32" length="4"/>
+    <property name="Message" column="MESSAGE" type="String" length="1000"/>
+
+  </class>
+
+</hibernate-mapping>

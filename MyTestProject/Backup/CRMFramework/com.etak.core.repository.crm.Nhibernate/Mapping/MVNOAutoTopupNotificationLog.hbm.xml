@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+<class name="com.etak.core.model.MVNOAutoTopupNotificationLog,com.etak.core.model" table="CRM_MVNO_AUTO_TOPUP_NOTIFICATION_LOG" >
+<id name="NotificationID" column="NOTIFICATIONID" type="Int64" unsaved-value="0">
+   <generator class="assigned" />
+</id>
+<property name="DealerID" column="DEALERID" type="Int32"/>
+  <property name="MSISDN" column="MSISDN" type="String" length="25"/>
+  <property name="CustomerID" column="CUSTOMERID" type="Int32"/>
+  <property name="Threshold" column="THRESHOLD" type="Decimal"/>
+  <property name="CurrentLimit" column="CURRENTLIMIT" type="Decimal"/>
+  <property name="TopupAmount" column="TOPUPAMOUNT" type="Decimal"/>
+  <property name="CreateDate" column="CREATEDATE" type="DateTime"/>
+  <property name="Status" column="STATUS" type="byte"/>
+  <property name="ExecuteCount" column="EXECUTECOUNT" type="byte"/>
+  <property name="NotificationFrom" column="NOTIFICATIONFROM" type="byte"/>
+  <property name="OperationDate" column="OPERATIONDATE" type="DateTime"/>
+</class>
+
+</hibernate-mapping>

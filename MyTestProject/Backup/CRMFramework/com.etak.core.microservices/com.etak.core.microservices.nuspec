@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <projectUrl>http://jira.etns:8080/browse/CFP</projectUrl>
+    <releaseNotes>
+    </releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>Core Microservices</tags>
+  </metadata>
+  <files>
+    <file src="\bin\Nuget\com.etak.core.microservices.pdb" target="lib\net40" />   
+  </files>
+</package>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.MultiLingualInfo,com.etak.core.model" table="SYS_MULTILINGUAL" >
+    <id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="DealerID" column="DealerID" type="Int32" length="4" />
+    <property name="LanguageID" column="LanguageID" type="Int32" length="4" />
+    <property name="FormFullName" column="FormFullName" type="String" length="510" />
+    <property name="ControlID" column="ControlID" type="String" length="250" />
+    <property name="Value" column="Value" type="String" length="510" />
+    <property name="Text" column="Text" type="String" length="510" />
+    <property name="ToolTipText" column="ToolTipText" type="String" length="510" />
+    <property name="ShowOrder" column="ShowOrder" type="Int32" length="4" />
+    <property name="Link" column="Link" type="String" length="510" />
+    <property name="Description" column="Description" type="String" length="510" />
+    <property name="UpdateDate" column="UpdateDate" type="DateTime" />
+    <property name="State" column="State" type="Int32" length="4" />
+    <property name="DictionaryTypeID" column="DictionaryTypeID" type="Int32" length="4" />
+    <property name="REGEXTypeID" column="REGEXTYPEID" type="Int32" length="4" />
+    <property name="DefaultText" column="DEFAULTTEXT" type="String" length="510" />
+    <property name="ControlType" column="ControlType" type="String" length="50" />
+    <property name="ShowType" column="ShowType" type="Int32" length="4" />
+  </class>
+
+</hibernate-mapping>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.CrmCustomersResourceMbInfo,com.etak.core.model" table="CRM_CUSTOMERS_RESOURCEMB" dynamic-update="true">
+    <id name="RESOURCEID" column="RESOURCEID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+    </id>
+    <property name="RESOURCE" column="RESOURCE" type="String" length="25" />
+    <property name="ICC" column="ICC" type="String" length="25" />
+    <property name="IMSI" column="IMSI" type="String" length="15" />
+    <property name="REMARKS" column="REMARKS" type="String" length="100" />
+    <property name="MSISDNALERTIND" column="MSISDNALERTIND" type="String" length="15" />
+    <property name="ODBMASK" column="ODBMASK" type="String" length="500" />
+    <property name="USSDALLOWED" column="USSDALLOWED" type="Boolean" />
+    <property name="CB_SUBSOPTION" column="CB_SUBSOPTION" type="Int32" length="4" />
+    <property name="CB_PASSWORD" column="CB_PASSWORD" type="String" length="50" />
+    <property name="CB_WRONGATTEMPTS" column="CB_WRONGATTEMPTS" type="Int32" length="4" />
+    <property name="CALCULATION" column="CALCULATION" type="Int32" length="4" />
+    <property name="STATUSID" column="STATUSID" type="Int32" length="4" />
+    <property name="FIRSTUSED" column="FIRSTUSED" type="DateTime" />
+    <property name="LASTUSED" column="LASTUSED" type="DateTime" />
+    <property name="STARTDATE" column="STARTDATE" type="DateTime" />
+    <property name="ENDDATE" column="ENDDATE" type="DateTime" />
+    <property name="CREATEDATE" column="CREATEDATE" type="DateTime" />
+    <property name="USERID" column="USERID" type="Int32" length="4" />
+    <property name="PUK" column="PUK" type="String" length="25" />
+    <property name="TELESERVICELIST" column="TELESERVICELIST" type="String" length="200" />
+    <property name="BEARERSERVICELIST" column="BEARERSERVICELIST" type="String" length="200" />
+    <property name="CHANGESTATUSDATE" column="CHANGESTATUSDATE" type="DateTime" />
+    <property name="LASTCONSUMEDATE" column="LASTCONSUMEDATE" type="DateTime" />
+    <property name="ACTIVEDEADLINEDATE" column="ACTIVEDEADLINEDATE" type="DateTime" />
+    <property name="PININVALIDTIMES" column="PININVALIDTIMES" type="Int32" length="4" />
+    <property name="PININVALIDTIMESTOTAL" column="PININVALIDTIMESTOTAL" type="Int32" length="4" />
+    <property name="OCPPlmnTemplateId" column="OCPLMNTEMPLATE" type="Int32" length="4" />
+    <property name="ProvisionId" column="PROVISIONID" type="Int32" length="4" />
+    <property name="NAM" column="NAM" type="Int32" length="4" />
+    <property name="FTNRule" column="FTNRule" type="String" length="15" />
+
+    <bag name="CrmCustomersResourceMbPropertyInfo" inverse="true" lazy="false" cascade="all-delete-orphan">
+      <key column="RESOURCEID" />
+      <one-to-many class="com.etak.core.model.CrmCustomersResourceMbPropertyInfo,com.etak.core.model" />
+    </bag>
+    <many-to-one name="CustomerInfo" class="com.etak.core.model.CustomerInfo,com.etak.core.model">
+      <column name="CUSTOMERID" length="30" />
+    </many-to-one>
+
+    <many-to-one name="OperatorInfo" class="com.etak.core.model.DealerInfo,com.etak.core.model" lazy="false">
+      <column name="OperatorCode" length="10" />
+    </many-to-one>
+    <bag name="CrmMobileMultipleImsiInfo" inverse="true" lazy="false" cascade="all-delete-orphan">
+      <key column="RESOURCEID" />
+      <one-to-many class="com.etak.core.model.CrmMobileMultipleImsiInfo, com.etak.core.model" />
+    </bag>
+    <bag name="CrmMobileNetWorkInfo" inverse="true" lazy="false" cascade="all-delete-orphan">
+      <key column="RESOURCEID" />
+      <one-to-many class="com.etak.core.model.CrmMobileNetWorkInfo, com.etak.core.model" />
+    </bag>
+
+  </class>
+</hibernate-mapping>

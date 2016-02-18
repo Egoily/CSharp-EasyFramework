@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.HolidayInfo,com.etak.core.model" table="CRM_HOLIDAY" >
+    <id name="InDate" column="INTDATE" type="Int32"  length="4">
+      <generator class="assigned" />
+    </id>
+
+    <property name="IsHoliday" column="ISHOLIDAY" type="Byte" />
+    <property name="HolidayDescription" column="HOLIDAYDESCRIPTION" type="String" length="100" />
+  </class>
+
+</hibernate-mapping>

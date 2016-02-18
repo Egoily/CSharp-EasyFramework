@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.RoamingBlackListInfo,com.etak.core.model" table="CRM_ROAMING_BLACKLIST" >
+    <id name="BlackListID" column="BLACKLISTID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="DealerID" column="DEALERID" type="Int32" length="4" />
+    <property name="MsIsdn" column="MSISDN" type="String" length="15" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <property name="Description" column="DESCRIPTION" type="String" length="256" />
+    <property name="CustomerID" column="CUSTOMERID" type="Int32" length="4" />
+  </class>
+
+</hibernate-mapping>

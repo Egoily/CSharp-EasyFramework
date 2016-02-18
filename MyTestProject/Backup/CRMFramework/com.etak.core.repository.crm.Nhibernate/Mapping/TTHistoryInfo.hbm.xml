@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.TTHistoryInfo,com.etak.core.model" table="CRM_TT_HISTORY" >
+    <id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+    </id>
+    <property name="TICKETNUMBER" column="TICKETNUMBER" type="String" length="20" />
+    <property name="USERID" column="USERID" type="Int32" length="4" />
+    <property name="COMMENTS" column="COMMENT" type="String" length="3000" />
+    <property name="UPDATETIME" column="UPDATETIME" type="DateTime" />
+    <property name="COMMENTTYPE" column="COMMENTTYPE"  type="Int32" length="4" />
+  </class>
+
+</hibernate-mapping>

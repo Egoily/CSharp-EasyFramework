@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.MVNODataRoamingLimitNotification,com.etak.core.model" table="CRM_MVNO_DATA_ROAMING_LIMIT_NOTIFICATION" >
+    <id name="ID" column="ID" type="Int32"  length="4">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>      
+    </id>
+    <many-to-one name="DealerInfo" class="com.etak.core.model.DealerInfo,com.etak.core.model">
+      <column name="MVNOID"/>
+    </many-to-one>
+    <property name="NotificationType" column="NotificationType" type="Int32" length="4" />
+    <property name="StatusId" column="StatusId" type="Int32" length="4" />
+    <property name="ThresholdLimit" column="ThresholdLimit" type="Decimal"/>
+    <property name="TemplateId" column="TemplateId" type="Int32" length="4" />
+    <property name="LimitUnit" column="LimitUnit" type="Int32" length="4" />
+    <property name="SMSType" column="SMSType" type="Int32" length="4" />
+    <property name="ThresholdSubType" column="ThresholdSubType" type="Int32" length="4" />
+    <property name="UpdateDate" column="UpdateDate" type="DateTime"/>
+  </class>
+</hibernate-mapping>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.EventInfo,com.etak.core.model" table="CRM_LIFECYCLE_EVENTS" dynamic-update="true">
+    <cache usage="nonstrict-read-write" region="SystemSettings"/>
+    <id name="EventId" column="EVENTID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="assigned" />
+    </id>
+    <property name="EventCode" column="EVENTCODE" type="String" length="20" />
+    <property name="EventName" column="EVENTNAME" type="String" length="510" />
+    <property name="EventType" column="EVENTTYPE" type="Int32" length="4" />
+    <property name="OperateType" column="OPERATETYPE" type="String" length="1" />
+    <bag name="SettingInfos" inverse="true" lazy="true" cascade="all">
+      <key column="EventId" />
+      <one-to-many class="com.etak.core.model.SettingInfo,com.etak.core.model" />
+    </bag>
+  </class>
+
+</hibernate-mapping>

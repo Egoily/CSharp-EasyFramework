@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.InterfaceHistory,com.etak.core.model" table="CRM_INTERFACE_HISTORY">
+    <id name="Seqid" column="SEQID" type="Int64" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>
+
+    <property column="REFERENCECODE" type="String" name="Referencecode" not-null="true"/>
+    <property column="REQUESTXML" type="String" name="Requestxml" not-null="true"/>
+    <property column="RESPONSEXML" type="String" name="Responsexml"   />
+    <property column="CREATETIME" type="DateTime" name="Createtime" not-null="true" />
+
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.DealerIMSIInfo,com.etak.core.model" table="CRM_DEALERS_IMSI" >
+    <composite-id>
+      <key-property name="DealerID" column="DEALERID" type="Int32" length="4" />
+      <key-property name="RangeSEQ" column="RANGESEQ" type="Int32" length="4" />
+    </composite-id>
+
+    <property name="IMSI1" column="IMSI1" type="String" length="15" />
+    <property name="IMSI2" column="IMSI2" type="String" length="15" />
+    <property name="Total" column="TOTAL" type="Int32" length="4" />
+    <property name="TotalUsed" column="TOTALUSED" type="Int32" length="4" />
+    <property name="RangeUsed" column="RANGEUSED" type="String" />
+    <property name="RangeAvailable" column="RANGEAVAILABLE" type="String" />
+  </class>
+
+</hibernate-mapping>

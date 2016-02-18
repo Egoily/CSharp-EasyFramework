@@ -1,0 +1,492 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.resource.simCard</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.InformationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.ActiveSimCard.ActiveSimCardRequest">
+            <summary>
+            Internal openation ActivateSim request
+            </summary>
+            <author>IgnasiG</author>
+            <datetime>13/10/2014-16:20</datetime>
+        </member>
+        <member name="F:com.etak.core.resource.simCard.message.ActiveSimCard.ActiveSimCardRequest.SimCardInfo">
+            <summary>
+            SimCard to be Activated
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.ActiveSimCard.ActiveSimCardRequest.CustomerInfo">
+            <summary>
+            CustomerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.ActiveSimCard.ActiveSimCardResponse">
+            <summary>
+            Internal operation ActivateSim response
+            </summary>
+            <author>IgnasiG</author>
+            <datetime>13/10/2014-16:19</datetime>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.ActiveSimCard.ActiveSimCardResponse.SimCardInfo">
+            <summary>
+            SimCardInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.CreateImei.CreateImeiRequest">
+            <summary>
+            Create ImeiAssn Request
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.CreateImei.CreateImeiRequest.Imei">
+            <summary>
+            ImeiAssn to create
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.CreateImei.CreateImeiResponse">
+            <summary>
+            Create ImeiAssn response
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.CreateImei.CreateImeiResponse.Imei">
+            <summary>
+            ImeiAssn created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.DeleteImeiRelationToResourceId.DeleteImeiRelationToResourceIdRequest">
+            <summary>
+            Internal openation DeleteImeiRelationToResourceId request
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.DeleteImeiRelationToResourceId.DeleteImeiRelationToResourceIdRequest.ResourceId">
+            <summary>
+            Resourceid
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.DeleteImeiRelationToResourceId.DeleteImeiRelationToResourceIdResponse">
+            <summary>
+            Internal operation DeleteImeiRelationToResourceId response
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.ExpirateSimCard.ExpirateSimCardRequest">
+            <summary>
+            Internal openation ActivateSim request
+            </summary>
+            <author>IgnasiG</author>
+            <datetime>13/10/2014-16:20</datetime>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.ExpirateSimCard.ExpirateSimCardRequest.SimCardInfo">
+            <summary>
+            SimCard to Expirate
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.ExpirateSimCard.ExpirateSimCardRequest.CustomerInfo">
+            <summary>
+            CustomerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.ExpirateSimCard.ExpirateSimCardResponse">
+            <summary>
+            Internal operation ActivateSim response
+            </summary>
+            <author>IgnasiG</author>
+            <datetime>13/10/2014-16:19</datetime>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.ExpirateSimCard.ExpirateSimCardResponse.SimCardInfo">
+            <summary>
+            SimCard to Expirate
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.GetImeiByImei.GetImeiByImeiRequest">
+            <summary>
+            GetImeiByResourceIdRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.GetImeiByImei.GetImeiByImeiRequest.Imei">
+            <summary>
+            IMEI
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.GetImeiByImei.GetImeiByImeiResponse">
+            <summary>
+            GetImeiByResourceIdResponse
+            </summary>
+        </member>
+        <member name="F:com.etak.core.resource.simCard.message.GetImeiByImei.GetImeiByImeiResponse.ImeiAssnInfo">
+            <summary>
+            ImeiAssn
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.GetImeiByResourceId.GetImeiByResourceIdRequest">
+            <summary>
+            GetImeiByResourceIdRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.GetImeiByResourceId.GetImeiByResourceIdRequest.ResourceId">
+            <summary>
+            IccId
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.GetImeiByResourceId.GetImeiByResourceIdResponse">
+            <summary>
+            GetImeiByResourceIdResponse
+            </summary>
+        </member>
+        <member name="F:com.etak.core.resource.simCard.message.GetImeiByResourceId.GetImeiByResourceIdResponse.ImeiAssnInfo">
+            <summary>
+            ImeiAssn
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.GetSimCardByICCId.GetSimCardByICCIdRequest">
+            <summary>
+            GetSimCardByICCIdRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.GetSimCardByICCId.GetSimCardByICCIdRequest.IccId">
+            <summary>
+            IccId
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.GetSimCardByICCId.GetSimCardByICCIdResponse">
+            <summary>
+            GetSimCardByICCIdResponse
+            </summary>
+        </member>
+        <member name="F:com.etak.core.resource.simCard.message.GetSimCardByICCId.GetSimCardByICCIdResponse.SimCardInfo">
+            <summary>
+            SimCardInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.InitSimCard.InitSimCardRequest">
+            <summary>
+            Internal openation IinitSim request
+            </summary>
+            <author></author>
+            <datetime></datetime>
+        </member>
+        <member name="F:com.etak.core.resource.simCard.message.InitSimCard.InitSimCardRequest.SimCardInfo">
+            <summary>
+            SimCard to be Initialized
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.InitSimCard.InitSimCardRequest.CustomerInfo">
+            <summary>
+            CustomerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.InitSimCard.InitSimCardResponse">
+            <summary>
+            Internal openation InitSim response
+            </summary>
+            <author></author>
+            <datetime></datetime>
+        </member>
+        <member name="F:com.etak.core.resource.simCard.message.InitSimCard.InitSimCardResponse.SimCardInfo">
+            <summary>
+            SimCard to be Initialized
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.InstallSimCard.InstallSimCardRequest">
+            <summary>
+            Internal openation InstallSim request
+            </summary>
+            <author>IgnasiG</author>
+            <datetime>24/10/2014-17:19</datetime>
+        </member>
+        <member name="F:com.etak.core.resource.simCard.message.InstallSimCard.InstallSimCardRequest.SimCardInfo">
+            <summary>
+            SimCard to be Installed
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.InstallSimCard.InstallSimCardRequest.CustomerInfo">
+            <summary>
+            CustomerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.InstallSimCard.InstallSimCardResponse">
+            <summary>
+            Internal openation InstallSim response
+            </summary>
+            <author>IgnasiG</author>
+            <datetime>24/10/2014-17:19</datetime>
+        </member>
+        <member name="F:com.etak.core.resource.simCard.message.InstallSimCard.InstallSimCardResponse.SimCardInfo">
+            <summary>
+            SimCard to be Installed
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.HLRSwapResources.HLRSwapResourcesRequest">
+            <summary>
+            Now wraped operation to be implemented internal
+            </summary>
+            <author>IgnasiG</author>
+            <datetime>24/10/2014-13:38</datetime>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.HLRSwapResources.HLRSwapResourcesRequest.Msisdn">
+            <summary>
+            Msisdn 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.HLRSwapResources.HLRSwapResourcesRequest.SourceSim">
+            <summary>
+            SourceSim
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.HLRSwapResources.HLRSwapResourcesRequest.DestinationSim">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.HLRSwapResources.HLRSwapResourcesResponse">
+            <summary>
+            Now wraped operation to be implemented internal
+            </summary>
+            <author>
+            IgnasiG
+            </author>
+            <datetime>17/10/2014-18:38</datetime>
+        </member>
+        <member name="F:com.etak.core.resource.simCard.message.HLRSwapResources.HLRSwapResourcesResponse.SimCardInfo">
+            <summary>
+            SimCardInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.UpdateImeiRelationToResourceIdHistory.UpdateImeiRelationToResourceIdHistoryRequest">
+            <summary>
+            UpdateImeiRelationToResourceIdHistoryRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.UpdateImeiRelationToResourceIdHistory.UpdateImeiRelationToResourceIdHistoryRequest.imeiAssn">
+            <summary>
+            ResourceId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.UpdateImeiRelationToResourceIdHistory.UpdateImeiRelationToResourceIdHistoryRequest.StartDate">
+            <summary>
+            StartDate
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.UpdateImeiRelationToResourceIdHistory.UpdateImeiRelationToResourceIdHistoryResponse">
+            <summary>
+            GetImeiByResourceIdResponse
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.UpdateImei.UpdateImeiRequest">
+            <summary>
+            Request of UpdateNumberInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.UpdateImei.UpdateImeiRequest.ImeiAssn">
+            <summary>
+            ImeiAssn to be updated
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.message.UpdateImei.UpdateImeiResponse">
+            <summary>
+            Response of UpdateNumberInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.resource.simCard.message.UpdateImei.UpdateImeiResponse.ImeiAssn">
+            <summary>
+            ImeiAssn that has been updated
+            </summary>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.microservices.ActiveSimCardMS">
+            <summary>
+            Active SIMCard BizOP
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.simCard.microservices.ActiveSimCardMS.Process(com.etak.core.resource.simCard.message.ActiveSimCard.ActiveSimCardRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Processes the specified request for ActivateSim.
+            </summary>
+            <param name="request">The ActivateSim request.</param>
+            <param name="invoker">The invoker.</param>
+            <returns>Ok on successfull, thow exception on error.</returns>
+            <author>IgnasiG</author>
+            <datetime>13/10/2014-16:00</datetime>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.microservices.CreateImeiMS">
+            <summary>
+            Add MSISDN to number Pool MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.simCard.microservices.CreateImeiMS.Process(com.etak.core.resource.simCard.message.CreateImei.CreateImeiRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+             Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.microservices.DeleteImeiRelationToResourceIdMS">
+            <summary>
+            Delete Imei by resourceId MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.simCard.microservices.DeleteImeiRelationToResourceIdMS.Process(com.etak.core.resource.simCard.message.DeleteImeiRelationToResourceId.DeleteImeiRelationToResourceIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.microservices.ExpirateSimCardMS">
+            <summary>
+            Expirate Simcrd MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.simCard.microservices.ExpirateSimCardMS.Process(com.etak.core.resource.simCard.message.ExpirateSimCard.ExpirateSimCardRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            <datetime>17/10/2014-16:46</datetime>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.microservices.GetImeiByImeiMS">
+            <summary>
+            Get Imei by resourceId MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.simCard.microservices.GetImeiByImeiMS.Process(com.etak.core.resource.simCard.message.GetImeiByImei.GetImeiByImeiRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.microservices.GetImeiByResourceIdMS">
+            <summary>
+            Get Imei by resourceId MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.simCard.microservices.GetImeiByResourceIdMS.Process(com.etak.core.resource.simCard.message.GetImeiByResourceId.GetImeiByResourceIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.microservices.GetSimCardByICCIdMS">
+            <summary>
+            Get siMCard by ICCID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.simCard.microservices.GetSimCardByICCIdMS.Process(com.etak.core.resource.simCard.message.GetSimCardByICCId.GetSimCardByICCIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.microservices.InitSimCardMS">
+            <summary>
+            Ini SIMCard MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.simCard.microservices.InitSimCardMS.Process(com.etak.core.resource.simCard.message.InitSimCard.InitSimCardRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Marks SimCard as Init to get it recycled.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="invoker"></param>
+            <returns></returns>
+            <author></author>
+            <datetime></datetime>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.microservices.InstallSimCardMS">
+            <summary>
+            Install SIMCARD MS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.simCard.microservices.InstallSimCardMS.Process(com.etak.core.resource.simCard.message.InstallSimCard.InstallSimCardRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            <datetime>24/10/2014-17:26</datetime>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.microservices.HLRSwapResourcesMS">
+            <summary>
+            Now wraped operation to be implemented internal
+            Class to Reserve and MSISDN, from Init Status to Reserved Status
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.simCard.microservices.HLRSwapResourcesMS.#ctor(FrontEndServiceContract.IProvisionService)">
+            <summary>
+            DI Consructor
+            </summary>
+            <param name="provisionService"></param>
+        </member>
+        <member name="M:com.etak.core.resource.simCard.microservices.HLRSwapResourcesMS.#ctor">
+            <summary>
+            Parameterless constructor
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.simCard.microservices.HLRSwapResourcesMS.Process(com.etak.core.resource.simCard.message.HLRSwapResources.HLRSwapResourcesRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.resource.simCard.microservices.HLRSwapResourcesMS.ArrayToString``1(``0[])">
+            <summary>
+            ArrayToString
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="array"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.microservices.UpdateImeiRelationToResourceIdHistoryMS">
+            <summary>
+            Update resourceId-Imei relation history Ms
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.simCard.microservices.UpdateImeiRelationToResourceIdHistoryMS.Process(com.etak.core.resource.simCard.message.UpdateImeiRelationToResourceIdHistory.UpdateImeiRelationToResourceIdHistoryRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.resource.simCard.microservices.UpdateImeiMS">
+            <summary>
+            MS : Update NumberInfo
+            </summary>
+        </member>
+        <member name="M:com.etak.core.resource.simCard.microservices.UpdateImeiMS.Process(com.etak.core.resource.simCard.message.UpdateImei.UpdateImeiRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process to update NumberInfo
+            </summary>
+            <param name="request">UpdateNumberInfoRequest</param>
+            <param name="invoker">RequestInvokationEnvironment</param>
+            <returns>UpdateNumberInfoResponse</returns>
+        </member>
+    </members>
+</doc>

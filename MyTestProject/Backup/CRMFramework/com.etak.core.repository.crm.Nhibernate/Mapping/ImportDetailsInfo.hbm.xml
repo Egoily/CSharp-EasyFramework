@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.ImportDetailsInfo,com.etak.core.model" table="CRM_MOBILE_SIMCARDS_IMPORT_DETAILS" >
+    <composite-id>
+      <key-property name="TransactionID" column="TRANSACTIONID" type="String" length="36" />
+      <key-property name="ICCID" column="ICCID" type="String" length="20" />
+    </composite-id>
+    
+    <property name="IMSI" column="IMSI" type="String" length="32" />
+    <property name="PIN1" column="PIN1" type="String" length="4" />
+    <property name="PIN2" column="PIN2" type="String" length="4" />
+    <property name="PUK1" column="PUK1" type="String" length="10" />
+    <property name="PUK2" column="PUK2" type="String" length="10" />
+    <property name="KI" column="KI" type="String" length="200" />
+    <property name="OPC" column="OPC" type="String" length="32" />
+    <property name="KIC_0F" column="KIC_0F" type="String" length="32" />
+    <property name="KID_0F" column="KID_0F" type="String" length="32" />
+    <property name="KIK_0F" column="KIK_0F" type="String" length="32" />
+    <property name="ADM1" column="ADM1" type="String" length="16" />
+    <property name="ADM2" column="ADM2" type="String" length="16" />
+    <property name="ACC" column="ACC" type="String" length="4" />
+    <property name="MSISDN" column="MSISDN" type="String" length="25" />
+    <property name="Flag" column="FLAG" type="Boolean" />
+    <property name="IMSI2" column="IMSI2" type="String" length="32" />
+    <property name="IMSI3" column="IMSI3" type="String" length="32" />
+    <property name="IMSI4" column="IMSI4" type="String" length="32" />
+    <property name="IMSI5" column="IMSI5" type="String" length="32" />
+    <property name="IMSI6" column="IMSI6" type="String" length="32" />
+    <property name="IMSI7" column="IMSI7" type="String" length="32" />
+    <property name="IMSI8" column="IMSI8" type="String" length="32" />
+    <property name="IMSI9" column="IMSI9" type="String" length="32" />
+    <property name="IMSI10" column="IMSI10" type="String" length="32" />
+    <property name="IMSI11" column="IMSI11" type="String" length="32" />
+    <property name="IMSI12" column="IMSI12" type="String" length="32" />
+    <property name="IMSI13" column="IMSI13" type="String" length="32" />
+    <property name="IMSI14" column="IMSI14" type="String" length="32" />
+    <property name="IMSI15" column="IMSI15" type="String" length="32" />
+    <property name="KIC2" column="KIC_0F" type="String" length="32" />
+    <property name="KID2" column="KID_0F" type="String" length="32" />
+    <property name="KIK2" column="KIK_0F" type="String" length="32" />
+  </class>
+
+</hibernate-mapping>

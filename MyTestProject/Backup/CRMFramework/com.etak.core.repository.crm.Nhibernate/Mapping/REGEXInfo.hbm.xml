@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.REGEXInfo,com.etak.core.model" table="SYS25_REGEX" >
+    <id name="ID" column="REGEX_ID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <property name="REGEXText" column="REGEX_TEXT" type="String" length="510" />
+    <property name="Description" column="REGEX_DESC" type="String" length="510" />
+    <property name="DefaultMessage" column="INVALID_MESSAGE" type="String" length="510" />
+    <property name="MessageID" column="MESSAGEID" type="Int64" length="8" />
+    <property name="TypeID" column="TYPEID" type="Int32" length="4" />
+  </class>
+
+</hibernate-mapping>

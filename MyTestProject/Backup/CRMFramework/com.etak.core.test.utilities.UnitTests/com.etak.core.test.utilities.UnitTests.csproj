@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{250BE178-EADB-4DEB-A6EB-DAAD3CCEF0DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.etak.core.test.utilities.UnitTests</RootNamespace>
+    <AssemblyName>com.etak.core.test.utilities.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net40\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="NSubstitute">
+      <HintPath>..\packages\NSubstitute.1.8.1.0\lib\net40\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.util, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NUnit.VisualStudio.TestAdapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise />
+  </Choose>
+  <ItemGroup>
+    <Compile Include="AbstractBusinessOperationTestUnitTests.cs" />
+    <Compile Include="AbstractMicroserviceTestUnitTests.cs" />
+    <Compile Include="AssertExtUnitTests.cs" />
+    <Compile Include="BizOpTest\BizOpTestRequestDTO.cs" />
+    <Compile Include="BizOpTest\BizOpTestRequestInternal.cs" />
+    <Compile Include="BizOpTest\BizOpTestResponseDTO.cs" />
+    <Compile Include="BizOpTest\BizOpTestResponseInternal.cs" />
+    <Compile Include="BizOpTest\BizOpTestBizop.cs" />
+    <Compile Include="BizOpTest\SinglePhaseOrderProcessorTest\SinglePhaseOrderProcessorOrder.cs" />
+    <Compile Include="BizOpTest\SinglePhaseOrderProcessorTest\SinglePhaseOrderProcessorRequestDTO.cs" />
+    <Compile Include="BizOpTest\SinglePhaseOrderProcessorTest\SinglePhaseOrderProcessorRequestInternal.cs" />
+    <Compile Include="BizOpTest\SinglePhaseOrderProcessorTest\SinglePhaseOrderProcessorResponseDTO.cs" />
+    <Compile Include="BizOpTest\SinglePhaseOrderProcessorTest\SinglePhaseOrderProcessorResponseInternal.cs" />
+    <Compile Include="BizOpTest\SinglePhaseOrderProcessorTest\SinglePhaseOrderProcessorTestBizOp.cs" />
+    <Compile Include="CreateDefaultObjectUnitTests.cs" />
+    <Compile Include="MicroServiceTest\MicroserviceRequest.cs" />
+    <Compile Include="MicroServiceTest\MicroserviceResponse.cs" />
+    <Compile Include="MicroServiceTest\MicroserviceTest.cs" />
+    <Compile Include="MockMicroServiceManagerUnitTests.cs" />
+    <Compile Include="MockRepositoryManagerUnitTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SinglePhaseOrderProcessorTestUnitTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\com.etak.core.model\com.etak.core.model.csproj">
+      <Project>{5c9b8900-251a-4566-a727-7576dbe53a3c}</Project>
+      <Name>com.etak.core.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.operation\com.etak.core.operation.csproj">
+      <Project>{a8fd3f0f-82f8-41d4-8da2-fa44bad61d9c}</Project>
+      <Name>com.etak.core.operation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository.crm\com.etak.core.repository.crm.csproj">
+      <Project>{5279C8D2-7523-4A27-AA03-8A9736DE7E45}</Project>
+      <Name>com.etak.core.repository.crm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository\com.etak.core.repository.csproj">
+      <Project>{b3b4cfa1-4488-4e8c-aa22-b9f6206be866}</Project>
+      <Name>com.etak.core.repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.test.utilities\com.etak.core.test.utilities.csproj">
+      <Project>{4B99EBE0-266A-47BB-BAE6-A03E971F0BD6}</Project>
+      <Name>com.etak.core.test.utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

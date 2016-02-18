@@ -1,0 +1,8 @@
+diff a/com.etak.core.bizops.UnitTests/fullfilment/QuerySubscriptionAndServicesAndPromotionsByMsisdn/QuerySubscriptionAndServicesAndPromotionsByMsisdnTest.cs b/com.etak.core.bizops.UnitTests/fullfilment/QuerySubscriptionAndServicesAndPromotionsByMsisdn/QuerySubscriptionAndServicesAndPromotionsByMsisdnTest.cs	(rejected hunks)
+@@ -1,5 +1,6 @@
+ using System;
+ using System.Linq;
++using System.Collections.Generic;
+ using com.etak.core.bizops.fullfilment.QuerySubscriptionAndServicesAndPromotionsByMsisdn;
+ using com.etak.core.dealer.messages.CheckAuthorization;
+ using com.etak.core.model;

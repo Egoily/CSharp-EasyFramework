@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+	<class name="com.etak.core.model.DREAPILogInfo,com.etak.core.model" table="CRM_DRE_OPERATION_LOG" >
+		<id name="OperationID" column="OperationID" type="Int64" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+		</id>
+    <property name="RequestID" column="REQUESTID" type="String" length="100" />
+		<property name="UserID" column="USERID" type="Int32" length="4" />
+    <property name="DealerID" column="DealerID" type="Int32" length="4" />
+		<property name="Description" column="DESCRIPTION" type="String" length="200" />
+		<property name="ShortCode" column="SHORTCODE" type="String" length="4" />
+		<property name="Remark" column="REMARK" type="String" length="2000" />
+		<property name="OperationDate" column="OPERATIONDATE" type="DateTime" />
+		<property name="ResultTypeID" column="RESULTTYPEID" type="Int32" length="4" />
+		<property name="UserMessages" column="UserMessages" type="String" />
+    <property name="SystemMessages" column="SystemMessages" type="String" />
+    <property name="Name1" column="NAME1" type="String" length="100" />
+		<property name="Name2" column="NAME2" type="String" length="100" />
+		<property name="Name3" column="NAME3" type="String" length="100" />
+		<property name="Name4" column="NAME4" type="String" length="100" />
+		<property name="Name5" column="NAME5" type="String" length="100" />
+		<property name="Name6" column="NAME6" type="String" length="100" />
+		<property name="Name7" column="NAME7" type="String" length="100" />
+		<property name="Name8" column="NAME8" type="String" length="100" />
+		<property name="Name9" column="NAME9" type="String" length="100" />
+		<property name="Name10" column="NAME10" type="String" length="100" />
+		<property name="Value1" column="VALUE1" type="String" length="100" />
+		<property name="Value2" column="VALUE2" type="String" length="100" />
+		<property name="Value3" column="VALUE3" type="String" length="100" />
+		<property name="Value4" column="VALUE4" type="String" length="100" />
+		<property name="Value5" column="VALUE5" type="String" length="100" />
+		<property name="Value6" column="VALUE6" type="String" length="100" />
+		<property name="Value7" column="VALUE7" type="String" length="100" />
+		<property name="Value8" column="VALUE8" type="String" length="100" />
+		<property name="Value9" column="VALUE9" type="String" length="100" />
+		<property name="Value10" column="VALUE10" type="String" length="100" />
+	</class>
+
+</hibernate-mapping>

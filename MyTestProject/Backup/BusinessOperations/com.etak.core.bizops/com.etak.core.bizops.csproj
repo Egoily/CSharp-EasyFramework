@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB678A88-7232-490A-811E-597DA0E577EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.etak.core.bizops</RootNamespace>
+    <AssemblyName>com.etak.core.bizops</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\com.etak.core.bizops.XML</DocumentationFile>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\com.etak.core.bizops.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\Release\com.etak.core.bizops.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.customer">
+      <HintPath>..\packages\com.etak.core.customer.2.1.0.0-RC001\lib\net40\com.etak.core.customer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.dealer">
+      <HintPath>..\packages\com.etak.core.dealer.2.1.0.0-RC001\lib\net40\com.etak.core.dealer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.GSMSubscription, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\com.etak.core.subscription.2.1.0.0-RC003\lib\net40\com.etak.core.GSMSubscription.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.microservices">
+      <HintPath>..\packages\com.etak.core.microservices.2.1.0.0-RC005\lib\net40\com.etak.core.microservices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.model">
+      <HintPath>..\packages\com.etak.core.model.2.1.0.0-RC005\lib\net40\com.etak.core.model.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.operation">
+      <HintPath>..\packages\com.etak.core.operation.2.1.0.0-RC005\lib\net40\com.etak.core.operation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.product">
+      <HintPath>..\packages\com.etak.core.product.2.1.0.0-RC001\lib\net40\com.etak.core.product.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.promotion, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\com.etak.core.subscription.2.1.0.0-RC003\lib\net40\com.etak.core.promotion.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.queue">
+      <HintPath>..\packages\com.etak.core.queue.2.1.0.0-RC005\lib\net40\com.etak.core.queue.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.repository">
+      <HintPath>..\packages\com.etak.core.repository.2.1.0.0-RC005\lib\net40\com.etak.core.repository.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.repository.crm">
+      <HintPath>..\packages\com.etak.core.repository.crm.2.1.0.0-RC005\lib\net40\com.etak.core.repository.crm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.resource">
+      <HintPath>..\packages\com.etak.core.resource.2.1.0.0-RC002\lib\net40\com.etak.core.resource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.resource.msisdn">
+      <HintPath>..\packages\com.etak.core.resource.2.1.0.0-RC002\lib\net40\com.etak.core.resource.msisdn.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.resource.simCard">
+      <HintPath>..\packages\com.etak.core.resource.2.1.0.0-RC002\lib\net40\com.etak.core.resource.simCard.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.resource.utils">
+      <HintPath>..\packages\com.etak.core.resource.2.1.0.0-RC002\lib\net40\com.etak.core.resource.utils.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.service, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\com.etak.core.subscription.2.1.0.0-RC003\lib\net40\com.etak.core.service.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.core.subscription, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\com.etak.core.subscription.2.1.0.0-RC003\lib\net40\com.etak.core.subscription.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.eventsystem.model">
+      <HintPath>..\packages\com.etak.eventsystem.model.2.0.10.1\lib\net40\com.etak.eventsystem.model.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="com.etak.eventsystem.wcfSender">
+      <HintPath>..\packages\com.etak.eventsystem.wcfSender.2.0.10.1\lib\net40\com.etak.eventsystem.wcfSender.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FizzWare.NBuilder">
+      <HintPath>..\packages\NBuilder.3.0.1.1\lib\FizzWare.NBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="FrontEndServiceContract, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HPS.WCFConnector.1.3.1.1\lib\net40\FrontEndServiceContract.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HPS.WCFConnector, Version=1.3.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HPS.WCFConnector.1.3.1.1\lib\net40\HPS.WCFConnector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Network3GPPModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HPS.WCFConnector.1.3.1.1\lib\net40\Network3GPPModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.4.0.3.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net40\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Z.ExtensionMethods">
+      <HintPath>..\packages\Z.ExtensionMethods.1.3.0.0\lib\Z.ExtensionMethods.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="assurance\ApplyChargeAndSchedule\ApplyChargeAndScheduleBizOp.cs" />
+    <Compile Include="assurance\ApplyChargeAndSchedule\ApplyChargeAndScheduleConfiguration.cs" />
+    <Compile Include="assurance\ApplyChargeAndSchedule\ApplyChargeAndScheduleDTORequest.cs" />
+    <Compile Include="assurance\ApplyChargeAndSchedule\ApplyChargeAndScheduleDTOResponse.cs" />
+    <Compile Include="assurance\ApplyChargeAndSchedule\ApplyChargeAndScheduleOrder.cs" />
+    <Compile Include="assurance\ApplyChargeAndSchedule\ApplyChargeAndScheduleRequest.cs" />
+    <Compile Include="assurance\ApplyChargeAndSchedule\ApplyChargeAndScheduleResponse.cs" />
+    <Compile Include="BizOpsErrors.cs" />
+    <Compile Include="fullfilment\ApplyCustomerPromotion\ApplyCustomerPromotionBizOp.cs" />
+    <Compile Include="fullfilment\ApplyCustomerPromotion\ApplyCustomerPromotionOrder.cs" />
+    <Compile Include="fullfilment\ApplyCustomerPromotion\ApplyCustomerPromotionRequestDTO.cs" />
+    <Compile Include="fullfilment\ApplyCustomerPromotion\ApplyCustomerPromotionRequestInternal.cs" />
+    <Compile Include="fullfilment\ApplyCustomerPromotion\ApplyCustomerPromotionResponseDTO.cs" />
+    <Compile Include="fullfilment\ApplyCustomerPromotion\ApplyCustomerPromotionResponseInternal.cs" />
+    <Compile Include="fullfilment\CancelCustomerAndSubscriptions\CancelCustomerAndSubscriptionConfiguration.cs" />
+    <Compile Include="fullfilment\CancelCustomerAndSubscriptions\CancelCustomerAndSubscriptionsBizOp.cs" />
+    <Compile Include="fullfilment\CancelCustomerAndSubscriptions\CancelCustomerAndSubscriptionsOrder.cs" />
+    <Compile Include="fullfilment\CancelCustomerAndSubscriptions\CancelCustomerAndSubscriptionsRequestDTO.cs" />
+    <Compile Include="fullfilment\CancelCustomerAndSubscriptions\CancelCustomerAndSubscriptionsRequestInternal.cs" />
+    <Compile Include="fullfilment\CancelCustomerAndSubscriptions\CancelCustomerAndSubscriptionsResponseDTO.cs" />
+    <Compile Include="fullfilment\CancelCustomerAndSubscriptions\CancelCustomerAndSubscriptionsResponseInternal.cs" />
+    <Compile Include="fullfilment\CancelCustomerProduct\CancelCustomerProductBizOp .cs" />
+    <Compile Include="fullfilment\CancelCustomerProduct\CancelCustomerProductOrder.cs" />
+    <Compile Include="fullfilment\CancelCustomerProduct\CancelCustomerProductRequestDTO.cs" />
+    <Compile Include="fullfilment\CancelCustomerProduct\CancelCustomerProductRequestInternal.cs" />
+    <Compile Include="fullfilment\CancelCustomerProduct\CancelCustomerProductResponseDTO.cs" />
+    <Compile Include="fullfilment\CancelCustomerProduct\CancelCustomerProductResponseInternal.cs" />
+    <Compile Include="fullfilment\ChangeOfHolderBizOp\ChangeOfHolderBizOp.cs" />
+    <Compile Include="fullfilment\ChangeOfHolderBizOp\ChangeOfHolderConfiguration.cs" />
+    <Compile Include="fullfilment\ChangeOfHolderBizOp\ChangeOfHolderOrder.cs" />
+    <Compile Include="fullfilment\ChangeOfHolderBizOp\ChangeOfHolderRequestDTO.cs" />
+    <Compile Include="fullfilment\ChangeOfHolderBizOp\ChangeOfHolderRequestInternal.cs" />
+    <Compile Include="fullfilment\ChangeOfHolderBizOp\ChangeOfHolderResponseDTO.cs" />
+    <Compile Include="fullfilment\ChangeOfHolderBizOp\ChangeOfHolderResponseInternal.cs" />
+    <Compile Include="fullfilment\CheckPurchaseProductForCustomer\CheckPurchaseProductForCustomerBizOp.cs" />
+    <Compile Include="fullfilment\CheckPurchaseProductForCustomer\CheckPurchaseProductForCustomerRequestDTO.cs" />
+    <Compile Include="fullfilment\CheckPurchaseProductForCustomer\CheckPurchaseProductForCustomerRequestInternal.cs" />
+    <Compile Include="fullfilment\CheckPurchaseProductForCustomer\CheckPurchaseProductForCustomerResponseDTO.cs" />
+    <Compile Include="fullfilment\CheckPurchaseProductForCustomer\CheckPurchaseProductForCustomerResponseInternal.cs" />
+    <Compile Include="fullfilment\CreateCustomerAccountCurrency\CreateCustomerAccountCurrencyBizOp.cs" />
+    <Compile Include="fullfilment\CreateCustomerAccountCurrency\CreateCustomerAccountCurrencyConfiguration.cs" />
+    <Compile Include="fullfilment\CreateCustomerAccountCurrency\CreateCustomerAccountCurrencyOrder.cs" />
+    <Compile Include="fullfilment\CreateCustomerAccountCurrency\CreateCustomerAccountCurrencyRequestDTO.cs" />
+    <Compile Include="fullfilment\CreateCustomerAccountCurrency\CreateCustomerAccountCurrencyRequestInternal.cs" />
+    <Compile Include="fullfilment\CreateCustomerAccountCurrency\CreateCustomerAccountCurrencyResponseDTO.cs" />
+    <Compile Include="fullfilment\CreateCustomerAccountCurrency\CreateCustomerAccountCurrencyResponseInternal.cs" />
+    <Compile Include="fullfilment\CreateCustomer\CreateCustomerBizOp.cs" />
+    <Compile Include="fullfilment\CreateCustomer\CreateCustomerConfiguration.cs" />
+    <Compile Include="fullfilment\CreateCustomer\CreateCustomerOrder.cs" />
+    <Compile Include="fullfilment\CreateCustomer\CreateCustomerRequestDTO.cs" />
+    <Compile Include="fullfilment\CreateCustomer\CreateCustomerRequestInternal.cs" />
+    <Compile Include="fullfilment\CreateCustomer\CreateCustomerResponseDTO.cs" />
+    <Compile Include="fullfilment\CreateCustomer\CreateCustomerResponseInternal.cs" />
+    <Compile Include="fullfilment\CreateSession\CreateSessionBizOp.cs" />
+    <Compile Include="fullfilment\CreateSession\CreateSessionOrder.cs" />
+    <Compile Include="fullfilment\CreateSession\CreateSessionRequestDTO.cs" />
+    <Compile Include="fullfilment\CreateSession\CreateSessionRequestInternal.cs" />
+    <Compile Include="fullfilment\CreateSession\CreateSessionResponseDTO.cs" />
+    <Compile Include="fullfilment\CreateSession\CreateSessionResponseInternal.cs" />
+    <Compile Include="fullfilment\CreateTroubleTicket\CreateTroubleTicketBizOp.cs" />
+    <Compile Include="fullfilment\CreateTroubleTicket\CreateTroubleTicketOrder.cs" />
+    <Compile Include="fullfilment\CreateTroubleTicket\CreateTroubleTicketRequestDTO.cs" />
+    <Compile Include="fullfilment\CreateTroubleTicket\CreateTroubleTicketRequestInternal.cs" />
+    <Compile Include="fullfilment\CreateTroubleTicket\CreateTroubleTicketResponseDTO.cs" />
+    <Compile Include="fullfilment\CreateTroubleTicket\CreateTroubleTicketResponseInternal.cs" />
+    <Compile Include="fullfilment\FreezeCustomer\FreezeCustomerBizOp.cs" />
+    <Compile Include="fullfilment\FreezeCustomer\FreezeCustomerOrder.cs" />
+    <Compile Include="fullfilment\FreezeCustomer\FreezeCustomerRequestDTO.cs" />
+    <Compile Include="fullfilment\FreezeCustomer\FreezeCustomerRequestInternal.cs" />
+    <Compile Include="fullfilment\FreezeCustomer\FreezeCustomerResponseDTO.cs" />
+    <Compile Include="fullfilment\FreezeCustomer\FreezeCustomerResponseInternal.cs" />
+    <Compile Include="fullfilment\AssignProductToCustomer\AssignProductToCustomerBizOp.cs" />
+    <Compile Include="fullfilment\AssignProductToCustomer\AssignProductToCustomerOrder.cs" />
+    <Compile Include="fullfilment\AssignProductToCustomer\AssignProductToCustomerRequestDTO.cs" />
+    <Compile Include="fullfilment\AssignProductToCustomer\AssignProductToCustomerRequestInternal.cs" />
+    <Compile Include="fullfilment\AssignProductToCustomer\AssignProductToCustomerResponseDTO.cs" />
+    <Compile Include="fullfilment\AssignProductToCustomer\AssignProductToCustomerResponseInternal.cs" />
+    <Compile Include="fullfilment\QueryCustomerByMsisdn\QueryCustomerByMsisdnBizOp.cs" />
+    <Compile Include="fullfilment\QueryCustomerByMsisdn\QueryCustomerByMsisdnRequestDTO.cs" />
+    <Compile Include="fullfilment\QueryCustomerByMsisdn\QueryCustomerByMsisdnRequestInternal.cs" />
+    <Compile Include="fullfilment\QueryCustomerByMsisdn\QueryCustomerByMsisdnResponseDTO.cs" />
+    <Compile Include="fullfilment\QueryCustomerByMsisdn\QueryCustomerByMsisdnResponseInternal.cs" />
+    <Compile Include="fullfilment\QuerySubscriptionAndServicesAndPromotionsByMsisdn\QuerySubscriptionAndServicesAndPromotionsByMsisdnBizOp.cs" />
+    <Compile Include="fullfilment\QuerySubscriptionAndServicesAndPromotionsByMsisdn\QuerySubscriptionAndServicesAndPromotionsByMsisdnDTORequest.cs" />
+    <Compile Include="fullfilment\QuerySubscriptionAndServicesAndPromotionsByMsisdn\QuerySubscriptionAndServicesAndPromotionsByMsisdnDTOResponse.cs" />
+    <Compile Include="fullfilment\QuerySubscriptionAndServicesAndPromotionsByMsisdn\QuerySubscriptionAndServicesAndPromotionsByMsisdnRequestInternal.cs" />
+    <Compile Include="fullfilment\QuerySubscriptionAndServicesAndPromotionsByMsisdn\QuerySubscriptionAndServicesAndPromotionsByMsisdnResponseInternal.cs" />
+    <Compile Include="fullfilment\SendSMS\SendSMSBizOp.cs" />
+    <Compile Include="fullfilment\SendSMS\SendSMSOrder.cs" />
+    <Compile Include="helper\HttpWebRequestHelper.cs" />
+    <Compile Include="helper\IHttpWebRequestHelper.cs" />
+    <Compile Include="fullfilment\SendSMS\SendSMSRequestDTO.cs" />
+    <Compile Include="fullfilment\SendSMS\SendSMSRequestInternal.cs" />
+    <Compile Include="fullfilment\SendSMS\SendSMSResponseDTO.cs" />
+    <Compile Include="fullfilment\SendSMS\SendSMSResponseInternal.cs" />
+    <Compile Include="helper\IPurchaseHelper.cs" />
+    <Compile Include="opssupport\QueryTroubleTicketsByCustomerId\QueryTroubleTicketsByCustomerIdBizOp.cs" />
+    <Compile Include="opssupport\QueryTroubleTicketsByCustomerId\QueryTroubleTicketsByCustomerIdRequestDTO.cs" />
+    <Compile Include="opssupport\QueryTroubleTicketsByCustomerId\QueryTroubleTicketsByCustomerIdRequestInternal.cs" />
+    <Compile Include="opssupport\QueryTroubleTicketsByCustomerId\QueryTroubleTicketsByCustomerIdResponseDTO.cs" />
+    <Compile Include="opssupport\QueryTroubleTicketsByCustomerId\QueryTroubleTicketsByCustomerIdResponseInternal.cs" />
+    <Compile Include="fullfilment\RegisterCustomer\RegisterCustomerBizOp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="fullfilment\RegisterCustomer\RegisterCustomerConfiguration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="fullfilment\RegisterCustomer\RegisterCustomerOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="fullfilment\RegisterCustomer\RegisterCustomerRequestDTO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="fullfilment\RegisterCustomer\RegisterCustomerRequestInternal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="fullfilment\RegisterCustomer\RegisterCustomerResponseDTO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="fullfilment\RegisterCustomer\RegisterCustomerResponseInternal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="fullfilment\UnFreezeCustomer\UnFreezeCustomerBizOp.cs" />
+    <Compile Include="fullfilment\UnFreezeCustomer\UnFreezeCustomerOrder.cs" />
+    <Compile Include="fullfilment\UnFreezeCustomer\UnFreezeCustomerRequestDTO.cs" />
+    <Compile Include="fullfilment\UnFreezeCustomer\UnFreezeCustomerRequestInternal.cs" />
+    <Compile Include="fullfilment\UnFreezeCustomer\UnFreezeCustomerResponseDTO.cs" />
+    <Compile Include="fullfilment\UnFreezeCustomer\UnFreezeCustomerResponseInternal.cs" />
+    <Compile Include="revenue\AddNonRecurringChargeToCustomer\AddNonRecurringChargeToCustomerBizOp.cs" />
+    <Compile Include="revenue\AddNonRecurringChargeToCustomer\AddNonRecurringChargeToCustomerOrder.cs" />
+    <Compile Include="revenue\AddNonRecurringChargeToCustomer\AddNonRecurringChargeToCustomerRequestDTO.cs" />
+    <Compile Include="revenue\AddNonRecurringChargeToCustomer\AddNonRecurringChargeToCustomerRequestInternal.cs" />
+    <Compile Include="revenue\AddNonRecurringChargeToCustomer\AddNonRecurringChargeToCustomerResponseDTO.cs" />
+    <Compile Include="revenue\AddNonRecurringChargeToCustomer\AddNonRecurringChargeToCustomerResponseInternal.cs" />
+    <Compile Include="revenue\CallDREQuerySubscriberPromotion\CallDREQuerySubscriberPromotionBizOp.cs" />
+    <Compile Include="revenue\CallDREQuerySubscriberPromotion\CallDREQuerySubscriberPromotionOrder.cs" />
+    <Compile Include="revenue\CallDREQuerySubscriberPromotion\CallDREQuerySubscriberPromotionRequestDTO.cs" />
+    <Compile Include="revenue\CallDREQuerySubscriberPromotion\CallDREQuerySubscriberPromotionRequestInternal.cs" />
+    <Compile Include="revenue\CallDREQuerySubscriberPromotion\CallDREQuerySubscriberPromotionResponseDTO.cs" />
+    <Compile Include="revenue\CallDREQuerySubscriberPromotion\CallDREQuerySubscriberPromotionResponseInternal.cs" />
+    <Compile Include="revenue\CallDREQuerySubscriberPromotion\QuerySubscriberPromotionReq.cs" />
+    <Compile Include="revenue\CallDREQuerySubscriberPromotion\QuerySubscriberPromotionRes.cs" />
+    <Compile Include="revenue\CallDREUpdateSubscriberPromotion\CallDREUpdateSubscriberPromotionBizOp.cs" />
+    <Compile Include="revenue\CallDREUpdateSubscriberPromotion\CallDREUpdateSubscriberPromotionOrder.cs" />
+    <Compile Include="revenue\CallDREUpdateSubscriberPromotion\CallDREUpdateSubscriberPromotionRequestDTO.cs" />
+    <Compile Include="revenue\CallDREUpdateSubscriberPromotion\CallDREUpdateSubscriberPromotionRequestInternal.cs" />
+    <Compile Include="revenue\CallDREUpdateSubscriberPromotion\CallDREUpdateSubscriberPromotionResponseDTO.cs" />
+    <Compile Include="revenue\CallDREUpdateSubscriberPromotion\CallDREUpdateSubscriberPromotionResponseInternal.cs" />
+    <Compile Include="revenue\CallDREUpdateSubscriberPromotion\UpdateSubscriberPromotionReq.cs" />
+    <Compile Include="revenue\CallDREUpdateSubscriberPromotion\UpdateSubscriberPromotionRes.cs" />
+    <Compile Include="revenue\GetActiveProductsOfCustomer\ActiveProductsConfiguration.cs" />
+    <Compile Include="revenue\GetActiveProductsOfCustomer\GetActiveProducsOfCustomerBizOp.cs" />
+    <Compile Include="revenue\GetActiveProductsOfCustomer\GetActiveProductsOfCustomerRequestDTO.cs" />
+    <Compile Include="revenue\GetActiveProductsOfCustomer\GetActiveProductsOfCustomerRequestInternal.cs" />
+    <Compile Include="revenue\GetActiveProductsOfCustomer\GetActiveProductsOfCustomerResponseDTO.cs" />
+    <Compile Include="revenue\GetActiveProductsOfCustomer\GetActiveProductsOfCustomerResponseInternal.cs" />
+    <Compile Include="revenue\QueryBalance\QueryBalanceBizOp.cs" />
+    <Compile Include="revenue\QueryBalance\QueryBalanceRequestDto.cs" />
+    <Compile Include="revenue\QueryBalance\QueryBalanceRequestInternal.cs" />
+    <Compile Include="revenue\QueryBalance\QueryBalanceResponseDto.cs" />
+    <Compile Include="revenue\QueryBalance\QueryBalanceResponseInternal.cs" />
+    <Compile Include="revenue\QueryTransferences\QueryTransferencesBizOp.cs" />
+    <Compile Include="revenue\QueryTransferences\QueryTransferencesRequestDTO.cs" />
+    <Compile Include="revenue\QueryTransferences\QueryTransferencesRequestInternal.cs" />
+    <Compile Include="revenue\QueryTransferences\QueryTransferencesResponseDTO.cs" />
+    <Compile Include="revenue\QueryTransferences\QueryTransferencesResponseInternal.cs" />
+    <Compile Include="fullfilment\PurchaseProductForCustomer\PurchaseProductForCustomerBizOp.cs" />
+    <Compile Include="fullfilment\PurchaseProductForCustomer\PurchaseProductForCustomerConfiguration.cs" />
+    <Compile Include="fullfilment\PurchaseProductForCustomer\PurchaseProductForCustomerOrder.cs" />
+    <Compile Include="fullfilment\PurchaseProductForCustomer\PurchaseProductForCustomerRequestDTO.cs" />
+    <Compile Include="fullfilment\PurchaseProductForCustomer\PurchaseProductForCustomerRequestInternal.cs" />
+    <Compile Include="fullfilment\PurchaseProductForCustomer\PurchaseProductForCustomerResponseDTO.cs" />
+    <Compile Include="fullfilment\PurchaseProductForCustomer\PurchaseProductForCustomerResponseInternal.cs" />
+    <Compile Include="fullfilment\QueryCustomerByCustomerId\QueryCustomerByCustomerIdBizOp.cs" />
+    <Compile Include="fullfilment\QueryCustomerByCustomerId\QueryCustomerByCustomerIdResponseDTO.cs" />
+    <Compile Include="fullfilment\QueryCustomerByCustomerId\QueryCustomerByCustomerIdRequestDTO.cs" />
+    <Compile Include="fullfilment\QueryCustomerByCustomerId\QueryCustomerByCustomerIdRequestInternal.cs" />
+    <Compile Include="fullfilment\QueryCustomerByCustomerId\QueryCustomerByCustomerIdResponseInternal.cs" />
+    <Compile Include="fullfilment\QueryAvailableMsisdn\QueryAvailableMsisdnBizOp.cs" />
+    <Compile Include="fullfilment\QueryAvailableMsisdn\QueryAvailableMsisdnRequestDTO.cs" />
+    <Compile Include="fullfilment\QueryAvailableMsisdn\QueryAvailableMsisdnRequestInternal.cs" />
+    <Compile Include="fullfilment\QueryAvailableMsisdn\QueryAvailableMsisdnResponseDTO.cs" />
+    <Compile Include="fullfilment\QueryAvailableMsisdn\QueryAvailableMsisdnResponseInternal.cs" />
+    <Compile Include="fullfilment\QueryCustomerByDocumentId\QueryCustomerByDocumentIdBizOp.cs" />
+    <Compile Include="fullfilment\QueryCustomerByDocumentId\QueryCustomerByDocumentIdRequestDTO.cs" />
+    <Compile Include="fullfilment\QueryCustomerByDocumentId\QueryCustomerByDocumentIdRequestInternal.cs" />
+    <Compile Include="fullfilment\QueryCustomerByDocumentId\QueryCustomerByDocumentIdResponseDTO.cs" />
+    <Compile Include="fullfilment\QueryCustomerByDocumentId\QueryCustomerByDocumentIdResponseInternal.cs" />
+    <Compile Include="fullfilment\QueryCustomerByExternalId\QueryCustomerByExternalIdBizOp.cs" />
+    <Compile Include="fullfilment\QueryCustomerByExternalId\QueryCustomerByExternalIdRequestDTO.cs" />
+    <Compile Include="fullfilment\QueryCustomerByExternalId\QueryCustomerByExternalIdRequestInternal.cs" />
+    <Compile Include="fullfilment\QueryCustomerByExternalId\QueryCustomerByExternalIdResponseDTO.cs" />
+    <Compile Include="fullfilment\QueryCustomerByExternalId\QueryCustomerByExternalIdResponseInternal.cs" />
+    <Compile Include="fullfilment\QueryPurchasedProductsByCustomerId\QueryPurchasedProductsByCustomerIdBizOp.cs" />
+    <Compile Include="fullfilment\QueryPurchasedProductsByCustomerId\QueryPurchasedProductsByCustomerIdRequestDTO.cs" />
+    <Compile Include="fullfilment\QueryPurchasedProductsByCustomerId\QueryPurchasedProductsByCustomerIdResponseDTO.cs" />
+    <Compile Include="fullfilment\QueryPurchasedProductsByCustomerId\QueryPurchasedProductsByCustomerIdRequestInternal.cs" />
+    <Compile Include="fullfilment\QueryPurchasedProductsByCustomerId\QueryPurchasedProductsByCustomerIdResponseInternal.cs" />
+    <Compile Include="fullfilment\QueryCustomerProduct\QueryCustomerProductBizOp.cs" />
+    <Compile Include="fullfilment\QueryCustomerProduct\QueryCustomerProductRequestDTO.cs" />
+    <Compile Include="fullfilment\QueryCustomerProduct\QueryCustomerProductRequestInternal.cs" />
+    <Compile Include="fullfilment\QueryCustomerProduct\QueryCustomerProductResponseDTO.cs" />
+    <Compile Include="fullfilment\QueryCustomerProduct\QueryCustomerProductResponseInternal.cs" />
+    <Compile Include="fullfilment\QuerySimCard\QuerySimCardBizOp.cs" />
+    <Compile Include="fullfilment\QuerySimCard\QuerySimCardRequestDTO.cs" />
+    <Compile Include="fullfilment\QuerySimCard\QuerySimCardRequestInternal.cs" />
+    <Compile Include="fullfilment\QuerySimCard\QuerySimCardResponseDTO.cs" />
+    <Compile Include="fullfilment\QuerySimCard\QuerySimCardResponseInternal.cs" />
+    <Compile Include="fullfilment\QuerySubscriptionByCustomerId\QuerySubscriptionByCustomerIdBizOp.cs" />
+    <Compile Include="fullfilment\QuerySubscriptionByCustomerId\QuerySubscriptionByCustomerIdRequestDTO.cs" />
+    <Compile Include="fullfilment\QuerySubscriptionByCustomerId\QuerySubscriptionByCustomerIdRequestInternal.cs" />
+    <Compile Include="fullfilment\QuerySubscriptionByCustomerId\QuerySubscriptionByCustomerIdResponseDTO.cs" />
+    <Compile Include="fullfilment\QuerySubscriptionByCustomerId\QuerySubscriptionByCustomerIdResponseInternal.cs" />
+    <Compile Include="fullfilment\ReserveMsisdn\ReserveMsisdnBizOp.cs" />
+    <Compile Include="fullfilment\ReserveMsisdn\ReserveMsisdnOrder.cs" />
+    <Compile Include="fullfilment\ReserveMsisdn\ReserveMsisdnRequestDTO.cs" />
+    <Compile Include="fullfilment\ReserveMsisdn\ReserveMsisdnRequestInternal.cs" />
+    <Compile Include="fullfilment\ReserveMsisdn\ReserveMsisdnResponseDTO.cs" />
+    <Compile Include="fullfilment\ReserveMsisdn\ReserveMsisdnResponseInternal.cs" />
+    <Compile Include="fullfilment\QuerySubscriptionByMsisdn\QuerySubscriptionByMsisdnDTORequest.cs" />
+    <Compile Include="fullfilment\QuerySubscriptionByMsisdn\QuerySubscriptionByMsisdnDTOResponse.cs" />
+    <Compile Include="fullfilment\QuerySubscriptionByMsisdn\QuerySubscriptionByMsisdnBizOp.cs" />
+    <Compile Include="fullfilment\QuerySubscriptionByMsisdn\QuerySubscriptionByMsisdnRequestInternal.cs" />
+    <Compile Include="fullfilment\QuerySubscriptionByMsisdn\QuerySubscriptionByMsisdnResponseInternal.cs" />
+    <Compile Include="fullfilment\SwapSimCard\SwapSimCardBizOp.cs" />
+    <Compile Include="fullfilment\SwapSimCard\SwapSimCardOrder.cs" />
+    <Compile Include="fullfilment\SwapSimCard\SwapSimCardRequestDTO.cs" />
+    <Compile Include="fullfilment\SwapSimCard\SwapSimCardRequestInternal.cs" />
+    <Compile Include="fullfilment\SwapSimCard\SwapSimCardResponseDTO.cs" />
+    <Compile Include="fullfilment\SwapSimCard\SwapSimCardResponseInternal.cs" />
+    <Compile Include="fullfilment\UnreserveMsisdn\UnreserveMsisdnBizOp.cs" />
+    <Compile Include="fullfilment\UnreserveMsisdn\UnreserveMsisdnOrder.cs" />
+    <Compile Include="fullfilment\UnreserveMsisdn\UnreserveMsisdnRequestDTO.cs" />
+    <Compile Include="fullfilment\UnreserveMsisdn\UnreserveMsisdnRequestInternal.cs" />
+    <Compile Include="fullfilment\UnreserveMsisdn\UnreserveMsisdnResponseDTO.cs" />
+    <Compile Include="fullfilment\UnreserveMsisdn\UnreserveMsisdnResponseInternal.cs" />
+    <Compile Include="fullfilment\UpdateCustomerData\UpdateCustomerDataBizOp.cs" />
+    <Compile Include="fullfilment\UpdateCustomerData\UpdateCustomerDataDTORequest.cs" />
+    <Compile Include="fullfilment\UpdateCustomerData\UpdateCustomerDataDTOResponse.cs" />
+    <Compile Include="fullfilment\UpdateCustomerData\UpdateCustomerDataInternalRequest.cs" />
+    <Compile Include="fullfilment\UpdateCustomerData\UpdateCustomerDataInternalResponse.cs" />
+    <Compile Include="fullfilment\UpdateCustomerData\UpdateCustomerOrder.cs" />
+    <Compile Include="helper\PurchaseHelper.cs" />
+    <Compile Include="OperationCodes.cs" />
+    <Compile Include="OperationDiscriminators.cs" />
+    <Compile Include="opssupport\QueryProductCatalogById\QueryProductCatalogByIdBizOp.cs" />
+    <Compile Include="opssupport\QueryProductCatalogById\QueryProductCatalogByIdRequestDTO.cs" />
+    <Compile Include="opssupport\QueryProductCatalogById\QueryProductCatalogByIdRequestInternal.cs" />
+    <Compile Include="opssupport\QueryProductCatalogById\QueryProductCatalogByIdResponseDTO.cs" />
+    <Compile Include="opssupport\QueryProductCatalogById\QueryProductCatalogByIdResponseInternal.cs" />
+    <Compile Include="OrderDiscriminators.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\revisionsync\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="revenue\BenefitTransfer\BenefitTransferBizOp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="revenue\BenefitTransfer\BenefitTransferConfiguration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="revenue\BenefitTransfer\BenefitTransferOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="revenue\BenefitTransfer\BenefitTransferRequestDTO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="revenue\BenefitTransfer\BenefitTransferRequestInternal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="revenue\BenefitTransfer\BenefitTransferResponseDTO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="revenue\BenefitTransfer\BenefitTransferResponseInternal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="revenue\ChargeService\ChargeServiceBizOp.cs" />
+    <Compile Include="revenue\ChargeService\ChargeServiceRequestDTO.cs" />
+    <Compile Include="revenue\ChargeService\ChargeServiceRequestInternal.cs" />
+    <Compile Include="revenue\ChargeService\ChargeServiceResponseDTO.cs" />
+    <Compile Include="revenue\ChargeService\ChargeServiceResponseInternal.cs" />
+    <Compile Include="revenue\ChargeService\Proxy\IApplyRecurringChargeInterface.cs" />
+    <Compile Include="revenue\ChargeService\Proxy\RecurringChargeService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fullfilment\PurchaseProductForCustomer\Provisioning\IProvisioning.cs" />
+    <Compile Include="revenue\ModifyCustomerCreditLimit\ModifyCustomerCreditLimitBizOp.cs" />
+    <Compile Include="revenue\ModifyCustomerCreditLimit\ModifyCustomerCreditLimitOrder.cs" />
+    <Compile Include="revenue\ModifyCustomerCreditLimit\ModifyCustomerCreditLimitRequestDTO.cs" />
+    <Compile Include="revenue\ModifyCustomerCreditLimit\ModifyCustomerCreditLimitRequestInternal.cs" />
+    <Compile Include="revenue\ModifyCustomerCreditLimit\ModifyCustomerCreditLimitResponseDTO.cs" />
+    <Compile Include="revenue\ModifyCustomerCreditLimit\ModifyCustomerCreditLimitResponseInternal.cs" />
+    <Compile Include="revenue\QueryCustomerRecurringCharges\QueryCustomerRecurringChargesBizOp.cs" />
+    <Compile Include="revenue\QueryCustomerRecurringCharges\QueryCustomerRecurringChargesRequestDTO.cs" />
+    <Compile Include="revenue\QueryCustomerRecurringCharges\QueryCustomerRecurringChargesRequestInternal.cs" />
+    <Compile Include="revenue\QueryCustomerRecurringCharges\QueryCustomerRecurringChargesResponseDTO.cs" />
+    <Compile Include="revenue\QueryCustomerRecurringCharges\QueryCustomerRecurringChargesResponseInternal.cs" />
+    <Compile Include="revenue\QueryCustomerUnbilledCharges\QueryCustomerUnbilledChargesBizOp.cs" />
+    <Compile Include="revenue\QueryCustomerUnbilledCharges\QueryCustomerUnbilledChargesRequestDTO.cs" />
+    <Compile Include="revenue\QueryCustomerUnbilledCharges\QueryCustomerUnbilledChargesRequestInternal.cs" />
+    <Compile Include="revenue\QueryCustomerUnbilledCharges\QueryCustomerUnbilledChargesResponseDTO.cs" />
+    <Compile Include="revenue\QueryCustomerUnbilledCharges\QueryCustomerUnbilledChargesResponseInternal.cs" />
+    <Compile Include="revenue\QueryInvoicesByCustomerId\QueryInvoicesByCustomerIdBizOp.cs" />
+    <Compile Include="revenue\QueryInvoicesByCustomerId\QueryInvoicesByCustomerIdConfiguration.cs" />
+    <Compile Include="revenue\QueryInvoicesByCustomerId\QueryInvoicesByCustomerIdRequestDTO.cs" />
+    <Compile Include="revenue\QueryInvoicesByCustomerId\QueryInvoicesByCustomerIdRequestInternal.cs" />
+    <Compile Include="revenue\QueryInvoicesByCustomerId\QueryInvoicesByCustomerIdResponseDTO.cs" />
+    <Compile Include="revenue\QueryInvoicesByCustomerId\QueryInvoicesByCustomerIdResponseInternal.cs" />
+    <Compile Include="revenue\QueryInvoicesByMSISDN\QueryInvoicesByMSISDNBizOp.cs" />
+    <Compile Include="revenue\QueryInvoicesByMSISDN\QueryInvoicesByMSISDNRequestDTO.cs" />
+    <Compile Include="revenue\QueryInvoicesByMSISDN\QueryInvoicesByMSISDNRequestInternal.cs" />
+    <Compile Include="revenue\QueryInvoicesByMSISDN\QueryInvoicesByMSISDNResponseDTO.cs" />
+    <Compile Include="revenue\QueryInvoicesByMSISDN\QueryInvoicesByMSISDNResponseInternal.cs" />
+    <Compile Include="revenue\QueryTransferences\TransferExecutionDTO.cs" />
+    <Compile Include="revenue\QueryUsageDetails\QueryUsageDetailsBizOp.cs" />
+    <Compile Include="revenue\QueryUsageDetails\QueryUsageDetailsRequestDTO.cs" />
+    <Compile Include="revenue\QueryUsageDetails\QueryUsageDetailsRequestInternal.cs" />
+    <Compile Include="revenue\QueryUsageDetails\QueryUsageDetailsResponseDTO.cs" />
+    <Compile Include="revenue\QueryUsageDetails\QueryUsageDetailsResponseInternal.cs" />
+    <Compile Include="SOAPExtensions\SoapExtensions.cs" />
+    <Compile Include="TransferredPromotionAndAmount.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="com.etak.core.bizops.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild" Condition="$(Configuration)==Nuget">
+    <!--<GetAssemblyFileVersion FilePathAssemblyInfo="$(ProjectDir)$(OutputPath)$(TargetName).dll">
+      <Output TaskParameter="AssemblyFileVersion" PropertyName="AssemblyFileVersion" />
+    </GetAssemblyFileVersion>
+    <Message Text="AssemblyFileVersion = $(AssemblyFileVersion)" />-->
+    <Message Text="&quot;$(SolutionDir)nugetpackages\nuget.exe&quot; pack &quot;$(ProjectPath)&quot; -IncludeReferencedProjects -Properties Configuration=Nuget;Platform=$(Platform) -OutputDirectory &quot;$(SolutionDir)nugetpackages&quot;" />
+    <Exec Command="&quot;$(SolutionDir)nugetpackages\nuget.exe&quot; pack &quot;$(ProjectPath)&quot; -IncludeReferencedProjects -Properties Configuration=Nuget;Platform=$(Platform) -OutputDirectory &quot;$(SolutionDir)nugetpackages&quot;" IgnoreExitCode="false" />
+  </Target>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
+</Project>

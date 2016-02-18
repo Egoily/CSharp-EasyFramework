@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+<class name="com.etak.core.model.CrmCustomersTopupPromotionInfo,com.etak.core.model" table="CRM_CUSTOMERS_TOPUP_PROMOTION" >
+<id name="TopupPromotionId" column="TOPUPPROMOTIONID" type="Int32"  length="4" unsaved-value="0">
+   <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+</id>
+<property name="ProcessId" column="PROCESSID" type="Int32" length="4" />
+<property name="TopupId" column="TOPUPID" type="Int64" length="8" />
+<property name="DealerId" column="DEALERID" type="Int32" length="4" />
+<property name="BonusId" column="BONUSID" type="Int32" length="4" />
+<property name="BonusPromotionId" column="BONUSPROMOTIONID" type="Int32" length="4" />
+<property name="CustomerId" column="CUSTOMERID" type="Int32" length="4" />
+<property name="Resource" column="RESOURCE" type="String" length="50" />
+<property name="PromotionPlanId" column="PROMOTIONPLANID" type="Int32" length="4" />
+<property name="Active" column="ACTIVE" type="Boolean" />
+<property name="StartDate" column="STARTDATE" type="DateTime" />
+<property name="EndDate" column="ENDDATE" type="DateTime" />
+<property name="ApplyDate" column="APPLYDATE" type="DateTime" />
+</class>
+
+</hibernate-mapping>

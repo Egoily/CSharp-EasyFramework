@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="com.etak.core.model.ActionInfo,com.etak.core.model" table="CRM_LIFECYCLE_ACTIONS" >
+      <composite-id>
+        <key-property name="ActionId" column="ACTIONId" type="Int32" length="4" />
+        <key-property name="DealerId" column="DEALERId" type="Int32" length="4" />
+      </composite-id>
+      <property name="AssemblyName" column="ASSEMBLYNAME" type="String" length="60" />
+      <property name="ClassName" column="CLASSNAME" type="String" length="240" />
+      <property name="MethodName" column="METHODNAME" type="String" length="100" />
+      <property name="Description" column="DESCRIPTION" type="String" length="1000" />
+      <property name="Parameters" column="PARAMETERS" type="String" length="200" />
+    </class>
+
+  </hibernate-mapping>

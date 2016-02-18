@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.MNPPortabilityMultiInfo,com.etak.core.model" table="CRM_MNP_PORTABILITY_MULTI" >
+    <id name="SeqID" column="SEQID" type="Int64" length="8" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>
+    <property name="ReferenceCode" column="REFERENCECODE" type="String" length="25" />
+    <property name="Msisdn" column="MSISDN" type="String" length="25" />
+    <property name="ICCID" column="ICC" type="String" length="25" />
+    <property name="STATUS" column="STATUS" type="Int32" length="4" />
+  </class>
+
+</hibernate-mapping>

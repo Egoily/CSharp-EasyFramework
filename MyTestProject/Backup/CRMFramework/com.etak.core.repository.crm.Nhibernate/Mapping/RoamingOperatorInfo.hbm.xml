@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.RoamingOperatorInfo,com.etak.core.model" table="RM_ROAMING_OPERATORS_E164" >
+    <id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="CCNDC" column="CCNDC" type="String" length="20" />
+    <property name="TSC" column="TSC" type="String" length="20" />
+    <property name="CountryName" column="COUNTRYNAME" type="String" length="400" />
+    <property name="OperatorName" column="OPERATORNAME" type="String" length="400" />
+    <property name="CC" column="CC" type="String" length="10" />
+    <property name="NDC" column="NDC" type="String" length="10" />
+    <property name="CountryIS02Code" column="COUNTRYISO2CODE" type="String" length="20" />
+    <property name="CountryIS03Code" column="COUNTRYISO3CODE" type="String" length="20" />
+  </class>
+
+</hibernate-mapping>

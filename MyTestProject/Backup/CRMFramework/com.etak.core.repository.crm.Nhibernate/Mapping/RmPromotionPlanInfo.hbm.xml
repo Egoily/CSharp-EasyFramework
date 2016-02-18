@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+	<class name="com.etak.core.model.RmPromotionPlanInfo,com.etak.core.model" table="RM_PROMOTIONPLAN" >
+		<cache usage="nonstrict-read-write" region="UserDealer"/>
+		<id name="PromotionPlanId" column="PROMOTIONPLANID" type="Int32"  length="4" unsaved-value="0">
+			<generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+		</id>
+		<property name="PromotionPlanName" column="PROMOTIONPLANNAME" type="String" length="200" />
+		<property name="DealerId" column="DEALERID" type="Int32" length="4" />
+		<property name="Exclusive" column="EXCLUSIVE" type="Boolean" />
+		<property name="Periodic" column="PERIODIC" type="Int32" length="4" />
+		<property name="Priority" column="PRIORITY" type="Int32" length="4" />
+		<property name="ResetLimit" column="RESETLIMIT" type="Boolean" />
+		<property name="MonthFee" column="MONTHFEE" type="Decimal" />
+		<property name="SubscriptionFee" column="SUBSCRIPTIONFEE" type="Decimal" />
+		<property name="SubscriptionPeriod" column="SUBSCRIPTIONPERIOD" type="Int32" length="4" />
+		<property name="SubscriptionPeriodUnit" column="SUBSCRIPTIONPERIODUNIT" type="Int32" length="4" />
+		<property name="StartDate" column="STARTDATE" type="DateTime" />
+		<property name="EndDate" column="ENDDATE" type="DateTime" />
+		<property name="ActiveWithoutCredit" column="ActiveWithoutCredit" type="Int32" />
+		<property name="PromotionCategoryId" column="PROMOTIONCATEGORYID" type="Int32" length="4" />
+		<property name="SelfCareVisible" column="SELFCAREVISIBLE" type="Int32" length="4" />
+		<property name="CustomerCareVisible" column="CUSTOMERCAREVISIBLE" type="Int32" length="4" />
+		<property name="APIVisible" column="APIVISIBLE" type="com.etak.core.model.APIVisible,com.etak.core.model" />
+		<property name="Prorate" column="PRORATE" type="Int32" length="4" />
+		<property name="ResetPeriod" column="RESETPERIOD" type="Int32" length="4" />
+		<property name="ResetPeriodUnit" column="RESETPERIODUNIT" type="Int32" length="4" />
+		<property name="DiscountMonthFeeForRenew" column="DISCOUNTMONTHFEEFORRENEW" type="Decimal" />
+		<property name="TimePointForChargeFee" column="TIMEPOINTFORCHARGEFEE" type="Int32" length="4" />
+		<property name="SmsNotification" column="SMSNOTIFICATION" type="Int32" length="4" />
+		<property name="NotificationSmsTemplateId" column="NOTIFICATIONSMSTEMPLATEID" type="Int32" length="8" />
+		<property name="RenewAutomatically" column="RENEWAUTOMATICALLY" type="Int32" length="4" />
+		<property name="DailyResetTime" column="DAILYRESETTIME" type="Int32" length="4" />
+		<property name="RestrictUnit" column="RESTRICTUNIT"/>
+		<property name="RestrictDuration" column="RESTRICTDURATION" type="Int32" length="4" />
+		<property name="RemoveImmediatelyFlag" column="REMOVEIMMEDIATELYFLAG" type="Int32" length="4" />
+		<property name="Accumulative" column="ACCUMULATIVE" type="Boolean" />
+		<property name="PromotionGroupId" column="PROMOTIONGROUPID" type="Int32" length="4" />
+
+		<!-- Add by Michael 2013-11-18 for Iusacell F&F-->
+		<property name="CrmMSISDNGroupTypeInfoID" column="MSISDNGROUPTYPEID" type="Int32"/>
+
+		<bag name="CrmCustomersUnpaidFeeInfoList" inverse="true" lazy="true" cascade="all-delete-orphan">
+			<key column="PROMOTIONPLANID" />
+			<one-to-many class="com.etak.core.model.CrmCustomersUnpaidFeeInfo,com.etak.core.model" />
+		</bag>
+
+		<bag name="RmPromotionPlanDetailInfoList" inverse="true" lazy="true" cascade="all-delete-orphan">
+			<cache usage="nonstrict-read-write" region="UserDealer"/>
+			<key column="PROMOTIONPLANID" />
+			<one-to-many class="com.etak.core.model.RmPromotionPlanDetailInfo,com.etak.core.model" />
+		</bag>
+
+		<bag name="RmPromotionPlanRuleInfoList" inverse="true" lazy="true" cascade="all-delete-orphan">
+			<cache usage="nonstrict-read-write" region="UserDealer"/>
+			<key column="PROMOTIONPLANID" />
+			<one-to-many class="com.etak.core.model.RmPromotionPlanRuleInfo,com.etak.core.model" />
+		</bag>
+
+		<bag name="RmSpecificNumberGroupInfoList" inverse="true" lazy="true" cascade="all-delete-orphan">
+      <cache usage="nonstrict-read-write" region="UserDealer"/>
+			<key column="PROMOTIONPLANID" />
+			<one-to-many class="com.etak.core.model.RmSpecificNumberGroupInfo,com.etak.core.model" />
+		</bag>
+
+	</class>
+
+</hibernate-mapping>

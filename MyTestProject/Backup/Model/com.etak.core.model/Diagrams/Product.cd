@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="com.etak.core.model.revenueManagement.Product">
+    <Position X="12.5" Y="8.5" Width="1.5" />
+    <AssociationLine Name="AssociatedPrmotionPlan" Type="com.etak.core.model.RmPromotionPlanInfo" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.5" Y="8.938" />
+        <Point X="11.923" Y="8.938" Type="JumpStart" />
+        <Point X="11.757" Y="8.938" Type="JumpEnd" />
+        <Point X="10.732" Y="8.938" />
+        <Point X="10.732" Y="14.184" />
+        <Point X="7.25" Y="14.184" />
+        <Point X="7.25" Y="13.934" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="IncompatibleProducts" Type="com.etak.core.model.revenueManagement.Product" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.5" Y="10" />
+        <Point X="12.25" Y="10" />
+        <Point X="12.25" Y="9.625" />
+        <Point X="12.5" Y="9.625" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.023" Y="0.041" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ChildProducts" Type="com.etak.core.model.revenueManagement.Product" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14" Y="9.812" />
+        <Point X="14.25" Y="9.812" />
+        <Point X="14.25" Y="9.5" />
+        <Point X="14" Y="9.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ParentProducts" Type="com.etak.core.model.revenueManagement.Product" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14" Y="9" />
+        <Point X="14.25" Y="9" />
+        <Point X="14.25" Y="8.625" />
+        <Point X="14" Y="8.625" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="VMO" Type="com.etak.core.model.DealerInfo" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.5" Y="9.281" />
+        <Point X="11.84" Y="9.281" />
+        <Point X="11.84" Y="8.375" />
+        <Point X="10.5" Y="8.375" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAGhAAAAAAgAAAAAAAACAAAAAEAAYAAAQAACAAAAAA=</HashCode>
+      <FileName>revenueManagement\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AssociatedBundle" />
+      <Property Name="AssociatedPackage" />
+      <Property Name="AssociatedPrmotionGroup" />
+      <Property Name="AssociatedPrmotionPlan" />
+      <Property Name="Names" />
+      <Property Name="Description" />
+      <Property Name="Type" />
+      <Property Name="VMO" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="IncompatibleProducts" />
+      <Property Name="ChargingOptions" />
+      <Property Name="ChildProducts" />
+      <Property Name="ParentProducts" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.BundleInfo">
+    <Position X="14.5" Y="11.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAGAABgICAAABAAAgAAAEAgAIgAAAAEAAAAA=</HashCode>
+      <FileName>BundleInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PackageInfo">
+    <Position X="15.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IgCAAAAAAAgABgAAgAAAAAAAAAAQAoAAAAMCAAAAAiA=</HashCode>
+      <FileName>PackageInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RmPromotionGroupInfo">
+    <Position X="17.75" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAUAgAIAEAAAAAAIAAAAAAAAAABAkgAAgAQE=</HashCode>
+      <FileName>promotion\RmPromotionGroupInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RmPromotionPlanInfo">
+    <Position X="6" Y="4.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EBEBCAISBgAFAIAEwQAJJEAmAQAAEJEARAAAAEQAEAA=</HashCode>
+      <FileName>promotion\RmPromotionPlanInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.ProductChargeOption">
+    <Position X="12.25" Y="11.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEACAgAAAAAAAAAAQgAAAAAIAAAAABAMAAAAA=</HashCode>
+      <FileName>revenueManagement\ProductChargeOption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MultiLingualDescription">
+    <Position X="12.25" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAABAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>MultiLingualDescription.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.ProductType">
+    <Position X="15.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>revenueManagement\ProductType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.DealerInfo">
+    <Position X="9" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABgAgUAASIIEAAJWCAABAgAAQASApAyIJBBhSAAQAE=</HashCode>
+      <FileName>DealerInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

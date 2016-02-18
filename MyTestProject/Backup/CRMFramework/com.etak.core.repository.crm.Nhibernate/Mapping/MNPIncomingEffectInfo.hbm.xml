@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+<class name="com.etak.core.model.MNPIncomingEffectInfo,com.etak.core.model" table="CRM_MNP_INCOMING_EFFECT" >
+  <id name="SEQID" column="SEQID" type="Int64" length="8" unsaved-value="0">
+    <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+      
+    </generator>
+  </id>
+  <property name="CustomerID" column="CUSTOMERID" type="Int32" />
+<property name="TempNO" column="TEMPNO" type="String" length="25" />
+<property name="PortedNO" column="PORTEDNO" type="String" length="25" />
+<property name="EffectDate" column="EFFECTDATE" type="DateTime" />
+<property name="Status" column="STATUS" type="Int32" length="4" />
+<property name="IncomingType" column="INCOMINGTYPE" type="Int32" length="4" />
+<property name="CreateDate" column="CREATEDATE" type="DateTime" />
+</class>
+
+</hibernate-mapping>

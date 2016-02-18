@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.MVNOSMSAccountInfo,com.etak.core.model" table="CRM_MVNO_SMS_ACCOUNT" >
+    <id name="AccountId" column="AccountId" type="Int32"  length="4">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="AppId" column="AppId" type="String" length="60" />
+    <property name="AppUserName" column="AppUserName" type="String" length="200" />
+    <property name="AppUserPassword" column="AppUserPassword" type="String" length="100" />
+    <property name="AppHost" column="AppHost" type="String" length="100" />
+    <property name="AppPath" column="AppPath" type="String" length="600" />
+    <property name="AppPort" column="AppPort" type="String" length="100" />
+    <property name="AppName" column="AppName" type="String" length="200" />
+    <property name="AppWord" column="AppWord" type="String" length="100" />
+    <property name="Sender" column="Sender" type="String" length="100" />
+    <property name="DlrUrl" column="DlrUrl" type="String" length="400" />
+    <property name="DealerId" column="DealerId" type="Int32" length="4" />
+  </class>
+</hibernate-mapping>
+

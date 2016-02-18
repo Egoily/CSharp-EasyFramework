@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.SettingDetailInfo,com.etak.core.model" table="CRM_LIFECYCLE_SETTINGS_DETAILS">
+    <cache usage="nonstrict-read-write" region="UserDealer"/>
+    <id name="DetailId" column="DETAILID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="SubItemId" column="SUBITEMID" type="Int32" length="4" />
+    <property name="Description" column="DESCRIPTION" type="String" length="600" />
+    <property name="Interval" column="INTERVAL" type="Int32" length="4" />
+    <property name="Unit" column="UNIT" type="String" length="60" />
+    <property name="Enabled" column="ENABLED" type="Boolean" />
+    <property name="SendReport" column="SENDREPORT" type="Boolean" />
+    <property name="SendSms" column="SENDSMS" type="Boolean" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />    
+    <many-to-one name="SettingInfo" class="com.etak.core.model.SettingInfo,com.etak.core.model">
+      <column name="SettingId" length="30" />
+    </many-to-one>
+  </class>
+
+</hibernate-mapping>

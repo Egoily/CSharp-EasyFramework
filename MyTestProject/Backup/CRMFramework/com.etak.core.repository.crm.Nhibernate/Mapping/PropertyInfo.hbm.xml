@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.PropertyInfo,com.etak.core.model" table="CRM_CUSTOMERS_PROPERTY" dynamic-update="true">
+    <id name="PropertyID" column="PROPERTYID" type="Int32" length="4">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="CustomerTypeID" column="CUSTOMERTYPEID" type="Int32" length="4" />
+    <property name="LanguageID" column="LANGUAGEID" type="Int32" length="4" />
+    <property name="PaymentMethodID" column="PAYMENTMETHODID" type="Int32" length="4" />
+    <property name="BillingMethodID" column="BILLINGMETHODID" type="Int32" length="4" />
+    <property name="ParentBilling" column="PARENT_BILLING" type="Boolean" />
+    <property name="TrafficTypeID" column="TRAFFICTYPEID" type="Int32" length="4" />
+    <property name="TaxPlanID" column="TAXPLANID" type="Int32" length="4" />
+    <property name="InvoiceDetails" column="INVOICEDETAILS" type="Boolean" />
+    <property name="Email" column="EMAIL" type="String" length="200" />
+    <property name="CountryCode" column="CountryCode" type="Int32" length="4" />
+    <property name="CPSCode" column="CPSCode" type="String" length="20" />
+    <property name="InvoiceDueDate" column="INVOICEDUEDATE" type="Int32" length="4" />
+    <property name="BillingEntity" column="BillingEntity" type="Int32" length="4" />
+    <property name="WithDrawPeriod" column="WITHDRAWPERIOD" type="Int32" length="4" />
+    <property name="UserName" column="USERNAME" type="String" length="50" />
+    <property name="PasswordDES" column="PASSWORD_DES" type="String" length="50" />
+    <property name="PasswordMD5" column="PASSWORD_MD5" type="String" length="32" />
+    <property name="Birthday" column="BIRTHDAY" type="DateTime" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <property name="UserID" column="USERID" type="Int32" length="4" />
+    <property name="IDType" column="IDTYPE" type="Int32" length="4" />
+    <property name="IDNumber" column="IDNUMBER" type="String" length="100" />
+    <property name="CreditScore" column="CREDITSCORE" type="Int32" length="4" />
+    <property name="OriginalDepositAmount" column="ORIGINALDEPOSITAMOUNT" type="Decimal" />
+    <property name="CurrentDepositAmount" column="CURRENTDEPOSITAMOUNT" type="Decimal" />
+    <property name="DepositDate" column="DEPOSITDATE" type="DateTime" />
+    <property name="PendingStatus" column="PENDINGSTATUS" type="Int32" length="4" />
+    <property name="LoyaltyPoint" column="LOYALTYPOINT" type="Int32" length="4" />
+    <property name="AcceptNews" column="ACCEPTNEWS" type="Boolean" />
+    <property name="LastLoyaltyDate" column="LASTLOYALTYDATE" type="DateTime" />
+    <property name="FF" column="FF" type="Boolean" />
+    <property name="BillingScenarioID" column="BILLINGSCENARIOID" type="Int32" length="4" />
+    <property name="ContractPeriod" column="CONTRACTPERIOD" type="Int32" length="4" />
+    <property name="CreditTransferType" column="CREDITTRANSFERTYPE" type="Int32" length="4" />
+    <property name="VATNO" column="VATNO" type="String" length="100" />
+    <property name="DepositStatus" column="DEPOSITSTATUS" type="Int32" length="4" />
+    <property name="CurrentDepositCredit" column="CURRENTDEPOSITCREDIT" type="Decimal" />
+    <property name="AutoTopupStatus" column="AUTOTOPUPSTATUS" type="Int32" length="4" />
+    <property name="AutoTopupAmount" column="AUTOTOPUPAMOUNT" type="Decimal" />
+    <property name="ActionCode" column="ACTIONCODE" type="String" length="20" />
+    <property name="DateUpdated" column="DATEUPDATED" type="DateTime" />
+    <property name="IDExpiryDate" column="IDEXPIREDATE" type="DateTime" />
+    <property name="MailType" column="MAILTYPE" type="String" length="1" />
+    <property name="SubscriberType" column="SUBSCRIBERTYPE" type="String" length="1" />
+    <property name="ContractNo" column="CONTRACTNO" type="Int32" length="4" />
+    <property name="DMCEndUserId" column="DMCEndUserId" type="String" length="20" />
+    <property name="ExternalId" column="EXTERNAL_CUSTOMERID" type="AnsiString" length="64" />
+    
+    <property name="NEEDLCSENDWELCOMESMS" column="NEEDLCSENDWELCOMESMS" type="Int32"/>
+    <property name="CPPCOUNTER_STARTDATE" column="CPPCOUNTER_STARTDATE" type="DateTime"/>
+    <property name="CPPCOUNTER" column="CPPCOUNTER" type="Int32"/>
+    <property name="NEXT_PACKAGEID" column="NEXT_PACKAGEID" type="Int32"/>
+    <property name="NEXT_PACKAGE_DATE" column="NEXT_PACKAGE_DATE" type="DateTime"/>
+    <property name="CustomerRole" column="CUSTOMER_ROLE" type="Int32" length="4" />
+    <property name="Cashdeposit" column="CASHDEPOSIT" type="Decimal" />
+    <property name="Roamingdeposit" column="ROAMINGDEPOSIT" type="Decimal" />
+    <property name="ReferrerCustomerID" column="REFERRER_CUSTOMERID" type="Int32" />
+    <property name="LowBalanceQuantity" column="LOW_BALANCE_ALERT_QUANTITY"  type="Decimal" />
+    <property name="DocumentValidateTime" column="DOCUMENT_VALIDATED_TIME" type="DateTime" />
+    <property name="DocumentValidateStatus" column="DOCUMENTVALIDATIONSTATUS" type="Int32" />
+    <property name="DocumentRejectReason" column="DOCUMENTVALIDATIONREJECTREASON" type="String" length="50" />
+    <property name="AlemCheck" column="SYNCHRONIZE_WITH_ALELM" type="String" length="1" />
+    <property name="CreditAdjustment" column="CREDITADJUSTMENT_AMOUNT" type="Decimal" />
+    <property name="ProfileUpdateSource" column="PROFILEUPDATESOURCE" type="Int32" />
+    <property name="ServiceSwitch" column="CUSTOM_SWITCH_BITS" type="Int64" length="8" />
+    <property name="LowRoamingQuantity" column="LOW_ROAMING_ALERT_QUANTITY" type="Decimal" />
+    <many-to-one name="CustomerInfo" class="com.etak.core.model.CustomerInfo,com.etak.core.model">
+      <column name="CUSTOMERID" length="30" />
+    </many-to-one>
+	</class>
+</hibernate-mapping>

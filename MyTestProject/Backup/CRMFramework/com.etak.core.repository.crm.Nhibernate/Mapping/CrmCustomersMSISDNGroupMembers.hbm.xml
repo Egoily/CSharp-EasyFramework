@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="com.etak.core.model.CrmCustomersMSISDNGroupMembers,com.etak.core.model" table="CRM_CUSTOMERS_MSISDNGROUP_MEMBERS" >
+    <composite-id>
+      <key-property name="CustomerID" column="CUSTOMERID" type="Int32" length="4"/>
+      <key-property name="MSISDNGroupTypeId" column="MSISDNGROUPTYPEID" type="Int32" length="4"/>
+      <key-property name="MSISDN" column="MSISDN" type="String" />
+    </composite-id>
+    <property name="StartDate" column="STARTDATE" type="DateTime" />
+  </class>
+</hibernate-mapping>

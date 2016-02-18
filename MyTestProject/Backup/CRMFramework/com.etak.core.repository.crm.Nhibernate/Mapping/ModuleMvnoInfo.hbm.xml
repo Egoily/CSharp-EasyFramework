@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.ModuleMvnoInfo,com.etak.core.model" table="SYS25_MODULE_MVNO" >
+    <id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+    </id>
+    <property name="ShowModuleID" column="SHOWMODULEID" type="Int32" length="4" />
+    <property name="ParentID" column="PARENTID" type="Int32" length="4" />
+    <property name="ModuleLevel" column="MODULELEVEL" type="Int32" length="4" />
+    <property name="ModuleName" column="MODULENAME" type="String" length="100" />
+    <property name="ModuleFullName" column="MODULEFULLNAME" type="String" length="510" />
+    <property name="MvnoID" column="MVNOID" type="Int32" length="4" />
+    <property name="CreateUser" column="CREATEUSER" type="Int32" length="4" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+  </class>
+
+</hibernate-mapping>

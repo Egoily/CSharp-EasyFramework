@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F2F11342-E395-4220-9E9B-4707783126EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.etak.core.repository.crm.Nhibernate</RootNamespace>
+    <AssemblyName>com.etak.core.repository.crm.Nhibernate</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\com.etak.core.repository.crm.Nhibernate.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\com.etak.core.repository.crm.Nhibernate.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Nuget\com.etak.core.repository.crm.Nhibernate.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FluentNHibernate.2.0.1.0\lib\net40\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.4.0.3.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Caches.SysCache2, Version=4.0.0.4000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.Caches.SysCache2.4.0.0.4000\lib\net40\NHibernate.Caches.SysCache2.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net40\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\revisionsync\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="CrmDefaultProvisionInfoRepositoryNH.cs" />
+    <Compile Include="CrmMobileMultipleImsiInfoRepositoryNH.cs" />
+    <Compile Include="CrmMobileNetworkInfoRepositoryNH.cs" />
+    <Compile Include="customer\AddressInfoRepositoryNH.cs" />
+    <Compile Include="BRSTaxCodeRepositoryNH.cs" />
+    <Compile Include="BRSTaxCodePostCodeRepositoryNH.cs" />
+    <Compile Include="BundleInfoRepositoryNH.cs" />
+    <Compile Include="customer\mapping\CrmCustomersBalanceTransationHistoryMap.cs" />
+    <Compile Include="dealer\mapping\MVNORetailMarginMap.cs" />
+    <Compile Include="dealer\MVNORetailMarginRepositoryNH.cs" />
+    <Compile Include="inventory\mapping\CustomerOrderMap.cs" />
+    <Compile Include="inventory\mapping\PhysicalResourceCostMap.cs" />
+    <Compile Include="inventory\mapping\ProductInventoryMap.cs" />
+    <Compile Include="inventory\mapping\OrderItemMap.cs" />
+    <Compile Include="inventory\mapping\PhysicalProductMap.cs" />
+    <Compile Include="IDGeneration\DealerIdGenerator.cs" />
+    <Compile Include="IDGeneration\GetNextIdForVMNO.cs" />
+    <Compile Include="IDGeneration\GetNextVMNO.cs" />
+    <Compile Include="inventory\mapping\PhysicalResourceSpecificationMap.cs" />
+    <Compile Include="inventory\ProductInventoryRepositoryNH.cs" />
+    <Compile Include="inventory\PhysicalResourceSpecificationRepositoryNH.cs" />
+    <Compile Include="Mapping\SessionInfoMap.cs" />
+    <Compile Include="MultiLingualDescriptionRepositoryNH.cs" />
+    <Compile Include="MVNODataRoamingLimitNotificationRepositoryNH.cs" />
+    <Compile Include="network\RMOperatorsInfoClassMap.cs" />
+    <Compile Include="operation\BusinessOperationRepositoryNH.cs" />
+    <Compile Include="operation\BussinessOperationExecutionRepositoryNH.cs" />
+    <Compile Include="operation\mapping\BusinessOperationMap.cs" />
+    <Compile Include="operation\mapping\BussinessOperationExecutionClassmap.cs" />
+    <Compile Include="operation\mapping\DynamicBusinessOperationClassMap.cs" />
+    <Compile Include="operation\mapping\OperationConfigurationClassMap.cs" />
+    <Compile Include="operation\mapping\OrderClassmap.cs" />
+    <Compile Include="operation\mapping\DuplicatedDiscriminatorChecker.cs" />
+    <Compile Include="operation\mapping\OrderDynamicMapper.cs" />
+    <Compile Include="operation\mapping\OrderTransitionMap.cs" />
+    <Compile Include="operation\mapping\LambdaReflectionUtils.cs" />
+    <Compile Include="operation\OperationConfigurationRepositoryNH.cs" />
+    <Compile Include="operation\OrderRepositoryNH.cs" />
+    <Compile Include="portability\MNPOriginalNrnInfoRepositoryNH.cs" />
+    <Compile Include="portability\MNPNpdbEsvfInfoRepositoryNH.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="portability\MNPSessionInfoRepositoryNH.cs" />
+    <Compile Include="promotion\mapping\AbstractPromotionRenewActionMap.cs" />
+    <Compile Include="promotion\mapping\CustomerPromotionAllowanceMap.cs" />
+    <Compile Include="provisioning\CarrierRepositoryNH.cs" />
+    <Compile Include="resource\ImeiAssnHistRepositoryNH.cs" />
+    <Compile Include="provisioning\Mapping\CarrierMap.cs" />
+    <Compile Include="resource\mapping\SIMCardInfoClassMap.cs" />
+    <Compile Include="revenueManagement\Mapping\PaymentInfoMap.cs" />
+    <Compile Include="revenueManagement\Mapping\ProductDependencyRelationMap.cs" />
+    <Compile Include="revenueManagement\PaymentInfoRepositoryNH.cs" />
+    <Compile Include="rules\CrmBussinessRuleInfoRepositoryNH.cs" />
+    <Compile Include="drl\CustomerDataRoamingLimitNotificationRepository.cs" />
+    <Compile Include="HolidayInfoRepositoryNH.cs" />
+    <Compile Include="portability\MNPPortabilityCustomerInfoRepositoryNH.cs" />
+    <Compile Include="portability\MNPPortabilityMultiPortInInfoRepositoryNH.cs" />
+    <Compile Include="promotion\mapping\RmPromotionGroupThresholdMap.cs" />
+    <Compile Include="promotion\RmPromotionGroupThresholdRepositoryNH.cs" />
+    <Compile Include="resource\MVNOAPNIPPoolInfoRepositoryNH.cs" />
+    <Compile Include="resource\DealerNumberInfoRepository.cs" />
+    <Compile Include="drl\RoamingBlackListInfoRepositoryNH.cs" />
+    <Compile Include="drl\CustomerDataRoamingLimitRepositoryNH.cs" />
+    <Compile Include="Factory\SessionManagement.cs" />
+    <Compile Include="HLRRequestErrorsRepositoryNH.cs" />
+    <Compile Include="Mapping\AddressInfoMap.cs" />
+    <Compile Include="portability\MNPIncomingEffectInfoRepositoryNH.cs" />
+    <Compile Include="portability\MNPPortabilityInfoRepositoryNH.cs" />
+    <Compile Include="ReportResourceInfoRepositoryNH.cs" />
+    <Compile Include="resource\mapping\DealerNumberInfoMap.cs" />
+    <Compile Include="resource\mapping\NumberPropertyInfoMap.cs" />
+    <Compile Include="resource\mapping\NumberInfoMap.cs" />
+    <Compile Include="resource\NumberInfoRepositoryNH.cs" />
+    <Compile Include="ProductInfoRepositoryNH.cs" />
+    <Compile Include="CrmCustomersBalanceTransationHistoryRepositoryNH.cs" />
+    <Compile Include="CRMCUSTOMERSDATESINFORepositoryNH.cs" />
+    <Compile Include="CrmCustomersMSISDNGroupMembersRepositoryNH.cs" />
+    <Compile Include="promotion\CrmCustomersPromotionGroupRepositoryNH.cs" />
+    <Compile Include="CrmCustomersResourceMbInfoRepositoryNH.cs" />
+    <Compile Include="CrmCustomersBundleAssignmentHistoryInfoRepositoryNH.cs" />
+    <Compile Include="MultiLingualInfoRepository.cs" />
+    <Compile Include="MVNOConfigActionInfoRepositoryNH.cs" />
+    <Compile Include="MVNOPromotionSMSConfigRepositoryNH.cs" />
+    <Compile Include="resource\ImeiAssnRepositoryNH.cs" />
+    <Compile Include="revenueManagement\Mapping\ChargeAdhocNonRecurringMap.cs" />
+    <Compile Include="revenueManagement\Mapping\ChargeAggregateMap.cs" />
+    <Compile Include="revenueManagement\Mapping\ChargeTaxesMap.cs" />
+    <Compile Include="revenueManagement\Mapping\UsageAggregateMap.cs" />
+    <Compile Include="network\RMOperatorsInfoRepositoryNH.cs" />
+    <Compile Include="rules\mapping\BussinessRuleMap.cs" />
+    <Compile Include="rules\mapping\PackageBussinessRulesMap.cs" />
+    <Compile Include="rules\mapping\PackageRuleMap.cs" />
+    <Compile Include="rules\mapping\PromotionGroupRuleMap.cs" />
+    <Compile Include="services\TroubleTicketInfoRepositoryNH.cs" />
+    <Compile Include="services\TroubleTicketQuestionInfoRepositoryNH.cs" />
+    <Compile Include="services\TTHistoryInfoRepositoryNH.cs" />
+    <Compile Include="SessionInfoRepositoryNH.cs" />
+    <Compile Include="subscription\catalog\Mapping\ProductOfferingCatalogMap.cs" />
+    <Compile Include="subscription\catalog\Mapping\ProductOfferingGroupOptionMap.cs" />
+    <Compile Include="subscription\catalog\Mapping\ProductOfferingGroupMap.cs" />
+    <Compile Include="subscription\catalog\Mapping\ProductOfferingMap.cs" />
+    <Compile Include="subscription\catalog\Mapping\ProductOfferingOptionMap.cs" />
+    <Compile Include="subscription\catalog\Mapping\ProductOfferingSpecificationOptionMap.cs" />
+    <Compile Include="subscription\catalog\Mapping\ProductOfferingTimeRangeMap.cs" />
+    <Compile Include="subscription\catalog\Mapping\ProductTypeOptionMap.cs" />
+    <Compile Include="subscription\catalog\ProductOfferingCatalogRepositoryNH.cs" />
+    <Compile Include="subscription\catalog\ProductOfferingGroupRepositoryNH.cs" />
+    <Compile Include="subscription\catalog\ProductOfferingRepositoryNH.cs" />
+    <Compile Include="topup\MVNOTopupBundleBasedInfoRepositoryNH.cs" />
+    <Compile Include="PackageDealerMappingInfoRepositoryNH.cs" />
+    <Compile Include="PackageRelationShipsRepositoryNH.cs" />
+    <Compile Include="PropertyInfoRepositoryNH.cs" />
+    <Compile Include="revenueManagement\AccountBalanceRepositoryNH.cs" />
+    <Compile Include="revenueManagement\AccountDataRepositoryNH.cs" />
+    <Compile Include="revenueManagement\AccountRepositoryNH.cs" />
+    <Compile Include="revenueManagement\AccountTimeRepositoryNH.cs" />
+    <Compile Include="revenueManagement\BillCycleRepositoryNH.cs" />
+    <Compile Include="revenueManagement\Mapping\ChargeDiscountMap.cs" />
+    <Compile Include="revenueManagement\Mapping\ChargeNonRecurringMap.cs" />
+    <Compile Include="revenueManagement\Mapping\ChargeRecurringMap.cs" />
+    <Compile Include="revenueManagement\Mapping\ChargeTargetMap.cs" />
+    <Compile Include="revenueManagement\Mapping\ProductTypeMap.cs" />
+    <Compile Include="revenueManagement\Mapping\TaxZipRangesMap.cs" />
+    <Compile Include="revenueManagement\TaxDefinitionRepositoryNH.cs" />
+    <Compile Include="revenueManagement\BillRunRepositoryNH.cs" />
+    <Compile Include="revenueManagement\ChargePriceRepositoryNH.cs" />
+    <Compile Include="revenueManagement\ChargeRepositoryNH.cs" />
+    <Compile Include="revenueManagement\CurrencyAccountRepositoryNH.cs" />
+    <Compile Include="revenueManagement\CustomerChargeRepositoryNH.cs" />
+    <Compile Include="revenueManagement\CustomerChargeScheduleRepositoryNH.cs" />
+    <Compile Include="revenueManagement\CustomerAccountAssociationRepositoryNH.cs" />
+    <Compile Include="revenueManagement\CustomerProductAssignmentRepositoryNH.cs" />
+    <Compile Include="revenueManagement\InvoiceRepositoryNH.cs" />
+    <Compile Include="revenueManagement\Mapping\BalanceForAccountMap.cs" />
+    <Compile Include="revenueManagement\Mapping\AccountDataMap.cs" />
+    <Compile Include="revenueManagement\Mapping\TaxRateMap.cs" />
+    <Compile Include="revenueManagement\Mapping\TaxDefinitionMap.cs" />
+    <Compile Include="revenueManagement\Mapping\CustomerAccountAssociationMap.cs" />
+    <Compile Include="Mapping\LanguageSpecificTextMap.cs" />
+    <Compile Include="revenueManagement\Mapping\AccountMap.cs" />
+    <Compile Include="revenueManagement\Mapping\AccountTimeMap.cs" />
+    <Compile Include="revenueManagement\Mapping\BillCycleMap.cs" />
+    <Compile Include="revenueManagement\Mapping\BillRunMap.cs" />
+    <Compile Include="revenueManagement\Mapping\ChargeMap.cs" />
+    <Compile Include="revenueManagement\Mapping\ChargePriceMap.cs" />
+    <Compile Include="revenueManagement\Mapping\AccountCurrencyMap.cs" />
+    <Compile Include="revenueManagement\Mapping\CustomerChargeMap.cs" />
+    <Compile Include="revenueManagement\Mapping\CustomerChargeScheduleMap.cs" />
+    <Compile Include="revenueManagement\Mapping\CustomerProductAssignmentMap.cs" />
+    <Compile Include="revenueManagement\Mapping\InvoiceMap.cs" />
+    <Compile Include="revenueManagement\Mapping\ProductChargeOptionMap.cs" />
+    <Compile Include="revenueManagement\Mapping\ProductMap.cs" />
+    <Compile Include="Mapping\MultiLingualDescriptionMap.cs" />
+    <Compile Include="revenueManagement\ProductChargeOptionRepositoryNH.cs" />
+    <Compile Include="revenueManagement\ProductRepositoryNH.cs" />
+    <Compile Include="RmPromotionGroupInfoRepositoryNH.cs" />
+    <Compile Include="RmPromotionGroupMemberRepositoryNH.cs" />
+    <Compile Include="topup\RmPromotionPlanTopupBasedParametersRepositoryNH.cs" />
+    <Compile Include="ServicesInfoRepositoryNH.cs" />
+    <Compile Include="SettingInfoRepositoryNH.cs" />
+    <Compile Include="TableBasedSequenceProvider.cs" />
+    <Compile Include="StatusChangedLogInfoRepositoryNH.cs" />
+    <Compile Include="TransitionInfoRepositoryNH.cs" />
+    <Compile Include="resource\NumberPropertyInfoRepositoryNH.cs" />
+    <Compile Include="LifecycleLogInfoRepositoryNH.cs" />
+    <Compile Include="LifecycleLogInfoExtendedRepositoryNH.cs" />
+    <Compile Include="EventInfoRepositoryNH.cs" />
+    <Compile Include="promotion\CrmCustomerPromotionPropertyInfoRepositoryNH.cs" />
+    <Compile Include="CrmCustomersBonusRelationShipInfoRepositoryNH.cs" />
+    <Compile Include="CrmCustomersExtraUsageInfoRepositoryNH.cs" />
+    <Compile Include="promotion\CrmCustomersPromotionInfoRepositoryNH.cs" />
+    <Compile Include="promotion\CrmCustomersPromotionOperationLogInfoRepositoryNH.cs" />
+    <Compile Include="MVNONotificationSettingInfoRepositoryNH.cs" />
+    <Compile Include="PackageInfoRepositoryNH.cs" />
+    <Compile Include="topup\CrmCustomersTopupBonusApplyCountInfoRepositoryNH.cs" />
+    <Compile Include="topup\CrmCustomersTopupPromotionApplyCountInfoRepositoryNH.cs" />
+    <Compile Include="CrmCustomersUnpaidFeeInfoRepositoryNH.cs" />
+    <Compile Include="topup\CrmMvnoTopupBonusDetailInfoRepositoryNH.cs" />
+    <Compile Include="topup\CrmMvnoTopupBonusPromotionInfoRepositoryNH.cs" />
+    <Compile Include="topup\HistoryInfoRepositoryNH.cs" />
+    <Compile Include="topup\MvnoTopupBonusInfoRepositoryNH.cs" />
+    <Compile Include="PricePlanPackageVodafoneFileMapRepositoryNH.cs" />
+    <Compile Include="topup\CrmMVNOPromotedTopupHistoryInfoRepositoryNH.cs" />
+    <Compile Include="promotion\OperationLogRepositoryNH.cs" />
+    <Compile Include="CRMMessageInfoRepositoryNH.cs" />
+    <Compile Include="RmPromotionPlanDetailInfoRepositoryNH.cs" />
+    <Compile Include="SettingExtendDetailInfoRepositoryNH.cs" />
+    <Compile Include="DictionaryInfoRepositoryNH.cs" />
+    <Compile Include="LanguageTypeInfoRepositoryNH.cs" />
+    <Compile Include="RmPromotionPlanInfoRepositoryNH.cs" />
+    <Compile Include="IDMappingInfoRepositoryNH.cs" />
+    <Compile Include="promotion\OperationInfoRepositoryNH.cs" />
+    <Compile Include="SIMCardInfoRepositoryNH.cs" />
+    <Compile Include="SmsLogInfoRepositoryNH.cs" />
+    <Compile Include="SmsLogQueueRepositoryNH.cs" />
+    <Compile Include="SmsTemplateInfoRepositoryNH.cs" />
+    <Compile Include="SqlServerNativeSequenceProvider.cs" />
+    <Compile Include="SystemConfigDataInfoRepositoryNH.cs" />
+    <Compile Include="LoginInfoRepositoryNH.cs" />
+    <Compile Include="usage\mapping\UsageDetailRecordMap.cs" />
+    <Compile Include="usage\UsageDetailRecordRepositoryNH.cs" />
+    <Compile Include="UserInfoRepositoryNH.cs" />
+    <Compile Include="UserDealerInfoRepositoryNH.cs" />
+    <Compile Include="dealer\DealerInfoRepositoryNH.cs" />
+    <Compile Include="MVNOPropertiesRepositoryNH.cs" />
+    <Compile Include="CustomerInfoRepositoryNH.cs" />
+    <Compile Include="Factory\CacheRegions.cs" />
+    <Compile Include="Factory\SessionFactoryHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceMBRepositoryNH.cs" />
+    <Compile Include="VoucherCardInfoRepositoryNH.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="com.etak.core.repository.crm.Nhibernate.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\ActionInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\AlertRuleInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\AlertRuleMessageInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\AlertRuleMessageTemplateInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\AutoTransferSettingInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\BankInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\BlockMsisdnInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\BRSChannel.hbm.xml" />
+    <EmbeddedResource Include="Mapping\BRSCurrency.hbm.xml" />
+    <EmbeddedResource Include="Mapping\BRSFinancialEntity.hbm.xml" />
+    <EmbeddedResource Include="Mapping\BRSTaxCode.hbm.xml" />
+    <EmbeddedResource Include="Mapping\BRSTaxCodePostCode.hbm.xml" />
+    <EmbeddedResource Include="Mapping\BundleInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\BundlePackageInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CallDirectionInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CallTypeInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmCustomerPromotionPropertyInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmCustomersBonusRelationShipInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmCustomersBundleAssignmentHistoryInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\CRMCUSTOMERSDATESINFO.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmCustomersExtraUsageInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmCustomersFfHistoryInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmCustomersFfInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmCustomersFfInitialChargeInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmCustomersMSISDNGroupMembers.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmCustomersMSISDNGroupMembersHistory.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmCustomersPromotionGroup.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmCustomersPromotionInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\CrmCustomersPromotionOperationLogInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\CrmCustomersResourceMbInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\CrmCustomersResourceMbPropertyInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\CrmCustomersSpecificNumberInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmCustomersTopupBonusApplyCountInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmCustomersTopupBonusInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmCustomersTopupPromotionApplyCountInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmCustomersTopupPromotionInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmCustomersUnpaidFeeInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\CrmDealersSettingsInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmDefaultProvisionInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CRMMessageInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmMVNOPromotedTopupHistoryInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmMvnoTopupBonusDetailInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmMvnoTopupBonusFailedPromotion.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmMvnoTopupBonusInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmMvnoTopupBonusPromotionInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmMVNOTopUpPromotionConfigInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CustomerCreditCard.hbm.xml" />
+    <EmbeddedResource Include="drl\mapping\CustomerDataRoamingLimit.hbm.xml" />
+    <EmbeddedResource Include="drl\mapping\CustomerDataRoamingLimitHistory.hbm.xml" />
+    <EmbeddedResource Include="drl\mapping\CustomerDataRoamingLimitNotification.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\CustomerInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\DateCategoryInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\DealerATMTopUpConfigInfo.hbm.xml" />
+    <EmbeddedResource Include="dealer\mapping\DealerBankInfo.hbm.xml" />
+    <EmbeddedResource Include="dealer\mapping\DealerICCInfo.hbm.xml" />
+    <EmbeddedResource Include="dealer\mapping\DealerIMSIInfo.hbm.xml" />
+    <EmbeddedResource Include="dealer\mapping\DealerInfo.hbm.xml" />
+    <EmbeddedResource Include="dealer\mapping\DealerLoyaltyInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\DealerPropertiesInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\DealerRatePlanInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\DealersVoucherMvnoInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\DictionaryInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\DIDInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\DREAPILogInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\EmailAttachmentInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\EmailInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\EventInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ExecuteTraceInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ExternalResourceMBInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\HistoryInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\HolidayInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\HuntingGroupDestInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\HuntingGroupInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\HuntingGroupSettingInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\IDMappingInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ImeiAssn.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ImeiAssnHist.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\ImportDetailsInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ImportLogInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ImportMasterInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\IncumbentInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\InterfaceHistory.hbm.xml" />
+    <EmbeddedResource Include="Mapping\InternationalZoneDetailInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\InternationalZoneInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\IPRangeInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\LanguageTypeInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\LevelInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\LifecycleHolidayInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\LifecycleLogInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\LifecycleLogInfoExtended.hbm.xml" />
+    <EmbeddedResource Include="Mapping\LifecycleStatusTransitionNotification.hbm.xml" />
+    <EmbeddedResource Include="Mapping\LoginInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\MappingInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MessageInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MessageUserInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MNPConsolidationLogInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MNPDeletionRequestInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MNPIncomingEffectInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MNPNpdbEsvfInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MNPOriginalNrnInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MNPOriginalNrnRangeInfo.hbm.xml" />
+    <EmbeddedResource Include="portability\mapping\MNPPortabilityCustomerInfo.hbm.xml" />
+    <EmbeddedResource Include="portability\mapping\MNPPortabilityInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="portability\mapping\MNPPortabilityMultiInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="portability\mapping\MNPPortabilityMultiPortInInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="portability\mapping\MNPPortabilitytAttachInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MNPReasonInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MNPSessionInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ModelInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ModuleElementsInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ModuleMvnoInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MultiLingualInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MVNOAPNBatchIPInfo.hbm.xml" />
+    <EmbeddedResource Include="resource\mapping\MVNOAPNIPPoolInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\MVNOAutoTopupNotificationLog.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MVNOAutoTopupNotificationProvisionLog.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MVNOAutoTopupNotificationQueue.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MVNOConfigActionInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MVNOCustomerPropertyInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MvnoDataRoamingLimitInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\MVNODataRoamingLimitNotification.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MVNOLanguageInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MVNONotificationSettingInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MVNOPromotionSMSConfig.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\MVNOPropertiesInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MVNOSMSAccountInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\MVNOTopupBundleBasedInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\NumberBatchInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\NumberHistoryInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\NumberRangeInfo.hbm.xml" />
+    <EmbeddedResource Include="promotion\mapping\OperationDetailLog.hbm.xml" />
+    <EmbeddedResource Include="promotion\mapping\OperationInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="promotion\mapping\OperationLog.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\OrganizationInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\PackageDealerMappingInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\PackageInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\PackageRelation.hbm.xml" />
+    <EmbeddedResource Include="Mapping\PackageRelationShips.hbm.xml" />
+    <EmbeddedResource Include="Mapping\PerformanceTraceConfigInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\PermissionInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\PreActivateLogInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\PricePlanPackageVodafoneFileMap.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ProductInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\PropertyInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\RatePlanDetailInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RatePlanInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RatePlanTranslationInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\REGEXInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RelateInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ReportResourceInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ResourceMBInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\ResourceMbPropertyInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RmblackwhitelistInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RmFfFeeInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RmFfOperatorListInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RmFixNumberRangeInfo.hbm.xml" />
+    <None Include="network\RMOperatorsInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="Mapping\RmPromotionGroupInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RmPromotionGroupMember.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RmPromotionPlanDetailInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\RmPromotionPlanInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rules\mapping\RmPromotionPlanRuleInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\RmPromotionPlanTopupBasedParameters.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RmSpecificNumberGroupInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RoamingBlackListInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RoamingOperatorInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RoamingSettingInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RoamingSmsConfigInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RoamingSmsHistoryInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RoamingZoneDetailInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RoamingZoneInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RoleInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\RolePermissionInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ServicesInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\SettingDetailInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\SettingExtendDetailInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\SettingInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\SIMCardMappingInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\SIMCardOrderInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\SmsLogInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\SmsLogQueue.hbm.xml" />
+    <EmbeddedResource Include="Mapping\SmsTemplateInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\SmsTempletInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\SpecialTelNumberInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\StatusChangedLogInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\StyleInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\SystemConfigDataInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\SystemConfigIDInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\ThemeInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\TimeCategoryInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\TransferBalanceInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\TransitionInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\TroubleTicketInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\TroubleTicketQuestionInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\TTDeptInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\TTHistoryInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\UnitCategoryInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\UserDealerInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\UserOrganizationInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\UserRoleInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\VoucherBatchInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\VoucherCardBakInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\VoucherCardInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\VPNGroupInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\VPNInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\VPNShortCodeInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\VPNSubscriberInfo.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\com.etak.core.model\com.etak.core.model.csproj">
+      <Project>{5c9b8900-251a-4566-a727-7576dbe53a3c}</Project>
+      <Name>com.etak.core.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository.crm\com.etak.core.repository.crm.csproj">
+      <Project>{5279c8d2-7523-4a27-aa03-8a9736de7e45}</Project>
+      <Name>com.etak.core.repository.crm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository.NHibernate\com.etak.core.repository.NHibernate.csproj">
+      <Project>{d93c29d3-5740-4b4f-8356-85a0f599f407}</Project>
+      <Name>com.etak.core.repository.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository\com.etak.core.repository.csproj">
+      <Project>{b3b4cfa1-4488-4e8c-aa22-b9f6206be866}</Project>
+      <Name>com.etak.core.repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\DealerOBOPRSInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\ResourceDID.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\CrmMobileMultipleImsiInfo.hbm.xml" />
+    <EmbeddedResource Include="Mapping\CrmMobileNetWorkInfo.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\CrmDefaultProvisionNetWorkInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\CrmDefaultProvisionRoamingSettingInfo.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\User.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\Remarks.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping\HLRRequestErrors.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="rules\mapping\PromotionGroupBusinessRules.hbm.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild" Condition="$(Configuration)==Nuget">
+    <Message Text="&quot;$(SolutionDir)nugetpackages\nuget.exe&quot; pack &quot;$(ProjectPath)&quot; -IncludeReferencedProjects -Properties Configuration=Nuget;Platform=$(Platform) -OutputDirectory &quot;$(SolutionDir)nugetpackages&quot;" />
+    <Exec Command="&quot;$(SolutionDir)nugetpackages\nuget.exe&quot; pack &quot;$(ProjectPath)&quot; -IncludeReferencedProjects -Properties Configuration=Nuget;Platform=$(Platform) -OutputDirectory &quot;$(SolutionDir)nugetpackages&quot;" IgnoreExitCode="false" />
+  </Target>
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
+</Project>

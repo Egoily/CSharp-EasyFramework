@@ -1,0 +1,1881 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.customer</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.InformationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.CustomerDomainErrors">
+            <summary>
+            Class that containst the definitions of all possible errors that happens in the customer domain
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.ErrorBase">
+            <summary>
+            First number for errors in customer domain.
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.CustomerProvidedIsNull">
+            <summary>
+            Customer provided is null,
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.MultiplePricesForCharge">
+            <summary>
+            The Charge had multiple prices for a given data, this happens only in case of miss configuration
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.ChargeWithNoPrice">
+            <summary>
+            The charge had no prices in a given date. this happens only in case of miss configuration
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.RecurringChargeNotExpected">
+            <summary>
+            The charge provided is recurring, but a non recurring charge was expected
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.MultipleRatesForTax">
+            <summary>
+            The Tax provided has more than 1 rate for the given date
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.TaxWithNoRates">
+            <summary>
+            The tax provided does not have any rate for the given date
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.ChargeIsNotRecurring">
+            <summary>
+            The charge definition provided is not Recurring so a Schedule can't be created. 
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.BankAccountIsNullOrEmpty">
+            <summary>
+            Bank Account is null or empty
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.InvalidBankAccountFormat">
+            <summary>
+            Bank Account Format is invalid
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.AccountNumberIsNullOrEmpty">
+            <summary>
+            Account number is null or empty
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.AccountNumberIsTooShort">
+            <summary>
+            Account number is too short
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.InvalidCharacterAccountNumber">
+            <summary>
+            Invalid Character in Account Number
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.BicIsNullOrEmpty">
+            <summary>
+            Bank Identifier Code is null or empty
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.InvalidCharacterBicCode">
+            <summary>
+            Invalid character inside BIC
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.IncorrectBankAccountLength">
+            <summary>
+            Incorrect bank account length
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.InvalidIbanCountry">
+            <summary>
+            Invalid Iban country
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.InvalidBankAccountLength">
+            <summary>
+            Invalid bank account length
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.IncorrectChecksum">
+            <summary>
+            Incorrect checksum
+            </summary>
+        </member>
+        <member name="F:com.etak.core.customer.CustomerDomainErrors.ValidateAccountNumberError">
+            <summary>
+            Validate account number error
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.helper.BankInfoDtoCompareHelper">
+            <summary>
+            comparator to compare BankInfo or BankInformationDTO
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.helper.BankInfoDtoCompareHelper.CompareInformation(com.etak.core.model.BankInfo,com.etak.core.model.BankInfo)">
+            <summary>
+            compare two BankInfo Object
+            </summary>
+            <param name="original"></param>
+            <param name="compareObj"></param>
+            <returns>true if the object are identical , false if  the object are not same </returns>
+        </member>
+        <member name="M:com.etak.core.customer.helper.BankInfoDtoCompareHelper.CompareInformation(com.etak.core.model.dto.BankInformationDTO,com.etak.core.model.dto.BankInformationDTO)">
+            <summary>
+            compare two BankInfo Object
+            </summary>
+            <param name="original"></param>
+            <param name="compareObj"></param>
+            <returns>true if the object are identical , false if  the object are not same </returns>
+        </member>
+        <member name="T:com.etak.core.customer.helper.CustomerBindHelper">
+            <summary>
+             Helper to bind all customer microservices inside MicroServiceManager
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.helper.CustomerBindHelper.LoadMicroservices">
+            <summary>
+            Register all microservices in MicroServiceManager
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.AddChargeScheduleToCustomer.AddChargeScheduleToCustomerRequest">
+            <summary>
+            Request for AddChargeScheduleToCustomer it contains the required input
+            information to create the schedule. 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeScheduleToCustomer.AddChargeScheduleToCustomerRequest.AccountCharged">
+            <summary>
+            Account to which each instance of the CustomerCharge this schedule will
+            generate will be assigned
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeScheduleToCustomer.AddChargeScheduleToCustomerRequest.ChargeInCatalog">
+            <summary>
+            Charge definition that this schedule represents
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeScheduleToCustomer.AddChargeScheduleToCustomerRequest.CustomerToBeCharged">
+            <summary>
+            Customer that is performed the operation and will be charged
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeScheduleToCustomer.AddChargeScheduleToCustomerRequest.NextChargeDate">
+            <summary>
+            The date in which the next charge will be generated,
+            Corresponds to NextChargeDate in CustomerChargeSchedule
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeScheduleToCustomer.AddChargeScheduleToCustomerRequest.NextPeriodNumber">
+            <summary>
+            The next period of the schedule, 
+            Corresponds to NextPeriodNumber in CustomerChargeSchedule 
+            <see cref="M:com.etak.core.model.revenueManagement.CustomerChargeSchedule.get_NextPeriodNumber"/>
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeScheduleToCustomer.AddChargeScheduleToCustomerRequest.PriceEffectiveDate">
+            <summary>
+            When the agreement with the customer is to use the price set at a given date to charge him, 
+            the date for which the price needs to be used.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeScheduleToCustomer.AddChargeScheduleToCustomerRequest.OriginatingPurchase">
+            <summary>
+            The CustomerProductAssingment that triggered applying the
+            charge to the customer
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.AddChargeScheduleToCustomer.AddChargeScheduleToCustomerResponse">
+            <summary>
+            Response from 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeScheduleToCustomer.AddChargeScheduleToCustomerResponse.CreatedSchedule">
+            <summary>
+            The CustomerChargeSchedule created in the execution of the 
+            micro service
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerRequest">
+            <summary>
+            Input class for add non recurring charge to customer
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerRequest.ChargeInCatalog">
+            <summary>
+            The charge definition/catalog that needs to be added to the customer
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerRequest.AccountToBeCharged">
+            <summary>
+            The account that will be charged with  this charge
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerRequest.InvoceToBeCharged">
+            <summary>
+            The invoice to which this charge will be added
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerRequest.CustomerToBeCharged">
+            <summary>
+            The customer that generated the charge
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerRequest.Comments">
+            <summary>
+            Comments to be added to the charge
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerRequest.ExternalReference">
+            <summary>
+            External reference provided by the external party that invocated the
+            Operation that generates this charge
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerRequest.ChargingDate">
+            <summary>
+            The date in which the charge needs to be added
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerRequest.Amount">
+            <summary>
+            Overriden amount for the charge
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerRequest.TaxToApply">
+            <summary>
+            The tax applied in the charge
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerRequest.CycleNumber">
+            <summary>
+            Cycle number in case of this charge is generated
+            as a consecuence of a CustomerChargeSchedule
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerRequest.PeriodNumber">
+            <summary>
+            Period number in case this charge is generated
+            as a consecuence of a CustomerChargeSchedule
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerRequest.Schedule">
+            <summary>
+            Schedule that is generating this charge (Optional)
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerRequest.CustomerProductAssingment">
+            <summary>
+            The CustomerProductAssoaciation to which this charge is related
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerRequest.AmountIsInformational">
+            <summary>
+            Defines if the amount is just for informational purposes
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerResponse">
+            <summary>
+            Output type for AddNonRecurringChargeToCustomer micro service
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerResponse.ChargeCreated">
+            <summary>
+            The charge generated during the execution of the micro service
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.AddCrmCustomersBalanceTransationHistory.AddCrmCustomersBalanceTransationHistoryRequest">
+            <summary>
+            AddCrmCustomersBalanceTransationHistoryRequest is used in AddCrmCustomersBalanceTransationHistoryMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddCrmCustomersBalanceTransationHistory.AddCrmCustomersBalanceTransationHistoryRequest.customersBalanceTransationHistory">
+            <summary>
+            the customersBalanceTransationHistory will be insert 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.AddCrmCustomersBalanceTransationHistory.AddCrmCustomersBalanceTransationHistoryResponse">
+            <summary>
+            AddCrmCustomersBalanceTransationHistoryResponse is used in AddCrmCustomersBalanceTransationHistoryMS
+              
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AddCrmCustomersBalanceTransationHistory.AddCrmCustomersBalanceTransationHistoryResponse.customersBalanceTransationHistory">
+            <summary>
+            the customersBalanceTransationHistory will be return  
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.AssignCustomerInfoToAccount.AssignCustomerInfoToAccountRequest">
+            <summary>
+            AssignCustomerInfoToAccountRequest is used in AssignCustomerInfoToAccountMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AssignCustomerInfoToAccount.AssignCustomerInfoToAccountRequest.StartDate">
+            <summary>
+            The start date in which this association begins
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AssignCustomerInfoToAccount.AssignCustomerInfoToAccountRequest.EndDate">
+            <summary>
+            The end date in which this association ends
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AssignCustomerInfoToAccount.AssignCustomerInfoToAccountRequest.CustomerInfo">
+            <summary>
+            CustomerInfo you wish to assign with request.Account
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AssignCustomerInfoToAccount.AssignCustomerInfoToAccountRequest.Account">
+            <summary>
+            Account you wish to assign with request.CustomerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.AssignCustomerInfoToAccount.AssignCustomerInfoToAccountResponse">
+            <summary>
+            AssignCustomerInfoToAccountResponse is used in AssignCustomerInfoToAccountMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.AssignCustomerInfoToAccount.AssignCustomerInfoToAccountResponse.CustomerAccountAssociation">
+            <summary>
+            CustomerAccountAssociation assigned
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CancelCustomerAccountAssociation.CancelCustomerAccountAssociationRequest">
+            <summary>
+            CancelCustomerAccountAssociationRequest is used CancelCustomerAccountAssociationMS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.message.CancelCustomerAccountAssociation.CancelCustomerAccountAssociationRequest.#ctor">
+            <summary>
+            Constructor of CancelCustomerAccountAssociationRequest, imporant to set EndTime to default DateTime.Now
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CancelCustomerAccountAssociation.CancelCustomerAccountAssociationRequest.EndTime">
+            <summary>
+            Optional, specify the end time you want to punt in cancel customerAccountAssociation, default is DateTime.Now
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CancelCustomerAccountAssociation.CancelCustomerAccountAssociationRequest.CustomerAccountAssociation">
+            <summary>
+             CustomerAccountAssociation you wish to cancel
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CancelCustomerAccountAssociation.CancelCustomerAccountAssociationResponse">
+            <summary>
+            CancelCustomerAccountAssociationResponse used in CancelCustomerAccountAssociationMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CancelCustomerAccountAssociation.CancelCustomerAccountAssociationResponse.CustomerAccountAssociation">
+            <summary>
+             CustomerAccountAssociation cancelled
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CancelCustomerChargeSchedule.CancelCustomerChargeScheduleRequest">
+            <summary>
+            CancelCustomerChargeScheduleRequest is used in microservice CancelCustomerChargeScheduleMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CancelCustomerChargeSchedule.CancelCustomerChargeScheduleRequest.PurchaseDate">
+            <summary>
+            Purchase date you wish to add in CustomerChargeSchedule
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CancelCustomerChargeSchedule.CancelCustomerChargeScheduleRequest.CustomerChargeSchedule">
+            <summary>
+             CustomerChargeSchedule you wish to cancel
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CancelCustomerChargeSchedule.CancelCustomerChargeScheduleResponse">
+            <summary>
+            CancelCustomerChargeScheduleResponse is used in microservice CancelCustomerChargeScheduleMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CancelCustomerChargeSchedule.CancelCustomerChargeScheduleResponse.CustomerChargeSchedule">
+            <summary>
+             CustomerChargeSchedule cancelled
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CloseTroubleTicketInfo.CloseTroubleTicketInfoRequest">
+            <summary>
+            Request for CloseTroubleTicketInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CloseTroubleTicketInfo.CloseTroubleTicketInfoRequest.TroubleTicketInfo">
+            <summary>
+            TroubleTicketInfo you wish to update
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CloseTroubleTicketInfo.CloseTroubleTicketInfoResponse">
+            <summary>
+            Response for CloseTroubleTicketInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CloseTroubleTicketInfo.CloseTroubleTicketInfoResponse.TroubleTicketInfo">
+            <summary>
+            Updated TroubleTicketInfo reponse
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateAccountCurrency.CreateAccountCurrencyRequest">
+            <summary>
+            CreateAccountCurrencyRequest is used in CreateAccountCurrency
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateAccountCurrency.CreateAccountCurrencyRequest.AccountCurrency">
+            <summary>
+            AccountCurrency you wish to create
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateAccountCurrency.CreateAccountCurrencyResponse">
+            <summary>
+            CreateAccountCurrencyResponse is used in CreateAccountCurrencyMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateAccountCurrency.CreateAccountCurrencyResponse.AccountCurrency">
+            <summary>
+            AccountCurrency created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateAddresses.CreateAddressesRequest">
+            <summary>
+            CreateAddressesRequest class used in microservice CreateAddressesMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateAddresses.CreateAddressesRequest.CustomerAddresses">
+            <summary>
+            CustomerAddress enumerable you wish to create
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateAddresses.CreateAddressesResponse">
+            <summary>
+            CreateAddressesResponse class used in microservice CreateAddressesMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateAddresses.CreateAddressesResponse.AddressInfos">
+            <summary>
+            AddressInfo enumerable created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateCustomerChargeSchedule.CreateCustomerChargeScheduleRequest">
+            <summary>
+            CreateCustomerChargeScheduleRequest is used in CreateCustomerChargeScheduleMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateCustomerChargeSchedule.CreateCustomerChargeScheduleRequest.CustomerChargeSchedule">
+            <summary>
+            CustomerChargeSchedule you wish to create
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateCustomerChargeSchedule.CreateCustomerChargeScheduleResponse">
+            <summary>
+            CreateCustomerChargeScheduleResponse is used in CreateCustomerChargeScheduleMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateCustomerChargeSchedule.CreateCustomerChargeScheduleResponse.CustomerChargeSchedule">
+            <summary>
+            CustomerChargeSchedule created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateCustomerCharge.CreateCustomerChargeRequest">
+            <summary>
+            CreateCustomerChargeRequest is used in CreateCustomerChargeMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateCustomerCharge.CreateCustomerChargeRequest.CustomerCharge">
+            <summary>
+            CustomerCharge you wish to create
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateCustomerCharge.CreateCustomerChargeResponse">
+            <summary>
+            CreateCustomerChargeResponse is used in CreateCustomerChargeMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateCustomerCharge.CreateCustomerChargeResponse.CustomerCharge">
+            <summary>
+            CustomerCharge created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateCustomerInfo.CreateCustomerInfoRequest">
+            <summary>
+            CreateCustomerInfoRequest class used in microservice CreateCustomerInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateCustomerInfo.CreateCustomerInfoRequest.CustomerInfo">
+            <summary>
+            CustomerInfo you wish to create
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateCustomerInfo.CreateCustomerInfoResponse">
+            <summary>
+            CreateCustomerInfoResponse class used in microservice CreateCustomerInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateCustomerInfo.CreateCustomerInfoResponse.CustomerInfo">
+            <summary>
+            CustomerInfo created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateInvoice.CreateInvoiceRequest">
+            <summary>
+            CreateInvoiceRequest is used in CreateInvoiceMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateInvoice.CreateInvoiceRequest.Invoice">
+            <summary>
+            Invoice you wish to create
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateInvoice.CreateInvoiceResponse">
+            <summary>
+            CreateInvoiceResponse is used in CreateInvoiceMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateInvoice.CreateInvoiceResponse.Invoice">
+            <summary>
+            Invoice created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateMNPIncomingEffectInfo.CreateMNPIncomingEffectInfoRequest">
+            <summary>
+            CreateMNPIncomingEffectInfoRequest is used in CreateMNPIncomingEffectInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateMNPIncomingEffectInfo.CreateMNPIncomingEffectInfoRequest.MNPIncomingEffectInfo">
+            <summary>
+            MNPIncomingEffectInfo you wish to insert
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateMNPIncomingEffectInfo.CreateMNPIncomingEffectInfoResponse">
+            <summary>
+            CreateMNPIncomingEffectInfoResponse  is used in CreateMNPIncomingEffectInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateMNPIncomingEffectInfo.CreateMNPIncomingEffectInfoResponse.MNPIncomingEffectInfo">
+            <summary>
+            MNPIncomingEffectInfo inserted
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateTroubleTicketInfo.CreateTroubleTicketInfoRequest">
+            <summary>
+            Request of CreateTroubleTicketInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateTroubleTicketInfo.CreateTroubleTicketInfoRequest.TroubleTicketInfo">
+            <summary>
+            Trouble Ticket you wish to create
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateTroubleTicketInfo.CreateTroubleTicketInfoResponse">
+            <summary>
+            Response of  CreateTroubleTicketInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateTroubleTicketInfo.CreateTroubleTicketInfoResponse.TroubleTicketInfo">
+            <summary>
+            Created Trouble Ticket Info
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateTTHistoryInfo.CreateTTHistoryInfoRequest">
+            <summary>
+            Request of CreateTTHistoryInfo
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateTTHistoryInfo.CreateTTHistoryInfoRequest.TTHistoryInfo">
+            <summary>
+            TTHistoryInfo to be created
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.CreateTTHistoryInfo.CreateTTHistoryInfoResponse">
+            <summary>
+            Response of CreateTTHistoryInfo
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.CreateTTHistoryInfo.CreateTTHistoryInfoResponse.TTHistoryInfo">
+            <summary>
+            Created TTHistoryInfo 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.DeleteCustomerInfo.DeleteCustomerInfoRequest">
+            <summary>
+            DeleteCustomerInfoRequest is used in microservice DeleteCustomerMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.DeleteCustomerInfo.DeleteCustomerInfoRequest.CustomerInfo">
+            <summary>
+            CustomerInfo you wish to delete
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.DeleteCustomerInfo.DeleteCustomerInfoResponse">
+            <summary>
+            DeleteCustomerInfoResponse used in microservice DeleteCustomerMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.DeleteCustomerInfo.DeleteCustomerInfoResponse.CustomerInfo">
+            <summary>
+            CustomerInfo deleted
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.FreezeCustomerInfo.FreezeCustomerInfoRequest">
+            <summary>
+            FreezeCustomerInfoRequest is used in microservice FreezeCustomerInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.FreezeCustomerInfo.FreezeCustomerInfoRequest.CustomerInfo">
+            <summary>
+            CustomerInfo you wish to freeze
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.FreezeCustomerInfo.FreezeCustomerInfoResponse">
+            <summary>
+            FreezeCustomerInfoResponse used in microservice FreezeCustomerInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.FreezeCustomerInfo.FreezeCustomerInfoResponse.CustomerInfo">
+            <summary>
+            CustomerInfo freezed
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetAccountById.GetAccountByIdRequest">
+            <summary>
+            GetAccountByIdRequest is used in GetAccountByIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetAccountById.GetAccountByIdRequest.AccountId">
+            <summary>
+            AccountId used to get Account
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetAccountById.GetAccountByIdResponse">
+            <summary>
+            GetAccountByIdResponse is used in GetAccountByIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetAccountById.GetAccountByIdResponse.Account">
+            <summary>
+            Account obtained
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetActiveCustomerAccountAssociationByDate.GetActiveCustomerAccountAssociationByDateRequest">
+            <summary>
+            GetActiveCustomerAccountAssociationByDateRequest is used in GetActiveCustomerAccountAssociationByMS
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.message.GetActiveCustomerAccountAssociationByDate.GetActiveCustomerAccountAssociationByDateRequest.#ctor">
+            <summary>
+            Constructor of GetActiveCustomerAccountAssociationByDateRequest, if ActiveCustomerAccountAssociationDate is set by default to DateTime.Now
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetActiveCustomerAccountAssociationByDate.GetActiveCustomerAccountAssociationByDateRequest.ActiveCustomerAccountAssociationDate">
+            <summary>
+            Optional, specify the active CustomerAccountAssociation date , default is DateTime.Now
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetActiveCustomerAccountAssociationByDate.GetActiveCustomerAccountAssociationByDateRequest.CustomerInfo">
+            <summary>
+            CustomerInfo you wish to get the active CustomerAccountAssociation
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetActiveCustomerAccountAssociationByDate.GetActiveCustomerAccountAssociationByDateResponse">
+            <summary>
+            GetActiveCustomerAccountAssociationByDateResponse is used in GetActiveCustomerAccountAssociationByDateMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetActiveCustomerAccountAssociationByDate.GetActiveCustomerAccountAssociationByDateResponse.CustomerAccountAssociation">
+            <summary>
+            CustomerAccountAssociation obtained
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetActiveProductsOfCustomer.GetActiveProductsOfCustomerRequest">
+            <summary>
+            GetActiveProductsOfCustomerRequest is used in GetActiveProductsOfCustomerMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetActiveProductsOfCustomer.GetActiveProductsOfCustomerRequest.Customer">
+            <summary>
+            CustomerInfo you wish to get the active products
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetActiveProductsOfCustomer.GetActiveProductsOfCustomerResponse">
+            <summary>
+            GetActiveProductsOfCustomerResponse is used in GetActiveProductsOfCustomerMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetActiveProductsOfCustomer.GetActiveProductsOfCustomerResponse.CustomerProductAssignments">
+            <summary>
+            Active products of customer obtained
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetCustomerChargeByCustomerIdAndInvoice.GetCustomerChargeByCustomerIdAndInvoiceRequest">
+            <summary>
+            GetCustomerChargeByCustomerIdAndInvoiceRequest is used in GetCustomerChargeByCustomerIdAndInvoiceMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerChargeByCustomerIdAndInvoice.GetCustomerChargeByCustomerIdAndInvoiceRequest.Invoice">
+            <summary>
+            Invoice used to get all CustomerCharges
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerChargeByCustomerIdAndInvoice.GetCustomerChargeByCustomerIdAndInvoiceRequest.CustomerId">
+            <summary>
+            CustomerId used to get all CustomerCharges
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetCustomerChargeByCustomerIdAndInvoice.GetCustomerChargeByCustomerIdAndInvoiceResponse">
+            <summary>
+            GetCustomerChargeByCustomerIdAndInvoiceResponse is used in GetCustomerChargeByCustomerIdAndInvoiceMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerChargeByCustomerIdAndInvoice.GetCustomerChargeByCustomerIdAndInvoiceResponse.CustomerCharges">
+            <summary>
+            Enumerable of CustomerCharge
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetCustomerChargesBetweenDatesAndCustomerId.GetCustomerChargesBetweenDatesAndCustomerIdRequest">
+            <summary>
+            GetCustomerChargesBetweenDatesAndCustomerIdRequest is used in GetCustomerChargesBetweenDatesAndCustomerIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerChargesBetweenDatesAndCustomerId.GetCustomerChargesBetweenDatesAndCustomerIdRequest.StartDate">
+            <summary>
+            The start date range
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerChargesBetweenDatesAndCustomerId.GetCustomerChargesBetweenDatesAndCustomerIdRequest.EndDate">
+            <summary>
+            The end date range
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerChargesBetweenDatesAndCustomerId.GetCustomerChargesBetweenDatesAndCustomerIdRequest.CustomerId">
+            <summary>
+            CustomerId used to get all CustomerCharges
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetCustomerChargesBetweenDatesAndCustomerId.GetCustomerChargesBetweenDatesAndCustomerIdResponse">
+            <summary>
+            GetCustomerChargesBetweenDatesAndCustomerIdResponse is used GetCustomerChargesBetweenDatesAndCustomerIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerChargesBetweenDatesAndCustomerId.GetCustomerChargesBetweenDatesAndCustomerIdResponse.CustomerCharges">
+            <summary>
+            Enumerable of CustomerCharge
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetCustomerChargesByCustomerId.GetCustomerChargesByCustomerIdRequest">
+            <summary>
+            GetCustomerChargesByCustomerIdRequest is used in GetCustomerChargesByCustomerIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerChargesByCustomerId.GetCustomerChargesByCustomerIdRequest.CustomerId">
+            <summary>
+            CustomerId used to get all CustomerCharges
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetCustomerChargesByCustomerId.GetCustomerChargesByCustomerIdResponse">
+            <summary>
+            GetCustomerChargesByCustomerIdResponse is used in microservice GetCustomerChargesByCustomerIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerChargesByCustomerId.GetCustomerChargesByCustomerIdResponse.CustomerCharges">
+            <summary>
+            Enumerable of CustomerCharge
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetChargeSchedulesByCustomer.GetCustomerChargeScheduleByCustomerRequest">
+            <summary>
+            GetChargeSchedulesByCustomerRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetChargeSchedulesByCustomer.GetCustomerChargeScheduleByCustomerRequest.Customer">
+            <summary>
+            Customer
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetChargeSchedulesByCustomer.GetCustomerChargeScheduleByCustomerResponse">
+            <summary>
+            GetChargeSchedulesByCustomerResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetChargeSchedulesByCustomer.GetCustomerChargeScheduleByCustomerResponse.CustomerChargeSchedule">
+            <summary>
+            CustomerChargeSchedule
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetCustomerChargesScheduleById.GetCustomerChargesScheduleByIdRequest">
+            <summary>
+            GetCustomerChargesScheduleByIdRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerChargesScheduleById.GetCustomerChargesScheduleByIdRequest.customerChargeId">
+            <summary>
+            customerChargeId
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetCustomerChargesScheduleById.GetCustomerChargesScheduleByIdResponse">
+            <summary>
+            GetCustomerChargesScheduleByIdResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerChargesScheduleById.GetCustomerChargesScheduleByIdResponse.CustomerChargeSchedule">
+            <summary>
+            CustomerChargeSchedule
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetCustomerInfoById.GetCustomerInfoByIdRequest">
+            <summary>
+            GetCustomerInfoByIdRequest class used in microservice GetCustomerInfoByIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerInfoById.GetCustomerInfoByIdRequest.CustomerId">
+            <summary>
+            CustomerId used to get CustomerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetCustomerInfoById.GetCustomerInfoByIdResponse">
+            <summary>
+            GetCustomerInfoByIdResponse class used in microservice GetCustomerInfoByIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerInfoById.GetCustomerInfoByIdResponse.CustomerInfo">
+            <summary>
+            CustomerInfo obtained
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetCustomerInfoChilds.GetCustomerInfoChildsRequest">
+            <summary>
+            GetCustomerInfosChildsRequest is used in microservice GetCustomerChildsMS 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerInfoChilds.GetCustomerInfoChildsRequest.CustomerId">
+            <summary>
+            CustomerId used to get enumerable of CustomerInfo childs
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetCustomerInfoChilds.GetCustomerInfoChildsResponse">
+            <summary>
+            GetCustomerInfoChildsResponse is used in microservice GetCustomerInfoChildsMS 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerInfoChilds.GetCustomerInfoChildsResponse.CustomerInfoChilds">
+            <summary>
+            Enumerable of CustomerInfos that are children of GetCustomerInfoChildsResponse.CustomerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetCustomerInfosByExternalId.GetCustomerInfosByExternalIdRequest">
+            <summary>
+            GetCustomerInfosByExternalIdRequest is used in microservice GetCustomerInfosByExternalIdMS 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerInfosByExternalId.GetCustomerInfosByExternalIdRequest.ExternalId">
+            <summary>
+            ExternalId use to get CustomerInfos
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetCustomerInfosByExternalId.GetCustomerInfosByExternalIdResponse">
+            <summary>
+            GetCustomerInfosByExternalIdResponse is used in microservice GetCustomerInfosByExternalIdMS 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomerInfosByExternalId.GetCustomerInfosByExternalIdResponse.CustomerInfos">
+            <summary>
+            Enumerable of CustomerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetCustomersActivePromotionInfo.GetCustomersActivePromotionInfoResponse">
+            <summary>
+            Response for GetCustomersActivePromotion, returns a list of active promotions.
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomersActivePromotionInfo.GetCustomersActivePromotionInfoResponse.Promotions">
+            <summary>
+            The list of active promotions.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetCustomersActivePromotionInfo.GetCustomersActivePromotionInfoRequest">
+            <summary>
+            The request for GetCustomersActivePromotionInfo, needs the customer to filter the promotions
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetCustomersActivePromotionInfo.GetCustomersActivePromotionInfoRequest.Customer">
+            <summary>
+            The customer owning the promotions.
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetHistoryInfoByCustomerId.GetHistoryInfoByCustomerIdRequest">
+            <summary>
+            GetHistoryInfoByCustomerIdRequest class used in microservice GetHistoryInfoByCustomerIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetHistoryInfoByCustomerId.GetHistoryInfoByCustomerIdRequest.CustomerId">
+            <summary>
+            CustomerId used to get History Info
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetHistoryInfoByCustomerId.GetHistoryInfoByCustomerIdResponse">
+            <summary>
+            GetHistoryInfoByCustomerIdResponse class used in microservice GetHistoryInfoByCustomerIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetHistoryInfoByCustomerId.GetHistoryInfoByCustomerIdResponse.HistoryInfos">
+            <summary>
+            Enumrable of HistoryInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetHistoryInfoWithInDatesOfResource.GetHistoryInfoWithInDatesOfResourceRequest">
+            <summary>
+            GetHistoryInfoWithInDatesOfResourceRequest class used in microservice GetHistoryInfoWithInDatesOfResourceMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetHistoryInfoWithInDatesOfResource.GetHistoryInfoWithInDatesOfResourceRequest.ResourceMB">
+            <summary>
+            CustomerId used to get history info
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetHistoryInfoWithInDatesOfResource.GetHistoryInfoWithInDatesOfResourceRequest.StartDate">
+            <summary>
+            The start date range
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetHistoryInfoWithInDatesOfResource.GetHistoryInfoWithInDatesOfResourceRequest.EndDate">
+            <summary>
+            The end date range
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetHistoryInfoWithInDatesOfResource.GetHistoryInfoWithInDatesOfResourceResponse">
+            <summary>
+            GetHistoryInfoWithInDatesOfResourceResponse class used in microservice GetHistoryInfoWithInDatesOfResourceMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetHistoryInfoWithInDatesOfResource.GetHistoryInfoWithInDatesOfResourceResponse.HistoryInfos">
+            <summary>
+            Enumrable of HistoryInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetInvoiceById.GetInvoiceByIdRequest">
+            <summary>
+            GetInvoiceByIdRequest
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetInvoiceById.GetInvoiceByIdRequest.InvoiceId">
+            <summary>
+            InvoiceID
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetInvoiceById.GetInvoiceByIdResponse">
+            <summary>
+            GetInvoiceByIdResponse
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetInvoiceById.GetInvoiceByIdResponse.Invoice">
+            <summary>
+            Invoice
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetInvoicesByCustomerIdAndLegalInvoiceNumber.GetInvoicesByCustomerIdAndLegalInvoiceNumberRequest">
+            <summary>
+            GetInvoicesByCustomerIdAndLegalInvoiceNumberRequest is used in GetInvoicesByCustomerIdAndLegalInvoiceNumberMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetInvoicesByCustomerIdAndLegalInvoiceNumber.GetInvoicesByCustomerIdAndLegalInvoiceNumberRequest.CustomerId">
+            <summary>
+            CustomerId used to get Invoices
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetInvoicesByCustomerIdAndLegalInvoiceNumber.GetInvoicesByCustomerIdAndLegalInvoiceNumberRequest.LegalInvoiceNumber">
+            <summary>
+            LegalInvoiceNumber used to get Invoices
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetInvoicesByCustomerIdAndLegalInvoiceNumber.GetInvoicesByCustomerIdAndLegalInvoiceNumberResponse">
+            <summary>
+            GetInvoicesByCustomerIdAndLegalInvoiceNumberResponse is used in GetInvoicesByCustomerIdAndLegalInvoiceNumberMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetInvoicesByCustomerIdAndLegalInvoiceNumber.GetInvoicesByCustomerIdAndLegalInvoiceNumberResponse.Invoices">
+            <summary>
+            Enumerable of Invoice with the specific CustomerId and LegalInvoiceNumber
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetLastNInvoicesByCustomerIdAndInvoiceStatuses.GetLastNInvoicesByCustomerIdAndInvoiceStatusesRequest">
+            <summary>
+            GetLastNInvoicesByCustomerIdAndInvoiceStatusesRequest is used in GetLastNInvoiceByCustomerIdAndInvoiceStatusMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetLastNInvoicesByCustomerIdAndInvoiceStatuses.GetLastNInvoicesByCustomerIdAndInvoiceStatusesRequest.InvoiceStatuses">
+            <summary>
+            List of Invoice Status used to get last N Invoices
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetLastNInvoicesByCustomerIdAndInvoiceStatuses.GetLastNInvoicesByCustomerIdAndInvoiceStatusesRequest.NumberOfInvoices">
+            <summary>
+            Number of invoices to get
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetLastNInvoicesByCustomerIdAndInvoiceStatuses.GetLastNInvoicesByCustomerIdAndInvoiceStatusesRequest.CustomerId">
+            <summary>
+            CustomerId used to get last N Invoices
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetLastNInvoicesByCustomerIdAndInvoiceStatuses.GetLastNInvoicesByCustomerIdAndInvoiceStatusesResponse">
+            <summary>
+            GetLastNInvoicesByCustomerIdAndInvoiceStatusesResponse is used in microservice GetLastNInvoicesByCustomerIdAndInvoiceStatusesMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetLastNInvoicesByCustomerIdAndInvoiceStatuses.GetLastNInvoicesByCustomerIdAndInvoiceStatusesResponse.Invoices">
+            <summary>
+            Enumerable of last N invoice
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetPropertyInfosByDocumentId.GetPropertyInfosByDocumentIdRequest">
+            <summary>
+            GetPropertyInfosByDocumentIdRequest is used in microservice GetPropertyInfosByDocumentIdMS 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetPropertyInfosByDocumentId.GetPropertyInfosByDocumentIdRequest.DocumentType">
+            <summary>
+            DocumentType of GetPropertyInfosByDocumentIdRequest.DocumentId 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetPropertyInfosByDocumentId.GetPropertyInfosByDocumentIdRequest.DocumentId">
+            <summary>
+            DocumentId used to get PropertyInfos
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetPropertyInfosByDocumentId.GetPropertyInfosByDocumentIdResponse">
+            <summary>
+            GetPropertyInfosByDocumentIdResponse is used in microservice GetPropertyInfosByDocumentIdMS 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetPropertyInfosByDocumentId.GetPropertyInfosByDocumentIdResponse.PropertyInfos">
+            <summary>
+            Enumerable of PropertyInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetTroubleTicketInfoByCustomerId.GetTroubleTicketInfoByCustomerIdRequest">
+            <summary>
+            Request of GetTroubleTicketInfoByCustomerId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetTroubleTicketInfoByCustomerId.GetTroubleTicketInfoByCustomerIdRequest.CustomerId">
+            <summary>
+            Customer id to be queried
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetTroubleTicketInfoByCustomerId.GetTroubleTicketInfoByCustomerIdResponse">
+            <summary>
+            Response of GetTroubleTicketInfoByCustomerId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetTroubleTicketInfoByCustomerId.GetTroubleTicketInfoByCustomerIdResponse.TroubleTicketInfos">
+            <summary>
+            List of TroubleTicketInfo which is queried
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetTroubleTicketInfoById.GetTroubleTicketInfoByIdRequest">
+            <summary>
+            Request for GetTroubleTicketInfoByIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetTroubleTicketInfoById.GetTroubleTicketInfoByIdRequest.TroubleTicketId">
+            <summary>
+            Trouble Ticket Id to get TroubleTicketInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetTroubleTicketInfoById.GetTroubleTicketInfoByIdResponse">
+            <summary>
+            Response For GetTroubleTicketInfoById
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetTroubleTicketInfoById.GetTroubleTicketInfoByIdResponse.TroubleTicketInfo">
+            <summary>
+            Trouble Tickete Information obtained
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetTroubleTicketInfoByTicketNumber.GetTroubleTicketInfoByTicketNumberRequest">
+            <summary>
+            Request of GetTroubleTicketInfoByTicketNumberMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetTroubleTicketInfoByTicketNumber.GetTroubleTicketInfoByTicketNumberRequest.TicketNumber">
+            <summary>
+            Ticket Number of TroubleTicketInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetTroubleTicketInfoByTicketNumber.GetTroubleTicketInfoByTicketNumberResponse">
+            <summary>
+            Response of GetTroubleTicketInfoByTicketNumber
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetTroubleTicketInfoByTicketNumber.GetTroubleTicketInfoByTicketNumberResponse.TroubleTicketInfo">
+            <summary>
+            TroubleTicketInfo with given ticket number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetTTQuestionInfoByTypeSubTypeAndMvnoid.GetTTQuestionInfoByTypeSubTypeAndMvnoidRequest">
+            <summary>
+            Request of GetTTQuestionInfoByTypeSubTypeAndMvnoidMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetTTQuestionInfoByTypeSubTypeAndMvnoid.GetTTQuestionInfoByTypeSubTypeAndMvnoidRequest.Type">
+            <summary>
+            Type of TroubleTicket
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetTTQuestionInfoByTypeSubTypeAndMvnoid.GetTTQuestionInfoByTypeSubTypeAndMvnoidRequest.SubType">
+            <summary>
+            SubType of TroubleTicket
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetTTQuestionInfoByTypeSubTypeAndMvnoid.GetTTQuestionInfoByTypeSubTypeAndMvnoidRequest.MvnoId">
+            <summary>
+            Mvno id
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.GetTTQuestionInfoByTypeSubTypeAndMvnoid.GetTTQuestionInfoByTypeSubTypeAndMvnoidResponse">
+            <summary>
+            Response of GetTTQuestionInfoByTypeSubTypeAndMvnoid
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.GetTTQuestionInfoByTypeSubTypeAndMvnoid.GetTTQuestionInfoByTypeSubTypeAndMvnoidResponse.TroubleTicketQuestionInfos">
+            <summary>
+            Collection of TroubleTicketQuestionInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.SubtractBalance.SubtractBalanceRequest">
+            <summary>
+            SubtractBalanceRequest is used in microservice SubtractBalanceMS 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.SubtractBalance.SubtractBalanceRequest.Amount">
+            <summary>
+            banlance amount
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.SubtractBalance.SubtractBalanceRequest.Customer">
+            <summary>
+            customerInfo
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.SubtractBalance.SubtractBalanceRequest.CustomerPromotionInfo">
+            <summary>
+            customer promotion need to subract balance
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.SubtractBalance.SubtractBalanceRequest.BusinessOperation">
+            <summary>
+            running business operation
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.SubtractBalance.SubtractBalanceResponse">
+            <summary>
+            SubtractBalanceResponse is used in microservice SubtractBalanceMS 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.UnFreezeCustomerInfo.UnFreezeCustomerInfoRequest">
+            <summary>
+            UnFreezeCustomerInfoRequest is used in microservice UnFreezeCustomerInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.UnFreezeCustomerInfo.UnFreezeCustomerInfoRequest.CustomerInfo">
+            <summary>
+            CustomerInfo you wish to unfreeze
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.UnFreezeCustomerInfo.UnFreezeCustomerInfoResponse">
+            <summary>
+            UnFreezeCustomerInfoResponse used in microservice UnFreezeCustomerInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.UnFreezeCustomerInfo.UnFreezeCustomerInfoResponse.CustomerInfo">
+            <summary>
+            CustomerInfo unfreezed
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.UpdateCustomerChargeSchedule.UpdateCustomerChargeScheduleRequest">
+            <summary>
+            UpdateCustomerChargeScheduleRequest is used in miroservice UpdateCustomerChargeScheduleMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.UpdateCustomerChargeSchedule.UpdateCustomerChargeScheduleRequest.CustomerChargeSchedule">
+            <summary>
+            CustomerChargeSchedule you wish to update
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.UpdateCustomerChargeSchedule.UpdateCustomerChargeScheduleResponse">
+            <summary>
+            UpdateCustomerChargeScheduleResponse is used in UpdateCustomerChargeScheduleMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.UpdateCustomerChargeSchedule.UpdateCustomerChargeScheduleResponse.CustomerChargeSchedule">
+            <summary>
+            CustomerChargeSchedule updated
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.UpdateCustomerInfo.UpdateCustomerInfoRequest">
+            <summary>
+            UpdateCustomerInfoRequest  is used in microservice UpdateCustomerInfoMS 
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.UpdateCustomerInfo.UpdateCustomerInfoRequest.CustomerInfo">
+            <summary>
+            CustomerInfo you wish to update
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.message.UpdateCustomerInfo.UpdateCustomerInfoResponse">
+            <summary>
+            UpdateCustomerInfoResponse  is used in microservice UpdateCustomerInfoMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.customer.message.UpdateCustomerInfo.UpdateCustomerInfoResponse.CustomerInfo">
+            <summary>
+            CustomerInfo updated
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.AddChargeScheduleToCustomerMS">
+            <summary>
+            Adss a Charge schedule to customer
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.AddChargeScheduleToCustomerMS.Process(com.etak.core.customer.message.AddChargeScheduleToCustomer.AddChargeScheduleToCustomerRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Method that performs the micro service implementation
+            </summary>
+            <param name="request">the micro service request with the necesary data to create the charge</param>
+            <param name="invoker">the information about the Invokation environment</param>
+            <returns>
+            the result of the micro service
+            </returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.AddChargeToCustomerMS">
+            <summary>
+            Micro service that adds a Non Recurring charge to a customer
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.AddChargeToCustomerMS.Process(com.etak.core.customer.message.AddChargeToCustomer.AddChargeToCustomerRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Adds the charge to a customer, linking it to an invoince and 
+            an account
+            </summary>
+            <param name="request">the request with the parameters required to perform the operation</param>
+            <param name="invoker">the response with the charge created/added</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.AddCrmCustomersBalanceTransationHistoryMS">
+            <summary>
+            Micro service that adds a balance transation history to a customer
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.AddCrmCustomersBalanceTransationHistoryMS.Process(com.etak.core.customer.message.AddCrmCustomersBalanceTransationHistory.AddCrmCustomersBalanceTransationHistoryRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Add the balance transation history to a customer
+            </summary>
+            <param name="request">the request with the parameters required to perform the operation</param>
+            <param name="invoker">the response with the balance transation history added</param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.AssignCustomerInfoToAccountMS">
+            <summary>
+            Microservice : Assign CustomerInfo to Account
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.AssignCustomerInfoToAccountMS.Process(com.etak.core.customer.message.AssignCustomerInfoToAccount.AssignCustomerInfoToAccountRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Assign request.Customer to request.Account
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>AssignCustomerInfoToAccountResponse with CustomerAccountAssociation (response.CustomerAccountAssociation)</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.CancelCustomerAccountAssociationMS">
+            <summary>
+            Microservice : cancel CustomerAccountAssociation
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.CancelCustomerAccountAssociationMS.Process(com.etak.core.customer.message.CancelCustomerAccountAssociation.CancelCustomerAccountAssociationRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            logical cancel CustomerAccountAssociation, in fact is updating EndTime of CustomerAccount 
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CancelCustomerAccountAssociationResponse with CustomerAccountAssociation updated </returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.CancelCustomerChargeScheduleMS">
+            <summary>
+            Microservice cancel CustomerChargeSchedule
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.CancelCustomerChargeScheduleMS.Process(com.etak.core.customer.message.CancelCustomerChargeSchedule.CancelCustomerChargeScheduleRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Change state of CustomerChargeSchedule to Disable ,  Cancel active recurring charges by updating field  status = ScheduleChargeStatus.Disabled , NextChargeDate = null, UpdateDate = purchaseDate of CustomerChargeSchedule entity 
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CancelCustomerChargeScheduleResponse with the cancelled CustomerChargeSchedule (response.CustomerChargeSchedule)</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.CloseTroubleTicketInfoMS">
+            <summary>
+            Microservice : update TroubleTicketInfo 
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.CloseTroubleTicketInfoMS.Process(com.etak.core.customer.message.CloseTroubleTicketInfo.CloseTroubleTicketInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Close Trouble Ticket
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns> Closed trouble ticket status and None Department</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.CreateAccountCurrencyMS">
+            <summary>
+            Microservice : Create new account currency
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.CreateAccountCurrencyMS.Process(com.etak.core.customer.message.CreateAccountCurrency.CreateAccountCurrencyRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Create a new record of AccountCurrency using request.AccountCurrency
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CreateAccountCurrencyResponse with the created object CustomerChargeScheduleAccountCurrency</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.CreateAddressesMS">
+            <summary>
+             Microservice : Create only the addresses that do not exist
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.CreateAddressesMS.Process(com.etak.core.customer.message.CreateAddresses.CreateAddressesRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Check all addresses inside request.CustomerAddressList, if not exists, create
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CreateAddressesResponse with enumerable of AddressInfo(request.AddressInfos), with all the addresses created</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.CreateCustomerChargeMS">
+            <summary>
+            Microservice : create new Customer Charge
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.CreateCustomerChargeMS.Process(com.etak.core.customer.message.CreateCustomerCharge.CreateCustomerChargeRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Create a new record of CustomerCharge using request.CustomerCharge
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CreateCustomerChargeResponse with the created object CustomerCharge (response.CustomerCharge)</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.CreateCustomerChargeScheduleMS">
+            <summary>
+            Microservice : create new Customer Charge Schedule
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.CreateCustomerChargeScheduleMS.Process(com.etak.core.customer.message.CreateCustomerChargeSchedule.CreateCustomerChargeScheduleRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Create a new record of CustomerChargeSchedule using request.CustomerChargeSchedule
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CreateCustomerChargeScheduleResponse with the created object CustomerChargeSchedule</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.CreateCustomerInfoMS">
+            <summary>
+            Microservice : Create a new record of CustomerInfo
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.CreateCustomerInfoMS.Process(com.etak.core.customer.message.CreateCustomerInfo.CreateCustomerInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+             Create a new record of CustomerInfo using request.CustomerInfo
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CreateCustomerInfoResponse with the created object CustomerInfo(response.CustomerInfo)</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.CreateInvoiceMS">
+            <summary>
+            Microservice : Create a new record of Invoice
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.CreateInvoiceMS.Process(com.etak.core.customer.message.CreateInvoice.CreateInvoiceRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Create a new record of Invoice using request.Invoice
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CreateInvoiceResponse with the created object Invoice</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.CreateMNPIncomingEffectInfoMS">
+            <summary>
+            Microservice : Create a new record of MNPIncomingEffectInfo.
+            Save to CRM_MNP_INCOMING_EFFECT
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.CreateMNPIncomingEffectInfoMS.Process(com.etak.core.customer.message.CreateMNPIncomingEffectInfo.CreateMNPIncomingEffectInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Create a new record of MNPIncomingEffectInfo using request.MNPIncomingEffectInfo
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CreateMNPIncomingEffectInfoResponse with the created object MNPIncomingEffectInfo</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.CreateTroubleTicketInfoMS">
+            <summary>
+            Create new Trouble Ticket Info
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.CreateTroubleTicketInfoMS.Process(com.etak.core.customer.message.CreateTroubleTicketInfo.CreateTroubleTicketInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Create new record of TroubleTicketInfo using request.TroubleTicketInfo
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>Created Object of TroubleTicketInfo</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.CreateTTHistoryInfoMS">
+            <summary>
+            Microservice : Create a new record of TTHistoryInfo
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.CreateTTHistoryInfoMS.Process(com.etak.core.customer.message.CreateTTHistoryInfo.CreateTTHistoryInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+             Create a new record of TTHistoryInfo using request.TTHistoryInfo
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>CreateTTHistoryInfoResponse with the created object TTHistoryInfo(response.TTHistoryInfo)</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.DeleteCustomerInfoMS">
+            <summary>
+            Microservice : delete customerInfo. Is a logical delete, change the StatusID of CustomerInfo into CustomerStatus.Deleted 
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.DeleteCustomerInfoMS.Process(com.etak.core.customer.message.DeleteCustomerInfo.DeleteCustomerInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Change the StatusID of request.CustomerInfo into CustomerStatus.Deleted and update 
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>DeleteCustomerInfoResponse with the deleted object CustomerInfo</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.FreezeCustomerInfoMS">
+            <summary>
+            Microservice : freeze customerInfo. Change state of Customer.PropertyInfo[0].PendingStatus to CustomerStatus.Regulatory 
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.FreezeCustomerInfoMS.Process(com.etak.core.customer.message.FreezeCustomerInfo.FreezeCustomerInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Change state of Customer.PropertyInfo[0].PendingStatus to CustomerStatus.Regulatory 
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>DeleteCustomerInfoResponse with the deleted object CustomerInfo</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetAccountByIdMS">
+            <summary>
+            Microservice : Get Account based on given Id
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetAccountByIdMS.Process(com.etak.core.customer.message.GetAccountById.GetAccountByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get Account based on given request.AccountId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetAccountByIdResponse with Account (response.Account)</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetActiveCustomerAccountAssociationByDateMS">
+            <summary>
+            Microservice : get the first active CustomerAccountAssociation by date
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetActiveCustomerAccountAssociationByDateMS.Process(com.etak.core.customer.message.GetActiveCustomerAccountAssociationByDate.GetActiveCustomerAccountAssociationByDateRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            get the first active CustomerAccountAssociation by request.Date
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetActiveCustomerAccountAssociationByDateResponse with the first active CustomerAccountAssociation(response.CustomerAccountAssociation)</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetActiveProductsOfCustomerMS">
+            <summary>
+            Gets all the active products for the customer, within a time range
+            
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetActiveProductsOfCustomerMS.Process(com.etak.core.customer.message.GetActiveProductsOfCustomer.GetActiveProductsOfCustomerRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Main process for the microservice
+            </summary>
+            <param name="request">Request with an the input parameters</param>
+            <param name="invoker">The request invokation environment</param>
+            <returns>The list of matching operations</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetCustomerChargeByCustomerIdAndInvoiceMS">
+            <summary>
+            Microservice : get customer charges information based on given customerId and  Invoice
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetCustomerChargeByCustomerIdAndInvoiceMS.Process(com.etak.core.customer.message.GetCustomerChargeByCustomerIdAndInvoice.GetCustomerChargeByCustomerIdAndInvoiceRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            get customer charges information based on given request.CustomerId and  request.Invoice
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetCustomerChargeByCustomerIdAndInvoiceResponse with enumarables of CustomerCharge (response.CustomerCharges)</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetCustomerChargesBetweenDatesAndCustomerIdMS">
+            <summary>
+            Microservice : get all customer charges for particular time period (between start date to end date)
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetCustomerChargesBetweenDatesAndCustomerIdMS.Process(com.etak.core.customer.message.GetCustomerChargesBetweenDatesAndCustomerId.GetCustomerChargesBetweenDatesAndCustomerIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            get all customer charges for specific request.CustomerId and between request.StartDate to request.EndDate period 
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetCustomerChargesBetweenDatesAndCustomerIdResponse with a enumerable of CustomerCharge (response.CustomerCharges)</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetCustomerChargesByCustomerIdMS">
+            <summary>
+            Microservice : get customer charges by customer id
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetCustomerChargesByCustomerIdMS.Process(com.etak.core.customer.message.GetCustomerChargesByCustomerId.GetCustomerChargesByCustomerIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get customer charges by request.CustomerId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetCustomerChargesByCustomerIdResponse with a enumerable of CustomerCharge(response.CustomerCharges)</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetCustomerChargeScheduleByCustomerMS">
+            <summary>
+            Microservice : Get Charge Schedule by CustomerInfo
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetCustomerChargeScheduleByCustomerMS.Process(com.etak.core.customer.message.GetChargeSchedulesByCustomer.GetCustomerChargeScheduleByCustomerRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get Charge Schedule by request.Customer
+            </summary>
+            <param name="request">GetChargeSchedulesByCustomerRequest</param>
+            <param name="invoker">RequestInvokationEnvironment</param>
+            <returns>GetChargeSchedulesByCustomerResponse with a enumerable of CustomerChargeSchedule(response.CustomerChargeSchedule)</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetCustomerChargesScheduleByIdMS">
+            <summary>
+            GetCustomerChargesScheduleByIdMs Microservice class
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetCustomerChargesScheduleByIdMS.Process(com.etak.core.customer.message.GetCustomerChargesScheduleById.GetCustomerChargesScheduleByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process GetCustomerChargesScheduleByIdMS
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetCustomerInfoByIdMS">
+            <summary>
+            Microservice : get CustumerInfo by Id
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetCustomerInfoByIdMS.Process(com.etak.core.customer.message.GetCustomerInfoById.GetCustomerInfoByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get CustomerInfo by request.CustomerId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetCustomerInfoByIdResponse with the obtained CustomerInfo</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetCustomerInfoChildsMS">
+            <summary>
+            Microservice : retrun a enumerable of CustomerInfo entity which are CustomerInfoChilds, its call ICustomerInfoRepository.GetByParentID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetCustomerInfoChildsMS.Process(com.etak.core.customer.message.GetCustomerInfoChilds.GetCustomerInfoChildsRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get all CustomerInfo childs by CustomerId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetCustomerInfoChildsResponse with a enumerable of CustomerInfo (response.CustomerInfoChilds) </returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetCustomerInfosByExternalIdMS">
+            <summary>
+            Microservice :  return enumerable of CustomerInfo entity based on given ExternalId
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetCustomerInfosByExternalIdMS.Process(com.etak.core.customer.message.GetCustomerInfosByExternalId.GetCustomerInfosByExternalIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            return enumerable of CustomerInfo entity based on given request.ExternalId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetCustomerInfosByExternalIdResponse with enumerable of CustomerInfo (response.CustomerInfos) </returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetCustomersActivePromotionInfoMS">
+            <summary>
+            Microservice that filters the active promotions of a customer
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetCustomersActivePromotionInfoMS.Process(com.etak.core.customer.message.GetCustomersActivePromotionInfo.GetCustomersActivePromotionInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Receives a customer and filters the active promotions
+            </summary>
+            <param name="request">The input paramters with a customer to filter</param>
+            <param name="invoker">the enviroment of the execution</param>
+            <returns>the list of promotions</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetHistoryInfoByCustomerIdMS">
+            <summary>
+             Microservice : get HistoryInfo by CustomerId
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetHistoryInfoByCustomerIdMS.Process(com.etak.core.customer.message.GetHistoryInfoByCustomerId.GetHistoryInfoByCustomerIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            get HistoryInfo by request.CustomerId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetHistoryInfoByCustomerIdResponse with obtained HistoryInfos</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetHistoryInfoWithInDatesOfResourceMS">
+            <summary>
+            Microservice : get all customer history info for particular time period (between start date to end date)
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetHistoryInfoWithInDatesOfResourceMS.Process(com.etak.core.customer.message.GetHistoryInfoWithInDatesOfResource.GetHistoryInfoWithInDatesOfResourceRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            get all history info for specific request.CustomerId and between request.StartDate to request.EndDate period 
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetHistoryInfoWithInDatesOfResourceResponse with a enumrable of HistoryInfos (reponse.HistoryInfos)</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetInvoiceByIdMS">
+            <summary>
+            Get Invoice by ID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetInvoiceByIdMS.Process(com.etak.core.customer.message.GetInvoiceById.GetInvoiceByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Process
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetInvoicesByCustomerIdAndLegalInvoiceNumberMS">
+            <summary>
+            Microservice :  return enumerable of Invoice based on CustomerId and LegalInvoiceNumber
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetInvoicesByCustomerIdAndLegalInvoiceNumberMS.Process(com.etak.core.customer.message.GetInvoicesByCustomerIdAndLegalInvoiceNumber.GetInvoicesByCustomerIdAndLegalInvoiceNumberRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+             return enumerable of Invoice based on request.CustomerId and request.LegalInvoiceNumber
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetInvoicesByCustomerIdAndLegalInvoiceNumberResponse with a enumerable of Invoice (response.Invoices)</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetLastNInvoiceByCustomerIdAndInvoiceStatusesMS">
+            <summary>
+            Microservice : return enumerable of Invoice that provide last N invoice based on customer id and invoice status
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetLastNInvoiceByCustomerIdAndInvoiceStatusesMS.Process(com.etak.core.customer.message.GetLastNInvoicesByCustomerIdAndInvoiceStatuses.GetLastNInvoicesByCustomerIdAndInvoiceStatusesRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            return enumerable of Invoice that provide last request.NumberOfInvoices based on request.CustomerId and request.InvoiceStatus
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetLastNInvoicesByCustomerIdAndInvoiceStatusResponse with a enumerable of las N Invoice (response.Invoices)</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetPropertyInfosByDocumentIdMS">
+            <summary>
+            Microservice : Get a enumerable of PropertyInfo by DocumentId
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetPropertyInfosByDocumentIdMS.Process(com.etak.core.customer.message.GetPropertyInfosByDocumentId.GetPropertyInfosByDocumentIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get a enumerable of PropertyInfo by request.DocumentId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>GetPropertyInfosByDocumentIdResponse with enumerable of PropertyInfo (response.PropertyInfos)</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetTroubleTicketInfoByCustomerIdMS">
+            <summary>
+            MS: Get TroubleTicketInfos by CustomerId
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetTroubleTicketInfoByCustomerIdMS.Process(com.etak.core.customer.message.GetTroubleTicketInfoByCustomerId.GetTroubleTicketInfoByCustomerIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            return enumerable of TroubleTicketInfos based on given customerId
+            </summary>
+            <param name="request">GetTroubleTicketInfoByCustomerIdRequest</param>
+            <param name="invoker">RequestInvokationEnvironment</param>
+            <returns>GetTroubleTicketInfoByCustomerIdResponse</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetTroubleTicketInfoByIdMS">
+            <summary>
+            GetTroubleTicketInformation by TroubleTicketId
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetTroubleTicketInfoByIdMS.Process(com.etak.core.customer.message.GetTroubleTicketInfoById.GetTroubleTicketInfoByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            GetTroubleTicketInfoById Process
+            </summary>
+            <param name="request">Trouble Ticket Id</param>
+            <param name="invoker"></param>
+            <returns>TroubleTicketInfo with obtained TroubleTicketId</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetTroubleTicketInfoByTicketNumberMS">
+            <summary>
+            Microservice : get TroubleTicketInfo by Id
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetTroubleTicketInfoByTicketNumberMS.Process(com.etak.core.customer.message.GetTroubleTicketInfoByTicketNumber.GetTroubleTicketInfoByTicketNumberRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get TroubleTicketInfo by request.CustomerId
+            </summary>
+            <param name="request">GetTroubleTicketInfoByTicketNumberRequest contains ticket number</param>
+            <param name="invoker">RequestInvokationEnvironment</param>
+            <returns>GetTroubleTicketInfoByTicketNumberResponse with the obtained TroubleTicketInfo</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.GetTTQuestionInfoByTypeSubTypeAndMvnoidMS">
+            <summary>
+            MS : Get TroubleTicketQuestionInfo by Type, SubType, and Mvnoid
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.GetTTQuestionInfoByTypeSubTypeAndMvnoidMS.Process(com.etak.core.customer.message.GetTTQuestionInfoByTypeSubTypeAndMvnoid.GetTTQuestionInfoByTypeSubTypeAndMvnoidRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Query TroubleTicketQuestionInfo By Type, SubType, And MvnoId
+            </summary>
+            <param name="request">GetTTQuestionInfoByTypeSubTypeAndMvnoidRequest</param>
+            <param name="invoker">RequestInvokationEnvironment</param>
+            <returns>GetTTQuestionInfoByTypeSubTypeAndMvnoidResponse</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.SubtractBalanceMS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.SubtractBalanceMS.Process(com.etak.core.customer.message.SubtractBalance.SubtractBalanceRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            subtract balance from customer promotinon detail
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.UnFreezeCustomerInfoMS">
+            <summary>
+            Microservice : unfreeze customerInfo. Change state of Customer.PropertyInfo[0].PendingStatus to CustomerStatus.Active 
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.UnFreezeCustomerInfoMS.Process(com.etak.core.customer.message.UnFreezeCustomerInfo.UnFreezeCustomerInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Change state of Customer.PropertyInfo[0].PendingStatus to CustomerStatus.Active 
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>DeleteCustomerInfoResponse with the deleted object CustomerInfo</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.UpdateCustomerChargeScheduleMS">
+            <summary>
+            Microservice : update CustomerChargeSchedule 
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.UpdateCustomerChargeScheduleMS.Process(com.etak.core.customer.message.UpdateCustomerChargeSchedule.UpdateCustomerChargeScheduleRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Update request.CustomerChargeSchedule
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>UpdateCustomerChargeScheduleMS with the updated object CustomerChargeSchedule</returns>
+        </member>
+        <member name="T:com.etak.core.customer.microservices.UpdateCustomerInfoMS">
+            <summary>
+            Microservice : update CustomerInfo (all the customer data, MVNOCustomerPropertyInfo, CustomerAddress, and BankInfo)
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.microservices.UpdateCustomerInfoMS.Process(com.etak.core.customer.message.UpdateCustomerInfo.UpdateCustomerInfoRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Update request.CustomerInfo (all the customer data, MVNOCustomerPropertyInfo, CustomerAddress, and BankInfo)
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>UpdateCustomerInfoResponse with the updated object CustomerInfo</returns>
+        </member>
+        <member name="T:com.etak.core.customer.validators.AccountNumberValidator">
+            <summary>
+            Class for validating bank account number
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.validators.AccountNumberValidator.Validate(System.String)">
+            <summary>
+            Function to validate bank account
+            </summary>
+            <param name="accountNumber">The bank account number</param>
+            <returns>Clean account</returns>
+        </member>
+        <member name="T:com.etak.core.customer.validators.IbanCountries">
+            <summary>
+            Class contains IBAN every country
+            </summary>
+        </member>
+        <member name="T:com.etak.core.customer.validators.IbanValidator">
+            <summary>
+            Class for validating International Bank Account Number (IBAN)
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.validators.IbanValidator.Validate(System.String)">
+            <summary>
+            Validate bank account using Iban constraints
+            </summary>
+            <param name="bankAccount"></param>
+            <returns>Validated bank account</returns>
+        </member>
+        <member name="T:com.etak.core.customer.validators.SwiftCodeValidator">
+            <summary>
+            Class for validating swift code of bank account
+            </summary>
+        </member>
+        <member name="M:com.etak.core.customer.validators.SwiftCodeValidator.Validate(System.String)">
+            <summary>
+            Validate Bank Account (Swift Code and Account Number)
+            </summary>
+            <param name="bankAccount">The bank account which contains swift code and account number</param>
+            <returns></returns>
+        </member>
+        <member name="M:com.etak.core.customer.validators.SwiftCodeValidator.ValidateAccountNumber(System.String)">
+            <summary>
+            Validate account number characters
+            </summary>
+            <param name="accountNumber">Account Number to be validated</param>
+        </member>
+        <member name="M:com.etak.core.customer.validators.SwiftCodeValidator.ValidateBankCode(System.String)">
+            <summary>
+            Validate BIC
+            </summary>
+            <param name="bic">Bank Identifier Codes</param>
+        </member>
+    </members>
+</doc>

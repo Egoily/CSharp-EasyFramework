@@ -16,3 +16,6 @@ E:\ETWork\MyCode\MyTestProject\JobScheduler\bin\Debug\Quartz.xml
 E:\ETWork\MyCode\MyTestProject\JobScheduler\bin\Debug\Z.ExtensionMethods.pdb
 E:\ETWork\MyCode\MyTestProject\JobScheduler\obj\Debug\JobScheduler.exe
 E:\ETWork\MyCode\MyTestProject\JobScheduler\obj\Debug\JobScheduler.pdb
+E:\ETWork\MyCode\EasyFramework\MyTestProject\JobScheduler\bin\Debug\JobScheduler.exe.config
+E:\ETWork\MyCode\EasyFramework\MyTestProject\JobScheduler\obj\Debug\JobScheduler.exe
+E:\ETWork\MyCode\EasyFramework\MyTestProject\JobScheduler\obj\Debug\JobScheduler.pdb

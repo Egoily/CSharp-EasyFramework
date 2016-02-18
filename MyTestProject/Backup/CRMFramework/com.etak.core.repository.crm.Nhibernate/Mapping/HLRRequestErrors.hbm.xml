@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="com.etak.core.model.provisioning.HLRRequestErrors, com.etak.core.model" table="HLR_RequestErrors" >
+    <id name="SEQID" column="SEQID" type="Int64" length="8" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>
+		<property name="OBJECTNAME" column="OBJECTNAME" type="String" length="100" />
+		<property name="QueueId" column="QueueId" type="Int64" length="4" />
+		<property name="ERRORCODE" column="ERRORCODE" type="String" length="10" />
+		<property name="ResponseMessage" column="ResponseMessage" type="String" length="8000" />
+		<property name="RequestMessage" column="RequestMessage" type="String" length="8000" />
+		<property name="REPEAT" column="REPEAT" type="Int32" length="4" />
+		<property name="CREATETIME" column="CREATETIME" type="DateTime" />
+	</class>
+</hibernate-mapping>

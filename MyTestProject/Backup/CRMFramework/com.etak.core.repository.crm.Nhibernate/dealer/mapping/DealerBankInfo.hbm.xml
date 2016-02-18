@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="com.etak.core.model.DealerBankInfo,com.etak.core.model" table="CRM_DEALERS_BANK" >
+    <cache usage="nonstrict-read-write" region="UserDealer"/>
+    <id name="BankID" column="BANKID" type="Int32"  length="4">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>      
+    </id>
+    <property name="BankName" column="BANKNAME" type="String" length="200" />
+    <property name="BankNumber" column="BANKNUMBER" type="String" length="100" />
+    <property name="CurrencyID" column="CURRENCYID" type="Int32" length="4" />
+    <property name="Owner" column="OWNER" type="String" length="200" />
+    <property name="City" column="CITY" type="String" length="200" />
+    <property name="CountryID" column="COUNTRYID" type="Int32" length="4" />
+    <property name="IBAN" column="IBAN" type="String" length="100" />
+    <property name="SWIFT" column="SWIFT" type="String" length="100" />
+    <property name="ABI" column="ABI" type="String" length="10" />
+    <property name="CAB" column="CAB" type="String" length="10" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <property name="UserID" column="USERID" type="Int32" length="4" />
+    <many-to-one name="DealerInfo" class="com.etak.core.model.DealerInfo,com.etak.core.model" cascade="save-update,persist">
+      <column name="DealerID" />
+    </many-to-one>
+  </class>
+</hibernate-mapping>
+

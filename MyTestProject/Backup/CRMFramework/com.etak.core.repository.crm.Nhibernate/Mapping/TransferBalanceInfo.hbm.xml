@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+   <class name="com.etak.core.model.TransferBalanceInfo,com.etak.core.model" table="CRM_CUSTOMERS_TRANSFER_HISTORY">
+     <id name="TransferID" column="TRANSFERID" type="Int32" length="4">
+       <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>    
+    <property name="DealerID" column="DEALERID" type="Int32" length="4"  />
+    <property name="MvnoID" column="MVNOID" type="Int32" length="4" />
+    <property name="FromMsisdn" column="FROMMSISDN" type="String" length="25" />
+    <property name="ToMsisdn" column="TOMSISDN" type="String" length="25" />
+    <property name="FromCustomerID" column="FROMCUSTOMERID" type="Int32" length="4" />
+    <property name="ToCustomerID" column="TOCUSTOMERID" type="Int32" length="4" />
+     <property name="PinCode" column="PINCODE" type="String" length="10" />
+     <property name="TransferAmount" column="TRANSFERAMOUNT" type="Decimal" />
+    <property name="ConfirmFlag" column="CONFIRMFLAG" type="Int32" length="4"   />
+     <property name="ExpireDate" column="EXPIREDATE" type="DateTime"  />
+     <property name="CreateDate" column="CREATEDATE" type="DateTime"  />
+     <property name="ApplyLogID" column="APPLYLOGID" type="Int64" length="8" />
+     <property name="ConfirmLogID" column="CONFIRMLOGID" type="Int64" length="8" />
+     <property name="Description" column="DESCRIPTION" type="String" length="100" />
+     <property name="UserID" column="USERID" type="Int32" length="4" />
+   </class>
+</hibernate-mapping>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+<class name="com.etak.core.model.CrmMvnoTopupBonusDetailInfo,com.etak.core.model" table="CRM_MVNO_TOPUP_BONUS_DETAIL" >
+<id name="BonusDetailid" column="BONUSDETAILID" type="Int32" length="4" unsaved-value="0">
+   <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+</id>
+
+<!--<composite-id>
+  <key-property name="BonusDetailid" type="Int32" length="4" column="BONUSDETAILID" />
+  <key-property name="BonusId" type="Int32" length="4" column="BONUSID" />
+</composite-id>-->
+<property name="BonusId" column="BONUSID" type="Int32" />
+<property name="Amount1" column="AMOUNTSTART" type="Decimal" />
+<property name="Amount1Included" column="AMOUNTSTARTINCLUDED" type="Boolean" />
+<property name="Amount2" column="AMOUNTEND" type="Decimal" />
+<property name="Amount2Included" column="AMOUNTENDINCLUDED" type="Boolean" />
+<property name="Fixed" column="FIXED" type="Boolean" />
+  <property name="BonusDetailEnabled" column="ENABLED" type="Boolean" />
+<property name="BonusAmount" column="BONUSAMOUNT" type="Decimal" />
+  <property name="PackageId" column="PACKAGEID" type="Int32" length="4" />
+  <property name="BonusAccount" column="BONUSACCOUNT" type="Int32" length="4" />
+</class>
+
+</hibernate-mapping>

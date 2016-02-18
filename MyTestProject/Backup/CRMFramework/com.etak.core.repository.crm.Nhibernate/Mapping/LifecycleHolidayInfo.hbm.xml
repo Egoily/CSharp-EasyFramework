@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.LifecycleHolidayInfo,com.etak.core.model" table="CRM_LIFECYCLE_HOLIDAY" >
+    <composite-id name="HolidayCompositekey" class="com.etak.core.model.Holidaykey, com.etak.core.model">
+      <key-property name="MVNOID" column="MVNOID" type="Int32" length="4"/>
+      <key-property name="INTDATE" column="INTDATE" type="Int32" length="8"/>
+    </composite-id>
+    <property name="HOLIDAYDESCRIPTION" column="HOLIDAYDESCRIPTION" type="String" length="200" />
+  </class>
+
+</hibernate-mapping>

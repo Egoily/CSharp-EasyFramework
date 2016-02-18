@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.UserDealerInfo,com.etak.core.model" table="SYS25_USER_DEALER" >
+    <cache usage="nonstrict-read-write" region="UserDealer"/>
+    <id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+    </id>
+    <property name="UserID" column="UserID" type="Int32" length="4" />
+    <property name="DealerID" column="DealerID" type="Int32" length="4" />
+    <!--
+    <many-to-one
+            name="User"
+            column="UserID"
+            not-null="true"/>    
+            -->
+  </class>
+</hibernate-mapping>

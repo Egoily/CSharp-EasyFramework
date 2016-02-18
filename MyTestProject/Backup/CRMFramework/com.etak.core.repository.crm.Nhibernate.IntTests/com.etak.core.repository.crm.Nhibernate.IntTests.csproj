@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.etak.core.repository.crm.Nhibernate.IntTests</RootNamespace>
+    <AssemblyName>com.etak.core.repository.crm.Nhibernate.IntTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FluentNHibernate.2.0.1.0\lib\net40\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.4.0.3.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Caches.SysCache2">
+      <HintPath>..\packages\NHibernate.Caches.SysCache2.4.0.0.4000\lib\net40\NHibernate.Caches.SysCache2.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.util">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NUnit.VisualStudio.TestAdapter">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise />
+  </Choose>
+  <ItemGroup>
+    <Compile Include="..\revisionsync\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AbstractRepositoryTest.cs" />
+    <Compile Include="dealer\IMVNORetailMarginRepository.cs" />
+    <Compile Include="dealer\IDealerInfoRepositoryTest.cs" />
+    <Compile Include="device\DeviceTest.cs" />
+    <Compile Include="drl\ICustomerDataRoamingLimitRepository.cs" />
+    <Compile Include="drl\IRoamingBlackListInfoRepository.cs" />
+    <Compile Include="id\IdPrefixGenerationTest.cs" />
+    <Compile Include="inventory\ProductInventoryTest.cs" />
+    <Compile Include="inventory\CustomerOrderTest.cs" />
+    <Compile Include="inventory\PhysicalResourceSpecificationTest.cs" />
+    <Compile Include="IOperationLogRepositoryTest.cs" />
+    <Compile Include="IRMOperatorsInfoRepositoryTest.cs" />
+    <Compile Include="ITTHistoryInfoRepositoryTest.cs" />
+    <Compile Include="mapping\CrmMobileMultipleImsisInfoTest.cs" />
+    <Compile Include="mapping\CrmMobileNetworkInfoTest.cs" />
+    <Compile Include="network\RMOperatorsInfoRepositoryTest.cs" />
+    <Compile Include="operation\BusinessOperationExecutionTest.cs" />
+    <Compile Include="operation\OperationConfigurationTest.cs" />
+    <Compile Include="portability\IMNPSessionInfoRepositoryTest.cs" />
+    <Compile Include="portability\IMNPPortabilityCustomerInfoRepositoryTest.cs" />
+    <Compile Include="portability\IMNPPortabilityMultiPortInInfoRepositoryTest.cs" />
+    <Compile Include="portability\IMNPPortabilityInfoRepositoryTest.cs" />
+    <Compile Include="promotion\CrmCustomersPromotionOperationLogInfoRepositoryTests.cs" />
+    <Compile Include="promotion\RmPromotionGroupThresholdRepositoryTests.cs" />
+    <Compile Include="RepositoryManagerSingleton.cs" />
+    <Compile Include="resource\IMVNOAPNIPPoolInfoRepositoryTest.cs" />
+    <Compile Include="resource\IDealerNumberInfoRepositoryTest.cs" />
+    <Compile Include="resource\INumberInfoRepositoryTest.cs" />
+    <Compile Include="resource\INumberPropertyInfoRepositoryTest.cs" />
+    <Compile Include="resource\ICrmCustomersResourceMbInfoRepositoryTest.cs" />
+    <Compile Include="resource\IResourceMBRepositoryTest.cs" />
+    <Compile Include="resource\ISIMCardInfoRepositoryTest.cs" />
+    <Compile Include="reveneu\PaymentInfoRepositoryTest.cs" />
+    <Compile Include="SessionInfoRepositoryTest.cs" />
+    <Compile Include="subscription\catalog\ProductOfferingCatalogTest.cs" />
+    <Compile Include="subscription\catalog\ProductOfferingGroupTest.cs" />
+    <Compile Include="subscription\catalog\ProductOfferingTest.cs" />
+    <Compile Include="TransactionTest.cs" />
+    <Compile Include="reveneu\IBillCycleRepositoryTest.cs" />
+    <Compile Include="reveneu\IBillRunRepositoryTest.cs" />
+    <Compile Include="reveneu\IInvoiceRepositoryTest.cs" />
+    <Compile Include="reveneu\CustomerChargeTest.cs" />
+    <Compile Include="reveneu\ICustomerChargeSchedulesTest.cs" />
+    <Compile Include="CustomerRepositoryTest.cs" />
+    <Compile Include="reveneu\TaxDefinitionRepositoryTest.cs" />
+    <Compile Include="reveneu\IProductChargeOptionRepositoryTest.cs" />
+    <Compile Include="reveneu\ICustomerAccountTest.cs" />
+    <Compile Include="ILoginInfoRepositoryTest.cs" />
+    <Compile Include="IMultiLanguageDescriptionRepositoryTest.cs" />
+    <Compile Include="AddressInfoTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reveneu\IProductRepositoryTest.cs" />
+    <Compile Include="SessionFactoryTest.cs" />
+    <Compile Include="reveneu\IChargeRepositoryTest.cs" />
+    <Compile Include="reveneu\CustomerProductAssignmentRepositoryTest.cs" />
+    <Compile Include="TableBasedSequenceProviderTest.cs" />
+    <Compile Include="RawDbAccess.cs" />
+    <Compile Include="ITroubleTicketInfoRepositoryTest.cs" />
+    <Compile Include="ITroubleTicketQuestionInfoRepositoryTest.cs" />
+    <Compile Include="usage\IUsageDetailRecordRepositoryTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RunNHRepoTest.orderedtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\com.etak.core.model\com.etak.core.model.csproj">
+      <Project>{5c9b8900-251a-4566-a727-7576dbe53a3c}</Project>
+      <Name>com.etak.core.model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.operation\com.etak.core.operation.csproj">
+      <Project>{a8fd3f0f-82f8-41d4-8da2-fa44bad61d9c}</Project>
+      <Name>com.etak.core.operation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository.crm.Nhibernate\com.etak.core.repository.crm.Nhibernate.csproj">
+      <Project>{f2f11342-e395-4220-9e9b-4707783126ee}</Project>
+      <Name>com.etak.core.repository.crm.Nhibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository.crm\com.etak.core.repository.crm.csproj">
+      <Project>{5279c8d2-7523-4a27-aa03-8a9736de7e45}</Project>
+      <Name>com.etak.core.repository.crm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository.NHibernate\com.etak.core.repository.NHibernate.csproj">
+      <Project>{d93c29d3-5740-4b4f-8356-85a0f599f407}</Project>
+      <Name>com.etak.core.repository.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.repository\com.etak.core.repository.csproj">
+      <Project>{b3b4cfa1-4488-4e8c-aa22-b9f6206be866}</Project>
+      <Name>com.etak.core.repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\com.etak.core.test.utilities\com.etak.core.test.utilities.csproj">
+      <Project>{4B99EBE0-266A-47BB-BAE6-A03E971F0BD6}</Project>
+      <Name>com.etak.core.test.utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

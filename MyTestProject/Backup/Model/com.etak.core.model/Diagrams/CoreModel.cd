@@ -1,0 +1,3757 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="com.etak.core.model.ActionInfo" Collapsed="true">
+    <Position X="29" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAASBAQAACgAAAAgAAAQAACACAAEIAEAIACAAAAAAA=</HashCode>
+      <FileName>ActionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ActionTypeInfo" Collapsed="true">
+    <Position X="30.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAQAAAAAAgAAAAAEAAAAAAAAAAEAAkAgAAAAAAAAA=</HashCode>
+      <FileName>ActionType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.AlertRuleInfo" Collapsed="true">
+    <Position X="32.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJIAANADIbkwAMhQAFAgIAiAgQQCIAAAAiABgAASgBA=</HashCode>
+      <FileName>AlertRuleInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.AlertRuleMessageInfo" Collapsed="true">
+    <Position X="34.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAIjBAUg2AEAIABAiAEiAgQAGIAAEAgABgAEQABA=</HashCode>
+      <FileName>AlertRuleMessageInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.AlertRuleMessageTemplateInfo" Collapsed="true">
+    <Position X="36" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABBAIgAAAAAAAggQCAAEBgIBAEAAIQQAEAACA=</HashCode>
+      <FileName>AlertRuleMessageTemplateInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.AutoTransferSettingInfo" Collapsed="true">
+    <Position X="37.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAABAAABCUAgAAAASQgAAAQAQAAgESCCAAAAAQGkAA=</HashCode>
+      <FileName>AutoTransferSettingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.BankInfo" Collapsed="true">
+    <Position X="39.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAACEiAABgAAgAIDAAAgApAFAJQAACIIjYBKAAQARI=</HashCode>
+      <FileName>BankInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.BlockMsisdnInfo" Collapsed="true">
+    <Position X="41.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhACgIAQACgAgAAQAIBAAACIEoAABgAAQAhRAIgAAEA=</HashCode>
+      <FileName>BlockMsisdnInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.BRSChannel" Collapsed="true">
+    <Position X="43" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAQAIAAAgAAAAAAQAAAAAAAAgA=</HashCode>
+      <FileName>BRSChannel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.BRSCurrency" Collapsed="true">
+    <Position X="44.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAABAAAAAAgAAIAQAAAAABABAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>BRSCurrency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.BRSFinancialEntity" Collapsed="true">
+    <Position X="46.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAgAAAAAAAAQBAAAAAAAAABQAAAAAAAAAA=</HashCode>
+      <FileName>BRSFinancialEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.BRSTaxCode" Collapsed="true">
+    <Position X="48.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAQAAAAAgAAAAAAIAAABAAAAAAAACQAAAAABAAAA=</HashCode>
+      <FileName>BRSTaxCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.BRSTaxCodePostCode" Collapsed="true">
+    <Position X="50" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAgABAAAA=</HashCode>
+      <FileName>BRSTaxCodePostCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.BundleInfo" Collapsed="true">
+    <Position X="51.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAGAABgICAAABAAAgAAAEAgAIgAAAAEAAAAA=</HashCode>
+      <FileName>BundleInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.BundlePackageInfo" Collapsed="true">
+    <Position X="53.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhCAIAAAAAAAAAAAAgAAAAAAEAIEAAAAAAAAAQAAAIA=</HashCode>
+      <FileName>BundlePackageInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.BussinessRule" Collapsed="true">
+    <Position X="1.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAAAAAAAAgAAAAAQAAAAAAIAAgAAAAAAAAAA=</HashCode>
+      <FileName>BussinessRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CallDirectionInfo" Collapsed="true">
+    <Position X="55.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAACAAEAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CallDirectionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CallTypeInfo" Collapsed="true">
+    <Position X="57" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAACAAAAAAAAAAAAAAAAAAEAAAAgAAAAA=</HashCode>
+      <FileName>CallTypeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomerPromotionPropertyInfo" Collapsed="true">
+    <Position X="58.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAABAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CrmCustomerPromotionPropertyInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersBalanceTransationHistory" Collapsed="true">
+    <Position X="29" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAASAAAAEAAAAIAAQAAAAACgCAAAEAA=</HashCode>
+      <FileName>CrmCustomersBalanceTransationHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersBonusRelationShipInfo" Collapsed="true">
+    <Position X="30.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAARgEAQEggAwAIKAAICEgQCASIAAEAAEBCEgXIAQ=</HashCode>
+      <FileName>CrmCustomersBonusRelationShipInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersBundleAssignmentHistoryInfo" Collapsed="true">
+    <Position X="32.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAEgACAAAAAAAAAgAAAAAAgAAAAAMAACAAAAAgAgAA=</HashCode>
+      <FileName>CRMCUSTOMERSBUNDLEASSIGNMENTHISTORYInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersBundleAssignmentHistoryPKInfo" Collapsed="true">
+    <Position X="34.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAICAAAAAAEAAAgAAAAAAAEAAEIIAAAAAAAEABAAA=</HashCode>
+      <FileName>CRMCUSTOMERSBUNDLEASSIGNMENTHISTORYInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CRMCUSTOMERSDATESINFO" Collapsed="true">
+    <Position X="36" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAgAAAAAAAAAAAAIQACAAAAAgAAAA=</HashCode>
+      <FileName>CRMCUSTOMERSDATESINFO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CRMCUSTOMERSDATESPKINFO" Collapsed="true">
+    <Position X="37.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAIAQAAAAQIAAAAAAAAAAEAA=</HashCode>
+      <FileName>CRMCUSTOMERSDATESINFO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersExtraUsageInfo" Collapsed="true">
+    <Position X="39.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgAEBAAEAiAgnwAAAAQwAAqSBAAAAJRiQQABAABEAAQ=</HashCode>
+      <FileName>CrmCustomersExtraUsageInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersFfHistoryInfo" Collapsed="true">
+    <Position X="1.75" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAQgAAAAAAIAAAEAEAAAAAgQAAAAEBAAAAACAAAAAAA=</HashCode>
+      <FileName>CrmCustomersFfHistoryInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersFfInfo" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAYAAAAAIgAAAAAAhyIAAAAFBAAAAJAEAQAAA=</HashCode>
+      <FileName>CrmCustomersFfInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersFfInitialChargeInfo" Collapsed="true">
+    <Position X="41.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAgAAgAAAAAAQEAAAAJAAACAAAAAAAAA=</HashCode>
+      <FileName>CrmCustomersFfInitialChargeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersMSISDNGroupMembers" Collapsed="true">
+    <Position X="43" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAgIAAAAAAAgAAIAAAAEAAAAIAAAAgAAEAAEAA=</HashCode>
+      <FileName>CrmCustomersMSISDNGroupMembers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersMSISDNGroupMembersHistory" Collapsed="true">
+    <Position X="44.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAIAAAAAAAgCAAAAAgEAAAAIAAAAgAAEEgEAA=</HashCode>
+      <FileName>CrmCustomersMSISDNGroupMembersHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersPromotionGroup" Collapsed="true">
+    <Position X="46.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAgAAAgAAAAAAAEAAAAIAAAAAAAEAAAAA=</HashCode>
+      <FileName>CrmCustomersPromotionGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersPromotionInfo" Collapsed="true">
+    <Position X="13" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABEAAAwCAAAAAAAGkAAAAAAgEAAAAJEgAAgACEAAWAA=</HashCode>
+      <FileName>CrmCustomersPromotionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersPromotionOperationLogInfo" Collapsed="true">
+    <Position X="17.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>0BAATWAAACCKhAAAEAAgMwAUgABBAGQIALokAAAQkQA=</HashCode>
+      <FileName>CrmCustomersPromotionOperationLogInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersResourceMbInfo" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QwIgAAsgJIAQE2qAABAAAAAAkQCgIBmYjIEgAAgAASg=</HashCode>
+      <FileName>CrmCustomersResourceMbInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersResourceMbPropertyInfo" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAg2AEAAwEAAAkEAAQFEAAAwAAEQAEAACCAEIAAAAQQ=</HashCode>
+      <FileName>CrmCustomersResourceMbPropertyInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersSpecificNumberInfo" Collapsed="true">
+    <Position X="19.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAEAAAAAAIAgAAAACAwAAAABJIAAAAIAEAgAEA=</HashCode>
+      <FileName>CrmCustomersSpecificNumberInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersTopupBonusApplyCountInfo" Collapsed="true">
+    <Position X="48.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAJAAAgAgAAAAAAARAAEQAABAEAAAgAAAAEAA=</HashCode>
+      <FileName>CrmCustomersTopupBonusApplyCountInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersTopupBonusInfo" Collapsed="true">
+    <Position X="50" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAIAACAAhAIgAAAAAgAAAGAJAoAAIgIAIAkAA=</HashCode>
+      <FileName>CrmCustomersTopupBonusInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersTopupPromotionApplyCountInfo" Collapsed="true">
+    <Position X="51.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAJAAAgAgAAQAAAARAAEQBABAEAAAgAAAAEAA=</HashCode>
+      <FileName>CrmCustomersTopupPromotionApplyCountInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersTopupPromotionInfo" Collapsed="true">
+    <Position X="53.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAIAAKAAhAAQAAIAAigAAFMJAgAAAgIEIQkAA=</HashCode>
+      <FileName>CrmCustomersTopupPromotionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmCustomersUnpaidFeeInfo" Collapsed="true">
+    <Position X="22" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAKAAAAAAAAkAACAACCAAAAAJAABAAAAAAAAQI=</HashCode>
+      <FileName>CrmCustomersUnpaidFeeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmDealersSettingsInfo" Collapsed="true">
+    <Position X="55.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAEAACIAEAAAgAQAAAAEAmACAIAQQAAAICAAAIA=</HashCode>
+      <FileName>CrmDealersSettingsInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmDefaultProvisionInfo" Collapsed="true">
+    <Position X="9.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>obFO8gvSYDRKE6AAFBBA2sQSAQIAkMHYCEHAEyQIwAA=</HashCode>
+      <FileName>CrmDefaultProvisionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CRMMessageInfo" Collapsed="true">
+    <Position X="57" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAQAAyAQAAAAAEAAAIABCAQIEAAAAJGFEAAA=</HashCode>
+      <FileName>CRMMessageInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmMVNOMSISDNGroupTypeInfo" Collapsed="true">
+    <Position X="58.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAICAAAAAgAAAAAAAAAAAACAACAAg=</HashCode>
+      <FileName>CrmMVNOMSISDNGroupTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmMVNOPromotedTopupHistoryInfo" Collapsed="true">
+    <Position X="29" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAIEAACAAQCAAAJmCAAAAAwAAAAAJQAAAghKAACAAA=</HashCode>
+      <FileName>CrmMVNOPromotedTopupHistoryInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmMvnoTopupBonusDetailInfo" Collapsed="true">
+    <Position X="30.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAGAQAAIJAACAAgAoAAAyAIAAAAAAIAIAAAASAJDAAA=</HashCode>
+      <FileName>CrmMvnoTopupBonusDetailInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmMvnoTopupBonusFailedPromotion" Collapsed="true">
+    <Position X="32.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAmAAECIAAAgAAAAQAAAAAAIAAAQhAAAAiAAAEAkAA=</HashCode>
+      <FileName>CrmMvnoTopupBonusFailedPromotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmMvnoTopupBonusInfo" Collapsed="true">
+    <Position X="34.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SCAAISCgIBQAAIgEEKAAFAQgiQ0AIIAAIEgBCEBAgFA=</HashCode>
+      <FileName>CrmMvnoTopupBonusInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmMvnoTopupBonusPromotionInfo" Collapsed="true">
+    <Position X="36" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACCAQEAiAAAAAIgBgQAASAAAgABBRIgAAAHECAAiAAA=</HashCode>
+      <FileName>CrmMvnoTopupBonusPromotionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CrmMVNOTopUpPromotionConfigInfo" Collapsed="true">
+    <Position X="37.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QJAAAAAAAAACQIAWgQAAAAAgACAIIoAQIAIAAMACIQA=</HashCode>
+      <FileName>CrmMVNOTopUpPromotionConfigInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CustomerCreditCard" Collapsed="true">
+    <Position X="39.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MEAACQAAQAAAAAAAgAAAAAIAgAAAEMAAAAAAEAAAEQA=</HashCode>
+      <FileName>CustomerCreditCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CustomerDataRoamingLimit" Collapsed="true">
+    <Position X="41.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAIAAgAAEAAAgAAAAABAAAAQEACAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CustomerDataRoamingLimit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CustomerDataRoamingLimitHistory" Collapsed="true">
+    <Position X="43" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkBkAABQEAAAACAQCAAAxIAIEAAJAgAAAIIBIAEAACI=</HashCode>
+      <FileName>CustomerDataRoamingLimitHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CustomerDataRoamingLimitNotification" Collapsed="true">
+    <Position X="44.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwAAAAAAAAACgAAAAABAAAAYGAAAAIAAAABAAAAAABA=</HashCode>
+      <FileName>CustomerDataRoamingLimitNotification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.CustomerInfo" Collapsed="true">
+    <Position X="46.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>VCBQAkAQACEBAAAICACQBAgIFUBQApKWAKABxQAAeRo=</HashCode>
+      <FileName>CustomerInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.DateCategoryInfo" Collapsed="true">
+    <Position X="48.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAAACABAAAgAAAAAAIIAAhQIAECAAEAAgIAQA=</HashCode>
+      <FileName>DateCategoryInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.DateCategoryPKInfo" Collapsed="true">
+    <Position X="50" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAgAgAAAIAAAAAAIAAEAAAAAAAAAA=</HashCode>
+      <FileName>DateCategoryInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.DealerATMTopUpConfigInfo" Collapsed="true">
+    <Position X="51.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCAQAAAQCAAAAABAAAAAAAIAACAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>DealerATMTopUpConfigInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.DealerBankInfo" Collapsed="true">
+    <Position X="53.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAECAAAAAAAJIAAAAAAgAAAAQAAAIADAFCQAAAAI=</HashCode>
+      <FileName>DealerBankInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.DealerICCInfo" Collapsed="true">
+    <Position X="55.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAggAAQgAAEQAAAACAAQpCQAAAABAAAhAA=</HashCode>
+      <FileName>DealerICCInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.DealerIMSIInfo" Collapsed="true">
+    <Position X="57" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAQAgAAAQgAAEQAAAACAAQpAABAAABAAAhEA=</HashCode>
+      <FileName>DealerIMSIInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.DealerInfo" Collapsed="true">
+    <Position X="58.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgUAASIIEAAJWCAABAgAAQASApAyIJBBhSAAQAE=</HashCode>
+      <FileName>DealerInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.DealerLoyaltyInfo" Collapsed="true">
+    <Position X="29" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAEAAAAAggAQAAAAAAAAEBEUAAAQA=</HashCode>
+      <FileName>DealerLoyaltyInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.DealerNumberInfo" Collapsed="true">
+    <Position X="30.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAggAAAAAAAAAQAICAAAgAAAAAAAAAEAAA=</HashCode>
+      <FileName>DealerNumberInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.DealerPropertiesInfo" Collapsed="true">
+    <Position X="32.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAABAAKBIAARABAAAAAQAwQAgAgEAAAAIAhAAAAAEA=</HashCode>
+      <FileName>DealerPropertiesInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.DealerRatePlanInfo" Collapsed="true">
+    <Position X="34.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAgCAACjAAPQYEIAIBAAAoBChASIAACIQoAEkAgAI=</HashCode>
+      <FileName>DealerRatePlanInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.DealersVoucherMvnoInfo" Collapsed="true">
+    <Position X="36" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACIAAAAAAAAAAAAAAAgAAIAAAAAAAAAAABA=</HashCode>
+      <FileName>DealersVoucherMVNOInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.DictionaryInfo" Collapsed="true">
+    <Position X="37.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCAAAQBAAAIwpDDgAAAAAAAAAAAAEAqFAAAgzCAEgKA=</HashCode>
+      <FileName>DictionaryInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.DIDInfo" Collapsed="true">
+    <Position X="39.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAgAAIAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>DIDInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.DREAPILogInfo" Collapsed="true">
+    <Position X="41.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAICABGOg3AIxEAAQggQgiQAgAAkwAAiQgkEgAAQA=</HashCode>
+      <FileName>DREAPILogInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.EmailAttachmentInfo" Collapsed="true">
+    <Position X="43" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAIAAAACAABAAAAAQEIAAEBCAABAAQA=</HashCode>
+      <FileName>EmailAttachmentInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.EmailInfo" Collapsed="true">
+    <Position X="44.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBoFGAAKBEYgCgSUKwQFhCqQgQAAkJAAAUIBAGIOAQg=</HashCode>
+      <FileName>EmailInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.EventInfo" Collapsed="true">
+    <Position X="46.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAABAAAAAIEAYAAQAAAQBAAAAAgAAE=</HashCode>
+      <FileName>EventInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ExecuteTraceInfo" Collapsed="true">
+    <Position X="48.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IICEQGAAAiABgIIABAAAAEAQQACQKAAAQACEggAcABA=</HashCode>
+      <FileName>ExecuteTraceInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ExternalResourceMBInfo" Collapsed="true">
+    <Position X="51.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAABAAAAAAAAAAwAQAAAADAAIAhAAAAgBA=</HashCode>
+      <FileName>ExternalResourceMBInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.HistoryInfo" Collapsed="true">
+    <Position X="53.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>OAIgAAIcZTmAsQdYKkICgAiBeCDMAhDIL1wAElB0EOA=</HashCode>
+      <FileName>HistoryInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.HLRTemplateConfig" Collapsed="true">
+    <Position X="32.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>HLRServiceConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.HLRServiceConfig" Collapsed="true">
+    <Position X="29" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAEAAAAAAgAAAAAAAAAAAAAAAAAAAAIIA=</HashCode>
+      <FileName>HLRServiceConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.HLRSSConfig" Collapsed="true">
+    <Position X="30.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAqEAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HLRServiceConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.HLRCFConfig" Collapsed="true">
+    <Position X="57" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAQAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HLRServiceConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.HLRCamelConfig" Collapsed="true">
+    <Position X="55.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAABAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>HLRServiceConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.HLRGprsConfig" Collapsed="true">
+    <Position X="58.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAABAAAAEAIAAAIAAABgAgAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HLRServiceConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.HolidayInfo" Collapsed="true">
+    <Position X="34.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABAAAAAAAAAAAAAABAAAAAQAAEAAAABAAAAA=</HashCode>
+      <FileName>HolidayInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.Holidaykey" Collapsed="true">
+    <Position X="36" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgCAACAAAAAACAIAAAAAAAAACAAA=</HashCode>
+      <FileName>Holidaykey.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.HuntingGroupDestInfo" Collapsed="true">
+    <Position X="37.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAACAAAAQABAAAAQAgAAAQAQAEBAAAAAABBAAAABA=</HashCode>
+      <FileName>HuntingGroupDestInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.HuntingGroupInfo" Collapsed="true">
+    <Position X="39.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAACACAAAABAAAAAAAEAA0AQAABAACAIABAAAAAFA=</HashCode>
+      <FileName>HuntingGroupInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.HuntingGroupSettingInfo" Collapsed="true">
+    <Position X="41.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgAACAACACAABAAAAAAAEAAUAQAAAAACAAABAAAAgFA=</HashCode>
+      <FileName>HuntingGroupSettingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.IDMappingInfo" Collapsed="true">
+    <Position X="44.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAQgIAEAAAICAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>IDMappingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ImeiAssn" Collapsed="true">
+    <Position X="46.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAgAAAAgAAAAAAAAAAAAAAAAAAAAAAIAEAAAAE=</HashCode>
+      <FileName>ImeiAssn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ImeiAssnHist" Collapsed="true">
+    <Position X="48.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAIAAAgAAAAgAAAgAAAAAAgAAAAAIAAAAAIAEAAAAE=</HashCode>
+      <FileName>ImeiAssnHist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ImportDetailsInfo" Collapsed="true">
+    <Position X="50" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQQAAKEBACAhgdBAsAAYAACgCAQA/IAADAgAAGFQUmA=</HashCode>
+      <FileName>ImportDetailsInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ImportLogInfo" Collapsed="true">
+    <Position X="51.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAgggAAAAAAIAAwgICEgAgAEBAAAAABkAEA=</HashCode>
+      <FileName>ImportLogInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ImportMasterInfo" Collapsed="true">
+    <Position X="53.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAGAABEAAQiAXAAAgACYAAhioGgAAoIEAgAgIAAAAIA=</HashCode>
+      <FileName>ImportMasterInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.IncumbentInfo" Collapsed="true">
+    <Position X="55.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAggAICjAA/QYAIAIJAAAwBYpASJCgAJwIAEkEgAI=</HashCode>
+      <FileName>IncumbentInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.InterfaceHistory" Collapsed="true">
+    <Position X="57" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAgQAACgAAQCAACQAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>InterfaceHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.InternationalZoneDetailInfo" Collapsed="true">
+    <Position X="58.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IOAAAAACAAEAAAABACAAAAEgAAQAIAAAAAAAAEAAAAg=</HashCode>
+      <FileName>InternationalZoneDetailInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.InternationalZoneInfo" Collapsed="true">
+    <Position X="29" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMAAAAACAAAAAAAAACAAAEAgACAAIgABAAAAAFAAAAA=</HashCode>
+      <FileName>InternationalZoneInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.IPRangeInfo" Collapsed="true">
+    <Position X="30.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAgAIAAAAAAAAIAAAAEAEAAAIAAIAAAAACIAAAAAIA=</HashCode>
+      <FileName>IPRangeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.LanguageTypeInfo" Collapsed="true">
+    <Position X="34.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAAAAAQBAgAAAAAAAAAAIAAIiAAIAAQAANCAECAA=</HashCode>
+      <FileName>LanguageTypeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.LevelInfo" Collapsed="true">
+    <Position X="36" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAQAUAUKAiAQAAAAEIAgAACACAgAAAAEBiEgUAAA=</HashCode>
+      <FileName>LevelInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.LifecycleHolidayInfo" Collapsed="true">
+    <Position X="37.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAACAAAAAQAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>LifecycleHolidayInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.LifecycleLogInfo" Collapsed="true">
+    <Position X="39.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAsWAAwIA5cCEgCFAwCACkRAYEbDBiAARAgAEA=</HashCode>
+      <FileName>LifeCycleLogInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.LifecycleLogInfoExtended" Collapsed="true">
+    <Position X="41.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAggAAAAAIAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>LifeCycleLogInfoExtended.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.LifecycleStatusTransitionNotification" Collapsed="true">
+    <Position X="43" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgIAIgAAABCFCSACEICQAAAAAEAAABAAAAAEACAAA=</HashCode>
+      <FileName>LifecycleStatusTransitionNotification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.LoginInfo" Collapsed="true">
+    <Position X="44.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYAiAcXEI2EAg0WQPCM0JAwIISUCDiKiAZAhfIhWjgg=</HashCode>
+      <FileName>LoginInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MappingInfo" Collapsed="true">
+    <Position X="46.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAwmAAIICAAQCIwCAAEABAAEACAAAEgARA=</HashCode>
+      <FileName>MappingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MessageInfo" Collapsed="true">
+    <Position X="48.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAgAAIQAAAIQAAgAAAAAIAEEAQgAAEEAAAA=</HashCode>
+      <FileName>MessageInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MessageUserInfo" Collapsed="true">
+    <Position X="50" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAEAAgAgCQAAAAAAAgAAAAAAAAEAAAAAAEEAAA=</HashCode>
+      <FileName>MessageUserInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MNPConsolidationLogInfo" Collapsed="true">
+    <Position X="51.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JAAAAiAEgAAAQAAAAQACAAgAACAAAAQAAAAAAAhAAQA=</HashCode>
+      <FileName>MNPConsolidationLogInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MNPDeletionRequestInfo" Collapsed="true">
+    <Position X="53.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAgAAAJAAAACQACAAgAAgAAAAAAAAAAAgAAAAAQIA=</HashCode>
+      <FileName>MNPDeletionRequestInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MNPIncomingEffectInfo" Collapsed="true">
+    <Position X="55.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAEgAAAgAAAAAAAAAAQEQIAAAwgIAABAAACCAA=</HashCode>
+      <FileName>MNPIncomingEffectInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MNPNpdbEsvfInfo" Collapsed="true">
+    <Position X="57" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAohCAIAAAAAAAAEAAAAAAQAUAEAAAAAAABAAACAAA=</HashCode>
+      <FileName>MNPNpdbEsvfInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MNPOriginalNrnInfo" Collapsed="true">
+    <Position X="58.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAIBCAIAAAACAIAAEAIAAAwYAAEAAAAAAAJAEAAAAA=</HashCode>
+      <FileName>MNPOriginalNrnInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MNPOriginalNrnRangeInfo" Collapsed="true">
+    <Position X="29" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAIBCAAAAAACAIAAEAIAAAwYAAAAAAAAAAJAEAAAAA=</HashCode>
+      <FileName>MNPOriginalNrnRangeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MNPPortabilityCustomerInfo" Collapsed="true">
+    <Position X="30.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAABAAQEAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>MNPPortabilityCustomerInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MNPPortabilityInfo" Collapsed="true">
+    <Position X="32.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oCAlUEEFIuBIiJQAEAYRFA1AAQEZEgSJgQAtCgxiQAg=</HashCode>
+      <FileName>MNPPortabilityInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ICCIDRelativeMSISDN" Collapsed="true">
+    <Position X="43" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAgAAAAIAAA=</HashCode>
+      <FileName>MNPPortabilityInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MSISDNRange" Collapsed="true">
+    <Position X="48.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAAEAAAA=</HashCode>
+      <FileName>MNPPortabilityInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MNPPortabilityMultiInfo" Collapsed="true">
+    <Position X="34.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAApBAAAAAAAgAAAEAAABAAAAAAAAEQAAAAAAABAAAA=</HashCode>
+      <FileName>MNPPortabilityMultiInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MNPPortabilityMultiPortInInfo" Collapsed="true">
+    <Position X="36" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQhAAAEIAAAAAAAAAABAAAAAAAAAAoAAAACAAAACAA=</HashCode>
+      <FileName>MNPPortabilityMultiPortInInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MNPPortabilitytAttachInfo" Collapsed="true">
+    <Position X="37.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQBAAAEAAAAAAAAAAABAAAAQAAAAAAgAAAAIAEAQAA=</HashCode>
+      <FileName>MNPPortabilitytAttachInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MNPReasonInfo" Collapsed="true">
+    <Position X="39.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAABAAAAAEAAAAAAwAAgAAAAIAAAAAEAQAAAQ=</HashCode>
+      <FileName>MNPReasonInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MNPSessionInfo" Collapsed="true">
+    <Position X="41.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAACAAQAAAEAgAAAAAgAAAAIAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MNPSessionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ModelBase" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAQADAAAEBAMACAAAAAAABA=</HashCode>
+      <FileName>ModelBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ModelInfo" Collapsed="true">
+    <Position X="43" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQUAEAQIAAQQAAgCEOAAAAAACAAACAgBBiAgQAwA=</HashCode>
+      <FileName>ModelInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ModuleElementsInfo" Collapsed="true">
+    <Position X="44.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAQAAAgAQAAAAEIAAANAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>ModuleElementsInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ModuleMvnoInfo" Collapsed="true">
+    <Position X="46.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAQIAgIAAAgAEEAAAEAEAAAACAgAJgAAUAgA=</HashCode>
+      <FileName>ModuleMvnoInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MultiLingualInfo" Collapsed="true">
+    <Position X="50" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIAgSAIBAQAggTBAAAAkEAQAACgCAgIECgAobCAEAAA=</HashCode>
+      <FileName>MultiLingualInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MVNOAPNBatchIPInfo" Collapsed="true">
+    <Position X="51.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACAAACRAAAogBdYEDAAAIwgoCEAAIAAAAIFAQASBAI=</HashCode>
+      <FileName>MVNOAPNBatchIPInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MVNOAPNIPPoolInfo" Collapsed="true">
+    <Position X="53.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAEAAAIgAQIEBAAAIwgAAEAAAAIAAiAAQEGAAA=</HashCode>
+      <FileName>MVNOAPNIPPoolInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MVNOAutoTopupNotificationLog" Collapsed="true">
+    <Position X="55.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQQgAgUKIAAEAwAAAABAAAAEAAAAiQAAAohAAAAEAA=</HashCode>
+      <FileName>MVNOAutoTopupNotificationLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MVNOAutoTopupNotificationProvisionLog" Collapsed="true">
+    <Position X="57" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQggAAEKIAAgAgAAAAhAAACAAAAAgAAAAoBAAAAAgA=</HashCode>
+      <FileName>MVNOAutoTopupNotificationProvisionLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MVNOAutoTopupNotificationQueue" Collapsed="true">
+    <Position X="58.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAARgAgQKYAAEAgAAAABAAAAEAAAAiAAAAohAAAAEAA=</HashCode>
+      <FileName>MVNOAutoTopupNotificationQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MVNOConfigActionInfo" Collapsed="true">
+    <Position X="29" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADABwACAAAggABAAAAAAAQsACAAAAAAAAAhAEAAABA=</HashCode>
+      <FileName>MVNOConfigActionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MVNOCustomerPropertyInfo" Collapsed="true">
+    <Position X="30.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBCsIDkiQKCDuggBASAEAIIbSQBAhISQdggxChGJ2VQ=</HashCode>
+      <FileName>MVNOCustomerPropertyInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MvnoDataRoamingLimitInfo" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAgAAAgABABgAAAAAgAQAAEwAAAAAAAACCAAA=</HashCode>
+      <FileName>MvnoDataRoamingLimitInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MVNODataRoamingLimitNotification" Collapsed="true">
+    <Position X="32.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CSAAAAIMAQAAgACAACIQABAAAAASAABAAAAAAACGABA=</HashCode>
+      <FileName>MVNODataRoamingLimitNotification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MVNOLanguageInfo" Collapsed="true">
+    <Position X="34.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAACAAAAAAAAAAAAIAAAAAIAAGAAA=</HashCode>
+      <FileName>MVNOLanguageInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MVNONotificationSettingInfo" Collapsed="true">
+    <Position X="36" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAgAAAAAAAAAAIAAAAAABAAAAgAAACAAA=</HashCode>
+      <FileName>MVNONotificationSettingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MVNOPromotionSMSConfig" Collapsed="true">
+    <Position X="37.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAEEAAhhgQACAAgABAAgHAIAwAAAAAQAABMABA=</HashCode>
+      <FileName>MVNOPromotionSMSConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MVNOPropertiesInfo" Collapsed="true">
+    <Position X="39.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RpAAAAACAEAIQFhAAUQETCMGgCAAAgAggAAAACAIAIA=</HashCode>
+      <FileName>MVNOPropertiesInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MVNOSMSAccountInfo" Collapsed="true">
+    <Position X="41.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACgAAAEAAAADgAAAAoAACAAAAACAAIAAxAAESEQoBEA=</HashCode>
+      <FileName>MVNOSMSAccountInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MVNOTopupBundleBasedInfo" Collapsed="true">
+    <Position X="43" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAACAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>MVNOTopupBundleBasedInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.MVNOTopupBundleBasedKey" Collapsed="true">
+    <Position X="44.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAIAAAAAAAAAAgAAAAAAAAAAEAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVNOTopupBundleBasedKey.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.NPMInfo" Collapsed="true">
+    <Position X="46.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgIAAAQAAAAAAAAAQEAAAAAAAgAAAAAAAAIAA=</HashCode>
+      <FileName>NPMInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.NumberBatchInfo" Collapsed="true">
+    <Position X="48.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgwAAAACAKAAAwAICAAAoAAAQIBAgAQAAE=</HashCode>
+      <FileName>NumberBatchInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.NumberHistoryInfo" Collapsed="true">
+    <Position X="50" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQACIQAAAAAAAAAAIAQAAAADAAYAAAABCAgQAIA=</HashCode>
+      <FileName>NumberHistoryInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.NumberInfo" Collapsed="true">
+    <Position X="51.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQACIQAAAAAAAAAAIAQAAAADAAIAAAABCAgQAIA=</HashCode>
+      <FileName>NumberInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.NumberPropertyInfo" Collapsed="true">
+    <Position X="53.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAgQACKQABAQCAIAAAIAwYAgADAEAABBEFCAgSAII=</HashCode>
+      <FileName>NumberPropertyInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.NumberRangeInfo" Collapsed="true">
+    <Position X="55.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACQAACAEBAAAAAAAAAAACLgAAAIAAAECAAAA=</HashCode>
+      <FileName>NumberRangeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.OperationDetailLog" Collapsed="true">
+    <Position X="57" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAEIAAAAiAAAABAAAAAAAAACEEAAABAAAAAAA=</HashCode>
+      <FileName>OperationDetailLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.OperationInfo" Collapsed="true">
+    <Position X="58.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABCAAAQAQEAAwgAAAAAEAAAQcAgAAAEAAAkBAAhCOBE=</HashCode>
+      <FileName>OperationInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.OperationLog" Collapsed="true">
+    <Position X="29" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SEwGICA1GOk/AIJOABAggAwgAAhRAgxIEGQwhUAgAQA=</HashCode>
+      <FileName>OperationLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.OrganizationInfo" Collapsed="true">
+    <Position X="30.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAEASIAhAQAECQAZAQAAAECABgCAIALiAgWAAA=</HashCode>
+      <FileName>OrganizationInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PackageBussinessRules" Collapsed="true">
+    <Position X="32.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAgAAAAAAAEAAAAIAAAAAAAAAAAEA=</HashCode>
+      <FileName>PackageBussinessRules.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PackageDealerMappingInfo" Collapsed="true">
+    <Position X="34.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICAAAAEAAAAgAQEASAAAAAgACAAIgAAAAABAEAWAIA=</HashCode>
+      <FileName>PackageDealerMappingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PackageInfo" Collapsed="true">
+    <Position X="36" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgCAAAAAAAgABgAAgAAAAAAAAAAQAoAAAAMCAAAAAiA=</HashCode>
+      <FileName>PackageInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PackageRelation" Collapsed="true">
+    <Position X="37.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PackageRelation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PackageRelationShips" Collapsed="true">
+    <Position X="39.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAgAAAAAAAAAAAAIAAAAABAAAAAAA=</HashCode>
+      <FileName>PackageRelationShips.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RelationShips" Collapsed="true">
+    <Position X="34.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>PackageRelationShips.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PackageRuleParam" Collapsed="true">
+    <Position X="41.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAQAAAAAgAAAACCCAgBEgAAAAIAAgAAACIAAQA=</HashCode>
+      <FileName>PackageRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PackageRule" Collapsed="true">
+    <Position X="2.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PackageRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PerformanceTraceConfigInfo" Collapsed="true">
+    <Position X="43" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQABBQQACggAAAAAAAYAAIAAAAAAAEAAADCAgUAAA=</HashCode>
+      <FileName>PerformanceTraceConfigInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PermissionInfo" Collapsed="true">
+    <Position X="44.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAYQIBQAABCEQAoAAUsgAAFkhEAgAAAgIBAAAAEBE=</HashCode>
+      <FileName>PermissionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PreActivateLogInfo" Collapsed="true">
+    <Position X="46.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAgggAAAgAAIAAwgICEgAoAEAAAAAAFAAAA=</HashCode>
+      <FileName>PreActivateLogInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PricePlanPackageVodafoneFileMap" Collapsed="true">
+    <Position X="48.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAAAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA=</HashCode>
+      <FileName>PricePlanPackageVodafoneFileMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ProductInfo" Collapsed="true">
+    <Position X="50" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAIAAgABgAAgEAAAAggAAAAQIAAAAABAEAAARA=</HashCode>
+      <FileName>ProductInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PromotionGroupBusinessRules" Collapsed="true">
+    <Position X="51.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAgAAAgAAAAAAAAAAAAIAAAAAQAAAAAEA=</HashCode>
+      <FileName>PromotionGroupBusinessRules.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PromotionGroupRuleParam" Collapsed="true">
+    <Position X="53.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAgAAAAIAAAAAAAAAAQA=</HashCode>
+      <FileName>PromotionGroupRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PromotionGroupRule" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PromotionGroupRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PromotionModelBase" Collapsed="true">
+    <Position X="14" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAEAAIAAAAAAAAABA=</HashCode>
+      <FileName>PromotionModelBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.StringValue" Collapsed="true">
+    <Position X="29" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.StringEnum" Collapsed="true">
+    <Position X="58.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.SpecificNumberCategoryString" Collapsed="true">
+    <Position X="55.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PropertyInfo" Collapsed="true">
+    <Position X="55.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IuAE5CAG5nwA8dJggBYm5G46kDGpNoI0I0AjrCUUmxk=</HashCode>
+      <FileName>PropertyInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RatePlanDetailInfo" Collapsed="true">
+    <Position X="57" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JuAQQAAACAAMNALCAUAAACBgBAAAMAAAWACkAmQQAAg=</HashCode>
+      <FileName>RatePlanDetailInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RatePlanInfo" Collapsed="true">
+    <Position X="58.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABIAAAgEiAAAAAAAAACAACgACAAAAACQAAAA=</HashCode>
+      <FileName>RatePlanInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RatePlanTranslationInfo" Collapsed="true">
+    <Position X="29" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICgAAAAAAAEAAAACAAAAAAEAAAAAAAIAAAAAIAQAAAg=</HashCode>
+      <FileName>RatePlanTranslationInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.REGEXInfo" Collapsed="true">
+    <Position X="30.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABggAAAAECAAAAAAAAAAAEkABAAAAEEAAA=</HashCode>
+      <FileName>REGEXInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RelateInfo" Collapsed="true">
+    <Position X="32.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACyBQMAiAAAAQgAACAAIAQAAAAAJCAQABAASEmAAA=</HashCode>
+      <FileName>RelateInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ReportResourceInfo" Collapsed="true">
+    <Position X="36" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAMgAAAAAAAAAAIAABQQAggACAAEYAAAABBAgIQACA=</HashCode>
+      <FileName>ReportResourceInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ResourceMBInfo" Collapsed="true">
+    <Position X="37.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhAIAAIQoIAAgEIAgKAAAAgpIkqhIJAAiAlBCEAGERA=</HashCode>
+      <FileName>ResourceMBInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ResourceMbPropertyInfo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="39.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAg0AEAAAEAAIkAAAYAEAAAwAAEAAAAACCAAAAAAARA=</HashCode>
+      <FileName>ResourceMbPropertyInfo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="com.etak.core.model.RmblackwhitelistInfo" Collapsed="true">
+    <Position X="41.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAABAAAAAAAQAAEAAAAAAAEAAEIAAAAAQA=</HashCode>
+      <FileName>RmblackwhitelistInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RmFfFeeInfo" Collapsed="true">
+    <Position X="24.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAASAEAAAAgAAAQAAAAGAAgIAAAQAAACAAAAA=</HashCode>
+      <FileName>RmFfFeeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RmFfOperatorListInfo" Collapsed="true">
+    <Position X="26.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAACAAACAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>RmFfOperatorListInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RmFixNumberRangeInfo" Collapsed="true">
+    <Position X="43" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAACAAAAAAAAAAAYAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>RmFixNumberRangeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RMOperatorsInfo" Collapsed="true">
+    <Position X="44.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JAQAECAEgBAAAIAQAABAEQAAAAAAAAAACABAAAggQgA=</HashCode>
+      <FileName>RMOperatorsInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RmPromotionGroupInfo" Collapsed="true">
+    <Position X="46.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAQAgAIAEgAAAAAIAAAAAAIAAABAkgAAgAQE=</HashCode>
+      <FileName>RmPromotionGroupInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RmPromotionGroupMember" Collapsed="true">
+    <Position X="48.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAhABAAQAAEAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>RmPromotionGroupMember.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RmPromotionPlanDetailInfo" Collapsed="true">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>qTSRQCACGi5gMiKkgQYDE2QohBgSQIAISCCpAEwASCA=</HashCode>
+      <FileName>RmPromotionPlanDetailInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RmPromotionPlanInfo" Collapsed="true">
+    <Position X="8.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBEBCAISBgAFAIAEwQAJJEAmAQAAEJEARAAAAEQAEAA=</HashCode>
+      <FileName>RmPromotionPlanInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ExtendedFFCreditRule" Collapsed="true">
+    <Position X="50" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAQAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RmPromotionPlanInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RmPromotionPlanRuleInfo" Collapsed="true">
+    <Position X="10.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CACIzCACAgICSBqAEAAQEACCBgUAASEAAAAgAwgBshA=</HashCode>
+      <FileName>RmPromotionPlanRuleInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RmPromotionPlanTopupBasedParameters" Collapsed="true">
+    <Position X="50" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAABAAAAIAAAAAAggAgAAAACAEAAAqAADAEAAAgJAQA=</HashCode>
+      <FileName>RmPromotionPlanTopupBasedParameters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RmSpecificNumberGroupInfo" Collapsed="true">
+    <Position X="15.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAACAGCCAAMAAAAAIAAAAgAAAAIIAAAQAAAEAAAAE=</HashCode>
+      <FileName>RmSpecificNumberGroupInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RoamingBlackListInfo" Collapsed="true">
+    <Position X="51.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAgAAAAECAAAAAAAAAAAgAAQACBAAAAAAA=</HashCode>
+      <FileName>RoamingBlackListInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RoamingOperatorInfo" Collapsed="true">
+    <Position X="53.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEAEAAAAAQkAgQEQAEAMAAAAAEAAAAgAAAAAAAAEAIA=</HashCode>
+      <FileName>RoamingOperatorInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RoamingSettingInfo" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAgAAAAABIAAAAAAAAAAMIACBCASABACAABAA=</HashCode>
+      <FileName>RoamingSettingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RoamingSmsConfigInfo" Collapsed="true">
+    <Position X="55.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AOAAIAAGACAggEQEAQJQABAgAAAEIgAEAAAAAEAEABg=</HashCode>
+      <FileName>RoamingSmsConfigInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RoamingSmsHistoryInfo" Collapsed="true">
+    <Position X="57" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAgAAAAAAAAgABAEAIcQAAQAABAAABBAAABAACEAEA=</HashCode>
+      <FileName>RoamingSmsHistoryInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RoamingZoneDetailInfo" Collapsed="true">
+    <Position X="58.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IMAQAAACAAkAAAAAAEAMAAFgAEQAIAiBAAAAAFAAAIA=</HashCode>
+      <FileName>RoamingZoneDetailInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RoamingZoneInfo" Collapsed="true">
+    <Position X="29" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMCgAAACACAAAAAAAAAAIAQgACABIgABAAAAAFAAAAA=</HashCode>
+      <FileName>RoamingZoneInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RoleInfo" Collapsed="true">
+    <Position X="30.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQQIEAQAAACQBAAAQMAAAACACAgACAkABGAgQAAA=</HashCode>
+      <FileName>RoleInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.RolePermissionInfo" Collapsed="true">
+    <Position X="32.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAgAAAAAAUAAAAAAAAAgAAAAAAAAAEAAA=</HashCode>
+      <FileName>RolePermissionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ServicesInfo" Collapsed="true">
+    <Position X="34.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAACCEAAEABgAAAAAAAAggQAAAAQAACABDAEAAARA=</HashCode>
+      <FileName>ServicesInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.SettingDetailInfo" Collapsed="true">
+    <Position X="36" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCAAIAAAAAAgAIAQoIACAAAAQAIBQAgEAAABAAGQAAA=</HashCode>
+      <FileName>SettingDetailInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.SettingExtendDetailInfo" Collapsed="true">
+    <Position X="37.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAFAAAIAAIBAgCAgAAAAAAAAABCAIAACACQMCCAAQA=</HashCode>
+      <FileName>SettingExtendDetailInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.SettingInfo" Collapsed="true">
+    <Position X="39.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAQAjAIAQAAAAAAAAgCIAAIAEIAAZICCRIBM=</HashCode>
+      <FileName>SettingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.SIMCardInfo" Collapsed="true">
+    <Position X="41.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEACIEEACCh0dBCAAARAAAACCQBAgAADAghIGAAQgA=</HashCode>
+      <FileName>SIMCardInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.SIMCardMappingInfo" Collapsed="true">
+    <Position X="43" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>SIMCardMappingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.SIMCardOrderInfo" Collapsed="true">
+    <Position X="44.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAABAEAACAAgQYAAAAAEBAAGIAAgACIEAAhAAAAEE=</HashCode>
+      <FileName>SIMCardOrderInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.SmsLogInfo" Collapsed="true">
+    <Position X="46.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEgAoBADICQwh5BEKICRQAgAgAAAAKCAAEohgABMIIQ=</HashCode>
+      <FileName>SmsLogInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.SmsLogQueue" Collapsed="true">
+    <Position X="48.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAABAAEAAAAAAAAAAAAACCCAAgAAAAAAAKAAABg=</HashCode>
+      <FileName>SmsLogQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.SmsTemplateInfo" Collapsed="true">
+    <Position X="50" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQCkKASIAAAhgIAECAAAAAEgAAAIAAAQAgIIACGCQA=</HashCode>
+      <FileName>SmsTemplateInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ITextTemplate" Collapsed="true">
+    <Position X="32.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAANAAAAAhAAAAAIAAAAgAAAAAIAAACAA=</HashCode>
+      <FileName>SmsTemplateInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.SmsTempletInfo" Collapsed="true">
+    <Position X="51.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAIAAABiAAAAAAAAAAAAAAAoAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SmsTempletInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.SpecialTelNumberInfo" Collapsed="true">
+    <Position X="53.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAIAABQAAAAEABABACAQARAgAAAAA=</HashCode>
+      <FileName>SpecialTelNumberInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.StatusChangedLogInfo" Collapsed="true">
+    <Position X="57" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAgBBgAAAAAAAUCCABAAggwIAAANCCAQBRBgEABJQ=</HashCode>
+      <FileName>StatusChangedLogInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.StyleInfo" Collapsed="true">
+    <Position X="30.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAgAAAAAcAAgAAAAJAAAAAAAAACBBRAAAGAAAQEAAA=</HashCode>
+      <FileName>StyleInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.SystemConfigDataInfo" Collapsed="true">
+    <Position X="32.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAABAgABAAAAAAIAQEAAAAAAAEAAAgAAAgAAA=</HashCode>
+      <FileName>SystemConfigDataInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.SystemConfigIDInfo" Collapsed="true">
+    <Position X="34.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAIAAAAAAAAAAoAAAAAAAAAAAAA=</HashCode>
+      <FileName>SystemConfigIDInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.ThemeInfo" Collapsed="true">
+    <Position X="36" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAEAAGAAAIggAAIACAAAAAAAABAAAAEAAAAEAAGBIA=</HashCode>
+      <FileName>ThemeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.TimeCategoryInfo" Collapsed="true">
+    <Position X="37.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAgAAAAAAAIIEgAIAACABEAggAAQA=</HashCode>
+      <FileName>TimeCategoryInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.TimeCategoryPKInfo" Collapsed="true">
+    <Position X="39.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAgAAAAAAEAAAAAIAQQAAAAAAAAAA=</HashCode>
+      <FileName>TimeCategoryInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.TransferBalanceInfo" Collapsed="true">
+    <Position X="41.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAEAAAFQEAkAIAAAAAABAgQAAAABgAEAAABAAAAAAA=</HashCode>
+      <FileName>TransferBalanceInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.TransitionInfo" Collapsed="true">
+    <Position X="43" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAgAAAAAAAAAEAAAAAgAAAAAAAAAIAAAgAAAAI=</HashCode>
+      <FileName>TransitionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.TroubleTicketInfo" Collapsed="true">
+    <Position X="44.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hEAAgiwAQgQJgAgCEQIhIkFWWQAAAc4ASQgBAQVEMIA=</HashCode>
+      <FileName>TroubleTicketInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.TroubleTicketQuestionInfo" Collapsed="true">
+    <Position X="46.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAMAAAxAAAACAAAAAAAAAAAEAIACCQAAImAAA=</HashCode>
+      <FileName>TroubleTicketQuestionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.TTDeptInfo" Collapsed="true">
+    <Position X="48.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAASQAIAAAAAAACUAgCAAAAgIAQAAEAAAAAAAA=</HashCode>
+      <FileName>TTDeptInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.TTHistoryInfo" Collapsed="true">
+    <Position X="50" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAACAAAAAAgBAAAAoAAAAEAAAAAQgACQAgAAEEAAA=</HashCode>
+      <FileName>TTHistoryInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.UnitCategoryInfo" Collapsed="true">
+    <Position X="51.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAIAAACgAAACCAAAIAAAEAAQAAAAgAAAAA=</HashCode>
+      <FileName>UnitCategoryInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.UserDealerInfo" Collapsed="true">
+    <Position X="53.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAgAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserDealerInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.UserOrganizationInfo" Collapsed="true">
+    <Position X="55.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAgAAAAAAAAAgAAAAAAAAAAAABAAAEAAA=</HashCode>
+      <FileName>UserOrganizationInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.UserRoleInfo" Collapsed="true">
+    <Position X="57" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAgAgAAAAAAQAAgAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>UserRoleInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.VoucherBatchInfo" Collapsed="true">
+    <Position X="58.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAQAAAIABEACBARAAgAAAAIAAAAABIAAAACA=</HashCode>
+      <FileName>VoucherBatchInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.VoucherCardBakInfo" Collapsed="true">
+    <Position X="29" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAAABEYgAAYAQkCAAAAAAgKCBBIoQADAABAEAQBAA=</HashCode>
+      <FileName>VoucherCardBakInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.VoucherCardInfo" Collapsed="true">
+    <Position X="30.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAAABEYgAAYAQkCAAAAABgKCBBIIQADIABAEBQBAA=</HashCode>
+      <FileName>VoucherCardInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.VPNGroupInfo" Collapsed="true">
+    <Position X="32.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAwAiAAIAAADAAAAAACAAAQAQAAFUCAAAABAAAAABA=</HashCode>
+      <FileName>VPNGroupInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.VPNInfo" Collapsed="true">
+    <Position X="34.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQACAABAAAEKACAAAQAQAAAEAAAAgBEAAAgBA=</HashCode>
+      <FileName>VPNInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.VPNShortCodeInfo" Collapsed="true">
+    <Position X="36" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgACgAAAAABAAAAAAAAAAQAYAABACQAAABAAAAABA=</HashCode>
+      <FileName>VPNShortCodeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.VPNSubscriberInfo" Collapsed="true">
+    <Position X="37.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAgACgAQAAABAIAAAAAgAAwAYAAJACAAoAJgAAAABA=</HashCode>
+      <FileName>VPNSubscriberInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="com.etak.core.model.SIMCardAssignStatus" Collapsed="true">
+    <Position X="27.25" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEI=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SIMCardManufacturerEncryptionType" Collapsed="true">
+    <Position X="32.5" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAEAAAAAAAAAABAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SIMCardType" Collapsed="true">
+    <Position X="6.25" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SmsPriority" Collapsed="true">
+    <Position X="9.75" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAEAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.EmailPriority" Collapsed="true">
+    <Position X="34.25" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SmsCategory" Collapsed="true">
+    <Position X="8" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MQAsEAEMHCodAAkAAwMAAQAAQGSJAMBnACDANwAAyD8=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.EmailCategory" Collapsed="true">
+    <Position X="32.5" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAelAGACAEAAABAAAAAAQBAEAARQgAQEICAEAAAwA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.EmailStatus" Collapsed="true">
+    <Position X="4.5" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAgQAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PendingStatus" Collapsed="true">
+    <Position X="11.5" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAACAAAAgAAAAIAAkAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CustomerStatus" Collapsed="true">
+    <Position X="13.25" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAABAAAEAAAAACAAAAgAAAAIAAEAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.RESOURCEType" Collapsed="true">
+    <Position X="8" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAoAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ReportSourceType" Collapsed="true">
+    <Position X="34.25" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAABAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ReportType" Collapsed="true">
+    <Position X="4.5" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAACIAQAIJABAACAAAABAAAAAAAAEAAAAQkAEAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.FileType" Collapsed="true">
+    <Position X="9.75" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACDAQAAAAACAAAAAAACAAACAAAEEAAAEAAAAAEAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ActionType" Collapsed="true">
+    <Position X="6.25" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.RemindSMSType" Collapsed="true">
+    <Position X="30.75" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAEAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.OperateType" Collapsed="true">
+    <Position X="18.5" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.RechargeType" Collapsed="true">
+    <Position X="29" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAIACIIBAFCIRYEAAEAIACcA6A6lGAAECAAAAUBpE=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CreditTransferType" Collapsed="true">
+    <Position X="27.25" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAACAAAEAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.JobType" Collapsed="true">
+    <Position X="4.5" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SIMCardEventCode" Collapsed="true">
+    <Position X="30.75" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgIgAgAACoCIIAlSAKIgQFIIYBYQAkkoABAkgAIAQkA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.MSISDNEventCode" Collapsed="true">
+    <Position X="30.75" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>agIoAgBACoDIIAhSAKJkQFA4Ih4QEk8MIJQk8DJAAnA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.VoucherEventCode" Collapsed="true">
+    <Position X="30.75" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAQAAICgUQAAAAAAAAAYBQBEAIAAwAAIAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PaymentType" Collapsed="true">
+    <Position X="34.25" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAIAAg=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SIMCardStatus" Collapsed="true">
+    <Position X="4.5" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACCAggAgAAAAAAABAAEAAAAAAAAChAAACAAAgAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.MSISDNStatus" Collapsed="true">
+    <Position X="32.5" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAACCAgwQgAKAAAAABAEAAAAAAAAAChAAACAAAgAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ResourceStatus" Collapsed="true">
+    <Position X="6.25" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAACDAgwAgACAAAAADAEAAAAABgAAChAQAiAAAgAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ParameterType" Collapsed="true">
+    <Position X="32.5" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAIAAAAAAAAAAEIAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.EventType" Collapsed="true">
+    <Position X="25.5" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAEAAAAAAAAAAACABAAAAAAAiAAAAAAAABAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ServiceType" Collapsed="true">
+    <Position X="23.75" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAQAAAAEAAAAAAAAAAACCAAAAAAAAACAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.InvoiceType" Collapsed="true">
+    <Position X="29" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAgCAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.InvoiceStatus" Collapsed="true">
+    <Position X="27.25" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAKAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ConsolidationStatus" Collapsed="true">
+    <Position X="20.25" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAABAAAAAAAABAAIAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PortabilityDirection" Collapsed="true">
+    <Position X="13.25" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CategoryType" Collapsed="true">
+    <Position X="4.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAABAAAAAAAAIAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ActivateType" Collapsed="true">
+    <Position X="8" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CurrencyShort" Collapsed="true">
+    <Position X="34.25" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.OperationResult" Collapsed="true">
+    <Position X="22" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAgAAAAAAAEgAAAAAAAABAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.OperationStatus" Collapsed="true">
+    <Position X="23.75" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAEAAIAAAAAAAAAAAAgAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SubServiceType" Collapsed="true">
+    <Position X="32.5" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAARAAAQAAAAEAJAAgCAAAAAAGAAAAAAIgADAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ImportFileResult" Collapsed="true">
+    <Position X="18.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEABAAgAAAAAAAAAAAAAAAAAAAAAAAEACCAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ImportFileLogCode" Collapsed="true">
+    <Position X="16.75" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAUAAAAgAAAAQAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SIMCardsOrderStatus" Collapsed="true">
+    <Position X="34.25" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAACAgAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PreactivatedSimcardTypes" Collapsed="true">
+    <Position X="23.75" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SIMCardBaseObjectName" Collapsed="true">
+    <Position X="29" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAABAAAAAAQAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SIMCardActivateType" Collapsed="true">
+    <Position X="25.5" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ItemSeq" Collapsed="true">
+    <Position X="34.25" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAoBgQACACQwAChoAAQECAAGAMAxgwEAAGiSgEUSAE=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.FFFeeType" Collapsed="true">
+    <Position X="4.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAEAAAAIAAAIAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.FFChargeType" Collapsed="true">
+    <Position X="34.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAIAAAAAAAABAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.FFTrafficType" Collapsed="true">
+    <Position X="8" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAIAAAAAAAAABAAACAAAAAAAFAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.FFHistoryActionType" Collapsed="true">
+    <Position X="6.25" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAACCAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ETMessageBoxIcon" Collapsed="true">
+    <Position X="23.75" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAACAAAQAAAAAAABAAAAAAAAAEIQAAAAEAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.TopupType" Collapsed="true">
+    <Position X="18.5" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAIAAABAAAAAAAEAAAAAAAAAAAMAyAAAAABAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.LifecycleResponseCode" Collapsed="true">
+    <Position X="8" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAgAAAIAAABABAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CustomerIdType" Collapsed="true">
+    <Position X="9.75" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAgAAAAQAAAAAQAAAAAAEI=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.DictionaryType" Collapsed="true">
+    <Position X="23.75" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgMpDAQADEQCQECJoAQAAiAACBIIwoAAQACgEgEAKAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ResultType" Collapsed="true">
+    <Position X="9.75" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAgAAgCAAAAAAAAAAAAAAAAgAIAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CustomerAdvanceSearchItem" Collapsed="true">
+    <Position X="4.5" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgIAAAAAAQQEAIBAAAAAAAEAAABAACAABABQAEAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PCCustomerType" Collapsed="true">
+    <Position X="6.25" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAQAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CreditCheckType" Collapsed="true">
+    <Position X="25.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAEAAAAAAAACAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CreditCheckedStatus" Collapsed="true">
+    <Position X="23.75" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAIAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.RatePlanDetailCatetory" Collapsed="true">
+    <Position X="25.5" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAABAAIAAAAAAAAAAIAAAAAAQAgAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.UserNameLoginType" Collapsed="true">
+    <Position X="9.75" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.LogSource" Collapsed="true">
+    <Position X="15" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAACAAAAAAAAIEAIAgQAAQAAAAAAAAAAgAAAAQ=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.LogBusiness" Collapsed="true">
+    <Position X="9.75" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEGJAAAAFQAAAQgAIAQAk0AMIEIAAAAQIIAgAoAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.LogOperator" Collapsed="true">
+    <Position X="13.25" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FOHq6XYLAf/h/OnIIfUkANE5xJvdX0sdkZ2VeAm962I=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.LoginStatus" Collapsed="true">
+    <Position X="11.5" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.UserType" Collapsed="true">
+    <Position X="13.25" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.UserSource" Collapsed="true">
+    <Position X="11.5" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAEAAAAAgAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.MVNOBusinessType" Collapsed="true">
+    <Position X="6.25" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAACAAAEAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.DefaultMVNOConfig" Collapsed="true">
+    <Position X="20.25" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CustomerBusinessType" Collapsed="true">
+    <Position X="8" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAgAAAEAAAAAAAAAAAgAECAAI=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.Culture" Collapsed="true">
+    <Position X="30.75" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HFiu3i9O4eAlogpYw4Lt6k0C9mh/rl/EJb8vahS/Hwk=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.IntegratedRWOfLogin" Collapsed="true">
+    <Position X="22" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIEBAAAAAEAAAAAAAEAAgACAABAAAAAAAAFAAAAAAAQ=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.UIStyleType" Collapsed="true">
+    <Position X="34.25" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIgAAAAAAABBACAAAwAgAIAEIACEAAAAAAAAAAMA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.UIStyleIndex" Collapsed="true">
+    <Position X="32.5" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAACAAAwAAAIAEAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.UIStyleTypeIndex" Collapsed="true">
+    <Position X="4.5" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAIAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.UINavigation" Collapsed="true">
+    <Position X="30.75" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAIUAAAAAAAAQAAAAQAgIAAAAQAACAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.UIThemeType" Collapsed="true">
+    <Position X="6.25" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAEAAAAAAAAIAgAAAAAQAAAAAAAAABA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.TeleServiceList" Collapsed="true">
+    <Position X="9.75" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAADA/wAAAABALwAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.BearerServiceList" Collapsed="true">
+    <Position X="9.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>PzAAAAAAAAAAAAAAAAAAAACAHwAAAAAAAAAAAAAAAMA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.OdbMask" Collapsed="true">
+    <Position X="16.75" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABEgAAKCRGwABAAAAoEABAwIEEQAAAAAAgAAKAAYAAE=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.MultiLingualShowType" Collapsed="true">
+    <Position X="34.25" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SystemConfigHeadType" Collapsed="true">
+    <Position X="8" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAgBAAIAABAAAAAAAABAAAAAAYCAACAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.MVNOTemplateName" Collapsed="true">
+    <Position X="8" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAAgABAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ComboValuesEnum" Collapsed="true">
+    <Position X="15" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAgAAKAAAAABAAAgAAAECBACAQCI4CAAAQAAAECCAE=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ElementType" Collapsed="true">
+    <Position X="29" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAEAICACAAAABAEgAAAAAgIAAAgAAEAgMEQSI=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PaymentTypeConvert" Collapsed="true">
+    <Position X="4.5" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAIAAAAAAAGAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eInvoker" Collapsed="true">
+    <Position X="18.5" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBAEAAAAABAQAAAACAAABAAAAAAAABAAAAgAAAAAAAQ=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ProductUIEditType" Collapsed="true">
+    <Position X="27.25" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eOperationStatus" Collapsed="true">
+    <Position X="8" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAEAAIAAAAAAAAAAAAgAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CoinMsgStatus" Collapsed="true">
+    <Position X="13.25" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAkAAAAQAAAAAAAgEACAAAAAAAQAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CoinApiReturn" Collapsed="true">
+    <Position X="11.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAggAABCIgQAAAAEAAAAQABAgAEEghBAAAAAEA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.RechargeTarget" Collapsed="true">
+    <Position X="27.25" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAACABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.Deposit" Collapsed="true">
+    <Position X="22" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.AutoTopupStatus" Collapsed="true">
+    <Position X="25.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.BankCollectionCode" Collapsed="true">
+    <Position X="32.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQABCAARAAiAAAAAgAAEAMAAAQAABBTAKKAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.BankCollectionStatus" Collapsed="true">
+    <Position X="4.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAIIIAAAAAIAAAAAAAAABAAAAAAACAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.BankWorkItem" Collapsed="true">
+    <Position X="6.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAABAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.BankCollectionLogType" Collapsed="true">
+    <Position X="34.25" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAEAAAAACAAAEAAAAAAAAE=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SaudiRegisterLogType" Collapsed="true">
+    <Position X="20.25" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACCAAAAAAAAAAIAAAAAAAAAAAEA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.IMSIType" Collapsed="true">
+    <Position X="20.25" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.BillingMethod" Collapsed="true">
+    <Position X="15" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAIAAACAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ContactPeriod" Collapsed="true">
+    <Position X="22" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CMContactPeriod" Collapsed="true">
+    <Position X="9.75" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ExtaUsageType" Collapsed="true">
+    <Position X="27.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhiAEACIAAoVgCEAAAAkABCIAUAABFAMAyCAAAQJAIQ=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SAPOrderStatus" Collapsed="true">
+    <Position X="16.75" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAACAAAAAAAAAAQAAgIAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.AssignSIMCardType" Collapsed="true">
+    <Position X="23.75" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ExtraUsageStatus" Collapsed="true">
+    <Position X="30.75" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ManagementFeeEnum" Collapsed="true">
+    <Position X="16.75" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJAAAAACCAAABAAgBCAAAAARAAgAAAAIAAAARAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.VoucherType" Collapsed="true">
+    <Position X="34.25" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.TimeUnits" Collapsed="true">
+    <Position X="11.5" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAJAAAAAAAAAAAAAIAAAAAACIEAAAAAIAAAAA=</HashCode>
+      <FileName>TimeUnits.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PortingStatusforBen" Collapsed="true">
+    <Position X="20.25" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAACAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.Currencies" Collapsed="true">
+    <Position X="32.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAQAAAAAAAAEAAgAAAAAAAAQAAAAAAAAAAAAAAAEg=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.VoucherBusinessTypes" Collapsed="true">
+    <Position X="29" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAEACAAAAAAACAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.Causas" Collapsed="true">
+    <Position X="6.25" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIFAgAAAAAAAEAEAAAIAAAAABAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eTipoResultado" Collapsed="true">
+    <Position X="20.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAABAAAAAAABAAAAAAAAAEAAAAAAEABAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PortingRequestStatus" Collapsed="true">
+    <Position X="18.5" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAACQAAAIAAAAAAAQAAAIAEIAAAAAgAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SapOrderType" Collapsed="true">
+    <Position X="18.5" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.BenCustomerType" Collapsed="true">
+    <Position X="13.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAEQAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAEAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PortingType" Collapsed="true">
+    <Position X="22" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eCambioEstado" Collapsed="true">
+    <Position X="4.5" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eCanal" Collapsed="true">
+    <Position X="6.25" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAgAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eEstado" Collapsed="true">
+    <Position X="11.5" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAABCAAAAAIAAAgAAAAAAAIAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SubscriberType" Collapsed="true">
+    <Position X="30.75" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.IDType" Collapsed="true">
+    <Position X="15" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAEI=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ApplicationType" Collapsed="true">
+    <Position X="20.25" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.MNPProcessStatus" Collapsed="true">
+    <Position X="25.5" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAgCAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.MNPPaymentType" Collapsed="true">
+    <Position X="23.75" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAIAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eFuente" Collapsed="true">
+    <Position X="15" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAIAAAQAAAAAAAACAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eTipoConsulta" Collapsed="true">
+    <Position X="16.75" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAABAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eRechargeType" Collapsed="true">
+    <Position X="9.75" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAIABABCARQAAAEAIACcAgAaAEAAAAAAAAABAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eCurrencyShort" Collapsed="true">
+    <Position X="8" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PortabilityReasonType" Collapsed="true">
+    <Position X="15" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PortabilityStatus" Collapsed="true">
+    <Position X="16.75" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQCAQAAABAAAQAAAAAgABAAAAQAGAAAAgAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eInsertStatus" Collapsed="true">
+    <Position X="16.75" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAABAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eDealerMatchType" Collapsed="true">
+    <Position X="9.75" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.TrafficType" Collapsed="true">
+    <Position X="20.25" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAIAAAAAAAAABAAACAAIAAAAFAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.FeeType" Collapsed="true">
+    <Position X="32.5" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAEAAAAIAAAIAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ChargeType" Collapsed="true">
+    <Position X="8" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAIAAAAAAAABAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eResultType" Collapsed="true">
+    <Position X="11.5" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAgAAgCAAAAAAAAAAAAAAAAgAIAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eFFServiceStatusValues" Collapsed="true">
+    <Position X="13.25" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAgAAAAAAAAAAAAAAAAAAAAAAhAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.TTRoleEnum" Collapsed="true">
+    <Position X="27.25" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAACAAAAAAABAAAAAAAAAAAMAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.TTActionEnum" Collapsed="true">
+    <Position X="23.75" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAAAAAAAADgACAAAAAAGAAAAAAAAAAIAAgAAABEQ=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.TTStatusEnum" Collapsed="true">
+    <Position X="29" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAgAAAAAAAAAAAAAEAAEAAAAgABAAAAAAAAAAgAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.TTRequestTypeEnum" Collapsed="true">
+    <Position X="25.5" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAABAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eLBSStatus" Collapsed="true">
+    <Position X="25.5" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eLBSChargeFlag" Collapsed="true">
+    <Position X="22" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eLBSChargeMode" Collapsed="true">
+    <Position X="23.75" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eLBSTracerType" Collapsed="true">
+    <Position X="27.25" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eLBSAuthorizeStatus" Collapsed="true">
+    <Position X="20.25" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAABAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.APIOperationCode" Collapsed="true">
+    <Position X="18.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>twf7eXAUP+/C+f19w1Zz/TDpZ/7rvlwJKxu7CMyj/f8=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.BarringTypes" Collapsed="true">
+    <Position X="8" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eAtosTTStates" Collapsed="true">
+    <Position X="34.25" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAACAAAAEAAAIAAAQQAAGAgAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eAtosFuente" Collapsed="true">
+    <Position X="32.5" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAIAAAQAAAAAAAACAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eTipoIdentificacion" Collapsed="true">
+    <Position X="18.5" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAEI=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eTipoSolicitud" Collapsed="true">
+    <Position X="22" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eModoPago" Collapsed="true">
+    <Position X="6.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAIAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.eTipoAbonado" Collapsed="true">
+    <Position X="15" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.MNPIncomingEffectStatus" Collapsed="true">
+    <Position X="18.5" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAACAAAAAAAAABAAIAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.MNPIncomingEffectType" Collapsed="true">
+    <Position X="20.25" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.OperatorResult" Collapsed="true">
+    <Position X="25.5" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.VPNNumberCategory" Collapsed="true">
+    <Position X="4.5" Y="29" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.VPNResourceType" Collapsed="true">
+    <Position X="6.25" Y="29" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.VPNStatus" Collapsed="true">
+    <Position X="8" Y="29" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.BenConfigDataIDType" Collapsed="true">
+    <Position X="11.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAIAAAAAAAAAAAAAAAAgAAAAIAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PRSConnectionStatus" Collapsed="true">
+    <Position X="8" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAgAAAAAgAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.MonitorSysAlertType" Collapsed="true">
+    <Position X="27.25" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAABAAAAAIAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.MonitorSysServiceRuningStatus" Collapsed="true">
+    <Position X="29" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ButtonControl" Collapsed="true">
+    <Position X="20.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIEAAAAAAAABAAAAAAAAAAAAAAACAAAAAAgA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PackageLevel" Collapsed="true">
+    <Position X="30.75" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAgAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.Switch_UnBilledBalance" Collapsed="true">
+    <Position X="6.25" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.MVNO_BRS_FINANCIALENTITY_Type" Collapsed="true">
+    <Position X="4.5" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAcAwA6AEAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.MNPMultiPortInStatus" Collapsed="true">
+    <Position X="22" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAgCAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.AlertRuleType" Collapsed="true">
+    <Position X="16.75" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFAAABAAAUAABAAwAAABAIABCgAAAAAAAIQAACAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.AlertRulePeriodType" Collapsed="true">
+    <Position X="13.25" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.AlertRuleStatus" Collapsed="true">
+    <Position X="15" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CustomerAgentType" Collapsed="true">
+    <Position X="6.25" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAIAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SMSTemplateRequestType" Collapsed="true">
+    <Position X="18.5" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIQAAEgAAEQBkAYAAgAgBBAAABCIQgQABgAABBAAQ=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SMSTemplatePromotionLifeCycleSubType" Collapsed="true">
+    <Position X="16.75" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACiAAAAEEgAIAgAAAEAAAAAAIKAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SMSTemplateResponseErrorType" Collapsed="true">
+    <Position X="20.25" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAIAAQIAAACAAACACAAACoAgRIAAAAQAAACAQAAQE=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SMSTemplateRoamingWelcomeSubType" Collapsed="true">
+    <Position X="25.5" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SMSTemplateRoamingDataNotificationType" Collapsed="true">
+    <Position X="22" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABQAAAABAAAAAAQAAAAQACAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SMSTemplateRoamingDataSMSSubType" Collapsed="true">
+    <Position X="23.75" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABQAAAABAAAAAAQAAAAQACAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SMSTemplatePaymentType" Collapsed="true">
+    <Position X="15" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SMSTemplateNetType" Collapsed="true">
+    <Position X="13.25" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAEAAIAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SMSTemplateStatus" Collapsed="true">
+    <Position X="27.25" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAIAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SMSTemplateFormOwner" Collapsed="true">
+    <Position X="11.5" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAACAAAAAABAAAICAABAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CallFrom" Collapsed="true">
+    <Position X="30.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.VASServiceType" Collapsed="true">
+    <Position X="25.5" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAEAAACAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.VASServiceStatus" Collapsed="true">
+    <Position X="23.75" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.VASBlackWhiteListType" Collapsed="true">
+    <Position X="15" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAQAEAQAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.VASStatusID" Collapsed="true">
+    <Position X="27.25" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAACAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.VASServicePropertyCode" Collapsed="true">
+    <Position X="22" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAEAAAQAAAQEAAAgAAAAAAAAAAAAAEAAAGAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.VASBlackWhiteType" Collapsed="true">
+    <Position X="16.75" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.VASPropertyType" Collapsed="true">
+    <Position X="20.25" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.VASDataType" Collapsed="true">
+    <Position X="18.5" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBCAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.AccountType" Collapsed="true">
+    <Position X="4.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.NotificationFrom" Collapsed="true">
+    <Position X="11.5" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.TopupHistoryQueryType" Collapsed="true">
+    <Position X="15" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.IPStatus" Collapsed="true">
+    <Position X="30.75" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEI=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionDeactiveReason" Collapsed="true">
+    <Position X="11.5" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CustomerSpendingStatus" Collapsed="true">
+    <Position X="11.5" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PCRFServiceType" Collapsed="true">
+    <Position X="8" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ErrorStatus" Collapsed="true">
+    <Position X="13.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAIAAAAAAgAAAAAAAAAAAAAAAAAAAIAAEAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.Gender" Collapsed="true">
+    <Position X="11.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAABAIAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.Title" Collapsed="true">
+    <Position X="13.25" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.BalanceTransferChannel" Collapsed="true">
+    <Position X="27.25" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAABAAAAAAAAAAQAAAAAAAAAAABAgAAAAAAAQ=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.BalanceTransferRequestStatus" Collapsed="true">
+    <Position X="29" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAACAAAAAAAAAAAAAAAAAAAIEAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.BalanceTransferType" Collapsed="true">
+    <Position X="30.75" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CamelRestrictedStatus" Collapsed="true">
+    <Position X="34.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAgAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ScheDuleType" Collapsed="true">
+    <Position X="22" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAABAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SuplementaryServiceType" Collapsed="true">
+    <Position X="4.5" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAKhAAAAAQAAAAAAAgAAAGAgEEADAAAUAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.Camel_CSI_Type_TK" Collapsed="true">
+    <Position X="32.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAABAAAAwACAAAAAAAACAAAAAAAAAIAEAEAAAEA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CRM_CallForwardType" Collapsed="true">
+    <Position X="29" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAgAAAAAAAAAAAAAABAAAAAABA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.BSGID" Collapsed="true">
+    <Position X="18.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAACAAAAAAIAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.IPVersionType" Collapsed="true">
+    <Position X="32.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgAAAAAAAAAAAAAAAAABAAAAQEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.AddFriendAndFamilyCreditResult" Collapsed="true">
+    <Position X="9.75" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAoIAAIMQABAAAgAAAAAAIAgAAAAAAAAAIDAAAAIAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CommonErrorResult" Collapsed="true">
+    <Position X="16.75" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAgIAAIEAAAAAAAAAAAQCIAgAAAABAAAAAAAAAAIAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.RenewCustomerFriendAndFamilyResult" Collapsed="true">
+    <Position X="32.5" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAgIAAIMAAAAgAgAACAQCIAgAAAAAAAAAEAAAAAIAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ApplyFriendAndFamilyResult" Collapsed="true">
+    <Position X="22" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAgIAAIMAABAAAAAEAAggIAgAAAAAAAAAABAAABICA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.OperationFFNumberResult" Collapsed="true">
+    <Position X="20.25" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>zAAgIAAIMQAAAIAgAQAAEioAgAABCQQAAACBAAAAIAg=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.OtherTypesOfNotificationTypes" Collapsed="true">
+    <Position X="27.25" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BACAQAAAAQAAICEAQBIAA4AAgYAGAIAAACAgAABAAAQ=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.NotificationTimeUnits" Collapsed="true">
+    <Position X="13.25" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.DATATYPEID" Collapsed="true">
+    <Position X="15" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAgAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PackageChangeType" Collapsed="true">
+    <Position X="29" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAgAgAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ConfigActionCategory" Collapsed="true">
+    <Position X="18.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAgAAAIAAAACAAAAEAQAAAAAAAAAAABAAABAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.BonusRelationshipTypes" Collapsed="true">
+    <Position X="16.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAABAAAAEAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.TransferStatusTypes" Collapsed="true">
+    <Position X="22" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAIAAAAAAAAAAEAAAAAAAAgUEAAACCA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.LCSettingEvent" Collapsed="true">
+    <Position X="6.25" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AOgAABYAAQYEAlABBAAIFhgQYggQCAEAAAAUPwABAAE=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionGroupCategory" Collapsed="true">
+    <Position X="16.75" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAABAAAAABAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.InvocationRetryCategories" Collapsed="true">
+    <Position X="25.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.EligibleResult" Collapsed="true">
+    <Position X="30.75" Y="20" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ggAAAAAAAAAQAAAAAAAAAAAAACCAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>CRMEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.IDMappingType" Collapsed="true">
+    <Position X="13.25" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAAAECAAAAA=</HashCode>
+      <FileName>IDMappingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.AdjustmentDirection" Collapsed="true">
+    <Position X="11.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>LifecycleEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.RunTaskUnit" Collapsed="true">
+    <Position X="15" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAACAQAAAAABAAAAIAAAAAIAAA=</HashCode>
+      <FileName>LifecycleEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.Week" Collapsed="true">
+    <Position X="9.75" Y="29" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAIAACAAAAAAAAAAACAAIACAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LifecycleEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.DurationFullUnit" Collapsed="true">
+    <Position X="30.75" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAEQAAAAAAAAAE=</HashCode>
+      <FileName>LifecycleEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.DurationDayWeekMonthUnit" Collapsed="true">
+    <Position X="27.25" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAAE=</HashCode>
+      <FileName>LifecycleEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.DurationDayWeekUnit" Collapsed="true">
+    <Position X="29" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAE=</HashCode>
+      <FileName>LifecycleEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ExtendSettingCategory" Collapsed="true">
+    <Position X="29" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAABAAAAAAAAAAAAAAAEAgAAAAA=</HashCode>
+      <FileName>LifecycleEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.RuleCaller" Collapsed="true">
+    <Position X="11.5" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAQAAAABBAAAA=</HashCode>
+      <FileName>PackageRule.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.RuleCaller4PromotionGroup" Collapsed="true">
+    <Position X="13.25" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAQIA=</HashCode>
+      <FileName>PromotionGroupRule.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.UnpaidStatus" Collapsed="true">
+    <Position X="8" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAYAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionCategorys" Collapsed="true">
+    <Position X="6.25" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAACCAAAAACAAIAAAADAAABAAAAAEIEgAACAAAAAQA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionActivationType" Collapsed="true">
+    <Position X="29" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAIAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionBusinessType" Collapsed="true">
+    <Position X="32.5" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAABAACAECQAAAAAAEAAAAAAQgAAAAAAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionCalculateType" Collapsed="true">
+    <Position X="34.25" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAQAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionCalculateUnit" Collapsed="true">
+    <Position X="4.5" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAQAAAAAAAAAAAABIAAAAAIAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.TopUpPresentRule" Collapsed="true">
+    <Position X="16.75" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAgAABAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionReturnMethod" Collapsed="true">
+    <Position X="29" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAQAAgAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionCycleType" Collapsed="true">
+    <Position X="8" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionRebateValueUnit" Collapsed="true">
+    <Position X="23.75" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionApplyStatus" Collapsed="true">
+    <Position X="30.75" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAACACAgAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionRuleScanStatus" Collapsed="true">
+    <Position X="30.75" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionRuleValidTime" Collapsed="true">
+    <Position X="32.5" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionLimitUnit" Collapsed="true">
+    <Position X="18.5" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAEAAABAAAAAAAAAAAAIABAAAACAAAAAAICAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionFeeType" Collapsed="true">
+    <Position X="15" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgACAAAAAAAAAAAAAAAAAAAgAAAEAAAAAAAAIAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionSubscriptUnit" Collapsed="true">
+    <Position X="34.25" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAJAAAAAAAAAAAAAAAAAAAAAAEAAAAAIAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionDateCategoryType" Collapsed="true">
+    <Position X="9.75" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.IntroducerStatus" Collapsed="true">
+    <Position X="23.75" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionPeriodic" Collapsed="true">
+    <Position X="22" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionResetPeriodicUnit" Collapsed="true">
+    <Position X="25.5" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAJAAAAAAAAAAAAAAAAAAAACAEAAAAAIAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionDiscountMethodId" Collapsed="true">
+    <Position X="13.25" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.DiscountMethod" Collapsed="true">
+    <Position X="25.5" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.SpecificNumberCategory" Collapsed="true">
+    <Position X="29" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAQCAAAAAAEAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CallDirection" Collapsed="true">
+    <Position X="25.5" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionMethod" Collapsed="true">
+    <Position X="20.25" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEEkBAAAAAAAIwAAQAAhAEIBAAIAIAAAoQAAAAAEAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionType" Collapsed="true">
+    <Position X="4.5" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABQAAAAAAAAAAAAAAAAAAAAAggAAAAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.DateCategory" Collapsed="true">
+    <Position X="16.75" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.NumberCategory" Collapsed="true">
+    <Position X="15" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAIICAAAEAABBAAAAAAIQAAAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.DeActiveReason" Collapsed="true">
+    <Position X="18.5" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PromotionRestrictUnit" Collapsed="true">
+    <Position X="27.25" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAIAAAAAAAEAAAA=</HashCode>
+      <FileName>PromotionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.ProvisioningType" Collapsed="true">
+    <Position X="6.25" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ggAyAIAAAAAYACAAgIAEAAgAAAACgAAAAAAAgCAAABg=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PreferredRoutingNetworkDomain" Collapsed="true">
+    <Position X="25.5" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CallForwardBsg" Collapsed="true">
+    <Position X="27.25" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAgAAAAAAAAAIAAAADAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CallBarringBSG" Collapsed="true">
+    <Position X="22" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAgAAAAAAAAAIAAAADAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.NetWorkAccessMode" Collapsed="true">
+    <Position X="9.75" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CallForwardType" Collapsed="true">
+    <Position X="29" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAQAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.CallBarringSS" Collapsed="true">
+    <Position X="23.75" Y="17.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAACAAAAAAAAAAAABAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.PdpType" Collapsed="true">
+    <Position X="9.75" Y="23.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgAAAAAAAAAAAAAAAAABAAAAAkAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.QosPeakThroughput" Collapsed="true">
+    <Position X="15" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAEAAEAEAAIAAAAAAEAAAAAAAIAAAQ=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.QosPrecedenceClass" Collapsed="true">
+    <Position X="16.75" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAACAgAAAAAAAAA=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.QosAllocationRetentionPriority" Collapsed="true">
+    <Position X="9.75" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAACAgAAAAAAAAA=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.QosTrafficClass" Collapsed="true">
+    <Position X="22" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAQAAAAAAAAAgABAAABA=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.QosDeliveryErroneousSDU" Collapsed="true">
+    <Position X="11.5" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAASAAAAAAAAAAAAACAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.QosDeliveryOrder" Collapsed="true">
+    <Position X="13.25" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.QosResidualBER" Collapsed="true">
+    <Position X="18.5" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.QosTrafficHandlingPriority" Collapsed="true">
+    <Position X="23.75" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAABA=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.QosSignallingIndication" Collapsed="true">
+    <Position X="20.25" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.Subsoption" Collapsed="true">
+    <Position X="34.25" Y="26.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>ProvisioningType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.VoucherStatus" Collapsed="true">
+    <Position X="32.5" Y="28.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAEAAAAAAAAAAAAAwhAAACAIAAAEA=</HashCode>
+      <FileName>VoucherCardStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

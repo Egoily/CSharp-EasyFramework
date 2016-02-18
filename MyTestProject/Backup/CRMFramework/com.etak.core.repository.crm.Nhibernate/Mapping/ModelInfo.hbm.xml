@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.ModelInfo,com.etak.core.model" table="SYS25_MODULE" >
+    <id name="ModuleID" column="ModuleID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+    </id>
+    <property name="ParentID" column="ParentID" type="Int32" length="4" />
+    <property name="ModuleName" column="ModuleName" type="String" length="100" />
+    <property name="ModuleForm" column="ModuleForm" type="String" length="100" />
+    <property name="ModuleFullPath" column="ModuleFullPath" type="String" length="512" />
+    <property name="ModuleLevel" column="ModuleLevel" type="Int32" length="4" />
+    <property name="Remark" column="Remark" type="String" length="2000" />
+    <property name="CreateDate" column="CreateDate" type="DateTime" />
+    <property name="CreateUserID" column="CreateUserID" type="Int32" length="4" />
+    <property name="Status" column="Status" type="Int32" length="4" />
+    <property name="UpdateDate" column="UpdateDate" type="DateTime" />
+    <property name="UpdateUserID" column="UpdateUserID" type="Int32" length="4" />
+    <property name="ShowOrder" column="SHOWORDER" type="Int32" length="4" />
+  </class>
+
+</hibernate-mapping>

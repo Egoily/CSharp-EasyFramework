@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="com.etak.core.model.VoucherBatchInfo,com.etak.core.model" table="CRM_DEALERS_VOUCHER_BATCH_INFO" >
+		<id name="BatchId" column="BatchId" type="String" length="80" unsaved-value="0">
+			<generator class="assigned" />
+		</id>
+		<property name="DealerId" column="DealerId" type="Int32" length="4" />
+		<property name="SnStart" column="SnStart" type="String" length="80" />
+		<property name="SnEnd" column="SnEnd" type="String" length="80" />
+		<property name="Credit" column="Credit" type="Decimal" />
+		<property name="CreateDate" column="CreateDate" type="DateTime" />
+		<property name="VKey" column="VKey" type="String" length="16" />
+		<property name="Supplier" column="Supplier" type="String" length="50" not-null="false" />
+    <property name="PONumber" column="PONUMBER" type="Int32" length="4" />
+    <property name="PackageType" column="PACKAGETYPE" type="Int32" length="4" />
+    <property name="PackageTypeInfo" column="PACKAGETYPEINFO" type="String" length="40" />
+    <property name="OrgIDCurrentMVO" column="ORGIDCURRENTMVO" type="Int32" length="4" />
+    <property name="OrganizationIDCurrentMVNO" column="ORGANIZATIONIDCURRENTMVNO" type="Int32" length="4" />
+    <property name="PGPFileName" column="PGPFILENAME" type="String" length="80" />
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FrontEndServiceContract</name>
+    </assembly>
+    <members>
+        <member name="T:FrontEndServiceContract.messages.HPSResult">
+            <summary>
+            All responses must extend this class so we can do common processing infrastructure
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.CrmCustomersPromotionOperationLogInfo,com.etak.core.model" table="CRM_CUSTOMERS_PROMOTION_OPERATION_LOG" >
+    <id name="LOGID" column="LOGID" type="Int64" length="8" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>
+    <property name="PRELOGID" column="PRELOGID" type="Int64" length="8" />
+    <property name="OPERATIONDATE" column="OPERATIONDATE" type="Timestamp" />
+    <property name="OPCODE" column="OPCODE" type="Int32" length="4" />
+    <property name="DEALERID" column="DEALERID" type="Int32" length="4" />
+    <property name="MSISDN" column="MSISDN" type="String" length="50" />
+    <property name="CUSTOMERID" column="CUSTOMERID" type="Int32" length="4" />
+    <property name="OPERATIONCOST" column="OPERATIONCOST" type="Decimal" />
+    <property name="PROMOTIONPLANID" column="PROMOTIONPLANID" type="Int32" length="4" />
+    <property name="STATUS" column="STATUS" type="String" length="10" />
+    <property name="APRIORITY" column="APRIORITY" type="Int32" length="4" />
+    <property name="ASTARTDATE" column="ASTARTDATE" type="DateTime" />
+    <property name="AENDDATE" column="AENDDATE" type="DateTime" />
+    <property name="AAMOUNT" column="AAMOUNT" type="Decimal" />
+    <property name="ANEXTRENEWDATE" column="ANEXTRENEWDATE" type="DateTime" />
+    <property name="BPRIORITY" column="BPRIORITY" type="Int32" length="4" />
+    <property name="BSTARTDATE" column="BSTARTDATE" type="DateTime" />
+    <property name="BENDDATE" column="BENDDATE" type="DateTime" />
+    <property name="BAMOUNT" column="BAMOUNT" type="Decimal" />
+    <property name="BNEXTRENEWDATE" column="BNEXTRENEWDATE" type="DateTime" />
+    <property name="DESCRIPTION" column="DESCRIPTION" type="String" length="300" />
+    <property name="PROMOTIONPLANDETAILID" column="PROMOTIONPLANDETAILID" type="Int32" length="4"/>    
+    <property name="PromotionGroupID" column="PromotionGroupID" type="Int32" />
+    <property name="OperationCode" column="OperationCode" type="String" length="50"  />   
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+	<class name="com.etak.core.model.CrmDefaultProvisionNetWorkInfo, com.etak.core.model" table="CRM_DEFAULT_PROVISION_NETWORK" >
+    <cache usage="nonstrict-read-write" region="SystemSettings"/>
+		<id name="NETWORKID" column="NETWORKID" type="Int32"  length="4" unsaved-value="0">
+			<generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+		</id>
+		<property name="NAM" column="NAM" type="Int32" length="4" />
+		<property name="NetworkType" column="NetworkType" type="Int32" length="4" />
+		<property name="APN" column="APN" type="String" length="100" />
+		<property name="MMS" column="MMS" type="Boolean" />
+		<property name="WAP" column="WAP" type="Boolean" />
+		<property name="OBOPRE" column="OBOPRE" type="Boolean" />
+		<property name="OBOPRI" column="OBOPRI" type="Boolean" />
+		<property name="PDPCONTEXTID" column="PDPCONTEXTID" type="Int32" length="4" />
+		<property name="PDPTYPE" column="PDPTYPE" type="Int32" length="4" />
+		<property name="PDPADDRESS" column="PDPADDRESS" type="String" length="127" />
+		<property name="VPLMNADDRESSALLOWED" column="VPLMNADDRESSALLOWED" type="Boolean" />
+		<property name="QOSALLOCATIONRETENTIONPRIORITY" column="QOSALLOCATIONRETENTIONPRIORITY" type="Int32" length="4" />
+		<property name="QOSTRAFFICCLASS" column="QOSTRAFFICCLASS" type="Int32" length="4" />
+		<property name="QOSDELIVERYERRONEOUSSDU" column="QOSDELIVERYERRONEOUSSDU" type="Int32" length="4" />
+		<property name="QOSMAXSDUSIZE" column="QOSMAXSDUSIZE" type="Int32" length="4" />
+		<property name="QOSDELIVERYORDER" column="QOSDELIVERYORDER" type="Int32" length="4" />
+		<property name="QOSMAXBITRATEDOWN" column="QOSMAXBITRATEDOWN" type="Int32" length="4" />
+		<property name="QOSMAXBITRATEUP" column="QOSMAXBITRATEUP" type="Int32" length="4" />
+		<property name="QOSRESIDUALBER" column="QOSRESIDUALBER" type="Int32" length="4" />
+		<property name="QOSSDUERRORRATIO" column="QOSSDUERRORRATIO" type="Int32" length="4" />
+		<property name="QOSTRANSFERDELAY" column="QOSTRANSFERDELAY" type="Int32" length="4" />
+		<property name="QOSTRAFFICHANDLINGPRIORITY" column="QOSTRAFFICHANDLINGPRIORITY" type="Int32" length="4" />
+		<property name="QOSGUARANTEEDBITRATEUP" column="QOSGUARANTEEDBITRATEUP" type="Int32" length="4" />
+		<property name="QOSGUARANTEEDBITRATEDOWN" column="QOSGUARANTEEDBITRATEDOWN" type="Int32" length="4" />
+		<property name="QOSSIGNALLINGINDICATION" column="QOSSIGNALLINGINDICATION" type="Int32" length="4" />
+		<many-to-one name="CrmDefaultProvisionInfo" class="com.etak.core.model.CrmDefaultProvisionInfo, com.etak.core.model">
+			<column name="PROVISIONID" length="30" />
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>

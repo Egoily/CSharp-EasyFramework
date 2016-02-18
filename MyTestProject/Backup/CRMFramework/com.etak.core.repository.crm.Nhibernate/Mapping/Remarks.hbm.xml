@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.RemarksInfo,com.etak.core.model" table="CRM_CUSTOMERS_REMARKS" >
+    <id name="RemarkID" column="REMARKID" type="Int32"  length="4">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="Remark" column="REMARK" type="String" length="8000" />
+    <property name="Subject" column="SUBJECT" type="String" length="8000" /> 
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <property name="UserID" column="USERID" type="Int32" length="4" />
+    <property name="AttachFileName" column="ATTACHFILENAME" type="String" length="255" />
+    <property name="StatusID" column="StatusID" type="Int32" length="4" />
+    <property name="AttachFile" column="AttachFile" type ="Byte[]"/>
+    <many-to-one name="CustomerInfo" class="com.etak.core.model.CustomerInfo,com.etak.core.model">
+      <column name="CUSTOMERID" length="30" />
+    </many-to-one>    
+  </class>
+
+</hibernate-mapping>
+

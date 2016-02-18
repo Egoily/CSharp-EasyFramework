@@ -1,0 +1,753 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Network3GPPModel</name>
+    </assembly>
+    <members>
+        <member name="T:Network3GPPModel.model.services.HPSAPNQoSTemplateDefinition">
+            <summary>
+            This kind of template is designed for HSS APN
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.resources.SimStatus.Installed">
+            <summary>
+            The SIM is installed in HLR SIM module.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.resources.SimStatus.Active">
+            <summary>
+            The SIM is installed in HLR SIM module, and has been assoicated to a Subscriber (MSISDN)
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.resources.SimStatus.Delete">
+            <summary>
+            The SIM is detached from the subscriber, but, it can be assoicated to other subscriber again.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.AdviceOfChargeTypes.AdviceOfChargeInformation_AoCI">
+            <summary>
+            This service permits MS to display an accurate estimate the size of the bill which will eventually be levied in the Home PLMN.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.AdviceOfChargeTypes.AdviceOfChargeCharging_AoCC">
+            <summary>
+            This service provides the means by which the MS may indicate the charge that will be made for the use of telecommunication services. 
+            It is intended for applications where the user is generally not the subscriber but is known to the subscriber, and where the 
+            user pays the subscriber, rather than the TypeOfBarring Provider.
+            The charge information is based as closely as possible on the charge that will be levied on 
+            the subscriber's bill in the Home PLMN. Where this charge cannot be stored in the MS, 
+            use of the telecommunications service shall be prevented as described below.
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.BarringODB.Type">
+            <summary>
+            Set of tele services to which the barring is aplied.
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.BarringSDB.ServicesToBarr">
+            <summary>
+            Set of tele services to which the barring is aplied.
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CallDeflection.ReceiveNotification">
+            <summary>
+            Calling subscriber receives notification that her call has been deflected
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CallDeflection.MSISDNForwarded">
+            <summary>
+            MSISDN of the served subscriber can be presented to the deflected-to subscriber
+            </summary>
+        </member>
+        <member name="T:Network3GPPModel.model.services.CallingNamePresentation">
+            <summary>
+            This supplementary service provides for the ability to indicate the name information of the calling party to the called party at call set-up time for all incoming calls.
+            The calling party takes no action to activate, initiate, or in any manner provide Calling Name Identification Presentation. 
+            However, the delivery of the calling name to the called party may be affected by other services subscribed to by the calling party. 
+            For example, if the calling party has subscribed to Calling Line Identification Restriction (CLIR), 
+            then the calling line identity  as well as the calling name identity shall not be presented to the called party. 
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CallPresentationServices.CallingLineIdentificationPresentation_CLIP">
+            <summary>
+            The CLIP Supplementary TypeOfBarring provides the called party with the possibility to receive the line identity of the calling party
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CallPresentationServices.CallingLineIdentificationRestriction_CLIR">
+            <summary>
+            The CLIR Supplementary TypeOfBarring enables the calling party to prevent presentation of its line identity to the called party.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CallPresentationServices.ConnectedLineIdentificationPresentation_COLP">
+            <summary>
+            The Connected Line Identification Presentation (COLP) Supplementary TypeOfBarring provides the calling party with the possibility to receive the line identity of the connected party.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CallPresentationServices.ConnectedLineIdentificationRestriction_COLR">
+            <summary>
+            The COLR Supplementary TypeOfBarring enables the connected party to prevent presentation of its line identity to the calling party.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CallWaitingTypes.CallWaiting_CW">
+            <summary>
+            The Call Waiting TypeOfBarring permits a mobile subscriber to be notified of an incoming call (as per basic call procedures) 
+            whilst the traffic channel is not available for the incoming call and the mobile subscriber 
+            is engaged in an active or held call. Subsequently, the subscriber can either accept, reject, or ignore the incoming call.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CallWaitingTypes.CallHold_CH">
+            <summary>
+            The call hold service allows a served mobile subscriber, who is provisioned with this Supplementary TypeOfBarring,
+            to interrupt communication on an existing active call and then subsequently,
+            if desired, re-establish communication. The traffic channel remains assigned to the mobile subscriber
+            after the communication is interrupted to allow the origination or possible termination of other calls. 
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelPhase1Service.OCSI">
+            <summary>
+            Originating CSI
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelPhase1Service.TCSI">
+            <summary>
+            Terminating CSI
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelPhase2Service.OCSI">
+            <summary>
+            Originating CSI
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelPhase2Service.TCSI">
+            <summary>
+            Terminating CSI
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelPhase3Service.DCSI">
+            <summary>
+            D-CSI	Dialled Services CAMEL Subscription Information 
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelPhase3Service.GPRSCSI">
+            <summary>
+            GPRS-CSI	GPRS CAMEL Subscription Information
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelPhase3Service.MCSI">
+            <summary>
+            M-CSI	Mobility Management event Notification CAMEL Subscription Information
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelPhase3Service.NCSI">
+            <summary>
+            N CSI	Network CAMEL Service Information
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelPhase3Service.OCSI">
+            <summary>
+            Originating CAMEL Subscription Information (O-CSI)
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelPhase3Service.SMSCSI">
+            <summary>
+            SMS CSI	Short Message Service CAMEL Subscription Information
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelPhase3Service.SSCSI">
+            <summary>
+            Supplementary Service Notification CAMEL Subscription Information 
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelPhase3Service.TCSI">
+            <summary>
+            T-CSI	Terminating CAMEL Subscription Information (in the GMSC)
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelPhase3Service.TIFCSI">
+            <summary>
+            TIF-CSI	Translation Information Flag
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelPhase3Service.UCSI">
+            <summary>
+            U-CSI	USSD CAMEL Subscription Information
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelPhase3Service.UUGCSI">
+            <summary>
+            UUG-CSI	USSD General CAMEL Service Information			
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelPhase3Service.VTCSI">
+            <summary>
+            VT-CSI	VMSC Terminating CAMEL Subscription Information
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelService.RequestSendSubscriberLocation">
+            <summary>
+            Indicates whether the HLR will request subscriber location information from the serving VLR and send it to the GMSC.
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelService.RequestSendCurrentLocation">
+            <summary>
+            Specifies whether the current location should be requested in a CAMEL PSI message.
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.CamelService.RequestSendSubscriberState">
+            <summary>
+            Indicates whether the HLR will request subscriber state information from the serving VLR and send it to the GMSC.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS20">
+            <summary>
+            General asynchronous bearer service
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS21">
+            <summary>
+            Data circuit duplex asynch. 300 bit/s 
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS22">
+            <summary>
+             Data circuit duplex asynch. 1 200 bit/s
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS23">
+            <summary>
+            Data circuit duplex asynch. 1 200/75 bit/s
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS24">
+            <summary>
+            Data circuit duplex asynch. 2 400 bit/s
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS25">
+            <summary>
+            Data circuit duplex asynch. 4 800 bit/s
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS26">
+            <summary>
+            Data circuit duplex asynch. 9 600 bit/s
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS30">
+            <summary>
+            Synchronous General Bearer Service
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS31">
+            <summary>
+            Synchronous 1.2 kbps
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS32">
+            <summary>
+            Synchronous 2.4 kbps
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS33">
+            <summary>
+            Synchronous 4.8 kbps
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS34">
+            <summary>
+            Synchronous 9.6 kbps
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS40">
+            <summary>
+            General PAD Access Bearer Service
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS41">
+            <summary>
+            PAD Access 300 bps
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS42">
+            <summary>
+            PAD Access 1.2 kbps
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS43">
+            <summary>
+            PAD Access 1200/75 bps
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS44">
+            <summary>
+            PAD Access 2.4 kbps
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS45">
+            <summary>
+            PAD Access 4.8 kbps
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS46">
+            <summary>
+            PAD Access 9.6 kbps
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS50">
+            <summary>
+            General Packet Access Bearer Service
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS51">
+            <summary>
+            Packet Access 2.4 kbps
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS52">
+            <summary>
+            Packet Access 4.8 kbps
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS53">
+            <summary>
+            Packet Access 9.6 kbps
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS61">
+            <summary>
+            Alternate Speech/Data
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CircuitBearerServices.BS81">
+            <summary>
+            Speech Followed by Data
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.ClassForwardingTypes.CallForwardingUnconditional_CFU">
+            <summary>
+            This service permits a called mobile subscriber to have the network send all incoming calls, 
+            or just those associated with a specific Basic service group, addressed to the called mobile subscriber's directory 
+            number to another directory number. The ability of the served mobile subscriber to originate calls is unaffected. If this service is activated, calls are forwarded no matter what the condition of the termination.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.ClassForwardingTypes.CallForwardingOnMobileSubscriberBusy_CFB">
+            <summary>
+            This service permits a called mobile subscriber to have the network send all incoming calls, 
+            or just those associated with a specific Basic service group, addressed to the called mobile subscriber's 
+            directory number and which meet mobile subscriber busy to another directory number. 
+            The ability of the served mobile subscriber to originate calls is unaffected. 
+            If this service is activated, a call is forwarded only if the call meets mobile subscriber busy.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.ClassForwardingTypes.CallForwardingOnNoReply_CFNRy">
+            <summary>
+            This service permits a called mobile subscriber to have the network send all incoming calls, 
+            or just those associated with a specific Basic service group, addressed to the called mobile 
+            subscriber's directory number and which meet no reply to another directory number. The ability
+            of the served mobile subscriber to originate calls is unaffected. If this service is activated,
+            a call is forwarded only if the call meets no reply.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.ClassForwardingTypes.CallForwardingOnMobileSubscriberNotReachable_CFNRc">
+            <summary>
+            This service permits a called mobile subscriber to have the network send all incoming calls, 
+            or just those associated with a specific Basic service group, addressed to the called mobile
+            subscriber's directory number, but which is not reachable, to another directory number. 
+            The ability of the served mobile subscriber to originate calls is principally unaffected, 
+            but practically it is affected if the mobile subscriber is de-registered, 
+            if there is radio congestion or if the mobile subscriber for example is being out of radio coverage. 
+            If this service is activated, a call is forwarded only if the mobile subscriber is not reachable.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.ClassForwardingTypes.CallForwardingDefault_CFD">
+            <summary>
+            This service is about forwarding the calls when the CFU, CFB, CFNRy and CFNRc is not enabled, and 
+            itself is in active status. 
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CUGAccessTypes.Preferrential_CUG">
+            <summary>
+            A preferential CUG, which can be specified for each basic service group, is the nominated default 
+            CUG to be used when no explicit CUG index is received by the network
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CUGAccessTypes.IncomingAccess_IA">
+            <summary>
+            An arrangement which allows a member of a CUG to receive calls from outside the CUG.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CUGAccessTypes.OutgoingAccess_OA">
+            <summary>
+            An arrangement which allows a member of a CUG to place calls outside the CUG.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CUGAccessTypes.IncomingCallsBarredWithinA_CUG_ICB">
+            <summary>
+            An access restriction that prevents a CUG member from receiving calls from other members of that group.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.CUGAccessTypes.OutgoingCallsBarredWithinA_CUG_OCB">
+            <summary>
+            An access restriction that prevents a CUG member from placing calls to other members of that group.
+            </summary>
+        </member>
+        <member name="T:Network3GPPModel.model.services.DetailedAPNQoSSetting">
+            <summary>
+            Class to indicate the QoS based on 3GPP document: 3GPP TS  23.107
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Network3GPPModel.model.services.DetailedAPNQoSSetting.TraficClass" -->
+        <member name="P:Network3GPPModel.model.services.DetailedAPNQoSSetting.MaximunBitRate">
+             <summary>
+              maximum number of bits delivered by UMTS and to UMTS at a SAP within a period of time, divided by the
+            duration of the period. The traffic is conformant with Maximum bitrate as long as it follows a token bucket algorithm
+            where token rate equals Maximum bitrate
+            and bucket size equals Maximum SDU size
+             </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.DetailedAPNQoSSetting.GuaranteedBitRate">
+             <summary>
+             guaranteed number of bits delivered by UMTS at a SAP within a period of time (provided that there is data
+            to deliver), divided by the duration of the period. The traffic is conformant with the guaranteed bitrate as long as it
+            follows a token bucket algorithm where token rate equals Guaranteed bitrate and bucket size equals Maximum SDU size. 
+             </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.DetailedAPNQoSSetting.DeliveryOrder">
+            <summary>
+             indicates whether the UMTS bearer shall provide in-sequence SDU delivery or not. 
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.DetailedAPNQoSSetting.MaximumSDUSize">
+            <summary>
+            the maximum SDU size for which the network shall satisfy the negotiated QoS.
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.DetailedAPNQoSSetting.SDUFormatInformation">
+            <summary>
+            Definition: list of possible exact sizes of SDUs (in bits)
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.DetailedAPNQoSSetting.SDUErrorRatio">
+            <summary>
+            Definition: Indicates the fraction of SDUs lost or detected as
+            erroneous. SDU error ratio is defined only for conforming traffic. 
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.DetailedAPNQoSSetting.ResidualBitErrorRatio">
+            <summary>
+            Indicates the undetected bit error ratio in the deliver 
+            ed SDUs. If no error detection is requested, Residual bit
+            error ratio indicates the bit error ratio in the delivered SDUs. 
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.DetailedAPNQoSSetting.DeliveryOfErroneousSDUs">
+            <summary>
+            Indicates whether SDUs detected as erroneous shall be delivered or discarded.
+            NOTE 2: 'yes' implies that error detection is employed and
+            that erroneous SDUs are delivered together with an error
+            indication, 'no' implies that error detection is employed and that erroneous SDUs are discarded, and '-' (null)
+            implies that SDUs are delivered without considering error detection. 
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.DetailedAPNQoSSetting.TransferDelayMiliseconds">
+            <summary>
+            Indicates maximum delay for 95th percentile of the distribution of delay for all delivered SDUs during the
+            lifetime of a bearer service, where delay for an SDU is defined as the time from a request to transfer an SDU at one
+            SAP to its delivery at the other SAP 
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.DetailedAPNQoSSetting.TrafficHandlingPriority">
+            <summary>
+            specifies the relative importance for handling of all SDUs belonging to the UMTS bearer compared to the
+            SDUs of other bearers. Within the interactive class, there is a definite need to differentiate between bearer qualities. This
+            is handled by using the traffic handling priority attribute, to allow UMTS to schedule traffic
+            accordingly. By definition, priority is an alternative to absolute guarantees, and thus these two
+            attribute types cannot be used together for a single beare
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.IPVersion.IPV4_Address">
+            <summary>
+            The IPV4 address, which is default
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.IPVersion.IPV6_Address">
+            <summary>
+            The IPV6 address.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.IPVersion.X25_Address">
+            <summary>
+            X25 Address.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.IPVersion.PPP_Address">
+            <summary>
+            PPP Address.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.IPVersion.OSP_IHOST_Address">
+            <summary>
+            OSP IHOST Address.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.IPVersion.Undefined">
+            <summary>
+            Not defined.
+            </summary>
+        </member>
+        <member name="T:Network3GPPModel.model.services.MultiParty">
+            <summary>
+            This Supplementary TypeOfBarring provides a mobile subscriber with the ability to have a multi-connection call, 
+            i.e. a simultaneous communication with more than one party.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.RadioAccessNetworkTypes.GERAN">
+            <summary>
+            GSM Edge Radio Access Network
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.RadioAccessNetworkTypes.UTRAN">
+            <summary>
+            UMTS Terrestrial Radio Access Network
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.RadioAccessNetworkTypes.E_UTRAN">
+            <summary>
+            Evolved UMTS Terrestrial Radio Access Network
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TS11">
+            <summary>
+            Telephony
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TS12">
+            <summary>
+            Emergency Calls
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TS21">
+            <summary>
+            Short message MT/PP 
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TS22">
+            <summary>
+            Short message MO/PP 
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TS23">
+            <summary>
+            Cell Broadcast TypeOfBarring
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TS61">
+            <summary>
+            Alternate speech and facsimile group 3
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TS62">
+            <summary>
+            Automatic Facsimile group 3
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TS63">
+            <summary>
+            Automatic Facsimile group 4
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TS91">
+            <summary>
+            Voice Group Call TypeOfBarring
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TS92">
+            <summary>
+            Voice Broadcast TypeOfBarring
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TSD1">
+            <summary>
+            PLMN Suplementary Service 1
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TSD2">
+            <summary>
+            PLMN Suplementary Service 2
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TSD3">
+            <summary>
+            PLMN Suplementary Service 3
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TSD4">
+            <summary>
+            PLMN Suplementary Service 4
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TSD5">
+            <summary>
+            PLMN Suplementary Service 5
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TSD6">
+            <summary>
+            PLMN Suplementary Service 6
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TSD7">
+            <summary>
+            PLMN Suplementary Service 7
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TSD8">
+            <summary>
+            PLMN Suplementary Service 8
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TSD9">
+            <summary>
+            PLMN Suplementary Service 9
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TSDA">
+            <summary>
+            PLMN Suplementary Service 10
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TSDB">
+            <summary>
+            PLMN Suplementary Service 11
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TSDC">
+            <summary>
+            PLMN Suplementary Service 12
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TSDD">
+            <summary>
+            PLMN Suplementary Service 13
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TSDE">
+            <summary>
+            PLMN Suplementary Service 14
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.TeleserviceTypes.TSDF">
+            <summary>
+            PLMN Suplementary Service 15
+            </summary>
+        </member>
+        <member name="T:Network3GPPModel.model.services.TemplateAPNQoSSetting">
+            <summary>
+            This class is used to specify a template for the QoS rather than the values.
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.TemplateAPNQoSSetting.TemplateName">
+            <summary>
+            the QoS name and setting name, 
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.services.TemplateAPNQoSSetting.TemplateId">
+            <summary>
+            the QoS name templeate id 
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.UserToSingnalingServices.Service1">
+            <summary>
+            UUI can be sent and received during the origination and termination of a call, 
+            with UUI embedded within call control messages. The service 1 can be activated 
+            implicit by inserting UUI when set-up a call or explicit with an appropriate procedure.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.UserToSingnalingServices.Service2">
+            <summary>
+            UUI can be sent and received after the served subscriber has received an indication 
+            that the remote party is being informed of the call and prior to the establishment of the connection. 
+            UUI sent by the served subscriber prior to receiving the acceptance of the call by the remote party, 
+            may as a network option be delivered to the remote party after the call has been established. 
+            The service 2 shall be activated explicitly.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.services.UserToSingnalingServices.Service3">
+            <summary>
+            User-to-user-information can be sent and received only while the connection is established. 
+            The service 3 shall be activated explicitly
+            </summary>
+        </member>
+        <member name="T:Network3GPPModel.model.services.RoamingWelcomeSMSService">
+            <summary>
+            To indicate whether to send a welcome SMS when the subscriber is in roaming.
+            </summary>
+        </member>
+        <member name="P:Network3GPPModel.model.subscriber.Subscriber.SubscriberStatus">
+            <summary>
+            The status of the subscriber.
+            When querying the subscriber from HLR, this variable is for output.
+            When modifying the subscriber from HLR, this variable is for input. And if you don't want to
+            change the status of the subscriber, you should pass Keep, then HPS will not change the subscriber's status when modifying.
+            Otherwise, pass active or inactive to activate/deactivate the subscriber's status.
+            </summary>
+        </member>
+        <member name="T:Network3GPPModel.model.subscriber.SubscriberStatus">
+            <summary>
+            Indicate the status of the subscriber.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.subscriber.SubscriberStatus.Keep">
+            <summary>
+            pass this value to indicate the status of the subscriber should not be changed in modification.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.subscriber.SubscriberStatus.Active">
+            <summary>
+            indicate the status of the subscriber is active.
+            Pass the value to modify the subscriber's status in hlr.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.subscriber.SubscriberStatus.Inactive">
+            <summary>
+            indicate the status of the subscriber is inactive.
+            Pass the value to modify the subscriber's status in hlr
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.subscriber.SubscriberTarget.HLR">
+            <summary>
+            Susbriber is HLR
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.subscriber.SubscriberTarget.HSS">
+            <summary>
+            Susbriber is HSS
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.subscriber.SubscriberTarget.CDMA">
+            <summary>
+            Susbriber is CMDA
+            </summary>
+        </member>
+        <member name="T:Network3GPPModel.model.subscriber.SubscriberTemplate">
+            <summary>
+            Class represent a template to provision subscriber.
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.subscriber.SubscriberTemplate.TemplateId">
+            <summary>
+            ID of the template
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.subscriber.SubscriberTemplate.DisplayName">
+            <summary>
+            Name of the template
+            </summary>
+        </member>
+        <member name="F:Network3GPPModel.model.subscriber.SubscriberTemplate.SuplementaryService">
+            <summary>
+            SuplementaryService of the template.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+<class name="com.etak.core.model.CrmMvnoTopupBonusInfo,com.etak.core.model" table="CRM_MVNO_TOPUP_BONUS" >
+<id name="BonusId" column="BONUSID" type="Int32"  length="4" unsaved-value="0">
+   <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+</id>
+<property name="DealerId" column="DEALERID" type="Int32" length="4" />
+<property name="Name" column="NAME" type="String" length="50" />
+<property name="Channel" column="CHANNEL" type="String" length="50" />
+<property name="DayInYear" column="DAYINYEAR" type="String" length="800" />
+<property name="DayInYearEnabled" column="DAYINYEARENABLED" type="Boolean" />
+<property name="DayInMonth" column="DAYINMONTH" type="String" length="50" />
+<property name="DayInMonthEnabled" column="DAYINMONTHENABLED" type="Boolean" />
+<property name="DayInWeek" column="DAYINWEEK" type="String" length="50" />
+<property name="DayInWeekEnabled" column="DAYINWEEKENABLED" type="Boolean" />
+<property name="DetailEnabled" column="DETAILENABLED" type="Boolean" />
+<property name="PromotionEnabled" column="PROMOTIONENABLED" type="Boolean" />
+<property name="Enabled" column="ENABLED" type="Boolean" />
+<property name="StartDate" column="STARTDATE" type="DateTime" />
+<property name="Enddate" column="ENDDATE" type="DateTime" />
+<property name="Priority" column="PRIORITY" type="Int32" length="4" />
+<property name="CreateDate" column="CREATEDATE" type="DateTime" />
+<property name="Cumulative" column="CUMULATIVE" type="Boolean" />
+<property name="RecurrenceNumber" column="RecurrenceNumber" type="Int32" length="4" />
+<property name="PromotionRecurrenceNumber" column="PROMOTIONRECURRENCENUMBER" type="Int32" length="4" />
+<property name="PromotionBonusNeedFee" column="PROMOTIONBONUSNEEDFEE" type="Boolean" />
+</class>
+
+</hibernate-mapping>

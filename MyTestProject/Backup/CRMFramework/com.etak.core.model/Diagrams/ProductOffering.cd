@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="com.etak.core.model.subscription.catalog.ProductOffering">
+    <Position X="5.5" Y="2.25" Width="3.5" />
+    <AssociationLine Name="OfferingChildTemplates" Type="com.etak.core.model.subscription.catalog.ProductOffering" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.438" Y="2.25" />
+        <Point X="7.438" Y="1.688" />
+        <Point X="8.75" Y="1.688" />
+        <Point X="8.75" Y="2.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.036" Y="0.633" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="OfferingParentTemplates" Type="com.etak.core.model.subscription.catalog.ProductOffering" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.812" Y="2.25" />
+        <Point X="5.812" Y="1.708" />
+        <Point X="6.938" Y="1.708" />
+        <Point X="6.938" Y="2.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.036" Y="0.612" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Group" Type="com.etak.core.model.subscription.catalog.ProductOfferingGroup" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.438" Y="4.382" />
+        <Point X="7.438" Y="4.875" />
+        <Point X="9" Y="4.875" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ChargingOptions" Type="com.etak.core.model.revenueManagement.ProductChargeOption" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9" Y="4.027" />
+        <Point X="11.636" Y="4.027" />
+        <Point X="11.636" Y="3.682" />
+        <Point X="12.75" Y="3.682" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ProductOfferingTimeRanges" Type="com.etak.core.model.subscription.catalog.ProductOfferingTimeRange">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.578" Y="0.675" Height="0.182" Width="2.126" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAACgEAAAAAgAAAAAAEAAEAAAAAAAQAAAAAAAAhgAAA=</HashCode>
+      <FileName>subscription\catalog\ProductOffering.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OfferedProduct" />
+      <Property Name="Group" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Options" />
+      <Property Name="OfferingChildTemplates" />
+      <Property Name="OfferingParentTemplates" />
+      <Property Name="ChargingOptions" />
+      <Property Name="ProductOfferingTimeRanges" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.subscription.catalog.ProductOfferingGroupOption">
+    <Position X="8.5" Y="8" Width="2.25" />
+    <InheritanceLine Type="com.etak.core.model.subscription.catalog.ProductOfferingOption" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.812" Y="7.315" />
+        <Point X="5.812" Y="7.69" />
+        <Point X="9.812" Y="7.69" />
+        <Point X="9.812" Y="8" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>subscription\catalog\ProductOfferingGroupOption.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Group" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.subscription.catalog.ProductOfferingOption">
+    <Position X="4.5" Y="5.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAASCAAAAAAAAAAAAAEAAAAAAAAAAAAgAQAAAAAAAAA=</HashCode>
+      <FileName>subscription\catalog\ProductOfferingOption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.Product">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIChgAEAAAgAAAAAAAACAgAAAEAAIAAAQAACAAAAAA=</HashCode>
+      <FileName>revenueManagement\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.subscription.catalog.ProductOfferingTimeRange">
+    <Position X="9.75" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAAAAAAAAEAAAAgAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>subscription\catalog\ProductOfferingTimeRange.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.subscription.catalog.ProductOfferingSpecificationOption">
+    <Position X="2.75" Y="8" Width="3" />
+    <InheritanceLine Type="com.etak.core.model.subscription.catalog.ProductOfferingOption" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.812" Y="7.315" />
+        <Point X="5.812" Y="7.69" />
+        <Point X="4.5" Y="7.69" />
+        <Point X="4.5" Y="8" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>subscription\catalog\ProductOfferingSpecificationOption.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SpecifiedProductOffering" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.subscription.catalog.ProductTypeOption">
+    <Position X="6" Y="8" Width="2" />
+    <InheritanceLine Type="com.etak.core.model.subscription.catalog.ProductOfferingOption" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.812" Y="7.315" />
+        <Point X="5.812" Y="7.69" />
+        <Point X="7" Y="7.69" />
+        <Point X="7" Y="8" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>subscription\catalog\ProductTypeOption.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Group" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.ProductChargeOption">
+    <Position X="12.75" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAgAAAAAAEAAAQgAAAAAIAAAAABAMAAAAA=</HashCode>
+      <FileName>revenueManagement\ProductChargeOption.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Charges" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.Charge">
+    <Position X="12.75" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACACAAAEAQAgAgCAAAAACAQEgAEAAAAAAAAAQAQACAA=</HashCode>
+      <FileName>revenueManagement\Charge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.subscription.catalog.ProductOfferingGroup">
+    <Position X="9" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACgAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>subscription\catalog\ProductOfferingGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.ProductType" Collapsed="true">
+    <Position X="6.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>revenueManagement\ProductType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

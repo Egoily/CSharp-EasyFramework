@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="com.etak.core.model.CrmCustomersFfHistoryInfo,com.etak.core.model" table="CRM_CUSTOMERS_FF_HISTORY" >
+		<id name="CustomerId" column="CUSTOMERID" type="Int32"  length="4" unsaved-value="0">
+			<generator class="assigned"/>
+		</id>
+		<property name="MsIsdn" column="MSISDN" type="String" length="25" />
+		<property name="ActionType" column="ACTIONTYPE" type="Int32" length="4" />
+		<property name="ActionDate" column="ACTIONDATE" type="DateTime" />
+		<property name="CurrentNumber1" column="CURRENTNUMBER1" type="String" length="25" />
+		<property name="CurrentNumber2" column="CURRENTNUMBER2" type="String" length="25" />
+		<property name="UserId" column="USERID" type="Int32" length="4" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" >
+  <class name="com.etak.core.model.ProductInfo,com.etak.core.model" table="CRM_CUSTOMERS_PRODUCTS" dynamic-update="true">
+    <id name="ProductID" column="PRODUCTID" type="Int32" length="4">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>    
+    <property name="ServiceTypeID" column="SERVICETYPEID" type="Int32" length="4" />
+    <property name="CreditLimit" column="CREDITLIMIT" type="Decimal" />
+    <property name="StartDate" column="STARTDATE" type="DateTime" />
+    <property name="EndDate" column="ENDDATE" type="DateTime" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <property name="UserID" column="USERID" type="Int32" length="4" />
+    <property name="SpecialCreditLimit" column="SPECIALCREDITLIMIT" type="Decimal" />
+    <property name="ExactcreditLimit" column="EXACTCREDITLIMIT" type="Decimal" />
+
+    <many-to-one name="CustomerInfo" class="com.etak.core.model.CustomerInfo,com.etak.core.model"  >
+      <column name="CUSTOMERID" length="30" />
+    </many-to-one>
+    
+    <bag name="ServiceInfo" inverse="true" cascade="save-update,persist" lazy="true">
+      <key column="ProductID" />
+      <one-to-many class="com.etak.core.model.ServicesInfo,com.etak.core.model" />
+    </bag>
+
+    <many-to-one name="PackageDefinition" class="com.etak.core.model.PackageInfo,com.etak.core.model" lazy="false">
+      <column name="PackageID" length="4" />
+    </many-to-one>
+    
+    
+  </class>
+</hibernate-mapping>
+
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.CrmCustomersFfInitialChargeInfo,com.etak.core.model" table="CRM_CUSTOMERS_FF_INITIALCHARGE" >
+
+    <composite-id>
+      <key-property name="CustomerId" type="Int32" length="4" column="CUSTOMERID" />
+      <key-property name="CategoryId" type="Int32" length="4" column="CATEGORYID" />
+    </composite-id>
+    <property name="ChargeDate" column="CHARGEDATE" type="DateTime" />
+  </class>
+
+</hibernate-mapping>

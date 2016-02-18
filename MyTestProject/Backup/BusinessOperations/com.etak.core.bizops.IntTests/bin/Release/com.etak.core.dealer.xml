@@ -1,0 +1,465 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.etak.core.dealer</name>
+    </assembly>
+    <members>
+        <member name="T:EtakVersion">
+            <summary>
+            Class used to update AssemblyVersion and FileVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.VersionString">
+            <summary>
+            VersionString: Used to inform AssemblyVersion
+            </summary>
+        </member>
+        <member name="F:EtakVersion.InformationalVersion">
+            <summary>
+            It's a compound of VersionString (AssemblyVersion) and the Revision Number
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.helper.DealerBindHelper">
+            <summary>
+             Helper to bind all dealer microservices inside MicroServiceManager
+            </summary>
+        </member>
+        <member name="M:com.etak.core.dealer.helper.DealerBindHelper.LoadMicroservices">
+            <summary>
+            Register all microservices in MicroServiceManager
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.CheckAuthorization.CheckAuthorizationRequest">
+            <summary>
+            Request for CheckAuthorization MS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.CheckAuthorization.CheckAuthorizationRequest.DealerId">
+            <summary>
+            The DealerId to be used to check the specific Dealer
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.CheckAuthorization.CheckAuthorizationRequest.UserInfo">
+            <summary>
+            The User to be used to check the specific User
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.CheckAuthorization.CheckAuthorizationResponse">
+            <summary>
+            Response for CheckAuthorization MS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.CheckAuthorization.CheckAuthorizationResponse.IsAuthorized">
+            <summary>
+            The boolean showing if the specified user is authorized to manage the specified Dealer
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetCarrierById.GetCarrierByIdRequest">
+            <summary>
+            Request base for GetCarrierById request, with a given Int32 value to get the carrier
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetCarrierById.GetCarrierByIdRequest.CarrierId">
+            <summary>
+            The carrier Id to be get
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetCarrierById.GetCarrierByIdResponse">
+            <summary>
+            Response for GetCarrierById
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetCarrierById.GetCarrierByIdResponse.Carrier">
+            <summary>
+            The carrier obtained
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetDealerInfosAndRelationsByDealerId.GetDealerInfosAndRelationsByDealerIdResponse">
+            <summary>
+            Response for GetDealerAndRelationsByDealerId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetDealerInfosAndRelationsByDealerId.GetDealerInfosAndRelationsByDealerIdResponse.DealerInfos">
+            <summary>
+            An Enumerable with all the DealerInfo entities with the corresponding DealerId
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetDealerInfosAndRelationsByDealerId.GetDealerInfosAndRelationsByDealerIdRequest">
+            <summary>
+            Request for GetDealerAndRelationsByDealerId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetDealerInfosAndRelationsByDealerId.GetDealerInfosAndRelationsByDealerIdRequest.DealerId">
+            <summary>
+            DealerId to be used to get the DealerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetDealerInfoById.GetDealerInfoByIdRequest">
+            <summary>
+            Request for GetDealerByDealerId Operation
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetDealerInfoById.GetDealerInfoByIdRequest.DealerId">
+            <summary>
+            The DealerId to be used to get the specific DealerInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetDealerInfoById.GetDealerInfoByIdResponse">
+            <summary>
+            Request for GetDealerById Operation
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetDealerInfoById.GetDealerInfoByIdResponse.DealerInfo">
+            <summary>
+            The DealerInfo find by the corresponding DealerId
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetDealerInfoMVNOByDealerId.GetDealerInfoMVNOByDealerIdRequest">
+            <summary>
+            Request for GetDealerMVNOByDealerId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetDealerInfoMVNOByDealerId.GetDealerInfoMVNOByDealerIdRequest.DealerId">
+            <summary>
+            The DealerId to be used to get the root mvno
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetDealerInfoMVNOByDealerId.GetDealerInfoMVNOByDealerIdResponse">
+            <summary>
+            Response for GetDealerMVNOByDealerId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetDealerInfoMVNOByDealerId.GetDealerInfoMVNOByDealerIdResponse.DealerInfo">
+            <summary>
+            The returned DealerInfo corresponding with the MVNO for the specified DealerId
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetDealerInfosByFiscalUnitId.GetDealerInfosByFiscalUnitIdRequest">
+            <summary>
+            Request for GetDealersByFiscalUnitId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetDealerInfosByFiscalUnitId.GetDealerInfosByFiscalUnitIdRequest.FiscalUnitId">
+            <summary>
+            The FiscalUnitId to be used to get the list of DealerInfos
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetDealerInfosByFiscalUnitId.GetDealerInfosByFiscalUnitIdResponse">
+            <summary>
+            Response for GetDealersByFiscalUnitId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetDealerInfosByFiscalUnitId.GetDealerInfosByFiscalUnitIdResponse.DealerInfos">
+            <summary>
+            A Enumerable with all the DealerInfos corresponding with the specified FiscalUnitId
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetMVNOConfigActionInfosByIdAndName.GetMVNOConfigActionInfosByIdAndNameRequest">
+            <summary>
+            Request for GetMvnoConfigsByIdAndName
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetMVNOConfigActionInfosByIdAndName.GetMVNOConfigActionInfosByIdAndNameRequest.MvnoId">
+            <summary>
+            MvnoId used to get the configuration
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetMVNOConfigActionInfosByIdAndName.GetMVNOConfigActionInfosByIdAndNameRequest.CategoryName">
+            <summary>
+            the CategoryName to be used
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetMVNOConfigActionInfosByIdAndName.GetMVNOConfigActionInfosByIdAndNameRequest.StatusId">
+            <summary>
+            The StatusId to be used
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetMVNOConfigActionInfosByIdAndName.GetMVNOConfigActionInfosByIdAndNameResponse">
+            <summary>
+            Response for GetMvnoConfigsByIdAndName
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetMVNOConfigActionInfosByIdAndName.GetMVNOConfigActionInfosByIdAndNameResponse.MvnoConfigActionInfos">
+            <summary>
+            An Enumerable with all the configurations that match the criteria
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItem.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItemRequest">
+            <summary>
+            Request for GetMVNOConfigsByMVNOIdAndCategoryIdAndItem
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItem.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItemRequest.MvnoId">
+            <summary>
+            The corresponding MVNOId to be used
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItem.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItemRequest.CategoryId">
+            <summary>
+            The CategoryId to be used
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItem.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItemRequest.Item">
+            <summary>
+            The Item requested
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItem.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItemRequest.StatusId">
+            <summary>
+            The StatusID to be used
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItem.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItemResponse">
+            <summary>
+            Response for GetMVNOConfigsByMVNOIdAndCategoryIdAndItem
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItem.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItemResponse.MvnoConfigActionInfos">
+            <summary>
+            An Enumerable with all the MVNOConfigActionInfo corresponding with the request criteria
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetMVNONotificaitonSettingsByMnvoId.GetMVNONotificaitonSettingsByMvnoIdRequest">
+            <summary>
+            the request for GetMVNONotificaitonSettingsByMvnoId MicroService
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetMVNONotificaitonSettingsByMnvoId.GetMVNONotificaitonSettingsByMvnoIdRequest.MvnoId">
+            <summary>
+            mvnoID
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetMVNONotificaitonSettingsByMnvoId.GetMVNONotificaitonSettingsByMnvoIdResponse">
+            <summary>
+             the response for GetMVNONotificaitonSettingsByMvnoId MicroService
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetMVNONotificaitonSettingsByMnvoId.GetMVNONotificaitonSettingsByMnvoIdResponse.MvnoNotificationSettings">
+            <summary>
+            return all NotificationSettings for the requested mvno
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetMVNOPropertiesInfosByVmnoId.GetMVNOPropertiesInfosByMVNOIdRequest">
+            <summary>
+            Get the GetMVNOPropertiesByVMNOId by a specific VMNOId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetMVNOPropertiesInfosByVmnoId.GetMVNOPropertiesInfosByMVNOIdRequest.VmnoId">
+            <summary>
+            The VmnoId to be used to get the MVNOPropertiesInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetMVNOPropertiesInfosByVmnoId.GetMVNOPropertiesInfosByMVNOIdResponse">
+            <summary>
+            Response for GetMVNOPropertiesByMVNOId
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetMVNOPropertiesInfosByVmnoId.GetMVNOPropertiesInfosByMVNOIdResponse.MVNOPropertiesInfos">
+            <summary>
+            An Enumerable with all the properties that match the criteria
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetMVNOTextTemplateByMvnoIdAndCode.GetMVNOTextTemplateByMvnoIdAndCodeRequest">
+            <summary>
+            the request for GetMVNOTextTemplateByMvnoIdAndCode MicroService
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetMVNOTextTemplateByMvnoIdAndCode.GetMVNOTextTemplateByMvnoIdAndCodeRequest.MvnoId">
+            <summary>
+            the mvnoID
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetMVNOTextTemplateByMvnoIdAndCode.GetMVNOTextTemplateByMvnoIdAndCodeRequest.Code">
+            <summary>
+            template Code
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetMVNOTextTemplateByMvnoIdAndCode.GetMVNOTextTemplateByMvnoIdAndCodeResponse">
+            <summary>
+             the response for GetMVNOTextTemplateByMvnoIdAndCode MicroService
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetMVNOTextTemplateByMvnoIdAndCode.GetMVNOTextTemplateByMvnoIdAndCodeResponse.SmsTemplate">
+            <summary>
+            return all SmsTemplateInfo for the specail code for the requested mvno 
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetRMOperatorInfoByReceptionOperatorId.GetRMOperatorInfoByReceptionOperatorIdRequest">
+            <summary>
+            request for GetRMOperatorInfoByReceptionOperatorIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetRMOperatorInfoByReceptionOperatorId.GetRMOperatorInfoByReceptionOperatorIdRequest.ReceptionOperatorId">
+            <summary>
+            information of given ReceptionOperator Id
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.messages.GetRMOperatorInfoByReceptionOperatorId.GetRMOperatorInfoByReceptionOperatorIdResponse">
+            <summary>
+            response of GetRMOperatorInfoByReceptionOperatorIdMS
+            </summary>
+        </member>
+        <member name="P:com.etak.core.dealer.messages.GetRMOperatorInfoByReceptionOperatorId.GetRMOperatorInfoByReceptionOperatorIdResponse.RMOperatorInfo">
+            <summary>
+            innformation of RMOperatorInfo
+            </summary>
+        </member>
+        <member name="T:com.etak.core.dealer.microservices.CheckAuthorizationMS">
+            <summary>
+            Microservice : Check if a user is authorized to manage a certain dealer
+            </summary>
+        </member>
+        <member name="M:com.etak.core.dealer.microservices.CheckAuthorizationMS.Process(com.etak.core.dealer.messages.CheckAuthorization.CheckAuthorizationRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Return a boolean that indicates if the user is authorized
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>Returns a boolean isAuthorized corresponding to the user and DealerId specified</returns>
+        </member>
+        <member name="T:com.etak.core.dealer.microservices.GetCarrierByIdMS">
+            <summary>
+            Microservice to get a certain carrier using his Id
+            </summary>
+        </member>
+        <member name="M:com.etak.core.dealer.microservices.GetCarrierByIdMS.Process(com.etak.core.dealer.messages.GetCarrierById.GetCarrierByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Method that performs the micro service implementation
+            </summary>
+            <param name="request">the micro service request</param><param name="invoker">the information about the Invokation environment</param>
+            <returns>
+            the result of the micro service
+            </returns>
+        </member>
+        <member name="T:com.etak.core.dealer.microservices.GetDealerInfosAndRelationsByDealerIdMS">
+            <summary>
+            Microservice : Get a list of DealerInfos with all his relations loaded in Cache
+            </summary>
+        </member>
+        <member name="M:com.etak.core.dealer.microservices.GetDealerInfosAndRelationsByDealerIdMS.Process(com.etak.core.dealer.messages.GetDealerInfosAndRelationsByDealerId.GetDealerInfosAndRelationsByDealerIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get a list of DealerInfo with the corresponding DealerId
+            </summary>
+            <param name="request">With the DealerId to be used as a criteria</param>
+            <param name="invoker"></param>
+            <returns>An Enumerable of DealerInfos that match the specified DealerId</returns>
+        </member>
+        <member name="T:com.etak.core.dealer.microservices.GetDealerInfoByIdMS">
+            <summary>
+            Microservice : Get a specific DealerInfo using a DealerId
+            </summary>
+        </member>
+        <member name="M:com.etak.core.dealer.microservices.GetDealerInfoByIdMS.Process(com.etak.core.dealer.messages.GetDealerInfoById.GetDealerInfoByIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Return a DealerInfo corresponding with the request.DealerId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>Returns a single DealerInfo corresponding with the DealerId specified</returns>
+        </member>
+        <member name="T:com.etak.core.dealer.microservices.GetDealerInfoMVNOByDealerIdMS">
+            <summary>
+            MicroService : Get the MVNO root for a specified Dealer Id
+            </summary>
+        </member>
+        <member name="M:com.etak.core.dealer.microservices.GetDealerInfoMVNOByDealerIdMS.Process(com.etak.core.dealer.messages.GetDealerInfoMVNOByDealerId.GetDealerInfoMVNOByDealerIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get the root DealerInfo corresponding with the MVNO
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>A DealerInfo entity corresponding with the root parent of the DealerId specified</returns>
+        </member>
+        <member name="T:com.etak.core.dealer.microservices.GetDealerInfosByFiscalUnitIdMS">
+            <summary>
+            Microservice : Get a Enumerable of DealerInfos with a specific FiscalUnitID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.dealer.microservices.GetDealerInfosByFiscalUnitIdMS.Process(com.etak.core.dealer.messages.GetDealerInfosByFiscalUnitId.GetDealerInfosByFiscalUnitIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get a Enumerable of DealerInfos corresponding with the FiscalUnitId specified
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>A Enumerable with all the Dealers matching the FiscalUnitId </returns>
+        </member>
+        <member name="T:com.etak.core.dealer.microservices.GetMVNOConfigActionInfosByIdAndNameMS">
+            <summary>
+            Microservice : Get a MVNOConfiguration using a MvnoId, CategoryName and StatusId
+            </summary>
+        </member>
+        <member name="M:com.etak.core.dealer.microservices.GetMVNOConfigActionInfosByIdAndNameMS.Process(com.etak.core.dealer.messages.GetMVNOConfigActionInfosByIdAndName.GetMVNOConfigActionInfosByIdAndNameRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get a MVNOConfiguration specified by request.MvnoId, request.CategoryName, request.StatusId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>Return an Enumerable with all the configurations that match the criteria</returns>
+        </member>
+        <member name="T:com.etak.core.dealer.microservices.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItemMS">
+            <summary>
+            Microservice : Get the configuration setting corresponding with the MVNO specified, CategoryId, Item and the StatusID
+            </summary>
+        </member>
+        <member name="M:com.etak.core.dealer.microservices.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItemMS.Process(com.etak.core.dealer.messages.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItem.GetMVNOConfigActionInfosByMVNOIdAndCategoryIdAndItemRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get the configuration setting corresponding with the MVNO specified, CategoryId, Item and the StatusID
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>A Enumerable with all the Configurations found</returns>
+        </member>
+        <member name="T:com.etak.core.dealer.microservices.GetMVNONotificaitonSettingsByMvnoIdMS">
+            <summary>
+            Microservice for getting mvno's all notificationsettings
+            </summary>
+        </member>
+        <member name="M:com.etak.core.dealer.microservices.GetMVNONotificaitonSettingsByMvnoIdMS.Process(com.etak.core.dealer.messages.GetMVNONotificaitonSettingsByMnvoId.GetMVNONotificaitonSettingsByMvnoIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+             Get all NotificaitonSettings of the mvno
+            </summary>
+            <param name="request">GetMVNONotificaitonSettingsByMvnoIdRequest</param>
+            <param name="invoker"></param>
+            <returns> all NotificaitonSettings of the mvno without filtering the status</returns>
+        </member>
+        <member name="T:com.etak.core.dealer.microservices.GetMVNOPropertiesInfoByMVNOIdMS">
+            <summary>
+            Get the MVNOPropertiesInfo by a Vmno Id
+            </summary>
+        </member>
+        <member name="M:com.etak.core.dealer.microservices.GetMVNOPropertiesInfoByMVNOIdMS.Process(com.etak.core.dealer.messages.GetMVNOPropertiesInfosByVmnoId.GetMVNOPropertiesInfosByMVNOIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get a MVNOPropertiesInfo by request.VmnoId
+            </summary>
+            <param name="request"></param>
+            <param name="invoker"></param>
+            <returns>An Enumerable with all the MVNOPropertiesInfo that match the criteria</returns>
+        </member>
+        <member name="T:com.etak.core.dealer.microservices.GetMVNOTextTemplateByMvnoIdAndCodeMS">
+            <summary>
+            Microservice for getting mvno's SMSTemplate by Code
+            </summary>
+        </member>
+        <member name="M:com.etak.core.dealer.microservices.GetMVNOTextTemplateByMvnoIdAndCodeMS.Process(com.etak.core.dealer.messages.GetMVNOTextTemplateByMvnoIdAndCode.GetMVNOTextTemplateByMvnoIdAndCodeRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Get All SMSTemplate for MvnoID
+            </summary>
+            <param name="request">GetMVNOTextTemplateByMvnoIdAndCodeRequest</param>
+            <param name="invoker"></param>
+            <returns> the list of SMSTemplate include all lanuages but doesn't filter the status</returns>
+        </member>
+        <member name="T:com.etak.core.dealer.microservices.GetRMOperatorInfoByReceptionOperatorIdMS">
+            <summary>
+            Microservie GetRMOperatorInfoByReceptionOperatorIdMS to retreive information of RMOperatorsInfo
+            </summary>
+        </member>
+        <member name="M:com.etak.core.dealer.microservices.GetRMOperatorInfoByReceptionOperatorIdMS.Process(com.etak.core.dealer.messages.GetRMOperatorInfoByReceptionOperatorId.GetRMOperatorInfoByReceptionOperatorIdRequest,com.etak.core.operation.RequestInvokationEnvironment)">
+            <summary>
+            Retreive information of RMOperatorsInfo base on given ReceptionOperatorId
+            </summary>
+            <param name="request">GetRMOperatorInfoByReceptionOperatorIdRequest</param>
+            <param name="invoker"></param>
+            <returns>RMOperatorInfo entity within GetRMOperatorInfoByReceptionOperatorIdResponse</returns>
+        </member>
+    </members>
+</doc>

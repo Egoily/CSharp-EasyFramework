@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.MVNOPropertiesInfo,com.etak.core.model" table="CRM_MVNO_PROPERTIES" >
+    <cache usage="nonstrict-read-write" region="UserDealer"/>
+    <id name="DealerID" column="DEALERID" type="Int32"  length="4">
+      <generator class="foreign">
+        <param name="property">DealerInfo</param>
+      </generator>
+    </id>
+    <property name="VMO" column="VMO" type="String" length="10" />
+    <property name="BRSOperatorCode" column="BRSOPERATORCODE" type="Int32" length="4" />
+    <property name="OperatorCode" column="OPERATORCODE" type="String" length="10" />
+    <property name="FF" column="FF" type="Boolean" />
+    <property name="RequestForm" column="REQUESTFORM" type="String" length="50" />
+    <property name="PrepaidBillingDate" column="PREPAIDBILLINGDATE" type="Int32" length="4" />
+    <property name="PostpaidBillingDate" column="POSTPAIDBILLINGDATE" type="Int32" length="4" />
+    <property name="SMSRegularTime" column="SMSRegularTime" type="String" length="10" />
+    <property name="SecurityNumberCount" column="SecurityNumberCount" type="Int32" length="4" />
+    <property name="QueryWithVAT" column="QUERYWITHVAT" type="Boolean" />
+    <property name="AutoTopupScanFlagForDRE" column="AUTOTOPUPSCANFLAGFORDRE" type="Boolean" />
+    <property name="AutoTopupScanFlagForCRM" column="AUTOTOPUPSCANFLAGFORCRM" type="Boolean" />
+    <property name="RoamingSpendingThreshold" column="ROAMINGSPENDINGTHRESHOLD" type="Decimal" />
+    <property name="RoamingSpendingNotificationStatus" column="ROAMINGSPENDINGNOTIFICATIONSTATUS" type="Boolean" />
+    <property name="SpendingThreshold" column="SPENDINGTHRESHOLD" type="Decimal" />
+    <property name="SpendingNotificationStatus" column="SPENDINGNOTIFICATIONSTATUS" type="Boolean" />
+    <one-to-one name="DealerInfo" class="com.etak.core.model.DealerInfo,com.etak.core.model" constrained="true"/>
+  </class>
+</hibernate-mapping>
+

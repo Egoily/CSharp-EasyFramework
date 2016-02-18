@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+<class name="com.etak.core.model.CrmCustomersTopupPromotionApplyCountInfo,com.etak.core.model" table="CRM_CUSTOMERS_TOPUP_PROMOTION_APPLY_COUNT" >
+  <id name="Id" column="ID" type="Int32"  length="4" unsaved-value="0">
+    <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+  </id>
+  <property name="Resource" column="RESOURCE" type="String" length="50" />
+  <property name="BonusId" column="BONUSID" type="Int32" length="4" />
+  <property name="BonusPromotionId" column="BONUSPROMOTIONID" type="Int32" length="4" />
+  <property name="Year" column="YEAR" type="String" length="50" />
+  <property name="Month" column="MONTH" type="String" length="50" />
+  <property name="CustomerId" column="CUSTOMERID" type="Int32" length="4" />
+  <property name="Count" column="COUNT" type="Int32" length="4" />
+  </class>
+
+</hibernate-mapping>

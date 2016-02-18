@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+<class name="com.etak.core.model.RelateInfo,com.etak.core.model" table="CRM_RELATE" >
+<id name="Id" column="ID" type="Int32"  length="4" unsaved-value="0">
+  <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+</id>
+<property name="CarrierId" column="CARRIERID" type="Int32" length="4" />
+<property name="DealerId" column="DEALERID" type="Int32" length="4" />
+<property name="CustomerId" column="CUSTOMERID" type="Int32" length="4" />
+<property name="TelephoneNumber" column="TELEPHONENUMBER" type="String" length="25" />
+<property name="TariffCode" column="TARIFFCODE" type="String" length="10" />
+<property name="StartPeriod" column="STARTPERIOD" type="DateTime" />
+<property name="EndPeriod" column="ENDPERIOD" type="DateTime" />
+<property name="StatusId" column="STATUSID" type="Int32" length="4" />
+</class>
+
+</hibernate-mapping>

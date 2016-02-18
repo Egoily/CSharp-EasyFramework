@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.CrmCustomerPromotionPropertyInfo,com.etak.core.model" table="CRM_CUSTOMERS_PROMOTION_PROPERTY" >
+    <id name="ID" column="PROMOTIONID" type="Int64">
+      <generator class="assigned">
+      </generator>
+    </id>
+    <property name="IsSent" column="ISSENT" type="Int32" length="4" />
+  </class>
+
+</hibernate-mapping>

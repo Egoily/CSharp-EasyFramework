@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.AutoTransferSettingInfo,com.etak.core.model" table="CRM_CUSTOMERS_AUTOCREDITTRANSFERSETTING" >
+    <id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+    </id>
+    <property name="MVNOID" column="MVNOID" type="Int32" length="4" />
+    <property name="DEALERID" column="DEALERID" type="Int32" length="4" />
+    <property name="CUSTOMERID" column="CUSTOMERID" type="Int32" length="4" />
+    <property name="MSISDNFROM" column="MSISDNFROM" type="String" length="25" />
+    <property name="MSISDNTO" column="MSISDNTO" type="String" length="25" />
+    <property name="AMOUNT" column="AMOUNT" type="Decimal" />
+    <property name="AMOUNTWITHOUTTAX" column="AMOUNTWITHOUTTAX" type="Decimal" />
+    <property name="TAXCODE" column="TAXCODE" type="Int32" length="4" />
+    <property name="PRIORITY" column="PRIORITY" type="Int32" length="4" />
+    <property name="STATUS" column="STATUS" type="Int32" length="4" />
+    <property name="USERID" column="USERID" type="Int32" length="4" />
+    <property name="CREATEDATE" column="CREATEDATE" type="DateTime" />
+    <property name="UPDATEDATE" column="UPDATEDATE" type="DateTime" />
+  </class>
+
+</hibernate-mapping>
+

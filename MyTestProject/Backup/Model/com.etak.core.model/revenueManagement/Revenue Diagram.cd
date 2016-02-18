@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="com.etak.core.model.revenueManagement.Charge">
+    <Position X="6.5" Y="3.25" Width="3.25" />
+    <AssociationLine Name="ReferencedCharges" Type="com.etak.core.model.revenueManagement.Charge" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="4.562" />
+        <Point X="3.765" Y="4.562" />
+        <Point X="3.765" Y="4.062" />
+        <Point X="6.5" Y="4.062" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ReferencingCharges" Type="com.etak.core.model.revenueManagement.Charge" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="5.062" />
+        <Point X="3.78" Y="5.062" />
+        <Point X="3.78" Y="5.75" />
+        <Point X="6.5" Y="5.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Prices" Type="com.etak.core.model.revenueManagement.ChargePrice" FixedFromPoint="true">
+      <Path>
+        <Point X="6.5" Y="3.562" />
+        <Point X="2.75" Y="3.562" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ReferencingOptions" Type="com.etak.core.model.revenueManagement.ProductChargeOption" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="6.375" />
+        <Point X="2.125" Y="6.375" />
+        <Point X="2.125" Y="12.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-4.268" Y="6.232" Height="0.182" Width="1.561" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACACAAAEAQAgAgAAAAAACAQEgAEAAAAAAAAAQAQACAA=</HashCode>
+      <FileName>revenueManagement\Charge.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ReferencedCharges" />
+      <Property Name="ReferencingCharges" />
+      <Property Name="Prices" />
+      <Property Name="ReferencingOptions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.ChargeDiscount">
+    <Position X="3.75" Y="8.25" Width="2.5" />
+    <InheritanceLine Type="com.etak.core.model.revenueManagement.Charge" FixedFromPoint="true">
+      <Path>
+        <Point X="7.75" Y="6.728" />
+        <Point X="7.75" Y="7.875" />
+        <Point X="5" Y="7.875" />
+        <Point X="5" Y="8.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAABAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>revenueManagement\ChargeDiscount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.ChargeNonRecurring">
+    <Position X="9.25" Y="8.25" Width="2" />
+    <InheritanceLine Type="com.etak.core.model.revenueManagement.Charge" FixedFromPoint="true">
+      <Path>
+        <Point X="7.75" Y="6.728" />
+        <Point X="7.75" Y="7.875" />
+        <Point X="10.25" Y="7.875" />
+        <Point X="10.25" Y="8.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>revenueManagement\ChargeNonRecurring.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.ChargeRecurring">
+    <Position X="6.75" Y="8.25" Width="2" />
+    <InheritanceLine Type="com.etak.core.model.revenueManagement.Charge" FixedFromPoint="true">
+      <Path>
+        <Point X="7.75" Y="6.728" />
+        <Point X="7.75" Y="8.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>BAQAAAAIAABAAEAAAAAAAAAAAAAAAAACAAAAAAgAAAA=</HashCode>
+      <FileName>revenueManagement\ChargeRecurring.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.ChargePrice">
+    <Position X="0.5" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAgAAAAACgCAAAAIAAAAAAAEAAAAA=</HashCode>
+      <FileName>revenueManagement\ChargePrice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.ProductChargeOption">
+    <Position X="1" Y="12.5" Width="2.25" />
+    <AssociationLine Name="ProductOfOption" Type="com.etak.core.model.revenueManagement.Product" FixedToPoint="true">
+      <Path>
+        <Point X="3.25" Y="13.724" />
+        <Point X="5.75" Y="13.724" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.124" Y="0.115" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAEACAgAAAAAAAAAAQgAAAAAIAAAAABAMAAAAA=</HashCode>
+      <FileName>revenueManagement\ProductChargeOption.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProductOfOption" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.Product">
+    <Position X="5.75" Y="13.5" Width="3.25" />
+    <AssociationLine Name="IncompatibleProducts" Type="com.etak.core.model.revenueManagement.Product" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.125" Y="16.786" />
+        <Point X="6.125" Y="17.036" />
+        <Point X="8.562" Y="17.036" />
+        <Point X="8.562" Y="16.786" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ParentProducts" Type="com.etak.core.model.revenueManagement.Product" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.75" Y="14.327" />
+        <Point X="3.39" Y="14.327" />
+        <Point X="3.39" Y="14.917" />
+        <Point X="5.75" Y="14.917" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ChildProducts" Type="com.etak.core.model.revenueManagement.Product" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.75" Y="16.125" />
+        <Point X="3.445" Y="16.125" />
+        <Point X="3.445" Y="15.562" />
+        <Point X="5.75" Y="15.562" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAGhAAQAAAgAAAAAAAACAAAAAEAAYAAAAAACAAAAAA=</HashCode>
+      <FileName>revenueManagement\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="IncompatibleProducts" />
+      <Property Name="ParentProducts" />
+      <Property Name="ChildProducts" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.ProductPurchaseOfOperation">
+    <Position X="9.75" Y="16.75" Width="3" />
+    <AssociationLine Name="ProductOfOperation" Type="com.etak.core.model.revenueManagement.Product" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.312" Y="16.75" />
+        <Point X="10.312" Y="16.375" />
+        <Point X="9" Y="16.375" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="PurchaseOptionForProduct" Type="com.etak.core.model.revenueManagement.ProductChargeOption" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.75" Y="17.761" />
+        <Point X="2.75" Y="17.761" />
+        <Point X="2.75" Y="15.594" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAACAAAAAAAAAAAAAECAAAAAAA=</HashCode>
+      <FileName>revenueManagement\ProductPurchaseOfOperation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProductOfOperation" />
+      <Property Name="PurchaseOptionForProduct" />
+      <Property Name="Operation" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.BussinessOperation">
+    <Position X="14.75" Y="16.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAE=</HashCode>
+      <FileName>BussinessOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.CustomerCharge">
+    <Position X="12" Y="4.75" Width="2.5" />
+    <AssociationLine Name="Invoice" Type="com.etak.core.model.revenueManagement.Invoice" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.5" Y="5.686" />
+        <Point X="17.312" Y="5.686" />
+        <Point X="17.312" Y="4.123" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ChargingAccount" Type="com.etak.core.model.revenueManagement.Account" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.5" Y="6.841" />
+        <Point X="16.188" Y="6.841" />
+        <Point X="16.188" Y="8.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Customer" Type="com.etak.core.model.CustomerInfo" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.5" Y="5.979" />
+        <Point X="20.125" Y="5.979" />
+        <Point X="20.125" Y="3.312" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Product" Type="com.etak.core.model.revenueManagement.CustomerProductAssignment" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.188" Y="7.584" />
+        <Point X="12.188" Y="13.779" />
+        <Point X="18.75" Y="13.779" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAECAAAAAAAAAAAQAAAgAACAKEAAARAAAAAAAAAhIQA=</HashCode>
+      <FileName>revenueManagement\CustomerCharge.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ChargeDefinition" />
+      <Property Name="Invoice" />
+      <Property Name="ChargingAccount" />
+      <Property Name="Customer" />
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.Invoice">
+    <Position X="15.75" Y="2.25" Width="2" />
+    <AssociationLine Name="Charges" Type="com.etak.core.model.revenueManagement.CustomerCharge" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.219" Y="4.123" />
+        <Point X="16.219" Y="5.218" />
+        <Point X="14.5" Y="5.218" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="GeneratingBillRun" Type="com.etak.core.model.revenueManagement.BillRun" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="17.75" Y="3.938" />
+        <Point X="20.042" Y="3.937" Type="JumpStart" />
+        <Point X="20.208" Y="3.938" Type="JumpEnd" />
+        <Point X="20.812" Y="3.938" />
+        <Point X="20.812" Y="6.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAQAAAAAAAABAAAgEAAAABAAAAAAAMAAAAA=</HashCode>
+      <FileName>revenueManagement\Invoice.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ChargedCustomer" />
+      <Property Name="GeneratingBillRun" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Charges" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.Account">
+    <Position X="15.75" Y="8.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAIAAAAgAAAAAAgAAAQAAAAAgAAAAQAAAAAAAAA=</HashCode>
+      <FileName>revenueManagement\Account.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Balance" />
+      <Property Name="LastBillRun" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.BalanceForAccount">
+    <Position X="12.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>revenueManagement\BalanceForAccount.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Account" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.CustomerAccountAssociation">
+    <Position X="22.25" Y="6" Width="2.75" />
+    <AssociationLine Name="Customer" Type="com.etak.core.model.CustomerInfo" FixedToPoint="true">
+      <Path>
+        <Point X="24.023" Y="6" />
+        <Point X="24.023" Y="3.312" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAECAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAEAAAEA=</HashCode>
+      <FileName>revenueManagement\CustomerAccountAssociation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Customer" />
+      <Property Name="Account" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.CustomerInfo" Collapsed="true">
+    <Position X="19.25" Y="2.75" Width="6" />
+    <TypeIdentifier>
+      <HashCode>VCBQAkAQACEJAAAICACQBggIFUBQApKWAKABxQAAeRo=</HashCode>
+      <FileName>CustomerInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.CustomerProductAssignment">
+    <Position X="18.75" Y="13.25" Width="2.75" />
+    <AssociationLine Name="PurchasingCustomer" Type="com.etak.core.model.CustomerInfo" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="21.5" Y="13.688" />
+        <Point X="21.875" Y="13.688" />
+        <Point X="21.875" Y="3.312" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgCAAAAAAACAAAAgAAAAAAgAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>revenueManagement\CustomerProductAssignment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PurchasedProduct" />
+      <Property Name="ProductChargePurchased" />
+      <Property Name="PurchasingCustomer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.CustomerChargeSchedule">
+    <Position X="11.5" Y="0.5" Width="2.75" />
+    <AssociationLine Name="Customer" Type="com.etak.core.model.CustomerInfo" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.25" Y="1.006" />
+        <Point X="22.438" Y="1.006" />
+        <Point X="22.438" Y="2.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ChargeDefinition" Type="com.etak.core.model.revenueManagement.Charge" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="0.906" />
+        <Point X="8.125" Y="0.906" />
+        <Point X="8.125" Y="3.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgUCAAAAAQAAAAAAAAAIggAAIIAAAAAAAAABAIAAAAA=</HashCode>
+      <FileName>revenueManagement\CustomerChargeSchedule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Customer" />
+      <Property Name="ChargeDefinition" />
+      <Property Name="ChargedAccount" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Charges" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.BillRun">
+    <Position X="20" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAIAAAIAAAAAAAgAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>revenueManagement\BillRun.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BillingCycle" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.BillCycle">
+    <Position X="16.75" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAACAAAAAAAAAAAAAAUAAAAAAAARAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>revenueManagement\BillCycle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.AccountCurrency" Collapsed="true">
+    <Position X="13.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>revenueManagement\AccountCurrency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.AccountData" Collapsed="true">
+    <Position X="16.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>revenueManagement\AccountData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.AccountTime" Collapsed="true">
+    <Position X="19.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>revenueManagement\AccountTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

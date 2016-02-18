@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="com.etak.core.model.operation.messages.CreateNewOrderRequest">
+    <Position X="10.5" Y="7.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>operation\messages\CreateNewOrderRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.operation.messages.CreateNewOrderResponse">
+    <Position X="3.5" Y="7.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>operation\messages\CreateNewOrderResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.operation.messages.ModifyOrderReponse">
+    <Position X="7" Y="7.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>operation\messages\ModifyOrderReponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.operation.messages.ModifyOrderRequest">
+    <Position X="14" Y="7.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>operation\messages\ModifyOrderRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.operation.messages.ModifyOrderRequestDTO">
+    <Position X="10" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>operation\messages\ModifyOrderRequestDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.operation.messages.ModifyOrderResponseDTO">
+    <Position X="3.5" Y="2.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>operation\messages\ModifyOrderResponseDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.operation.messages.OrderRequestDTO">
+    <Position X="12.5" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>operation\messages\OrderRequestDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.operation.messages.OrderResponseDTO">
+    <Position X="7.25" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>operation\messages\OrderResponseDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.operation.messages.RequestBase">
+    <Position X="12.25" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>operation\messages\RequestBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.operation.messages.RequestBaseDTO">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAgAAAQA=</HashCode>
+      <FileName>operation\messages\RequestBaseDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.operation.messages.ResponseBase">
+    <Position X="5.5" Y="5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAIAAAAAAAAAAAAAAAAABgAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>operation\messages\ResponseBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.operation.messages.ResponseBaseDTO">
+    <Position X="6" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAABA=</HashCode>
+      <FileName>operation\messages\ResponseBaseDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="com.etak.core.model.operation.messages.ResultTypes">
+    <Position X="15.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAIAAAAAAAAAAAAABQAAAQAAAAAEBAAAAAAQ=</HashCode>
+      <FileName>operation\messages\ResultTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

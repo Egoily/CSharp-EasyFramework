@@ -1,0 +1,239 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.repository", "com.etak.core.repository\com.etak.core.repository.csproj", "{B3B4CFA1-4488-4E8C-AA22-B9F6206BE866}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.repository.crm", "com.etak.core.repository.crm\com.etak.core.repository.crm.csproj", "{5279C8D2-7523-4A27-AA03-8A9736DE7E45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.repository.crm.Nhibernate", "com.etak.core.repository.crm.Nhibernate\com.etak.core.repository.crm.Nhibernate.csproj", "{F2F11342-E395-4220-9E9B-4707783126EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.repository.NHibernate", "com.etak.core.repository.NHibernate\com.etak.core.repository.NHibernate.csproj", "{D93C29D3-5740-4B4F-8356-85A0F599F407}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.repository.crm.Nhibernate.IntTests", "com.etak.core.repository.crm.Nhibernate.IntTests\com.etak.core.repository.crm.Nhibernate.IntTests.csproj", "{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.operation", "com.etak.core.operation\com.etak.core.operation.csproj", "{A8FD3F0F-82F8-41D4-8DA2-FA44BAD61D9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nugetpackages", "nugetpackages", "{0F37A8A8-EDC4-4019-9F87-44FA4D37F000}"
+	ProjectSection(SolutionItems) = preProject
+		nugetpackages\GetAssemblyFileVersions.dll = nugetpackages\GetAssemblyFileVersions.dll
+		nugetpackages\NuGet.exe = nugetpackages\NuGet.exe
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.pipeline", "com.etak.core.pipeline\com.etak.core.pipeline.csproj", "{0A1C08EE-394F-4FCE-AAD9-676BFADE7240}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.operation.UnitTests", "com.etak.core.operation.UnitTests\com.etak.core.operation.UnitTests.csproj", "{40FB25A5-D000-46A2-A1F1-352C5F437CB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "repository", "repository", "{4A660C81-D6A4-4385-8BA5-F31E84B8D6FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.repository.mongo", "com.etak.core.repository.mongo\com.etak.core.repository.mongo.csproj", "{E518F4CA-5502-44DB-9086-1BEF4DB6357B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.repository.crm.mongo", "com.etak.core.repository.crm.mongo\com.etak.core.repository.crm.mongo.csproj", "{2456877D-0D72-41A5-A196-7BCCEEDA12CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "operation", "operation", "{ED37D0FE-03EE-4FF0-8ABA-D07D048FACAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipeline", "pipeline", "{C7511EB2-E57F-45EB-84C7-E7C6B98BDD41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.pipeline.UnitTests", "com.etak.core.pipeline.UnitTests\com.etak.core.pipeline.UnitTests.csproj", "{FA76A0C6-1767-4FAA-8B2D-C49757AB4A56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "queueing", "queueing", "{FF62DD7C-4137-431F-A1C4-4048868EC055}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.queue", "com.etak.core.queue\com.etak.core.queue.csproj", "{49B6A9D4-3146-44F6-84BC-2C5926DC5D23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.queue.UnitTests", "com.etak.core.queue.UnitTests\com.etak.core.queue.UnitTests.csproj", "{9DFEA5EA-A5DE-4C56-8293-E1EC450E440C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "revisionsync", "revisionsync", "{BDCA7C6B-05F5-4C77-A2E2-624BE0A370A0}"
+	ProjectSection(SolutionItems) = preProject
+		revisionsync\SharedAssemblyInfo.cs = revisionsync\SharedAssemblyInfo.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{17D71057-8C0F-4C1A-9BC4-39A44C94A353}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.test.utilities", "com.etak.core.test.utilities\com.etak.core.test.utilities.csproj", "{4B99EBE0-266A-47BB-BAE6-A03E971F0BD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.test.utilities.UnitTests", "com.etak.core.test.utilities.UnitTests\com.etak.core.test.utilities.UnitTests.csproj", "{250BE178-EADB-4DEB-A6EB-DAAD3CCEF0DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "microservices", "microservices", "{2A8583F6-E815-4479-A764-07E415FFD558}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.microservices", "com.etak.core.microservices\com.etak.core.microservices.csproj", "{98A9D6F7-C565-4E3C-BF21-B126788801F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.microservices.UnitTests", "com.etak.core.microservices.UnitTests\com.etak.core.microservices.UnitTests.csproj", "{6EF42408-E4D1-408C-88E7-2526CC93349B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "jms", "jms", "{CFF625E2-C19C-4A4B-9094-02807E4B51A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.jms", "com.etak.core.jms\com.etak.core.jms.csproj", "{190143D4-2713-47FA-8D54-F95A0CCFAFD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.jms.UnitTests", "com.etak.core.jms.UnitTests\com.etak.core.jms.UnitTests.csproj", "{B686BAA8-5390-48AC-92F3-9C37CF3A35A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.operation.IntTests", "com.etak.core.operation.IntTests\com.etak.core.operation.IntTests.csproj", "{545405BB-2867-46CF-B6FF-9F0326BABE4E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "model", "model", "{A22063EF-B943-484F-9F26-5F8815D56F52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.etak.core.model", "com.etak.core.model\com.etak.core.model.csproj", "{5C9B8900-251A-4566-A727-7576DBE53A3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Nuget|Any CPU = Nuget|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3B4CFA1-4488-4E8C-AA22-B9F6206BE866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3B4CFA1-4488-4E8C-AA22-B9F6206BE866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3B4CFA1-4488-4E8C-AA22-B9F6206BE866}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{B3B4CFA1-4488-4E8C-AA22-B9F6206BE866}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{B3B4CFA1-4488-4E8C-AA22-B9F6206BE866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3B4CFA1-4488-4E8C-AA22-B9F6206BE866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5279C8D2-7523-4A27-AA03-8A9736DE7E45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5279C8D2-7523-4A27-AA03-8A9736DE7E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5279C8D2-7523-4A27-AA03-8A9736DE7E45}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{5279C8D2-7523-4A27-AA03-8A9736DE7E45}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{5279C8D2-7523-4A27-AA03-8A9736DE7E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5279C8D2-7523-4A27-AA03-8A9736DE7E45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2F11342-E395-4220-9E9B-4707783126EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2F11342-E395-4220-9E9B-4707783126EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2F11342-E395-4220-9E9B-4707783126EE}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{F2F11342-E395-4220-9E9B-4707783126EE}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{F2F11342-E395-4220-9E9B-4707783126EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2F11342-E395-4220-9E9B-4707783126EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D93C29D3-5740-4B4F-8356-85A0F599F407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D93C29D3-5740-4B4F-8356-85A0F599F407}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D93C29D3-5740-4B4F-8356-85A0F599F407}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{D93C29D3-5740-4B4F-8356-85A0F599F407}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{D93C29D3-5740-4B4F-8356-85A0F599F407}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D93C29D3-5740-4B4F-8356-85A0F599F407}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8FD3F0F-82F8-41D4-8DA2-FA44BAD61D9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8FD3F0F-82F8-41D4-8DA2-FA44BAD61D9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8FD3F0F-82F8-41D4-8DA2-FA44BAD61D9C}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{A8FD3F0F-82F8-41D4-8DA2-FA44BAD61D9C}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{A8FD3F0F-82F8-41D4-8DA2-FA44BAD61D9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8FD3F0F-82F8-41D4-8DA2-FA44BAD61D9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A1C08EE-394F-4FCE-AAD9-676BFADE7240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A1C08EE-394F-4FCE-AAD9-676BFADE7240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A1C08EE-394F-4FCE-AAD9-676BFADE7240}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{0A1C08EE-394F-4FCE-AAD9-676BFADE7240}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{0A1C08EE-394F-4FCE-AAD9-676BFADE7240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A1C08EE-394F-4FCE-AAD9-676BFADE7240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40FB25A5-D000-46A2-A1F1-352C5F437CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40FB25A5-D000-46A2-A1F1-352C5F437CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40FB25A5-D000-46A2-A1F1-352C5F437CB7}.Nuget|Any CPU.ActiveCfg = Release|Any CPU
+		{40FB25A5-D000-46A2-A1F1-352C5F437CB7}.Nuget|Any CPU.Build.0 = Release|Any CPU
+		{40FB25A5-D000-46A2-A1F1-352C5F437CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40FB25A5-D000-46A2-A1F1-352C5F437CB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E518F4CA-5502-44DB-9086-1BEF4DB6357B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E518F4CA-5502-44DB-9086-1BEF4DB6357B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E518F4CA-5502-44DB-9086-1BEF4DB6357B}.Nuget|Any CPU.ActiveCfg = Release|Any CPU
+		{E518F4CA-5502-44DB-9086-1BEF4DB6357B}.Nuget|Any CPU.Build.0 = Release|Any CPU
+		{E518F4CA-5502-44DB-9086-1BEF4DB6357B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E518F4CA-5502-44DB-9086-1BEF4DB6357B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2456877D-0D72-41A5-A196-7BCCEEDA12CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2456877D-0D72-41A5-A196-7BCCEEDA12CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2456877D-0D72-41A5-A196-7BCCEEDA12CD}.Nuget|Any CPU.ActiveCfg = Release|Any CPU
+		{2456877D-0D72-41A5-A196-7BCCEEDA12CD}.Nuget|Any CPU.Build.0 = Release|Any CPU
+		{2456877D-0D72-41A5-A196-7BCCEEDA12CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2456877D-0D72-41A5-A196-7BCCEEDA12CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA76A0C6-1767-4FAA-8B2D-C49757AB4A56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA76A0C6-1767-4FAA-8B2D-C49757AB4A56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA76A0C6-1767-4FAA-8B2D-C49757AB4A56}.Nuget|Any CPU.ActiveCfg = Release|Any CPU
+		{FA76A0C6-1767-4FAA-8B2D-C49757AB4A56}.Nuget|Any CPU.Build.0 = Release|Any CPU
+		{FA76A0C6-1767-4FAA-8B2D-C49757AB4A56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA76A0C6-1767-4FAA-8B2D-C49757AB4A56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49B6A9D4-3146-44F6-84BC-2C5926DC5D23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49B6A9D4-3146-44F6-84BC-2C5926DC5D23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49B6A9D4-3146-44F6-84BC-2C5926DC5D23}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{49B6A9D4-3146-44F6-84BC-2C5926DC5D23}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{49B6A9D4-3146-44F6-84BC-2C5926DC5D23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49B6A9D4-3146-44F6-84BC-2C5926DC5D23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DFEA5EA-A5DE-4C56-8293-E1EC450E440C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DFEA5EA-A5DE-4C56-8293-E1EC450E440C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DFEA5EA-A5DE-4C56-8293-E1EC450E440C}.Nuget|Any CPU.ActiveCfg = Release|Any CPU
+		{9DFEA5EA-A5DE-4C56-8293-E1EC450E440C}.Nuget|Any CPU.Build.0 = Release|Any CPU
+		{9DFEA5EA-A5DE-4C56-8293-E1EC450E440C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DFEA5EA-A5DE-4C56-8293-E1EC450E440C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B99EBE0-266A-47BB-BAE6-A03E971F0BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B99EBE0-266A-47BB-BAE6-A03E971F0BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B99EBE0-266A-47BB-BAE6-A03E971F0BD6}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{4B99EBE0-266A-47BB-BAE6-A03E971F0BD6}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{4B99EBE0-266A-47BB-BAE6-A03E971F0BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B99EBE0-266A-47BB-BAE6-A03E971F0BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{250BE178-EADB-4DEB-A6EB-DAAD3CCEF0DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{250BE178-EADB-4DEB-A6EB-DAAD3CCEF0DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{250BE178-EADB-4DEB-A6EB-DAAD3CCEF0DE}.Nuget|Any CPU.ActiveCfg = Release|Any CPU
+		{250BE178-EADB-4DEB-A6EB-DAAD3CCEF0DE}.Nuget|Any CPU.Build.0 = Release|Any CPU
+		{250BE178-EADB-4DEB-A6EB-DAAD3CCEF0DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{250BE178-EADB-4DEB-A6EB-DAAD3CCEF0DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98A9D6F7-C565-4E3C-BF21-B126788801F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98A9D6F7-C565-4E3C-BF21-B126788801F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98A9D6F7-C565-4E3C-BF21-B126788801F6}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{98A9D6F7-C565-4E3C-BF21-B126788801F6}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{98A9D6F7-C565-4E3C-BF21-B126788801F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98A9D6F7-C565-4E3C-BF21-B126788801F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EF42408-E4D1-408C-88E7-2526CC93349B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EF42408-E4D1-408C-88E7-2526CC93349B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EF42408-E4D1-408C-88E7-2526CC93349B}.Nuget|Any CPU.ActiveCfg = Release|Any CPU
+		{6EF42408-E4D1-408C-88E7-2526CC93349B}.Nuget|Any CPU.Build.0 = Release|Any CPU
+		{6EF42408-E4D1-408C-88E7-2526CC93349B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EF42408-E4D1-408C-88E7-2526CC93349B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{190143D4-2713-47FA-8D54-F95A0CCFAFD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{190143D4-2713-47FA-8D54-F95A0CCFAFD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{190143D4-2713-47FA-8D54-F95A0CCFAFD4}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{190143D4-2713-47FA-8D54-F95A0CCFAFD4}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{190143D4-2713-47FA-8D54-F95A0CCFAFD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{190143D4-2713-47FA-8D54-F95A0CCFAFD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B686BAA8-5390-48AC-92F3-9C37CF3A35A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B686BAA8-5390-48AC-92F3-9C37CF3A35A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B686BAA8-5390-48AC-92F3-9C37CF3A35A5}.Nuget|Any CPU.ActiveCfg = Release|Any CPU
+		{B686BAA8-5390-48AC-92F3-9C37CF3A35A5}.Nuget|Any CPU.Build.0 = Release|Any CPU
+		{B686BAA8-5390-48AC-92F3-9C37CF3A35A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B686BAA8-5390-48AC-92F3-9C37CF3A35A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{545405BB-2867-46CF-B6FF-9F0326BABE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{545405BB-2867-46CF-B6FF-9F0326BABE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{545405BB-2867-46CF-B6FF-9F0326BABE4E}.Nuget|Any CPU.ActiveCfg = Release|Any CPU
+		{545405BB-2867-46CF-B6FF-9F0326BABE4E}.Nuget|Any CPU.Build.0 = Release|Any CPU
+		{545405BB-2867-46CF-B6FF-9F0326BABE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{545405BB-2867-46CF-B6FF-9F0326BABE4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C9B8900-251A-4566-A727-7576DBE53A3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C9B8900-251A-4566-A727-7576DBE53A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C9B8900-251A-4566-A727-7576DBE53A3C}.Nuget|Any CPU.ActiveCfg = Nuget|Any CPU
+		{5C9B8900-251A-4566-A727-7576DBE53A3C}.Nuget|Any CPU.Build.0 = Nuget|Any CPU
+		{5C9B8900-251A-4566-A727-7576DBE53A3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C9B8900-251A-4566-A727-7576DBE53A3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B3B4CFA1-4488-4E8C-AA22-B9F6206BE866} = {4A660C81-D6A4-4385-8BA5-F31E84B8D6FF}
+		{5279C8D2-7523-4A27-AA03-8A9736DE7E45} = {4A660C81-D6A4-4385-8BA5-F31E84B8D6FF}
+		{F2F11342-E395-4220-9E9B-4707783126EE} = {4A660C81-D6A4-4385-8BA5-F31E84B8D6FF}
+		{D93C29D3-5740-4B4F-8356-85A0F599F407} = {4A660C81-D6A4-4385-8BA5-F31E84B8D6FF}
+		{F530B62E-2D4D-4ED1-ABDA-B5D9236F2899} = {4A660C81-D6A4-4385-8BA5-F31E84B8D6FF}
+		{A8FD3F0F-82F8-41D4-8DA2-FA44BAD61D9C} = {ED37D0FE-03EE-4FF0-8ABA-D07D048FACAB}
+		{0A1C08EE-394F-4FCE-AAD9-676BFADE7240} = {C7511EB2-E57F-45EB-84C7-E7C6B98BDD41}
+		{40FB25A5-D000-46A2-A1F1-352C5F437CB7} = {ED37D0FE-03EE-4FF0-8ABA-D07D048FACAB}
+		{E518F4CA-5502-44DB-9086-1BEF4DB6357B} = {4A660C81-D6A4-4385-8BA5-F31E84B8D6FF}
+		{2456877D-0D72-41A5-A196-7BCCEEDA12CD} = {4A660C81-D6A4-4385-8BA5-F31E84B8D6FF}
+		{FA76A0C6-1767-4FAA-8B2D-C49757AB4A56} = {C7511EB2-E57F-45EB-84C7-E7C6B98BDD41}
+		{49B6A9D4-3146-44F6-84BC-2C5926DC5D23} = {FF62DD7C-4137-431F-A1C4-4048868EC055}
+		{9DFEA5EA-A5DE-4C56-8293-E1EC450E440C} = {FF62DD7C-4137-431F-A1C4-4048868EC055}
+		{4B99EBE0-266A-47BB-BAE6-A03E971F0BD6} = {17D71057-8C0F-4C1A-9BC4-39A44C94A353}
+		{250BE178-EADB-4DEB-A6EB-DAAD3CCEF0DE} = {17D71057-8C0F-4C1A-9BC4-39A44C94A353}
+		{98A9D6F7-C565-4E3C-BF21-B126788801F6} = {2A8583F6-E815-4479-A764-07E415FFD558}
+		{6EF42408-E4D1-408C-88E7-2526CC93349B} = {2A8583F6-E815-4479-A764-07E415FFD558}
+		{190143D4-2713-47FA-8D54-F95A0CCFAFD4} = {CFF625E2-C19C-4A4B-9094-02807E4B51A9}
+		{B686BAA8-5390-48AC-92F3-9C37CF3A35A5} = {CFF625E2-C19C-4A4B-9094-02807E4B51A9}
+		{545405BB-2867-46CF-B6FF-9F0326BABE4E} = {ED37D0FE-03EE-4FF0-8ABA-D07D048FACAB}
+		{5C9B8900-251A-4566-A727-7576DBE53A3C} = {A22063EF-B943-484F-9F26-5F8815D56F52}
+	EndGlobalSection
+	GlobalSection(GitScc) = preSolution
+		Git-Managed = True
+		Manager = Git Source Control Provider for Visual Studio
+	EndGlobalSection
+EndGlobal

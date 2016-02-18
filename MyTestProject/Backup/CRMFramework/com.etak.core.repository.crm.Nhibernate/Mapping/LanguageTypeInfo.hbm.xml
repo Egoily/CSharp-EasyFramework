@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false" >
+  <class name="com.etak.core.model.LanguageTypeInfo,com.etak.core.model" table="SYS_LANGUAGETYPE" dynamic-update="true">
+    <cache usage="nonstrict-read-write" region="SystemSettings"/>
+    <id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <property name="LanguageID" column="LanguageID" type="Int32" length="4" />
+    <property name="LanguageName" column="LanguageName" type="String" length="100" />
+    <property name="UpdateDate" column="UpdateDate" type="DateTime" />
+    <property name="State" column="State" type="Int32" length="4" />
+    <property name="CultureName" column="CultureName" type="String" length="100" />
+    <property name="CultureIdentifier" column="CultureIdentifier" type="Int32" length="4" />
+    <property name="LanguageCountryRegion" column="LanguageCountryRegion" type="String" length="150" />
+    <property name="ShortCode" column="ShortCode" type="String" length="20" />
+  </class>
+</hibernate-mapping>

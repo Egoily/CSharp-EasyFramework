@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+<class name="com.etak.core.model.HuntingGroupInfo,com.etak.core.model" table="CRM_RESMB_HUNTING_GROUP" >
+<id name="GROUPID" column="GROUPID" type="Int32"  length="4" unsaved-value="0">
+	<generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate"/>
+</id>
+<property name="RESOURCEID" column="RESOURCEID" type="Int32" length="4" />
+<property name="NOREPLYTIMER1" column="NOREPLYTIMER1" type="Int32" length="4" />
+<property name="NOREPLYTIMER2" column="NOREPLYTIMER2" type="Int32" length="4" />
+<property name="MAXJUMPS" column="MAXJUMPS" type="Int32" length="4" />
+<property name="CREATEDATE" column="CREATEDATE" type="DateTime" />
+<property name="REMARK" column="REMARK" type="String" length="200" />
+</class>
+
+</hibernate-mapping>

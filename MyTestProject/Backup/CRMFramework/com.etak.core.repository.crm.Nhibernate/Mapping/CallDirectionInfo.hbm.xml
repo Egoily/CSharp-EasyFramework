@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.CallDirectionInfo,com.etak.core.model" table="RM_CALLDIRECTION" >
+    <id name="CallDirectionID" column="CALLDIRECTIONID" type="Int32"  length="4" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        <param name ="algorithm">Identity</param>
+      </generator>
+    </id>
+    <property name="CallDirectionName" column="CALLDIRECTIONNAME" type="String" length="50" />
+  </class>
+
+</hibernate-mapping>

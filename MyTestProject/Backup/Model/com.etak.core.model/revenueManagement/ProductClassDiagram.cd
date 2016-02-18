@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="com.etak.core.model.revenueManagement.Product">
+    <Position X="12" Y="3.25" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAChAAEAAAgAAAAAAAACAgAAAEAAYAAAQAACAAAAAA=</HashCode>
+      <FileName>revenueManagement\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ProductRelationDependencies" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.ProductDependencyRelation">
+    <Position X="4.25" Y="4" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAACCAAAAAAAAAAAAEAAAAAAAAAAAAAgAQAAAAAAAAA=</HashCode>
+      <FileName>revenueManagement\ProductDependencyRelation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RelationType" />
+      <Property Name="ConflictResolutionStrategy" />
+      <Property Name="Id" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="com.etak.core.model.revenueManagement.ProductDependencyRelationId">
+    <Position X="4.25" Y="1.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAEAAgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>revenueManagement\ProductDependencyRelationId.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="com.etak.core.model.revenueManagement.ProductRelationTypes">
+    <Position X="1" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>revenueManagement\ProductRelationTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.revenueManagement.ProductConflictResolutionsStrategies">
+    <Position X="4.25" Y="6.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>revenueManagement\ProductConflictResolutionsStrategies.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

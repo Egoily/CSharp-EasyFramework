@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="com.etak.core.model.TroubleTicketInfo,com.etak.core.model" table="CRM_TROUBLE_TICKET" >
+    <id name="ID" column="ID" type="Int32"  length="4" unsaved-value="0">
+        <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate" />
+    </id>
+    <property name="TICKETNUMBER" column="TICKETNUMBER" type="String" length="20" />
+    <property name="TTCODE" column="TTCODE" type="String" length="50" />
+    <property name="CLASSID" column="CLASSID" type="Int32" length="4" />
+    <property name="PRIORITY" column="PRIORITY" type="Int32" length="4" />
+    <property name="FUID" column="FUID" type="Int32" length="4" />
+    <property name="DEPTID" column="DEPTID" type="Int32" length="4" />
+    <property name="OPERATORID" column="OPERATORID" type="Int32" length="4" />
+    <property name="HANDLEBY" column="HANDLEBY" type="Int32" length="4" />
+    <property name="DESCRIPTION" column="DESCRIPTION" type="String" length="3000" />
+    <property name="ETACK" column="ETACK" type="DateTime" />
+    <property name="REPORTTIME" column="REPORTTIME" type="DateTime" />
+    <property name="UPDATETIME" column="UPDATETIME" type="DateTime" />
+    <property name="STATUS" column="STATUS" type="Int32" length="4" />
+    <property name="CUSTOMERID" column="CUSTOMERID" type="Int32" length="4" />
+    <property name="MSISDN" column="MSISDN" type="String" length="20" />
+    <property name="DIALEDNO" column="DIALEDNO" type="String" length="20" />
+    <property name="CALLTIME" column="CALLTIME" type="DateTime" />
+    <property name="NETWORK" column="NETWORK" type="String" length="50" />
+    <property name="CALLPLACE" column="CALLPLACE" type="String" length="50" />
+    <property name="CLIENTID" column="CLIENTID" type="String" length="50" />
+    <property name="SECONDNUMBER" column="SECONDNUMBER" type="String" length="50" />
+    <property name="FLEXNUMBER" column="FLEXNUMBER" type="String" length="50" />
+    <property name="INTERNALNO" column="INTERNALNO" type="String" length="50" />
+    <property name="CUSTTYPE" column="CUSTTYPE" type="Int32" length="50" />
+    <property name="EXTERNALCODE" column="EXTERNALCODE" type="String" length="50" />
+  </class>
+
+</hibernate-mapping>

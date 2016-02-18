@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="com.etak.core.model.ReportResourceInfo,com.etak.core.model" table="CRM_LIFECYCLE_REPORTRESOURCES">
+    <id name="ReportId" column="REPORTID" type="Int64" unsaved-value="0">
+      <generator class="com.etak.core.repository.NHibernate.IDGeneration.PrefixIdGenerator,com.etak.core.repository.NHibernate">
+        
+      </generator>
+    </id>
+    <property name="DealerId" column="DEALERID" type="Int32" length="4" />
+    <property name="ResourceType" column="RESOURCETYPE" type="Int32" length="4" />
+    <property name="ResourceNumber" column="RESOURCENUMBER" type="String" length="160" />
+    <property name="CurrentStatusId" column="CURRENTSTATUSID" type="Int32" length="4" />
+    <property name="NextStatusId" column="NEXTSTATUSID" type="Int32" length="4" />
+    <property name="CreateDate" column="CREATEDATE" type="DateTime" />
+    <property name="ActionType" column="ACTIONTYPE" type="Int32" length="4" />
+    <property name="IsSent" column="ISSENT" type="Boolean" />
+    <property name="UserId" column="USERID" type="Int32" length="4" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="com.etak.core.model.BussinessRule">
+    <Position X="5.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAAAAAAAAgAAAAAQAAAAAAIAAgAAAAAAAAAA=</HashCode>
+      <FileName>rules\BussinessRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PackageRule">
+    <Position X="4.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>rules\PackageRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PromotionGroupRule">
+    <Position X="6.75" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>rules\PromotionGroupRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PackageBussinessRules">
+    <Position X="1" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAgAAAAAAAEAAAAIAAAAAAAAAAAEA=</HashCode>
+      <FileName>rules\PackageBussinessRules.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PackageRuleParam">
+    <Position X="9.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEIQAAAAAgAAAACCCAgBEgAAAAIAAgAAACIACQA=</HashCode>
+      <FileName>rules\PackageRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.etak.core.model.PromotionGroupRuleParam">
+    <Position X="7.75" Y="5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAgAAAAIAAAAAAAAAAQA=</HashCode>
+      <FileName>rules\PromotionGroupRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="com.etak.core.model.RuleCaller">
+    <Position X="4" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAQAAAAAAAAAAAAAQAAAABBAAAA=</HashCode>
+      <FileName>rules\PackageRule.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.etak.core.model.RuleCaller4PromotionGroup">
+    <Position X="2" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAQIA=</HashCode>
+      <FileName>rules\PromotionGroupRule.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
